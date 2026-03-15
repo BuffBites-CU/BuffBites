@@ -1,7 +1,7 @@
 # BuffBites — API Documentation
 
 This document is the single source of truth for data structures and API endpoints.
-All three team members should refer to this when building their respective components.
+Authors : ISHITA PAWAR, RAJVARDHAN PATIL, SEJAL HUKARE
 
 ---
 
