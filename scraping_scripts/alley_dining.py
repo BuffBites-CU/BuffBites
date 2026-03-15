@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
 # Link: https://colorado-diningmenus.nutrislice.com/menu/the-alley/the-alley-at-farrand-s-all-day-id2009
-"""
-Scraper for The Alley at Farrand dining menu — CU Boulder
-
-Uses the Nutrislice internal REST API directly (no browser needed):
-  GET https://colorado-diningmenus.api.nutrislice.com/menu/api/weeks/school/38643/menu-type/8911/{year}/{month}/{day}
-
-The weekly endpoint returns 7 days of menu data per call, so 3 calls cover 3 weeks.
-
-Categories come from station-header items (is_station_header=True); every food
-item that follows belongs to the most-recently-seen station.
-
-Allergens and dietary labels (Vegan, Vegetarian, Gluten-Free …) are encoded as
-icon objects inside food.icons.food_icons.
-
-Output: alley_dining_menus.json  (same directory as this script)
-
-Usage:
-    pip install requests
-    python alley_dining.py
-"""
 
 import json
 import time
@@ -28,7 +8,6 @@ from pathlib import Path
 
 import requests
 
-# ── Config ────────────────────────────────────────────────────────────────────
 API_BASE   = "https://colorado-diningmenus.api.nutrislice.com"
 SCHOOL_ID  = 38643
 MENU_TYPE  = 8911
@@ -46,7 +25,6 @@ HEADERS = {
     "Referer": "https://colorado-diningmenus.nutrislice.com/",
 }
 
-# Icon slugs the website uses for dietary/allergen labels
 ALLERGEN_SLUGS = {
     "wheat", "milk", "eggs", "egg", "soy", "peanuts", "peanut",
     "tree-nuts", "tree-nut", "fish", "shellfish", "sesame",
@@ -58,15 +36,12 @@ DIETARY_SLUGS = {
 }
 
 
-# ── Parsing helpers ───────────────────────────────────────────────────────────
-
-def _parse_icons(food_icons: list) -> tuple[list, list, bool, bool]:
-    """Return (allergens, dietary_labels, is_vegan, is_vegetarian)."""
+def _icons(icons: list) -> tuple[list, list, bool, bool]:
     allergens: list[str] = []
     dietary:   list[str] = []
     is_vegan = is_veg = False
 
-    for icon in food_icons or []:
+    for icon in icons or []:
         slug = (icon.get("slug") or icon.get("synced_name") or "").lower().replace(" ", "-")
         name = icon.get("name") or icon.get("synced_name") or slug
 
@@ -82,31 +57,31 @@ def _parse_icons(food_icons: list) -> tuple[list, list, bool, bool]:
     return allergens, dietary, is_vegan, is_veg
 
 
-def _parse_nutrition(info: dict | None) -> dict:
+def _nutrition(info: dict | None) -> dict:
     if not info:
         return {}
     fields = {
-        "calories":          info.get("calories"),
-        "fat_g":             info.get("g_fat"),
-        "saturated_fat_g":   info.get("g_saturated_fat"),
-        "trans_fat_g":       info.get("g_trans_fat"),
-        "cholesterol_mg":    info.get("mg_cholesterol"),
-        "sodium_mg":         info.get("mg_sodium"),
-        "carbohydrates_g":   info.get("g_carbs"),
-        "fiber_g":           info.get("g_fiber"),
-        "added_sugar_g":     info.get("g_added_sugar"),
-        "total_sugar_g":     info.get("g_sugar"),
-        "protein_g":         info.get("g_protein"),
-        "potassium_mg":      info.get("mg_potassium"),
-        "calcium_mg":        info.get("mg_calcium"),
-        "iron_mg":           info.get("mg_iron"),
-        "vitamin_d_mcg":     info.get("mcg_vitamin_d"),
+        "calories":        info.get("calories"),
+        "fat_g":           info.get("g_fat"),
+        "saturated_fat_g": info.get("g_saturated_fat"),
+        "trans_fat_g":     info.get("g_trans_fat"),
+        "cholesterol_mg":  info.get("mg_cholesterol"),
+        "sodium_mg":       info.get("mg_sodium"),
+        "carbohydrates_g": info.get("g_carbs"),
+        "fiber_g":         info.get("g_fiber"),
+        "added_sugar_g":   info.get("g_added_sugar"),
+        "total_sugar_g":   info.get("g_sugar"),
+        "protein_g":       info.get("g_protein"),
+        "potassium_mg":    info.get("mg_potassium"),
+        "calcium_mg":      info.get("mg_calcium"),
+        "iron_mg":         info.get("mg_iron"),
+        "vitamin_d_mcg":   info.get("mcg_vitamin_d"),
     }
     return {k: v for k, v in fields.items() if v is not None}
 
 
-def _serving_size(food: dict) -> str:
-    ssi = food.get("serving_size_info") or {}
+def _serving(food: dict) -> str:
+    ssi    = food.get("serving_size_info") or {}
     amount = ssi.get("serving_size_amount") or food.get("serving_size_amount", "")
     unit   = ssi.get("serving_size_unit")   or food.get("serving_size_unit", "")
     if amount and unit:
@@ -115,84 +90,60 @@ def _serving_size(food: dict) -> str:
 
 
 def parse_day(items: list) -> dict[str, list]:
-    """
-    Convert a flat list of menu item objects for one day into:
-        { station_name: [ food_dict, ... ], ... }
-
-    Items with is_station_header=True define the category; all following food
-    items (is_station_header=False) belong to that category until the next
-    header appears.
-    """
-    categories: dict[str, list] = {}
-    current_station = "General"
+    cats: dict[str, list] = {}
+    station = "General"
 
     for item in items:
         if item.get("is_station_header"):
-            # Station name lives on the food.name of the header item
-            food = item.get("food") or {}
-            current_station = food.get("name") or item.get("text") or "General"
-            current_station = current_station.strip()
-            if current_station not in categories:
-                categories[current_station] = []
+            food    = item.get("food") or {}
+            station = (food.get("name") or item.get("text") or "General").strip()
+            if station not in cats:
+                cats[station] = []
             continue
 
         food = item.get("food")
         if not food or not food.get("name"):
-            continue  # blank line / section divider
+            continue
 
         name = food["name"].strip()
         if not name:
             continue
 
-        food_icons = (food.get("icons") or {}).get("food_icons") or []
-        allergens, dietary_labels, is_vegan, is_veg = _parse_icons(food_icons)
-
-        ingredients = (
-            food.get("ingredients")
-            or food.get("synced_ingredients")
-            or ""
-        ).strip()
-
-        description = (food.get("description") or "").strip()
+        allergens, dietary, is_vegan, is_veg = _icons(
+            (food.get("icons") or {}).get("food_icons") or []
+        )
+        rounded = food.get("rounded_nutrition_info") or {}
 
         entry = {
-            "name":            name,
-            "description":     description,
-            "serving_size":    _serving_size(food),
-            "calories":        (food.get("rounded_nutrition_info") or {}).get("calories", ""),
-            "ingredients":     ingredients,
-            "allergens":       allergens,
-            "dietary_labels":  dietary_labels,
-            "is_vegan":        is_vegan,
-            "is_vegetarian":   is_veg,
-            "nutrition":       _parse_nutrition(food.get("rounded_nutrition_info")),
+            "name":          name,
+            "description":   (food.get("description") or "").strip(),
+            "serving_size":  _serving(food),
+            "calories":      rounded.get("calories", ""),
+            "ingredients":   (food.get("ingredients") or food.get("synced_ingredients") or "").strip(),
+            "allergens":     allergens,
+            "dietary_labels": dietary,
+            "is_vegan":      is_vegan,
+            "is_vegetarian": is_veg,
+            "nutrition":     _nutrition(rounded),
         }
 
-        if current_station not in categories:
-            categories[current_station] = []
-        categories[current_station].append(entry)
+        if station not in cats:
+            cats[station] = []
+        cats[station].append(entry)
 
-    return categories
+    return cats
 
 
-# ── API fetch ─────────────────────────────────────────────────────────────────
-
-def fetch_week(week_start: date, session: requests.Session) -> dict:
-    """
-    Fetch one week of menu data from the Nutrislice API.
-    Returns the parsed JSON (keys: start_date, menu_type_id, days).
-    """
+def fetch_week(wk_start: date, session: requests.Session) -> dict:
     url = (
         f"{API_BASE}/menu/api/weeks/school/{SCHOOL_ID}"
         f"/menu-type/{MENU_TYPE}"
-        f"/{week_start.year}/{week_start.month:02d}/{week_start.day:02d}"
+        f"/{wk_start.year}/{wk_start.month:02d}/{wk_start.day:02d}"
     )
     resp = session.get(url, headers=HEADERS, timeout=20)
     resp.raise_for_status()
     return resp.json()
 
-
-# ── Main ──────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     total_days = WEEKS * 7
@@ -200,10 +151,7 @@ def main() -> None:
 
     result = {
         "dining_location": "The Alley at Farrand",
-        "url": (
-            "https://colorado-diningmenus.nutrislice.com"
-            "/menu/the-alley/the-alley-at-farrand-s-all-day-id2009"
-        ),
+        "url": "https://colorado-diningmenus.nutrislice.com/menu/the-alley/the-alley-at-farrand-s-all-day-id2009",
         "date_range": {
             "start": START_DATE.isoformat(),
             "end":   end_date.isoformat(),
@@ -212,17 +160,15 @@ def main() -> None:
         "menus": [],
     }
 
-    # Build a lookup: date string → parsed categories
     day_map: dict[str, dict] = {}
-
     session = requests.Session()
 
-    for week in range(WEEKS):
-        week_start = START_DATE + timedelta(weeks=week)
-        print(f"Fetching week {week + 1}/{WEEKS}  ({week_start}) ...", end=" ", flush=True)
+    for wk in range(WEEKS):
+        wk_start = START_DATE + timedelta(weeks=wk)
+        print(f"Fetching week {wk + 1}/{WEEKS}  ({wk_start}) ...", end=" ", flush=True)
 
         try:
-            data = fetch_week(week_start, session)
+            data = fetch_week(wk_start, session)
         except Exception as exc:
             print(f"ERROR — {exc}")
             continue
@@ -234,9 +180,7 @@ def main() -> None:
             day_date = day_obj.get("date")
             items    = day_obj.get("menu_items") or day_obj.get("items") or []
 
-            # Some API versions nest items differently
             if not items and isinstance(day_obj, dict):
-                # Flatten from nested structure if present
                 for key in ("sections", "menu_items", "items"):
                     items = day_obj.get(key) or []
                     if items:
@@ -245,17 +189,15 @@ def main() -> None:
             if day_date:
                 day_map[day_date] = parse_day(items)
 
-        time.sleep(0.5)  # polite crawl delay
+        time.sleep(0.5)
 
-    # Assemble output in chronological order for the requested date range
     for i in range(total_days):
         target   = START_DATE + timedelta(days=i)
         date_str = target.isoformat()
         cats     = day_map.get(date_str, {})
 
         n_items = sum(len(v) for v in cats.values())
-        n_cats  = len(cats)
-        print(f"  {target.strftime('%a %b %d')} — {n_items} items in {n_cats} categories")
+        print(f"  {target.strftime('%a %b %d')} — {n_items} items in {len(cats)} categories")
 
         result["menus"].append({
             "date":        date_str,
@@ -265,12 +207,9 @@ def main() -> None:
 
     OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    total_items = sum(
-        sum(len(v) for v in day["categories"].values())
-        for day in result["menus"]
-    )
+    n_items = sum(sum(len(v) for v in day["categories"].values()) for day in result["menus"])
     print(f"\nSaved → {OUTPUT}")
-    print(f"Total : {total_items} menu items across {total_days} days")
+    print(f"Total : {n_items} menu items across {total_days} days")
 
 
 if __name__ == "__main__":
