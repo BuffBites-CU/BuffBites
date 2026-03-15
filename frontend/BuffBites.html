@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuffBites — CU Boulder Dining</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #CFB87C;
+      --gold-dim: #a89060;
+      --gold-light: #ede0bc;
+      --black: #090909;
+      --surface: #121212;
+      --surface2: #1a1a1a;
+      --surface3: #222222;
+      --surface4: #2c2c2c;
+      --border: rgba(207,184,124,0.15);
+      --border-strong: rgba(207,184,124,0.3);
+      --text: #f0ead8;
+      --text-muted: #888070;
+      --text-dim: #5a5248;
+      --radius: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    #root { min-height: 100vh; }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--surface); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+
+    /* HEADER */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--black);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px; gap: 24px;
+    }
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px; letter-spacing: 2px;
+      color: var(--gold); flex-shrink: 0;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .logo-badge {
+      background: var(--gold);
+      color: var(--black);
+      font-size: 10px; font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 1px;
+      padding: 3px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .meal-tabs {
+      display: flex; gap: 4px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 4px;
+    }
+    .meal-tab {
+      padding: 6px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 13px; font-weight: 500;
+      cursor: pointer; border: none;
+      background: transparent; color: var(--text-muted);
+      transition: all 0.2s;
+    }
+    .meal-tab:hover { color: var(--text); }
+    .meal-tab.active {
+      background: var(--gold);
+      color: var(--black);
+      font-weight: 600;
+    }
+    .header-right {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .date-chip {
+      font-size: 12px; color: var(--text-muted);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 5px 12px; border-radius: var(--radius-pill);
+    }
+    .btn-icon {
+      width: 36px; height: 36px;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; transition: all 0.2s; color: var(--text-muted);
+    }
+    .btn-icon:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      max-width: 1100px; margin: 0 auto;
+      padding: 48px 24px 24px;
+    }
+    .hero-eyebrow {
+      font-size: 11px; font-weight: 600; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 6vw, 72px);
+      line-height: 1;
+      letter-spacing: 2px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-sub {
+      font-size: 15px; color: var(--text-muted);
+      max-width: 480px;
+    }
+
+    /* FILTERS */
+    .filters-wrap {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 24px 28px;
+    }
+    .filter-label {
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--text-dim); margin-bottom: 10px; font-weight: 500;
+    }
+    .filter-chips {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .chip {
+      display: flex; align-items: center; gap: 6px;
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      font-size: 13px; font-weight: 500;
+      cursor: pointer; transition: all 0.2s;
+      user-select: none;
+    }
+    .chip:hover { border-color: var(--border-strong); color: var(--text); }
+    .chip.active {
+      background: rgba(207,184,124,0.12);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .chip-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+    }
+
+    /* SECTION */
+    .section {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 24px 48px;
+    }
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px; letter-spacing: 2px;
+      color: var(--text);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-title-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(207,184,124,0.15);
+      color: var(--gold);
+      padding: 4px 10px; border-radius: 6px;
+    }
+    .btn-outline {
+      padding: 7px 16px; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--border-strong); border-radius: var(--radius-pill);
+      background: transparent; color: var(--gold);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-outline:hover { background: rgba(207,184,124,0.1); }
+
+    /* COMBO GRID */
+    .combo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    /* COMBO CARD */
+    .combo-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      transition: all 0.25s;
+      display: flex; flex-direction: column; gap: 14px;
+      position: relative; overflow: hidden;
+    }
+    .combo-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+    }
+    .combo-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0; transition: opacity 0.25s;
+    }
+    .combo-card:hover::before { opacity: 1; }
+    .combo-card-top {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 10px;
+    }
+    .combo-icon-wrap {
+      width: 52px; height: 52px;
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; flex-shrink: 0;
+    }
+    .combo-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px; letter-spacing: 1px;
+      color: var(--text); line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .combo-desc {
+      font-size: 12px; color: var(--text-muted); line-height: 1.4;
+    }
+    .combo-save-btn {
+      width: 34px; height: 34px; flex-shrink: 0;
+      background: var(--surface3); border: 1px solid var(--border);
+      border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; transition: all 0.2s;
+    }
+    .combo-save-btn:hover { border-color: var(--gold); }
+    .combo-save-btn.saved {
+      background: rgba(207,184,124,0.15);
+      border-color: var(--gold);
+    }
+    .combo-items {
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .combo-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text);
+    }
+    .combo-item-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+    }
+    .combo-item-station {
+      font-size: 11px; color: var(--text-dim); margin-left: auto;
+    }
+    .combo-tags {
+      display: flex; gap: 6px; flex-wrap: wrap;
+    }
+    .tag {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+      padding: 3px 9px; border-radius: var(--radius-pill);
+      text-transform: uppercase;
+    }
+    .tag-vegan { background: rgba(98,184,91,0.15); color: #7ec97a; }
+    .tag-gluten { background: rgba(255,183,77,0.12); color: #e8a845; }
+    .tag-halal { background: rgba(77,166,255,0.12); color: #6bb8f5; }
+    .tag-vegetarian { background: rgba(180,130,220,0.12); color: #c08ee0; }
+    .combo-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .combo-rating {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 13px; font-weight: 600; color: var(--gold);
+    }
+    .combo-rating-star { font-size: 13px; }
+    .combo-actions {
+      display: flex; gap: 6px;
+    }
+    .action-btn {
+      display: flex; align-items: center; gap: 5px;
+      padding: 5px 12px; font-size: 12px; font-weight: 500;
+      border: 1px solid var(--border); border-radius: var(--radius-pill);
+      background: transparent; color: var(--text-muted); cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-btn:hover { color: var(--text); border-color: var(--border-strong); }
+    .action-btn.liked { color: var(--gold); border-color: rgba(207,184,124,0.4); }
+
+    /* DIVIDER */
+    .divider {
+      max-width: 1100px; margin: 0 auto 40px;
+      padding: 0 24px;
+    }
+    .divider-line {
+      border: none; border-top: 1px solid var(--border);
+    }
+
+    /* COMMUNITY SECTION */
+    .community-list { display: flex; flex-direction: column; gap: 10px; }
+    .community-card {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 14px 16px;
+      transition: all 0.2s; cursor: default;
+    }
+    .community-card:hover { border-color: var(--border-strong); }
+    .upvote-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+      background: var(--surface3); border: 1px solid var(--border);
+      border-radius: 8px; padding: 6px 10px; cursor: pointer;
+      transition: all 0.2s; min-width: 44px;
+      font-size: 11px; font-weight: 600; color: var(--text-muted);
+    }
+    .upvote-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .upvote-btn.voted { background: rgba(207,184,124,0.12); border-color: var(--gold); color: var(--gold); }
+    .upvote-arrow { font-size: 14px; line-height: 1; }
+    .comm-info { flex: 1; }
+    .comm-name {
+      font-weight: 600; font-size: 14px; color: var(--text); margin-bottom: 2px;
+    }
+    .comm-items { font-size: 12px; color: var(--text-muted); }
+    .comm-meta {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; color: var(--text-dim);
+    }
+    .comm-user {
+      display: flex; align-items: center; gap: 5px;
+    }
+    .comm-avatar {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--surface3); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 600; color: var(--gold);
+    }
+
+    /* SUBMIT BANNER */
+    .submit-banner {
+      max-width: 1100px; margin: 0 auto 56px;
+      padding: 0 24px;
+    }
+    .submit-card {
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg); padding: 28px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px;
+    }
+    .submit-text h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px; letter-spacing: 1px; color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .submit-text p { font-size: 13px; color: var(--text-muted); }
+    .btn-gold {
+      padding: 10px 24px; font-size: 14px; font-weight: 600;
+      background: var(--gold); color: var(--black);
+      border: none; border-radius: var(--radius-pill);
+      cursor: pointer; transition: all 0.2s;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .btn-gold:hover { background: var(--gold-light); }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.8);
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .modal {
+      background: var(--surface); border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg); padding: 28px;
+      width: 100%; max-width: 460px;
+    }
+    .modal-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px; letter-spacing: 1px; color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .modal-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+    .form-field { margin-bottom: 16px; }
+    .form-label {
+      display: block; font-size: 12px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;
+    }
+    .form-input {
+      width: 100%; padding: 10px 14px;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; color: var(--text); font-family: 'Outfit', sans-serif;
+      font-size: 14px; outline: none; transition: border-color 0.2s;
+    }
+    .form-input:focus { border-color: var(--gold); }
+    .form-input::placeholder { color: var(--text-dim); }
+    .modal-footer {
+      display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;
+    }
+    .btn-ghost {
+      padding: 9px 20px; font-size: 14px; font-weight: 500;
+      background: transparent; border: 1px solid var(--border);
+      border-radius: var(--radius-pill); color: var(--text-muted);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-ghost:hover { color: var(--text); border-color: var(--border-strong); }
+
+    /* TOAST */
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 300;
+      background: var(--surface3); border: 1px solid var(--gold);
+      border-radius: var(--radius); padding: 12px 20px;
+      font-size: 14px; color: var(--text);
+      display: flex; align-items: center; gap: 8px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      animation: slideUp 0.25s ease;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .toast-icon { font-size: 16px; }
+
+    /* EMPTY STATE */
+    .empty {
+      text-align: center; padding: 60px 20px;
+      color: var(--text-muted);
+    }
+    .empty-icon { font-size: 48px; margin-bottom: 12px; }
+    .empty-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 4px; }
+
+    /* STATS BAR */
+    .stats-bar {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 24px 32px;
+      display: flex; gap: 12px;
+    }
+    .stat-pill {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 14px;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: var(--radius-pill); font-size: 12px;
+    }
+    .stat-num { font-weight: 700; color: var(--gold); }
+    .stat-lbl { color: var(--text-muted); }
+
+    @media (max-width: 640px) {
+      .header-inner { flex-wrap: wrap; height: auto; padding: 12px 0; gap: 10px; }
+      .date-chip { display: none; }
+      .combo-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 44px; }
+      .submit-card { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const PERIODS = ['Breakfast', 'Lunch', 'Dinner'];
+
+    const FILTERS = [
+      { id: 'vegan',       label: 'Vegan',       color: '#7ec97a', dot: '#62b85b' },
+      { id: 'gluten-free', label: 'Gluten-Free',  color: '#e8a845', dot: '#ffb74d' },
+      { id: 'halal',       label: 'Halal',        color: '#6bb8f5', dot: '#4da6ff' },
+      { id: 'vegetarian',  label: 'Vegetarian',   color: '#c08ee0', dot: '#b482dc' },
+    ];
+
+    const COMBOS = {
+      Breakfast: [
+        {
+          id: 'b1', name: 'The Early Buff', icon: '🌅',
+          desc: 'A golden start that powers your morning lectures',
+          items: [
+            { name: 'Scrambled Eggs', station: 'Grill' },
+            { name: 'Whole Grain Toast', station: 'Bakery' },
+            { name: 'Sliced Avocado', station: 'Deli' },
+            { name: 'Fresh Fruit Cup', station: 'Salad Bar' },
+          ],
+          tags: ['vegetarian', 'gluten-free'],
+          rating: 4.9,
+        },
+        {
+          id: 'b2', name: 'Power Stack', icon: '⚡',
+          desc: 'Fuel up for a full day on the Flatirons trail',
+          items: [
+            { name: 'Oatmeal & Berries', station: 'Hot Bar' },
+            { name: 'Greek Yogurt', station: 'Cold Bar' },
+            { name: 'Peanut Butter Toast', station: 'Bakery' },
+            { name: 'Hard Boiled Egg', station: 'Deli' },
+          ],
+          tags: ['vegetarian'],
+          rating: 4.6,
+        },
+        {
+          id: 'b3', name: 'Sunrise Ritual', icon: '🫐',
+          desc: 'Light, clean, and perfect before a 8am exam',
+          items: [
+            { name: 'Chia Pudding', station: 'Cold Bar' },
+            { name: 'Blueberry Muffin', station: 'Bakery' },
+            { name: 'Banana', station: 'Fruit' },
+            { name: 'Black Coffee', station: 'Beverage' },
+          ],
+          tags: ['vegan'],
+          rating: 4.4,
+        },
+        {
+          id: 'b4', name: 'Mountain Griddle', icon: '🥞',
+          desc: 'The weekend warrior stack — earned after a hike',
+          items: [
+            { name: 'Buttermilk Pancakes', station: 'Grill' },
+            { name: 'Turkey Sausage', station: 'Grill' },
+            { name: 'Maple Syrup & Butter', station: 'Condiment' },
+            { name: 'Orange Juice', station: 'Beverage' },
+          ],
+          tags: ['halal'],
+          rating: 4.7,
+        },
+      ],
+      Lunch: [
+        {
+          id: 'l1', name: 'The Golden Buff', icon: '🏆',
+          desc: 'A power bowl that fuels your afternoon lectures',
+          items: [
+            { name: 'Grilled Chicken', station: 'Grill' },
+            { name: 'Brown Rice', station: 'Hot Bar' },
+            { name: 'Roasted Broccoli', station: 'Veggies' },
+            { name: 'Tahini Sauce', station: 'Condiment' },
+          ],
+          tags: ['halal', 'gluten-free'],
+          rating: 4.8,
+        },
+        {
+          id: 'l2', name: 'Boulder Bowl', icon: '🥗',
+          desc: 'Clean greens with crunch — the classic study fuel',
+          items: [
+            { name: 'Mixed Greens Base', station: 'Salad Bar' },
+            { name: 'Chickpeas & Feta', station: 'Salad Bar' },
+            { name: 'Quinoa', station: 'Grain Station' },
+            { name: 'Lemon Vinaigrette', station: 'Condiment' },
+          ],
+          tags: ['vegan', 'gluten-free', 'vegetarian'],
+          rating: 4.5,
+        },
+        {
+          id: 'l3', name: 'Flatiron Smash', icon: '🍔',
+          desc: 'The ultimate comfort combo between back-to-back classes',
+          items: [
+            { name: 'Beef Smash Burger', station: 'Grill' },
+            { name: 'Seasoned Fries', station: 'Fry Station' },
+            { name: 'Coleslaw', station: 'Deli' },
+            { name: 'Lemonade', station: 'Beverage' },
+          ],
+          tags: ['halal'],
+          rating: 4.9,
+        },
+        {
+          id: 'l4', name: 'Zen Noodle Bar', icon: '🍜',
+          desc: 'Warm, savory, and surprisingly filling',
+          items: [
+            { name: 'Ramen Broth', station: 'Asian Station' },
+            { name: 'Tofu & Bok Choy', station: 'Asian Station' },
+            { name: 'Soft Boiled Egg', station: 'Deli' },
+            { name: 'Steamed Rice', station: 'Hot Bar' },
+          ],
+          tags: ['vegan', 'vegetarian'],
+          rating: 4.6,
+        },
+        {
+          id: 'l5', name: 'Desi Street Stop', icon: '🍛',
+          desc: 'Spiced, hearty, and homestyle — a taste of home',
+          items: [
+            { name: 'Chana Masala', station: 'Indian Station' },
+            { name: 'Basmati Rice', station: 'Indian Station' },
+            { name: 'Naan Bread', station: 'Bakery' },
+            { name: 'Raita', station: 'Condiment' },
+          ],
+          tags: ['vegan', 'vegetarian', 'halal'],
+          rating: 4.7,
+        },
+      ],
+      Dinner: [
+        {
+          id: 'd1', name: 'Night Before Midterms', icon: '📚',
+          desc: 'Carb-loaded, brain-powered, zero regrets',
+          items: [
+            { name: 'Pasta Primavera', station: 'Pasta Bar' },
+            { name: 'Garlic Bread', station: 'Bakery' },
+            { name: 'Caesar Salad', station: 'Salad Bar' },
+            { name: 'Sparkling Water', station: 'Beverage' },
+          ],
+          tags: ['vegetarian'],
+          rating: 4.6,
+        },
+        {
+          id: 'd2', name: 'The Grillmaster', icon: '🥩',
+          desc: 'Post-gym, post-lecture, post-everything reward',
+          items: [
+            { name: 'Grilled Salmon', station: 'Grill' },
+            { name: 'Roasted Sweet Potato', station: 'Hot Bar' },
+            { name: 'Sautéed Asparagus', station: 'Veggies' },
+            { name: 'Lemon Herb Sauce', station: 'Condiment' },
+          ],
+          tags: ['gluten-free', 'halal'],
+          rating: 4.9,
+        },
+        {
+          id: 'd3', name: 'Cozy Friday', icon: '🌮',
+          desc: 'Taco night energy — bring your whole squad',
+          items: [
+            { name: 'Beef & Bean Tacos', station: 'Mexican Station' },
+            { name: 'Spanish Rice', station: 'Mexican Station' },
+            { name: 'Guacamole & Pico', station: 'Condiment' },
+            { name: 'Horchata', station: 'Beverage' },
+          ],
+          tags: ['halal'],
+          rating: 4.8,
+        },
+      ],
+    };
+
+    const COMMUNITY = [
+      { id: 'c1', name: 'The Cramming Combo', items: 'Grilled Cheese + Tomato Soup + Apple Slices', votes: 127, user: 'buffs_eat', initials: 'BE', tags: ['vegetarian'] },
+      { id: 'c2', name: 'Pre-Rec Center Stack', items: 'Protein Eggs + Oats + Banana + Black Coffee', votes: 94, user: 'fitbuff22', initials: 'FB', tags: ['gluten-free'] },
+      { id: 'c3', name: 'Vegan Warrior', items: 'Lentil Dal + Brown Rice + Cucumber Salad + Mango Lassi', votes: 88, user: 'plant_raj', initials: 'PR', tags: ['vegan'] },
+      { id: 'c4', name: 'Midnight Munchies', items: 'Mozzarella Sticks + Mac & Cheese + Fountain Drink', votes: 201, user: 'latebuff', initials: 'LB', tags: [] },
+      { id: 'c5', name: 'Hiking Fuel Loader', items: 'Peanut Butter Bagel + Trail Mix + Greek Yogurt + Iced Tea', votes: 73, user: 'flatirons_fan', initials: 'FF', tags: ['vegetarian'] },
+    ];
+
+    function tagColor(tag) {
+      const map = { vegan: 'tag-vegan', 'gluten-free': 'tag-gluten', halal: 'tag-halal', vegetarian: 'tag-vegetarian' };
+      return map[tag] || '';
+    }
+
+    function Toast({ msg, onClose }) {
+      useEffect(() => {
+        const t = setTimeout(onClose, 3000);
+        return () => clearTimeout(t);
+      }, []);
+      return (
+        <div className="toast">
+          <span className="toast-icon">✦</span>
+          {msg}
+        </div>
+      );
+    }
+
+    function ComboCard({ combo, onToast }) {
+      const [saved, setSaved] = useState(false);
+      const [liked, setLiked] = useState(false);
+      const [likeCount, setLikeCount] = useState(Math.floor(Math.random() * 80) + 20);
+
+      function handleSave() {
+        setSaved(s => !s);
+        onToast(saved ? 'Removed from saved combos' : `"${combo.name}" saved!`);
+      }
+      function handleLike() {
+        if (liked) { setLikeCount(c => c - 1); setLiked(false); }
+        else { setLikeCount(c => c + 1); setLiked(true); }
+      }
+
+      return (
+        <div className="combo-card">
+          <div className="combo-card-top">
+            <div>
+              <div className="combo-icon-wrap">{combo.icon}</div>
+            </div>
+            <div style={{ flex: 1, paddingLeft: 12 }}>
+              <div className="combo-name">{combo.name}</div>
+              <div className="combo-desc">{combo.desc}</div>
+            </div>
+            <button className={`combo-save-btn${saved ? ' saved' : ''}`} onClick={handleSave} title="Save combo">
+              {saved ? '★' : '☆'}
+            </button>
+          </div>
+          <div className="combo-items">
+            {combo.items.map((item, i) => (
+              <div className="combo-item" key={i}>
+                <span className="combo-item-dot" />
+                <span>{item.name}</span>
+                <span className="combo-item-station">{item.station}</span>
+              </div>
+            ))}
+          </div>
+          {combo.tags.length > 0 && (
+            <div className="combo-tags">
+              {combo.tags.map(t => (
+                <span key={t} className={`tag ${tagColor(t)}`}>{t}</span>
+              ))}
+            </div>
+          )}
+          <div className="combo-footer">
+            <div className="combo-rating">
+              <span className="combo-rating-star">★</span>
+              {combo.rating.toFixed(1)}
+            </div>
+            <div className="combo-actions">
+              <button className={`action-btn${liked ? ' liked' : ''}`} onClick={handleLike}>
+                ♥ {likeCount}
+              </button>
+              <button className="action-btn" onClick={() => onToast('Share link copied!')}>
+                ↗ Share
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function CommunityCard({ item, onToast }) {
+      const [votes, setVotes] = useState(item.votes);
+      const [voted, setVoted] = useState(false);
+
+      function handleVote() {
+        if (voted) { setVotes(v => v - 1); setVoted(false); }
+        else { setVotes(v => v + 1); setVoted(true); onToast(`Upvoted "${item.name}"!`); }
+      }
+
+      return (
+        <div className="community-card">
+          <button className={`upvote-btn${voted ? ' voted' : ''}`} onClick={handleVote}>
+            <span className="upvote-arrow">▲</span>
+            {votes}
+          </button>
+          <div className="comm-info">
+            <div className="comm-name">{item.name}</div>
+            <div className="comm-items">{item.items}</div>
+          </div>
+          <div className="comm-meta">
+            {item.tags.map(t => (
+              <span key={t} className={`tag ${tagColor(t)}`} style={{ fontSize: '10px', padding: '2px 7px' }}>{t}</span>
+            ))}
+            <div className="comm-user">
+              <div className="comm-avatar">{item.initials}</div>
+              <span style={{ color: 'var(--text-dim)', fontSize: '11px' }}>@{item.user}</span>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function SubmitModal({ onClose, onSubmit }) {
+      const [name, setName] = useState('');
+      const [items, setItems] = useState('');
+
+      function handleSubmit() {
+        if (!name.trim() || !items.trim()) return;
+        onSubmit(name, items);
+        onClose();
+      }
+
+      return (
+        <div className="modal-overlay" onClick={e => e.target === e.currentTarget && onClose()}>
+          <div className="modal">
+            <div className="modal-title">Submit Your Combo</div>
+            <div className="modal-sub">Share a dining hall discovery with your fellow Buffs</div>
+            <div className="form-field">
+              <label className="form-label">Combo Name</label>
+              <input className="form-input" placeholder="e.g. The Midnight Special" value={name} onChange={e => setName(e.target.value)} />
+            </div>
+            <div className="form-field">
+              <label className="form-label">Items (separate with commas)</label>
+              <input className="form-input" placeholder="e.g. Mac & Cheese, Garlic Bread, Caesar Salad" value={items} onChange={e => setItems(e.target.value)} />
+            </div>
+            <div className="form-field">
+              <label className="form-label">Dietary Tags (optional)</label>
+              <input className="form-input" placeholder="e.g. vegan, gluten-free" />
+            </div>
+            <div className="modal-footer">
+              <button className="btn-ghost" onClick={onClose}>Cancel</button>
+              <button className="btn-gold" onClick={handleSubmit}>Submit Combo</button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function App() {
+      const [period, setPeriod] = useState('Lunch');
+      const [activeFilters, setActiveFilters] = useState([]);
+      const [toast, setToast] = useState(null);
+      const [showModal, setShowModal] = useState(false);
+
+      const today = new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+
+      function toggleFilter(id) {
+        setActiveFilters(f => f.includes(id) ? f.filter(x => x !== id) : [...f, id]);
+      }
+
+      function showToast(msg) {
+        setToast(msg);
+      }
+
+      let combos = COMBOS[period] || [];
+      if (activeFilters.length > 0) {
+        combos = combos.filter(c => activeFilters.every(f => c.tags.includes(f)));
+      }
+
+      function handleSubmitCombo(name, items) {
+        showToast(`"${name}" submitted — pending review!`);
+      }
+
+      return (
+        <div>
+          {/* HEADER */}
+          <header className="header">
+            <div className="header-inner">
+              <div className="logo">
+                BUFFBITES
+                <span className="logo-badge">AI</span>
+              </div>
+              <div className="meal-tabs">
+                {PERIODS.map(p => (
+                  <button key={p} className={`meal-tab${period === p ? ' active' : ''}`} onClick={() => setPeriod(p)}>
+                    {p}
+                  </button>
+                ))}
+              </div>
+              <div className="header-right">
+                <span className="date-chip">{today}</span>
+                <button className="btn-icon" title="Search" onClick={() => showToast('Search coming soon')}>🔍</button>
+                <button className="btn-icon" title="Saved" onClick={() => showToast('View saved combos')}>★</button>
+              </div>
+            </div>
+          </header>
+
+          {/* HERO */}
+          <div className="hero">
+            <div className="hero-eyebrow">CU Boulder Dining · Today's Menu</div>
+            <h1 className="hero-title">
+              {period === 'Breakfast' && <><span>Rise</span> & Eat</>}
+              {period === 'Lunch'     && <>Build Your <span>Perfect</span> Plate</>}
+              {period === 'Dinner'    && <>End the Day <span>Right</span></>}
+            </h1>
+            <p className="hero-sub">
+              AI-curated combos from today's Wardenburg & Center dining menus — filtered for what you actually eat.
+            </p>
+          </div>
+
+          {/* STATS */}
+          <div className="stats-bar">
+            <div className="stat-pill"><span className="stat-num">47</span><span className="stat-lbl">items today</span></div>
+            <div className="stat-pill"><span className="stat-num">{combos.length}</span><span className="stat-lbl">AI combos</span></div>
+            <div className="stat-pill"><span className="stat-num">5</span><span className="stat-lbl">trending</span></div>
+          </div>
+
+          {/* FILTERS */}
+          <div className="filters-wrap">
+            <div className="filter-label">Dietary Filters</div>
+            <div className="filter-chips">
+              {FILTERS.map(f => (
+                <div
+                  key={f.id}
+                  className={`chip${activeFilters.includes(f.id) ? ' active' : ''}`}
+                  onClick={() => toggleFilter(f.id)}
+                >
+                  <span className="chip-dot" style={{ background: f.dot }} />
+                  {f.label}
+                </div>
+              ))}
+              {activeFilters.length > 0 && (
+                <div className="chip" onClick={() => setActiveFilters([])} style={{ color: 'var(--text-dim)' }}>
+                  ✕ Clear all
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* AI COMBOS */}
+          <div className="section">
+            <div className="section-header">
+              <div className="section-title">
+                AI Combos
+                <span className="section-title-badge">Powered by Claude</span>
+              </div>
+              <button className="btn-outline" onClick={() => showToast('Regenerating combos...')}>
+                ↺ Regenerate
+              </button>
+            </div>
+            {combos.length > 0 ? (
+              <div className="combo-grid">
+                {combos.map(c => (
+                  <ComboCard key={c.id} combo={c} onToast={showToast} />
+                ))}
+              </div>
+            ) : (
+              <div className="empty">
+                <div className="empty-icon">🥲</div>
+                <div className="empty-title">No combos match your filters</div>
+                <p style={{ fontSize: '13px', color: 'var(--text-dim)', marginTop: 6 }}>Try removing a dietary filter</p>
+              </div>
+            )}
+          </div>
+
+          <div className="divider"><hr className="divider-line" /></div>
+
+          {/* COMMUNITY */}
+          <div className="section">
+            <div className="section-header">
+              <div className="section-title">
+                Community Picks
+                <span className="section-title-badge">Trending</span>
+              </div>
+              <button className="btn-outline" onClick={() => setShowModal(true)}>
+                + Submit Combo
+              </button>
+            </div>
+            <div className="community-list">
+              {COMMUNITY.map(item => (
+                <CommunityCard key={item.id} item={item} onToast={showToast} />
+              ))}
+            </div>
+          </div>
+
+          {/* SUBMIT BANNER */}
+          <div className="submit-banner">
+            <div className="submit-card">
+              <div className="submit-text">
+                <h3>Found a Hidden Gem?</h3>
+                <p>Share your best dining hall discovery with the CU community and get upvoted to the top.</p>
+              </div>
+              <button className="btn-gold" onClick={() => setShowModal(true)}>
+                Share Your Combo →
+              </button>
+            </div>
+          </div>
+
+          {/* MODAL */}
+          {showModal && (
+            <SubmitModal
+              onClose={() => setShowModal(false)}
+              onSubmit={handleSubmitCombo}
+            />
+          )}
+
+          {/* TOAST */}
+          {toast && <Toast msg={toast} onClose={() => setToast(null)} />}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
