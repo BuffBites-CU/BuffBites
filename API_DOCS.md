@@ -1,174 +1,89 @@
-# BuffBites — API Documentation
+# BuffBites — API Docs
 
-This document is the single source of truth for data structures and API endpoints.
-Authors : ISHITA PAWAR, RAJVARDHAN PATIL, SEJAL HUKARE
+Authors: Ishita Pawar, Rajvardhan Patil, Sejal Hukare
+Base URL: `http://localhost:3001`
 
 ---
 
-## Data Models
+## Endpoints
 
-### Menu
-Represents one day's menu for a single dining hall. Populated by the scraper.
+### `GET /`
+Health check.
 
+```bash
+curl http://localhost:3001/
+# { "message": "BuffBites API is running" }
+```
+
+---
+
+### `GET /api/combos/generate`
+
+Generates 4 AI-powered meal combos for a dining hall and date.
+
+**Query params:**
+
+| Param | Required | Description |
+|-------|----------|-------------|
+| `dining` | Yes | One of: `alley`, `c4c`, `libby`, `sewall`, `village_center` |
+| `date` | No | `YYYY-MM-DD` — defaults to today |
+
+**Example:**
+```bash
+curl "http://localhost:3001/api/combos/generate?dining=c4c&date=2026-03-16"
+```
+
+**Response:**
 ```json
 {
-  "dining_location": "The Alley at Farrand",
-  "date": "2026-03-15",
-  "day_of_week": "Sunday",
-  "categories": {
-    "Featured Entree": [
-      {
-        "name": "Grilled Chicken",
-        "description": "",
-        "serving_size": "6 oz",
-        "calories": 320,
-        "ingredients": "Chicken breast, olive oil, salt, pepper...",
-        "allergens": ["Wheat", "Soy"],
-        "dietary_labels": ["Halal"],
-        "is_vegan": false,
-        "is_vegetarian": false,
-        "nutrition": {
-          "calories": 320,
-          "fat_g": 8,
-          "saturated_fat_g": 2,
-          "sodium_mg": 480,
-          "carbohydrates_g": 0,
-          "fiber_g": 0,
-          "protein_g": 42
-        }
-      }
-    ],
-    "Salad Bar": [
-      {
-        "name": "Mixed Greens",
-        "calories": 20,
-        "allergens": [],
-        "dietary_labels": ["Vegan", "Gluten-Free"],
-        "is_vegan": true,
-        "is_vegetarian": true
-      }
-    ]
-  }
+  "dining_location": "Center for Community (C4C)",
+  "date": "2026-03-16",
+  "day_of_week": "Monday",
+  "combos": [
+    {
+      "title": "The Golden Buff",
+      "dishes": ["Grilled Chicken", "Brown Rice", "Roasted Broccoli"],
+      "description": "High-protein post-gym meal",
+      "approximate_calories": 720,
+      "tags": ["high-protein", "halal"]
+    }
+  ]
 }
 ```
 
+**Errors:**
+
+| Status | Reason |
+|--------|--------|
+| 400 | Invalid or missing `dining` param |
+| 404 | No menu found for that date |
+| 500 | Failed to load menu data or Claude API error |
+
 ---
 
-### Combo
-Represents a meal combination — either AI-generated or user-submitted.
+## Dining Hall Keys
+
+| Key | Dining Hall |
+|-----|-------------|
+| `alley` | The Alley at Farrand |
+| `c4c` | Center for Community (C4C) |
+| `libby` | Libby Dining |
+| `sewall` | Sewall Dining |
+| `village_center` | Village Center Dining |
+
+---
+
+## Menu Item Shape (from scraped JSON)
 
 ```json
 {
-  "title": "The Golden Buff",
-  "dishes": ["Grilled Chicken", "Brown Rice", "Roasted Broccoli"],
-  "tags": ["halal", "gluten-free"],
-  "upvotes": 24,
-  "downvotes": 1,
-  "description": "Perfect post-gym meal under 700 calories"
+  "name": "Grilled Chicken",
+  "category": "Featured Entree",
+  "calories": 320,
+  "protein_g": 42,
+  "is_vegan": false,
+  "is_vegetarian": false,
+  "allergens": ["Wheat", "Soy"],
+  "dietary_labels": ["Halal"]
 }
 ```
-
-> ⚠️ Important for frontend: use `title` not `name`, and `dishes` not `items`
-
----
-
-### User
-Represents a registered user.
-
-```json
-{
-  "username": "buffs_eat",
-  "email": "buffs_eat@colorado.edu",
-  "karma": 142
-}
-```
-
-> ⚠️ Password is never returned from the API — it is stored as a hash server-side only
-
----
-
-## API Endpoints
-
-Base URL: `http://localhost:8000`
-
----
-
-### Menus
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/menus` | Get all menus |
-| GET | `/menus?dining_hall=alley&date=2026-03-15` | Get menu for a specific dining hall and date |
-| POST | `/menus` | Add a new menu (used by scraper only) |
-
-**Example GET /menus response:**
-```json
-[
-  {
-    "dining_location": "The Alley at Farrand",
-    "date": "2026-03-15",
-    "day_of_week": "Sunday",
-    "categories": { ... }
-  }
-]
-```
-
----
-
-### Combos
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/combos` | Get all community combos |
-| GET | `/combos/ai?period=lunch&date=2026-03-15` | Get AI-generated combos for a meal period |
-| POST | `/combos` | Submit a new combo |
-| POST | `/combos/:id/vote` | Upvote or downvote a combo |
-
-**Example POST /combos request body:**
-```json
-{
-  "title": "Midnight Munchies",
-  "dishes": ["Mac & Cheese", "Garlic Bread", "Lemonade"],
-  "tags": ["vegetarian"],
-  "description": "Late night comfort food"
-}
-```
-
-**Example POST /combos/:id/vote request body:**
-```json
-{
-  "type": "upvote"
-}
-```
-
----
-
-### Users
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/users/register` | Register a new user |
-| POST | `/users/login` | Log in and receive a token |
-| GET | `/users/:id` | Get a user's profile |
-
----
-
-## Dining Hall Reference
-
-| Dining Hall | Key to use in API |
-|---|---|
-| The Alley at Farrand | `alley` |
-| Center for Community (C4C) | `c4c` |
-| Libby Dining | `libby` |
-| Sewall Dining | `sewall` |
-| Village Center Dining | `village` |
-
----
-
-## Notes for Each Team Member
-
-**Scraper:** POST scraped data to `POST /menus` once the backend is running. Make sure `dining_location` matches the reference table above exactly.
-
-**Backend:** All endpoints return JSON. Errors return `{ "error": "message" }` with the appropriate status code.
-
-**Frontend:** Use `title` and `dishes` for combo fields. Dietary filter values should match exactly: `vegan`, `vegetarian`, `gluten-free`, `halal`.
