@@ -10,7 +10,15 @@ import requests
 
 API_BASE    = "https://colorado-diningmenus.api.nutrislice.com"
 SCHOOL_SLUG = "village-center-dining"
-MENU_SLUG   = "vc-meal-of-the-day"
+STATION_SLUGS = [
+    "vc_toast",
+    "vc_curryroad",
+    "vc_middleterranean",
+    "vc_vc-salad-deli-bar",
+    "hearth",
+    "vc_peaks",
+    "vc_grange",
+]
 START_DATE  = date(2026, 1, 5)
 MAX_WEEKS   = 52
 OUTPUT      = Path(__file__).parent / "village_center_dining_menus.json"
@@ -143,10 +151,10 @@ def fingerprint(week_days: list[dict]) -> frozenset[str]:
     return frozenset(names)
 
 
-def fetch_week(wk_start: date, session: requests.Session) -> dict:
+def fetch_week(wk_start: date, session: requests.Session, menu_slug: str) -> dict:
     url = (
         f"{API_BASE}/menu/api/weeks/school/{SCHOOL_SLUG}"
-        f"/menu-type/{MENU_SLUG}"
+        f"/menu-type/{menu_slug}"
         f"/{wk_start.year}/{wk_start.month:02d}/{wk_start.day:02d}"
     )
     resp = session.get(url, headers=HEADERS, timeout=20)
@@ -168,39 +176,47 @@ def main() -> None:
 
     for wk in range(1, MAX_WEEKS + 1):
         wk_start = START_DATE + timedelta(weeks=wk - 1)
-        print(f"Fetching week {wk:>2}  ({wk_start}) ...", end=" ", flush=True)
-
-        try:
-            data = fetch_week(wk_start, session)
-        except Exception as exc:
-            print(f"ERROR — {exc}")
-            break
-
-        raw = data.get("days") or []
-        print(f"{len(raw)} days received")
+        print(f"Fetching week {wk:>2}  ({wk_start}) ...")
 
         week_days: list[dict] = []
+        day_map: dict[str, dict] = {}  # date -> day_entry
 
-        for day_obj in raw:
-            day_date = day_obj.get("date")
-            items    = day_obj.get("menu_items") or day_obj.get("items") or []
-
-            if not items and isinstance(day_obj, dict):
-                for key in ("sections", "menu_items", "items"):
-                    items = day_obj.get(key) or []
-                    if items:
-                        break
-
-            if not day_date:
+        for slug in STATION_SLUGS:
+            try:
+                data = fetch_week(wk_start, session, slug)
+            except Exception as exc:
+                print(f"  [skip] {slug} — {exc}")
                 continue
 
-            cats   = parse_day(items)
-            target = date.fromisoformat(day_date)
-            print(f"  {target.strftime('%a %b %d')} — {sum(len(v) for v in cats.values())} items in {len(cats)} categories")
+            raw = data.get("days") or []
+            print(f"  [ok]   {slug:<20} — {len(raw)} days")
 
-            day_entry = {"date": day_date, "day_of_week": target.strftime("%A"), "categories": cats}
-            week_days.append(day_entry)
+            for day_obj in raw:
+                day_date = day_obj.get("date")
+                if not day_date:
+                    continue
+                items = day_obj.get("menu_items") or day_obj.get("items") or []
+                cats = parse_day(items)
+                if not cats:
+                    continue
+
+                if day_date not in day_map:
+                    target = date.fromisoformat(day_date)
+                    day_map[day_date] = {
+                        "date": day_date,
+                        "day_of_week": target.strftime("%A"),
+                        "categories": {},
+                    }
+                # Merge — add stations not already present
+                for station, station_items in cats.items():
+                    if station not in day_map[day_date]["categories"]:
+                        day_map[day_date]["categories"][station] = station_items
+
+        for day_entry in sorted(day_map.values(), key=lambda d: d["date"]):
+            n_items = sum(len(v) for v in day_entry["categories"].values())
+            print(f"  {day_entry['date']} — {n_items} items in {len(day_entry['categories'])} stations")
             result["menus"].append(day_entry)
+            week_days.append(day_entry)
 
         fp = fingerprint(week_days)
         if fp:
