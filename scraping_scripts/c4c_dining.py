@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-# Link: https://colorado-diningmenus.nutrislice.com/menu/center-for-community/c4c-meal-of-the-day/2026-01-11
+# Scrapes ALL C4C station menus and merges them by date.
+# Stations: Italian, Latin, Persia, Kosher, Black Coats, Dessert Station, Asia,
+#           + Smoke n' Grill / Wholesome Field (via the daily rotation slug)
 
 import json
 import time
@@ -10,10 +12,25 @@ import requests
 
 API_BASE    = "https://colorado-diningmenus.api.nutrislice.com"
 SCHOOL_SLUG = "center-for-community"
-MENU_SLUG   = "c4c-meal-of-the-day"
 START_DATE  = date(2026, 1, 5)
 MAX_WEEKS   = 52
-OUTPUT      = Path(__file__).parent / "c4c_dining_menus.json"
+OUTPUT      = Path(__file__).parent / "data" / "c4c_dining_menus.json"
+
+# (api_slug, display_prefix)
+# prefix=None  → station-header names used as-is
+#                (c4c-meal-of-the-day already labels headers "Smoke n' Grill", "Wholesome Field", etc.)
+# prefix="Foo" → sub-stations become "Foo - <header>" to avoid name collisions across stations
+STATION_SLUGS: list[tuple[str, str | None]] = [
+    ("italian",             "Italian"),
+    ("latin",               "Latin"),
+    ("persian",             "Persia"),
+    ("c4c-kosher",          "Kosher"),
+    ("c4c-black-coats",     "Black Coats"),
+    ("c4c-dessert-station", "Dessert Station"),
+    ("c4c-asia-all-day",    "Asia"),
+    ("smokin-grill",        "Smoke n' Grill"),
+    ("c4c_wholesome-field", "Wholesome Field"),
+]
 
 HEADERS = {
     "Accept": "application/json",
@@ -89,14 +106,20 @@ def _serving(food: dict) -> str:
     return str(amount or unit or "")
 
 
-def parse_day(items: list) -> dict[str, list]:
+def parse_day(items: list, prefix: str | None = None) -> dict[str, list]:
+    """
+    Parse a flat list of menu_items into {station: [item, ...]} dict.
+    If prefix is given, station names become "<prefix> - <header>" (e.g. "Italian - Pizza Bar").
+    Items with the same name are deduplicated within a station.
+    """
     cats: dict[str, list] = {}
-    station = "General"
+    station = prefix or "General"
 
     for item in items:
         if item.get("is_station_header"):
-            food    = item.get("food") or {}
-            station = (food.get("name") or item.get("text") or "General").strip()
+            food       = item.get("food") or {}
+            raw_name   = (food.get("name") or item.get("text") or "General").strip()
+            station    = f"{prefix} - {raw_name}" if prefix else raw_name
             if station not in cats:
                 cats[station] = []
             continue
@@ -134,6 +157,18 @@ def parse_day(items: list) -> dict[str, list]:
     return cats
 
 
+def merge_categories(base: dict[str, list], new: dict[str, list]) -> None:
+    """Merge new station→items into base in-place, deduplicating by item name."""
+    for cat, items in new.items():
+        if cat not in base:
+            base[cat] = []
+        existing = {i["name"].lower() for i in base[cat]}
+        for item in items:
+            if item["name"].lower() not in existing:
+                base[cat].append(item)
+                existing.add(item["name"].lower())
+
+
 def fingerprint(week_days: list[dict]) -> frozenset[str]:
     names: set[str] = set()
     for day in week_days:
@@ -143,10 +178,10 @@ def fingerprint(week_days: list[dict]) -> frozenset[str]:
     return frozenset(names)
 
 
-def fetch_week(wk_start: date, session: requests.Session) -> dict:
+def fetch_week(wk_start: date, slug: str, session: requests.Session) -> dict:
     url = (
         f"{API_BASE}/menu/api/weeks/school/{SCHOOL_SLUG}"
-        f"/menu-type/{MENU_SLUG}"
+        f"/menu-type/{slug}"
         f"/{wk_start.year}/{wk_start.month:02d}/{wk_start.day:02d}"
     )
     resp = session.get(url, headers=HEADERS, timeout=20)
@@ -157,51 +192,73 @@ def fetch_week(wk_start: date, session: requests.Session) -> dict:
 def main() -> None:
     result = {
         "dining_location": "Center for Community (C4C)",
-        "url": "https://colorado-diningmenus.nutrislice.com/menu/center-for-community/c4c-meal-of-the-day",
+        "url": "https://colorado-diningmenus.nutrislice.com/menu/center-for-community",
         "scrape_start_date": START_DATE.isoformat(),
+        "stations_scraped": [slug for slug, _ in STATION_SLUGS],
         "repeat_info": None,
         "menus": [],
     }
 
-    session = requests.Session()
-    seen: list[tuple[frozenset, int, str]] = []
+    session  = requests.Session()
+    seen:    list[tuple[frozenset, int, str]] = []
+    # Accumulate all day entries across weeks keyed by date to avoid duplicates
+    days_index: dict[str, dict] = {}
 
     for wk in range(1, MAX_WEEKS + 1):
         wk_start = START_DATE + timedelta(weeks=wk - 1)
-        print(f"Fetching week {wk:>2}  ({wk_start}) ...", end=" ", flush=True)
+        print(f"\nWeek {wk:>2}  ({wk_start})")
 
-        try:
-            data = fetch_week(wk_start, session)
-        except Exception as exc:
-            print(f"ERROR — {exc}")
-            break
+        # Per-week merged data: date_str → merged categories dict
+        week_merged: dict[str, dict[str, list]] = {}
 
-        raw = data.get("days") or []
-        print(f"{len(raw)} days received")
-
-        week_days: list[dict] = []
-
-        for day_obj in raw:
-            day_date = day_obj.get("date")
-            items    = day_obj.get("menu_items") or day_obj.get("items") or []
-
-            if not items and isinstance(day_obj, dict):
-                for key in ("sections", "menu_items", "items"):
-                    items = day_obj.get(key) or []
-                    if items:
-                        break
-
-            if not day_date:
+        for slug, prefix in STATION_SLUGS:
+            print(f"  [{slug}]", end=" ", flush=True)
+            try:
+                data = fetch_week(wk_start, slug, session)
+            except Exception as exc:
+                print(f"ERROR — {exc}")
                 continue
 
-            cats   = parse_day(items)
+            raw_days = data.get("days") or []
+            fetched  = 0
+            for day_obj in raw_days:
+                day_date = day_obj.get("date")
+                if not day_date:
+                    continue
+                items = day_obj.get("menu_items") or []
+                cats  = parse_day(items, prefix)
+                if not cats:
+                    continue
+                fetched += sum(len(v) for v in cats.values())
+                if day_date not in week_merged:
+                    week_merged[day_date] = {}
+                merge_categories(week_merged[day_date], cats)
+
+            print(f"{fetched} items across {len(raw_days)} days")
+            time.sleep(0.2)   # polite rate-limit between slugs
+
+        # Build day entries from merged data
+        week_days: list[dict] = []
+        for day_date in sorted(week_merged):
             target = date.fromisoformat(day_date)
-            print(f"  {target.strftime('%a %b %d')} — {sum(len(v) for v in cats.values())} items in {len(cats)} categories")
+            cats   = week_merged[day_date]
+            n_items = sum(len(v) for v in cats.values())
+            print(f"  {target.strftime('%a %b %d')} — {n_items} items in {len(cats)} stations")
 
-            day_entry = {"date": day_date, "day_of_week": target.strftime("%A"), "categories": cats}
-            week_days.append(day_entry)
-            result["menus"].append(day_entry)
+            if day_date in days_index:
+                # Already have this date — merge in any new items
+                merge_categories(days_index[day_date]["categories"], cats)
+            else:
+                day_entry = {
+                    "date":       day_date,
+                    "day_of_week": target.strftime("%A"),
+                    "categories": cats,
+                }
+                days_index[day_date] = day_entry
+                result["menus"].append(day_entry)
+            week_days.append(days_index[day_date])
 
+        # Repeat detection (based on merged item fingerprint for the week)
         fp = fingerprint(week_days)
         if fp:
             for prev_fp, prev_wk, prev_start in seen:
@@ -221,13 +278,14 @@ def main() -> None:
                     return
             seen.append((fp, wk, str(wk_start)))
 
-        time.sleep(0.5)
+        time.sleep(0.3)
 
     print(f"\nNo repeat found within {MAX_WEEKS} weeks.")
     _save(result, len(seen))
 
 
 def _save(result: dict, n_weeks: int) -> None:
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     n_items = sum(sum(len(v) for v in day["categories"].values()) for day in result["menus"])
     print(f"\nSaved  → {OUTPUT}")

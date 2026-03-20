@@ -123,6 +123,7 @@ Here are ALL of today's available menu items ({day_menu['day_of_week']}, {target
 Generate 9 creative, well-balanced meal combos organized into 3 meal periods: Breakfast, Lunch, and Dinner — with exactly 3 combos each. Each combo should:
 - Have a fun, catchy name
 - Include 2-4 items, freely mixing items from different stations/categories — cross-station combos are strongly encouraged
+- Include a dessert item (cake, pastry, cookie, ice cream, soft serve, brownie, pudding, or any other sweet treat — NOT fruit) if one is available on the menu
 - Use items from as many different stations as possible across all 9 combos
 - Provide an approximate total calorie count
 - Include a short description explaining why it works (taste, nutrition, balance, etc.)
@@ -131,9 +132,11 @@ Generate 9 creative, well-balanced meal combos organized into 3 meal periods: Br
 Strict diversity rules:
 - Every dish must appear in AT MOST 1 combo across the entire response — NO dish may be reused in any other combo
 - Each combo within a meal period must use a completely different set of dishes from the other combos in that period
-- If the total number of unique menu items is less than 18, generate as many non-repeating combos as possible and reduce dish count per combo to 2 to maximise uniqueness
+- Every combo MUST have at least 2 dishes — single-dish combos are never allowed, even when the menu is small
+- If the total number of unique menu items is less than 18, limit each combo to exactly 2 dishes (reusing items across combos is acceptable) to maximise variety
 - Use items from ALL available stations — do not ignore any station
 - Spread variety across meal periods: Breakfast combos should feel like morning meals, Lunch like midday, Dinner like an evening meal
+- Dessert items (sweets, baked goods, frozen treats) should be prioritised for Lunch and Dinner combos; for Breakfast, only include a dessert if it fits naturally (e.g. a pastry or muffin)
 
 Each dish must include the station/category it comes from (use the "category" field from the menu data).
 
@@ -177,39 +180,50 @@ Respond with ONLY a JSON object in this exact format, no extra text:
   ]
 }}"""
 
-    # Call Claude
-    try:
-        message = client.messages.create(
-            model="claude-haiku-4-5",
-            max_tokens=2048,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        raw_text: str = message.content[0].text
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Claude API error: {e}")
+    # Call Claude with retry on validation failure
+    MAX_RETRIES = 3
+    last_error: Exception | None = None
+    combos_map: CombosMap | None = None
 
-    # Parse JSON — strip markdown fences if present
-    cleaned = raw_text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
-    try:
-        combos_raw = json.loads(cleaned)
-    except json.JSONDecodeError:
-        raise HTTPException(status_code=500, detail=f"Failed to parse AI response: {raw_text}")
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            message = client.messages.create(
+                model="claude-haiku-4-5",
+                max_tokens=2048,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw_text: str = message.content[0].text
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Claude API error: {e}")
 
-    # ── Pydantic validation ──────────────────────────────────────────────────
-    print("\n" + "="*60)
-    print("  PYDANTIC VALIDATION")
-    print("="*60)
-    try:
-        combos_map = CombosMap(**combos_raw)
-        print("  [✓] CombosMap structure valid")
-        for period in ("Breakfast", "Lunch", "Dinner"):
-            combos_list = getattr(combos_map, period)
-            print(f"  [✓] {period}: {len(combos_list)} combos")
-            for combo in combos_list:
-                print(f"        • \"{combo.title}\" — {len(combo.dishes)} dishes, ~{combo.approximate_calories} cal, tags: {combo.tags}")
-    except Exception as e:
-        print(f"  [✗] Validation failed: {e}")
-        raise HTTPException(status_code=500, detail=f"Invalid AI response structure: {e}")
+        # Parse JSON — strip markdown fences if present
+        cleaned = raw_text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+        try:
+            combos_raw = json.loads(cleaned)
+        except json.JSONDecodeError:
+            raise HTTPException(status_code=500, detail=f"Failed to parse AI response: {raw_text}")
+
+        # ── Pydantic validation ──────────────────────────────────────────────
+        print("\n" + "="*60)
+        print(f"  PYDANTIC VALIDATION (attempt {attempt}/{MAX_RETRIES})")
+        print("="*60)
+        try:
+            combos_map = CombosMap(**combos_raw)
+            print("  [✓] CombosMap structure valid")
+            for period in ("Breakfast", "Lunch", "Dinner"):
+                combos_list = getattr(combos_map, period)
+                print(f"  [✓] {period}: {len(combos_list)} combos")
+                for combo in combos_list:
+                    print(f"        • \"{combo.title}\" — {len(combo.dishes)} dishes, ~{combo.approximate_calories} cal, tags: {combo.tags}")
+            break  # validation passed — exit retry loop
+        except Exception as e:
+            last_error = e
+            print(f"  [✗] Validation failed: {e}")
+            if attempt < MAX_RETRIES:
+                print(f"  [~] Retrying ({attempt}/{MAX_RETRIES - 1} retries used)...")
+
+    if combos_map is None:
+        raise HTTPException(status_code=500, detail=f"Invalid AI response structure after {MAX_RETRIES} attempts: {last_error}")
 
     response = ComboResponse(
         dining_location=menu_data["dining_location"],
