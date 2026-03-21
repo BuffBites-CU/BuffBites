@@ -48,11 +48,11 @@ class Combo(BaseModel):
     tags: list[str]
 
     @model_validator(mode="after")
-    def at_least_two_dishes(self) -> "Combo":
+    def validate_dish_count(self) -> "Combo":
         if len(self.dishes) < 2:
             raise ValueError(f'Combo "{self.title}" must have at least 2 dishes')
-        if len(self.dishes) > 4:
-            raise ValueError(f'Combo "{self.title}" must have at most 4 dishes')
+        if len(self.dishes) > 6:
+            raise ValueError(f'Combo "{self.title}" must have at most 6 dishes')
         return self
 
 

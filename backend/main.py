@@ -1,5 +1,5 @@
 import json
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import anthropic
@@ -8,6 +8,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from pydantic_models.combo_models import (
+    Combo,
     ComboResponse,
     CombosMap,
     DishVerificationError,
@@ -89,7 +90,6 @@ def generate_combos(
                 "protein_g": (item.get("nutrition") or {}).get("protein_g"),
                 "is_vegan": item.get("is_vegan"),
                 "is_vegetarian": item.get("is_vegetarian"),
-                "allergens": item.get("allergens"),
                 "dietary_labels": item.get("dietary_labels"),
             })
             if name:
@@ -98,132 +98,143 @@ def generate_combos(
     if not all_items:
         raise HTTPException(status_code=404, detail="No menu items found for this date")
 
+    # ── Group items by top-level station, then split into 3 meal-period buckets ──
+    # Top-level station = everything before " - " (e.g. "Italian - Omelet Bar" → "Italian")
+    station_groups: dict[str, list[dict]] = defaultdict(list)
+    for item in all_items:
+        top = item["category"].split(" - ")[0]
+        station_groups[top].append(item)
+
+    top_stations = list(station_groups.keys())
+    n = len(top_stations)
+    # Distribute stations as evenly as possible across 3 periods
+    # e.g. 8 stations → 3, 3, 2  (ceiling-divide the first two, remainder for Dinner)
+    b_end = (n + 2) // 3          # breakfast gets ceil(n/3)
+    l_end = b_end + (n + 2) // 3  # lunch gets another ceil(n/3)
+    meal_station_names = {
+        "Breakfast": top_stations[:b_end],
+        "Lunch":     top_stations[b_end:l_end],
+        "Dinner":    top_stations[l_end:],
+    }
+    meal_items = {
+        period: [item for s in names for item in station_groups[s]]
+        for period, names in meal_station_names.items()
+    }
+
     # ── Menu size pre-check ──────────────────────────────────────────────────
     unique_item_count = len(menu_index)
-    stations = list(day_menu.get("categories", {}).keys())
     print("\n" + "="*60)
     print("  MENU PRE-CHECK")
     print("="*60)
     print(f"  Dining hall   : {menu_data['dining_location']}")
     print(f"  Date          : {target_date} ({day_menu['day_of_week']})")
-    print(f"  Stations      : {len(stations)} — {stations}")
+    print(f"  Top stations  : {len(top_stations)} — {top_stations}")
     print(f"  Unique items  : {unique_item_count}")
-    if unique_item_count < MIN_ITEMS_FOR_FULL_MENU:
-        print(f"  [!] WARNING: Only {unique_item_count} unique items available.")
-        print(f"      Need {MIN_ITEMS_FOR_FULL_MENU}+ for 9 fully unique combos.")
-        print(f"      Claude will minimise repeats but some cross-combo reuse may occur.")
-    else:
-        print(f"  [✓] Sufficient items for 9 unique combos")
+    for period, names in meal_station_names.items():
+        print(f"  {period:10s}: {names} ({len(meal_items[period])} items)")
 
-    prompt = f"""You are a creative dining combo suggester for CU Boulder's {menu_data['dining_location']} dining hall.
+    # ── One Claude call per meal period ──────────────────────────────────────
+    def _make_period_prompt(period: str, items: list[dict]) -> str:
+        dessert_note = (
+            "- Include a dessert item (cake, pastry, cookie, ice cream, soft serve, "
+            "brownie, pudding, or any other sweet treat — NOT fruit) if one is available\n"
+            if period in ("Lunch", "Dinner")
+            else "- If a pastry or sweet baked good is available, feel free to include it\n"
+        )
+        return f"""You are a creative dining combo suggester for CU Boulder's {menu_data['dining_location']} dining hall.
 
-Here are ALL of today's available menu items ({day_menu['day_of_week']}, {target_date}) across ALL stations:
-{json.dumps(all_items, indent=2)}
+Here are the available menu items for {period} ({day_menu['day_of_week']}, {target_date}):
+{json.dumps(items, indent=2)}
 
-Generate 9 creative, well-balanced meal combos organized into 3 meal periods: Breakfast, Lunch, and Dinner — with exactly 3 combos each. Each combo should:
+Generate exactly 3 creative, well-balanced {period} combos. Each combo must:
 - Have a fun, catchy name
-- Include 2-4 items, freely mixing items from different stations/categories — cross-station combos are strongly encouraged
-- Include a dessert item (cake, pastry, cookie, ice cream, soft serve, brownie, pudding, or any other sweet treat — NOT fruit) if one is available on the menu
-- Use items from as many different stations as possible across all 9 combos
-- Provide an approximate total calorie count
-- Include a short description explaining why it works (taste, nutrition, balance, etc.)
+- Include between 2 and 6 items from the list above — NEVER more than 6 dishes per combo
+- {dessert_note}- Provide an approximate total calorie count
+- Include a short description (why it works: taste, nutrition, balance)
 - List relevant tags like "high-protein", "vegan", "low-carb", etc.
 
-Strict diversity rules:
-- Every dish must appear in AT MOST 1 combo across the entire response — NO dish may be reused in any other combo
-- Each combo within a meal period must use a completely different set of dishes from the other combos in that period
-- Every combo MUST have at least 2 dishes — single-dish combos are never allowed, even when the menu is small
-- If the total number of unique menu items is less than 18, limit each combo to exactly 2 dishes (reusing items across combos is acceptable) to maximise variety
-- Use items from ALL available stations — do not ignore any station
-- Spread variety across meal periods: Breakfast combos should feel like morning meals, Lunch like midday, Dinner like an evening meal
-- Dessert items (sweets, baked goods, frozen treats) should be prioritised for Lunch and Dinner combos; for Breakfast, only include a dessert if it fits naturally (e.g. a pastry or muffin)
+Rules:
+- HARD LIMIT: each combo must have AT LEAST 2 and AT MOST 6 dishes — never go outside this range
+- No dish may appear in more than one combo
+- Use only items from the list above — do not invent dishes
+- Each dish must include the exact "category" value from the menu data as its station
 
-Each dish must include the station/category it comes from (use the "category" field from the menu data).
+Respond with ONLY a JSON array of exactly 3 combo objects, no extra text:
+[
+  {{
+    "title": "Combo Name",
+    "dishes": [
+      {{ "name": "Exact item name from menu", "station": "Exact category from menu" }},
+      {{ "name": "Exact item name from menu", "station": "Exact category from menu" }}
+    ],
+    "description": "Why this combo is great",
+    "approximate_calories": 600,
+    "tags": ["high-protein", "vegetarian"]
+  }}
+]"""
 
-Respond with ONLY a JSON object in this exact format, no extra text:
-{{
-  "Breakfast": [
-    {{
-      "title": "Combo Name",
-      "dishes": [
-        {{ "name": "Item 1", "station": "Station Name" }},
-        {{ "name": "Item 2", "station": "Station Name" }}
-      ],
-      "description": "Why this combo is great",
-      "approximate_calories": 600,
-      "tags": ["high-protein", "vegetarian"]
-    }}
-  ],
-  "Lunch": [
-    {{
-      "title": "Combo Name",
-      "dishes": [
-        {{ "name": "Item 1", "station": "Station Name" }},
-        {{ "name": "Item 2", "station": "Station Name" }}
-      ],
-      "description": "Why this combo is great",
-      "approximate_calories": 750,
-      "tags": ["balanced"]
-    }}
-  ],
-  "Dinner": [
-    {{
-      "title": "Combo Name",
-      "dishes": [
-        {{ "name": "Item 1", "station": "Station Name" }},
-        {{ "name": "Item 2", "station": "Station Name" }}
-      ],
-      "description": "Why this combo is great",
-      "approximate_calories": 800,
-      "tags": ["high-protein"]
-    }}
-  ]
-}}"""
-
-    # Call Claude with retry on validation failure
     MAX_RETRIES = 3
-    last_error: Exception | None = None
-    combos_map: CombosMap | None = None
+    period_combos: dict[str, list] = {}
 
-    for attempt in range(1, MAX_RETRIES + 1):
-        try:
-            message = client.messages.create(
-                model="claude-haiku-4-5",
-                max_tokens=2048,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            raw_text: str = message.content[0].text
-        except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Claude API error: {e}")
+    for period in ("Breakfast", "Lunch", "Dinner"):
+        items_for_period = meal_items[period]
+        if not items_for_period:
+            raise HTTPException(status_code=500, detail=f"No items available for {period}")
 
-        # Parse JSON — strip markdown fences if present
-        cleaned = raw_text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
-        try:
-            combos_raw = json.loads(cleaned)
-        except json.JSONDecodeError:
-            raise HTTPException(status_code=500, detail=f"Failed to parse AI response: {raw_text}")
+        prompt = _make_period_prompt(period, items_for_period)
+        last_error: Exception | None = None
+        period_result: list | None = None
 
-        # ── Pydantic validation ──────────────────────────────────────────────
-        print("\n" + "="*60)
-        print(f"  PYDANTIC VALIDATION (attempt {attempt}/{MAX_RETRIES})")
-        print("="*60)
-        try:
-            combos_map = CombosMap(**combos_raw)
-            print("  [✓] CombosMap structure valid")
-            for period in ("Breakfast", "Lunch", "Dinner"):
-                combos_list = getattr(combos_map, period)
-                print(f"  [✓] {period}: {len(combos_list)} combos")
-                for combo in combos_list:
-                    print(f"        • \"{combo.title}\" — {len(combo.dishes)} dishes, ~{combo.approximate_calories} cal, tags: {combo.tags}")
-            break  # validation passed — exit retry loop
-        except Exception as e:
-            last_error = e
-            print(f"  [✗] Validation failed: {e}")
-            if attempt < MAX_RETRIES:
-                print(f"  [~] Retrying ({attempt}/{MAX_RETRIES - 1} retries used)...")
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                message = client.messages.create(
+                    model="claude-haiku-4-5",
+                    max_tokens=2048,
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                raw_text: str = message.content[0].text
+            except Exception as e:
+                raise HTTPException(status_code=500, detail=f"Claude API error: {e}")
 
-    if combos_map is None:
-        raise HTTPException(status_code=500, detail=f"Invalid AI response structure after {MAX_RETRIES} attempts: {last_error}")
+            cleaned = raw_text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+            try:
+                combos_raw = json.loads(cleaned)
+            except json.JSONDecodeError:
+                last_error = Exception(f"JSON parse failed: {raw_text[:200]}")
+                continue
+
+            # Validate each combo in the list
+            print(f"\n  [{period}] attempt {attempt} — validating {len(combos_raw) if isinstance(combos_raw, list) else '?'} combos")
+            try:
+                if not isinstance(combos_raw, list) or len(combos_raw) != 3:
+                    raise ValueError(f"Expected list of 3, got {type(combos_raw).__name__} len={len(combos_raw) if isinstance(combos_raw, list) else '?'}")
+                validated = [Combo(**c) for c in combos_raw]
+                period_result = validated
+                for combo in validated:
+                    print(f"    ✓ \"{combo.title}\" — {len(combo.dishes)} dishes, ~{combo.approximate_calories} cal")
+                break
+            except Exception as e:
+                last_error = e
+                print(f"    ✗ Validation failed: {e}")
+
+        if period_result is None:
+            raise HTTPException(status_code=500, detail=f"Failed to generate valid {period} combos after {MAX_RETRIES} attempts: {last_error}")
+
+        period_combos[period] = period_result
+
+    # ── Assemble CombosMap ───────────────────────────────────────────────────
+    print("\n" + "="*60)
+    print("  PYDANTIC VALIDATION")
+    print("="*60)
+    try:
+        combos_map = CombosMap(
+            Breakfast=period_combos["Breakfast"],
+            Lunch=period_combos["Lunch"],
+            Dinner=period_combos["Dinner"],
+        )
+        print("  [✓] CombosMap assembled successfully")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to assemble CombosMap: {e}")
 
     response = ComboResponse(
         dining_location=menu_data["dining_location"],
