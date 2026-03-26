@@ -11,10 +11,11 @@
 BuffBites exposes a single data endpoint that:
 
 1. Loads the pre-scraped menu JSON for the requested dining hall and date
-2. Sends all menu items to `claude-haiku-4-5` with a structured prompt
-3. Validates the AI response with Pydantic v2 models
-4. Cross-checks every dish against the scraped menu to reject hallucinations
-5. Returns a structured `ComboResponse` with 9 combos split across 3 meal periods
+2. Classifies every station by keyword into `breakfast`, `lunch`, `dinner`, `dessert`, or `excluded` — utility stations (Condiments, Salad Dressings, Beverage, Sides, Bread, etc.) are excluded entirely before anything reaches Claude
+3. Sends classified item pools to `claude-haiku-4-5` — each meal period receives only its relevant items. The 3rd Dinner combo is always a dessert specialty (ice cream + cookie/fruit/brownie); falls back to a plant-based combo if no dessert items exist
+4. Validates the AI response with Pydantic v2 models — structure, combo count, and dish count (2–6) enforced
+5. Cross-checks every dish against the scraped menu — hallucinated dishes and station mismatches are logged as warnings to stderr
+6. Returns a structured `ComboResponse` with 9 combos split across 3 meal periods
 
 ---
 
@@ -45,7 +46,7 @@ GET http://localhost:3001/
 Generates 9 AI-powered meal combos for a given CU Boulder dining hall and date.
 Returns exactly **3 combos per meal period**: Breakfast, Lunch, and Dinner.
 
-Each combo contains 2–4 dishes drawn from the day's scraped menu, with cross-station mixing encouraged. Every dish includes the station it comes from.
+Each combo contains 2–6 dishes drawn from the day's scraped menu, with cross-station mixing encouraged. Every dish includes the station it comes from. The 3rd Dinner combo is always a dessert specialty.
 
 ---
 
@@ -214,7 +215,7 @@ curl "http://localhost:3001/api/combos/generate?dining=libby&date=2026-03-17"
 | Field | Type | Constraints | Description |
 |-------|------|-------------|-------------|
 | `title` | string | — | Fun, catchy combo name |
-| `dishes` | array of `Dish` | 2–4 items | Menu items included in this combo |
+| `dishes` | array of `Dish` | 2–6 items | Menu items included in this combo |
 | `description` | string | — | Why this combo works nutritionally or flavor-wise |
 | `approximate_calories` | integer | — | Estimated total calorie count |
 | `tags` | array of string | — | e.g. `"high-protein"`, `"vegan"`, `"low-carb"`, `"halal"`, `"gluten-free"` |
@@ -312,29 +313,9 @@ curl "http://localhost:3001/api/combos/generate?dining=libby&date=2026-03-17"
 | `500` | Claude API call failed | `{ "detail": "Claude API error: ..." }` |
 | `500` | Claude returned unparseable JSON | `{ "detail": "Failed to parse AI response: ..." }` |
 | `500` | Claude returned wrong combo count or missing fields | `{ "detail": "Invalid AI response structure: ..." }` |
-| `500` | Claude returned dishes not on today's menu | See hallucination error below |
+| `404` | Not enough menu items to build combos after filtering | `{ "detail": "Not enough menu items to build combos" }` |
 
---- 
-
-**Hallucination error `500`:**
-```json
-{
-  "detail": {
-    "error": "Claude hallucinated dishes not present in today's menu",
-    "hallucinated_dishes": [
-      {
-        "meal_period": "Dinner",
-        "combo_title": "The Summit Plate",
-        "dish_name": "Mystery Burger",
-        "dish_station": "Grill",
-        "issue": "dish not found in today's menu"
-      }
-    ]
-  }
-}
-```
-
-> **Note on station mismatches:** If Claude returns a dish that exists on the menu but with the wrong station name, the station is silently auto-corrected to match the scraped data. A warning is printed to the server console.
+> **Note on dish verification:** Hallucinated dishes (not found in today's menu) and station mismatches are logged as warnings to the server console (`stderr`) but do **not** cause a `500` error. The response is still returned. Check server logs if combo dishes look unexpected.
 
 ---
 
@@ -359,7 +340,7 @@ All validation runs through these models before any response leaves the server.
 | Model | Purpose |
 |-------|---------|
 | `Dish` | Single menu item — `name` + `station` |
-| `Combo` | One combo — validates 2–4 dishes |
+| `Combo` | One combo — validates 2–6 dishes |
 | `CombosMap` | Holds `Breakfast`, `Lunch`, `Dinner` — validates exactly 3 combos each |
 | `ComboResponse` | Top-level response — `dining_location`, `date`, `day_of_week`, `combos` |
 | `DishVerificationError` | Describes a failed dish check (hallucination or wrong station) |
