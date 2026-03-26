@@ -228,6 +228,79 @@ curl "http://localhost:3001/api/combos/generate?dining=libby&date=2026-03-17"
 
 ---
 
+### Users
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/users/` | Create a new user profile after Firebase sign-in |
+| GET | `/api/users/{firebase_uid}` | Get a user's profile |
+| PUT | `/api/users/{firebase_uid}` | Update user profile fields |
+
+**Example POST /api/users/ request body:**
+```json
+{
+  "firebase_uid": "abc123",
+  "email": "raj@colorado.edu",
+  "username": "buffraj",
+  "dietary_preferences": ["vegan", "halal"],
+  "restrictions": ["gluten-free"],
+  "avatar": "avatar_3"
+}
+```
+
+---
+
+### Community
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/community/combos` | Publish a combo to the community feed |
+| GET | `/api/community/combos` | Get all active combos (sorted by upvotes) |
+| GET | `/api/community/combos/{combo_id}` | Get a single combo by ID |
+| POST | `/api/community/combos/{combo_id}/vote` | Upvote or downvote a combo |
+| GET | `/api/community/trends` | Get top 20 trending combos for today |
+
+**Example POST /api/community/combos request body:**
+```json
+{
+  "title": "The Midnight Special",
+  "dining_hall": "alley",
+  "date": "2026-03-25",
+  "dishes": [
+    { "name": "Mac & Cheese", "station": "Hot Bar", "servings": 1 },
+    { "name": "Garlic Bread", "station": "Bakery", "servings": 2 }
+  ],
+  "tags": ["vegetarian", "comfort-food"],
+  "description": "Late night comfort food done right",
+  "images": [],
+  "notes": "Add hot sauce for extra kick"
+}
+```
+
+**Example POST /api/community/combos/{combo_id}/vote request body:**
+```json
+{
+  "vote_type": "upvote"
+}
+```
+
+**Notes:**
+- Published combos automatically expire after 24 hours
+- Expired combos are archived under the author's profile
+- Cannot republish an expired combo
+- Trends page resets daily as combos expire
+- No date filter on community or trends pages — hardcoded to today
+
+---
+
+### Drafts
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/drafts/` | Save a combo as a draft |
+| GET | `/api/drafts/{firebase_uid}` | Get all drafts for a user |
+| DELETE | `/api/drafts/{draft_id}` | Delete a draft |
+
 #### Error Responses
 
 | Status | When | Response body |
@@ -240,6 +313,8 @@ curl "http://localhost:3001/api/combos/generate?dining=libby&date=2026-03-17"
 | `500` | Claude returned unparseable JSON | `{ "detail": "Failed to parse AI response: ..." }` |
 | `500` | Claude returned wrong combo count or missing fields | `{ "detail": "Invalid AI response structure: ..." }` |
 | `500` | Claude returned dishes not on today's menu | See hallucination error below |
+
+--- 
 
 **Hallucination error `500`:**
 ```json

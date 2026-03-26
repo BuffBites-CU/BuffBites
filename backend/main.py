@@ -19,6 +19,13 @@ load_dotenv()
 
 app = FastAPI(title="BuffBites API")
 
+# Routers
+from routers.users import router as users_router
+from routers.community import router as community_router
+
+app.include_router(users_router)
+app.include_router(community_router)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
