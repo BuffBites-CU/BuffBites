@@ -1,0 +1,10 @@
+// tsconfig.json
+//
+// TypeScript config for Next.js:
+//   - target: ES2017
+//   - lib: ["dom", "dom.iterable", "esnext"]
+//   - strict: true                  — enforce strict null checks everywhere
+//   - moduleResolution: "bundler"   — required for Next.js 14+
+//   - paths:
+//       "@/*" → "./*"              — lets imports use @/components, @/services etc.
+//                                    instead of relative paths like ../../components
