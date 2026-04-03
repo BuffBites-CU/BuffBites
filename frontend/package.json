@@ -1,0 +1,16 @@
+// package.json
+//
+// Dependencies to install:
+//   next                  — Next.js framework (App Router)
+//   react react-dom       — React 18+
+//   typescript            — TypeScript support
+//   tailwindcss           — Utility-first CSS
+//   postcss autoprefixer  — Required by Tailwind
+//   firebase              — Firebase SDK for Google auth
+//   @types/react @types/react-dom @types/node — Type definitions
+//
+// Scripts:
+//   dev   → next dev      (starts local dev server on :3000)
+//   build → next build    (production build)
+//   start → next start    (run production build)
+//   lint  → next lint     (ESLint with Next.js rules)
