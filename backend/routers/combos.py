@@ -357,3 +357,66 @@ def generate_combos(
         )
 
     return response
+
+
+@router.get("/api/menu")
+def get_menu(
+    dining: str = Query(..., description="One of: " + ", ".join(DINING_FILES)),
+    date: str | None = Query(None, description="YYYY-MM-DD, defaults to today"),
+):
+    """
+    Returns raw menu items grouped by station for a given dining hall and date.
+    Used by the Create page to display stations and dishes for combo building.
+    Excludes condiments, dressings, and other utility stations using the same
+    classifier as the combo generation endpoint.
+    """
+    if dining not in DINING_FILES:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}",
+        )
+
+    target_date = date or str(_date.today())
+    file_path = DATA_DIR / DINING_FILES[dining]
+    try:
+        menu_data = json.loads(file_path.read_text())
+    except Exception:
+        raise HTTPException(status_code=500, detail="Failed to load menu data")
+
+    day_menu = next((m for m in menu_data["menus"] if m["date"] == target_date), None)
+    if not day_menu:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No menu found for {menu_data['dining_location']} on {target_date}",
+        )
+
+    # Filter out excluded stations and component items
+    filtered_categories: dict[str, list] = {}
+    for station, raw_items in day_menu.get("categories", {}).items():
+        if _classify_station(station) == "excluded":
+            continue
+        items = []
+        for raw in raw_items:
+            name = (raw.get("name") or "").strip()
+            if not name or _is_component_item(name):
+                continue
+            items.append({
+                "name":             name,
+                "description":      raw.get("description", ""),
+                "serving_size":     raw.get("serving_size", ""),
+                "calories":         raw.get("calories"),
+                "allergens":        raw.get("allergens", []),
+                "dietary_labels":   raw.get("dietary_labels", []),
+                "is_vegan":         raw.get("is_vegan", False),
+                "is_vegetarian":    raw.get("is_vegetarian", False),
+                "nutrition":        raw.get("nutrition", {}),
+            })
+        if items:
+            filtered_categories[station] = items
+
+    return {
+        "dining_location": menu_data["dining_location"],
+        "date": target_date,
+        "day_of_week": day_menu["day_of_week"],
+        "categories": filtered_categories,
+    }
