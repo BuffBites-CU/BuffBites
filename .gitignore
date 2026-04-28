@@ -70,3 +70,6 @@ dump.rdb
 # Misc
 *.tsbuildinfo
 next-env.d.ts
+
+
+backend/serviceAccountKey.json

@@ -294,14 +294,24 @@ curl "http://localhost:3001/api/combos/generate?dining=libby&date=2026-03-17"
 
 ---
 
+---
+
 ### Drafts
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `/api/drafts/` | Save a combo as a draft |
+| POST | `/api/drafts/` | Save a new draft |
 | GET | `/api/drafts/{firebase_uid}` | Get all drafts for a user |
+| PUT | `/api/drafts/{draft_id}` | Update an existing draft |
 | DELETE | `/api/drafts/{draft_id}` | Delete a draft |
+| POST | `/api/drafts/{draft_id}/publish` | Publish a draft to community feed |
 
+**Notes:**
+- Drafts never expire — they live under the user's profile permanently until deleted or published
+- Publishing a draft creates a community combo and deletes the draft
+- Published combos expire after 24 hours and cannot be republished
+- Only the draft owner can view, edit, delete or publish their drafts
+- All draft endpoints require Firebase auth
 #### Error Responses
 
 | Status | When | Response body |

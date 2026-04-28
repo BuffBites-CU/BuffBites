@@ -27,10 +27,13 @@ async def log_response(request: Request, call_next):
 from routers.users import router as users_router
 from routers.community import router as community_router
 from routers.combos import router as combos_router
+from routers.drafts import router as drafts_router
+
 
 app.include_router(users_router)
 app.include_router(community_router)
 app.include_router(combos_router)
+app.include_router(drafts_router)
 
 app.add_middleware(
     CORSMiddleware,
