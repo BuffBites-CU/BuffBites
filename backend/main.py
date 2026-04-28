@@ -1,27 +1,40 @@
-import json
+import time
+import structlog
 from dotenv import load_dotenv
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
+
+structlog.configure(
+    processors=[
+        structlog.stdlib.add_log_level,
+        structlog.processors.TimeStamper(fmt="iso"),
+        structlog.processors.JSONRenderer(),
+    ],
+    wrapper_class=structlog.BoundLogger,
+    context_class=dict,
+    logger_factory=structlog.PrintLoggerFactory(),
+)
+
+logger = structlog.get_logger()
 
 app = FastAPI(title="BuffBites API")
 
 
 @app.middleware("http")
-async def log_response(request: Request, call_next):
+async def log_request(request: Request, call_next):
+    start = time.perf_counter()
     response = await call_next(request)
-    body = b""
-    async for chunk in response.body_iterator:
-        body += chunk
-    try:
-        parsed = json.loads(body)
-        print(f"\n--- {request.method} {request.url} ---")
-        print(json.dumps(parsed, indent=2))
-    except Exception:
-        pass
-    return Response(content=body, status_code=response.status_code,
-                    headers=dict(response.headers), media_type=response.media_type)
+    duration_ms = round((time.perf_counter() - start) * 1000, 1)
+    logger.info(
+        "request",
+        method=request.method,
+        path=request.url.path,
+        status=response.status_code,
+        duration_ms=duration_ms,
+    )
+    return response
 
 # Routers
 from routers.users import router as users_router
