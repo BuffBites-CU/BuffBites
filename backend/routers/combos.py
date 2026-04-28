@@ -12,7 +12,8 @@ from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish, 
 
 router = APIRouter()
 
-DATA_DIR = Path(__file__).parent.parent.parent / "scraping_scripts" / "data"
+DATA_DIR   = Path(__file__).parent.parent.parent / "scraping_scripts" / "data"
+COMBO_PROMPT = (Path(__file__).parent.parent / "prompts" / "combos.txt").read_text()
 
 DINING_FILES: dict[str, str] = {
     "alley":          "alley_dining_menus.json",
@@ -196,32 +197,15 @@ def _generate_with_claude(
 ) -> _CCombosOutput:
     client = anthropic.Anthropic()
 
-    prompt = f"""You are a creative dining hall nutritionist building meal combo recommendations for {dining_location} on {day_of_week}, {date}.
-
-STRICT RULES — follow every one exactly:
-1. Only use items from the lists below. Copy each item's "name" and "station" EXACTLY as written (punctuation, asterisks, capitalization, and all).
-2. Each combo must contain 2–6 dishes.
-3. No dish may appear more than once across the 3 combos within the same meal period.
-4. Return exactly 3 combos for Breakfast, 3 for Lunch, and 3 for Dinner.
-5. The 3rd Dinner combo MUST be a dessert specialty (e.g., titled "Sweet Finale") built exclusively from the DESSERT ITEMS list:
-   - If ice cream or soft serve is available, pair it with a cookie, brownie, cake, or fruit item.
-   - If the dessert list is empty, make it a light plant-based dinner combo instead.
-   - Never mix dinner and dessert items in this combo.
-6. Give each combo a fun, creative title and a vivid one-sentence description.
-7. Vary the style across the 3 combos per period: aim for one balanced/chef's pick, one high-protein, and one plant-based (vegetarian or vegan) where possible.
-
-BREAKFAST ITEMS:
-{_format_pool(breakfast_items)}
-
-LUNCH ITEMS:
-{_format_pool(lunch_items)}
-
-DINNER ITEMS (do NOT use these in the dessert combo):
-{_format_pool(dinner_items)}
-
-DESSERT ITEMS (Sweet Finale only — do NOT mix with dinner items above):
-{_format_pool(dessert_items, limit=20)}
-"""
+    prompt = COMBO_PROMPT.format(
+        dining_location=dining_location,
+        day_of_week=day_of_week,
+        date=date,
+        breakfast_items=_format_pool(breakfast_items),
+        lunch_items=_format_pool(lunch_items),
+        dinner_items=_format_pool(dinner_items),
+        dessert_items=_format_pool(dessert_items, limit=20),
+    )
 
     response = client.messages.parse(
         model="claude-haiku-4-5",
