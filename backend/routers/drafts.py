@@ -33,7 +33,7 @@ Usage:
 """
 
 from fastapi import APIRouter, HTTPException, Depends
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from bson import ObjectId
 from database import drafts_collection, combos_collection
 from pydantic_models.community_models import ComboCreate, ComboResponse
@@ -48,8 +48,8 @@ async def save_draft(combo: ComboCreate, current_user=Depends(get_current_user))
         **combo.model_dump(),
         "author_firebase_uid": current_user["uid"],
         "author_username": current_user.get("name", ""),
-        "created_at": datetime.utcnow(),
-        "updated_at": datetime.utcnow(),
+        "created_at": datetime.now(timezone.utc),
+        "updated_at": datetime.now(timezone.utc),
     }
     result = await drafts_collection.insert_one(draft_doc)
     return {**draft_doc, "id": str(result.inserted_id)}
@@ -75,7 +75,7 @@ async def update_draft(draft_id: str, updates: dict, current_user=Depends(get_cu
     if draft["author_firebase_uid"] != current_user["uid"]:
         raise HTTPException(status_code=403, detail="Not authorized to update this draft")
 
-    updates["updated_at"] = datetime.utcnow()
+    updates["updated_at"] = datetime.now(timezone.utc)
     await drafts_collection.update_one(
         {"_id": ObjectId(draft_id)},
         {"$set": updates}
@@ -117,8 +117,8 @@ async def publish_draft(draft_id: str, current_user=Depends(get_current_user)):
         "downvotes":          0,
         "author_username":    draft["author_username"],
         "author_firebase_uid": current_user["uid"],
-        "created_at":         datetime.utcnow(),
-        "expires_at":         datetime.utcnow() + timedelta(hours=24),
+        "created_at":         datetime.now(timezone.utc),
+        "expires_at":         datetime.now(timezone.utc) + timedelta(hours=24),
     }
     result = await combos_collection.insert_one(combo_doc)
 

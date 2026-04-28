@@ -7,7 +7,7 @@ Endpoints:
     POST /api/community/combos
         Publishes a new combo to the community feed.
         Automatically sets created_at and expires_at (24hrs from publish time).
-        Requires firebase_uid and username as query params (from Firebase auth).
+        Requires Firebase auth — uid and username extracted from token.
 
     GET /api/community/combos
         Returns all active (non-expired) combos sorted by upvotes.
@@ -20,8 +20,8 @@ Endpoints:
 
     POST /api/community/combos/{combo_id}/vote
         Records an upvote or downvote on a combo.
+        Requires Firebase auth.
         vote_type must be "upvote" or "downvote".
-        No duplicate vote prevention yet — to be added.
 
     GET /api/community/trends
         Returns top 20 combos by upvotes for the current day.
@@ -33,42 +33,47 @@ Usage:
     app.include_router(router)
 """
 
-from fastapi import APIRouter, HTTPException
-from datetime import datetime, timedelta
-from bson import ObjectId
+from fastapi import APIRouter, HTTPException, Depends
+from datetime import datetime, timedelta, timezone 
 from database import combos_collection
 from pydantic_models.community_models import ComboCreate, ComboResponse
+from auth import get_current_user
 
 router = APIRouter(prefix="/api/community", tags=["community"])
 
+
 @router.post("/combos", response_model=ComboResponse)
-async def publish_combo(combo: ComboCreate, firebase_uid: str, username: str):
+async def publish_combo(combo: ComboCreate, current_user=Depends(get_current_user)):
+    firebase_uid = current_user["uid"]
+    username = current_user.get("name", "")
+
     combo_doc = {
         **combo.model_dump(),
         "upvotes": 0,
         "downvotes": 0,
         "author_username": username,
         "author_firebase_uid": firebase_uid,
-        "created_at": datetime.utcnow(),
-        "expires_at": datetime.utcnow() + timedelta(hours=24)
+        "created_at": datetime.now(timezone.utc),
+        "expires_at": datetime.now(timezone.utc) + timedelta(hours=24)
     }
     result = await combos_collection.insert_one(combo_doc)
     return {**combo_doc, "id": str(result.inserted_id)}
 
+
 @router.get("/combos")
 async def get_community_combos(dining_hall: str | None = None):
-    query = {"expires_at": {"$gt": datetime.utcnow()}}
+    query = {"expires_at": {"$gt": datetime.now(timezone.utc)}}
     if dining_hall:
         query["dining_hall"] = dining_hall
 
     combos = await combos_collection.find(query).sort("upvotes", -1).to_list(100)
-    return [
-        {**c, "id": str(c["_id"])}
-        for c in combos
-    ]
+    return [{**c, "id": str(c["_id"])} for c in combos]
+
 
 @router.post("/combos/{combo_id}/vote")
-async def vote_combo(combo_id: str, vote_type: str, firebase_uid: str):
+async def vote_combo(combo_id: str, vote_type: str, current_user=Depends(get_current_user)):
+    firebase_uid = current_user["uid"]
+
     if vote_type not in ("upvote", "downvote"):
         raise HTTPException(status_code=400, detail="vote_type must be upvote or downvote")
 
@@ -81,6 +86,7 @@ async def vote_combo(combo_id: str, vote_type: str, firebase_uid: str):
         raise HTTPException(status_code=404, detail="Combo not found")
     return {"message": f"{vote_type} recorded"}
 
+
 @router.get("/combos/{combo_id}")
 async def get_combo(combo_id: str):
     combo = await combos_collection.find_one({"_id": ObjectId(combo_id)})
@@ -88,14 +94,12 @@ async def get_combo(combo_id: str):
         raise HTTPException(status_code=404, detail="Combo not found")
     return {**combo, "id": str(combo["_id"])}
 
+
 @router.get("/trends")
 async def get_trends(dining_hall: str | None = None):
-    query = {"expires_at": {"$gt": datetime.utcnow()}}
+    query = {"expires_at": {"$gt": datetime.now(timezone.utc)}}
     if dining_hall:
         query["dining_hall"] = dining_hall
 
     combos = await combos_collection.find(query).sort("upvotes", -1).to_list(20)
-    return [
-        {**c, "id": str(c["_id"])}
-        for c in combos
-    ]
+    return [{**c, "id": str(c["_id"])} for c in combos]

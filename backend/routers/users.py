@@ -24,7 +24,7 @@ Usage:
 
 
 from fastapi import APIRouter, HTTPException
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from database import users_collection
 from pydantic_models.user_models import UserCreate, UserResponse
 
@@ -45,7 +45,7 @@ async def create_user(user: UserCreate):
     user_doc = {
         **user.model_dump(),
         "karma": 0,
-        "created_at": datetime.utcnow()
+        "created_at": datetime.now(timezone.utc)
     }
     await users_collection.insert_one(user_doc)
     return {**user_doc, "id": str(user_doc["_id"])}
