@@ -92,12 +92,12 @@ def _classify_station(station: str) -> str:
     components = [c.strip() for c in s.split(" - ")]
     if any(c in _EXCLUDE_COMPONENT_EXACT for c in components):
         return "excluded"
-    for kw in _EXCLUDE_KEYWORDS:
-        if kw in s:
-            return "excluded"
     for kw in _DESSERT_KEYWORDS:
         if kw in s:
             return "dessert"
+    for kw in _EXCLUDE_KEYWORDS:
+        if kw in s:
+            return "excluded"
     for kw in _BREAKFAST_KEYWORDS:
         if kw in s:
             return "breakfast"
