@@ -11,9 +11,10 @@ import requests
 API_BASE    = "https://colorado-diningmenus.api.nutrislice.com"
 SCHOOL_SLUG = "libby"
 MENU_SLUG   = "libby-opening-august-16th"
-START_DATE  = date(2026, 1, 5)
-MAX_WEEKS   = 52
-OUTPUT      = Path(__file__).parent / "libby_dining_menus.json"
+_today      = date.today()
+START_DATE  = _today - timedelta(days=_today.weekday()) - timedelta(weeks=2)
+MAX_WEEKS   = 6
+OUTPUT      = Path(__file__).parent / "data" / "libby_dining_menus.json"
 
 HEADERS = {
     "Accept": "application/json",
@@ -210,15 +211,14 @@ def main() -> None:
                     print(f"\n*** Menu repeat detected! ***")
                     print(f"    Week {wk} ({wk_start})  ==  Week {prev_wk} ({prev_start})")
                     print(f"    The same menu cycle repeated after {gap} week(s).")
-                    result["repeat_info"] = {
-                        "first_seen_week":  prev_wk,
-                        "first_seen_start": prev_start,
-                        "repeat_week":      wk,
-                        "repeat_start":     str(wk_start),
-                        "gap_weeks":        gap,
-                    }
-                    _save(result, wk)
-                    return
+                    if result["repeat_info"] is None:
+                        result["repeat_info"] = {
+                            "first_seen_week":  prev_wk,
+                            "first_seen_start": prev_start,
+                            "repeat_week":      wk,
+                            "repeat_start":     str(wk_start),
+                            "gap_weeks":        gap,
+                        }
             seen.append((fp, wk, str(wk_start)))
 
         time.sleep(0.5)
@@ -228,6 +228,7 @@ def main() -> None:
 
 
 def _save(result: dict, n_weeks: int) -> None:
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     n_items = sum(sum(len(v) for v in day["categories"].values()) for day in result["menus"])
     print(f"\nSaved  → {OUTPUT}")

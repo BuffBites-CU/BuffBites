@@ -12,8 +12,9 @@ import requests
 
 API_BASE    = "https://colorado-diningmenus.api.nutrislice.com"
 SCHOOL_SLUG = "center-for-community"
-START_DATE  = date(2026, 1, 5)
-MAX_WEEKS   = 52
+_today      = date.today()
+START_DATE  = _today - timedelta(days=_today.weekday()) - timedelta(weeks=2)
+MAX_WEEKS   = 6
 OUTPUT      = Path(__file__).parent / "data" / "c4c_dining_menus.json"
 
 # (api_slug, display_prefix)
@@ -267,15 +268,14 @@ def main() -> None:
                     print(f"\n*** Menu repeat detected! ***")
                     print(f"    Week {wk} ({wk_start})  ==  Week {prev_wk} ({prev_start})")
                     print(f"    The same menu cycle repeated after {gap} week(s).")
-                    result["repeat_info"] = {
-                        "first_seen_week":  prev_wk,
-                        "first_seen_start": prev_start,
-                        "repeat_week":      wk,
-                        "repeat_start":     str(wk_start),
-                        "gap_weeks":        gap,
-                    }
-                    _save(result, wk)
-                    return
+                    if result["repeat_info"] is None:
+                        result["repeat_info"] = {
+                            "first_seen_week":  prev_wk,
+                            "first_seen_start": prev_start,
+                            "repeat_week":      wk,
+                            "repeat_start":     str(wk_start),
+                            "gap_weeks":        gap,
+                        }
             seen.append((fp, wk, str(wk_start)))
 
         time.sleep(0.3)

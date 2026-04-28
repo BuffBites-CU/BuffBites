@@ -11,9 +11,10 @@ import requests
 API_BASE   = "https://colorado-diningmenus.api.nutrislice.com"
 SCHOOL_ID  = 38643
 MENU_TYPE  = 8911
-START_DATE = date(2026, 3, 2)
-WEEKS      = 3
-OUTPUT     = Path(__file__).parent / "alley_dining_menus.json"
+_today     = date.today()
+START_DATE = _today - timedelta(days=_today.weekday()) - timedelta(weeks=2)
+WEEKS      = 4
+OUTPUT     = Path(__file__).parent / "data" / "alley_dining_menus.json"
 
 HEADERS = {
     "Accept": "application/json",
@@ -205,6 +206,7 @@ def main() -> None:
             "categories":  cats,
         })
 
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
 
     n_items = sum(sum(len(v) for v in day["categories"].values()) for day in result["menus"])

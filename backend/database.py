@@ -19,7 +19,9 @@ import os
 
 load_dotenv()
 
-MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://patilrajvardhan27_db_user:Raj$2003@combos.vebxmqn.mongodb.net/?appName=combos")
+MONGO_URL = os.getenv("MONGO_URL")
+if not MONGO_URL:
+    raise RuntimeError("MONGO_URL env var is not set — copy backend/.env.example to backend/.env")
 APP_NAME = os.getenv("APP_NAME", "combos")
 
 client = AsyncIOMotorClient(MONGO_URL)

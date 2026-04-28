@@ -317,7 +317,7 @@ curl "http://localhost:3001/api/combos/generate?dining=libby&date=2026-03-17"
 | Status | When | Response body |
 |--------|------|---------------|
 | `400` | `dining` param is missing or not a valid key | `{ "detail": "Invalid dining location. Must be one of: ..." }` |
-| `404` | No menu data exists for that dining hall on that date | `{ "detail": "No menu found for ... on ..." }` |
+| `404` | No menu data exists for that dining hall on that date (data refreshes daily — try again after the 8 AM UTC cron) | `{ "detail": "No menu found for ... on ..." }` |
 | `404` | The day's menu has no items | `{ "detail": "No menu items found for this date" }` |
 | `500` | Scraped JSON file could not be read | `{ "detail": "Failed to load menu data" }` |
 | `500` | Claude API call failed | `{ "detail": "Claude API error: ..." }` |
@@ -361,13 +361,13 @@ All validation runs through these models before any response leaves the server.
 
 ## Menu Data Format
 
-Scraped JSON files live in `scraping_scripts/data/`. Each file has this top-level shape:
+Scraped JSON files live in `scraping_scripts/data/` and are refreshed daily by GitHub Actions. Each file covers a **6-week rolling window** starting from Monday two weeks before the scrape date, so today's menu is always present. Each file has this top-level shape:
 
 ```json
 {
   "dining_location": "Center for Community (C4C)",
   "url": "https://...",
-  "scrape_start_date": "2026-01-05",
+  "scrape_start_date": "2026-04-14",
   "menus": [
     {
       "date": "2026-03-17",

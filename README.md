@@ -6,7 +6,7 @@ AI-powered meal combo suggester for CU Boulder dining halls. Give it a dining ha
 
 ## How It Works
 
-1. **Scraping** — Python scripts pull menus from Nutrislice for each CU Boulder dining hall and store them as JSON in `scraping_scripts/data/`.
+1. **Scraping** — Python scripts pull menus from Nutrislice for each CU Boulder dining hall and store them as JSON in `scraping_scripts/data/`. A GitHub Actions workflow (`.github/workflows/scrape-menus.yml`) runs all five scripts daily at 8 AM UTC, committing fresh JSON back to the repo so combos always reflect today's actual menu.
 2. **API Request** — Client calls `GET /api/combos/generate?dining=c4c&date=2026-03-17`.
 3. **Menu Lookup** — FastAPI loads the scraped JSON for that dining hall and finds the day's menu.
 4. **Station Classification** — Every station is classified by keyword into `breakfast`, `lunch`, `dinner`, `dessert`, or `excluded`. Utility stations (Condiments, Salad Dressings, Beverage, Sides, Bread, etc.) are excluded entirely. Individual condiment/sauce items are filtered out at the item level as a second pass.
@@ -21,6 +21,9 @@ AI-powered meal combo suggester for CU Boulder dining halls. Give it a dining ha
 
 ```
 Buff_Bites/
+├── .github/
+│   └── workflows/
+│       └── scrape-menus.yml           # Daily cron — re-scrapes all 5 dining halls at 8 AM UTC
 ├── backend/
 │   ├── main.py                        # FastAPI app — middleware + router registration
 │   ├── requirements.txt
@@ -59,7 +62,7 @@ Buff_Bites/
 | Server | Uvicorn |
 | Request/response validation | Pydantic v2 |
 | AI model | Anthropic `claude-haiku-4-5` |
-| Menu data | Pre-scraped JSON (Nutrislice) |
+| Menu data | Daily-scraped JSON (Nutrislice via GitHub Actions) |
 | Environment | `python-dotenv` |
 
 ---
@@ -82,11 +85,20 @@ pip install -r requirements.txt
 
 ### 3. Configure environment
 
-Create a `.env` file inside `backend/`:
+Copy the example file and fill in your values:
 
-```env
-ANTHROPIC_API_KEY=your_key_here
+```bash
+cp backend/.env.example backend/.env
 ```
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `ANTHROPIC_API_KEY` | Yes | Anthropic API key — [console.anthropic.com](https://console.anthropic.com) |
+| `MONGO_URL` | Yes | MongoDB Atlas connection string |
+| `APP_NAME` | No | MongoDB database name (default: `combos`) |
+| `PORT` | No | Uvicorn port (default: `3001`) |
+
+Firebase uses `backend/serviceAccountKey.json` (not an env var) — obtain it from the Firebase console and place it there. It is gitignored and must never be committed.
 
 ### 4. Start the server
 
