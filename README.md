@@ -25,15 +25,19 @@ Buff_Bites/
 │   └── workflows/
 │       └── scrape-menus.yml           # Daily cron — re-scrapes all 5 dining halls at 8 AM UTC
 ├── backend/
-│   ├── main.py                        # FastAPI app — middleware + router registration
+│   ├── main.py                        # FastAPI app — structured logging middleware + router registration
 │   ├── requirements.txt
 │   ├── routers/
 │   │   ├── combos.py                  # Combo generation — station classifier + Claude API call
 │   │   ├── users.py                   # User profile routes
-│   │   └── community.py               # Community feed routes
-│   └── pydantic_models/
-│       ├── __init__.py
-│       └── combo_models.py            # Pydantic models + dish verification
+│   │   ├── community.py               # Community feed routes
+│   │   └── drafts.py                  # Draft management routes
+│   ├── pydantic_models/
+│   │   ├── __init__.py
+│   │   └── combo_models.py            # Pydantic models + dish verification
+│   └── tests/
+│       ├── test_combo_models.py       # Unit tests — Combo validator + verify_combos
+│       └── test_station_classifier.py # Unit tests — _classify_station + _is_component_item
 ├── scraping_scripts/
 │   ├── alley_dining.py
 │   ├── c4c_dining.py
@@ -63,7 +67,9 @@ Buff_Bites/
 | Request/response validation | Pydantic v2 |
 | AI model | Anthropic `claude-haiku-4-5` |
 | Menu data | Daily-scraped JSON (Nutrislice via GitHub Actions) |
+| Logging | `structlog` — structured JSON per request |
 | Environment | `python-dotenv` |
+| Testing | `pytest` |
 
 ---
 
@@ -108,6 +114,51 @@ uvicorn main:app --reload --port 3001
 
 The API will be available at `http://localhost:3001`.
 Interactive Swagger docs at `http://localhost:3001/docs`.
+
+---
+
+## Testing
+
+### Unit tests (no server needed)
+
+```bash
+cd backend
+PYTHONPATH=. venv/bin/pytest tests/ -v
+```
+
+80 tests covering the Combo dish-count validator, `verify_combos` dish presence and station checks, `_classify_station` keyword/component logic, and `_is_component_item` suffix and raw-prep word filtering.
+
+### Run the server
+
+```bash
+cd backend
+venv/bin/uvicorn main:app --reload
+```
+
+### Hit the API manually
+
+```bash
+# Health check
+curl http://localhost:8000/
+
+# Raw menu for a dining hall and date
+curl "http://localhost:8000/api/menu?dining=c4c&date=2026-04-28"
+
+# Generate combos (calls Claude — requires ANTHROPIC_API_KEY in .env)
+curl "http://localhost:8000/api/combos/generate?dining=c4c&date=2026-04-28"
+```
+
+### Interactive Swagger UI
+
+With the server running, open `http://localhost:8000/docs` — FastAPI auto-generates a Swagger UI where you can fill in parameters and run any request without writing curl.
+
+### Structured request logs
+
+Every request prints a structured JSON line to stdout:
+
+```json
+{"method": "GET", "path": "/api/menu", "status": 200, "duration_ms": 14.2, "event": "request", "level": "info", "timestamp": "2026-04-28T19:57:57.216392Z"}
+```
 
 ---
 

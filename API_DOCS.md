@@ -19,6 +19,53 @@ BuffBites exposes a single data endpoint that:
 
 ---
 
+## Testing the API
+
+### 1. Unit tests (no server needed)
+
+```bash
+cd backend
+PYTHONPATH=. venv/bin/pytest tests/ -v
+```
+
+Covers combo model validation, dish verification, station classification, and item filtering. No API keys or running server required.
+
+### 2. Start the server
+
+```bash
+cd backend
+venv/bin/uvicorn main:app --reload
+```
+
+### 3. Swagger UI (easiest)
+
+Open `http://localhost:8000/docs` — fill in `dining` and `date` and click **Execute**. No curl needed.
+
+### 4. curl examples
+
+```bash
+# Health check
+curl http://localhost:8000/
+
+# Raw menu (no Claude call — fast)
+curl "http://localhost:8000/api/menu?dining=c4c&date=2026-04-28"
+
+# Generate combos (calls Claude — needs ANTHROPIC_API_KEY in .env)
+curl "http://localhost:8000/api/combos/generate?dining=c4c&date=2026-04-28"
+```
+
+### 5. Structured request logs
+
+Every request prints a JSON log line to stdout — useful for checking latency and status codes without a dedicated monitoring tool:
+
+```json
+{"method": "GET", "path": "/api/combos/generate", "status": 200, "duration_ms": 3241.5, "event": "request", "level": "info", "timestamp": "2026-04-28T19:57:57Z"}
+```
+
+Dish verification warnings (hallucinated dishes, wrong station labels) are written to **stderr** separately and do not affect the HTTP response.
+
+---
+
 ## Endpoints
 
 ---
@@ -38,6 +85,46 @@ GET http://localhost:3001/
   "message": "BuffBites API is running"
 }
 ```
+
+---
+
+### `GET /api/menu`
+
+Returns raw menu items grouped by station for a given dining hall and date. Applies the same station classifier and item filter as combo generation — excluded stations (condiments, sides, bread, beverages, etc.) and component items (sauces, diced/sliced toppings) are stripped out. No Claude call is made.
+
+#### Query Parameters
+
+| Parameter | Required | Type | Description |
+|-----------|----------|------|-------------|
+| `dining` | Yes | string | Dining hall key. One of: `alley`, `c4c`, `libby`, `sewall`, `village_center` |
+| `date` | No | string | Date in `YYYY-MM-DD` format. Defaults to today. |
+
+#### Response `200`
+
+```json
+{
+  "dining_location": "Center for Community (C4C)",
+  "date": "2026-04-28",
+  "day_of_week": "Tuesday",
+  "categories": {
+    "Smoke n' Grill": [
+      {
+        "name": "Grilled Chicken Breast",
+        "description": "",
+        "serving_size": "4 oz",
+        "calories": 180,
+        "allergens": [],
+        "dietary_labels": ["Halal"],
+        "is_vegan": false,
+        "is_vegetarian": false,
+        "nutrition": { "protein_g": 34.0, "fat_g": 4.0, "carbohydrates_g": 0.0 }
+      }
+    ]
+  }
+}
+```
+
+Used by the Create page to populate station and dish pickers.
 
 ---
 

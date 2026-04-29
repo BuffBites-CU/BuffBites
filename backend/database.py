@@ -19,7 +19,7 @@ import os
 
 load_dotenv()
 
-MONGO_URL = os.getenv("MONGO_URL")
+MONGO_URL = os.getenv("MONGO_URL") or os.getenv("MONGO_URI")
 if not MONGO_URL:
     raise RuntimeError("MONGO_URL env var is not set — copy backend/.env.example to backend/.env")
 APP_NAME = os.getenv("APP_NAME", "combos")
