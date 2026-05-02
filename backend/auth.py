@@ -23,15 +23,29 @@ Usage:
         return {"uid": user["uid"]}
 """
 
+import json
+import os
 import firebase_admin
 from firebase_admin import auth, credentials
 from fastapi import HTTPException, Security
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from pathlib import Path
 
-# Initialize Firebase Admin SDK once
-cred_path = Path(__file__).parent / "serviceAccountKey.json"
-cred = credentials.Certificate(str(cred_path))
+# Initialize Firebase Admin SDK once.
+# In production, set FIREBASE_SERVICE_ACCOUNT_JSON to the full JSON string.
+# Locally, place serviceAccountKey.json next to this file.
+_sa_json = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
+if _sa_json:
+    cred = credentials.Certificate(json.loads(_sa_json))
+else:
+    cred_path = Path(__file__).parent / "serviceAccountKey.json"
+    if not cred_path.exists():
+        raise RuntimeError(
+            "Firebase credentials not found. Set FIREBASE_SERVICE_ACCOUNT_JSON env var "
+            "or place serviceAccountKey.json in the backend directory."
+        )
+    cred = credentials.Certificate(str(cred_path))
+
 firebase_admin.initialize_app(cred)
 
 security = HTTPBearer()
