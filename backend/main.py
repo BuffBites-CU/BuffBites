@@ -3,6 +3,7 @@ import structlog
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 load_dotenv()
 
@@ -59,3 +60,15 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {"message": "BuffBites API is running"}
+
+
+@app.get("/health")
+async def health():
+    from database import client
+    try:
+        await client.admin.command("ping")
+        db_status = "ok"
+    except Exception as e:
+        logger.warning("health_check_db_failure", error=str(e))
+        return JSONResponse(status_code=503, content={"status": "degraded", "db": "unreachable"})
+    return {"status": "ok", "db": db_status}
