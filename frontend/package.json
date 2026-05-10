@@ -1,16 +1,27 @@
-// package.json
-//
-// Dependencies to install:
-//   next                  — Next.js framework (App Router)
-//   react react-dom       — React 18+
-//   typescript            — TypeScript support
-//   tailwindcss           — Utility-first CSS
-//   postcss autoprefixer  — Required by Tailwind
-//   firebase              — Firebase SDK for Google auth
-//   @types/react @types/react-dom @types/node — Type definitions
-//
-// Scripts:
-//   dev   → next dev      (starts local dev server on :3000)
-//   build → next build    (production build)
-//   start → next start    (run production build)
-//   lint  → next lint     (ESLint with Next.js rules)
+{
+  "name": "buffbites-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "firebase": "^12.12.1",
+    "next": "^16.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5"
+  }
+}

@@ -22,9 +22,12 @@ Create a `.env` file in `backend/` with:
 | `ANTHROPIC_API_KEY` | Yes | Anthropic API key |
 | `MONGO_URL` | Yes | MongoDB Atlas connection string |
 | `APP_NAME` | No | MongoDB database name (default: `combos`) |
-| `PORT` | No | Uvicorn port (default: `3001`) |
+| `PORT` | No | Uvicorn port — used by Docker/Railway/Render at runtime (default: `8000`) |
+| `FIREBASE_SERVICE_ACCOUNT_JSON` | Production only | Full service account JSON as a string — used in Docker/production instead of the file |
 
-Firebase auth uses `backend/serviceAccountKey.json` — obtain it from the Firebase console and place it there. It is gitignored and must never be committed.
+**Firebase auth** — two credential paths:
+- **Local dev:** place `backend/serviceAccountKey.json` next to `auth.py` (gitignored, never commit)
+- **Production/Docker:** set `FIREBASE_SERVICE_ACCOUNT_JSON` to the full JSON string as an env var
 
 ---
 
@@ -60,8 +63,11 @@ PYTHONPATH=. venv/bin/pytest tests/ -v
 With the server running:
 
 ```bash
-# Health check
+# Root ping
 curl http://localhost:8000/
+
+# Health check (pings MongoDB, returns 503 if DB unreachable)
+curl http://localhost:8000/health
 
 # Raw menu for a dining hall (no Claude call)
 curl "http://localhost:8000/api/menu?dining=c4c&date=2026-04-28"

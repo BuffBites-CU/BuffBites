@@ -1,24 +1,55 @@
-// components/NavBar.tsx
-// "use client"
-// Fixed bottom tab bar — present on all authenticated pages.
-//
-// TABS (left to right):
-//   1. Discover   — icon: sparkles or lightning bolt  → /home
-//   2. Community  — icon: users or speech bubble      → /community
-//   3. Trends     — icon: fire or trending arrow      → /trends
-//   4. Profile    — icon: user circle                 → /profile
-//
-// ACTIVE STATE
-//   Use usePathname() from next/navigation to detect the current route.
-//   Active tab: icon + label in brand-gold, slightly larger
-//   Inactive tab: icon + label in muted gray
-//
-// LAYOUT
-//   Fixed to bottom of viewport (fixed bottom-0 left-0 right-0)
-//   White background with a subtle top border (border-t border-gray-200)
-//   Safe area padding at bottom for iOS home indicator: pb-safe (or pb-5)
-//   Height: ~64px
-//   4 equal-width columns, each a Next.js <Link> wrapping icon + label
-//
-// Do NOT render NavBar on the "/" (sign-in) or "/onboarding" routes.
-// Check pathname in layout.tsx and conditionally include NavBar.
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { SparklesIcon, UsersIcon, FireIcon, UserCircleIcon } from './icons'
+
+const TABS = [
+  { href: '/home', label: 'Discover', Icon: SparklesIcon },
+  { href: '/community', label: 'Community', Icon: UsersIcon },
+  { href: '/trends', label: 'Trends', Icon: FireIcon },
+  { href: '/profile', label: 'Profile', Icon: UserCircleIcon },
+] as const
+
+const HIDDEN_ROUTES = ['/', '/onboarding']
+
+export default function NavBar() {
+  const pathname = usePathname()
+
+  if (HIDDEN_ROUTES.includes(pathname)) return null
+
+  return (
+    <nav
+      className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-100"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+    >
+      <div className="flex h-16">
+        {TABS.map(({ href, label, Icon }) => {
+          const active = pathname.startsWith(href)
+          return (
+            <Link
+              key={href}
+              href={href}
+              className="flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors"
+              aria-label={label}
+              aria-current={active ? 'page' : undefined}
+            >
+              <Icon
+                className={active ? 'text-brand-gold' : 'text-muted'}
+                width={22}
+                height={22}
+              />
+              <span
+                className={`text-[10px] font-medium tracking-wide ${
+                  active ? 'text-brand-gold' : 'text-muted'
+                }`}
+              >
+                {label}
+              </span>
+            </Link>
+          )
+        })}
+      </div>
+    </nav>
+  )
+}

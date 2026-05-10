@@ -1,19 +1,36 @@
-// components/MealPeriodTabs.tsx
-// "use client"
-// Tab row that switches between Breakfast / Lunch / Dinner on the Home page.
-//
-// PROPS
-//   selected  — MealPeriod
-//   onChange  — (period: MealPeriod) => void
-//   counts    — { Breakfast: number; Lunch: number; Dinner: number }
-//               (number of combos per period — show as a small badge if < 3 to warn user)
-//
-// LAYOUT
-//   Full-width row with 3 equal tabs separated by a bottom border
-//   Active tab: bottom border in brand-gold (border-b-2 border-brand-gold), text-brand-gold
-//   Inactive tab: text-muted, no border
-//   Tab label: "Breakfast" / "Lunch" / "Dinner" — capitalize
-//   Optional badge: if counts[period] < 3, show a small yellow warning dot next to the label
-//
-// No API calls made here — switching tabs is purely client-side state on the Home page.
-// This component is purely presentational (receives state + callback as props).
+'use client'
+
+import { MEAL_PERIODS, type MealPeriod } from '@/types'
+
+interface Props {
+  selected: MealPeriod
+  onChange: (period: MealPeriod) => void
+  counts: Record<MealPeriod, number>
+}
+
+export default function MealPeriodTabs({ selected, onChange, counts }: Props) {
+  return (
+    <div className="flex border-b border-gray-100">
+      {MEAL_PERIODS.map((period) => {
+        const active = period === selected
+        const hasWarning = counts[period] > 0 && counts[period] < 3
+        return (
+          <button
+            key={period}
+            onClick={() => onChange(period)}
+            className={`flex-1 flex items-center justify-center gap-1.5 py-3 text-sm font-medium transition-colors border-b-2 -mb-px ${
+              active
+                ? 'border-brand-gold text-brand-gold'
+                : 'border-transparent text-muted hover:text-brand-black'
+            }`}
+          >
+            {period}
+            {hasWarning && (
+              <span className="w-2 h-2 rounded-full bg-yellow-400" aria-label="fewer combos available" />
+            )}
+          </button>
+        )
+      })}
+    </div>
+  )
+}

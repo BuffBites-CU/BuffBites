@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Hide scrollbar visually but keep functionality */
+/* Hide scrollbar visually but keep scroll functionality */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Smooth tap highlights on mobile */
+* { -webkit-tap-highlight-color: transparent; }

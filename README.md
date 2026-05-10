@@ -26,12 +26,15 @@ Buff_Bites/
 │       └── scrape-menus.yml           # Daily cron — re-scrapes all 5 dining halls at 8 AM UTC
 ├── backend/
 │   ├── main.py                        # FastAPI app — structured logging middleware + router registration
+│   ├── auth.py                        # Firebase Admin SDK middleware — Depends(get_current_user)
+│   ├── database.py                    # AsyncIOMotorClient — import collections directly
 │   ├── requirements.txt
+│   ├── Dockerfile                     # Production image — Railway/Render/Fly
 │   ├── routers/
 │   │   ├── combos.py                  # Combo generation — station classifier + Claude API call
 │   │   ├── users.py                   # User profile routes
-│   │   ├── community.py               # Community feed routes
-│   │   └── drafts.py                  # Draft management routes
+│   │   ├── community.py               # Community feed routes + voting
+│   │   └── drafts.py                  # Draft save / edit / publish flow
 │   ├── pydantic_models/
 │   │   ├── __init__.py
 │   │   └── combo_models.py            # Pydantic models + dish verification
@@ -50,8 +53,21 @@ Buff_Bites/
 │       ├── libby_dining_menus.json
 │       ├── sewall_dining_menus.json
 │       └── village_center_dining_menus.json
-├── frontend/
-│   └── BuffBites.html
+├── frontend/                          # Next.js App Router (TypeScript + Tailwind)
+│   ├── app/
+│   │   ├── layout.tsx                 # Root layout — AuthProvider + NavBar
+│   │   ├── page.tsx                   # "/" — sign-in landing
+│   │   ├── onboarding/page.tsx        # "/onboarding" — username + dietary prefs
+│   │   ├── home/page.tsx              # "/home" — AI combo discovery
+│   │   ├── community/page.tsx         # "/community" — user-submitted combo feed
+│   │   ├── trends/page.tsx            # "/trends" — top 20 by upvotes today
+│   │   └── profile/page.tsx           # "/profile" — view/edit account
+│   ├── components/                    # NavBar, ComboCard, ComboDetail, VoteButtons, …
+│   ├── context/AuthContext.tsx        # Firebase auth state + username
+│   ├── hooks/                         # useCombos, useCommunity
+│   ├── services/                      # api.ts + combosService, communityService, usersService
+│   ├── types/index.ts                 # All TypeScript types — single source of truth
+│   └── lib/firebase.ts                # Firebase app init
 ├── README.md
 └── API_DOCS.md
 ```
@@ -62,13 +78,16 @@ Buff_Bites/
 
 | Layer | Technology |
 |---|---|
+| Frontend | Next.js 14 (App Router), TypeScript, Tailwind CSS |
+| Auth | Firebase (Google sign-in) |
 | Backend framework | FastAPI (Python) |
 | Server | Uvicorn |
+| Database | MongoDB Atlas (AsyncIOMotorClient) |
 | Request/response validation | Pydantic v2 |
 | AI model | Anthropic `claude-haiku-4-5` |
 | Menu data | Daily-scraped JSON (Nutrislice via GitHub Actions) |
 | Logging | `structlog` — structured JSON per request |
-| Environment | `python-dotenv` |
+| Deployment | Docker — Railway / Render / Fly |
 | Testing | `pytest` |
 
 ---
@@ -97,23 +116,46 @@ Copy the example file and fill in your values:
 cp backend/.env.example backend/.env
 ```
 
+**Backend** (`backend/.env`):
+
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `ANTHROPIC_API_KEY` | Yes | Anthropic API key — [console.anthropic.com](https://console.anthropic.com) |
 | `MONGO_URL` | Yes | MongoDB Atlas connection string |
 | `APP_NAME` | No | MongoDB database name (default: `combos`) |
-| `PORT` | No | Uvicorn port (default: `3001`) |
+| `PORT` | No | Uvicorn port — used in Docker/production (default: `8000`) |
+| `FIREBASE_SERVICE_ACCOUNT_JSON` | Production only | Full service account JSON as a string |
 
-Firebase uses `backend/serviceAccountKey.json` (not an env var) — obtain it from the Firebase console and place it there. It is gitignored and must never be committed.
+Firebase auth — two paths: place `backend/serviceAccountKey.json` locally (gitignored, never commit), or set `FIREBASE_SERVICE_ACCOUNT_JSON` in production.
 
-### 4. Start the server
+**Frontend** (`frontend/.env.local`):
 
-```bash
-uvicorn main:app --reload --port 3001
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000
+
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
 ```
 
-The API will be available at `http://localhost:3001`.
-Interactive Swagger docs at `http://localhost:3001/docs`.
+### 4. Start the backend
+
+```bash
+uvicorn main:app --reload
+```
+
+API available at `http://localhost:8000`. Swagger UI at `http://localhost:8000/docs`.
+
+### 5. Start the frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+App available at `http://localhost:3000`.
 
 ---
 
@@ -166,17 +208,29 @@ Every request prints a structured JSON line to stdout:
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET` | `/` | Health check |
-| `GET` | `/api/combos/generate` | Generate 9 meal combos |
-
-**Required query param:** `dining` — one of `alley`, `c4c`, `libby`, `sewall`, `village_center`
-**Optional query param:** `date` — `YYYY-MM-DD`, defaults to today
+| `GET` | `/` | Root ping |
+| `GET` | `/health` | Deep health check — pings MongoDB |
+| `GET` | `/api/combos/generate` | Generate 9 AI meal combos |
+| `GET` | `/api/menu` | Raw classified menu (no Claude call) |
+| `POST` | `/api/users/` | Create user profile |
+| `GET` | `/api/users/{firebase_uid}` | Get user profile |
+| `PUT` | `/api/users/{firebase_uid}` | Update user profile |
+| `GET` | `/api/community/combos` | Browse active community combos |
+| `GET` | `/api/community/combos/{id}` | Get single community combo |
+| `POST` | `/api/community/combos` | Publish a combo to the community feed |
+| `POST` | `/api/community/combos/{id}/vote` | Upvote or downvote a combo |
+| `GET` | `/api/community/trends` | Top 20 combos by upvotes today |
+| `POST` | `/api/drafts/` | Save a new draft |
+| `GET` | `/api/drafts/{firebase_uid}` | Get all drafts for a user |
+| `PUT` | `/api/drafts/{draft_id}` | Update a draft |
+| `DELETE` | `/api/drafts/{draft_id}` | Delete a draft |
+| `POST` | `/api/drafts/{draft_id}/publish` | Publish a draft to the community feed |
 
 ```bash
-curl "http://localhost:3001/api/combos/generate?dining=c4c&date=2026-03-17"
+curl "http://localhost:8000/api/combos/generate?dining=c4c&date=2026-03-17"
 ```
 
-See [`API_DOCS.md`](./API_DOCS.md) for full request/response details.
+See [`API_DOCS.md`](./API_DOCS.md) for full request/response schemas.
 
 ---
 

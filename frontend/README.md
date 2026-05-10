@@ -40,7 +40,8 @@ frontend/
 │   ├── MealPeriodTabs.tsx        # Breakfast / Lunch / Dinner tab switcher
 │   ├── FilterBar.tsx             # Dining hall filter chips (single or multi-select)
 │   ├── VoteButtons.tsx           # Upvote / downvote buttons inside ComboDetail
-│   └── PublishComboModal.tsx     # 3-step form to submit a community combo
+│   ├── PublishComboModal.tsx     # 3-step form to submit a community combo
+│   └── icons.tsx                 # SVG icon components (reusable across pages)
 │
 ├── context/
 │   └── AuthContext.tsx           # Firebase auth state + username available app-wide
@@ -220,6 +221,11 @@ POST /api/community/combos?firebase_uid={uid}&username={username}
 | Community | Publish combo | `POST` | `/api/community/combos?firebase_uid=&username=` |
 | Community | Vote | `POST` | `/api/community/combos/{id}/vote?vote_type=&firebase_uid=` |
 | Trends | Top combos | `GET` | `/api/community/trends?dining_hall=` |
+| Drafts | Save draft | `POST` | `/api/drafts/` |
+| Drafts | Get user drafts | `GET` | `/api/drafts/{firebase_uid}` |
+| Drafts | Update draft | `PUT` | `/api/drafts/{draft_id}` |
+| Drafts | Delete draft | `DELETE` | `/api/drafts/{draft_id}` |
+| Drafts | Publish draft | `POST` | `/api/drafts/{draft_id}/publish` |
 
 ---
 

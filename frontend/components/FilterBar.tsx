@@ -1,29 +1,73 @@
-// components/FilterBar.tsx
-// "use client"
-// Dining hall filter chips for Community and Trends pages.
-//
-// PROPS
-//   selected   — DiningHall | undefined        (single-select, used on Community page)
-//   selectedMulti — DiningHall[]               (multi-select, used on Trends page)
-//   mode       — "single" | "multi"
-//   onChange   — (hall: DiningHall | undefined) => void       (single mode)
-//   onChangeMulti — (halls: DiningHall[]) => void             (multi mode)
-//
-// OPTIONS
-//   "All" chip (no filter) + one chip per dining hall from DINING_HALL_LABELS
-//
-// SINGLE MODE (Community page)
-//   Only one chip active at a time.
-//   Selecting "All" sets selected to undefined.
-//   Selecting a hall sets selected to that DiningHall.
-//   Active: bg-brand-gold text-brand-black
-//   Inactive: bg-gray-100 text-muted
-//
-// MULTI MODE (Trends page)
-//   Multiple chips can be active simultaneously.
-//   Tapping an active chip deselects it.
-//   If all chips are deselected, falls back to showing all halls (empty array = no filter).
-//   Active chips: bg-brand-gold text-brand-black
-//   Inactive chips: bg-gray-100 text-muted
-//
-// Layout: same horizontal scroll row as DiningSelector — overflow-x-auto, gap-2
+'use client'
+
+import { DINING_HALLS, DINING_HALL_LABELS, type DiningHall } from '@/types'
+
+interface SingleProps {
+  mode: 'single'
+  selected: DiningHall | undefined
+  onChange: (hall: DiningHall | undefined) => void
+}
+
+interface MultiProps {
+  mode: 'multi'
+  selectedMulti: DiningHall[]
+  onChangeMulti: (halls: DiningHall[]) => void
+}
+
+type Props = SingleProps | MultiProps
+
+function isActive(props: Props, hall: DiningHall): boolean {
+  if (props.mode === 'single') return props.selected === hall
+  return props.selectedMulti.includes(hall)
+}
+
+function isAllActive(props: Props): boolean {
+  if (props.mode === 'single') return props.selected === undefined
+  return props.selectedMulti.length === 0
+}
+
+function handleClick(props: Props, hall: DiningHall) {
+  if (props.mode === 'single') {
+    props.onChange(props.selected === hall ? undefined : hall)
+  } else {
+    const next = props.selectedMulti.includes(hall)
+      ? props.selectedMulti.filter((h) => h !== hall)
+      : [...props.selectedMulti, hall]
+    props.onChangeMulti(next)
+  }
+}
+
+function handleAllClick(props: Props) {
+  if (props.mode === 'single') props.onChange(undefined)
+  else props.onChangeMulti([])
+}
+
+export default function FilterBar(props: Props) {
+  return (
+    <div className="flex gap-2 overflow-x-auto scrollbar-hide px-4 py-2">
+      <button
+        onClick={() => handleAllClick(props)}
+        className={`flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+          isAllActive(props)
+            ? 'bg-brand-gold text-brand-black'
+            : 'bg-gray-100 text-muted hover:bg-gray-200'
+        }`}
+      >
+        All
+      </button>
+      {DINING_HALLS.map((hall) => (
+        <button
+          key={hall}
+          onClick={() => handleClick(props, hall)}
+          className={`flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+            isActive(props, hall)
+              ? 'bg-brand-gold text-brand-black'
+              : 'bg-gray-100 text-muted hover:bg-gray-200'
+          }`}
+        >
+          {DINING_HALL_LABELS[hall]}
+        </button>
+      ))}
+    </div>
+  )
+}

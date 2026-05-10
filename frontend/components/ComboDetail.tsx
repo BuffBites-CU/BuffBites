@@ -1,48 +1,198 @@
-// components/ComboDetail.tsx
-// "use client"
-// Bottom sheet modal shown when a combo card is clicked.
-// Works for both AI-generated combos and community combos.
-//
-// PROPS
-//   combo       — Combo | CommunityCombo | null
-//   type        — "ai" | "community"
-//   onClose     — () => void
-//
-// BEHAVIOR
-//   For community combos: on mount, call getCombo(combo.id) to load full detail
-//   (the feed endpoint may not include all fields — this ensures notes/images load)
-//   Show a loading spinner inside the sheet while fetching.
-//
-// LAYOUT
-//   Overlay: semi-transparent black backdrop (bg-black/40), clicking it calls onClose
-//   Sheet: slides up from bottom (translate-y animation), white, rounded-t-2xl
-//   Max height: 85vh, overflow-y-auto
-//
-//   Inside the sheet (top to bottom):
-//     1. Drag handle (small gray bar at top center)
-//
-//     2. Title (text-xl font-bold) + close button (X) top-right
-//
-//     3. Meta row: dining hall badge, date, author @username (community only)
-//
-//     4. Description paragraph (full text, no clamp)
-//
-//     5. Tags row — same colored chips as ComboCard
-//
-//     6. "Dishes" section heading
-//        For each dish:
-//          - Name (font-medium) | Station (muted small text) | Servings (community only)
-//          Rendered as a clean list with dividers
-//
-//     7. Nutrition summary (AI combos):
-//        "~{approximate_calories} calories" shown in a highlighted row
-//
-//     8. VoteButtons component (community combos only)
-//        Shown at the bottom of the sheet, sticky so it's always visible
-//
-//     9. Photos row (community combos only, if images.length > 0)
-//        Horizontal scrollable row of image thumbnails
-//        Tap to view full-size (simple lightbox or new tab)
-//
-//     10. Notes (community combos only, if notes exists)
-//         Gray italic block quote
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
+import { XMarkIcon } from './icons'
+import { tagStyle } from './ComboCard'
+import VoteButtons from './VoteButtons'
+import { getCombo } from '@/services/communityService'
+import { DINING_HALL_LABELS } from '@/types'
+import type { Combo, CommunityCombo, VoteType } from '@/types'
+
+function isCommunityCombo(c: Combo | CommunityCombo): c is CommunityCombo {
+  return 'id' in c
+}
+
+interface Props {
+  combo: Combo | CommunityCombo | null
+  type: 'ai' | 'community'
+  hasVoted?: boolean
+  onVote?: (type: VoteType) => Promise<void>
+  onClose: () => void
+}
+
+export default function ComboDetail({ combo, type, hasVoted = false, onVote, onClose }: Props) {
+  const [visible, setVisible] = useState(false)
+  const [detail, setDetail] = useState<CommunityCombo | null>(null)
+  const [detailLoading, setDetailLoading] = useState(false)
+  const sheetRef = useRef<HTMLDivElement>(null)
+
+  // slide-up animation
+  useEffect(() => {
+    if (!combo) return
+    const id = requestAnimationFrame(() => setVisible(true))
+    return () => cancelAnimationFrame(id)
+  }, [combo])
+
+  // fetch full community combo detail
+  useEffect(() => {
+    if (type !== 'community' || !combo) return
+    const c = combo as CommunityCombo
+    setDetailLoading(true)
+    getCombo(c.id)
+      .then(setDetail)
+      .catch(() => setDetail(c))
+      .finally(() => setDetailLoading(false))
+  }, [combo, type])
+
+  function handleClose() {
+    setVisible(false)
+    setTimeout(onClose, 280)
+  }
+
+  if (!combo) return null
+
+  const community = type === 'community' ? (detail ?? (isCommunityCombo(combo) ? combo : null)) : null
+  const displayDishes = community ? community.dishes : (combo as Combo).dishes
+  const displayTags = community ? community.tags : combo.tags
+
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col justify-end">
+      {/* Backdrop */}
+      <div
+        className={`absolute inset-0 bg-black transition-opacity duration-300 ${visible ? 'opacity-40' : 'opacity-0'}`}
+        onMouseDown={handleClose}
+      />
+
+      {/* Sheet */}
+      <div
+        ref={sheetRef}
+        className={`relative bg-white rounded-t-2xl max-h-[88vh] flex flex-col transition-transform duration-300 ease-out ${visible ? 'translate-y-0' : 'translate-y-full'}`}
+      >
+        {/* Drag handle */}
+        <div className="flex-shrink-0 flex justify-center pt-3 pb-1">
+          <div className="w-10 h-1 rounded-full bg-gray-200" />
+        </div>
+
+        {/* Header */}
+        <div className="flex-shrink-0 flex items-start justify-between px-5 py-3 border-b border-gray-100">
+          <h2 className="text-lg font-bold text-brand-black pr-4 leading-tight">{combo.title}</h2>
+          <button
+            onClick={handleClose}
+            className="flex-shrink-0 p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+            aria-label="Close"
+          >
+            <XMarkIcon width={20} height={20} className="text-muted" />
+          </button>
+        </div>
+
+        {/* Scrollable body */}
+        <div className="flex-1 overflow-y-auto px-5 py-4 space-y-5">
+          {/* Meta */}
+          {community && (
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="bg-gray-100 text-muted rounded-full px-3 py-1">
+                {DINING_HALL_LABELS[community.dining_hall]}
+              </span>
+              <span className="bg-gray-100 text-muted rounded-full px-3 py-1">
+                {community.date}
+              </span>
+              <span className="text-muted">@{community.author_username}</span>
+            </div>
+          )}
+
+          {/* Description */}
+          <p className="text-sm text-muted leading-relaxed">{combo.description}</p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-1.5">
+            {displayTags.map((tag) => (
+              <span
+                key={tag}
+                className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${tagStyle(tag)}`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* Dishes */}
+          <div>
+            <h3 className="text-xs font-semibold text-muted uppercase tracking-wider mb-2">
+              Dishes
+            </h3>
+            {detailLoading ? (
+              <div className="space-y-2">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="animate-pulse h-10 bg-gray-100 rounded-lg" />
+                ))}
+              </div>
+            ) : (
+              <ul className="divide-y divide-gray-50">
+                {displayDishes.map((dish, i) => (
+                  <li key={i} className="py-2.5 flex items-center justify-between">
+                    <div>
+                      <p className="text-sm font-medium text-brand-black">{dish.name}</p>
+                      <p className="text-xs text-muted">{dish.station}</p>
+                    </div>
+                    {'servings' in dish && (dish as { servings: number }).servings > 1 && (
+                      <span className="text-xs text-muted bg-gray-100 rounded-full px-2 py-0.5">
+                        ×{(dish as { servings: number }).servings}
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Calories (AI combos) */}
+          {type === 'ai' && 'approximate_calories' in combo && (
+            <div className="bg-brand-gold/10 rounded-xl px-4 py-3 flex items-center justify-between">
+              <span className="text-sm font-medium text-brand-black">Estimated calories</span>
+              <span className="text-sm font-bold text-brand-gold">
+                ~{(combo as Combo).approximate_calories} cal
+              </span>
+            </div>
+          )}
+
+          {/* Notes (community) */}
+          {community?.notes && (
+            <blockquote className="border-l-2 border-gray-200 pl-3 text-sm italic text-muted">
+              {community.notes}
+            </blockquote>
+          )}
+
+          {/* Photos (community) */}
+          {community?.images && community.images.length > 0 && (
+            <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
+              {community.images.map((src, i) => (
+                <a key={i} href={src} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+                  <div className="relative w-24 h-24 rounded-xl overflow-hidden bg-gray-100">
+                    <Image src={src} alt={`Photo ${i + 1}`} fill className="object-cover" />
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
+
+          {/* Vote buttons bottom padding */}
+          {type === 'community' && <div className="h-20" />}
+        </div>
+
+        {/* Sticky vote buttons */}
+        {type === 'community' && community && onVote && (
+          <div className="flex-shrink-0 sticky bottom-0 bg-white border-t border-gray-100 px-5 py-3">
+            <VoteButtons
+              comboId={community.id}
+              upvotes={community.upvotes}
+              downvotes={community.downvotes}
+              hasVoted={hasVoted}
+              onVote={onVote}
+            />
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}

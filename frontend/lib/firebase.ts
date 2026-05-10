@@ -1,15 +1,16 @@
-// lib/firebase.ts
-// Firebase app initialization — imported once, used everywhere.
-//
-// Read the following from environment variables (set in .env.local):
-//   NEXT_PUBLIC_FIREBASE_API_KEY
-//   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
-//   NEXT_PUBLIC_FIREBASE_PROJECT_ID
-//   NEXT_PUBLIC_FIREBASE_APP_ID
-//
-// Initialize the Firebase app with initializeApp(firebaseConfig)
-// Export `auth` — the Firebase Auth instance (getAuth(app))
-//   used by AuthContext for signInWithPopup and onAuthStateChanged
-//
-// Use a singleton guard so the app isn't initialized more than once
-// when Next.js hot-reloads in development
+import { initializeApp, getApps, getApp } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+}
+
+// Lazy getter — never called at module init, only when browser code executes.
+// This prevents Firebase from throwing auth/invalid-api-key during SSR/build.
+export function getFirebaseAuth() {
+  const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
+  return getAuth(app)
+}

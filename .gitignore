@@ -64,8 +64,9 @@ build/
 # Redis dump
 dump.rdb
 
-# Supabase
-.supabase/
+# Docker
+.dockerignore
+docker-compose.override.yml
 
 # Misc
 *.tsbuildinfo
