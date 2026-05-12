@@ -27,14 +27,12 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
   const [detailLoading, setDetailLoading] = useState(false)
   const sheetRef = useRef<HTMLDivElement>(null)
 
-  // slide-up animation
   useEffect(() => {
     if (!combo) return
     const id = requestAnimationFrame(() => setVisible(true))
     return () => cancelAnimationFrame(id)
   }, [combo])
 
-  // fetch full community combo detail
   useEffect(() => {
     if (type !== 'community' || !combo) return
     const c = combo as CommunityCombo
@@ -58,23 +56,19 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col justify-end">
-      {/* Backdrop */}
       <div
         className={`absolute inset-0 bg-black transition-opacity duration-300 ${visible ? 'opacity-40' : 'opacity-0'}`}
         onMouseDown={handleClose}
       />
 
-      {/* Sheet */}
       <div
         ref={sheetRef}
         className={`relative bg-white rounded-t-2xl max-h-[88vh] flex flex-col transition-transform duration-300 ease-out ${visible ? 'translate-y-0' : 'translate-y-full'}`}
       >
-        {/* Drag handle */}
         <div className="flex-shrink-0 flex justify-center pt-3 pb-1">
           <div className="w-10 h-1 rounded-full bg-gray-200" />
         </div>
 
-        {/* Header */}
         <div className="flex-shrink-0 flex items-start justify-between px-5 py-3 border-b border-gray-100">
           <h2 className="text-lg font-bold text-brand-black pr-4 leading-tight">{combo.title}</h2>
           <button
@@ -86,9 +80,7 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
           </button>
         </div>
 
-        {/* Scrollable body */}
         <div className="flex-1 overflow-y-auto px-5 py-4 space-y-5">
-          {/* Meta */}
           {community && (
             <div className="flex flex-wrap gap-2 text-xs">
               <span className="bg-gray-100 text-muted rounded-full px-3 py-1">
@@ -101,10 +93,8 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
             </div>
           )}
 
-          {/* Description */}
           <p className="text-sm text-muted leading-relaxed">{combo.description}</p>
 
-          {/* Tags */}
           <div className="flex flex-wrap gap-1.5">
             {displayTags.map((tag) => (
               <span
@@ -116,7 +106,6 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
             ))}
           </div>
 
-          {/* Dishes */}
           <div>
             <h3 className="text-xs font-semibold text-muted uppercase tracking-wider mb-2">
               Dishes
@@ -146,7 +135,6 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
             )}
           </div>
 
-          {/* Calories (AI combos) */}
           {type === 'ai' && 'approximate_calories' in combo && (
             <div className="bg-brand-gold/10 rounded-xl px-4 py-3 flex items-center justify-between">
               <span className="text-sm font-medium text-brand-black">Estimated calories</span>
@@ -156,14 +144,12 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
             </div>
           )}
 
-          {/* Notes (community) */}
           {community?.notes && (
             <blockquote className="border-l-2 border-gray-200 pl-3 text-sm italic text-muted">
               {community.notes}
             </blockquote>
           )}
 
-          {/* Photos (community) */}
           {community?.images && community.images.length > 0 && (
             <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
               {community.images.map((src, i) => (
@@ -176,11 +162,9 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
             </div>
           )}
 
-          {/* Vote buttons bottom padding */}
           {type === 'community' && <div className="h-20" />}
         </div>
 
-        {/* Sticky vote buttons */}
         {type === 'community' && community && onVote && (
           <div className="flex-shrink-0 sticky bottom-0 bg-white border-t border-gray-100 px-5 py-3">
             <VoteButtons

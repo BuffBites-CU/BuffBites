@@ -1,5 +1,3 @@
-// ─── Users ───────────────────────────────────────────────────────────────────
-
 export type DietaryPreference = 'vegan' | 'vegetarian' | 'gluten-free' | 'halal'
 
 export interface UserCreate {
@@ -16,8 +14,6 @@ export interface UserResponse extends UserCreate {
   karma: number
   created_at: string
 }
-
-// ─── AI Combos ───────────────────────────────────────────────────────────────
 
 export type DiningHall = 'alley' | 'c4c' | 'libby' | 'sewall' | 'village_center'
 
@@ -77,8 +73,6 @@ export interface ComboResponse {
   day_of_week: string
   combos: CombosMap
 }
-
-// ─── Community Combos ─────────────────────────────────────────────────────────
 
 export interface DishItem {
   name: string

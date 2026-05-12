@@ -45,7 +45,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-surface pb-24">
-      {/* Header */}
       <header className="sticky top-0 z-30 bg-surface/90 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
           <h1 className="text-xl font-bold text-brand-black tracking-tight">BuffBites</h1>
@@ -68,12 +67,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Dining selector */}
         <div className="max-w-md mx-auto">
           <DiningSelector selected={selectedDining} onChange={setSelectedDining} />
         </div>
 
-        {/* Meal tabs */}
         <div className="max-w-md mx-auto">
           <MealPeriodTabs
             selected={selectedPeriod}
@@ -83,7 +80,6 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Content */}
       <div className="max-w-md mx-auto px-4 pt-4">
         {loading && <ComboSkeletons />}
 
@@ -136,7 +132,6 @@ export default function HomePage() {
         )}
       </div>
 
-      {/* Detail sheet */}
       {activeCombo && (
         <ComboDetail
           combo={activeCombo}

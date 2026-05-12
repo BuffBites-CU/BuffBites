@@ -8,7 +8,6 @@ export default function LandingPage() {
   const [signingIn, setSigningIn] = useState(false)
   const [error, setError] = useState('')
 
-  // AuthContext handles redirect to /home once signed in
   if (loading || firebaseUser) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-surface">
@@ -32,7 +31,6 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-surface flex flex-col items-center justify-center px-6">
       <div className="w-full max-w-sm flex flex-col items-center gap-8">
-        {/* Logo mark */}
         <div className="flex flex-col items-center gap-3">
           <div className="w-20 h-20 rounded-3xl bg-brand-gold flex items-center justify-center shadow-lg">
             <span className="text-4xl" role="img" aria-label="fork and knife">🍴</span>
@@ -45,7 +43,6 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* Feature pills */}
         <div className="flex flex-wrap justify-center gap-2">
           {['AI-generated combos', 'All 5 dining halls', 'Community picks'].map((f) => (
             <span key={f} className="rounded-full bg-white border border-gray-200 px-3 py-1 text-xs text-muted shadow-sm">
@@ -54,7 +51,6 @@ export default function LandingPage() {
           ))}
         </div>
 
-        {/* Sign in button */}
         <div className="w-full space-y-3">
           <button
             onClick={handleSignIn}

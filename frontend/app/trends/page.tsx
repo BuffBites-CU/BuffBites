@@ -94,7 +94,6 @@ export default function TrendsPage() {
         </div>
       </header>
 
-      {/* Content */}
       <div className="max-w-md mx-auto px-4 pt-4">
         {loading && <TrendSkeletons />}
 
