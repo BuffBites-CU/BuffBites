@@ -102,6 +102,14 @@ export interface CommunityCombo extends ComboCreate {
   has_voted?: boolean
 }
 
+export interface ComboUpdate {
+  title?: string
+  description?: string
+  tags?: ComboTag[]
+  dishes?: DishItem[]
+  notes?: string
+}
+
 export type VoteType = 'upvote' | 'downvote'
 
 export interface MenuItem {

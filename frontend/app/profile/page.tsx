@@ -5,8 +5,11 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { getUser, updateUser } from '@/services/usersService'
-import { PencilIcon, CheckIcon, XMarkIcon, StarIcon } from '@/components/icons'
-import type { DietaryPreference, UserResponse } from '@/types'
+import { getUserCombos, deleteCombo } from '@/services/communityService'
+import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon } from '@/components/icons'
+import { DINING_HALL_LABELS } from '@/types'
+import EditComboModal from '@/components/EditComboModal'
+import type { DietaryPreference, UserResponse, CommunityCombo } from '@/types'
 
 const DIETARY_OPTIONS: { key: DietaryPreference; label: string; style: string }[] = [
   { key: 'vegan', label: 'Vegan', style: 'bg-emerald-100 text-emerald-800' },
@@ -14,6 +17,14 @@ const DIETARY_OPTIONS: { key: DietaryPreference; label: string; style: string }[
   { key: 'gluten-free', label: 'Gluten-Free', style: 'bg-yellow-100 text-yellow-800' },
   { key: 'halal', label: 'Halal', style: 'bg-indigo-100 text-indigo-800' },
 ]
+
+function formatExpiry(iso: string) {
+  const ms = new Date(iso).getTime() - Date.now()
+  if (ms <= 0) return { text: 'Expired', urgent: true }
+  const h = Math.floor(ms / 3_600_000)
+  const m = Math.floor((ms % 3_600_000) / 60_000)
+  return { text: h > 0 ? `${h}h ${m}m left` : `${m}m left`, urgent: h < 1 }
+}
 
 export default function ProfilePage() {
   const router = useRouter()
@@ -27,6 +38,11 @@ export default function ProfilePage() {
   const [usernameError, setUsernameError] = useState('')
   const [toast, setToast] = useState('')
 
+  const [myCombos, setMyCombos] = useState<CommunityCombo[]>([])
+  const [combosLoading, setCombosLoading] = useState(false)
+  const [editingCombo, setEditingCombo] = useState<CommunityCombo | null>(null)
+  const [deletingId, setDeletingId] = useState<string | null>(null)
+
   useEffect(() => {
     if (!firebaseUid) { router.replace('/'); return }
     getUser(firebaseUid)
@@ -34,6 +50,15 @@ export default function ProfilePage() {
       .catch(() => router.replace('/'))
       .finally(() => setLoading(false))
   }, [firebaseUid, router])
+
+  useEffect(() => {
+    if (!firebaseUid) return
+    setCombosLoading(true)
+    getUserCombos(firebaseUid)
+      .then(setMyCombos)
+      .catch(() => setMyCombos([]))
+      .finally(() => setCombosLoading(false))
+  }, [firebaseUid])
 
   function showToast(msg: string) {
     setToast(msg)
@@ -85,6 +110,21 @@ export default function ProfilePage() {
     }
   }
 
+  async function handleDelete(combo: CommunityCombo) {
+    if (!firebaseUser) return
+    setDeletingId(combo.id)
+    try {
+      const token = await firebaseUser.getIdToken()
+      await deleteCombo(combo.id, token)
+      setMyCombos((prev) => prev.filter((c) => c.id !== combo.id))
+      showToast('Combo deleted.')
+    } catch {
+      showToast('Failed to delete.')
+    } finally {
+      setDeletingId(null)
+    }
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -101,7 +141,6 @@ export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-surface pb-24">
       <div className="max-w-md mx-auto px-4 pt-12 space-y-6">
-        {/* Toast */}
         {toast && (
           <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-brand-black text-white px-5 py-3 rounded-2xl text-sm font-medium shadow-lg">
             {toast}
@@ -112,12 +151,7 @@ export default function ProfilePage() {
         <div className="flex flex-col items-center gap-3">
           <div className="relative w-20 h-20 rounded-full overflow-hidden bg-gray-200 shadow">
             {firebaseUser?.photoURL ? (
-              <Image
-                src={firebaseUser.photoURL}
-                alt="Profile photo"
-                fill
-                className="object-cover"
-              />
+              <Image src={firebaseUser.photoURL} alt="Profile photo" fill className="object-cover" />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-brand-gold/20">
                 <span className="text-3xl font-bold text-brand-gold">
@@ -138,10 +172,10 @@ export default function ProfilePage() {
           )}
         </div>
 
+        {/* Profile card */}
         <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
           {editMode ? (
             <div className="p-5 space-y-5">
-              {/* Username edit */}
               <div>
                 <label className="text-xs font-semibold text-muted uppercase tracking-wider block mb-1.5">
                   Username
@@ -158,7 +192,6 @@ export default function ProfilePage() {
                 {usernameError && <p className="text-xs text-red-500 mt-1">{usernameError}</p>}
               </div>
 
-              {/* Dietary prefs edit */}
               <div>
                 <label className="text-xs font-semibold text-muted uppercase tracking-wider block mb-2">
                   Dietary Preferences
@@ -200,7 +233,6 @@ export default function ProfilePage() {
             </div>
           ) : (
             <div className="divide-y divide-gray-50">
-              {/* Dietary prefs view */}
               <div className="px-5 py-4">
                 <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-2">Dietary Preferences</p>
                 {profile.dietary_preferences.length > 0 ? (
@@ -219,7 +251,6 @@ export default function ProfilePage() {
                 )}
               </div>
 
-              {/* Edit button */}
               <button
                 onClick={enterEdit}
                 className="w-full flex items-center justify-between px-5 py-4 text-sm font-medium text-brand-black hover:bg-gray-50 transition-colors"
@@ -231,7 +262,6 @@ export default function ProfilePage() {
                 <span className="text-muted text-lg">›</span>
               </button>
 
-              {/* Sign out */}
               <button
                 onClick={signOut}
                 className="w-full px-5 py-4 text-sm font-medium text-red-500 hover:bg-red-50 transition-colors text-left"
@@ -241,7 +271,89 @@ export default function ProfilePage() {
             </div>
           )}
         </div>
+
+        {/* My Combos */}
+        <div>
+          <h2 className="text-base font-bold text-brand-black mb-3">My Combos</h2>
+
+          {combosLoading && (
+            <div className="space-y-2">
+              {[1, 2].map((i) => (
+                <div key={i} className="bg-white rounded-xl border border-gray-100 p-4 animate-pulse">
+                  <div className="h-4 bg-gray-200 rounded-full w-1/2 mb-2" />
+                  <div className="h-3 bg-gray-200 rounded-full w-1/3" />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {!combosLoading && myCombos.length === 0 && (
+            <div className="bg-white rounded-xl border border-gray-100 px-5 py-8 text-center">
+              <p className="text-sm text-muted">No active combos. Share one from the Community tab!</p>
+            </div>
+          )}
+
+          {!combosLoading && myCombos.length > 0 && (
+            <div className="space-y-2">
+              {myCombos.map((combo) => {
+                const expiry = formatExpiry(combo.expires_at)
+                return (
+                  <div key={combo.id} className="bg-white rounded-xl border border-gray-100 p-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <p className="font-semibold text-sm text-brand-black line-clamp-1">{combo.title}</p>
+                        <div className="flex items-center gap-3 mt-1">
+                          <span className="text-xs text-muted">
+                            {DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall}
+                          </span>
+                          <span className="flex items-center gap-0.5 text-xs text-brand-gold font-medium">
+                            <ChevronUpIcon width={12} height={12} />
+                            {combo.upvotes}
+                          </span>
+                          <span className={`flex items-center gap-0.5 text-[11px] ${expiry.urgent ? 'text-orange-500' : 'text-muted'}`}>
+                            <ClockIcon width={11} height={11} />
+                            {expiry.text}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-1 flex-shrink-0">
+                        <button
+                          onClick={() => setEditingCombo(combo)}
+                          className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                          aria-label="Edit combo"
+                        >
+                          <PencilIcon width={15} height={15} className="text-muted" />
+                        </button>
+                        <button
+                          onClick={() => handleDelete(combo)}
+                          disabled={deletingId === combo.id}
+                          className="p-2 rounded-full hover:bg-red-50 transition-colors disabled:opacity-40"
+                          aria-label="Delete combo"
+                        >
+                          <TrashIcon width={15} height={15} className="text-red-400" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          )}
+        </div>
       </div>
+
+      {editingCombo && (
+        <EditComboModal
+          combo={editingCombo}
+          onClose={() => setEditingCombo(null)}
+          onSaved={(updated) => {
+            setMyCombos((prev) => prev.map((c) => c.id === updated.id ? updated : c))
+            setEditingCombo(null)
+            showToast('Combo updated!')
+          }}
+        />
+      )}
     </div>
   )
 }

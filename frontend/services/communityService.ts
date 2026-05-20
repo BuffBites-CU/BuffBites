@@ -1,5 +1,5 @@
 import { apiFetch } from './api'
-import type { ComboCreate, CommunityCombo, DiningHall, VoteType } from '@/types'
+import type { ComboCreate, ComboUpdate, CommunityCombo, DiningHall, VoteType } from '@/types'
 
 export function getCombos(dining_hall?: DiningHall, firebase_uid?: string): Promise<CommunityCombo[]> {
   const params = new URLSearchParams()
@@ -11,6 +11,25 @@ export function getCombos(dining_hall?: DiningHall, firebase_uid?: string): Prom
 
 export function getCombo(combo_id: string): Promise<CommunityCombo> {
   return apiFetch<CommunityCombo>(`/api/community/combos/${combo_id}`)
+}
+
+export function getUserCombos(firebase_uid: string): Promise<CommunityCombo[]> {
+  return apiFetch<CommunityCombo[]>(`/api/community/combos/user/${firebase_uid}`)
+}
+
+export function updateCombo(combo_id: string, update: ComboUpdate, token: string): Promise<CommunityCombo> {
+  return apiFetch<CommunityCombo>(`/api/community/combos/${combo_id}`, {
+    method: 'PUT',
+    body: JSON.stringify(update),
+    token,
+  })
+}
+
+export function deleteCombo(combo_id: string, token: string): Promise<{ message: string }> {
+  return apiFetch<{ message: string }>(`/api/community/combos/${combo_id}`, {
+    method: 'DELETE',
+    token,
+  })
 }
 
 export function publishCombo(

@@ -37,7 +37,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from datetime import datetime, timedelta, timezone
 from bson import ObjectId
 from database import combos_collection
-from pydantic_models.community_models import ComboCreate, ComboResponse
+from pydantic_models.community_models import ComboCreate, ComboResponse, ComboUpdate
 from auth import get_current_user
 
 
@@ -100,12 +100,49 @@ async def vote_combo(combo_id: str, vote_type: str, current_user=Depends(get_cur
     return {"message": f"{vote_type} recorded"}
 
 
+@router.get("/combos/user/{firebase_uid}")
+async def get_user_combos(firebase_uid: str):
+    combos = await combos_collection.find(
+        {"author_firebase_uid": firebase_uid, "expires_at": {"$gt": datetime.now(timezone.utc)}}
+    ).sort("created_at", -1).to_list(50)
+    return [_fmt(c) for c in combos]
+
+
 @router.get("/combos/{combo_id}")
 async def get_combo(combo_id: str):
     combo = await combos_collection.find_one({"_id": ObjectId(combo_id)})
     if not combo:
         raise HTTPException(status_code=404, detail="Combo not found")
     return _fmt(combo)
+
+
+@router.put("/combos/{combo_id}")
+async def update_combo(combo_id: str, update: ComboUpdate, current_user=Depends(get_current_user)):
+    firebase_uid = current_user["uid"]
+    combo = await combos_collection.find_one({"_id": ObjectId(combo_id)})
+    if not combo:
+        raise HTTPException(status_code=404, detail="Combo not found")
+    if combo["author_firebase_uid"] != firebase_uid:
+        raise HTTPException(status_code=403, detail="Not authorized")
+
+    changes = {k: v for k, v in update.model_dump().items() if v is not None}
+    if not changes:
+        return _fmt(combo)
+    await combos_collection.update_one({"_id": ObjectId(combo_id)}, {"$set": changes})
+    updated = await combos_collection.find_one({"_id": ObjectId(combo_id)})
+    return _fmt(updated)
+
+
+@router.delete("/combos/{combo_id}")
+async def delete_combo(combo_id: str, current_user=Depends(get_current_user)):
+    firebase_uid = current_user["uid"]
+    combo = await combos_collection.find_one({"_id": ObjectId(combo_id)})
+    if not combo:
+        raise HTTPException(status_code=404, detail="Combo not found")
+    if combo["author_firebase_uid"] != firebase_uid:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    await combos_collection.delete_one({"_id": ObjectId(combo_id)})
+    return {"message": "Combo deleted"}
 
 
 @router.get("/trends")

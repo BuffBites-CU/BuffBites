@@ -38,6 +38,13 @@ class ComboCreate(BaseModel):
     images: list[str] = []
     notes: Optional[str] = None
 
+class ComboUpdate(BaseModel):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    tags: Optional[list[str]] = None
+    dishes: Optional[list[DishItem]] = None
+    notes: Optional[str] = None
+
 class ComboResponse(BaseModel):
     id: str
     title: str
