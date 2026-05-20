@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "[${{ github.repository }}] New push by ${{ github.actor }}"
-          to: patilrajvardhan27@gmail.com
+          to: patilrajvardhan27@gmail.com,sejalhukare09@gmail.com,ishitapawar19@gmail.com
           from: BuffBites Notifications
           body: |
             New commit pushed to ${{ github.ref_name }}
