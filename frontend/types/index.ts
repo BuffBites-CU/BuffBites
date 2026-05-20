@@ -99,6 +99,7 @@ export interface CommunityCombo extends ComboCreate {
   author_firebase_uid: string
   created_at: string
   expires_at: string
+  has_voted?: boolean
 }
 
 export type VoteType = 'upvote' | 'downvote'

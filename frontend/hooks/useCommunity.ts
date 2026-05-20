@@ -16,17 +16,23 @@ export function useCommunity(mode: 'feed' | 'trends', dining_hall?: DiningHall) 
     setLoading(true)
     setError(null)
 
-    const fetcher = mode === 'feed' ? getCombos(dining_hall) : getTrends(dining_hall)
+    const uid = firebaseUser?.uid
+    const fetcher = mode === 'feed' ? getCombos(dining_hall, uid) : getTrends(dining_hall, uid)
 
     fetcher
-      .then((result) => { if (!cancelled) setCombos(result) })
+      .then((result) => {
+        if (cancelled) return
+        setCombos(result)
+        // Seed voted state from backend so it survives page refresh
+        result.forEach((c) => { if (c.has_voted) votedIds.current.add(c.id) })
+      })
       .catch((e: unknown) => {
         if (!cancelled) setError(e instanceof Error ? e.message : 'Something went wrong')
       })
       .finally(() => { if (!cancelled) setLoading(false) })
 
     return () => { cancelled = true }
-  }, [mode, dining_hall, tick])
+  }, [mode, dining_hall, tick, firebaseUser?.uid])
 
   const refetch = useCallback(() => setTick((n) => n + 1), [])
 
@@ -42,6 +48,7 @@ export function useCommunity(mode: 'feed' | 'trends', dining_hall?: DiningHall) 
                 ...c,
                 upvotes: type === 'upvote' ? c.upvotes + 1 : c.upvotes,
                 downvotes: type === 'downvote' ? c.downvotes + 1 : c.downvotes,
+                has_voted: true,
               }
             : c,
         ),
@@ -52,9 +59,14 @@ export function useCommunity(mode: 'feed' | 'trends', dining_hall?: DiningHall) 
         const token = await firebaseUser.getIdToken()
         await apiVote(combo_id, type, token)
       } catch (e: unknown) {
+        const msg = e instanceof Error ? e.message : ''
+        if (msg.includes('409') || msg.toLowerCase().includes('already voted')) {
+          // Backend confirms already voted — keep optimistic state
+          return
+        }
         setCombos(snapshot)
         votedIds.current.delete(combo_id)
-        setError(e instanceof Error ? e.message : 'Vote failed')
+        setError(msg || 'Vote failed')
       }
     },
     [combos, firebaseUser],

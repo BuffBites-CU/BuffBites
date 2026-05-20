@@ -41,8 +41,12 @@ from pydantic_models.community_models import ComboCreate, ComboResponse
 from auth import get_current_user
 
 
-def _fmt(doc: dict) -> dict:
-    return {"id": str(doc["_id"]), **{k: v for k, v in doc.items() if k != "_id"}}
+def _fmt(doc: dict, firebase_uid: str | None = None) -> dict:
+    voters = doc.get("voters", [])
+    result = {"id": str(doc["_id"]), **{k: v for k, v in doc.items() if k not in ("_id", "voters")}}
+    if firebase_uid is not None:
+        result["has_voted"] = firebase_uid in voters
+    return result
 
 router = APIRouter(prefix="/api/community", tags=["community"])
 
@@ -66,13 +70,13 @@ async def publish_combo(combo: ComboCreate, username: str | None = None, current
 
 
 @router.get("/combos")
-async def get_community_combos(dining_hall: str | None = None):
+async def get_community_combos(dining_hall: str | None = None, firebase_uid: str | None = None):
     query = {"expires_at": {"$gt": datetime.now(timezone.utc)}}
     if dining_hall:
         query["dining_hall"] = dining_hall
 
     combos = await combos_collection.find(query).sort("upvotes", -1).to_list(100)
-    return [_fmt(c) for c in combos]
+    return [_fmt(c, firebase_uid) for c in combos]
 
 
 @router.post("/combos/{combo_id}/vote")
@@ -83,12 +87,16 @@ async def vote_combo(combo_id: str, vote_type: str, current_user=Depends(get_cur
         raise HTTPException(status_code=400, detail="vote_type must be upvote or downvote")
 
     field = "upvotes" if vote_type == "upvote" else "downvotes"
+    # Atomic: only increment if user has not already voted
     result = await combos_collection.update_one(
-        {"_id": ObjectId(combo_id)},
-        {"$inc": {field: 1}}
+        {"_id": ObjectId(combo_id), "voters": {"$ne": firebase_uid}},
+        {"$inc": {field: 1}, "$addToSet": {"voters": firebase_uid}},
     )
     if result.matched_count == 0:
-        raise HTTPException(status_code=404, detail="Combo not found")
+        combo = await combos_collection.find_one({"_id": ObjectId(combo_id)})
+        if not combo:
+            raise HTTPException(status_code=404, detail="Combo not found")
+        raise HTTPException(status_code=409, detail="Already voted")
     return {"message": f"{vote_type} recorded"}
 
 
@@ -101,10 +109,10 @@ async def get_combo(combo_id: str):
 
 
 @router.get("/trends")
-async def get_trends(dining_hall: str | None = None):
+async def get_trends(dining_hall: str | None = None, firebase_uid: str | None = None):
     query = {"expires_at": {"$gt": datetime.now(timezone.utc)}}
     if dining_hall:
         query["dining_hall"] = dining_hall
 
     combos = await combos_collection.find(query).sort("upvotes", -1).to_list(20)
-    return [_fmt(c) for c in combos]
+    return [_fmt(c, firebase_uid) for c in combos]
