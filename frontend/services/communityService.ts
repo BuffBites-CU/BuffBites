@@ -14,25 +14,26 @@ export function getCombo(combo_id: string): Promise<CommunityCombo> {
 
 export function publishCombo(
   combo: ComboCreate,
-  firebase_uid: string,
+  token: string,
   username: string,
 ): Promise<CommunityCombo> {
-  const params = new URLSearchParams({ firebase_uid, username })
+  const params = new URLSearchParams({ username })
   return apiFetch<CommunityCombo>(`/api/community/combos?${params}`, {
     method: 'POST',
     body: JSON.stringify(combo),
+    token,
   })
 }
 
 export function vote(
   combo_id: string,
   vote_type: VoteType,
-  firebase_uid: string,
+  token: string,
 ): Promise<{ message: string }> {
-  const params = new URLSearchParams({ vote_type, firebase_uid })
+  const params = new URLSearchParams({ vote_type })
   return apiFetch<{ message: string }>(
     `/api/community/combos/${combo_id}/vote?${params}`,
-    { method: 'POST', body: JSON.stringify({ vote_type }) },
+    { method: 'POST', token },
   )
 }
 

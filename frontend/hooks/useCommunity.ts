@@ -4,7 +4,7 @@ import type { CommunityCombo, DiningHall, VoteType } from '@/types'
 import { useAuth } from '@/context/AuthContext'
 
 export function useCommunity(mode: 'feed' | 'trends', dining_hall?: DiningHall) {
-  const { firebaseUid } = useAuth()
+  const { firebaseUser } = useAuth()
   const [combos, setCombos] = useState<CommunityCombo[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -32,7 +32,7 @@ export function useCommunity(mode: 'feed' | 'trends', dining_hall?: DiningHall) 
 
   const vote = useCallback(
     async (combo_id: string, type: VoteType) => {
-      if (!firebaseUid || votedIds.current.has(combo_id)) return
+      if (!firebaseUser || votedIds.current.has(combo_id)) return
 
       const snapshot = combos
       setCombos((prev) =>
@@ -49,14 +49,15 @@ export function useCommunity(mode: 'feed' | 'trends', dining_hall?: DiningHall) 
       votedIds.current.add(combo_id)
 
       try {
-        await apiVote(combo_id, type, firebaseUid)
+        const token = await firebaseUser.getIdToken()
+        await apiVote(combo_id, type, token)
       } catch (e: unknown) {
         setCombos(snapshot)
         votedIds.current.delete(combo_id)
         setError(e instanceof Error ? e.message : 'Vote failed')
       }
     },
-    [combos, firebaseUid],
+    [combos, firebaseUser],
   )
 
   return { combos, loading, error, refetch, vote, votedIds: votedIds.current }

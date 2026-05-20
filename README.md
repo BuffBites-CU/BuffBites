@@ -142,7 +142,8 @@ NEXT_PUBLIC_FIREBASE_APP_ID=
 ### 4. Start the backend
 
 ```bash
-uvicorn main:app --reload
+
+
 ```
 
 API available at `http://localhost:8000`. Swagger UI at `http://localhost:8000/docs`.

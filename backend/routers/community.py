@@ -34,18 +34,23 @@ Usage:
 """
 
 from fastapi import APIRouter, HTTPException, Depends
-from datetime import datetime, timedelta, timezone 
+from datetime import datetime, timedelta, timezone
+from bson import ObjectId
 from database import combos_collection
 from pydantic_models.community_models import ComboCreate, ComboResponse
 from auth import get_current_user
+
+
+def _fmt(doc: dict) -> dict:
+    return {"id": str(doc["_id"]), **{k: v for k, v in doc.items() if k != "_id"}}
 
 router = APIRouter(prefix="/api/community", tags=["community"])
 
 
 @router.post("/combos", response_model=ComboResponse)
-async def publish_combo(combo: ComboCreate, current_user=Depends(get_current_user)):
+async def publish_combo(combo: ComboCreate, username: str | None = None, current_user=Depends(get_current_user)):
     firebase_uid = current_user["uid"]
-    username = current_user.get("name", "")
+    username = username or current_user.get("name", "anonymous")
 
     combo_doc = {
         **combo.model_dump(),
@@ -57,7 +62,7 @@ async def publish_combo(combo: ComboCreate, current_user=Depends(get_current_use
         "expires_at": datetime.now(timezone.utc) + timedelta(hours=24)
     }
     result = await combos_collection.insert_one(combo_doc)
-    return {**combo_doc, "id": str(result.inserted_id)}
+    return _fmt(combo_doc)
 
 
 @router.get("/combos")
@@ -67,7 +72,7 @@ async def get_community_combos(dining_hall: str | None = None):
         query["dining_hall"] = dining_hall
 
     combos = await combos_collection.find(query).sort("upvotes", -1).to_list(100)
-    return [{**c, "id": str(c["_id"])} for c in combos]
+    return [_fmt(c) for c in combos]
 
 
 @router.post("/combos/{combo_id}/vote")
@@ -92,7 +97,7 @@ async def get_combo(combo_id: str):
     combo = await combos_collection.find_one({"_id": ObjectId(combo_id)})
     if not combo:
         raise HTTPException(status_code=404, detail="Combo not found")
-    return {**combo, "id": str(combo["_id"])}
+    return _fmt(combo)
 
 
 @router.get("/trends")
@@ -102,4 +107,4 @@ async def get_trends(dining_hall: str | None = None):
         query["dining_hall"] = dining_hall
 
     combos = await combos_collection.find(query).sort("upvotes", -1).to_list(20)
-    return [{**c, "id": str(c["_id"])} for c in combos]
+    return [_fmt(c) for c in combos]

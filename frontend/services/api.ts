@@ -1,11 +1,15 @@
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000'
 
-export async function apiFetch<T>(path: string, options?: RequestInit): Promise<T> {
-  const headers: Record<string, string> = {}
-  if (options?.body) headers['Content-Type'] = 'application/json'
-  Object.assign(headers, options?.headers)
+type ApiFetchOptions = RequestInit & { token?: string }
 
-  const res = await fetch(`${BASE_URL}${path}`, { ...options, headers })
+export async function apiFetch<T>(path: string, options?: ApiFetchOptions): Promise<T> {
+  const { token, ...fetchOptions } = options ?? {}
+  const headers: Record<string, string> = {}
+  if (fetchOptions.body) headers['Content-Type'] = 'application/json'
+  if (token) headers['Authorization'] = `Bearer ${token}`
+  Object.assign(headers, fetchOptions.headers)
+
+  const res = await fetch(`${BASE_URL}${path}`, { ...fetchOptions, headers })
 
   if (!res.ok) {
     let message = `HTTP ${res.status}`

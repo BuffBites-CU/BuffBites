@@ -102,3 +102,18 @@ export interface CommunityCombo extends ComboCreate {
 }
 
 export type VoteType = 'upvote' | 'downvote'
+
+export interface MenuItem {
+  name: string
+  description?: string
+  calories?: number
+  is_vegan?: boolean
+  is_vegetarian?: boolean
+}
+
+export interface MenuResponse {
+  dining_location: string
+  date: string
+  day_of_week: string
+  categories: Record<string, MenuItem[]>
+}

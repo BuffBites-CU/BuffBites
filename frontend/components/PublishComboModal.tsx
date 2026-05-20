@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { XMarkIcon, PlusIcon, PhotoIcon } from './icons'
 import { tagStyle } from './ComboCard'
 import { publishCombo } from '@/services/communityService'
+import { getMenu } from '@/services/combosService'
 import { useAuth } from '@/context/AuthContext'
 import { DINING_HALLS, DINING_HALL_LABELS, type ComboTag, type DiningHall, type DishItem } from '@/types'
 
@@ -29,7 +30,7 @@ interface FormState {
 const EMPTY_DISH: DishItem = { name: '', station: '', servings: 1 }
 
 export default function PublishComboModal({ onClose, onSuccess }: Props) {
-  const { firebaseUid, username } = useAuth()
+  const { firebaseUser, username } = useAuth()
   const [step, setStep] = useState<1 | 2 | 3>(1)
   const [form, setForm] = useState<FormState>({
     dining_hall: '',
@@ -45,18 +46,53 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
   const [step2Error, setStep2Error] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  const [menuByStation, setMenuByStation] = useState<Record<string, string[]>>({})
+  const [menuLoading, setMenuLoading] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  // lock body scroll
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => { document.body.style.overflow = '' }
   }, [])
 
+  useEffect(() => {
+    if (!form.dining_hall || !form.date) {
+      setMenuByStation({})
+      return
+    }
+    setMenuLoading(true)
+    getMenu(form.dining_hall as DiningHall, form.date)
+      .then((data) => {
+        const byStation: Record<string, string[]> = {}
+        for (const [station, items] of Object.entries(data.categories)) {
+          byStation[station] = items.map((it) => it.name)
+        }
+        setMenuByStation(byStation)
+      })
+      .catch(() => setMenuByStation({}))
+      .finally(() => setMenuLoading(false))
+  }, [form.dining_hall, form.date])
+
   function updateDish(index: number, field: keyof DishItem, value: string | number) {
     setForm((f) => ({
       ...f,
       dishes: f.dishes.map((d, i) => i === index ? { ...d, [field]: value } : d),
+    }))
+  }
+
+  function updateDishFromSelect(index: number, name: string) {
+    const station = Object.entries(menuByStation).find(([, names]) => names.includes(name))?.[0] ?? ''
+    setForm((f) => ({
+      ...f,
+      dishes: f.dishes.map((d, i) => i === index ? { ...d, name, station } : d),
+    }))
+  }
+
+  function changeDiningHall(hall: DiningHall | '') {
+    setForm((f) => ({
+      ...f,
+      dining_hall: hall,
+      dishes: [{ ...EMPTY_DISH }, { ...EMPTY_DISH }],
     }))
   }
 
@@ -91,6 +127,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
   }
 
   function validateStep2(): boolean {
+    if (!form.dining_hall) { setStep2Error('Please select a dining hall.'); return false }
     if (!form.title.trim()) { setStep2Error('Give your combo a title.'); return false }
     const validDishes = form.dishes.filter((d) => d.name.trim())
     if (validDishes.length < 1) { setStep2Error('Add at least one dish.'); return false }
@@ -99,10 +136,11 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
   }
 
   async function handlePublish() {
-    if (!firebaseUid || !username || !form.dining_hall) return
+    if (!firebaseUser || !username || !form.dining_hall) return
     setSubmitting(true)
     setSubmitError('')
     try {
+      const token = await firebaseUser.getIdToken()
       await publishCombo(
         {
           title: form.title.trim(),
@@ -114,7 +152,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
           images: [],
           notes: form.notes.trim() || undefined,
         },
-        firebaseUid,
+        token,
         username,
       )
       onSuccess()
@@ -125,6 +163,8 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
       setSubmitting(false)
     }
   }
+
+  const hasMenu = Object.keys(menuByStation).length > 0
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col justify-end">
@@ -166,7 +206,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 </label>
                 <select
                   value={form.dining_hall}
-                  onChange={(e) => setForm((f) => ({ ...f, dining_hall: e.target.value as DiningHall }))}
+                  onChange={(e) => changeDiningHall(e.target.value as DiningHall | '')}
                   className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
                 >
                   <option value="">Select a dining hall…</option>
@@ -194,6 +234,22 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
           {step === 2 && (
             <div className="space-y-4 pt-2">
               <h2 className="text-xl font-bold text-brand-black">What did you make?</h2>
+
+              <div>
+                <label className="text-sm font-medium text-brand-black block mb-1.5">
+                  Dining Hall
+                </label>
+                <select
+                  value={form.dining_hall}
+                  onChange={(e) => changeDiningHall(e.target.value as DiningHall | '')}
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                >
+                  <option value="">Select a dining hall…</option>
+                  {DINING_HALLS.map((h) => (
+                    <option key={h} value={h}>{DINING_HALL_LABELS[h]}</option>
+                  ))}
+                </select>
+              </div>
 
               <div>
                 <div className="flex justify-between mb-1.5">
@@ -245,22 +301,39 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
               </div>
 
               <div>
-                <label className="text-sm font-medium text-brand-black block mb-2">Dishes</label>
+                <div className="flex items-center justify-between mb-2">
+                  <label className="text-sm font-medium text-brand-black">Dishes</label>
+                  {menuLoading && (
+                    <span className="text-xs text-muted">Loading menu…</span>
+                  )}
+                </div>
                 <div className="space-y-2">
                   {form.dishes.map((dish, i) => (
                     <div key={i} className="flex gap-2 items-center">
-                      <input
-                        value={dish.name}
-                        onChange={(e) => updateDish(i, 'name', e.target.value)}
-                        placeholder="Dish name"
-                        className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold"
-                      />
-                      <input
-                        value={dish.station}
-                        onChange={(e) => updateDish(i, 'station', e.target.value)}
-                        placeholder="Station"
-                        className="w-24 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold"
-                      />
+                      {hasMenu ? (
+                        <select
+                          value={dish.name}
+                          onChange={(e) => updateDishFromSelect(i, e.target.value)}
+                          className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black bg-white focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                        >
+                          <option value="">Select a dish…</option>
+                          {Object.entries(menuByStation).map(([station, names]) => (
+                            <optgroup key={station} label={station}>
+                              {names.map((name) => (
+                                <option key={name} value={name}>{name}</option>
+                              ))}
+                            </optgroup>
+                          ))}
+                        </select>
+                      ) : (
+                        <input
+                          value={dish.name}
+                          onChange={(e) => updateDish(i, 'name', e.target.value)}
+                          placeholder={menuLoading ? 'Loading…' : 'Dish name'}
+                          disabled={menuLoading}
+                          className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold disabled:opacity-50"
+                        />
+                      )}
                       <input
                         type="number"
                         min={1}
