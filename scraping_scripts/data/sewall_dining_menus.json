@@ -1,44 +1,9 @@
 {
   "dining_location": "Sewall Dining Center",
   "url": "https://colorado-diningmenus.nutrislice.com/menu/sewall-dining-center/executive-chefs-place",
-  "scrape_start_date": "2026-05-04",
+  "scrape_start_date": "2026-05-11",
   "repeat_info": null,
   "menus": [
-    {
-      "date": "2026-05-03",
-      "day_of_week": "Sunday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-04",
-      "day_of_week": "Monday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-05",
-      "day_of_week": "Tuesday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-06",
-      "day_of_week": "Wednesday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-07",
-      "day_of_week": "Thursday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-08",
-      "day_of_week": "Friday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-09",
-      "day_of_week": "Saturday",
-      "categories": {}
-    },
     {
       "date": "2026-05-10",
       "day_of_week": "Sunday",
@@ -211,6 +176,41 @@
     },
     {
       "date": "2026-06-13",
+      "day_of_week": "Saturday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-14",
+      "day_of_week": "Sunday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-15",
+      "day_of_week": "Monday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-16",
+      "day_of_week": "Tuesday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-17",
+      "day_of_week": "Wednesday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-18",
+      "day_of_week": "Thursday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-19",
+      "day_of_week": "Friday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-20",
       "day_of_week": "Saturday",
       "categories": {}
     }
