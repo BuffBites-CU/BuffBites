@@ -1,44 +1,9 @@
 {
   "dining_location": "Libby Dining",
   "url": "https://colorado-diningmenus.nutrislice.com/menu/libby/libby-opening-august-16th",
-  "scrape_start_date": "2026-05-11",
+  "scrape_start_date": "2026-05-18",
   "repeat_info": null,
   "menus": [
-    {
-      "date": "2026-05-10",
-      "day_of_week": "Sunday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-11",
-      "day_of_week": "Monday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-12",
-      "day_of_week": "Tuesday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-13",
-      "day_of_week": "Wednesday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-14",
-      "day_of_week": "Thursday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-15",
-      "day_of_week": "Friday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-16",
-      "day_of_week": "Saturday",
-      "categories": {}
-    },
     {
       "date": "2026-05-17",
       "day_of_week": "Sunday",
@@ -211,6 +176,41 @@
     },
     {
       "date": "2026-06-20",
+      "day_of_week": "Saturday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-21",
+      "day_of_week": "Sunday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-22",
+      "day_of_week": "Monday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-23",
+      "day_of_week": "Tuesday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-24",
+      "day_of_week": "Wednesday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-25",
+      "day_of_week": "Thursday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-26",
+      "day_of_week": "Friday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-27",
       "day_of_week": "Saturday",
       "categories": {}
     }
