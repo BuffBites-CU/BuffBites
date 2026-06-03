@@ -57,6 +57,8 @@ interface Props {
   ateState?: 'ate' | 'skipped' | null
   onAte?: (calories: number) => void
   onSkip?: () => void
+  shareState?: 'shared' | 'sharing' | null
+  onShare?: () => void
 }
 
 export default function ComboCard({
@@ -75,6 +77,8 @@ export default function ComboCard({
   ateState,
   onAte,
   onSkip,
+  shareState,
+  onShare,
 }: Props) {
   const expiry = expires_at ? formatExpiry(expires_at) : null
   const visibleTags = tags.slice(0, 2)
@@ -206,6 +210,27 @@ export default function ComboCard({
             }`}
           >
             {ateState === 'skipped' ? '✗ Skipped' : 'Skip'}
+          </button>
+        </div>
+      )}
+
+      {onShare !== undefined && (
+        <div className="mt-2.5 pt-2.5 border-t border-gray-100">
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              if (!shareState) onShare()
+            }}
+            disabled={!!shareState}
+            className={`w-full flex items-center justify-center gap-1.5 py-1.5 rounded-xl text-[11px] font-medium transition-colors ${
+              shareState === 'shared'
+                ? 'bg-brand-gold/15 text-brand-gold cursor-default'
+                : shareState === 'sharing'
+                ? 'bg-gray-100 text-muted cursor-default'
+                : 'bg-gray-100 text-muted hover:bg-brand-gold/10 hover:text-brand-gold'
+            }`}
+          >
+            {shareState === 'shared' ? '✓ Posted to community' : shareState === 'sharing' ? 'Posting…' : '↗ Post to community'}
           </button>
         </div>
       )}

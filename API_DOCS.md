@@ -8,14 +8,12 @@
 
 ## Overview
 
-BuffBites exposes a single data endpoint that:
+BuffBites has four groups of endpoints:
 
-1. Loads the pre-scraped menu JSON for the requested dining hall and date
-2. Classifies every station by keyword into `breakfast`, `lunch`, `dinner`, `dessert`, or `excluded` — utility stations (Condiments, Salad Dressings, Beverage, Sides, Bread, etc.) are excluded entirely before anything reaches Claude
-3. Sends classified item pools to `claude-haiku-4-5` — each meal period receives only its relevant items. The 3rd Dinner combo is always a dessert specialty (ice cream + cookie/fruit/brownie); falls back to a plant-based combo if no dessert items exist
-4. Validates the AI response with Pydantic v2 models — structure, combo count, and dish count (2–6) enforced
-5. Cross-checks every dish against the scraped menu — hallucinated dishes and station mismatches are logged as warnings to stderr
-6. Returns a structured `ComboResponse` with 9 combos split across 3 meal periods
+1. **Combos** (`/api/combos/`) — AI-generated meal combos. Loads pre-scraped menu JSON, classifies stations, calls `claude-haiku-4-5` with structured output, validates with Pydantic v2, cross-checks dishes against the scraped menu, and returns 9 combos (3 per meal period).
+2. **Users** (`/api/users/`) — User profiles stored in MongoDB. Includes dietary preferences, calorie goal per meal, and a running meal log populated when users mark AI combos as eaten.
+3. **Community** (`/api/community/`) — User-submitted combos with 24-hour expiry, upvote/downvote voting, and a trends leaderboard. Firebase auth required to publish, edit, delete, or vote.
+4. **Drafts** (`/api/drafts/`) — Private drafts that live permanently under a user's profile until deleted or published to the community feed.
 
 ---
 
@@ -345,13 +343,15 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
 
 ### Users
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/users/` | Create a new user profile after Firebase sign-in |
-| GET | `/api/users/{firebase_uid}` | Get a user's profile |
-| PUT | `/api/users/{firebase_uid}` | Update user profile fields |
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| POST | `/api/users/` | No | Create a new user profile after Firebase sign-in |
+| GET | `/api/users/check-username/{username}` | No | Check if a username is available |
+| GET | `/api/users/{firebase_uid}` | No | Get a user's full profile including meal log |
+| PUT | `/api/users/{firebase_uid}` | No | Update any profile fields (partial update via `$set`) |
+| POST | `/api/users/{firebase_uid}/meal-log` | No | Append an eaten meal entry to the user's log |
 
-**Example POST /api/users/ request body:**
+**`POST /api/users/` request body:**
 ```json
 {
   "firebase_uid": "abc123",
@@ -359,23 +359,73 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
   "username": "buffraj",
   "dietary_preferences": ["vegan", "halal"],
   "restrictions": ["gluten-free"],
-  "avatar": "avatar_3"
+  "avatar": "avatar_3",
+  "preferred_calories_per_meal": 700
 }
 ```
+
+**`GET /api/users/check-username/{username}` response:**
+```json
+{ "available": true }
+```
+
+**`GET /api/users/{firebase_uid}` response:**
+```json
+{
+  "firebase_uid": "abc123",
+  "email": "raj@colorado.edu",
+  "username": "buffraj",
+  "dietary_preferences": ["vegan"],
+  "restrictions": [],
+  "avatar": "avatar_3",
+  "karma": 42,
+  "created_at": "2026-01-15T10:00:00Z",
+  "preferred_calories_per_meal": 700,
+  "meal_log": [
+    {
+      "title": "The Flatiron",
+      "calories": 680,
+      "date": "2026-06-03",
+      "dining_hall": "c4c",
+      "meal_period": "Lunch",
+      "logged_at": "2026-06-03T13:22:00Z"
+    }
+  ]
+}
+```
+
+**`POST /api/users/{firebase_uid}/meal-log` request body:**
+```json
+{
+  "title": "The Flatiron",
+  "calories": 680,
+  "date": "2026-06-03",
+  "dining_hall": "c4c",
+  "meal_period": "Lunch"
+}
+```
+
+**Notes:**
+- `preferred_calories_per_meal` is optional; used on the profile page to track daily calorie intake against a per-meal goal
+- `meal_log` grows unbounded — entries are appended via MongoDB `$push`
+- Username must be 3–20 characters; checked for uniqueness on create and update
 
 ---
 
 ### Community
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/community/combos` | Publish a combo to the community feed |
-| GET | `/api/community/combos` | Get all active combos (sorted by upvotes) |
-| GET | `/api/community/combos/{combo_id}` | Get a single combo by ID |
-| POST | `/api/community/combos/{combo_id}/vote` | Upvote or downvote a combo |
-| GET | `/api/community/trends` | Get top 20 trending combos for today |
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| POST | `/api/community/combos` | Yes | Publish a combo to the community feed |
+| GET | `/api/community/combos` | No | Get all active combos sorted by upvotes |
+| GET | `/api/community/combos/user/{firebase_uid}` | No | Get a specific user's active combos |
+| GET | `/api/community/combos/{combo_id}` | No | Get a single combo by ID |
+| PUT | `/api/community/combos/{combo_id}` | Yes (owner) | Edit title, description, tags, dishes, or notes |
+| DELETE | `/api/community/combos/{combo_id}` | Yes (owner) | Delete a combo |
+| POST | `/api/community/combos/{combo_id}/vote` | Yes | Upvote or downvote — one vote per user, no undo |
+| GET | `/api/community/trends` | No | Top 20 combos by upvotes for the current day |
 
-**Example POST /api/community/combos request body:**
+**`POST /api/community/combos` request body** (query param: `?username=buffraj`):
 ```json
 {
   "title": "The Midnight Special",
@@ -392,19 +442,31 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
 }
 ```
 
-**Example POST /api/community/combos/{combo_id}/vote request body:**
+**`GET /api/community/combos` query params:**
+
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `dining_hall` | No | Filter by dining hall key |
+| `firebase_uid` | No | If provided, each combo includes `has_voted: bool` for that user |
+
+**`PUT /api/community/combos/{combo_id}` request body** (all fields optional):
 ```json
 {
-  "vote_type": "upvote"
+  "title": "Updated Title",
+  "description": "New description",
+  "tags": ["vegan"],
+  "dishes": [{ "name": "Salad", "station": "Salad Bar", "servings": 1 }],
+  "notes": "Updated notes"
 }
 ```
 
+**`POST /api/community/combos/{combo_id}/vote` query param:** `?vote_type=upvote` or `?vote_type=downvote`
+
 **Notes:**
-- Published combos automatically expire after 24 hours
-- Expired combos are archived under the author's profile
-- Cannot republish an expired combo
-- Trends page resets daily as combos expire
-- No date filter on community or trends pages — hardcoded to today
+- Published combos expire after 24 hours — they appear in community and trends until then
+- One vote per user per combo; re-voting returns `409 Already voted`
+- Only the author can edit or delete their combo (`403` otherwise)
+- `username` query param on publish falls back to the Firebase display name if omitted
 
 ---
 
@@ -412,13 +474,13 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
 
 ### Drafts
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/drafts/` | Save a new draft |
-| GET | `/api/drafts/{firebase_uid}` | Get all drafts for a user |
-| PUT | `/api/drafts/{draft_id}` | Update an existing draft |
-| DELETE | `/api/drafts/{draft_id}` | Delete a draft |
-| POST | `/api/drafts/{draft_id}/publish` | Publish a draft to community feed |
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| POST | `/api/drafts/` | Yes | Save a new draft |
+| GET | `/api/drafts/{firebase_uid}` | Yes (owner) | Get all drafts for a user |
+| PUT | `/api/drafts/{draft_id}` | Yes (owner) | Update an existing draft |
+| DELETE | `/api/drafts/{draft_id}` | Yes (owner) | Delete a draft |
+| POST | `/api/drafts/{draft_id}/publish` | Yes (owner) | Publish draft → creates community combo, deletes draft |
 
 **Notes:**
 - Drafts never expire — they live under the user's profile permanently until deleted or published

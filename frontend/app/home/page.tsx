@@ -11,6 +11,7 @@ import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
 import { ArrowPathIcon } from '@/components/icons'
 import { logMeal } from '@/services/usersService'
+import { publishCombo } from '@/services/communityService'
 import type { Combo, DiningHall, MealPeriod } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
@@ -34,7 +35,7 @@ function buildDateOptions() {
 
 export default function HomePage() {
   const router = useRouter()
-  const { firebaseUser, firebaseUid, loading: authLoading } = useAuth()
+  const { firebaseUser, firebaseUid, username, loading: authLoading } = useAuth()
   const { showToast } = useToast()
 
   const [selectedDining, setSelectedDining] = useState<DiningHall>('c4c')
@@ -42,6 +43,7 @@ export default function HomePage() {
   const [activeCombo, setActiveCombo] = useState<Combo | null>(null)
   const [showDatePicker, setShowDatePicker] = useState(false)
   const [ateStates, setAteStates] = useState<Record<string, 'ate' | 'skipped'>>({})
+  const [shareStates, setShareStates] = useState<Record<string, 'sharing' | 'shared'>>({})
 
   const dateOptions = useMemo(buildDateOptions, [])
   const [selectedDate, setSelectedDate] = useState(dateOptions[0].iso)
@@ -85,6 +87,33 @@ export default function HomePage() {
   function handleSkip(combo: Combo, index: number) {
     const key = ateKey(combo, index)
     setAteStates((prev) => ({ ...prev, [key]: 'skipped' }))
+  }
+
+  async function handleShare(combo: Combo, index: number) {
+    if (!firebaseUser || !username) return
+    const key = ateKey(combo, index)
+    setShareStates((prev) => ({ ...prev, [key]: 'sharing' }))
+    try {
+      const token = await firebaseUser.getIdToken()
+      await publishCombo(
+        {
+          title: combo.title,
+          dining_hall: selectedDining,
+          date: selectedDate,
+          dishes: combo.dishes.map((d) => ({ name: d.name, station: d.station, servings: 1 })),
+          tags: combo.tags,
+          description: combo.description,
+          images: [],
+        },
+        token,
+        username,
+      )
+      setShareStates((prev) => ({ ...prev, [key]: 'shared' }))
+      showToast('Posted to community!', 'success')
+    } catch {
+      setShareStates((prev) => { const n = { ...prev }; delete n[key]; return n })
+      showToast('Failed to post', 'error')
+    }
   }
 
   if (!authLoading && !firebaseUser) {
@@ -219,6 +248,8 @@ export default function HomePage() {
                     ateState={ateStates[ateKey(combo, i)] ?? null}
                     onAte={(cal) => handleAte(combo, i)}
                     onSkip={() => handleSkip(combo, i)}
+                    shareState={shareStates[ateKey(combo, i)] ?? null}
+                    onShare={() => handleShare(combo, i)}
                   />
                 </div>
               ))}

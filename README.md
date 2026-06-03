@@ -37,7 +37,9 @@ Buff_Bites/
 │   │   └── drafts.py                  # Draft save / edit / publish flow
 │   ├── pydantic_models/
 │   │   ├── __init__.py
-│   │   └── combo_models.py            # Pydantic models + dish verification
+│   │   ├── combo_models.py            # Pydantic models + dish verification
+│   │   ├── community_models.py        # ComboCreate, ComboResponse, ComboUpdate
+│   │   └── user_models.py             # UserCreate, UserResponse, MealLogEntry
 │   └── tests/
 │       ├── test_combo_models.py       # Unit tests — Combo validator + verify_combos
 │       └── test_station_classifier.py # Unit tests — _classify_station + _is_component_item
@@ -142,8 +144,9 @@ NEXT_PUBLIC_FIREBASE_APP_ID=
 ### 4. Start the backend
 
 ```bash
-
-
+cd backend
+source venv/bin/activate
+uvicorn main:app --reload
 ```
 
 API available at `http://localhost:8000`. Swagger UI at `http://localhost:8000/docs`.
@@ -214,11 +217,16 @@ Every request prints a structured JSON line to stdout:
 | `GET` | `/api/combos/generate` | Generate 9 AI meal combos |
 | `GET` | `/api/menu` | Raw classified menu (no Claude call) |
 | `POST` | `/api/users/` | Create user profile |
-| `GET` | `/api/users/{firebase_uid}` | Get user profile |
-| `PUT` | `/api/users/{firebase_uid}` | Update user profile |
+| `GET` | `/api/users/check-username/{username}` | Check username availability |
+| `GET` | `/api/users/{firebase_uid}` | Get user profile (includes meal log) |
+| `PUT` | `/api/users/{firebase_uid}` | Update user profile fields |
+| `POST` | `/api/users/{firebase_uid}/meal-log` | Append an eaten meal to the user's log |
 | `GET` | `/api/community/combos` | Browse active community combos |
+| `GET` | `/api/community/combos/user/{firebase_uid}` | Get a user's published combos |
 | `GET` | `/api/community/combos/{id}` | Get single community combo |
 | `POST` | `/api/community/combos` | Publish a combo to the community feed |
+| `PUT` | `/api/community/combos/{id}` | Edit an existing combo (owner only) |
+| `DELETE` | `/api/community/combos/{id}` | Delete a combo (owner only) |
 | `POST` | `/api/community/combos/{id}/vote` | Upvote or downvote a combo |
 | `GET` | `/api/community/trends` | Top 20 combos by upvotes today |
 | `POST` | `/api/drafts/` | Save a new draft |
