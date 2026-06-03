@@ -18,8 +18,8 @@ export default function DiningSelector({ selected, onChange }: Props) {
             onClick={() => onChange(hall)}
             className={`flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
               active
-                ? 'bg-brand-gold text-brand-black'
-                : 'bg-gray-100 text-muted hover:bg-gray-200'
+                ? 'border border-brand-gold text-brand-gold bg-white'
+                : 'border border-transparent bg-gray-100 text-muted hover:bg-gray-200'
             }`}
           >
             {DINING_HALL_LABELS[hall]}

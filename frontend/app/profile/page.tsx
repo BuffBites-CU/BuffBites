@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
@@ -25,6 +26,13 @@ function formatExpiry(iso: string) {
   const h = Math.floor(ms / 3_600_000)
   const m = Math.floor((ms % 3_600_000) / 60_000)
   return { text: h > 0 ? `${h}h ${m}m left` : `${m}m left`, urgent: h < 1 }
+}
+
+function karmaLabel(karma: number): string {
+  if (karma >= 200) return 'top contributor'
+  if (karma >= 50) return 'rising star'
+  if (karma >= 10) return 'regular'
+  return 'getting started'
 }
 
 export default function ProfilePage() {
@@ -141,7 +149,7 @@ export default function ProfilePage() {
       <div className="max-w-md mx-auto px-4 pt-12 space-y-6">
         {/* Avatar */}
         <div className="flex flex-col items-center gap-3">
-          <div className="relative w-20 h-20 rounded-full overflow-hidden bg-gray-200 shadow">
+          <div className="relative w-20 h-20 rounded-full overflow-hidden bg-gray-200 shadow ring-2 ring-brand-gold/40 group">
             {firebaseUser?.photoURL ? (
               <Image src={firebaseUser.photoURL} alt="Profile photo" fill className="object-cover" />
             ) : (
@@ -151,6 +159,13 @@ export default function ProfilePage() {
                 </span>
               </div>
             )}
+            {/* Camera overlay hint */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
+                <circle cx="12" cy="13" r="4" />
+              </svg>
+            </div>
           </div>
 
           {!editMode && (
@@ -159,6 +174,8 @@ export default function ProfilePage() {
               <div className="flex items-center justify-center gap-1.5 mt-1.5">
                 <StarIcon width={14} height={14} className="text-brand-gold fill-brand-gold" />
                 <span className="text-sm font-medium text-brand-gold">{profile.karma} karma</span>
+                <span className="text-muted text-xs">·</span>
+                <span className="text-xs text-muted">{karmaLabel(profile.karma)}</span>
               </div>
             </div>
           )}
@@ -280,8 +297,14 @@ export default function ProfilePage() {
           )}
 
           {!combosLoading && myCombos.length === 0 && (
-            <div className="bg-white rounded-xl border border-gray-100 px-5 py-8 text-center">
-              <p className="text-sm text-muted">No active combos. Share one from the Community tab!</p>
+            <div className="bg-white rounded-xl border border-gray-100 px-5 py-8 text-center space-y-3">
+              <p className="text-sm text-muted">You haven&apos;t shared any combos yet.</p>
+              <Link
+                href="/community"
+                className="inline-block px-4 py-2 rounded-xl bg-brand-gold text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity"
+              >
+                Share your first combo →
+              </Link>
             </div>
           )}
 
@@ -290,13 +313,15 @@ export default function ProfilePage() {
               {myCombos.map((combo) => {
                 const expiry = formatExpiry(combo.expires_at)
                 return (
-                  <div key={combo.id} className="bg-white rounded-xl border border-gray-100 p-4">
-                    <div className="flex items-start justify-between gap-3">
+                  <div key={combo.id} className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                    <div className="flex">
+                      <div className="w-1 bg-brand-gold flex-shrink-0" />
+                      <div className="flex items-start justify-between gap-3 flex-1 p-4">
                       <div className="min-w-0 flex-1">
                         <p className="font-semibold text-sm text-brand-black line-clamp-1">{combo.title}</p>
-                        <div className="flex items-center gap-3 mt-1">
+                        <div className="flex items-center gap-3 mt-1 flex-wrap">
                           <span className="text-xs text-muted">
-                            {DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall}
+                            {combo.dishes.length} dishes · {DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall}
                           </span>
                           <span className="flex items-center gap-0.5 text-xs text-brand-gold font-medium">
                             <ChevronUpIcon width={12} height={12} />
@@ -346,6 +371,7 @@ export default function ProfilePage() {
                           </>
                         )}
                       </div>
+                    </div>
                     </div>
                   </div>
                 )

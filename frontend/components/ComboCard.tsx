@@ -52,6 +52,7 @@ interface Props {
   onUpvote?: () => void
   expires_at?: string
   rank?: number
+  author?: string
   onClick: () => void
 }
 
@@ -66,6 +67,7 @@ export default function ComboCard({
   onUpvote,
   expires_at,
   rank,
+  author,
   onClick,
 }: Props) {
   const expiry = expires_at ? formatExpiry(expires_at) : null
@@ -87,6 +89,17 @@ export default function ComboCard({
           {title}
         </h3>
       </div>
+
+      {author && (
+        <div className="flex items-center gap-1.5 mb-2">
+          <div className="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
+            <span className="text-[9px] font-bold text-brand-gold leading-none">
+              {author[0].toUpperCase()}
+            </span>
+          </div>
+          <span className="text-[11px] text-muted">@{author}</span>
+        </div>
+      )}
 
       <p className="text-sm text-muted line-clamp-2 mb-3 leading-relaxed">{description}</p>
 

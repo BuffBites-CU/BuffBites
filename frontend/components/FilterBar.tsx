@@ -42,15 +42,16 @@ function handleAllClick(props: Props) {
   else props.onChangeMulti([])
 }
 
+const PILL_ACTIVE = 'border border-brand-gold text-brand-gold bg-white'
+const PILL_INACTIVE = 'border border-transparent bg-gray-100 text-muted hover:bg-gray-200'
+
 export default function FilterBar(props: Props) {
   return (
     <div className="flex gap-2 overflow-x-auto scrollbar-hide px-4 py-2">
       <button
         onClick={() => handleAllClick(props)}
         className={`flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
-          isAllActive(props)
-            ? 'bg-brand-gold text-brand-black'
-            : 'bg-gray-100 text-muted hover:bg-gray-200'
+          isAllActive(props) ? PILL_ACTIVE : PILL_INACTIVE
         }`}
       >
         All
@@ -60,9 +61,7 @@ export default function FilterBar(props: Props) {
           key={hall}
           onClick={() => handleClick(props, hall)}
           className={`flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
-            isActive(props, hall)
-              ? 'bg-brand-gold text-brand-black'
-              : 'bg-gray-100 text-muted hover:bg-gray-200'
+            isActive(props, hall) ? PILL_ACTIVE : PILL_INACTIVE
           }`}
         >
           {DINING_HALL_LABELS[hall]}

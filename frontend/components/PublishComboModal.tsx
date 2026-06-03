@@ -26,7 +26,13 @@ interface FormState {
   notes: string
 }
 
+type FieldErrors = Partial<Record<'dining_hall' | 'date' | 'title' | 'dishes', string>>
+
 const EMPTY_DISH: DishItem = { name: '', station: '', servings: 1 }
+
+function haptic() {
+  if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10)
+}
 
 export default function PublishComboModal({ onClose, onSuccess }: Props) {
   const { firebaseUser, username } = useAuth()
@@ -40,8 +46,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
     dishes: [{ ...EMPTY_DISH }, { ...EMPTY_DISH }],
     notes: '',
   })
-  const [step1Error, setStep1Error] = useState('')
-  const [step2Error, setStep2Error] = useState('')
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({})
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
   const [menuByStation, setMenuByStation] = useState<Record<string, string[]>>({})
@@ -91,6 +96,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
       dining_hall: hall,
       dishes: [{ ...EMPTY_DISH }, { ...EMPTY_DISH }],
     }))
+    if (hall) setFieldErrors((e) => ({ ...e, dining_hall: undefined }))
   }
 
   function addDish() {
@@ -111,24 +117,26 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
   }
 
   function validateStep1(): boolean {
-    if (!form.dining_hall) { setStep1Error('Please select a dining hall.'); return false }
-    if (!form.date) { setStep1Error('Please select a date.'); return false }
-    setStep1Error('')
-    return true
+    const errors: FieldErrors = {}
+    if (!form.dining_hall) errors.dining_hall = 'Please select a dining hall.'
+    if (!form.date) errors.date = 'Please select a date.'
+    setFieldErrors(errors)
+    return Object.keys(errors).length === 0
   }
 
   function validateStep2(): boolean {
-    if (!form.dining_hall) { setStep2Error('Please select a dining hall.'); return false }
-    if (!form.title.trim()) { setStep2Error('Give your combo a title.'); return false }
+    const errors: FieldErrors = {}
+    if (!form.title.trim()) errors.title = 'Give your combo a title.'
     const validDishes = form.dishes.filter((d) => d.name.trim())
-    if (validDishes.length < 1) { setStep2Error('Add at least one dish.'); return false }
-    setStep2Error('')
-    return true
+    if (validDishes.length < 1) errors.dishes = 'Add at least one dish.'
+    setFieldErrors(errors)
+    return Object.keys(errors).length === 0
   }
 
   async function handlePublish() {
     if (!firebaseUser || !username || !form.dining_hall) return
     if (!validateStep2()) return
+    haptic()
     setSubmitting(true)
     setSubmitError('')
     try {
@@ -162,21 +170,21 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
     <div className="fixed inset-0 z-50 flex flex-col justify-end">
       <div className="absolute inset-0 bg-black/50" onMouseDown={onClose} />
 
-      <div className="relative bg-white rounded-t-2xl max-h-[92vh] flex flex-col">
+      <div className="relative bg-white rounded-t-3xl max-h-[92vh] flex flex-col">
         <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
           <div className="w-10 h-1 rounded-full bg-gray-200" />
         </div>
 
+        {/* Step progress */}
         <div className="flex items-center justify-between px-5 py-2 flex-shrink-0">
-          <div className="flex gap-1.5">
-            {([1, 2] as const).map((s) => (
-              <div
-                key={s}
-                className={`h-2 rounded-full transition-all duration-200 ${
-                  s <= step ? 'w-5 bg-brand-gold' : 'w-2 bg-gray-200'
-                }`}
-              />
-            ))}
+          <div className="flex items-center gap-2 text-xs">
+            <span className={step >= 1 ? 'text-brand-gold font-semibold' : 'text-muted'}>
+              ① Hall &amp; Date
+            </span>
+            <span className="text-gray-300">→</span>
+            <span className={step >= 2 ? 'text-brand-gold font-semibold' : 'text-muted'}>
+              ② Combo Details
+            </span>
           </div>
           <button
             onClick={onClose}
@@ -199,13 +207,18 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 <select
                   value={form.dining_hall}
                   onChange={(e) => changeDiningHall(e.target.value as DiningHall | '')}
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                  className={`w-full rounded-xl border px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold ${
+                    fieldErrors.dining_hall ? 'border-red-300' : 'border-gray-200'
+                  }`}
                 >
                   <option value="">Select a dining hall…</option>
                   {DINING_HALLS.map((h) => (
                     <option key={h} value={h}>{DINING_HALL_LABELS[h]}</option>
                   ))}
                 </select>
+                {fieldErrors.dining_hall && (
+                  <p className="text-xs text-red-500 mt-1">{fieldErrors.dining_hall}</p>
+                )}
               </div>
 
               <div>
@@ -214,12 +227,18 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   type="date"
                   max={TODAY}
                   value={form.date}
-                  onChange={(e) => setForm((f) => ({ ...f, date: e.target.value }))}
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                  onChange={(e) => {
+                    setForm((f) => ({ ...f, date: e.target.value }))
+                    setFieldErrors((err) => ({ ...err, date: undefined }))
+                  }}
+                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold ${
+                    fieldErrors.date ? 'border-red-300' : 'border-gray-200'
+                  }`}
                 />
+                {fieldErrors.date && (
+                  <p className="text-xs text-red-500 mt-1">{fieldErrors.date}</p>
+                )}
               </div>
-
-              {step1Error && <p className="text-sm text-red-500">{step1Error}</p>}
             </div>
           )}
 
@@ -251,10 +270,18 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 <input
                   maxLength={60}
                   value={form.title}
-                  onChange={(e) => setForm((f) => ({ ...f, title: e.target.value }))}
+                  onChange={(e) => {
+                    setForm((f) => ({ ...f, title: e.target.value }))
+                    setFieldErrors((err) => ({ ...err, title: undefined }))
+                  }}
                   placeholder="e.g. The Midnight Special"
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold ${
+                    fieldErrors.title ? 'border-red-300' : 'border-gray-200'
+                  }`}
                 />
+                {fieldErrors.title && (
+                  <p className="text-xs text-red-500 mt-1">{fieldErrors.title}</p>
+                )}
               </div>
 
               <div>
@@ -281,9 +308,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                       type="button"
                       onClick={() => toggleTag(tag)}
                       className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${
-                        form.tags.includes(tag)
-                          ? tagStyle(tag)
-                          : 'bg-gray-100 text-muted'
+                        form.tags.includes(tag) ? tagStyle(tag) : 'bg-gray-100 text-muted'
                       }`}
                     >
                       {tag}
@@ -295,9 +320,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <label className="text-sm font-medium text-brand-black">Dishes</label>
-                  {menuLoading && (
-                    <span className="text-xs text-muted">Loading menu…</span>
-                  )}
+                  {menuLoading && <span className="text-xs text-muted">Loading menu…</span>}
                 </div>
                 <div className="space-y-2">
                   {form.dishes.map((dish, i) => (
@@ -306,7 +329,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                         <select
                           value={dish.name}
                           onChange={(e) => updateDishFromSelect(i, e.target.value)}
-                          className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black bg-white focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                          className="flex-1 rounded-xl border border-gray-200 px-3 py-2 text-sm text-brand-black bg-white focus:outline-none focus:ring-2 focus:ring-brand-gold"
                         >
                           <option value="">Select a dish…</option>
                           {Object.entries(menuByStation).map(([station, names]) => (
@@ -323,7 +346,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                           onChange={(e) => updateDish(i, 'name', e.target.value)}
                           placeholder={menuLoading ? 'Loading…' : 'Dish name'}
                           disabled={menuLoading}
-                          className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold disabled:opacity-50"
+                          className="flex-1 rounded-xl border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold disabled:opacity-50"
                         />
                       )}
                       <input
@@ -332,7 +355,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                         max={5}
                         value={dish.servings}
                         onChange={(e) => updateDish(i, 'servings', Number(e.target.value))}
-                        className="w-12 rounded-lg border border-gray-200 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                        className="w-12 rounded-xl border border-gray-200 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
                       />
                       <button
                         onClick={() => removeDish(i)}
@@ -345,6 +368,9 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                     </div>
                   ))}
                 </div>
+                {fieldErrors.dishes && (
+                  <p className="text-xs text-red-500 mt-1">{fieldErrors.dishes}</p>
+                )}
                 {form.dishes.length < 8 && (
                   <button
                     onClick={addDish}
@@ -371,12 +397,10 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 />
               </div>
 
-              {step2Error && <p className="text-sm text-red-500">{step2Error}</p>}
+              {submitError && (
+                <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">{submitError}</p>
+              )}
             </div>
-          )}
-
-          {step === 2 && submitError && (
-            <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3 mt-2">{submitError}</p>
           )}
         </div>
 
@@ -391,10 +415,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
           )}
           {step < 2 ? (
             <button
-              onClick={() => {
-                if (!validateStep1()) return
-                setStep(2)
-              }}
+              onClick={() => { if (validateStep1()) setStep(2) }}
               className="flex-1 py-3 rounded-xl bg-brand-gold text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Next →

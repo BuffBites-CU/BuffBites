@@ -92,6 +92,7 @@ export default function CommunityPage() {
                 hasVoted={combo.has_voted}
                 onUpvote={() => vote(combo.id, 'upvote')}
                 expires_at={combo.expires_at}
+                author={combo.author_username}
                 onClick={() => setActiveCombo(combo)}
               />
             ))}

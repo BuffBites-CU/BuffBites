@@ -110,6 +110,13 @@ export default function OnboardingPage() {
           />
         </div>
 
+        {step === 1 && (
+          <div className="bg-brand-gold/10 rounded-2xl px-5 py-4 mb-6 text-center">
+            <p className="text-lg font-bold text-brand-black">Welcome to Buff Bites 🏔</p>
+            <p className="text-sm text-muted mt-0.5">Let&apos;s set up your profile in 2 quick steps.</p>
+          </div>
+        )}
+
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-7 space-y-6">
           {step === 1 && (
             <>

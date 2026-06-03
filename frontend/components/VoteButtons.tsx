@@ -27,6 +27,7 @@ export default function VoteButtons({ upvotes, downvotes, hasVoted, onVote }: Pr
 
   async function handleVote(type: VoteType) {
     if (hasVoted || pending) return
+    if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10)
     setPending(type)
     try {
       await onVote(type)

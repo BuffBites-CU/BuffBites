@@ -23,6 +23,13 @@
 }
 .animate-page-in { animation: page-in 0.22s ease-out forwards; }
 
+/* Keyboard focus ring — only shows for keyboard nav, not mouse (§10.5) */
+@layer base {
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand-gold ring-offset-1;
+  }
+}
+
 /* Skeleton shimmer */
 @keyframes shimmer {
   0%   { background-position: -200% 0; }

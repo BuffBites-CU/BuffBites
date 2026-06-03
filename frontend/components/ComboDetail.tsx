@@ -63,6 +63,8 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
   const [detail, setDetail] = useState<CommunityCombo | null>(null)
   const [detailLoading, setDetailLoading] = useState(false)
   const sheetRef = useRef<HTMLDivElement>(null)
+  const onCloseRef = useRef(onClose)
+  onCloseRef.current = onClose
 
   useEffect(() => {
     if (!combo) return
@@ -80,9 +82,31 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
       .finally(() => setDetailLoading(false))
   }, [combo, type])
 
+  // Push a hash so the browser back button closes the sheet
+  useEffect(() => {
+    if (!combo) return
+    window.history.pushState(null, '', '#detail')
+
+    function onPopState() {
+      setVisible(false)
+      setTimeout(() => onCloseRef.current(), 280)
+    }
+    window.addEventListener('popstate', onPopState)
+    return () => {
+      window.removeEventListener('popstate', onPopState)
+      if (window.location.hash === '#detail') {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search)
+      }
+    }
+  }, [combo])
+
   function handleClose() {
-    setVisible(false)
-    setTimeout(onClose, 280)
+    if (window.location.hash === '#detail') {
+      window.history.back()
+    } else {
+      setVisible(false)
+      setTimeout(onClose, 280)
+    }
   }
 
   if (!combo) return null
@@ -100,7 +124,7 @@ export default function ComboDetail({ combo, type, hasVoted = false, onVote, onC
 
       <div
         ref={sheetRef}
-        className={`relative bg-white rounded-t-2xl max-h-[88vh] flex flex-col transition-transform duration-300 ease-out ${visible ? 'translate-y-0' : 'translate-y-full'}`}
+        className={`relative bg-white rounded-t-3xl max-h-[88vh] flex flex-col transition-transform duration-300 ease-out ${visible ? 'translate-y-0' : 'translate-y-full'}`}
       >
         <div className="flex-shrink-0 flex justify-center pt-3 pb-1">
           <div className="w-10 h-1 rounded-full bg-gray-200" />

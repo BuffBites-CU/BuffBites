@@ -30,22 +30,24 @@ export default function NavBar() {
             <Link
               key={href}
               href={href}
-              className="flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors"
+              className="flex-1 flex items-center justify-center transition-colors"
               aria-label={label}
               aria-current={active ? 'page' : undefined}
             >
-              <Icon
-                className={active ? 'text-brand-gold' : 'text-muted'}
-                width={22}
-                height={22}
-              />
-              <span
-                className={`text-[10px] font-medium tracking-wide ${
+              <div className={`flex flex-col items-center gap-0.5 px-4 py-1.5 rounded-xl transition-all ${
+                active ? 'bg-brand-gold/15' : ''
+              }`}>
+                <Icon
+                  className={active ? 'text-brand-gold' : 'text-muted'}
+                  width={22}
+                  height={22}
+                />
+                <span className={`text-[10px] font-medium tracking-wide ${
                   active ? 'text-brand-gold' : 'text-muted'
-                }`}
-              >
-                {label}
-              </span>
+                }`}>
+                  {label}
+                </span>
+              </div>
             </Link>
           )
         })}
