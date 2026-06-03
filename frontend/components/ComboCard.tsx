@@ -59,6 +59,10 @@ interface Props {
   onSkip?: () => void
   shareState?: 'shared' | 'sharing' | null
   onShare?: () => void
+  isFavorited?: boolean
+  onFavorite?: () => void
+  allergyWarning?: string   // e.g. "Contains: gluten, dairy"
+  ateBeforeHint?: boolean   // show "you had this before" hint
 }
 
 export default function ComboCard({
@@ -79,6 +83,10 @@ export default function ComboCard({
   onSkip,
   shareState,
   onShare,
+  isFavorited,
+  onFavorite,
+  allergyWarning,
+  ateBeforeHint,
 }: Props) {
   const expiry = expires_at ? formatExpiry(expires_at) : null
   const visibleTags = tags.slice(0, 2)
@@ -95,10 +103,40 @@ export default function ComboCard({
             {rank}
           </span>
         )}
-        <h3 className="font-display font-semibold text-brand-black text-[14px] leading-snug line-clamp-1">
+        <h3 className="font-display font-semibold text-brand-black text-[14px] leading-snug line-clamp-1 flex-1">
           {title}
         </h3>
+        {onFavorite !== undefined && (
+          <button
+            onClick={(e) => { e.stopPropagation(); onFavorite() }}
+            aria-label={isFavorited ? 'Unfavorite' : 'Favorite'}
+            className={`flex-shrink-0 p-1 rounded-full transition-all active:scale-90 ${
+              isFavorited ? 'text-red-400' : 'text-brand-stone hover:text-red-300'
+            }`}
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill={isFavorited ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+            </svg>
+          </button>
+        )}
       </div>
+
+      {/* Allergy warning */}
+      {allergyWarning && (
+        <div className="flex items-center gap-1.5 bg-amber-50 border border-amber-200 rounded-lg px-2.5 py-1.5 mb-2">
+          <span className="text-amber-500 text-xs">⚠</span>
+          <span className="text-[11px] text-amber-700 font-medium">{allergyWarning}</span>
+        </div>
+      )}
+
+      {/* Ate before hint */}
+      {ateBeforeHint && (
+        <div className="flex items-center gap-1 mb-2">
+          <span className="text-[10px] text-brand-gold/80 font-medium bg-brand-gold/10 rounded-full px-2 py-0.5">
+            ✓ You&apos;ve had this before
+          </span>
+        </div>
+      )}
 
       {author && (
         <div className="flex items-center gap-1.5 mb-2">

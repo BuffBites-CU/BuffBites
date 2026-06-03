@@ -404,3 +404,43 @@ def get_menu(
         "day_of_week": day_menu["day_of_week"],
         "categories": filtered_categories,
     }
+
+
+@router.get("/api/menu/nutrition")
+def get_nutrition(
+    dining: str = Query(...),
+    date: str | None = Query(None),
+    dishes: str = Query(..., description="Comma-separated dish names"),
+):
+    """Return per-dish nutrition for the requested dish names from the scraped menu."""
+    if dining not in DINING_FILES:
+        raise HTTPException(status_code=400, detail="Invalid dining location")
+
+    target_date = date or str(_date.today())
+    file_path = DATA_DIR / DINING_FILES[dining]
+    try:
+        menu_data = json.loads(file_path.read_text())
+    except Exception:
+        raise HTTPException(status_code=500, detail="Failed to load menu data")
+
+    day_menu = next((m for m in menu_data["menus"] if m["date"] == target_date), None)
+    if not day_menu:
+        return {}
+
+    # Build a case-insensitive lookup
+    lookup: dict[str, dict] = {}
+    for station, raw_items in day_menu.get("categories", {}).items():
+        for raw in raw_items:
+            name = (raw.get("name") or "").strip()
+            if name:
+                nutrition = raw.get("nutrition") or {}
+                lookup[name.lower()] = {
+                    "calories":    raw.get("calories"),
+                    "protein_g":   nutrition.get("protein_g"),
+                    "fat_g":       nutrition.get("fat_g"),
+                    "carbs_g":     nutrition.get("carbohydrates_g"),
+                    "serving_size":raw.get("serving_size", ""),
+                }
+
+    requested = [d.strip() for d in dishes.split(",") if d.strip()]
+    return {name: lookup.get(name.lower(), {}) for name in requested}

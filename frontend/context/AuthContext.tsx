@@ -23,10 +23,12 @@ interface AuthContextValue {
   firebaseUser: User | null
   firebaseUid: string | null
   username: string | null
+  defaultDiningHall: string | null
   loading: boolean
   signIn: () => Promise<void>
   signOut: () => Promise<void>
   setUsername: (name: string) => void
+  setDefaultDiningHall: (hall: string | null) => void
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null)
@@ -35,6 +37,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter()
   const [firebaseUser, setFirebaseUser] = useState<User | null>(null)
   const [username, setUsernameState] = useState<string | null>(null)
+  const [defaultDiningHall, setDefaultDiningHallState] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -45,6 +48,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         try {
           const profile = await getUser(user.uid)
           setUsernameState(profile.username)
+          setDefaultDiningHallState(profile.default_dining_hall ?? null)
           router.replace('/home')
         } catch (err) {
           const msg = err instanceof Error ? err.message : ''
@@ -69,11 +73,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await firebaseSignOut(auth)
     setFirebaseUser(null)
     setUsernameState(null)
+    setDefaultDiningHallState(null)
     router.replace('/')
   }, [router])
 
   const setUsername = useCallback((name: string) => {
     setUsernameState(name)
+  }, [])
+
+  const setDefaultDiningHall = useCallback((hall: string | null) => {
+    setDefaultDiningHallState(hall)
   }, [])
 
   return (
@@ -82,10 +91,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         firebaseUser,
         firebaseUid: firebaseUser?.uid ?? null,
         username,
+        defaultDiningHall,
         loading,
         signIn,
         signOut,
         setUsername,
+        setDefaultDiningHall,
       }}
     >
       {children}

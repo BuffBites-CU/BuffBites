@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
@@ -11,7 +11,14 @@ import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
 import FilterBar from '@/components/FilterBar'
 import PublishComboModal from '@/components/PublishComboModal'
-import type { CommunityCombo, DiningHall, VoteType } from '@/types'
+import type { CommunityCombo, DiningHall, FavoriteCombo, VoteType } from '@/types'
+
+type FeedTab = 'all' | 'saved'
+
+function isRising(combo: CommunityCombo): boolean {
+  const ageMs = Date.now() - new Date(combo.created_at).getTime()
+  return ageMs < 6 * 3_600_000 && combo.upvotes >= 3
+}
 
 export default function CommunityPage() {
   const router = useRouter()
@@ -21,8 +28,18 @@ export default function CommunityPage() {
   const [selectedDining, setSelectedDining] = useState<DiningHall | undefined>()
   const [publishOpen, setPublishOpen] = useState(false)
   const [activeCombo, setActiveCombo] = useState<CommunityCombo | null>(null)
+  const [feedTab, setFeedTab] = useState<FeedTab>('all')
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchFocused, setSearchFocused] = useState(false)
 
   const { combos, loading, error, refetch, vote, votedIds } = useCommunity('feed', selectedDining)
+
+  // Load favorites from localStorage for the Saved tab (also works from profile)
+  const [favorites] = useState<FavoriteCombo[]>(() => {
+    if (typeof window === 'undefined') return []
+    try { return JSON.parse(localStorage.getItem('bb_favorites') ?? '[]') } catch { return [] }
+  })
+  const favTitles = useMemo(() => new Set(favorites.map((f) => f.title)), [favorites])
 
   useScrollRestoration('community')
   usePullToRefresh(refetch)
@@ -36,20 +53,68 @@ export default function CommunityPage() {
     if (activeCombo) await vote(activeCombo.id, type)
   }
 
+  const filtered = useMemo(() => {
+    let list = combos
+    if (feedTab === 'saved') list = list.filter((c) => favTitles.has(c.title))
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase()
+      list = list.filter((c) =>
+        c.title.toLowerCase().includes(q) ||
+        (c.description ?? '').toLowerCase().includes(q) ||
+        c.tags.some((t) => t.toLowerCase().includes(q)) ||
+        c.dishes.some((d) => d.name.toLowerCase().includes(q))
+      )
+    }
+    return list
+  }, [combos, feedTab, searchQuery, favTitles])
+
   return (
     <div className="min-h-screen bg-surface pb-24">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-surface/90 backdrop-blur-sm border-b border-gray-100">
+      <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
         <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
-          <h1 className="text-xl font-bold text-brand-black">Community</h1>
+          <h1 className="font-display text-xl font-bold text-brand-black">Community</h1>
+        </div>
+
+        {/* Search bar */}
+        <div className="max-w-md mx-auto px-4 pb-2">
+          <div className={`flex items-center gap-2 bg-surface-overlay rounded-xl px-3 py-2 transition-all ${searchFocused ? 'ring-2 ring-brand-gold' : ''}`}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-muted flex-shrink-0">
+              <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
+            </svg>
+            <input
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setSearchFocused(true)}
+              onBlur={() => setSearchFocused(false)}
+              placeholder="Search combos, dishes, tags…"
+              className="flex-1 bg-transparent text-sm text-brand-black placeholder:text-muted focus:outline-none"
+            />
+            {searchQuery && (
+              <button onClick={() => setSearchQuery('')} className="text-muted hover:text-brand-black text-xs">✕</button>
+            )}
+          </div>
+        </div>
+
+        {/* Tabs: All / Saved */}
+        <div className="max-w-md mx-auto px-4 pb-2 flex gap-2">
+          {(['all', 'saved'] as FeedTab[]).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setFeedTab(tab)}
+              className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all capitalize ${
+                feedTab === tab
+                  ? 'bg-brand-black text-brand-gold'
+                  : 'bg-surface-overlay text-muted hover:bg-surface-warm'
+              }`}
+            >
+              {tab === 'saved' ? '♥ Saved' : 'All'}
+            </button>
+          ))}
         </div>
 
         <div className="max-w-md mx-auto">
-          <FilterBar
-            mode="single"
-            selected={selectedDining}
-            onChange={setSelectedDining}
-          />
+          <FilterBar mode="single" selected={selectedDining} onChange={setSelectedDining} />
         </div>
       </header>
 
@@ -60,51 +125,72 @@ export default function CommunityPage() {
         {!loading && error && (
           <div className="flex flex-col items-center gap-4 py-16 text-center">
             <p className="text-sm text-muted">{error}</p>
-            <button onClick={refetch} className="px-5 py-2.5 rounded-xl bg-brand-gold text-brand-black text-sm font-medium">
-              Try again
-            </button>
+            <button onClick={refetch} className="px-5 py-2.5 rounded-xl bg-brand-gold text-brand-black text-sm font-display font-medium">Try again</button>
           </div>
         )}
 
-        {!loading && !error && combos.length === 0 && (
+        {!loading && !error && filtered.length === 0 && (
           <div className="flex flex-col items-center gap-3 py-16 text-center">
-            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" className="opacity-60">
-              <circle cx="36" cy="36" r="30" stroke="#CFB87C" strokeWidth="2" strokeDasharray="4 3" />
-              <path d="M24 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#CFB87C" strokeWidth="2" strokeLinecap="round" />
-              <circle cx="36" cy="42" r="5" fill="#CFB87C" fillOpacity="0.3" stroke="#CFB87C" strokeWidth="1.5" />
-              <path d="M32 30l2-4M40 30l-2-4" stroke="#CFB87C" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-            <p className="font-semibold text-brand-black">No combos yet today</p>
-            <p className="text-sm text-muted">Be the first to share what you made!</p>
+            {feedTab === 'saved' ? (
+              <>
+                <span className="text-4xl">♥</span>
+                <p className="font-display font-semibold text-brand-black">No saved combos</p>
+                <p className="text-sm text-muted">Heart an AI combo on the Discover tab to save it here.</p>
+              </>
+            ) : searchQuery ? (
+              <>
+                <span className="text-4xl">🔍</span>
+                <p className="font-display font-semibold text-brand-black">No results</p>
+                <p className="text-sm text-muted">Try a different search term or tag.</p>
+              </>
+            ) : (
+              <>
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" className="opacity-60">
+                  <circle cx="36" cy="36" r="30" stroke="#CFB87C" strokeWidth="2" strokeDasharray="4 3" />
+                  <path d="M24 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#CFB87C" strokeWidth="2" strokeLinecap="round" />
+                  <circle cx="36" cy="42" r="5" fill="#CFB87C" fillOpacity="0.3" stroke="#CFB87C" strokeWidth="1.5" />
+                </svg>
+                <p className="font-display font-semibold text-brand-black">No combos yet today</p>
+                <p className="text-sm text-muted">Be the first to share what you made!</p>
+              </>
+            )}
           </div>
         )}
 
-        {!loading && !error && combos.length > 0 && (
+        {!loading && !error && filtered.length > 0 && (
           <div className="space-y-3">
-            {combos.map((combo) => (
-              <ComboCard
-                key={combo.id}
-                title={combo.title}
-                description={combo.description ?? ''}
-                tags={combo.tags}
-                dishes={combo.dishes}
-                upvotes={combo.upvotes}
-                hasVoted={combo.has_voted}
-                onUpvote={() => vote(combo.id, 'upvote')}
-                expires_at={combo.expires_at}
-                author={combo.author_username}
-                onClick={() => setActiveCombo(combo)}
-              />
+            {filtered.map((combo) => (
+              <div key={combo.id} className="relative">
+                {isRising(combo) && (
+                  <div className="absolute -top-1.5 left-3 z-10">
+                    <span className="flex items-center gap-1 bg-amber-400 text-amber-900 text-[9px] font-display font-bold tracking-wider uppercase rounded-full px-2 py-0.5 shadow-sm">
+                      ⚡ Rising
+                    </span>
+                  </div>
+                )}
+                <ComboCard
+                  title={combo.title}
+                  description={combo.description ?? ''}
+                  tags={combo.tags}
+                  dishes={combo.dishes}
+                  upvotes={combo.upvotes}
+                  hasVoted={combo.has_voted}
+                  onUpvote={() => vote(combo.id, 'upvote')}
+                  expires_at={combo.expires_at}
+                  author={combo.author_username}
+                  onClick={() => setActiveCombo(combo)}
+                />
+              </div>
             ))}
           </div>
         )}
       </div>
 
-      {/* FAB — Share Combo */}
+      {/* FAB */}
       {firebaseUser && (
         <button
           onClick={() => setPublishOpen(true)}
-          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand-gold text-brand-black text-sm font-semibold shadow-lg hover:opacity-90 active:scale-95 transition-all"
+          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand-gold text-brand-black text-sm font-display font-semibold shadow-gold hover:opacity-90 active:scale-95 transition-all"
           aria-label="Share a combo"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -142,7 +228,7 @@ function FeedSkeletons() {
   return (
     <div className="space-y-3">
       {[1, 2, 3, 4].map((i) => (
-        <div key={i} className="bg-surface-card rounded-2xl border border-gray-100 p-4 space-y-3 overflow-hidden">
+        <div key={i} className="bg-surface-card rounded-2xl border border-surface-overlay p-4 space-y-3 overflow-hidden">
           <div className="flex justify-between items-center">
             <div className="h-4 shimmer rounded-full w-1/2" />
             <div className="h-4 shimmer rounded-full w-10" />
@@ -151,15 +237,9 @@ function FeedSkeletons() {
             <div className="h-3 shimmer rounded-full" />
             <div className="h-3 shimmer rounded-full w-3/4" />
           </div>
-          <div className="border-t border-gray-50 pt-2.5">
-            <div className="h-3 shimmer rounded-full w-2/3" />
-          </div>
-          <div className="flex justify-between items-center">
-            <div className="flex gap-1.5">
-              <div className="h-5 shimmer rounded-full w-14" />
-              <div className="h-5 shimmer rounded-full w-18" />
-            </div>
-            <div className="h-4 shimmer rounded-full w-16" />
+          <div className="flex gap-1.5">
+            <div className="h-5 shimmer rounded-full w-14" />
+            <div className="h-5 shimmer rounded-full w-18" />
           </div>
         </div>
       ))}

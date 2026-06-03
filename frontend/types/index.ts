@@ -9,6 +9,17 @@ export interface MealLogEntry {
   logged_at: string
 }
 
+export interface FavoriteCombo {
+  title: string
+  dining_hall: string
+  date: string
+  description?: string
+  approximate_calories?: number
+  tags: ComboTag[]
+  dishes: Array<{ name: string; station: string }>
+  saved_at: string
+}
+
 export interface UserCreate {
   firebase_uid: string
   email: string
@@ -17,6 +28,7 @@ export interface UserCreate {
   restrictions?: string[]
   avatar?: string
   preferred_calories_per_meal?: number
+  default_dining_hall?: string
 }
 
 export interface UserResponse extends UserCreate {
@@ -24,7 +36,9 @@ export interface UserResponse extends UserCreate {
   karma: number
   created_at: string
   preferred_calories_per_meal?: number
+  default_dining_hall?: string
   meal_log?: MealLogEntry[]
+  favorites?: FavoriteCombo[]
 }
 
 export type DiningHall = 'alley' | 'c4c' | 'libby' | 'sewall' | 'village_center'
@@ -112,6 +126,15 @@ export interface CommunityCombo extends ComboCreate {
   created_at: string
   expires_at: string
   has_voted?: boolean
+}
+
+export interface Comment {
+  id: string
+  combo_id: string
+  text: string
+  author_username: string
+  author_firebase_uid: string
+  created_at: string
 }
 
 export interface ComboUpdate {

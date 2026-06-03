@@ -26,7 +26,7 @@ Usage:
 from fastapi import APIRouter, HTTPException
 from datetime import datetime, timedelta, timezone
 from database import users_collection
-from pydantic_models.user_models import UserCreate, UserResponse, MealLogEntry
+from pydantic_models.user_models import UserCreate, UserResponse, MealLogEntry, FavoriteCombo
 
 router = APIRouter(prefix="/api/users", tags=["users"])
 
@@ -81,3 +81,23 @@ async def log_meal(firebase_uid: str, entry: MealLogEntry):
     if result.matched_count == 0:
         raise HTTPException(status_code=404, detail="User not found")
     return {"message": "Meal logged"}
+
+@router.post("/{firebase_uid}/favorites")
+async def add_favorite(firebase_uid: str, combo: FavoriteCombo):
+    result = await users_collection.update_one(
+        {"firebase_uid": firebase_uid},
+        {"$push": {"favorites": combo.model_dump()}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="User not found")
+    return {"message": "Favorite saved"}
+
+@router.delete("/{firebase_uid}/favorites")
+async def remove_favorite(firebase_uid: str, title: str, dining_hall: str, date: str):
+    result = await users_collection.update_one(
+        {"firebase_uid": firebase_uid},
+        {"$pull": {"favorites": {"title": title, "dining_hall": dining_hall, "date": date}}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="User not found")
+    return {"message": "Favorite removed"}

@@ -64,3 +64,11 @@ export function getTrends(dining_hall?: DiningHall, firebase_uid?: string): Prom
   const qs = params.toString()
   return apiFetch<CommunityCombo[]>(`/api/community/trends${qs ? `?${qs}` : ''}`)
 }
+
+export function getWeeklyTrends(dining_hall?: DiningHall, firebase_uid?: string): Promise<CommunityCombo[]> {
+  const params = new URLSearchParams()
+  if (dining_hall) params.set('dining_hall', dining_hall)
+  if (firebase_uid) params.set('firebase_uid', firebase_uid)
+  const qs = params.toString()
+  return apiFetch<CommunityCombo[]>(`/api/community/trends/weekly${qs ? `?${qs}` : ''}`)
+}

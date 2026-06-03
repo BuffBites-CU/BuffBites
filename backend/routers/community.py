@@ -153,3 +153,14 @@ async def get_trends(dining_hall: str | None = None, firebase_uid: str | None = 
 
     combos = await combos_collection.find(query).sort("upvotes", -1).to_list(20)
     return [_fmt(c, firebase_uid) for c in combos]
+
+@router.get("/trends/weekly")
+async def get_weekly_trends(dining_hall: str | None = None, firebase_uid: str | None = None):
+    """Top 20 combos created in the last 7 days (ignores 24h expiry)."""
+    week_ago = datetime.now(timezone.utc) - timedelta(days=7)
+    query = {"created_at": {"$gt": week_ago}}
+    if dining_hall:
+        query["dining_hall"] = dining_hall
+
+    combos = await combos_collection.find(query).sort("upvotes", -1).to_list(20)
+    return [_fmt(c, firebase_uid) for c in combos]

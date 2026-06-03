@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
@@ -10,9 +10,9 @@ import MealPeriodTabs from '@/components/MealPeriodTabs'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
 import { ArrowPathIcon, BisonIcon } from '@/components/icons'
-import { logMeal } from '@/services/usersService'
+import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo } from '@/services/communityService'
-import type { Combo, DiningHall, MealPeriod } from '@/types'
+import type { Combo, DiningHall, MealPeriod, FavoriteCombo } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
   alley: 'C4C or Sewall',
@@ -35,15 +35,20 @@ function buildDateOptions() {
 
 export default function HomePage() {
   const router = useRouter()
-  const { firebaseUser, firebaseUid, username, loading: authLoading } = useAuth()
+  const { firebaseUser, firebaseUid, username, defaultDiningHall, loading: authLoading } = useAuth()
   const { showToast } = useToast()
 
-  const [selectedDining, setSelectedDining] = useState<DiningHall>('c4c')
+  const [selectedDining, setSelectedDining] = useState<DiningHall>(
+    (defaultDiningHall as DiningHall | null) ?? 'c4c'
+  )
   const [selectedPeriod, setSelectedPeriod] = useState<MealPeriod>('Lunch')
   const [activeCombo, setActiveCombo] = useState<Combo | null>(null)
   const [showDatePicker, setShowDatePicker] = useState(false)
   const [ateStates, setAteStates] = useState<Record<string, 'ate' | 'skipped'>>({})
   const [shareStates, setShareStates] = useState<Record<string, 'sharing' | 'shared'>>({})
+  const [favorites, setFavorites] = useState<FavoriteCombo[]>([])
+  const [userRestrictions, setUserRestrictions] = useState<string[]>([])
+  const [pastTitles, setPastTitles] = useState<Set<string>>(new Set())
 
   const dateOptions = useMemo(buildDateOptions, [])
   const [selectedDate, setSelectedDate] = useState(dateOptions[0].iso)
@@ -60,6 +65,16 @@ export default function HomePage() {
     }),
     [data],
   )
+
+  // Load user favorites + restrictions once on mount
+  useEffect(() => {
+    if (!firebaseUid) return
+    getUser(firebaseUid).then((p) => {
+      setFavorites(p.favorites ?? [])
+      setUserRestrictions(p.restrictions ?? [])
+      setPastTitles(new Set((p.meal_log ?? []).map((e) => e.title)))
+    }).catch(() => {})
+  }, [firebaseUid])
 
   function ateKey(combo: Combo, index: number) {
     return `${selectedDining}-${selectedDate}-${selectedPeriod}-${index}`
@@ -87,6 +102,44 @@ export default function HomePage() {
   function handleSkip(combo: Combo, index: number) {
     const key = ateKey(combo, index)
     setAteStates((prev) => ({ ...prev, [key]: 'skipped' }))
+  }
+
+  async function handleFavorite(combo: Combo, index: number) {
+    if (!firebaseUid) return
+    const key = ateKey(combo, index)
+    const alreadyFav = favorites.some(
+      (f) => f.title === combo.title && f.dining_hall === selectedDining && f.date === selectedDate
+    )
+    if (alreadyFav) {
+      setFavorites((prev) => prev.filter(
+        (f) => !(f.title === combo.title && f.dining_hall === selectedDining && f.date === selectedDate)
+      ))
+      removeFavorite(firebaseUid, combo.title, selectedDining, selectedDate).catch(() => {})
+    } else {
+      const fav: Omit<FavoriteCombo, 'saved_at'> = {
+        title: combo.title,
+        dining_hall: selectedDining,
+        date: selectedDate,
+        description: combo.description,
+        approximate_calories: combo.approximate_calories,
+        tags: combo.tags,
+        dishes: combo.dishes,
+      }
+      setFavorites((prev) => [...prev, { ...fav, saved_at: new Date().toISOString() }])
+      addFavorite(firebaseUid, fav).catch(() => {})
+    }
+    void key
+  }
+
+  function getAllergyWarning(combo: Combo): string | undefined {
+    if (userRestrictions.length === 0) return undefined
+    const dishText = combo.dishes.map((d) => d.name.toLowerCase()).join(' ')
+    const tagText = combo.tags.join(' ').toLowerCase()
+    const matched = userRestrictions.filter((r) => {
+      const rLower = r.toLowerCase()
+      return dishText.includes(rLower) || tagText.includes(rLower)
+    })
+    return matched.length > 0 ? `May contain: ${matched.join(', ')}` : undefined
   }
 
   async function handleShare(combo: Combo, index: number) {
@@ -259,6 +312,12 @@ export default function HomePage() {
                     onSkip={() => handleSkip(combo, i)}
                     shareState={shareStates[ateKey(combo, i)] ?? null}
                     onShare={() => handleShare(combo, i)}
+                    isFavorited={favorites.some(
+                      (f) => f.title === combo.title && f.dining_hall === selectedDining && f.date === selectedDate
+                    )}
+                    onFavorite={() => handleFavorite(combo, i)}
+                    allergyWarning={getAllergyWarning(combo)}
+                    ateBeforeHint={pastTitles.has(combo.title)}
                   />
                 </div>
               ))}
@@ -272,6 +331,8 @@ export default function HomePage() {
         <ComboDetail
           combo={activeCombo}
           type="ai"
+          diningHall={selectedDining}
+          date={selectedDate}
           onClose={() => setActiveCombo(null)}
         />
       )}

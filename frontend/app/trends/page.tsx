@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
-import { getTrends } from '@/services/communityService'
+import { getTrends, getWeeklyTrends } from '@/services/communityService'
 import { useCommunity } from '@/hooks/useCommunity'
 import { usePullToRefresh } from '@/hooks/usePullToRefresh'
 import { useScrollRestoration } from '@/hooks/useScrollRestoration'
@@ -15,6 +15,12 @@ import { DINING_HALL_LABELS } from '@/types'
 import type { CommunityCombo, DiningHall, VoteType } from '@/types'
 
 const MEDALS = ['', '🥇', '🥈', '🥉'] as const
+type TrendsTab = 'today' | 'weekly'
+
+function isRising(combo: CommunityCombo): boolean {
+  const ageMs = Date.now() - new Date(combo.created_at).getTime()
+  return ageMs < 6 * 3_600_000 && combo.upvotes >= 3
+}
 
 function timeUntilMidnightUTC(): { text: string; urgent: boolean } {
   const now = Date.now()
@@ -64,6 +70,9 @@ export default function TrendsPage() {
   const [multiTrends, setMultiTrends] = useState<CommunityCombo[]>([])
   const [multiLoading, setMultiLoading] = useState(false)
   const [multiError, setMultiError] = useState('')
+  const [activeTab, setActiveTab] = useState<TrendsTab>('today')
+  const [weeklyTrends, setWeeklyTrends] = useState<CommunityCombo[]>([])
+  const [weeklyLoading, setWeeklyLoading] = useState(false)
 
   const singleHall = selectedHalls.length <= 1 ? selectedHalls[0] : undefined
   const useHook = selectedHalls.length <= 1
@@ -97,6 +106,13 @@ export default function TrendsPage() {
   const loading = useHook ? hookLoading : multiLoading
   const error = useHook ? hookError : multiError
 
+  // Fetch weekly trends when tab switches
+  useEffect(() => {
+    if (activeTab !== 'weekly' || weeklyTrends.length > 0) return
+    setWeeklyLoading(true)
+    getWeeklyTrends().then(setWeeklyTrends).catch(() => {}).finally(() => setWeeklyLoading(false))
+  }, [activeTab, weeklyTrends.length])
+
   const resetInfo = useMemo(timeUntilMidnightUTC, [])
 
   const refetch = useHook
@@ -115,24 +131,44 @@ export default function TrendsPage() {
     if (activeCombo) await vote(activeCombo.id, type)
   }
 
-  const podiumTrends = trends.slice(0, 3)
-  const listTrends = trends.slice(3, 20)
+  const displayTrends = activeTab === 'weekly' ? weeklyTrends : trends
+  const displayLoading = activeTab === 'weekly' ? weeklyLoading : loading
+  const podiumTrends = displayTrends.slice(0, 3)
+  const listTrends = displayTrends.slice(3, 20)
   const hasPodium = podiumTrends.length === 3
 
   return (
     <div className="min-h-screen bg-surface pb-24">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-surface/90 backdrop-blur-sm border-b border-gray-100">
+      <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
         <div className="max-w-md mx-auto px-4 pt-4 pb-1 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-brand-black">Trending Today</h1>
-          <span className={`flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full ${
-            resetInfo.urgent
-              ? 'bg-amber-100 text-amber-700'
-              : 'bg-gray-100 text-muted'
-          }`}>
-            🔄 Resets in {resetInfo.text}
-          </span>
+          <h1 className="font-display text-xl font-bold text-brand-black">Trending</h1>
+          {activeTab === 'today' && (
+            <span className={`flex items-center gap-1 text-xs font-display font-medium px-2.5 py-1 rounded-full ${
+              resetInfo.urgent ? 'bg-amber-100 text-amber-700' : 'bg-surface-overlay text-muted'
+            }`}>
+              🔄 Resets in {resetInfo.text}
+            </span>
+          )}
         </div>
+
+        {/* Today / This Week tabs */}
+        <div className="max-w-md mx-auto px-4 pb-2 flex gap-2">
+          {(['today', 'weekly'] as TrendsTab[]).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all ${
+                activeTab === tab
+                  ? 'bg-brand-black text-brand-gold'
+                  : 'bg-surface-overlay text-muted hover:bg-surface-warm'
+              }`}
+            >
+              {tab === 'today' ? 'Today' : 'This Week'}
+            </button>
+          ))}
+        </div>
+
         <div className="max-w-md mx-auto">
           <FilterBar
             mode="multi"
@@ -154,15 +190,15 @@ export default function TrendsPage() {
       </header>
 
       <div className="max-w-md mx-auto px-4 pt-4 animate-page-in">
-        {loading && <TrendSkeletons />}
+        {displayLoading && <TrendSkeletons />}
 
-        {!loading && error && (
+        {!displayLoading && error && activeTab === 'today' && (
           <div className="flex flex-col items-center gap-4 py-16 text-center">
             <p className="text-sm text-muted">{error}</p>
           </div>
         )}
 
-        {!loading && !error && trends.length === 0 && (
+        {!displayLoading && displayTrends.length === 0 && (
           <div className="flex flex-col items-center gap-3 py-16 text-center">
             <span className="text-5xl">🔥</span>
             <p className="font-semibold text-brand-black">Nothing trending yet</p>
@@ -170,33 +206,33 @@ export default function TrendsPage() {
           </div>
         )}
 
-        {!loading && !error && trends.length > 0 && (
+        {!displayLoading && displayTrends.length > 0 && (
           <>
             {hasPodium && (
               <>
-                {/* Podium — #2 left, #1 center, #3 right */}
                 <div className="grid grid-cols-3 items-end gap-2 mb-4">
                   <PodiumCard rank={2} combo={podiumTrends[1]} onClick={() => setActiveCombo(podiumTrends[1])} />
                   <PodiumCard rank={1} combo={podiumTrends[0]} onClick={() => setActiveCombo(podiumTrends[0])} />
                   <PodiumCard rank={3} combo={podiumTrends[2]} onClick={() => setActiveCombo(podiumTrends[2])} />
                 </div>
-                {listTrends.length > 0 && (
-                  <div className="border-t border-gray-200 mb-4" />
-                )}
+                {listTrends.length > 0 && <div className="border-t border-surface-warm mb-4" />}
               </>
             )}
 
-            {/* Ranks #4+ (or all when < 3 results) */}
             <div className="space-y-3">
-              {(hasPodium ? listTrends : trends).map((combo, i) => {
+              {(hasPodium ? listTrends : displayTrends).map((combo, i) => {
                 const rank = hasPodium ? i + 4 : i + 1
                 const medal = !hasPodium && rank <= 3 ? MEDALS[rank] : undefined
-
                 return (
                   <div key={combo.id} className="relative">
                     {medal && (
                       <div className={`absolute -top-2 -left-1 z-10 text-2xl ${rank === 1 ? 'scale-125' : ''}`}>
                         {medal}
+                      </div>
+                    )}
+                    {isRising(combo) && (
+                      <div className="absolute -top-1.5 right-2 z-10">
+                        <span className="flex items-center gap-1 bg-amber-400 text-amber-900 text-[9px] font-display font-bold uppercase rounded-full px-2 py-0.5 shadow-sm">⚡ Rising</span>
                       </div>
                     )}
                     <div className={!hasPodium && rank === 1 ? 'ring-2 ring-brand-gold rounded-xl' : ''}>

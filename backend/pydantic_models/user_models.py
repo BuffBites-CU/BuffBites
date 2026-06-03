@@ -29,6 +29,16 @@ class MealLogEntry(BaseModel):
     meal_period: str
     logged_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
+class FavoriteCombo(BaseModel):
+    title: str
+    dining_hall: str
+    date: str
+    description: Optional[str] = None
+    approximate_calories: Optional[int] = None
+    tags: list[str] = []
+    dishes: list[dict] = []
+    saved_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
 class UserCreate(BaseModel):
     firebase_uid: str
     email: str
@@ -37,6 +47,7 @@ class UserCreate(BaseModel):
     restrictions: list[str] = []
     avatar: Optional[str] = None
     preferred_calories_per_meal: Optional[int] = None
+    default_dining_hall: Optional[str] = None
 
 class UserResponse(BaseModel):
     firebase_uid: str
@@ -48,4 +59,6 @@ class UserResponse(BaseModel):
     karma: int = 0
     created_at: datetime
     preferred_calories_per_meal: Optional[int] = None
+    default_dining_hall: Optional[str] = None
     meal_log: list[MealLogEntry] = []
+    favorites: list[FavoriteCombo] = []
