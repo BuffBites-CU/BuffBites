@@ -15,6 +15,7 @@ Usage:
 
 from motor.motor_asyncio import AsyncIOMotorClient
 from dotenv import load_dotenv
+import certifi
 import os
 
 load_dotenv()
@@ -24,7 +25,7 @@ if not MONGO_URL:
     raise RuntimeError("MONGO_URL env var is not set — copy backend/.env.example to backend/.env")
 APP_NAME = os.getenv("APP_NAME", "combos")
 
-client = AsyncIOMotorClient(MONGO_URL)
+client = AsyncIOMotorClient(MONGO_URL, tlsCAFile=certifi.where())
 db = client[APP_NAME]
 
 # Collections
