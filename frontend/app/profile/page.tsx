@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
+import { useToast } from '@/context/ToastContext'
 import { getUser, updateUser } from '@/services/usersService'
 import { getUserCombos, deleteCombo } from '@/services/communityService'
 import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon } from '@/components/icons'
@@ -29,6 +30,7 @@ function formatExpiry(iso: string) {
 export default function ProfilePage() {
   const router = useRouter()
   const { firebaseUser, firebaseUid, signOut } = useAuth()
+  const { showToast } = useToast()
 
   const [profile, setProfile] = useState<UserResponse | null>(null)
   const [loading, setLoading] = useState(true)
@@ -36,12 +38,12 @@ export default function ProfilePage() {
   const [draft, setDraft] = useState({ username: '', dietary_preferences: [] as DietaryPreference[] })
   const [saving, setSaving] = useState(false)
   const [usernameError, setUsernameError] = useState('')
-  const [toast, setToast] = useState('')
 
   const [myCombos, setMyCombos] = useState<CommunityCombo[]>([])
   const [combosLoading, setCombosLoading] = useState(false)
   const [editingCombo, setEditingCombo] = useState<CommunityCombo | null>(null)
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null)
 
   useEffect(() => {
     if (!firebaseUid) { router.replace('/'); return }
@@ -59,11 +61,6 @@ export default function ProfilePage() {
       .catch(() => setMyCombos([]))
       .finally(() => setCombosLoading(false))
   }, [firebaseUid])
-
-  function showToast(msg: string) {
-    setToast(msg)
-    setTimeout(() => setToast(''), 2500)
-  }
 
   function enterEdit() {
     if (!profile) return
@@ -99,7 +96,7 @@ export default function ProfilePage() {
       await updateUser(firebaseUid, changes)
       setProfile((p) => p ? { ...p, ...changes } : p)
       setEditMode(false)
-      showToast('Profile updated!')
+      showToast('Profile updated!', 'success')
     } catch (e) {
       const msg = e instanceof Error ? e.message : ''
       if (msg.toLowerCase().includes('username')) {
@@ -112,14 +109,15 @@ export default function ProfilePage() {
 
   async function handleDelete(combo: CommunityCombo) {
     if (!firebaseUser) return
+    setConfirmDeleteId(null)
     setDeletingId(combo.id)
     try {
       const token = await firebaseUser.getIdToken()
       await deleteCombo(combo.id, token)
       setMyCombos((prev) => prev.filter((c) => c.id !== combo.id))
-      showToast('Combo deleted.')
+      showToast('Combo deleted.', 'neutral')
     } catch {
-      showToast('Failed to delete.')
+      showToast('Failed to delete.', 'error')
     } finally {
       setDeletingId(null)
     }
@@ -141,12 +139,6 @@ export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-surface pb-24">
       <div className="max-w-md mx-auto px-4 pt-12 space-y-6">
-        {toast && (
-          <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-brand-black text-white px-5 py-3 rounded-2xl text-sm font-medium shadow-lg">
-            {toast}
-          </div>
-        )}
-
         {/* Avatar */}
         <div className="flex flex-col items-center gap-3">
           <div className="relative w-20 h-20 rounded-full overflow-hidden bg-gray-200 shadow">
@@ -318,21 +310,41 @@ export default function ProfilePage() {
                       </div>
 
                       <div className="flex items-center gap-1 flex-shrink-0">
-                        <button
-                          onClick={() => setEditingCombo(combo)}
-                          className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-                          aria-label="Edit combo"
-                        >
-                          <PencilIcon width={15} height={15} className="text-muted" />
-                        </button>
-                        <button
-                          onClick={() => handleDelete(combo)}
-                          disabled={deletingId === combo.id}
-                          className="p-2 rounded-full hover:bg-red-50 transition-colors disabled:opacity-40"
-                          aria-label="Delete combo"
-                        >
-                          <TrashIcon width={15} height={15} className="text-red-400" />
-                        </button>
+                        {confirmDeleteId === combo.id ? (
+                          <>
+                            <button
+                              onClick={() => setConfirmDeleteId(null)}
+                              className="px-2 py-1 rounded-lg text-xs text-muted hover:bg-gray-100 transition-colors"
+                            >
+                              Cancel
+                            </button>
+                            <button
+                              onClick={() => handleDelete(combo)}
+                              disabled={deletingId === combo.id}
+                              className="px-2 py-1 rounded-lg text-xs font-medium text-red-500 hover:bg-red-50 transition-colors disabled:opacity-40"
+                            >
+                              {deletingId === combo.id ? '…' : 'Delete'}
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            <button
+                              onClick={() => setEditingCombo(combo)}
+                              className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                              aria-label="Edit combo"
+                            >
+                              <PencilIcon width={15} height={15} className="text-muted" />
+                            </button>
+                            <button
+                              onClick={() => setConfirmDeleteId(combo.id)}
+                              disabled={deletingId === combo.id}
+                              className="p-2 rounded-full hover:bg-red-50 transition-colors disabled:opacity-40"
+                              aria-label="Delete combo"
+                            >
+                              <TrashIcon width={15} height={15} className="text-red-400" />
+                            </button>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -350,7 +362,7 @@ export default function ProfilePage() {
           onSaved={(updated) => {
             setMyCombos((prev) => prev.map((c) => c.id === updated.id ? updated : c))
             setEditingCombo(null)
-            showToast('Combo updated!')
+            showToast('Combo updated!', 'success')
           }}
         />
       )}

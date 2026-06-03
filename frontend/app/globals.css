@@ -8,3 +8,10 @@
 
 /* Smooth tap highlights on mobile */
 * { -webkit-tap-highlight-color: transparent; }
+
+/* Toast slide-up animation */
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-toast-in { animation: toast-in 0.18s ease-out forwards; }

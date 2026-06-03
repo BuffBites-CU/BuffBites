@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { AuthProvider } from '@/context/AuthContext'
+import { ToastProvider } from '@/context/ToastContext'
 import NavBar from '@/components/NavBar'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -16,8 +17,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${inter.variable} font-sans bg-surface text-brand-black antialiased`}>
         <AuthProvider>
-          <main className="min-h-screen">{children}</main>
-          <NavBar />
+          <ToastProvider>
+            <main className="min-h-screen">{children}</main>
+            <NavBar />
+          </ToastProvider>
         </AuthProvider>
       </body>
     </html>

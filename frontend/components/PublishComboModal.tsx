@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { XMarkIcon, PlusIcon, PhotoIcon } from './icons'
+import { useEffect, useState } from 'react'
+import { XMarkIcon, PlusIcon } from './icons'
 import { tagStyle } from './ComboCard'
 import { publishCombo } from '@/services/communityService'
 import { getMenu } from '@/services/combosService'
@@ -24,14 +24,13 @@ interface FormState {
   tags: ComboTag[]
   dishes: DishItem[]
   notes: string
-  images: string[]
 }
 
 const EMPTY_DISH: DishItem = { name: '', station: '', servings: 1 }
 
 export default function PublishComboModal({ onClose, onSuccess }: Props) {
   const { firebaseUser, username } = useAuth()
-  const [step, setStep] = useState<1 | 2 | 3>(1)
+  const [step, setStep] = useState<1 | 2>(1)
   const [form, setForm] = useState<FormState>({
     dining_hall: '',
     date: TODAY,
@@ -40,7 +39,6 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
     tags: [],
     dishes: [{ ...EMPTY_DISH }, { ...EMPTY_DISH }],
     notes: '',
-    images: [],
   })
   const [step1Error, setStep1Error] = useState('')
   const [step2Error, setStep2Error] = useState('')
@@ -48,7 +46,6 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
   const [submitError, setSubmitError] = useState('')
   const [menuByStation, setMenuByStation] = useState<Record<string, string[]>>({})
   const [menuLoading, setMenuLoading] = useState(false)
-  const fileInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     document.body.style.overflow = 'hidden'
@@ -113,12 +110,6 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
     }))
   }
 
-  function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const files = Array.from(e.target.files ?? []).slice(0, 3 - form.images.length)
-    const urls = files.map((f) => URL.createObjectURL(f))
-    setForm((f) => ({ ...f, images: [...f.images, ...urls].slice(0, 3) }))
-  }
-
   function validateStep1(): boolean {
     if (!form.dining_hall) { setStep1Error('Please select a dining hall.'); return false }
     if (!form.date) { setStep1Error('Please select a date.'); return false }
@@ -137,6 +128,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
 
   async function handlePublish() {
     if (!firebaseUser || !username || !form.dining_hall) return
+    if (!validateStep2()) return
     setSubmitting(true)
     setSubmitError('')
     try {
@@ -177,7 +169,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
 
         <div className="flex items-center justify-between px-5 py-2 flex-shrink-0">
           <div className="flex gap-1.5">
-            {([1, 2, 3] as const).map((s) => (
+            {([1, 2] as const).map((s) => (
               <div
                 key={s}
                 className={`h-2 rounded-full transition-all duration-200 ${
@@ -383,72 +375,25 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
             </div>
           )}
 
-          {step === 3 && (
-            <div className="space-y-4 pt-2">
-              <div>
-                <h2 className="text-xl font-bold text-brand-black">Add photos</h2>
-                <p className="text-sm text-muted mt-1">Optional — show others what your combo looks like (max 3)</p>
-              </div>
-
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/*"
-                multiple
-                className="hidden"
-                onChange={handleFileChange}
-              />
-
-              {form.images.length < 3 && (
-                <button
-                  onClick={() => fileInputRef.current?.click()}
-                  className="w-full border-2 border-dashed border-gray-200 rounded-xl py-8 flex flex-col items-center gap-2 text-muted hover:border-brand-gold transition-colors"
-                >
-                  <PhotoIcon width={28} height={28} />
-                  <span className="text-sm">Tap to add photos</span>
-                </button>
-              )}
-
-              {form.images.length > 0 && (
-                <div className="flex gap-3 overflow-x-auto scrollbar-hide">
-                  {form.images.map((src, i) => (
-                    <div key={i} className="relative flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden bg-gray-100">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={src} alt={`Preview ${i + 1}`} className="w-full h-full object-cover" />
-                      <button
-                        onClick={() => setForm((f) => ({ ...f, images: f.images.filter((_, j) => j !== i) }))}
-                        className="absolute top-1 right-1 bg-black/50 rounded-full p-0.5"
-                        aria-label="Remove photo"
-                      >
-                        <XMarkIcon width={12} height={12} className="text-white" />
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {submitError && (
-                <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">{submitError}</p>
-              )}
-            </div>
+          {step === 2 && submitError && (
+            <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3 mt-2">{submitError}</p>
           )}
         </div>
 
         <div className="flex-shrink-0 px-5 py-4 border-t border-gray-100 flex gap-3">
           {step > 1 && (
             <button
-              onClick={() => setStep((s) => (s - 1) as 1 | 2 | 3)}
+              onClick={() => setStep((s) => (s - 1) as 1 | 2)}
               className="flex-1 py-3 rounded-xl border border-gray-200 text-sm font-medium text-brand-black hover:bg-gray-50 transition-colors"
             >
               Back
             </button>
           )}
-          {step < 3 ? (
+          {step < 2 ? (
             <button
               onClick={() => {
-                if (step === 1 && !validateStep1()) return
-                if (step === 2 && !validateStep2()) return
-                setStep((s) => (s + 1) as 2 | 3)
+                if (!validateStep1()) return
+                setStep(2)
               }}
               className="flex-1 py-3 rounded-xl bg-brand-gold text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity"
             >

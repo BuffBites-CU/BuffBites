@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
+import { useToast } from '@/context/ToastContext'
 import { useCommunity } from '@/hooks/useCommunity'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
@@ -13,6 +14,7 @@ import type { CommunityCombo, DiningHall, VoteType } from '@/types'
 export default function CommunityPage() {
   const router = useRouter()
   const { firebaseUser, loading: authLoading } = useAuth()
+  const { showToast } = useToast()
 
   const [selectedDining, setSelectedDining] = useState<DiningHall | undefined>()
   const [publishOpen, setPublishOpen] = useState(false)
@@ -115,7 +117,11 @@ export default function CommunityPage() {
       {publishOpen && (
         <PublishComboModal
           onClose={() => setPublishOpen(false)}
-          onSuccess={() => { setPublishOpen(false); refetch() }}
+          onSuccess={() => {
+            setPublishOpen(false)
+            refetch()
+            showToast('Combo published!', 'success')
+          }}
         />
       )}
     </div>
