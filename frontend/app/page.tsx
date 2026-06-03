@@ -2,6 +2,14 @@
 
 import { useState } from 'react'
 import { useAuth } from '@/context/AuthContext'
+import { BisonIcon } from '@/components/icons'
+
+const FEATURES = [
+  { icon: '✦', label: 'AI-crafted combos' },
+  { icon: '◈', label: 'All 5 dining halls' },
+  { icon: '◎', label: 'Community feed' },
+  { icon: '◇', label: 'Calorie tracking' },
+]
 
 export default function LandingPage() {
   const { firebaseUser, loading, signIn } = useAuth()
@@ -11,7 +19,7 @@ export default function LandingPage() {
   if (loading || firebaseUser) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-surface">
-        <Spinner />
+        <LoadingSpinner />
       </div>
     )
   }
@@ -29,56 +37,104 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-surface flex flex-col items-center justify-center px-6">
-      <div className="w-full max-w-sm flex flex-col items-center gap-8">
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-20 h-20 rounded-3xl bg-brand-gold flex items-center justify-center shadow-lg">
-            <span className="text-4xl" role="img" aria-label="fork and knife">🍴</span>
+    <div className="min-h-screen bg-surface relative overflow-hidden flex flex-col">
+
+      {/* ── Background: warm gradient ───────────────────────────── */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 80% 60% at 50% 80%, #E8DEC8 0%, transparent 70%)',
+        }}
+      />
+
+      {/* ── Mountain ridge silhouette ───────────────────────────── */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none select-none">
+        <svg
+          viewBox="0 0 390 160"
+          preserveAspectRatio="xMidYMax slice"
+          className="w-full h-44"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Far range — lightest */}
+          <path
+            d="M0 160 L0 105 L38 72 L65 88 L95 52 L122 74 L148 45 L178 68 L200 50 L222 65 L250 38 L278 62 L305 44 L332 68 L355 50 L390 72 L390 160Z"
+            fill="#EDE6D4"
+          />
+          {/* Mid range */}
+          <path
+            d="M0 160 L0 120 L55 88 L85 102 L115 78 L145 94 L168 72 L195 88 L215 74 L242 90 L268 68 L295 84 L318 66 L345 82 L365 70 L390 86 L390 160Z"
+            fill="#E4DAC6"
+          />
+          {/* Near ridge — darkest */}
+          <path
+            d="M0 160 L0 135 L45 112 L75 124 L100 108 L130 118 L155 100 L180 114 L200 104 L225 116 L250 98 L278 112 L302 96 L330 110 L355 98 L390 112 L390 160Z"
+            fill="#D8CEB8"
+          />
+        </svg>
+      </div>
+
+      {/* ── Main content ────────────────────────────────────────── */}
+      <div className="flex-1 flex flex-col items-center justify-center px-6 pt-16 pb-8 relative z-10">
+
+        {/* Logo block */}
+        <div className="flex flex-col items-center gap-5 mb-10">
+          {/* Badge */}
+          <div
+            className="w-20 h-20 rounded-[24px] bg-brand-black flex items-center justify-center shadow-gold"
+            style={{ boxShadow: '0 8px 28px rgba(207,184,124,0.38), 0 2px 8px rgba(26,20,16,0.20)' }}
+          >
+            <BisonIcon size={46} className="text-brand-gold" />
           </div>
+
+          {/* Wordmark */}
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-brand-black tracking-tight">BuffBites</h1>
-            <p className="text-base text-muted mt-2 leading-relaxed">
-              Discover your next great meal<br />at CU Boulder dining halls
+            <h1 className="font-display text-[46px] font-bold text-brand-black tracking-[-0.03em] leading-none">
+              BuffBites
+            </h1>
+            <p className="text-sm text-muted mt-2.5 leading-relaxed">
+              AI-crafted meal combos for<br />CU Boulder dining halls
             </p>
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2">
-          {['AI-generated combos', 'All 5 dining halls', 'Community picks'].map((f) => (
-            <span key={f} className="rounded-full bg-white border border-gray-200 px-3 py-1 text-xs text-muted shadow-sm">
-              {f}
+        {/* Feature pills */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {FEATURES.map(({ icon, label }) => (
+            <span
+              key={label}
+              className="flex items-center gap-1.5 rounded-full bg-white/70 border border-brand-stone/30 px-3.5 py-1.5 text-xs text-muted font-medium backdrop-blur-sm shadow-card-sm"
+            >
+              <span className="text-brand-gold text-[10px]">{icon}</span>
+              {label}
             </span>
           ))}
         </div>
+      </div>
 
-        <div className="w-full space-y-3">
-          <button
-            onClick={handleSignIn}
-            disabled={signingIn}
-            className="w-full flex items-center justify-center gap-3 bg-brand-black text-white rounded-2xl py-4 font-semibold text-base shadow-md hover:opacity-90 active:scale-95 transition-all disabled:opacity-60"
-          >
-            {signingIn ? (
-              <Spinner white />
-            ) : (
-              <GoogleIcon />
-            )}
-            {signingIn ? 'Signing in…' : 'Continue with Google'}
-          </button>
+      {/* ── Sign-in panel ───────────────────────────────────────── */}
+      <div className="relative z-10 px-6 pb-12 flex flex-col items-center gap-3 w-full max-w-sm mx-auto">
+        <button
+          onClick={handleSignIn}
+          disabled={signingIn}
+          className="w-full flex items-center justify-center gap-3 bg-brand-black text-white rounded-2xl py-4 font-display font-semibold text-[15px] tracking-wide shadow-card-lg hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-60"
+        >
+          {signingIn ? <LoadingSpinner white /> : <GoogleIcon />}
+          {signingIn ? 'Signing in…' : 'Continue with Google'}
+        </button>
 
-          {error && (
-            <p className="text-center text-sm text-red-500">{error}</p>
-          )}
-        </div>
+        {error && (
+          <p className="text-center text-sm text-red-500 font-medium">{error}</p>
+        )}
 
-        <p className="text-xs text-center text-muted px-4">
-          By continuing you agree to our terms of service.<br />CU Boulder students only.
+        <p className="text-[11px] text-center text-muted/70 pt-1">
+          CU Boulder students · Buffalo pride 🦬
         </p>
       </div>
     </div>
   )
 }
 
-function Spinner({ white }: { white?: boolean }) {
+function LoadingSpinner({ white }: { white?: boolean }) {
   return (
     <svg
       className={`animate-spin h-5 w-5 ${white ? 'text-white' : 'text-brand-gold'}`}
@@ -93,7 +149,7 @@ function Spinner({ white }: { white?: boolean }) {
 
 function GoogleIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 24 24" width="19" height="19" xmlns="http://www.w3.org/2000/svg">
       <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
       <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
       <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>

@@ -2,41 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Hide scrollbar visually but keep scroll functionality */
+/* ── Scrollbar ───────────────────────────────────────────────── */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Smooth tap highlights on mobile */
+/* ── Tap highlights ──────────────────────────────────────────── */
 * { -webkit-tap-highlight-color: transparent; }
 
-/* Toast slide-up animation */
-@keyframes toast-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.animate-toast-in { animation: toast-in 0.18s ease-out forwards; }
-
-/* Page entry fade-up */
-@keyframes page-in {
-  from { opacity: 0; transform: translateY(5px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.animate-page-in { animation: page-in 0.22s ease-out forwards; }
-
-/* Keyboard focus ring — only shows for keyboard nav, not mouse (§10.5) */
+/* ── Focus ring (keyboard nav only) ─────────────────────────── */
 @layer base {
   *:focus-visible {
-    @apply outline-none ring-2 ring-brand-gold ring-offset-1;
+    @apply outline-none ring-2 ring-brand-gold ring-offset-2;
   }
 }
 
-/* Skeleton shimmer */
+/* ── Toast slide-up ──────────────────────────────────────────── */
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+.animate-toast-in { animation: toast-in 0.2s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+
+/* ── Page entry ──────────────────────────────────────────────── */
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-page-in { animation: page-in 0.24s ease-out forwards; }
+
+/* ── Skeleton shimmer (warm tones) ───────────────────────────── */
 @keyframes shimmer {
   0%   { background-position: -200% 0; }
   100% { background-position:  200% 0; }
 }
 .shimmer {
-  background: linear-gradient(90deg, #ede9e0 25%, #faf8f5 50%, #ede9e0 75%);
+  background: linear-gradient(
+    90deg,
+    #ede6d8 25%,
+    #f8f3ea 50%,
+    #ede6d8 75%
+  );
   background-size: 200% 100%;
-  animation: shimmer 1.4s ease-in-out infinite;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+/* ── Gold shimmer (for special elements) ────────────────────── */
+@keyframes gold-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.65; }
+}
+.animate-gold-pulse { animation: gold-pulse 2s ease-in-out infinite; }
+
+/* ── Subtle dot indicator bounce ────────────────────────────── */
+@keyframes dot-pop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-dot-pop { animation: dot-pop 0.3s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+
+/* ── Typography defaults ─────────────────────────────────────── */
+@layer base {
+  h1, h2, h3 {
+    font-family: var(--font-syne), ui-sans-serif, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Smooth font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 }

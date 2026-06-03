@@ -87,15 +87,15 @@ export default function ComboCard({
   return (
     <button
       onClick={onClick}
-      className="w-full text-left bg-white rounded-2xl shadow-sm border border-gray-100 p-4 transition-all duration-150 hover:shadow-md hover:scale-[1.01] active:scale-[0.99]"
+      className="w-full text-left bg-surface-card rounded-2xl shadow-card border border-surface-overlay p-4 transition-all duration-150 hover:shadow-card-lg hover:scale-[1.005] active:scale-[0.99]"
     >
       <div className="flex items-center gap-2 mb-1 min-w-0">
         {rank !== undefined && (
-          <span className="flex-shrink-0 text-lg font-bold text-brand-black w-7 text-center">
+          <span className="flex-shrink-0 font-display text-lg font-bold text-brand-black w-7 text-center">
             {rank}
           </span>
         )}
-        <h3 className="font-semibold text-brand-black text-sm leading-snug line-clamp-1">
+        <h3 className="font-display font-semibold text-brand-black text-[14px] leading-snug line-clamp-1">
           {title}
         </h3>
       </div>

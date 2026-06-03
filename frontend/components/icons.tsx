@@ -8,7 +8,7 @@ function Icon({ children, ...props }: IconProps & { children: React.ReactNode })
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={1.75}
+      strokeWidth={1.5}
       stroke="currentColor"
       width={24}
       height={24}
@@ -18,6 +18,90 @@ function Icon({ children, ...props }: IconProps & { children: React.ReactNode })
     </svg>
   )
 }
+
+/* ── Custom Brand Icons ───────────────────────────────────────── */
+
+/** Bison head silhouette — the BuffBites mascot mark */
+export function BisonIcon({
+  size = 32,
+  ...props
+}: IconProps & { size?: number }) {
+  return (
+    <svg
+      viewBox="0 0 40 44"
+      width={size}
+      height={size}
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      {/* Left horn */}
+      <path d="M12 20 C10 12 7 4 8 3 C9 2 10 2 11 3 C13 6 15 14 16 20Z" />
+      {/* Right horn */}
+      <path d="M28 20 C30 12 33 4 32 3 C31 2 30 2 29 3 C27 6 25 14 24 20Z" />
+      {/* Head — wide oval with slight forehead indent between horns */}
+      <path d="M4 30 C4 23 8 18 14 17 C16 22 24 22 26 17 C32 18 36 23 36 30 C36 37 30 43 20 43 C10 43 4 37 4 30Z" />
+    </svg>
+  )
+}
+
+/** Full BuffBites logo: bison mark in a dark badge + wordmark */
+export function BuffBitesLogo({
+  badgeSize = 64,
+  showWordmark = true,
+  className = '',
+}: {
+  badgeSize?: number
+  showWordmark?: boolean
+  className?: string
+}) {
+  return (
+    <div className={`flex flex-col items-center gap-3 ${className}`}>
+      {/* Badge */}
+      <div
+        className="rounded-[22%] bg-brand-black flex items-center justify-center shadow-gold flex-shrink-0"
+        style={{ width: badgeSize, height: badgeSize }}
+      >
+        <BisonIcon
+          size={Math.round(badgeSize * 0.60)}
+          className="text-brand-gold"
+        />
+      </div>
+
+      {showWordmark && (
+        <span
+          className="font-display font-bold text-brand-black tracking-tight select-none"
+          style={{ fontSize: Math.round(badgeSize * 0.56), lineHeight: 1 }}
+        >
+          BuffBites
+        </span>
+      )}
+    </div>
+  )
+}
+
+/** Inline wordmark only (no badge) — used in page headers */
+export function BuffBitesWordmark({
+  className = '',
+  size = 'md',
+}: {
+  className?: string
+  size?: 'sm' | 'md' | 'lg'
+}) {
+  const sizeClass = {
+    sm: 'text-lg',
+    md: 'text-xl',
+    lg: 'text-3xl',
+  }[size]
+
+  return (
+    <span className={`font-display font-bold text-brand-black tracking-tight ${sizeClass} ${className}`}>
+      BuffBites
+    </span>
+  )
+}
+
+/* ── Navigation Icons ────────────────────────────────────────── */
 
 export function SparklesIcon(props: IconProps) {
   return (
@@ -51,6 +135,8 @@ export function UserCircleIcon(props: IconProps) {
     </Icon>
   )
 }
+
+/* ── UI Icons ────────────────────────────────────────────────── */
 
 export function ChevronUpIcon(props: IconProps) {
   return (

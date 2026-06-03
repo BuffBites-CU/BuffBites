@@ -9,7 +9,7 @@ import DiningSelector from '@/components/DiningSelector'
 import MealPeriodTabs from '@/components/MealPeriodTabs'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
-import { ArrowPathIcon } from '@/components/icons'
+import { ArrowPathIcon, BisonIcon } from '@/components/icons'
 import { logMeal } from '@/services/usersService'
 import { publishCombo } from '@/services/communityService'
 import type { Combo, DiningHall, MealPeriod } from '@/types'
@@ -123,13 +123,22 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-surface pb-24">
-      <header className="sticky top-0 z-30 bg-surface/90 backdrop-blur-sm border-b border-gray-100">
+      <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
         <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
-          <h1 className="text-xl font-bold text-brand-black tracking-tight">BuffBites</h1>
+          {/* Logo mark + wordmark */}
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-lg bg-brand-black flex items-center justify-center flex-shrink-0">
+              <BisonIcon size={17} className="text-brand-gold" />
+            </div>
+            <span className="font-display text-[17px] font-bold text-brand-black tracking-tight leading-none">
+              BuffBites
+            </span>
+          </div>
+
           <div className="flex items-center gap-2">
             <button
               onClick={() => setShowDatePicker((v) => !v)}
-              className="flex items-center gap-1 text-xs font-medium text-muted bg-gray-100 rounded-full px-3 py-1 hover:bg-gray-200 transition-colors"
+              className="flex items-center gap-1 text-xs font-medium text-muted bg-surface-overlay rounded-full px-3 py-1.5 hover:bg-surface-warm transition-colors"
             >
               {selectedDateObj.label === 'Today' ? 'Today' : `${selectedDateObj.label} ${selectedDateObj.day}`}
               <svg className={`w-3 h-3 transition-transform ${showDatePicker ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -140,9 +149,9 @@ export default function HomePage() {
               onClick={refetch}
               disabled={loading}
               aria-label="Refresh combos"
-              className="p-1.5 rounded-full text-muted hover:text-brand-black hover:bg-gray-100 transition-colors disabled:opacity-40"
+              className="p-1.5 rounded-full text-muted hover:text-brand-black hover:bg-surface-overlay transition-colors disabled:opacity-40"
             >
-              <ArrowPathIcon width={18} height={18} className={loading ? 'animate-spin' : ''} />
+              <ArrowPathIcon width={17} height={17} className={loading ? 'animate-spin' : ''} />
             </button>
           </div>
         </div>
@@ -154,10 +163,10 @@ export default function HomePage() {
                 <button
                   key={opt.iso}
                   onClick={() => { setSelectedDate(opt.iso); setShowDatePicker(false) }}
-                  className={`flex flex-col items-center px-3 py-1.5 rounded-xl text-xs font-medium transition-all flex-shrink-0 ${
+                  className={`flex flex-col items-center px-3 py-1.5 rounded-xl text-xs font-display font-semibold transition-all flex-shrink-0 ${
                     opt.iso === selectedDate
-                      ? 'bg-brand-gold text-brand-black'
-                      : 'bg-gray-100 text-muted hover:bg-gray-200'
+                      ? 'bg-brand-gold text-brand-black shadow-gold-sm'
+                      : 'bg-surface-overlay text-muted hover:bg-surface-warm'
                   }`}
                 >
                   <span className="text-[10px] uppercase tracking-wide">{opt.label}</span>
