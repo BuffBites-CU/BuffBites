@@ -11,9 +11,15 @@ import ComboDetail from '@/components/ComboDetail'
 import { ArrowPathIcon } from '@/components/icons'
 import type { Combo, DiningHall, MealPeriod } from '@/types'
 
-const dateLabel = () => {
-  const d = new Date()
-  return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })
+function buildDateOptions() {
+  return Array.from({ length: 7 }, (_, i) => {
+    const d = new Date()
+    d.setDate(d.getDate() + i)
+    const iso = d.toISOString().split('T')[0]
+    const label = i === 0 ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' })
+    const day = d.getDate()
+    return { iso, label, day }
+  })
 }
 
 export default function HomePage() {
@@ -23,10 +29,13 @@ export default function HomePage() {
   const [selectedDining, setSelectedDining] = useState<DiningHall>('c4c')
   const [selectedPeriod, setSelectedPeriod] = useState<MealPeriod>('Lunch')
   const [activeCombo, setActiveCombo] = useState<Combo | null>(null)
+  const [showDatePicker, setShowDatePicker] = useState(false)
 
-  const { data, loading, error, refetch } = useCombos(selectedDining)
+  const dateOptions = useMemo(buildDateOptions, [])
+  const [selectedDate, setSelectedDate] = useState(dateOptions[0].iso)
+  const selectedDateObj = dateOptions.find((d) => d.iso === selectedDate) ?? dateOptions[0]
 
-  const dateStr = useMemo(dateLabel, [])
+  const { data, loading, error, refetch } = useCombos(selectedDining, selectedDate)
 
   const combosForPeriod = data?.combos[selectedPeriod] ?? []
   const counts = useMemo(
@@ -49,23 +58,46 @@ export default function HomePage() {
         <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
           <h1 className="text-xl font-bold text-brand-black tracking-tight">BuffBites</h1>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-medium text-muted bg-gray-100 rounded-full px-3 py-1">
-              {dateStr}
-            </span>
+            <button
+              onClick={() => setShowDatePicker((v) => !v)}
+              className="flex items-center gap-1 text-xs font-medium text-muted bg-gray-100 rounded-full px-3 py-1 hover:bg-gray-200 transition-colors"
+            >
+              {selectedDateObj.label === 'Today' ? 'Today' : `${selectedDateObj.label} ${selectedDateObj.day}`}
+              <svg className={`w-3 h-3 transition-transform ${showDatePicker ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
             <button
               onClick={refetch}
               disabled={loading}
               aria-label="Refresh combos"
               className="p-1.5 rounded-full text-muted hover:text-brand-black hover:bg-gray-100 transition-colors disabled:opacity-40"
             >
-              <ArrowPathIcon
-                width={18}
-                height={18}
-                className={loading ? 'animate-spin' : ''}
-              />
+              <ArrowPathIcon width={18} height={18} className={loading ? 'animate-spin' : ''} />
             </button>
           </div>
         </div>
+
+        {showDatePicker && (
+          <div className="max-w-md mx-auto px-4 pb-2 overflow-x-auto scrollbar-hide">
+            <div className="flex gap-2 w-max">
+              {dateOptions.map((opt) => (
+                <button
+                  key={opt.iso}
+                  onClick={() => { setSelectedDate(opt.iso); setShowDatePicker(false) }}
+                  className={`flex flex-col items-center px-3 py-1.5 rounded-xl text-xs font-medium transition-all flex-shrink-0 ${
+                    opt.iso === selectedDate
+                      ? 'bg-brand-gold text-brand-black'
+                      : 'bg-gray-100 text-muted hover:bg-gray-200'
+                  }`}
+                >
+                  <span className="text-[10px] uppercase tracking-wide">{opt.label}</span>
+                  <span className="text-base font-bold leading-none mt-0.5">{opt.day}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="max-w-md mx-auto">
           <DiningSelector selected={selectedDining} onChange={setSelectedDining} />
@@ -80,7 +112,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <div className="max-w-md mx-auto px-4 pt-4">
+      <div className="max-w-md mx-auto px-4 pt-4 animate-page-in">
         {loading && <ComboSkeletons />}
 
         {!loading && error && (
@@ -111,7 +143,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center gap-3 py-16 text-center">
             <span className="text-4xl">🍽</span>
             <p className="text-sm text-muted">
-              {selectedPeriod} isn't served at this dining hall today.
+              {selectedPeriod} isn&apos;t served at this dining hall today.
             </p>
           </div>
         )}
@@ -124,6 +156,7 @@ export default function HomePage() {
                 title={combo.title}
                 description={combo.description}
                 tags={combo.tags}
+                dishes={combo.dishes}
                 approximate_calories={combo.approximate_calories}
                 onClick={() => setActiveCombo(combo)}
               />
@@ -147,18 +180,21 @@ function ComboSkeletons() {
   return (
     <div className="space-y-3">
       {[1, 2, 3].map((i) => (
-        <div key={i} className="bg-white rounded-xl border border-gray-100 p-4 space-y-3 animate-pulse">
-          <div className="flex justify-between">
-            <div className="h-4 bg-gray-200 rounded-full w-2/3" />
-            <div className="h-4 bg-gray-200 rounded-full w-16" />
+        <div key={i} className="bg-surface-card rounded-2xl border border-gray-100 p-4 space-y-3 overflow-hidden">
+          <div className="flex justify-between items-center">
+            <div className="h-4 shimmer rounded-full w-2/3" />
+            <div className="h-4 shimmer rounded-full w-14" />
           </div>
           <div className="space-y-2">
-            <div className="h-3 bg-gray-200 rounded-full" />
-            <div className="h-3 bg-gray-200 rounded-full w-4/5" />
+            <div className="h-3 shimmer rounded-full" />
+            <div className="h-3 shimmer rounded-full w-4/5" />
+          </div>
+          <div className="border-t border-gray-50 pt-2.5">
+            <div className="h-3 shimmer rounded-full w-3/4" />
           </div>
           <div className="flex gap-2">
-            <div className="h-5 bg-gray-200 rounded-full w-16" />
-            <div className="h-5 bg-gray-200 rounded-full w-20" />
+            <div className="h-5 shimmer rounded-full w-16" />
+            <div className="h-5 shimmer rounded-full w-20" />
           </div>
         </div>
       ))}

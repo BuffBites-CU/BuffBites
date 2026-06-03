@@ -1,19 +1,22 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
-import { createUser } from '@/services/usersService'
+import { createUser, checkUsernameAvailable } from '@/services/usersService'
 import type { DietaryPreference } from '@/types'
 
 const USERNAME_REGEX = /^[a-zA-Z0-9_]{3,20}$/
+const DEBOUNCE_MS = 500
 
-const DIETARY_OPTIONS: { key: DietaryPreference; label: string; style: string }[] = [
-  { key: 'vegan', label: 'Vegan', style: 'bg-emerald-100 text-emerald-800 border-emerald-200' },
-  { key: 'vegetarian', label: 'Vegetarian', style: 'bg-green-100 text-green-800 border-green-200' },
-  { key: 'gluten-free', label: 'Gluten-Free', style: 'bg-yellow-100 text-yellow-800 border-yellow-200' },
-  { key: 'halal', label: 'Halal', style: 'bg-indigo-100 text-indigo-800 border-indigo-200' },
+const DIETARY_OPTIONS: { key: DietaryPreference; label: string; icon: string; style: string }[] = [
+  { key: 'vegan', label: 'Vegan', icon: '🌱', style: 'bg-emerald-100 text-emerald-800 border-emerald-200' },
+  { key: 'vegetarian', label: 'Vegetarian', icon: '🥗', style: 'bg-green-100 text-green-800 border-green-200' },
+  { key: 'gluten-free', label: 'Gluten-Free', icon: '🌾', style: 'bg-yellow-100 text-yellow-800 border-yellow-200' },
+  { key: 'halal', label: 'Halal', icon: '☪️', style: 'bg-indigo-100 text-indigo-800 border-indigo-200' },
 ]
+
+type UsernameStatus = 'idle' | 'checking' | 'available' | 'taken'
 
 export default function OnboardingPage() {
   const router = useRouter()
@@ -22,21 +25,44 @@ export default function OnboardingPage() {
   const [step, setStep] = useState<1 | 2>(1)
   const [username, setUsernameInput] = useState('')
   const [usernameError, setUsernameError] = useState('')
+  const [usernameStatus, setUsernameStatus] = useState<UsernameStatus>('idle')
   const [prefs, setPrefs] = useState<DietaryPreference[]>([])
   const [submitting, setSubmitting] = useState(false)
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     if (!firebaseUser) router.replace('/')
   }, [firebaseUser, router])
 
+  useEffect(() => {
+    if (debounceTimer.current) clearTimeout(debounceTimer.current)
+
+    if (!USERNAME_REGEX.test(username)) {
+      setUsernameStatus('idle')
+      return
+    }
+
+    setUsernameStatus('checking')
+    debounceTimer.current = setTimeout(async () => {
+      try {
+        const { available } = await checkUsernameAvailable(username)
+        setUsernameStatus(available ? 'available' : 'taken')
+        if (!available) setUsernameError('That username is already taken.')
+        else setUsernameError('')
+      } catch {
+        setUsernameStatus('idle')
+      }
+    }, DEBOUNCE_MS)
+
+    return () => {
+      if (debounceTimer.current) clearTimeout(debounceTimer.current)
+    }
+  }, [username])
+
   function validateUsername(val: string): string {
     if (!val) return 'Username is required.'
     if (!USERNAME_REGEX.test(val)) return '3–20 characters: letters, numbers, underscores only.'
     return ''
-  }
-
-  function handleUsernameBlur() {
-    setUsernameError(validateUsername(username))
   }
 
   function togglePref(pref: DietaryPreference) {
@@ -46,6 +72,7 @@ export default function OnboardingPage() {
   function handleStep1Next() {
     const err = validateUsername(username)
     if (err) { setUsernameError(err); return }
+    if (usernameStatus === 'taken') { setUsernameError('That username is already taken.'); return }
     setStep(2)
   }
 
@@ -75,16 +102,12 @@ export default function OnboardingPage() {
   return (
     <div className="min-h-screen bg-surface flex flex-col items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
-        {/* Progress dots */}
-        <div className="flex justify-center gap-2 mb-10">
-          {([1, 2] as const).map((s) => (
-            <div
-              key={s}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                s <= step ? 'w-8 bg-brand-gold' : 'w-2 bg-gray-200'
-              }`}
-            />
-          ))}
+        {/* Progress bar */}
+        <div className="h-1 bg-gray-200 rounded-full mb-10 overflow-hidden">
+          <div
+            className="h-full bg-brand-gold rounded-full transition-all duration-300"
+            style={{ width: step === 1 ? '50%' : '100%' }}
+          />
         </div>
 
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-7 space-y-6">
@@ -102,20 +125,34 @@ export default function OnboardingPage() {
                     autoFocus
                     value={username}
                     onChange={(e) => { setUsernameInput(e.target.value); setUsernameError('') }}
-                    onBlur={handleUsernameBlur}
                     placeholder="buffraj"
                     maxLength={20}
-                    className="w-full rounded-xl border border-gray-200 pl-8 pr-4 py-3 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                    className={`w-full rounded-xl border pl-8 pr-9 py-3 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold ${
+                      usernameStatus === 'taken' ? 'border-red-300' : usernameStatus === 'available' ? 'border-emerald-300' : 'border-gray-200'
+                    }`}
                   />
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm">
+                    {usernameStatus === 'checking' && (
+                      <svg className="animate-spin h-4 w-4 text-muted" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                      </svg>
+                    )}
+                    {usernameStatus === 'available' && <span className="text-emerald-500">✓</span>}
+                    {usernameStatus === 'taken' && <span className="text-red-400">✗</span>}
+                  </span>
                 </div>
-                {usernameError && (
+                {usernameError ? (
                   <p className="text-xs text-red-500 mt-1.5">{usernameError}</p>
-                )}
+                ) : usernameStatus === 'available' ? (
+                  <p className="text-xs text-emerald-600 mt-1.5">Username is available!</p>
+                ) : null}
               </div>
 
               <button
                 onClick={handleStep1Next}
-                className="w-full py-3.5 rounded-2xl bg-brand-gold text-brand-black font-semibold text-sm hover:opacity-90 active:scale-95 transition-all"
+                disabled={usernameStatus === 'checking' || usernameStatus === 'taken'}
+                className="w-full py-3.5 rounded-2xl bg-brand-gold text-brand-black font-semibold text-sm hover:opacity-90 active:scale-95 transition-all disabled:opacity-50"
               >
                 Next →
               </button>
@@ -132,14 +169,15 @@ export default function OnboardingPage() {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {DIETARY_OPTIONS.map(({ key, label, style }) => (
+                {DIETARY_OPTIONS.map(({ key, label, icon, style }) => (
                   <button
                     key={key}
                     onClick={() => togglePref(key)}
-                    className={`rounded-full px-4 py-2 text-sm font-medium border transition-all ${
+                    className={`rounded-full px-4 py-2 text-sm font-medium border transition-all flex items-center gap-1.5 ${
                       prefs.includes(key) ? style : 'bg-gray-100 text-muted border-transparent'
                     }`}
                   >
+                    <span>{icon}</span>
                     {label}
                   </button>
                 ))}

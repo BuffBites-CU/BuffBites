@@ -15,3 +15,21 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 .animate-toast-in { animation: toast-in 0.18s ease-out forwards; }
+
+/* Page entry fade-up */
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-page-in { animation: page-in 0.22s ease-out forwards; }
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #ede9e0 25%, #faf8f5 50%, #ede9e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}

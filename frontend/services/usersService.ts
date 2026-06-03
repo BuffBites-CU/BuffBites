@@ -8,6 +8,10 @@ export function createUser(user: UserCreate): Promise<UserResponse> {
   })
 }
 
+export function checkUsernameAvailable(username: string): Promise<{ available: boolean }> {
+  return apiFetch<{ available: boolean }>(`/api/users/check-username/${encodeURIComponent(username)}`)
+}
+
 export function getUser(firebase_uid: string): Promise<UserResponse> {
   return apiFetch<UserResponse>(`/api/users/${firebase_uid}`)
 }

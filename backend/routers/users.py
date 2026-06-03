@@ -30,6 +30,11 @@ from pydantic_models.user_models import UserCreate, UserResponse
 
 router = APIRouter(prefix="/api/users", tags=["users"])
 
+@router.get("/check-username/{username}")
+async def check_username(username: str):
+    taken = await users_collection.find_one({"username": username})
+    return {"available": taken is None}
+
 @router.post("/", response_model=UserResponse)
 async def create_user(user: UserCreate):
     # Check if user already exists
