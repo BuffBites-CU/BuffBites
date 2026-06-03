@@ -9,6 +9,9 @@ const config: NextConfig = {
       },
     ],
   },
+  turbopack: {
+    root: import.meta.dirname,
+  },
 }
 
 export default config
