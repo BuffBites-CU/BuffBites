@@ -17,9 +17,17 @@ Usage:
     from pydantic_models.user_models import UserCreate, UserResponse
 """
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
-from datetime import datetime
+from datetime import datetime, timezone
+
+class MealLogEntry(BaseModel):
+    title: str
+    calories: int
+    date: str          # YYYY-MM-DD
+    dining_hall: str
+    meal_period: str
+    logged_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 class UserCreate(BaseModel):
     firebase_uid: str
@@ -28,6 +36,7 @@ class UserCreate(BaseModel):
     dietary_preferences: list[str] = []
     restrictions: list[str] = []
     avatar: Optional[str] = None
+    preferred_calories_per_meal: Optional[int] = None
 
 class UserResponse(BaseModel):
     firebase_uid: str
@@ -38,3 +47,5 @@ class UserResponse(BaseModel):
     avatar: Optional[str]
     karma: int = 0
     created_at: datetime
+    preferred_calories_per_meal: Optional[int] = None
+    meal_log: list[MealLogEntry] = []

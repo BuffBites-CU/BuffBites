@@ -26,7 +26,7 @@ Usage:
 from fastapi import APIRouter, HTTPException
 from datetime import datetime, timedelta, timezone
 from database import users_collection
-from pydantic_models.user_models import UserCreate, UserResponse
+from pydantic_models.user_models import UserCreate, UserResponse, MealLogEntry
 
 router = APIRouter(prefix="/api/users", tags=["users"])
 
@@ -71,3 +71,13 @@ async def update_user(firebase_uid: str, updates: dict):
     if result.matched_count == 0:
         raise HTTPException(status_code=404, detail="User not found")
     return {"message": "User updated successfully"}
+
+@router.post("/{firebase_uid}/meal-log")
+async def log_meal(firebase_uid: str, entry: MealLogEntry):
+    result = await users_collection.update_one(
+        {"firebase_uid": firebase_uid},
+        {"$push": {"meal_log": entry.model_dump()}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="User not found")
+    return {"message": "Meal logged"}

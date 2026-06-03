@@ -11,7 +11,7 @@ import { getUserCombos, deleteCombo } from '@/services/communityService'
 import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon } from '@/components/icons'
 import { DINING_HALL_LABELS } from '@/types'
 import EditComboModal from '@/components/EditComboModal'
-import type { DietaryPreference, UserResponse, CommunityCombo } from '@/types'
+import type { DietaryPreference, UserResponse, CommunityCombo, MealLogEntry } from '@/types'
 
 const DIETARY_OPTIONS: { key: DietaryPreference; label: string; style: string }[] = [
   { key: 'vegan', label: 'Vegan', style: 'bg-emerald-100 text-emerald-800' },
@@ -26,6 +26,10 @@ function formatExpiry(iso: string) {
   const h = Math.floor(ms / 3_600_000)
   const m = Math.floor((ms % 3_600_000) / 60_000)
   return { text: h > 0 ? `${h}h ${m}m left` : `${m}m left`, urgent: h < 1 }
+}
+
+function todayISO() {
+  return new Date().toISOString().split('T')[0]
 }
 
 function karmaLabel(karma: number): string {
@@ -43,7 +47,7 @@ export default function ProfilePage() {
   const [profile, setProfile] = useState<UserResponse | null>(null)
   const [loading, setLoading] = useState(true)
   const [editMode, setEditMode] = useState(false)
-  const [draft, setDraft] = useState({ username: '', dietary_preferences: [] as DietaryPreference[] })
+  const [draft, setDraft] = useState({ username: '', dietary_preferences: [] as DietaryPreference[], preferred_calories_per_meal: '' as string })
   const [saving, setSaving] = useState(false)
   const [usernameError, setUsernameError] = useState('')
 
@@ -72,7 +76,13 @@ export default function ProfilePage() {
 
   function enterEdit() {
     if (!profile) return
-    setDraft({ username: profile.username, dietary_preferences: [...profile.dietary_preferences] })
+    setDraft({
+      username: profile.username,
+      dietary_preferences: [...profile.dietary_preferences],
+      preferred_calories_per_meal: profile.preferred_calories_per_meal != null
+        ? String(profile.preferred_calories_per_meal)
+        : '',
+    })
     setUsernameError('')
     setEditMode(true)
   }
@@ -94,15 +104,19 @@ export default function ProfilePage() {
     }
 
     setSaving(true)
-    const changes: Partial<typeof draft> = {}
+    const parsedCal = draft.preferred_calories_per_meal !== '' ? parseInt(draft.preferred_calories_per_meal, 10) : undefined
+    const changes: Record<string, unknown> = {}
     if (draft.username !== profile.username) changes.username = draft.username
     if (JSON.stringify(draft.dietary_preferences) !== JSON.stringify(profile.dietary_preferences)) {
       changes.dietary_preferences = draft.dietary_preferences
     }
+    if (parsedCal !== profile.preferred_calories_per_meal) {
+      changes.preferred_calories_per_meal = parsedCal ?? null
+    }
 
     try {
-      await updateUser(firebaseUid, changes)
-      setProfile((p) => p ? { ...p, ...changes } : p)
+      await updateUser(firebaseUid, changes as Parameters<typeof updateUser>[1])
+      setProfile((p) => p ? { ...p, ...changes, preferred_calories_per_meal: parsedCal ?? undefined } : p)
       setEditMode(false)
       showToast('Profile updated!', 'success')
     } catch (e) {
@@ -222,6 +236,25 @@ export default function ProfilePage() {
                 </div>
               </div>
 
+              <div>
+                <label className="text-xs font-semibold text-muted uppercase tracking-wider block mb-1.5">
+                  Calorie Goal per Meal
+                </label>
+                <div className="relative">
+                  <input
+                    type="number"
+                    min={100}
+                    max={3000}
+                    placeholder="e.g. 700"
+                    value={draft.preferred_calories_per_meal}
+                    onChange={(e) => setDraft((d) => ({ ...d, preferred_calories_per_meal: e.target.value }))}
+                    className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                  />
+                  <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted text-xs">cal</span>
+                </div>
+                <p className="text-[11px] text-muted mt-1">Leave empty to remove your goal</p>
+              </div>
+
               <div className="flex gap-3 pt-1">
                 <button
                   onClick={() => setEditMode(false)}
@@ -260,6 +293,13 @@ export default function ProfilePage() {
                 )}
               </div>
 
+              {profile.preferred_calories_per_meal != null && (
+                <div className="px-5 py-4 border-t border-gray-50">
+                  <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-1">Calorie Goal</p>
+                  <p className="text-sm text-brand-black font-medium">{profile.preferred_calories_per_meal} cal per meal</p>
+                </div>
+              )}
+
               <button
                 onClick={enterEdit}
                 className="w-full flex items-center justify-between px-5 py-4 text-sm font-medium text-brand-black hover:bg-gray-50 transition-colors"
@@ -280,6 +320,12 @@ export default function ProfilePage() {
             </div>
           )}
         </div>
+
+        {/* Today's Meals */}
+        <TodaysMeals
+          mealLog={profile.meal_log ?? []}
+          calorieGoal={profile.preferred_calories_per_meal}
+        />
 
         {/* My Combos */}
         <div>
@@ -392,6 +438,75 @@ export default function ProfilePage() {
           }}
         />
       )}
+    </div>
+  )
+}
+
+function TodaysMeals({
+  mealLog,
+  calorieGoal,
+}: {
+  mealLog: MealLogEntry[]
+  calorieGoal?: number
+}) {
+  const today = todayISO()
+  const todayMeals = mealLog.filter((e) => e.date === today)
+  const totalCal = todayMeals.reduce((sum, e) => sum + e.calories, 0)
+
+  if (todayMeals.length === 0 && !calorieGoal) return null
+
+  const pct = calorieGoal && totalCal > 0
+    ? Math.min(Math.round((totalCal / (calorieGoal * 3)) * 100), 100)
+    : 0
+
+  return (
+    <div>
+      <h2 className="text-base font-bold text-brand-black mb-3">Today&apos;s Calories</h2>
+      <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
+        {calorieGoal && (
+          <div className="px-5 pt-4 pb-3 border-b border-gray-50">
+            <div className="flex items-end justify-between mb-2">
+              <div>
+                <span className="text-2xl font-bold text-brand-black">{totalCal}</span>
+                <span className="text-sm text-muted ml-1">/ {calorieGoal * 3} cal today</span>
+              </div>
+              <span className="text-xs text-muted">{calorieGoal} cal/meal goal</span>
+            </div>
+            <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+              <div
+                className={`h-full rounded-full transition-all duration-500 ${
+                  pct >= 100 ? 'bg-red-400' : pct >= 75 ? 'bg-amber-400' : 'bg-brand-gold'
+                }`}
+                style={{ width: `${pct}%` }}
+              />
+            </div>
+          </div>
+        )}
+
+        {todayMeals.length === 0 ? (
+          <p className="text-sm text-muted px-5 py-4">No meals logged today.</p>
+        ) : (
+          <div className="divide-y divide-gray-50">
+            {todayMeals.map((entry, i) => (
+              <div key={i} className="flex items-center justify-between px-5 py-3">
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-medium text-brand-black line-clamp-1">{entry.title}</p>
+                  <p className="text-[11px] text-muted mt-0.5">{entry.meal_period} · {entry.dining_hall}</p>
+                </div>
+                <span className="text-sm font-semibold text-brand-gold ml-3 flex-shrink-0">
+                  {entry.calories} cal
+                </span>
+              </div>
+            ))}
+            {todayMeals.length > 1 && (
+              <div className="flex items-center justify-between px-5 py-3 bg-gray-50/60">
+                <span className="text-xs font-semibold text-muted uppercase tracking-wider">Total</span>
+                <span className="text-sm font-bold text-brand-black">{totalCal} cal</span>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { apiFetch } from './api'
-import type { UserCreate, UserResponse } from '@/types'
+import type { UserCreate, UserResponse, MealLogEntry } from '@/types'
 
 export function createUser(user: UserCreate): Promise<UserResponse> {
   return apiFetch<UserResponse>('/api/users/', {
@@ -23,5 +23,15 @@ export function updateUser(
   return apiFetch<{ message: string }>(`/api/users/${firebase_uid}`, {
     method: 'PUT',
     body: JSON.stringify(updates),
+  })
+}
+
+export function logMeal(
+  firebase_uid: string,
+  entry: Omit<MealLogEntry, 'logged_at'>,
+): Promise<{ message: string }> {
+  return apiFetch<{ message: string }>(`/api/users/${firebase_uid}/meal-log`, {
+    method: 'POST',
+    body: JSON.stringify(entry),
   })
 }

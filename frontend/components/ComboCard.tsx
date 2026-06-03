@@ -54,6 +54,9 @@ interface Props {
   rank?: number
   author?: string
   onClick: () => void
+  ateState?: 'ate' | 'skipped' | null
+  onAte?: (calories: number) => void
+  onSkip?: () => void
 }
 
 export default function ComboCard({
@@ -69,6 +72,9 @@ export default function ComboCard({
   rank,
   author,
   onClick,
+  ateState,
+  onAte,
+  onSkip,
 }: Props) {
   const expiry = expires_at ? formatExpiry(expires_at) : null
   const visibleTags = tags.slice(0, 2)
@@ -169,6 +175,38 @@ export default function ComboCard({
           )}
           <ClockIcon width={12} height={12} />
           {expiry.text}
+        </div>
+      )}
+
+      {onAte !== undefined && (
+        <div className="flex items-center gap-2 mt-3 pt-2.5 border-t border-gray-100">
+          <span className="text-[11px] text-muted flex-1">Did you eat this?</span>
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              if (ateState !== 'ate') onAte(approximate_calories ?? 0)
+            }}
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
+              ateState === 'ate'
+                ? 'bg-emerald-100 text-emerald-700'
+                : 'bg-gray-100 text-muted hover:bg-emerald-50 hover:text-emerald-700'
+            }`}
+          >
+            {ateState === 'ate' ? '✓ Ate it' : 'Ate it'}
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              if (ateState !== 'skipped') onSkip?.()
+            }}
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
+              ateState === 'skipped'
+                ? 'bg-gray-200 text-gray-600'
+                : 'bg-gray-100 text-muted hover:bg-gray-200'
+            }`}
+          >
+            {ateState === 'skipped' ? '✗ Skipped' : 'Skip'}
+          </button>
         </div>
       )}
     </button>

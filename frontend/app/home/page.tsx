@@ -3,12 +3,14 @@
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
+import { useToast } from '@/context/ToastContext'
 import { useCombos } from '@/hooks/useCombos'
 import DiningSelector from '@/components/DiningSelector'
 import MealPeriodTabs from '@/components/MealPeriodTabs'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
 import { ArrowPathIcon } from '@/components/icons'
+import { logMeal } from '@/services/usersService'
 import type { Combo, DiningHall, MealPeriod } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
@@ -32,12 +34,14 @@ function buildDateOptions() {
 
 export default function HomePage() {
   const router = useRouter()
-  const { firebaseUser, loading: authLoading } = useAuth()
+  const { firebaseUser, firebaseUid, loading: authLoading } = useAuth()
+  const { showToast } = useToast()
 
   const [selectedDining, setSelectedDining] = useState<DiningHall>('c4c')
   const [selectedPeriod, setSelectedPeriod] = useState<MealPeriod>('Lunch')
   const [activeCombo, setActiveCombo] = useState<Combo | null>(null)
   const [showDatePicker, setShowDatePicker] = useState(false)
+  const [ateStates, setAteStates] = useState<Record<string, 'ate' | 'skipped'>>({})
 
   const dateOptions = useMemo(buildDateOptions, [])
   const [selectedDate, setSelectedDate] = useState(dateOptions[0].iso)
@@ -54,6 +58,34 @@ export default function HomePage() {
     }),
     [data],
   )
+
+  function ateKey(combo: Combo, index: number) {
+    return `${selectedDining}-${selectedDate}-${selectedPeriod}-${index}`
+  }
+
+  async function handleAte(combo: Combo, index: number) {
+    if (!firebaseUid) return
+    const key = ateKey(combo, index)
+    setAteStates((prev) => ({ ...prev, [key]: 'ate' }))
+    try {
+      await logMeal(firebaseUid, {
+        title: combo.title,
+        calories: combo.approximate_calories,
+        date: selectedDate,
+        dining_hall: selectedDining,
+        meal_period: selectedPeriod,
+      })
+      showToast(`Logged ${combo.approximate_calories} cal`, 'success')
+    } catch {
+      setAteStates((prev) => { const n = { ...prev }; delete n[key]; return n })
+      showToast('Failed to log meal', 'error')
+    }
+  }
+
+  function handleSkip(combo: Combo, index: number) {
+    const key = ateKey(combo, index)
+    setAteStates((prev) => ({ ...prev, [key]: 'skipped' }))
+  }
 
   if (!authLoading && !firebaseUser) {
     router.replace('/')
@@ -184,6 +216,9 @@ export default function HomePage() {
                     dishes={combo.dishes}
                     approximate_calories={combo.approximate_calories}
                     onClick={() => setActiveCombo(combo)}
+                    ateState={ateStates[ateKey(combo, i)] ?? null}
+                    onAte={(cal) => handleAte(combo, i)}
+                    onSkip={() => handleSkip(combo, i)}
                   />
                 </div>
               ))}

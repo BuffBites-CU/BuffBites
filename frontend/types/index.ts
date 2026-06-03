@@ -1,5 +1,14 @@
 export type DietaryPreference = 'vegan' | 'vegetarian' | 'gluten-free' | 'halal'
 
+export interface MealLogEntry {
+  title: string
+  calories: number
+  date: string       // YYYY-MM-DD
+  dining_hall: string
+  meal_period: string
+  logged_at: string
+}
+
 export interface UserCreate {
   firebase_uid: string
   email: string
@@ -7,12 +16,15 @@ export interface UserCreate {
   dietary_preferences: DietaryPreference[]
   restrictions?: string[]
   avatar?: string
+  preferred_calories_per_meal?: number
 }
 
 export interface UserResponse extends UserCreate {
   id: string
   karma: number
   created_at: string
+  preferred_calories_per_meal?: number
+  meal_log?: MealLogEntry[]
 }
 
 export type DiningHall = 'alley' | 'c4c' | 'libby' | 'sewall' | 'village_center'
