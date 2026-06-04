@@ -22,8 +22,16 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'BuffBites',
   description: 'AI-powered dining combo discovery for CU Boulder',
+  manifest: '/manifest.json',
   icons: {
-    icon: '/logoi.jpeg',
+    icon:      '/logoi.jpeg',
+    apple:     '/logoi.jpeg',
+    shortcut:  '/logoi.jpeg',
+  },
+  appleWebApp: {
+    capable: true,
+    title: 'BuffBites',
+    statusBarStyle: 'black-translucent',
   },
 }
 
