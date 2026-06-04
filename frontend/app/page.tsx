@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useAuth } from '@/context/AuthContext'
-import { BisonIcon } from '@/components/icons'
+import Image from 'next/image'
 
 const FEATURES = [
   { icon: '✦', label: 'AI-crafted combos' },
@@ -78,20 +78,15 @@ export default function LandingPage() {
 
         {/* Logo block */}
         <div className="flex flex-col items-center gap-5 mb-10">
-          {/* Badge */}
-          <div
-            className="w-20 h-20 rounded-[24px] bg-brand-black flex items-center justify-center shadow-gold"
-            style={{ boxShadow: '0 8px 28px rgba(207,184,124,0.38), 0 2px 8px rgba(26,20,16,0.20)' }}
-          >
-            <BisonIcon size={46} className="text-brand-gold" />
+          {/* Logo */}
+          <div className="w-24 h-24 rounded-full overflow-hidden shadow-gold flex-shrink-0"
+            style={{ boxShadow: '0 8px 28px rgba(207,184,124,0.38), 0 2px 8px rgba(26,20,16,0.20)' }}>
+            <Image src="/logoi.jpeg" alt="BuffBites logo" width={96} height={96} className="object-cover w-full h-full" priority />
           </div>
 
-          {/* Wordmark */}
+          {/* Tagline */}
           <div className="text-center">
-            <h1 className="font-display text-[46px] font-bold text-brand-black tracking-[-0.03em] leading-none">
-              BuffBites
-            </h1>
-            <p className="text-sm text-muted mt-2.5 leading-relaxed">
+            <p className="text-sm text-muted leading-relaxed">
               AI-crafted meal combos for<br />CU Boulder dining halls
             </p>
           </div>

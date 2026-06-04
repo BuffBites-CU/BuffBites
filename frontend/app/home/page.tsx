@@ -9,7 +9,8 @@ import DiningSelector from '@/components/DiningSelector'
 import MealPeriodTabs from '@/components/MealPeriodTabs'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
-import { ArrowPathIcon, BisonIcon } from '@/components/icons'
+import { ArrowPathIcon } from '@/components/icons'
+import Image from 'next/image'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo } from '@/services/communityService'
 import type { Combo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals } from '@/types'
@@ -181,10 +182,10 @@ export default function HomePage() {
     <div className="min-h-screen bg-surface pb-24">
       <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
         <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
-          {/* Logo mark + wordmark */}
+          {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-brand-black flex items-center justify-center flex-shrink-0">
-              <BisonIcon size={17} className="text-brand-gold" />
+            <div className="w-7 h-7 rounded-full overflow-hidden flex-shrink-0">
+              <Image src="/logoi.jpeg" alt="BuffBites" width={28} height={28} className="object-cover w-full h-full" />
             </div>
             <span className="font-display text-[17px] font-bold text-brand-black tracking-tight leading-none">
               BuffBites
