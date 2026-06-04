@@ -84,9 +84,22 @@ async def log_meal(firebase_uid: str, entry: MealLogEntry):
 
 @router.delete("/{firebase_uid}/meal-log")
 async def delete_meal(firebase_uid: str, logged_at: str):
+    try:
+        # logged_at is stored as BSON Date — parse ISO string back to datetime for matching
+        ts = logged_at.replace("Z", "+00:00")
+        logged_at_dt = datetime.fromisoformat(ts)
+        if logged_at_dt.tzinfo is None:
+            logged_at_dt = logged_at_dt.replace(tzinfo=timezone.utc)
+    except (ValueError, OverflowError):
+        raise HTTPException(status_code=400, detail="Invalid logged_at format")
+
+    # Use a 1-second window to tolerate any microsecond precision differences
+    start = logged_at_dt.replace(microsecond=0)
+    end   = start + timedelta(seconds=1)
+
     result = await users_collection.update_one(
         {"firebase_uid": firebase_uid},
-        {"$pull": {"meal_log": {"logged_at": {"$regex": f"^{logged_at[:19]}"}}}},
+        {"$pull": {"meal_log": {"logged_at": {"$gte": start, "$lt": end}}}}
     )
     if result.matched_count == 0:
         raise HTTPException(status_code=404, detail="User not found")
