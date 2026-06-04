@@ -12,7 +12,7 @@ from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish, 
 
 router = APIRouter()
 
-DATA_DIR   = Path(__file__).parent.parent.parent / "scraping_scripts" / "data"
+DATA_DIR   = Path(__file__).parent.parent / "scraping_scripts" / "data"
 COMBO_PROMPT = (Path(__file__).parent.parent / "prompts" / "combos.txt").read_text()
 
 DINING_FILES: dict[str, str] = {
