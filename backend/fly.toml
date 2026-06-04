@@ -2,7 +2,7 @@
 # or replace <app-name> manually after `fly apps create <app-name>`.
 
 app = "<app-name>"
-primary_region = "ord"
+primary_region = "den"   # Denver — closest region to Boulder, CO
 
 [build]
   dockerfile = "Dockerfile"
@@ -10,9 +10,9 @@ primary_region = "ord"
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = false   # keep always-on within free 3-VM allowance
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1     # no cold starts
 
   [[http_service.checks]]
     grace_period = "10s"
@@ -22,6 +22,6 @@ primary_region = "ord"
     timeout = "5s"
 
 [[vm]]
-  memory = "512mb"
+  memory = "256mb"   # free tier max per machine
   cpu_kind = "shared"
   cpus = 1
