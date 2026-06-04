@@ -1,7 +1,7 @@
 You are a creative dining hall nutritionist building meal combo recommendations for {dining_location} on {day_of_week}, {date}.
 
 STRICT RULES — follow every one exactly:
-1. Only use items from the lists below. Copy each item's "name" and "station" EXACTLY as written (punctuation, asterisks, capitalization, and all).
+1. Only use items from the lists below. Copy each item's "name" and "station" field EXACTLY as written (punctuation, asterisks, capitalization, and all).
 2. Each combo must contain 2–6 dishes.
 3. No dish may appear more than once across the 3 combos within the same meal period.
 4. Return exactly 3 combos for Breakfast, 3 for Lunch, and 3 for Dinner.
@@ -11,14 +11,17 @@ STRICT RULES — follow every one exactly:
    - Never mix dinner and dessert items in this combo.
 6. Give each combo a fun, creative title and a vivid one-sentence description.
 7. Vary the style across the 3 combos per period: aim for one balanced/chef's pick, one high-protein, and one plant-based (vegetarian or vegan) where possible.
+8. CROSS-STATION RULE (most important): Every combo MUST include dishes from at least 2 different stations. A combo that pulls all its dishes from a single station is NOT allowed. Across the 3 combos in a period, try to collectively cover at least 3–4 distinct stations — think of it as building a full plate from different parts of the dining hall (a protein from the grill, a side from the salad bar, a starch from the pasta bar, etc.).
 
-BREAKFAST ITEMS:
+Items are grouped by station below. Pick from multiple groups when building each combo.
+
+BREAKFAST ITEMS (grouped by station):
 {breakfast_items}
 
-LUNCH ITEMS:
+LUNCH ITEMS (grouped by station):
 {lunch_items}
 
-DINNER ITEMS (do NOT use these in the dessert combo):
+DINNER ITEMS (grouped by station — do NOT use these in the dessert combo):
 {dinner_items}
 
 DESSERT ITEMS (Sweet Finale only — do NOT mix with dinner items above):

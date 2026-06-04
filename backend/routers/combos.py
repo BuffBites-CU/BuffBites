@@ -57,8 +57,9 @@ _ITEM_EXCLUDE_SUFFIXES = (
 # Raw-prep words — "Diced Onion", "Medium Diced Yellow Onion", etc. are toppings not dishes
 _ITEM_EXCLUDE_WORDS = {"diced", "sliced", "shredded", "chopped", "minced"}
 
-# Max items sent to Claude per meal period (keeps prompt concise)
-_MAX_ITEMS_PER_PERIOD = 25
+# Per-station and total item caps for the prompt
+_MAX_ITEMS_PER_STATION = 5   # prevents any one station from dominating
+_MAX_ITEMS_PER_PERIOD  = 35  # total items per meal period sent to Claude
 
 
 # ── Pydantic models for Claude's structured JSON output ────────────────────
@@ -138,9 +139,31 @@ def _item_line(item: dict) -> str:
 
 
 def _format_pool(items: list[dict], limit: int = _MAX_ITEMS_PER_PERIOD) -> str:
+    """Format items grouped by station so Claude clearly sees cross-station options."""
     if not items:
         return "  (none available)"
-    return "\n".join(_item_line(i) for i in items[:limit])
+
+    # Group items by station, preserving insertion order
+    by_station: dict[str, list[dict]] = defaultdict(list)
+    for item in items:
+        by_station[item["category"]].append(item)
+
+    lines: list[str] = []
+    total = 0
+    for station, station_items in by_station.items():
+        if total >= limit:
+            break
+        # Readable label: strip leading "Area - " prefix for display
+        label = station.split(" - ", 1)[-1] if " - " in station else station
+        lines.append(f"[{label}]")
+        for item in station_items[:_MAX_ITEMS_PER_STATION]:
+            if total >= limit:
+                break
+            lines.append(_item_line(item))
+            total += 1
+        lines.append("")  # blank line between stations
+
+    return "\n".join(lines).rstrip()
 
 
 # ── Post-processing helpers ────────────────────────────────────────────────
@@ -339,6 +362,21 @@ def generate_combos(
             f'"{err.dish_name}": {err.issue}',
             file=sys.stderr,
         )
+
+    # ── Log single-station violations ─────────────────────────────────────
+    for period, combos in [
+        ("Breakfast", response.combos.Breakfast),
+        ("Lunch",     response.combos.Lunch),
+        ("Dinner",    response.combos.Dinner),
+    ]:
+        for combo in combos:
+            stations = {d.station for d in combo.dishes}
+            if len(stations) == 1:
+                print(
+                    f"[CROSS-STATION WARN] {period} / {combo.title!r} "
+                    f"uses only one station: {next(iter(stations))!r}",
+                    file=sys.stderr,
+                )
 
     return response
 
