@@ -82,6 +82,16 @@ async def log_meal(firebase_uid: str, entry: MealLogEntry):
         raise HTTPException(status_code=404, detail="User not found")
     return {"message": "Meal logged"}
 
+@router.delete("/{firebase_uid}/meal-log")
+async def delete_meal(firebase_uid: str, logged_at: str):
+    result = await users_collection.update_one(
+        {"firebase_uid": firebase_uid},
+        {"$pull": {"meal_log": {"logged_at": {"$regex": f"^{logged_at[:19]}"}}}},
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="User not found")
+    return {"message": "Meal removed"}
+
 @router.post("/{firebase_uid}/favorites")
 async def add_favorite(firebase_uid: str, combo: FavoriteCombo):
     result = await users_collection.update_one(

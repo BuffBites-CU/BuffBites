@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
-import { getUser, updateUser } from '@/services/usersService'
+import { getUser, updateUser, deleteMeal } from '@/services/usersService'
 import { getUserCombos, deleteCombo } from '@/services/communityService'
 import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon, ChevronDownIcon } from '@/components/icons'
 import { DINING_HALLS, DINING_HALL_LABELS } from '@/types'
@@ -183,9 +183,10 @@ function WeeklyChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[]; goalPe
 }
 
 function MealHistoryDay({
-  date, entries, total, goalPerMeal,
+  date, entries, total, goalPerMeal, onDelete,
 }: {
   date: string; entries: MealLogEntry[]; total: number; goalPerMeal?: number
+  onDelete: (logged_at: string) => void
 }) {
   const [open, setOpen] = useState(date === todayISO())
   const isToday = date === todayISO()
@@ -234,7 +235,7 @@ function MealHistoryDay({
       {open && (
         <div className="divide-y divide-surface-overlay border-t border-surface-overlay">
           {entries.map((entry, i) => (
-            <div key={i} className="flex items-center gap-3 px-4 py-3">
+            <div key={i} className="flex items-center gap-3 px-4 py-3 group">
               <div className="w-2 h-2 rounded-full bg-brand-gold/60 flex-shrink-0 ml-1" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-display font-semibold text-brand-black line-clamp-1">{entry.title}</p>
@@ -242,11 +243,20 @@ function MealHistoryDay({
                   {entry.meal_period} · {DINING_HALL_LABELS[entry.dining_hall as DiningHall] ?? entry.dining_hall}
                 </p>
               </div>
-              <div className="flex flex-col items-end gap-0.5 flex-shrink-0">
-                <span className="text-xs font-semibold text-brand-gold">{entry.calories} cal</span>
-                {entry.protein_g != null && entry.protein_g > 0 && (
-                  <span className="text-[10px] text-muted">{entry.protein_g}g protein</span>
-                )}
+              <div className="flex items-center gap-2 flex-shrink-0">
+                <div className="flex flex-col items-end gap-0.5">
+                  <span className="text-xs font-semibold text-brand-gold">{entry.calories} cal</span>
+                  {entry.protein_g != null && entry.protein_g > 0 && (
+                    <span className="text-[10px] text-muted">{entry.protein_g}g protein</span>
+                  )}
+                </div>
+                <button
+                  onClick={() => onDelete(entry.logged_at)}
+                  className="opacity-0 group-hover:opacity-100 active:opacity-100 p-1.5 rounded-full hover:bg-red-50 transition-all"
+                  aria-label="Remove meal"
+                >
+                  <XMarkIcon width={13} height={13} className="text-red-400" />
+                </button>
               </div>
             </div>
           ))}
@@ -280,6 +290,7 @@ export default function ProfilePage() {
   const [saving, setSaving] = useState(false)
   const [usernameError, setUsernameError] = useState('')
   const [historyLimit, setHistoryLimit] = useState(7)
+  const [deletingMeal, setDeletingMeal] = useState<string | null>(null)
 
   const [myCombos, setMyCombos] = useState<CommunityCombo[]>([])
   const [combosLoading, setCombosLoading] = useState(false)
@@ -357,6 +368,22 @@ export default function ProfilePage() {
       if (msg.toLowerCase().includes('username')) setUsernameError('That username is already taken.')
     } finally {
       setSaving(false)
+    }
+  }
+
+  async function handleDeleteMeal(logged_at: string) {
+    if (!firebaseUid || deletingMeal) return
+    setDeletingMeal(logged_at)
+    // Optimistic update
+    setProfile((p) => p ? { ...p, meal_log: (p.meal_log ?? []).filter((e) => e.logged_at !== logged_at) } : p)
+    try {
+      await deleteMeal(firebaseUid, logged_at)
+    } catch {
+      // Roll back on failure by refetching
+      getUser(firebaseUid).then(setProfile).catch(() => {})
+      showToast('Failed to remove meal', 'error')
+    } finally {
+      setDeletingMeal(null)
     }
   }
 
@@ -718,6 +745,7 @@ export default function ProfilePage() {
                   entries={entries}
                   total={total}
                   goalPerMeal={profile.preferred_calories_per_meal}
+                  onDelete={handleDeleteMeal}
                 />
               ))}
             </div>

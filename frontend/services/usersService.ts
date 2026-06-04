@@ -26,6 +26,16 @@ export function updateUser(
   })
 }
 
+export function deleteMeal(
+  firebase_uid: string,
+  logged_at: string,
+): Promise<{ message: string }> {
+  const params = new URLSearchParams({ logged_at })
+  return apiFetch<{ message: string }>(`/api/users/${firebase_uid}/meal-log?${params}`, {
+    method: 'DELETE',
+  })
+}
+
 export function addFavorite(
   firebase_uid: string,
   combo: Omit<FavoriteCombo, 'saved_at'>,
