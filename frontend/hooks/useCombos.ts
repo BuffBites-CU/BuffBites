@@ -1,51 +1,56 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { generateCombos } from '@/services/combosService'
-import type { ComboResponse, DiningHall } from '@/types'
+import type { ComboResponse, DiningHall, NutritionGoals } from '@/types'
 
-// Module-level cache survives navigation (component unmount/remount)
 const comboCache = new Map<string, ComboResponse>()
 
-export function useCombos(dining: DiningHall, date?: string) {
+function goalsKey(goals?: NutritionGoals): string {
+  if (!goals) return ''
+  const parts = [
+    goals.protein_g_per_meal ? `p${goals.protein_g_per_meal}` : '',
+    goals.dietary_focus ?? '',
+    (goals.priority_nutrients ?? []).sort().join('+'),
+  ]
+  return parts.filter(Boolean).join('_')
+}
+
+export function useCombos(dining: DiningHall, date?: string, goals?: NutritionGoals) {
   const today = useMemo(() => new Date().toISOString().split('T')[0], [])
   const resolvedDate = date ?? today
+  const gKey = useMemo(() => goalsKey(goals), [goals])
 
-  // Refs so the fetch effect can read current values without being re-triggered by them
+  const cacheKey = `${dining}::${resolvedDate}::${gKey}`
+
   const diningRef = useRef(dining)
-  const dateRef = useRef(resolvedDate)
+  const dateRef   = useRef(resolvedDate)
+  const goalsRef  = useRef(goals)
+  const gKeyRef   = useRef(gKey)
   diningRef.current = dining
-  dateRef.current = resolvedDate
+  dateRef.current   = resolvedDate
+  goalsRef.current  = goals
+  gKeyRef.current   = gKey
 
-  const [data, setData] = useState<ComboResponse | null>(() => comboCache.get(`${dining}::${resolvedDate}`) ?? null)
+  const [data, setData]       = useState<ComboResponse | null>(() => comboCache.get(cacheKey) ?? null)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [tick, setTick] = useState(0)
+  const [error, setError]     = useState<string | null>(null)
+  const [tick, setTick]       = useState(0)
 
-  // When dining/date changes, serve from cache if available; otherwise clear stale data.
-  // Does NOT trigger a new fetch — the user must hit the refresh button.
   useEffect(() => {
-    const key = `${dining}::${resolvedDate}`
+    const key = `${dining}::${resolvedDate}::${gKey}`
     const cached = comboCache.get(key)
-    if (cached) {
-      setData(cached)
-      setError(null)
-    } else {
-      setData(null)
-    }
-  }, [dining, resolvedDate])
+    if (cached) { setData(cached); setError(null) }
+    else         { setData(null) }
+  }, [dining, resolvedDate, gKey])
 
-  // Fetch only when tick increments (initial mount or manual refresh)
   useEffect(() => {
-    const currentDining = diningRef.current
-    const currentDate = dateRef.current
-    const key = `${currentDining}::${currentDate}`
-
+    const key = `${diningRef.current}::${dateRef.current}::${gKeyRef.current}`
     if (comboCache.has(key)) return
 
     let cancelled = false
     setLoading(true)
     setError(null)
 
-    generateCombos(currentDining, currentDate)
+    generateCombos(diningRef.current, dateRef.current, goalsRef.current)
       .then((result) => {
         if (cancelled) return
         comboCache.set(key, result)
@@ -55,15 +60,13 @@ export function useCombos(dining: DiningHall, date?: string) {
         if (cancelled) return
         setError(e instanceof Error ? e.message : 'Something went wrong')
       })
-      .finally(() => {
-        if (!cancelled) setLoading(false)
-      })
+      .finally(() => { if (!cancelled) setLoading(false) })
 
     return () => { cancelled = true }
   }, [tick])
 
   const refetch = useCallback(() => {
-    const key = `${diningRef.current}::${dateRef.current}`
+    const key = `${diningRef.current}::${dateRef.current}::${gKeyRef.current}`
     comboCache.delete(key)
     setTick((n) => n + 1)
   }, [])

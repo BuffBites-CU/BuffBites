@@ -203,11 +203,53 @@ def _enrich_combo(claude_combo: _CCombo, item_lookup: dict[str, dict]) -> Combo:
         description=claude_combo.description,
         dishes=[Dish(name=d.name, station=d.station) for d in claude_combo.dishes],
         approximate_calories=int(sum(m["calories"] for m in meta)),
+        approximate_protein_g=int(sum(m["protein_g"] for m in meta)),
         tags=_infer_tags(meta),
     )
 
 
 # ── Claude API call ────────────────────────────────────────────────────────
+
+_FOCUS_DESCRIPTIONS: dict[str, str] = {
+    "balanced":     "balanced macros — variety of protein, carbs, and healthy fats",
+    "high-protein": "maximum protein — prioritize meat, fish, eggs, tofu, and legumes",
+    "low-carb":     "minimal carbohydrates — skip pasta, rice, and bread; favor protein and vegetables",
+    "weight-loss":  "low calorie density — lean proteins, vegetables, and small portions",
+    "muscle-gain":  "calorie surplus with high protein — lean meat + complex carbs for recovery",
+    "endurance":    "sustained energy — complex carbs + moderate protein, easy on heavy fats",
+}
+
+_NUTRIENT_DESCRIPTIONS: dict[str, str] = {
+    "iron":       "Iron — red meat, dark leafy greens, legumes, fortified cereals",
+    "calcium":    "Calcium — dairy, fortified plant milk, broccoli, kale",
+    "vitamin-d":  "Vitamin D — fatty fish, eggs, fortified foods",
+    "fiber":      "Fiber — beans, whole grains, fruits, cruciferous vegetables",
+    "omega-3":    "Omega-3 — salmon, tuna, flaxseed, walnuts",
+    "b12":        "Vitamin B12 — meat, fish, eggs, dairy, fortified cereals",
+    "zinc":       "Zinc — meat, shellfish, legumes, seeds",
+}
+
+
+def _build_goals_section(
+    protein_goal: int | None,
+    dietary_focus: str | None,
+    priority_nutrients: list[str],
+) -> str:
+    if not protein_goal and not dietary_focus and not priority_nutrients:
+        return ""
+    lines = ["USER NUTRITIONAL GOALS (tailor every combo to meet these targets):"]
+    if protein_goal:
+        lines.append(f"• Protein: aim for at least {protein_goal}g per meal — include high-protein items in each combo")
+    if dietary_focus and dietary_focus in _FOCUS_DESCRIPTIONS:
+        lines.append(f"• Focus: {dietary_focus.replace('-', ' ').title()} — {_FOCUS_DESCRIPTIONS[dietary_focus]}")
+    if priority_nutrients:
+        nutrient_lines = [_NUTRIENT_DESCRIPTIONS[n] for n in priority_nutrients if n in _NUTRIENT_DESCRIPTIONS]
+        if nutrient_lines:
+            lines.append("• Priority nutrients to include:")
+            for nl in nutrient_lines:
+                lines.append(f"  – {nl}")
+    return "\n".join(lines) + "\n\n"
+
 
 def _generate_with_claude(
     dining_location: str,
@@ -217,6 +259,7 @@ def _generate_with_claude(
     lunch_items: list[dict],
     dinner_items: list[dict],
     dessert_items: list[dict],
+    goals_section: str = "",
 ) -> _CCombosOutput:
     client = anthropic.Anthropic()
 
@@ -224,6 +267,7 @@ def _generate_with_claude(
         dining_location=dining_location,
         day_of_week=day_of_week,
         date=date,
+        user_goals_section=goals_section,
         breakfast_items=_format_pool(breakfast_items),
         lunch_items=_format_pool(lunch_items),
         dinner_items=_format_pool(dinner_items),
@@ -245,6 +289,9 @@ def _generate_with_claude(
 def generate_combos(
     dining: str = Query(..., description="One of: " + ", ".join(DINING_FILES)),
     date: str | None = Query(None, description="YYYY-MM-DD, defaults to today"),
+    protein_goal: int | None = Query(None, description="Target protein per meal in grams"),
+    dietary_focus: str | None = Query(None, description="balanced|high-protein|low-carb|weight-loss|muscle-gain|endurance"),
+    priority_nutrients: str | None = Query(None, description="Comma-separated: iron,calcium,vitamin-d,fiber,omega-3,b12,zinc"),
 ):
     if dining not in DINING_FILES:
         raise HTTPException(
@@ -322,6 +369,10 @@ def generate_combos(
     if not breakfast_items or not lunch_items or not dinner_items:
         raise HTTPException(status_code=404, detail="Not enough menu items to build combos")
 
+    # ── Build user goals section for the prompt ───────────────────────────
+    nutrient_list = [n.strip() for n in (priority_nutrients or "").split(",") if n.strip()]
+    goals_section = _build_goals_section(protein_goal, dietary_focus, nutrient_list)
+
     # ── Call Claude (LLM combo generation) ───────────────────────────────
     try:
         claude_output = _generate_with_claude(
@@ -332,6 +383,7 @@ def generate_combos(
             lunch_items=lunch_items,
             dinner_items=dinner_items,
             dessert_items=dessert_items,
+            goals_section=goals_section,
         )
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Combo generation failed: {exc}")

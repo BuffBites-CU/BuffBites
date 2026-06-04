@@ -50,7 +50,7 @@ export function removeFavorite(
 
 export function logMeal(
   firebase_uid: string,
-  entry: Omit<MealLogEntry, 'logged_at'>,
+  entry: Omit<MealLogEntry, 'logged_at' | 'protein_g'> & { protein_g?: number },
 ): Promise<{ message: string }> {
   return apiFetch<{ message: string }>(`/api/users/${firebase_uid}/meal-log`, {
     method: 'POST',

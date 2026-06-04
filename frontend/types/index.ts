@@ -1,8 +1,15 @@
 export type DietaryPreference = 'vegan' | 'vegetarian' | 'gluten-free' | 'halal'
 
+export interface NutritionGoals {
+  protein_g_per_meal?: number
+  dietary_focus?: 'balanced' | 'high-protein' | 'low-carb' | 'weight-loss' | 'muscle-gain' | 'endurance'
+  priority_nutrients?: string[]   // 'iron'|'calcium'|'vitamin-d'|'fiber'|'omega-3'|'b12'|'zinc'
+}
+
 export interface MealLogEntry {
   title: string
   calories: number
+  protein_g?: number
   date: string       // YYYY-MM-DD
   dining_hall: string
   meal_period: string
@@ -37,6 +44,7 @@ export interface UserResponse extends UserCreate {
   created_at: string
   preferred_calories_per_meal?: number
   default_dining_hall?: string
+  nutrition_goals?: NutritionGoals
   meal_log?: MealLogEntry[]
   favorites?: FavoriteCombo[]
 }
@@ -84,6 +92,7 @@ export interface Combo {
   description: string
   dishes: Dish[]
   approximate_calories: number
+  approximate_protein_g: number
   tags: ComboTag[]
 }
 

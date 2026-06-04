@@ -21,9 +21,15 @@ from pydantic import BaseModel, Field
 from typing import Optional
 from datetime import datetime, timezone
 
+class NutritionGoals(BaseModel):
+    protein_g_per_meal: Optional[int] = None        # target grams of protein per meal
+    dietary_focus: Optional[str] = None             # "balanced"|"high-protein"|"low-carb"|"weight-loss"|"muscle-gain"|"endurance"
+    priority_nutrients: list[str] = []              # e.g. ["iron","calcium","vitamin-d","fiber","omega-3","b12"]
+
 class MealLogEntry(BaseModel):
     title: str
     calories: int
+    protein_g: Optional[int] = None
     date: str          # YYYY-MM-DD
     dining_hall: str
     meal_period: str
@@ -48,6 +54,7 @@ class UserCreate(BaseModel):
     avatar: Optional[str] = None
     preferred_calories_per_meal: Optional[int] = None
     default_dining_hall: Optional[str] = None
+    nutrition_goals: Optional[NutritionGoals] = None
 
 class UserResponse(BaseModel):
     firebase_uid: str
@@ -60,5 +67,6 @@ class UserResponse(BaseModel):
     created_at: datetime
     preferred_calories_per_meal: Optional[int] = None
     default_dining_hall: Optional[str] = None
+    nutrition_goals: Optional[NutritionGoals] = None
     meal_log: list[MealLogEntry] = []
     favorites: list[FavoriteCombo] = []

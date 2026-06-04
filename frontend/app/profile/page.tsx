@@ -11,7 +11,7 @@ import { getUserCombos, deleteCombo } from '@/services/communityService'
 import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon, ChevronDownIcon } from '@/components/icons'
 import { DINING_HALLS, DINING_HALL_LABELS } from '@/types'
 import EditComboModal from '@/components/EditComboModal'
-import type { DietaryPreference, DiningHall, UserResponse, CommunityCombo, MealLogEntry } from '@/types'
+import type { DietaryPreference, DiningHall, NutritionGoals, UserResponse, CommunityCombo, MealLogEntry } from '@/types'
 
 /* ── Constants ─────────────────────────────────────────────────── */
 
@@ -20,6 +20,25 @@ const DIETARY_OPTIONS: { key: DietaryPreference; label: string; style: string }[
   { key: 'vegetarian',  label: 'Vegetarian',  style: 'bg-green-100 text-green-800' },
   { key: 'gluten-free', label: 'Gluten-Free', style: 'bg-yellow-100 text-yellow-800' },
   { key: 'halal',       label: 'Halal',       style: 'bg-indigo-100 text-indigo-800' },
+]
+
+const DIETARY_FOCUS_OPTIONS: { key: NonNullable<NutritionGoals['dietary_focus']>; label: string; icon: string; desc: string }[] = [
+  { key: 'balanced',    label: 'Balanced',     icon: '⚖️', desc: 'Varied macros' },
+  { key: 'high-protein',label: 'High Protein', icon: '💪', desc: 'Maximize protein' },
+  { key: 'low-carb',    label: 'Low Carb',     icon: '🥩', desc: 'Minimal carbs' },
+  { key: 'weight-loss', label: 'Weight Loss',  icon: '📉', desc: 'Low calorie density' },
+  { key: 'muscle-gain', label: 'Muscle Gain',  icon: '🏋️', desc: 'Protein + carbs surplus' },
+  { key: 'endurance',   label: 'Endurance',    icon: '🏃', desc: 'Complex carbs + protein' },
+]
+
+const PRIORITY_NUTRIENTS: { key: string; label: string; icon: string }[] = [
+  { key: 'iron',      label: 'Iron',       icon: '🩸' },
+  { key: 'calcium',   label: 'Calcium',    icon: '🦷' },
+  { key: 'vitamin-d', label: 'Vitamin D',  icon: '☀️' },
+  { key: 'fiber',     label: 'Fiber',      icon: '🌾' },
+  { key: 'omega-3',   label: 'Omega-3',    icon: '🐟' },
+  { key: 'b12',       label: 'B12',        icon: '🧠' },
+  { key: 'zinc',      label: 'Zinc',       icon: '⚡' },
 ]
 
 /* ── Pure helpers ───────────────────────────────────────────────── */
@@ -223,7 +242,12 @@ function MealHistoryDay({
                   {entry.meal_period} · {DINING_HALL_LABELS[entry.dining_hall as DiningHall] ?? entry.dining_hall}
                 </p>
               </div>
-              <span className="text-xs font-semibold text-brand-gold flex-shrink-0">{entry.calories} cal</span>
+              <div className="flex flex-col items-end gap-0.5 flex-shrink-0">
+                <span className="text-xs font-semibold text-brand-gold">{entry.calories} cal</span>
+                {entry.protein_g != null && entry.protein_g > 0 && (
+                  <span className="text-[10px] text-muted">{entry.protein_g}g protein</span>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -247,6 +271,11 @@ export default function ProfilePage() {
     dietary_preferences: [] as DietaryPreference[],
     preferred_calories_per_meal: '' as string,
     default_dining_hall: '' as string,
+    nutrition_goals: {
+      protein_g_per_meal: '' as string,
+      dietary_focus: '' as string,
+      priority_nutrients: [] as string[],
+    },
   })
   const [saving, setSaving] = useState(false)
   const [usernameError, setUsernameError] = useState('')
@@ -276,6 +305,11 @@ export default function ProfilePage() {
       dietary_preferences: [...profile.dietary_preferences],
       preferred_calories_per_meal: profile.preferred_calories_per_meal != null ? String(profile.preferred_calories_per_meal) : '',
       default_dining_hall: profile.default_dining_hall ?? '',
+      nutrition_goals: {
+        protein_g_per_meal: profile.nutrition_goals?.protein_g_per_meal != null ? String(profile.nutrition_goals.protein_g_per_meal) : '',
+        dietary_focus: profile.nutrition_goals?.dietary_focus ?? '',
+        priority_nutrients: [...(profile.nutrition_goals?.priority_nutrients ?? [])],
+      },
     })
     setUsernameError('')
     setEditMode(true)
@@ -296,14 +330,25 @@ export default function ProfilePage() {
     setSaving(true)
     const parsedCal = draft.preferred_calories_per_meal !== '' ? parseInt(draft.preferred_calories_per_meal, 10) : undefined
     const newHall = draft.default_dining_hall || null
+    const parsedProtein = draft.nutrition_goals.protein_g_per_meal !== '' ? parseInt(draft.nutrition_goals.protein_g_per_meal, 10) : undefined
+    const newGoals: NutritionGoals | null = (parsedProtein || draft.nutrition_goals.dietary_focus || draft.nutrition_goals.priority_nutrients.length > 0)
+      ? {
+          protein_g_per_meal: parsedProtein,
+          dietary_focus: (draft.nutrition_goals.dietary_focus as NutritionGoals['dietary_focus']) || undefined,
+          priority_nutrients: draft.nutrition_goals.priority_nutrients,
+        }
+      : null
+
     const changes: Record<string, unknown> = {}
     if (draft.username !== profile.username) changes.username = draft.username
     if (JSON.stringify(draft.dietary_preferences) !== JSON.stringify(profile.dietary_preferences)) changes.dietary_preferences = draft.dietary_preferences
     if (parsedCal !== profile.preferred_calories_per_meal) changes.preferred_calories_per_meal = parsedCal ?? null
     if (newHall !== (profile.default_dining_hall ?? null)) changes.default_dining_hall = newHall
+    if (JSON.stringify(newGoals) !== JSON.stringify(profile.nutrition_goals ?? null)) changes.nutrition_goals = newGoals
+
     try {
       await updateUser(firebaseUid, changes as Parameters<typeof updateUser>[1])
-      setProfile((p) => p ? { ...p, ...changes, preferred_calories_per_meal: parsedCal ?? undefined, default_dining_hall: newHall ?? undefined } : p)
+      setProfile((p) => p ? { ...p, ...changes, preferred_calories_per_meal: parsedCal ?? undefined, default_dining_hall: newHall ?? undefined, nutrition_goals: newGoals ?? undefined } : p)
       if (newHall !== (profile.default_dining_hall ?? null)) setCtxHall(newHall)
       setEditMode(false)
       showToast('Profile updated!', 'success')
@@ -465,6 +510,66 @@ export default function ProfilePage() {
               </div>
             </div>
 
+            {/* Nutrition Goals */}
+            <div className="space-y-4 pt-1 border-t border-surface-warm">
+              <p className="text-xs font-display font-semibold text-brand-black uppercase tracking-wider mt-1">Nutrition Goals</p>
+
+              {/* Dietary Focus */}
+              <div>
+                <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Dietary Focus</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {DIETARY_FOCUS_OPTIONS.map(({ key, label, icon, desc }) => (
+                    <button key={key}
+                      onClick={() => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, dietary_focus: d.nutrition_goals.dietary_focus === key ? '' : key } }))}
+                      className={`flex flex-col items-center gap-1 p-2.5 rounded-xl border text-center transition-all ${
+                        draft.nutrition_goals.dietary_focus === key
+                          ? 'bg-brand-black border-brand-black text-brand-gold'
+                          : 'bg-surface-overlay border-transparent text-muted hover:bg-surface-warm'
+                      }`}>
+                      <span className="text-lg leading-none">{icon}</span>
+                      <span className="text-[10px] font-display font-semibold leading-tight">{label}</span>
+                      <span className="text-[9px] opacity-70 leading-tight">{desc}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Protein Goal */}
+              <div>
+                <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-1.5">Protein Goal per Meal</label>
+                <div className="relative">
+                  <input type="number" min={0} max={200} placeholder="e.g. 35"
+                    value={draft.nutrition_goals.protein_g_per_meal}
+                    onChange={(e) => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, protein_g_per_meal: e.target.value } }))}
+                    className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface" />
+                  <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted text-xs">g</span>
+                </div>
+              </div>
+
+              {/* Priority Nutrients */}
+              <div>
+                <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Priority Nutrients</label>
+                <div className="flex flex-wrap gap-2">
+                  {PRIORITY_NUTRIENTS.map(({ key, label, icon }) => {
+                    const selected = draft.nutrition_goals.priority_nutrients.includes(key)
+                    return (
+                      <button key={key}
+                        onClick={() => setDraft((d) => {
+                          const prev = d.nutrition_goals.priority_nutrients
+                          return { ...d, nutrition_goals: { ...d.nutrition_goals, priority_nutrients: selected ? prev.filter((n) => n !== key) : [...prev, key] } }
+                        })}
+                        className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
+                          selected ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'
+                        }`}>
+                        <span>{icon}</span>{label}
+                      </button>
+                    )
+                  })}
+                </div>
+                <p className="text-[11px] text-muted mt-1.5">Claude will prioritize these nutrients when building your combos</p>
+              </div>
+            </div>
+
             <div className="flex gap-3 pt-1">
               <button onClick={() => setEditMode(false)}
                 className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-surface-warm text-sm text-muted hover:bg-surface-overlay transition-colors">
@@ -490,6 +595,68 @@ export default function ProfilePage() {
                   <span className="text-[9px] font-display font-semibold text-brand-black text-center leading-tight">{b.label}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── Nutrition Goals summary (view mode) ─────────────── */}
+        {!editMode && profile.nutrition_goals && (
+          <div>
+            <h2 className="text-base font-display font-bold text-brand-black mb-3">Nutrition Goals</h2>
+            <div className="bg-surface-card rounded-2xl border border-surface-overlay p-4 space-y-3">
+              {profile.nutrition_goals.dietary_focus && (() => {
+                const opt = DIETARY_FOCUS_OPTIONS.find((o) => o.key === profile.nutrition_goals?.dietary_focus)
+                return (
+                  <div className="flex items-center gap-3">
+                    <span className="text-xl">{opt?.icon}</span>
+                    <div>
+                      <p className="text-sm font-display font-semibold text-brand-black">{opt?.label ?? profile.nutrition_goals.dietary_focus}</p>
+                      <p className="text-[11px] text-muted">{opt?.desc}</p>
+                    </div>
+                  </div>
+                )
+              })()}
+
+              {profile.nutrition_goals.protein_g_per_meal && (() => {
+                const todayProtein = mealLog.filter((e) => e.date === todayISO()).reduce((s, e) => s + (e.protein_g ?? 0), 0)
+                const goal = profile.nutrition_goals.protein_g_per_meal
+                const mealsToday = mealLog.filter((e) => e.date === todayISO()).length
+                const dailyGoal = goal * 3
+                const pct = Math.min(Math.round((todayProtein / dailyGoal) * 100), 100)
+                return (
+                  <div>
+                    <div className="flex items-end justify-between mb-1.5">
+                      <span className="text-xs font-display font-semibold text-muted uppercase tracking-wider">Protein Today</span>
+                      <span className="text-xs text-muted">{goal}g/meal goal</span>
+                    </div>
+                    <div className="flex items-end justify-between mb-1">
+                      <span className="font-display font-bold text-brand-black text-lg">{todayProtein}g</span>
+                      <span className="text-xs text-muted">/ {dailyGoal}g daily</span>
+                    </div>
+                    <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
+                      <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-emerald-400' : pct >= 66 ? 'bg-brand-gold' : 'bg-brand-gold/50'}`}
+                        style={{ width: `${pct}%` }} />
+                    </div>
+                    {mealsToday === 0 && <p className="text-[11px] text-muted mt-1">Log meals to track protein</p>}
+                  </div>
+                )
+              })()}
+
+              {(profile.nutrition_goals.priority_nutrients ?? []).length > 0 && (
+                <div>
+                  <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Priority Nutrients</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {(profile.nutrition_goals.priority_nutrients ?? []).map((n) => {
+                      const opt = PRIORITY_NUTRIENTS.find((o) => o.key === n)
+                      return (
+                        <span key={n} className="flex items-center gap-1 bg-brand-black text-brand-gold rounded-full px-2.5 py-1 text-xs font-medium">
+                          <span>{opt?.icon}</span>{opt?.label ?? n}
+                        </span>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         )}

@@ -12,7 +12,7 @@ import ComboDetail from '@/components/ComboDetail'
 import { ArrowPathIcon, BisonIcon } from '@/components/icons'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo } from '@/services/communityService'
-import type { Combo, DiningHall, MealPeriod, FavoriteCombo } from '@/types'
+import type { Combo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
   alley: 'C4C or Sewall',
@@ -49,12 +49,13 @@ export default function HomePage() {
   const [favorites, setFavorites] = useState<FavoriteCombo[]>([])
   const [userRestrictions, setUserRestrictions] = useState<string[]>([])
   const [pastTitles, setPastTitles] = useState<Set<string>>(new Set())
+  const [nutritionGoals, setNutritionGoals] = useState<NutritionGoals | undefined>()
 
   const dateOptions = useMemo(buildDateOptions, [])
   const [selectedDate, setSelectedDate] = useState(dateOptions[0].iso)
   const selectedDateObj = dateOptions.find((d) => d.iso === selectedDate) ?? dateOptions[0]
 
-  const { data, loading, error, refetch } = useCombos(selectedDining, selectedDate)
+  const { data, loading, error, refetch } = useCombos(selectedDining, selectedDate, nutritionGoals)
 
   const combosForPeriod = data?.combos[selectedPeriod] ?? []
   const counts = useMemo(
@@ -73,6 +74,7 @@ export default function HomePage() {
       setFavorites(p.favorites ?? [])
       setUserRestrictions(p.restrictions ?? [])
       setPastTitles(new Set((p.meal_log ?? []).map((e) => e.title)))
+      if (p.nutrition_goals) setNutritionGoals(p.nutrition_goals)
     }).catch(() => {})
   }, [firebaseUid])
 
@@ -88,6 +90,7 @@ export default function HomePage() {
       await logMeal(firebaseUid, {
         title: combo.title,
         calories: combo.approximate_calories,
+        protein_g: combo.approximate_protein_g || undefined,
         date: selectedDate,
         dining_hall: selectedDining,
         meal_period: selectedPeriod,
