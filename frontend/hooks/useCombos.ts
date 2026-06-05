@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { generateCombos } from '@/services/combosService'
+import { todayMST } from '@/lib/date'
 import type { ComboResponse, DiningHall, NutritionGoals } from '@/types'
 
 const comboCache = new Map<string, ComboResponse>()
@@ -15,7 +16,7 @@ function goalsKey(goals?: NutritionGoals): string {
 }
 
 export function useCombos(dining: DiningHall, date?: string, goals?: NutritionGoals) {
-  const today = useMemo(() => new Date().toISOString().split('T')[0], [])
+  const today = useMemo(() => todayMST(), [])
   const resolvedDate = date ?? today
   const gKey = useMemo(() => goalsKey(goals), [goals])
 

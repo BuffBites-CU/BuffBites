@@ -10,6 +10,7 @@ import { getUser, updateUser, deleteMeal } from '@/services/usersService'
 import { getUserCombos, deleteCombo } from '@/services/communityService'
 import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon, ChevronDownIcon } from '@/components/icons'
 import { DINING_HALLS, DINING_HALL_LABELS } from '@/types'
+import { todayMST, isoOffsetMST, isoToLocalNoon } from '@/lib/date'
 import EditComboModal from '@/components/EditComboModal'
 import type { DietaryPreference, DiningHall, NutritionGoals, UserResponse, CommunityCombo, MealLogEntry } from '@/types'
 
@@ -43,19 +44,16 @@ const PRIORITY_NUTRIENTS: { key: string; label: string; icon: string }[] = [
 
 /* ── Pure helpers ───────────────────────────────────────────────── */
 
-function todayISO() { return new Date().toISOString().split('T')[0] }
-
-function isoOffset(days: number) {
-  const d = new Date(); d.setDate(d.getDate() + days)
-  return d.toISOString().split('T')[0]
-}
+// Calendar dates follow Mountain Time — see lib/date.ts.
+const todayISO = todayMST
+const isoOffset = isoOffsetMST
 
 function formatDateLabel(iso: string): string {
   const today = todayISO()
   const yesterday = isoOffset(-1)
   if (iso === today) return 'Today'
   if (iso === yesterday) return 'Yesterday'
-  const d = new Date(iso + 'T12:00:00')
+  const d = isoToLocalNoon(iso)
   return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })
 }
 
@@ -120,7 +118,7 @@ function groupByDate(mealLog: MealLogEntry[]): { date: string; entries: MealLogE
 function getWeekData(mealLog: MealLogEntry[]) {
   return Array.from({ length: 7 }, (_, i) => {
     const iso = isoOffset(i - 6)
-    const d = new Date(iso + 'T12:00:00')
+    const d = isoToLocalNoon(iso)
     const label = i === 6 ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' }).slice(0, 3)
     const calories = mealLog.filter((e) => e.date === iso).reduce((s, e) => s + e.calories, 0)
     return { iso, label, calories }
@@ -201,7 +199,7 @@ function MealHistoryDay({
         {/* Date badge */}
         <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${isToday ? 'bg-brand-gold' : 'bg-surface-overlay'}`}>
           <span className={`text-xs font-display font-bold ${isToday ? 'text-brand-black' : 'text-muted'}`}>
-            {new Date(date + 'T12:00:00').getDate()}
+            {isoToLocalNoon(date).getDate()}
           </span>
         </div>
 

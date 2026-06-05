@@ -1,8 +1,9 @@
 import json
 import sys
 from collections import defaultdict
-from datetime import date as _date
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import anthropic
 from fastapi import APIRouter, HTTPException, Query
@@ -12,7 +13,28 @@ from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish, 
 
 router = APIRouter()
 
-DATA_DIR   = Path(__file__).parent.parent / "scraping_scripts" / "data"
+# Dining halls are in Boulder, CO — "today" follows Mountain Time, not UTC.
+MT = ZoneInfo("America/Denver")
+
+
+def _today_mt() -> str:
+    return datetime.now(MT).strftime("%Y-%m-%d")
+
+
+# In Docker the data is copied to backend/scraping_scripts/data; in local dev it
+# lives at the repo root. Pick whichever exists so both layouts work.
+_BACKEND_DIR = Path(__file__).parent.parent
+DATA_DIR = next(
+    (
+        p
+        for p in (
+            _BACKEND_DIR / "scraping_scripts" / "data",
+            _BACKEND_DIR.parent / "scraping_scripts" / "data",
+        )
+        if p.is_dir()
+    ),
+    _BACKEND_DIR / "scraping_scripts" / "data",
+)
 COMBO_PROMPT = (Path(__file__).parent.parent / "prompts" / "combos.txt").read_text()
 
 DINING_FILES: dict[str, str] = {
@@ -299,7 +321,7 @@ def generate_combos(
             detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}",
         )
 
-    target_date = date or str(_date.today())
+    target_date = date or _today_mt()
     file_path = DATA_DIR / DINING_FILES[dining]
     try:
         menu_data = json.loads(file_path.read_text())
@@ -450,7 +472,7 @@ def get_menu(
             detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}",
         )
 
-    target_date = date or str(_date.today())
+    target_date = date or _today_mt()
     file_path = DATA_DIR / DINING_FILES[dining]
     try:
         menu_data = json.loads(file_path.read_text())
@@ -506,7 +528,7 @@ def get_nutrition(
     if dining not in DINING_FILES:
         raise HTTPException(status_code=400, detail="Invalid dining location")
 
-    target_date = date or str(_date.today())
+    target_date = date or _today_mt()
     file_path = DATA_DIR / DINING_FILES[dining]
     try:
         menu_data = json.loads(file_path.read_text())

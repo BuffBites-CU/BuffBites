@@ -13,6 +13,7 @@ import { ArrowPathIcon } from '@/components/icons'
 import Image from 'next/image'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo } from '@/services/communityService'
+import { isoOffsetMST, isoToLocalNoon } from '@/lib/date'
 import type { Combo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
@@ -24,10 +25,10 @@ const HALL_ALTERNATES: Record<DiningHall, string> = {
 }
 
 function buildDateOptions() {
+  // Dates follow Mountain Time so "today" matches the dining halls' clock.
   return Array.from({ length: 7 }, (_, i) => {
-    const d = new Date()
-    d.setDate(d.getDate() + i)
-    const iso = d.toISOString().split('T')[0]
+    const iso = isoOffsetMST(i)
+    const d = isoToLocalNoon(iso)
     const label = i === 0 ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' })
     const day = d.getDate()
     return { iso, label, day }

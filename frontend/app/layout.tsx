@@ -4,6 +4,7 @@ import './globals.css'
 import { AuthProvider } from '@/context/AuthContext'
 import { ToastProvider } from '@/context/ToastContext'
 import NavBar from '@/components/NavBar'
+import InstallPrompt from '@/components/InstallPrompt'
 
 const syne = Syne({
   subsets: ['latin'],
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ToastProvider>
             <main className="min-h-screen">{children}</main>
             <NavBar />
+            <InstallPrompt />
           </ToastProvider>
         </AuthProvider>
       </body>

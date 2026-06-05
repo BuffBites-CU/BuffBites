@@ -7,9 +7,10 @@ import { publishCombo } from '@/services/communityService'
 import { getMenu } from '@/services/combosService'
 import { useAuth } from '@/context/AuthContext'
 import { DINING_HALLS, DINING_HALL_LABELS, type ComboTag, type DiningHall, type DishItem } from '@/types'
+import { todayMST } from '@/lib/date'
 
 const AVAILABLE_TAGS: ComboTag[] = ['vegan', 'vegetarian', 'high-protein', 'light', 'hearty', 'balanced']
-const TODAY = new Date().toISOString().split('T')[0]
+const TODAY = todayMST()
 
 interface Props {
   onClose: () => void
