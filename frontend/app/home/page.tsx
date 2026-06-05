@@ -198,9 +198,10 @@ export default function HomePage() {
             <button
               onClick={openInstallGuide}
               aria-label="How to add BuffBites to your home screen"
-              className="p-1.5 rounded-full text-muted hover:text-brand-black hover:bg-surface-overlay transition-colors"
+              className="flex items-center gap-1 rounded-full bg-brand-gold/15 text-brand-gold ring-1 ring-brand-gold/30 px-2.5 py-1 hover:bg-brand-gold/25 transition-colors"
             >
-              <DevicePhoneMobileIcon width={17} height={17} />
+              <DevicePhoneMobileIcon width={15} height={15} />
+              <span className="text-[11px] font-semibold">Install</span>
             </button>
             <button
               onClick={() => setShowDatePicker((v) => !v)}

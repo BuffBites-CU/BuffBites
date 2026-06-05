@@ -46,7 +46,7 @@ export default function LandingPage() {
       <div className="absolute top-0 left-0 right-0 z-20 flex justify-end px-4 pt-4">
         <button
           onClick={openInstallGuide}
-          className="flex items-center gap-1.5 rounded-full bg-white/70 border border-brand-stone/30 px-3.5 py-1.5 text-xs font-medium text-muted backdrop-blur-sm shadow-card-sm hover:text-brand-black transition-colors"
+          className="flex items-center gap-1.5 rounded-full bg-brand-gold border border-brand-gold px-3.5 py-1.5 text-xs font-semibold text-brand-black shadow-gold hover:opacity-90 active:scale-[0.97] transition-all animate-gold-pulse"
         >
           <DevicePhoneMobileIcon width={14} height={14} />
           Add to Home Screen
