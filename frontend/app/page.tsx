@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { useAuth } from '@/context/AuthContext'
 import Image from 'next/image'
+import { DevicePhoneMobileIcon } from '@/components/icons'
+import { openInstallGuide } from '@/components/InstallPrompt'
 
 const FEATURES = [
   { icon: '✦', label: 'AI-crafted combos' },
@@ -38,6 +40,17 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-surface relative overflow-hidden flex flex-col">
+
+      {/* ── Top nav: add-to-home-screen guide ───────────────────── */}
+      <div className="absolute top-0 left-0 right-0 z-20 flex justify-end px-4 pt-4">
+        <button
+          onClick={openInstallGuide}
+          className="flex items-center gap-1.5 rounded-full bg-white/70 border border-brand-stone/30 px-3.5 py-1.5 text-xs font-medium text-muted backdrop-blur-sm shadow-card-sm hover:text-brand-black transition-colors"
+        >
+          <DevicePhoneMobileIcon width={14} height={14} />
+          Add to Home Screen
+        </button>
+      </div>
 
       {/* ── Background: warm gradient ───────────────────────────── */}
       <div

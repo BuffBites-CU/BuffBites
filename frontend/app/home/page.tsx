@@ -9,7 +9,8 @@ import DiningSelector from '@/components/DiningSelector'
 import MealPeriodTabs from '@/components/MealPeriodTabs'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
-import { ArrowPathIcon } from '@/components/icons'
+import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
+import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo } from '@/services/communityService'
@@ -194,6 +195,13 @@ export default function HomePage() {
           </div>
 
           <div className="flex items-center gap-2">
+            <button
+              onClick={openInstallGuide}
+              aria-label="How to add BuffBites to your home screen"
+              className="p-1.5 rounded-full text-muted hover:text-brand-black hover:bg-surface-overlay transition-colors"
+            >
+              <DevicePhoneMobileIcon width={17} height={17} />
+            </button>
             <button
               onClick={() => setShowDatePicker((v) => !v)}
               className="flex items-center gap-1 text-xs font-medium text-muted bg-surface-overlay rounded-full px-3 py-1.5 hover:bg-surface-warm transition-colors"

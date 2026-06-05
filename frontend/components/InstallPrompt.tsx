@@ -5,9 +5,15 @@ import Image from 'next/image'
 import { XMarkIcon } from './icons'
 
 const SEEN_KEY = 'buffbites_install_prompt_seen'
-const DURATION = 5 // seconds
+const OPEN_EVENT = 'buffbites:open-install'
+const DURATION = 5 // seconds, auto-show only
 
 type Platform = 'ios' | 'android'
+
+/** Open the install guide from anywhere (e.g. a header button). */
+export function openInstallGuide() {
+  window.dispatchEvent(new Event(OPEN_EVENT))
+}
 
 /** Detect mobile platform; returns null on desktop / already-installed. */
 function detectPlatform(): Platform | null {
@@ -47,24 +53,42 @@ const COPY: Record<Platform, { device: string; steps: { icon: string; text: stri
   },
 }
 
+type Mode = 'closed' | 'auto' | 'manual'
+
 export default function InstallPrompt() {
-  const [platform, setPlatform] = useState<Platform | null>(null)
+  const [mode, setMode] = useState<Mode>('closed')
+  const [platform, setPlatform] = useState<Platform>('ios')
   const [remaining, setRemaining] = useState(DURATION)
 
-  // Decide once on mount whether to show.
+  // Auto-show once on mobile; manual open via the global event anywhere.
   useEffect(() => {
+    const openManual = () => {
+      setPlatform((p) => detectPlatform() ?? p)
+      setRemaining(0)
+      setMode('manual')
+    }
+    window.addEventListener(OPEN_EVENT, openManual)
+
+    let seen = false
     try {
-      if (localStorage.getItem(SEEN_KEY)) return
+      seen = !!localStorage.getItem(SEEN_KEY)
     } catch {
       /* private mode — just proceed */
     }
-    const p = detectPlatform()
-    if (p) setPlatform(p)
+    if (!seen) {
+      const p = detectPlatform()
+      if (p) {
+        setPlatform(p)
+        setRemaining(DURATION)
+        setMode('auto')
+      }
+    }
+    return () => window.removeEventListener(OPEN_EVENT, openManual)
   }, [])
 
-  // Countdown + auto-dismiss.
+  // Countdown + auto-dismiss (auto mode only).
   useEffect(() => {
-    if (!platform) return
+    if (mode !== 'auto') return
     try {
       localStorage.setItem(SEEN_KEY, '1')
     } catch {
@@ -74,16 +98,16 @@ export default function InstallPrompt() {
       setRemaining((r) => {
         if (r <= 1) {
           clearInterval(tick)
-          setPlatform(null)
+          setMode('closed')
           return 0
         }
         return r - 1
       })
     }, 1000)
     return () => clearInterval(tick)
-  }, [platform])
+  }, [mode])
 
-  if (!platform) return null
+  if (mode === 'closed') return null
 
   const copy = COPY[platform]
   const progress = (remaining / DURATION) * 100
@@ -92,7 +116,7 @@ export default function InstallPrompt() {
     <div className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-brand-black/95 px-6 text-center backdrop-blur-sm">
       {/* Dismiss */}
       <button
-        onClick={() => setPlatform(null)}
+        onClick={() => setMode('closed')}
         aria-label="Dismiss"
         className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 transition hover:bg-white/20"
       >
@@ -111,7 +135,22 @@ export default function InstallPrompt() {
           Install it like an app — one tap from your home screen, no browser needed.
         </p>
 
-        <ol className="mt-7 w-full space-y-3 text-left">
+        {/* Platform toggle — lets anyone view either guide */}
+        <div className="mt-5 inline-flex rounded-full bg-white/10 p-1">
+          {(['ios', 'android'] as Platform[]).map((p) => (
+            <button
+              key={p}
+              onClick={() => setPlatform(p)}
+              className={`rounded-full px-4 py-1.5 text-xs font-semibold transition ${
+                platform === p ? 'bg-brand-gold text-brand-black' : 'text-white/70'
+              }`}
+            >
+              {COPY[p].device}
+            </button>
+          ))}
+        </div>
+
+        <ol className="mt-6 w-full space-y-3 text-left">
           {copy.steps.map((step, i) => (
             <li
               key={i}
@@ -126,19 +165,21 @@ export default function InstallPrompt() {
         </ol>
 
         <button
-          onClick={() => setPlatform(null)}
+          onClick={() => setMode('closed')}
           className="mt-7 w-full rounded-xl bg-brand-gold py-3 text-sm font-semibold text-brand-black transition active:scale-[0.98]"
         >
-          Got it{remaining > 0 ? ` (${remaining})` : ''}
+          Got it{mode === 'auto' && remaining > 0 ? ` (${remaining})` : ''}
         </button>
 
         {/* Auto-dismiss progress bar */}
-        <div className="mt-4 h-1 w-full overflow-hidden rounded-full bg-white/10">
-          <div
-            className="h-full rounded-full bg-brand-gold transition-[width] duration-1000 ease-linear"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
+        {mode === 'auto' && (
+          <div className="mt-4 h-1 w-full overflow-hidden rounded-full bg-white/10">
+            <div
+              className="h-full rounded-full bg-brand-gold transition-[width] duration-1000 ease-linear"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        )}
       </div>
     </div>
   )
