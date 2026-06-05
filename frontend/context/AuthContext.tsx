@@ -10,10 +10,8 @@ import {
 } from 'react'
 import {
   GoogleAuthProvider,
-  getRedirectResult,
   onAuthStateChanged,
   signInWithPopup,
-  signInWithRedirect,
   signOut as firebaseSignOut,
   type User,
 } from 'firebase/auth'
@@ -35,18 +33,6 @@ interface AuthContextValue {
 
 const AuthContext = createContext<AuthContextValue | null>(null)
 
-// signInWithPopup is unreliable on mobile browsers (iOS Safari blocks the popup
-// outright) and in installed PWAs. Detect those so we can use a redirect flow.
-function isMobileBrowser(): boolean {
-  if (typeof window === 'undefined') return false
-  const ua = navigator.userAgent
-  const isMobileUa = /iPhone|iPad|iPod|Android/i.test(ua)
-  const isStandalone =
-    window.matchMedia('(display-mode: standalone)').matches ||
-    (navigator as { standalone?: boolean }).standalone === true
-  return isMobileUa || isStandalone
-}
-
 export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter()
   const [firebaseUser, setFirebaseUser] = useState<User | null>(null)
@@ -56,12 +42,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const auth = getFirebaseAuth()
-    // Surface any error from a redirect-based sign-in (mobile Safari path).
-    // Don't await here — onAuthStateChanged handles the signed-in user; this
-    // just logs failures that would otherwise be swallowed.
-    getRedirectResult(auth).catch((err) => {
-      console.error('[auth] redirect sign-in failed:', err)
-    })
     const unsub = onAuthStateChanged(auth, async (user) => {
       setFirebaseUser(user)
       if (user) {
@@ -85,28 +65,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signIn = useCallback(async () => {
     const auth = getFirebaseAuth()
     const provider = new GoogleAuthProvider()
-
-    // iOS Safari (and other mobile browsers / installed PWAs) block the OAuth
-    // popup, so it never opens. Use a full-page redirect on mobile instead.
-    if (isMobileBrowser()) {
-      await signInWithRedirect(auth, provider)
-      return
-    }
-
-    // Desktop: prefer the popup, but fall back to redirect if it's blocked.
-    try {
-      await signInWithPopup(auth, provider)
-    } catch (err) {
-      const code = (err as { code?: string }).code
-      if (
-        code === 'auth/popup-blocked' ||
-        code === 'auth/operation-not-supported-in-this-environment'
-      ) {
-        await signInWithRedirect(auth, provider)
-        return
-      }
-      throw err
-    }
+    await signInWithPopup(auth, provider)
   }, [])
 
   const signOut = useCallback(async () => {
