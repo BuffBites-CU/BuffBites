@@ -31,7 +31,8 @@ export default function LandingPage() {
     setError('')
     try {
       await signIn()
-    } catch {
+    } catch (err) {
+      console.error('[auth] sign-in failed:', err)
       setError('Sign-in failed. Please try again.')
     } finally {
       setSigningIn(false)
