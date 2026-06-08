@@ -1,7 +1,6 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
 import { useCommunity } from '@/hooks/useCommunity'
@@ -21,8 +20,7 @@ function isRising(combo: CommunityCombo): boolean {
 }
 
 export default function CommunityPage() {
-  const router = useRouter()
-  const { firebaseUser, loading: authLoading } = useAuth()
+  const { firebaseUser, signIn } = useAuth()
   const { showToast } = useToast()
 
   const [selectedDining, setSelectedDining] = useState<DiningHall | undefined>()
@@ -44,13 +42,31 @@ export default function CommunityPage() {
   useScrollRestoration('community')
   usePullToRefresh(refetch)
 
-  if (!authLoading && !firebaseUser) {
-    router.replace('/')
-    return null
+  function guardedVote(combo_id: string, type: VoteType) {
+    if (!firebaseUser) {
+      showToast('Sign in to vote', 'neutral')
+      signIn().catch(() => {})
+      return
+    }
+    void vote(combo_id, type)
   }
 
   async function handleVote(type: VoteType) {
+    if (!firebaseUser) {
+      showToast('Sign in to vote', 'neutral')
+      signIn().catch(() => {})
+      return
+    }
     if (activeCombo) await vote(activeCombo.id, type)
+  }
+
+  function handleShareClick() {
+    if (!firebaseUser) {
+      showToast('Sign in to share a combo', 'neutral')
+      signIn().catch(() => {})
+      return
+    }
+    setPublishOpen(true)
   }
 
   const filtered = useMemo(() => {
@@ -175,7 +191,7 @@ export default function CommunityPage() {
                   dishes={combo.dishes}
                   upvotes={combo.upvotes}
                   hasVoted={combo.has_voted}
-                  onUpvote={() => vote(combo.id, 'upvote')}
+                  onUpvote={() => guardedVote(combo.id, 'upvote')}
                   expires_at={combo.expires_at}
                   author={combo.author_username}
                   onClick={() => setActiveCombo(combo)}
@@ -187,9 +203,9 @@ export default function CommunityPage() {
       </div>
 
       {/* FAB */}
-      {firebaseUser && (
+      {(
         <button
-          onClick={() => setPublishOpen(true)}
+          onClick={handleShareClick}
           className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand-gold text-brand-black text-sm font-display font-semibold shadow-gold hover:opacity-90 active:scale-95 transition-all"
           aria-label="Share a combo"
         >

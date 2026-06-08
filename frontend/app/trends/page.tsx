@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { getTrends, getWeeklyTrends } from '@/services/communityService'
 import { useCommunity } from '@/hooks/useCommunity'
@@ -62,8 +61,7 @@ function PodiumCard({ rank, combo, onClick }: PodiumCardProps) {
 }
 
 export default function TrendsPage() {
-  const router = useRouter()
-  const { firebaseUser, loading: authLoading } = useAuth()
+  const { firebaseUser, signIn } = useAuth()
 
   const [selectedHalls, setSelectedHalls] = useState<DiningHall[]>([])
   const [activeCombo, setActiveCombo] = useState<CommunityCombo | null>(null)
@@ -122,12 +120,11 @@ export default function TrendsPage() {
   useScrollRestoration('trends')
   usePullToRefresh(refetch)
 
-  if (!authLoading && !firebaseUser) {
-    router.replace('/')
-    return null
-  }
-
   async function handleVote(type: VoteType) {
+    if (!firebaseUser) {
+      signIn().catch(() => {})
+      return
+    }
     if (activeCombo) await vote(activeCombo.id, type)
   }
 

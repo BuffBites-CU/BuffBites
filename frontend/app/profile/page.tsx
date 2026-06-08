@@ -8,7 +8,7 @@ import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
 import { getUser, updateUser, deleteMeal } from '@/services/usersService'
 import { getUserCombos, deleteCombo } from '@/services/communityService'
-import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon, ChevronDownIcon } from '@/components/icons'
+import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon, ChevronDownIcon, UserCircleIcon } from '@/components/icons'
 import { DINING_HALLS, DINING_HALL_LABELS } from '@/types'
 import { todayMST, isoOffsetMST, isoToLocalNoon } from '@/lib/date'
 import EditComboModal from '@/components/EditComboModal'
@@ -268,7 +268,7 @@ function MealHistoryDay({
 
 export default function ProfilePage() {
   const router = useRouter()
-  const { firebaseUser, firebaseUid, signOut, setDefaultDiningHall: setCtxHall } = useAuth()
+  const { firebaseUser, firebaseUid, loading: authLoading, signIn, signOut, setDefaultDiningHall: setCtxHall } = useAuth()
   const { showToast } = useToast()
 
   const [profile, setProfile] = useState<UserResponse | null>(null)
@@ -297,9 +297,10 @@ export default function ProfilePage() {
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!firebaseUid) { router.replace('/'); return }
+    if (authLoading) return
+    if (!firebaseUid) { setLoading(false); return }
     getUser(firebaseUid).then(setProfile).catch(() => router.replace('/')).finally(() => setLoading(false))
-  }, [firebaseUid, router])
+  }, [firebaseUid, authLoading, router])
 
   useEffect(() => {
     if (!firebaseUid) return
@@ -405,6 +406,28 @@ export default function ProfilePage() {
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
         </svg>
+      </div>
+    )
+  }
+
+  if (!firebaseUser) {
+    return (
+      <div className="min-h-screen bg-surface flex flex-col items-center justify-center px-8 text-center gap-5">
+        <div className="w-16 h-16 rounded-full bg-brand-gold/15 ring-1 ring-brand-gold/30 flex items-center justify-center">
+          <UserCircleIcon width={32} height={32} className="text-brand-gold" />
+        </div>
+        <div className="space-y-1.5">
+          <h1 className="font-display text-xl font-bold text-brand-black">Your profile lives here</h1>
+          <p className="text-sm text-muted max-w-xs">
+            Sign in to set dietary goals, save favorite combos, track calories and your streak.
+          </p>
+        </div>
+        <button
+          onClick={() => signIn().catch(() => {})}
+          className="w-full max-w-xs bg-brand-black text-white rounded-2xl py-3.5 font-display font-semibold text-[15px] hover:opacity-90 active:scale-[0.98] transition-all"
+        >
+          Continue with Google
+        </button>
       </div>
     )
   }

@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
 import { useCombos } from '@/hooks/useCombos'
@@ -9,6 +8,7 @@ import DiningSelector from '@/components/DiningSelector'
 import MealPeriodTabs from '@/components/MealPeriodTabs'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
+import MenuView from '@/components/MenuView'
 import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
@@ -36,15 +36,17 @@ function buildDateOptions() {
   })
 }
 
+type HomeView = 'combos' | 'menu'
+
 export default function HomePage() {
-  const router = useRouter()
-  const { firebaseUser, firebaseUid, username, defaultDiningHall, loading: authLoading } = useAuth()
+  const { firebaseUser, firebaseUid, username, defaultDiningHall, signIn } = useAuth()
   const { showToast } = useToast()
 
   const [selectedDining, setSelectedDining] = useState<DiningHall>(
     (defaultDiningHall as DiningHall | null) ?? 'c4c'
   )
   const [selectedPeriod, setSelectedPeriod] = useState<MealPeriod>('Lunch')
+  const [view, setView] = useState<HomeView>('combos')
   const [activeCombo, setActiveCombo] = useState<Combo | null>(null)
   const [showDatePicker, setShowDatePicker] = useState(false)
   const [ateStates, setAteStates] = useState<Record<string, 'ate' | 'skipped'>>({})
@@ -85,8 +87,16 @@ export default function HomePage() {
     return `${selectedDining}-${selectedDate}-${selectedPeriod}-${index}`
   }
 
+  // Guests can browse everything; saving/logging/sharing prompts a quick sign-in.
+  function requireAuth(): boolean {
+    if (firebaseUid) return true
+    showToast('Sign in to save & track meals', 'neutral')
+    signIn().catch(() => {})
+    return false
+  }
+
   async function handleAte(combo: Combo, index: number) {
-    if (!firebaseUid) return
+    if (!requireAuth() || !firebaseUid) return
     const key = ateKey(combo, index)
     setAteStates((prev) => ({ ...prev, [key]: 'ate' }))
     try {
@@ -111,7 +121,7 @@ export default function HomePage() {
   }
 
   async function handleFavorite(combo: Combo, index: number) {
-    if (!firebaseUid) return
+    if (!requireAuth() || !firebaseUid) return
     const key = ateKey(combo, index)
     const alreadyFav = favorites.some(
       (f) => f.title === combo.title && f.dining_hall === selectedDining && f.date === selectedDate
@@ -149,6 +159,7 @@ export default function HomePage() {
   }
 
   async function handleShare(combo: Combo, index: number) {
+    if (!requireAuth()) return
     if (!firebaseUser || !username) return
     const key = ateKey(combo, index)
     setShareStates((prev) => ({ ...prev, [key]: 'sharing' }))
@@ -173,11 +184,6 @@ export default function HomePage() {
       setShareStates((prev) => { const n = { ...prev }; delete n[key]; return n })
       showToast('Failed to post', 'error')
     }
-  }
-
-  if (!authLoading && !firebaseUser) {
-    router.replace('/')
-    return null
   }
 
   return (
@@ -255,9 +261,44 @@ export default function HomePage() {
             counts={counts}
           />
         </div>
+
+        {/* Combos / Full Menu toggle */}
+        <div className="max-w-md mx-auto px-4 pb-2.5 pt-1 flex gap-2">
+          {(['combos', 'menu'] as HomeView[]).map((v) => (
+            <button
+              key={v}
+              onClick={() => setView(v)}
+              className={`px-3.5 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all ${
+                view === v
+                  ? 'bg-brand-black text-brand-gold'
+                  : 'bg-surface-overlay text-muted hover:bg-surface-warm'
+              }`}
+            >
+              {v === 'combos' ? '✦ AI Combos' : 'Full Menu'}
+            </button>
+          ))}
+        </div>
       </header>
 
       <div className="max-w-md mx-auto px-4 pt-4 animate-page-in">
+        {/* Guest banner — invite sign-in without blocking the experience */}
+        {!firebaseUser && (
+          <button
+            onClick={() => signIn().catch(() => {})}
+            className="w-full mb-4 flex items-center justify-between gap-3 rounded-2xl bg-brand-gold/15 ring-1 ring-brand-gold/30 px-4 py-3 text-left hover:bg-brand-gold/25 transition-colors"
+          >
+            <span className="text-xs font-medium text-brand-black leading-snug">
+              You&apos;re browsing as a guest. <span className="text-muted">Sign in to save combos, track calories & post to the community.</span>
+            </span>
+            <span className="flex-shrink-0 text-xs font-display font-semibold text-brand-black underline">Sign in</span>
+          </button>
+        )}
+
+        {view === 'menu' && (
+          <MenuView dining={selectedDining} date={selectedDate} period={selectedPeriod} />
+        )}
+
+        {view === 'combos' && <>
         {loading && <ComboSkeletons />}
 
         {!loading && error && (
@@ -339,6 +380,7 @@ export default function HomePage() {
             <p className="text-center text-[10px] text-muted mt-5 mb-2 opacity-50">✦ Powered by Claude</p>
           </>
         )}
+        </>}
       </div>
 
       {activeCombo && (

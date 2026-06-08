@@ -49,7 +49,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           const profile = await getUser(user.uid)
           setUsernameState(profile.username)
           setDefaultDiningHallState(profile.default_dining_hall ?? null)
-          router.replace('/home')
+          // Only pull the user to /home from the landing page. If they signed in
+          // while browsing as a guest (e.g. to vote on /community), leave them
+          // where they are.
+          if (typeof window !== 'undefined' && window.location.pathname === '/') {
+            router.replace('/home')
+          }
         } catch (err) {
           const msg = err instanceof Error ? err.message : ''
           if (msg.includes('404') || msg.toLowerCase().includes('not found')) {
