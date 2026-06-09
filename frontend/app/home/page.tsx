@@ -14,8 +14,8 @@ import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo } from '@/services/communityService'
-import { isoOffsetMST, isoToLocalNoon } from '@/lib/date'
-import type { Combo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals } from '@/types'
+import { isoOffsetMST, isoToLocalNoon, currentMealPeriodMST } from '@/lib/date'
+import type { Combo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals, DietaryPreference } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
   alley: 'C4C or Sewall',
@@ -42,10 +42,13 @@ export default function HomePage() {
   const { firebaseUser, firebaseUid, username, defaultDiningHall, signIn } = useAuth()
   const { showToast } = useToast()
 
+  // "Eat Now" — open straight to the meal period the dining hall is serving now.
+  const nowPeriod = useMemo(() => currentMealPeriodMST(), [])
+
   const [selectedDining, setSelectedDining] = useState<DiningHall>(
     (defaultDiningHall as DiningHall | null) ?? 'c4c'
   )
-  const [selectedPeriod, setSelectedPeriod] = useState<MealPeriod>('Lunch')
+  const [selectedPeriod, setSelectedPeriod] = useState<MealPeriod>(nowPeriod)
   const [view, setView] = useState<HomeView>('combos')
   const [activeCombo, setActiveCombo] = useState<Combo | null>(null)
   const [showDatePicker, setShowDatePicker] = useState(false)
@@ -53,6 +56,7 @@ export default function HomePage() {
   const [shareStates, setShareStates] = useState<Record<string, 'sharing' | 'shared'>>({})
   const [favorites, setFavorites] = useState<FavoriteCombo[]>([])
   const [userRestrictions, setUserRestrictions] = useState<string[]>([])
+  const [dietaryPrefs, setDietaryPrefs] = useState<DietaryPreference[]>([])
   const [pastTitles, setPastTitles] = useState<Set<string>>(new Set())
   const [nutritionGoals, setNutritionGoals] = useState<NutritionGoals | undefined>()
 
@@ -60,7 +64,7 @@ export default function HomePage() {
   const [selectedDate, setSelectedDate] = useState(dateOptions[0].iso)
   const selectedDateObj = dateOptions.find((d) => d.iso === selectedDate) ?? dateOptions[0]
 
-  const { data, loading, error, refetch } = useCombos(selectedDining, selectedDate, nutritionGoals)
+  const { data, loading, error, refetch } = useCombos(selectedDining, selectedDate, nutritionGoals, dietaryPrefs)
 
   const combosForPeriod = data?.combos[selectedPeriod] ?? []
   const counts = useMemo(
@@ -78,6 +82,7 @@ export default function HomePage() {
     getUser(firebaseUid).then((p) => {
       setFavorites(p.favorites ?? [])
       setUserRestrictions(p.restrictions ?? [])
+      setDietaryPrefs((p.dietary_preferences ?? []) as DietaryPreference[])
       setPastTitles(new Set((p.meal_log ?? []).map((e) => e.title)))
       if (p.nutrition_goals) setNutritionGoals(p.nutrition_goals)
     }).catch(() => {})
@@ -259,6 +264,7 @@ export default function HomePage() {
             selected={selectedPeriod}
             onChange={setSelectedPeriod}
             counts={counts}
+            nowPeriod={selectedDate === dateOptions[0].iso ? nowPeriod : null}
           />
         </div>
 

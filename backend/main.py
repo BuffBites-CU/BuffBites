@@ -1,3 +1,4 @@
+import os
 import time
 import structlog
 from dotenv import load_dotenv
@@ -51,12 +52,38 @@ app.include_router(combos_router)
 app.include_router(drafts_router)
 app.include_router(comments_router)
 
+# CORS — lock to known origins in production via ALLOWED_ORIGINS (comma-separated).
+# Falls back to "*" with a loud warning so existing deploys keep working, but you
+# should set ALLOWED_ORIGINS to your real frontend domains.
+_origins_env = os.getenv("ALLOWED_ORIGINS", "").strip()
+if _origins_env:
+    _allow_origins = [o.strip() for o in _origins_env.split(",") if o.strip()]
+else:
+    logger.warning(
+        "cors_wildcard",
+        msg="ALLOWED_ORIGINS not set — allowing all origins. Set it to your frontend domains in production.",
+    )
+    _allow_origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=_allow_origins,
+    # Vercel preview/prod deployments get rotating subdomains; allow them by regex.
+    allow_origin_regex=r"https://.*\.vercel\.app",
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.on_event("startup")
+async def _startup() -> None:
+    from database import ensure_indexes
+    try:
+        await ensure_indexes()
+        logger.info("startup_indexes_ready")
+    except Exception as e:
+        logger.warning("startup_indexes_failed", error=str(e))
 
 
 @app.get("/")

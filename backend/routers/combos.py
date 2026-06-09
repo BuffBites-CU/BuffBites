@@ -1,20 +1,48 @@
+import hashlib
 import json
 import sys
-from collections import defaultdict
-from datetime import datetime
+import time
+from collections import defaultdict, deque
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from threading import Lock
 from zoneinfo import ZoneInfo
 
 import anthropic
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Request
+from fastapi.concurrency import run_in_threadpool
 from pydantic import BaseModel, ConfigDict
 
-from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish, verify_combos
+from database import combo_cache_collection
+from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish
 
 router = APIRouter()
 
 # Dining halls are in Boulder, CO — "today" follows Mountain Time, not UTC.
 MT = ZoneInfo("America/Denver")
+
+# ── Lightweight per-IP rate limiter ────────────────────────────────────────
+# Combo generation is unauthenticated and calls the Anthropic API, so it needs
+# abuse protection. An in-memory sliding window is sufficient at this scale
+# (single instance); swap for Redis if you scale horizontally.
+_RATE_LIMIT = 20          # requests
+_RATE_WINDOW = 60         # seconds
+_rate_hits: dict[str, deque] = defaultdict(deque)
+_rate_lock = Lock()
+
+
+def _check_rate_limit(client_ip: str) -> None:
+    now = time.monotonic()
+    with _rate_lock:
+        hits = _rate_hits[client_ip]
+        while hits and hits[0] <= now - _RATE_WINDOW:
+            hits.popleft()
+        if len(hits) >= _RATE_LIMIT:
+            raise HTTPException(
+                status_code=429,
+                detail="Too many combo requests. Please wait a moment and try again.",
+            )
+        hits.append(now)
 
 
 def _today_mt() -> str:
@@ -143,6 +171,39 @@ def _is_component_item(name: str) -> bool:
     return False
 
 
+# ── Dietary preference filtering ───────────────────────────────────────────
+# Hard-filters the item pool before it ever reaches Claude, so a vegan user
+# can never be shown a meat dish. Preferences map to the scraped fields.
+
+_GLUTEN_ALLERGENS = {"wheat", "gluten", "barley", "rye"}
+# Best-effort halal exclusion — the scraped data has no halal flag, so we drop
+# items whose name clearly indicates pork or alcohol.
+_HALAL_EXCLUDE_WORDS = {
+    "pork", "bacon", "ham", "pepperoni", "prosciutto", "sausage", "chorizo",
+    "salami", "pancetta", "lard", "wine", "beer", "rum", "bourbon", "vodka",
+}
+
+
+def _passes_dietary(item: dict, prefs: set[str]) -> bool:
+    """Return True if an item is allowed under the user's dietary preferences."""
+    if not prefs:
+        return True
+    if "vegan" in prefs and not item.get("is_vegan"):
+        return False
+    # vegetarian users still accept vegan items (a vegan dish is vegetarian)
+    if "vegetarian" in prefs and not (item.get("is_vegetarian") or item.get("is_vegan")):
+        return False
+    if "gluten-free" in prefs:
+        allergens = {str(a).lower() for a in (item.get("allergens") or [])}
+        if allergens & _GLUTEN_ALLERGENS:
+            return False
+    if "halal" in prefs:
+        words = set(item["name"].lower().split())
+        if words & _HALAL_EXCLUDE_WORDS:
+            return False
+    return True
+
+
 # ── Prompt-building helpers ────────────────────────────────────────────────
 
 def _item_line(item: dict) -> str:
@@ -230,6 +291,45 @@ def _enrich_combo(claude_combo: _CCombo, item_lookup: dict[str, dict]) -> Combo:
     )
 
 
+def _menu_name_set(day_menu: dict) -> set[str]:
+    """Lowercased set of every real dish name on the day's menu."""
+    names: set[str] = set()
+    for items in day_menu.get("categories", {}).values():
+        for it in items:
+            n = (it.get("name") or "").strip().lower()
+            if n:
+                names.add(n)
+    return names
+
+
+def _build_period(
+    combos: list[_CCombo],
+    item_lookup: dict[str, dict],
+    valid_names: set[str],
+    period: str,
+) -> list[Combo]:
+    """Enrich Claude's combos, dropping any hallucinated dishes (and combos that
+    fall below the 2-dish minimum once their fake dishes are removed)."""
+    out: list[Combo] = []
+    for c in combos:
+        kept = [d for d in c.dishes if d.name.strip().lower() in valid_names]
+        if len(kept) != len(c.dishes):
+            dropped = [d.name for d in c.dishes if d not in kept]
+            print(
+                f"[COMBO DROP] {period} / {c.title!r} — removed hallucinated dishes: {dropped}",
+                file=sys.stderr,
+            )
+        if len(kept) < 2:
+            print(
+                f"[COMBO DROP] {period} / {c.title!r} — fewer than 2 real dishes left, skipping combo",
+                file=sys.stderr,
+            )
+            continue
+        c.dishes = kept
+        out.append(_enrich_combo(c, item_lookup))
+    return out
+
+
 # ── Claude API call ────────────────────────────────────────────────────────
 
 _FOCUS_DESCRIPTIONS: dict[str, str] = {
@@ -256,10 +356,18 @@ def _build_goals_section(
     protein_goal: int | None,
     dietary_focus: str | None,
     priority_nutrients: list[str],
+    dietary_prefs: set[str] | None = None,
 ) -> str:
-    if not protein_goal and not dietary_focus and not priority_nutrients:
+    dietary_prefs = dietary_prefs or set()
+    if not protein_goal and not dietary_focus and not priority_nutrients and not dietary_prefs:
         return ""
     lines = ["USER NUTRITIONAL GOALS (tailor every combo to meet these targets):"]
+    if dietary_prefs:
+        pretty = ", ".join(sorted(p.replace("-", " ") for p in dietary_prefs))
+        lines.append(
+            f"• Dietary requirement (MANDATORY): every dish in every combo must be {pretty}. "
+            "The items below are already filtered to match — never add anything that violates this."
+        )
     if protein_goal:
         lines.append(f"• Protein: aim for at least {protein_goal}g per meal — include high-protein items in each combo")
     if dietary_focus and dietary_focus in _FOCUS_DESCRIPTIONS:
@@ -305,16 +413,45 @@ def _generate_with_claude(
     return response.parsed_output
 
 
+# ── Caching ─────────────────────────────────────────────────────────────────
+
+_VALID_DIETARY_PREFS = {"vegan", "vegetarian", "gluten-free", "halal"}
+
+
+def _cache_key(
+    dining: str,
+    date: str,
+    protein_goal: int | None,
+    dietary_focus: str | None,
+    nutrients: list[str],
+    dietary_prefs: set[str],
+) -> str:
+    """Stable cache key — combos are deterministic for a given menu + preferences."""
+    raw = "|".join([
+        dining,
+        date,
+        str(protein_goal or ""),
+        dietary_focus or "",
+        ",".join(sorted(nutrients)),
+        ",".join(sorted(dietary_prefs)),
+    ])
+    return hashlib.sha256(raw.encode()).hexdigest()
+
+
 # ── Route ──────────────────────────────────────────────────────────────────
 
 @router.get("/api/combos/generate", response_model=ComboResponse)
-def generate_combos(
+async def generate_combos(
+    request: Request,
     dining: str = Query(..., description="One of: " + ", ".join(DINING_FILES)),
     date: str | None = Query(None, description="YYYY-MM-DD, defaults to today"),
     protein_goal: int | None = Query(None, description="Target protein per meal in grams"),
     dietary_focus: str | None = Query(None, description="balanced|high-protein|low-carb|weight-loss|muscle-gain|endurance"),
     priority_nutrients: str | None = Query(None, description="Comma-separated: iron,calcium,vitamin-d,fiber,omega-3,b12,zinc"),
+    dietary_preferences: str | None = Query(None, description="Comma-separated: vegan,vegetarian,gluten-free,halal"),
 ):
+    _check_rate_limit(request.client.host if request.client else "unknown")
+
     if dining not in DINING_FILES:
         raise HTTPException(
             status_code=400,
@@ -322,6 +459,20 @@ def generate_combos(
         )
 
     target_date = date or _today_mt()
+
+    # ── Normalize preferences and check the cache before any expensive work ──
+    nutrient_list = [n.strip() for n in (priority_nutrients or "").split(",") if n.strip()]
+    dietary_prefs = {
+        p.strip().lower()
+        for p in (dietary_preferences or "").split(",")
+        if p.strip().lower() in _VALID_DIETARY_PREFS
+    }
+    cache_key = _cache_key(dining, target_date, protein_goal, dietary_focus, nutrient_list, dietary_prefs)
+
+    cached = await combo_cache_collection.find_one({"key": cache_key})
+    if cached:
+        return ComboResponse(**cached["response"])
+
     file_path = DATA_DIR / DINING_FILES[dining]
     try:
         menu_data = json.loads(file_path.read_text())
@@ -357,7 +508,12 @@ def generate_combos(
                 "protein_g":     (raw.get("nutrition") or {}).get("protein_g"),
                 "is_vegan":      raw.get("is_vegan"),
                 "is_vegetarian": raw.get("is_vegetarian"),
+                "allergens":     raw.get("allergens", []),
             }
+            # Hard-filter the pool so dishes that violate the user's dietary
+            # preferences never reach Claude in the first place.
+            if not _passes_dietary(item, dietary_prefs):
+                continue
             if kind == "breakfast":
                 breakfast_items.append(item)
             elif kind == "dessert":
@@ -392,12 +548,13 @@ def generate_combos(
         raise HTTPException(status_code=404, detail="Not enough menu items to build combos")
 
     # ── Build user goals section for the prompt ───────────────────────────
-    nutrient_list = [n.strip() for n in (priority_nutrients or "").split(",") if n.strip()]
-    goals_section = _build_goals_section(protein_goal, dietary_focus, nutrient_list)
+    goals_section = _build_goals_section(protein_goal, dietary_focus, nutrient_list, dietary_prefs)
 
     # ── Call Claude (LLM combo generation) ───────────────────────────────
+    # Anthropic's SDK call is blocking, so run it off the event loop.
     try:
-        claude_output = _generate_with_claude(
+        claude_output = await run_in_threadpool(
+            _generate_with_claude,
             dining_location=menu_data["dining_location"],
             date=target_date,
             day_of_week=day_menu["day_of_week"],
@@ -413,29 +570,18 @@ def generate_combos(
     # ── Build lookup for calorie / tag enrichment ─────────────────────────
     all_items = breakfast_items + lunch_items + dinner_items + dessert_items
     item_lookup = {i["name"].lower(): i for i in all_items}
-
-    def _enrich_period(combos: list[_CCombo]) -> list[Combo]:
-        return [_enrich_combo(c, item_lookup) for c in combos]
+    valid_names = _menu_name_set(day_menu)
 
     response = ComboResponse(
         dining_location=menu_data["dining_location"],
         date=target_date,
         day_of_week=day_menu["day_of_week"],
         combos=CombosMap(
-            Breakfast=_enrich_period(claude_output.Breakfast),
-            Lunch=_enrich_period(claude_output.Lunch),
-            Dinner=_enrich_period(claude_output.Dinner),
+            Breakfast=_build_period(claude_output.Breakfast, item_lookup, valid_names, "Breakfast"),
+            Lunch=_build_period(claude_output.Lunch, item_lookup, valid_names, "Lunch"),
+            Dinner=_build_period(claude_output.Dinner, item_lookup, valid_names, "Dinner"),
         ),
     )
-
-    # ── Pydantic verification — log any dish mismatches to stderr ─────────
-    errors = verify_combos(response, day_menu)
-    for err in errors:
-        print(
-            f"[COMBO VERIFY] {err.meal_period} / {err.combo_title} — "
-            f'"{err.dish_name}": {err.issue}',
-            file=sys.stderr,
-        )
 
     # ── Log single-station violations ─────────────────────────────────────
     for period, combos in [
@@ -451,6 +597,20 @@ def generate_combos(
                     f"uses only one station: {next(iter(stations))!r}",
                     file=sys.stderr,
                 )
+
+    # ── Cache the result (TTL index evicts it after expires_at) ───────────
+    try:
+        await combo_cache_collection.update_one(
+            {"key": cache_key},
+            {"$set": {
+                "key": cache_key,
+                "response": response.model_dump(),
+                "expires_at": datetime.now(timezone.utc) + timedelta(hours=24),
+            }},
+            upsert=True,
+        )
+    except Exception as e:
+        print(f"[COMBO CACHE] failed to store: {e}", file=sys.stderr)
 
     return response
 

@@ -1,16 +1,18 @@
 import { apiFetch } from './api'
-import type { ComboResponse, DiningHall, MenuResponse, NutritionGoals } from '@/types'
+import type { ComboResponse, DietaryPreference, DiningHall, MenuResponse, NutritionGoals } from '@/types'
 
 export function generateCombos(
   dining: DiningHall,
   date?: string,
   goals?: NutritionGoals,
+  dietaryPreferences?: DietaryPreference[],
 ): Promise<ComboResponse> {
   const params = new URLSearchParams({ dining })
   if (date) params.set('date', date)
   if (goals?.protein_g_per_meal) params.set('protein_goal', String(goals.protein_g_per_meal))
   if (goals?.dietary_focus)      params.set('dietary_focus', goals.dietary_focus)
   if (goals?.priority_nutrients?.length) params.set('priority_nutrients', goals.priority_nutrients.join(','))
+  if (dietaryPreferences?.length) params.set('dietary_preferences', dietaryPreferences.join(','))
   return apiFetch<ComboResponse>(`/api/combos/generate?${params}`)
 }
 

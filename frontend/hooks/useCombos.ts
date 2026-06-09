@@ -1,34 +1,41 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { generateCombos } from '@/services/combosService'
 import { todayMST } from '@/lib/date'
-import type { ComboResponse, DiningHall, NutritionGoals } from '@/types'
+import type { ComboResponse, DietaryPreference, DiningHall, NutritionGoals } from '@/types'
 
 const comboCache = new Map<string, ComboResponse>()
 
-function goalsKey(goals?: NutritionGoals): string {
-  if (!goals) return ''
+function goalsKey(goals?: NutritionGoals, prefs?: DietaryPreference[]): string {
   const parts = [
-    goals.protein_g_per_meal ? `p${goals.protein_g_per_meal}` : '',
-    goals.dietary_focus ?? '',
-    (goals.priority_nutrients ?? []).sort().join('+'),
+    goals?.protein_g_per_meal ? `p${goals.protein_g_per_meal}` : '',
+    goals?.dietary_focus ?? '',
+    (goals?.priority_nutrients ?? []).slice().sort().join('+'),
+    (prefs ?? []).slice().sort().join('+'),
   ]
   return parts.filter(Boolean).join('_')
 }
 
-export function useCombos(dining: DiningHall, date?: string, goals?: NutritionGoals) {
+export function useCombos(
+  dining: DiningHall,
+  date?: string,
+  goals?: NutritionGoals,
+  dietaryPrefs?: DietaryPreference[],
+) {
   const today = useMemo(() => todayMST(), [])
   const resolvedDate = date ?? today
-  const gKey = useMemo(() => goalsKey(goals), [goals])
+  const gKey = useMemo(() => goalsKey(goals, dietaryPrefs), [goals, dietaryPrefs])
 
   const cacheKey = `${dining}::${resolvedDate}::${gKey}`
 
   const diningRef = useRef(dining)
   const dateRef   = useRef(resolvedDate)
   const goalsRef  = useRef(goals)
+  const prefsRef  = useRef(dietaryPrefs)
   const gKeyRef   = useRef(gKey)
   diningRef.current = dining
   dateRef.current   = resolvedDate
   goalsRef.current  = goals
+  prefsRef.current  = dietaryPrefs
   gKeyRef.current   = gKey
 
   const [data, setData]       = useState<ComboResponse | null>(() => comboCache.get(cacheKey) ?? null)
@@ -51,7 +58,7 @@ export function useCombos(dining: DiningHall, date?: string, goals?: NutritionGo
     setLoading(true)
     setError(null)
 
-    generateCombos(diningRef.current, dateRef.current, goalsRef.current)
+    generateCombos(diningRef.current, dateRef.current, goalsRef.current, prefsRef.current)
       .then((result) => {
         if (cancelled) return
         comboCache.set(key, result)

@@ -35,13 +35,14 @@ npm run lint     # ESLint
 
 ### How a combo request flows end-to-end
 
-1. Frontend calls `GET /api/combos/generate?dining=c4c&date=YYYY-MM-DD`
-2. `backend/routers/combos.py` loads the pre-scraped JSON from `scraping_scripts/data/{hall}_dining_menus.json`
-3. Every station is classified by keyword into `breakfast | lunch | dinner | dessert | excluded` — utility stations (Condiments, Beverage, Bread, etc.) are dropped entirely; individual component items (sauces, diced toppings) are filtered as a second pass
-4. Classified item pools are sent to `claude-haiku-4-5` via the Anthropic SDK with `client.messages.parse()` (structured output) — each meal period gets only its relevant items
-5. The response is validated by Pydantic v2 models in `backend/pydantic_models/combo_models.py` (structure, combo count, 2–6 dishes per combo)
-6. `verify_combos()` cross-checks every dish name (case-insensitive) against the scraped menu — hallucinations are logged to stderr as warnings but don't block the response
-7. `ComboResponse` JSON is returned
+1. Frontend calls `GET /api/combos/generate?dining=c4c&date=YYYY-MM-DD` (optionally `protein_goal`, `dietary_focus`, `priority_nutrients`, `dietary_preferences`)
+2. The endpoint is rate-limited per IP (in-memory sliding window) and checks `combo_cache` (MongoDB, 24h TTL index) keyed by a hash of `(dining, date, goals, dietary prefs)` — a cache hit returns immediately without calling Claude
+3. `backend/routers/combos.py` loads the pre-scraped JSON from `scraping_scripts/data/{hall}_dining_menus.json`
+4. Every station is classified by keyword into `breakfast | lunch | dinner | dessert | excluded` — utility stations (Condiments, Beverage, Bread, etc.) are dropped entirely; individual component items (sauces, diced toppings) are filtered as a second pass. Items that violate the user's `dietary_preferences` (vegan/vegetarian via flags, gluten-free via allergens, halal via name heuristics) are hard-filtered out of the pool here
+5. Classified item pools are sent to `claude-haiku-4-5` via the Anthropic SDK with `client.messages.parse()` (structured output, run in a threadpool since the route is async) — each meal period gets only its relevant items
+6. The response is validated by Pydantic v2 models in `backend/pydantic_models/combo_models.py` (structure, combo count, 2–6 dishes per combo)
+7. `_build_period()` drops any hallucinated dishes (names not on the scraped menu) and skips combos left with fewer than 2 real dishes; drops are logged to stderr
+8. `ComboResponse` JSON is returned and written to `combo_cache`
 
 ### Backend structure
 

@@ -29,3 +29,27 @@ export function isoOffsetMST(days: number): string {
 export function isoToLocalNoon(iso: string): Date {
   return new Date(iso + 'T12:00:00')
 }
+
+/** The current hour (0–23) in Mountain Time. */
+export function hourMST(): number {
+  const h = new Intl.DateTimeFormat('en-US', {
+    timeZone: TZ,
+    hour: 'numeric',
+    hour12: false,
+  }).format(new Date())
+  // en-US hour12:false can emit "24" at midnight — normalize to 0.
+  return Number(h) % 24
+}
+
+/**
+ * The meal period most relevant *right now* in Mountain Time:
+ *   before 10:30 → Breakfast, 10:30–16:00 → Lunch, after 16:00 → Dinner.
+ * Used to pre-select the tab a student most likely wants when they open the app.
+ */
+export function currentMealPeriodMST(): 'Breakfast' | 'Lunch' | 'Dinner' {
+  const minutes = hourMST() * 60 +
+    Number(new Intl.DateTimeFormat('en-US', { timeZone: TZ, minute: 'numeric' }).format(new Date()))
+  if (minutes < 10 * 60 + 30) return 'Breakfast'
+  if (minutes < 16 * 60) return 'Lunch'
+  return 'Dinner'
+}
