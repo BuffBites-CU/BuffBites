@@ -93,9 +93,12 @@ export default function ComboCard({
   const overflowCount = tags.length - 2
 
   return (
-    <button
+    <div
       onClick={onClick}
-      className="w-full text-left bg-surface-card rounded-2xl shadow-card border border-surface-overlay p-4 transition-all duration-150 hover:shadow-card-lg hover:scale-[1.005] active:scale-[0.99]"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && onClick()}
+      className="w-full text-left bg-surface-card rounded-2xl shadow-card border border-surface-overlay p-4 transition-all duration-150 hover:shadow-card-lg hover:scale-[1.005] active:scale-[0.99] cursor-pointer"
     >
       <div className="flex items-center gap-2 mb-1 min-w-0">
         {rank !== undefined && (
@@ -272,7 +275,7 @@ export default function ComboCard({
           </button>
         </div>
       )}
-    </button>
+    </div>
   )
 }
 

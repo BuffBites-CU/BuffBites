@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { useAuth } from '@/context/AuthContext'
 import { createUser, checkUsernameAvailable } from '@/services/usersService'
 import type { DietaryPreference } from '@/types'
@@ -16,17 +17,26 @@ const DIETARY_OPTIONS: { key: DietaryPreference; label: string; icon: string; st
   { key: 'halal', label: 'Halal', icon: '☪️', style: 'bg-indigo-100 text-indigo-800 border-indigo-200' },
 ]
 
+const AVATARS = [
+  { id: 'avatar1', src: '/avatar1.jpeg' },
+  { id: 'avatar2', src: '/avatar2.jpeg' },
+  { id: 'avatar3', src: '/avatar3.jpeg' },
+  { id: 'avatar4', src: '/avatar4.jpeg' },
+  { id: 'avatar5', src: '/avatar5.jpeg' },
+]
+
 type UsernameStatus = 'idle' | 'checking' | 'available' | 'taken'
 
 export default function OnboardingPage() {
   const router = useRouter()
   const { firebaseUser, setUsername } = useAuth()
 
-  const [step, setStep] = useState<1 | 2>(1)
+  const [step, setStep] = useState<1 | 2 | 3>(1)
   const [username, setUsernameInput] = useState('')
   const [usernameError, setUsernameError] = useState('')
   const [usernameStatus, setUsernameStatus] = useState<UsernameStatus>('idle')
   const [prefs, setPrefs] = useState<DietaryPreference[]>([])
+  const [avatar, setAvatar] = useState<string>('avatar1')
   const [submitting, setSubmitting] = useState(false)
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -36,12 +46,10 @@ export default function OnboardingPage() {
 
   useEffect(() => {
     if (debounceTimer.current) clearTimeout(debounceTimer.current)
-
     if (!USERNAME_REGEX.test(username)) {
       setUsernameStatus('idle')
       return
     }
-
     setUsernameStatus('checking')
     debounceTimer.current = setTimeout(async () => {
       try {
@@ -53,7 +61,6 @@ export default function OnboardingPage() {
         setUsernameStatus('idle')
       }
     }, DEBOUNCE_MS)
-
     return () => {
       if (debounceTimer.current) clearTimeout(debounceTimer.current)
     }
@@ -85,6 +92,7 @@ export default function OnboardingPage() {
         email: firebaseUser.email ?? '',
         username: username.trim(),
         dietary_preferences: prefs,
+        avatar,
       })
       setUsername(username.trim())
       router.replace('/home')
@@ -99,6 +107,8 @@ export default function OnboardingPage() {
     }
   }
 
+  const progressWidth = step === 1 ? '33%' : step === 2 ? '66%' : '100%'
+
   return (
     <div className="min-h-screen bg-surface flex flex-col items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
@@ -106,25 +116,26 @@ export default function OnboardingPage() {
         <div className="h-1 bg-gray-200 rounded-full mb-10 overflow-hidden">
           <div
             className="h-full bg-brand-gold rounded-full transition-all duration-300"
-            style={{ width: step === 1 ? '50%' : '100%' }}
+            style={{ width: progressWidth }}
           />
         </div>
 
         {step === 1 && (
           <div className="bg-brand-gold/10 rounded-2xl px-5 py-4 mb-6 text-center">
             <p className="text-lg font-bold text-brand-black">Welcome to Buff Bites 🏔</p>
-            <p className="text-sm text-muted mt-0.5">Let&apos;s set up your profile in 2 quick steps.</p>
+            <p className="text-sm text-muted mt-0.5">Let&apos;s set up your profile in 3 quick steps.</p>
           </div>
         )}
 
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-7 space-y-6">
+
+          {/* Step 1 — Username */}
           {step === 1 && (
             <>
               <div>
                 <h1 className="text-2xl font-bold text-brand-black">Pick a username</h1>
                 <p className="text-sm text-muted mt-1">This is how the community will know you.</p>
               </div>
-
               <div>
                 <div className="relative">
                   <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted text-sm">@</span>
@@ -155,7 +166,6 @@ export default function OnboardingPage() {
                   <p className="text-xs text-emerald-600 mt-1.5">Username is available!</p>
                 ) : null}
               </div>
-
               <button
                 onClick={handleStep1Next}
                 disabled={usernameStatus === 'checking' || usernameStatus === 'taken'}
@@ -166,6 +176,7 @@ export default function OnboardingPage() {
             </>
           )}
 
+          {/* Step 2 — Dietary preferences */}
           {step === 2 && (
             <>
               <div>
@@ -174,7 +185,6 @@ export default function OnboardingPage() {
                   We'll use this to tag combos for you. You can change it anytime.
                 </p>
               </div>
-
               <div className="flex flex-wrap gap-2">
                 {DIETARY_OPTIONS.map(({ key, label, icon, style }) => (
                   <button
@@ -189,10 +199,51 @@ export default function OnboardingPage() {
                   </button>
                 ))}
               </div>
-
               <div className="flex gap-3">
                 <button
                   onClick={() => setStep(1)}
+                  className="flex-1 py-3.5 rounded-2xl border border-gray-200 text-sm font-medium text-brand-black hover:bg-gray-50 transition-colors"
+                >
+                  Back
+                </button>
+                <button
+                  onClick={() => setStep(3)}
+                  className="flex-1 py-3.5 rounded-2xl bg-brand-gold text-brand-black font-semibold text-sm hover:opacity-90 active:scale-95 transition-all"
+                >
+                  Next →
+                </button>
+              </div>
+            </>
+          )}
+
+          {/* Step 3 — Avatar */}
+          {step === 3 && (
+            <>
+              <div>
+                <h1 className="text-2xl font-bold text-brand-black">Pick your avatar</h1>
+                <p className="text-sm text-muted mt-1">Choose a profile picture for your account.</p>
+              </div>
+              <div className="grid grid-cols-5 gap-3">
+                {AVATARS.map(({ id, src }) => (
+                  <button
+                    key={id}
+                    onClick={() => setAvatar(id)}
+                    className={`relative rounded-full overflow-hidden border-4 transition-all aspect-square ${
+                      avatar === id ? 'border-brand-gold scale-105' : 'border-transparent'
+                    }`}
+                  >
+                    <Image
+                      src={src}
+                      alt={id}
+                      fill
+                      className="object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setStep(2)}
                   className="flex-1 py-3.5 rounded-2xl border border-gray-200 text-sm font-medium text-brand-black hover:bg-gray-50 transition-colors"
                 >
                   Back
@@ -215,6 +266,7 @@ export default function OnboardingPage() {
               </div>
             </>
           )}
+
         </div>
       </div>
     </div>

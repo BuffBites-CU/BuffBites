@@ -451,7 +451,9 @@ export default function ProfilePage() {
           <div className="flex items-center gap-4">
             {/* Avatar */}
             <div className="relative w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-brand-gold/40 flex-shrink-0">
-              {firebaseUser?.photoURL ? (
+              {profile.avatar ? (
+                <Image src={`/${profile.avatar}.jpeg`} alt="Profile" fill className="object-cover" />
+              ) : firebaseUser?.photoURL ? (
                 <Image src={firebaseUser.photoURL} alt="Profile" fill className="object-cover" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-brand-gold/20">
