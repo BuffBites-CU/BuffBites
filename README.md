@@ -310,9 +310,43 @@ Buff_Bites/
 
 ## Deployment
 
-- **Backend** — Docker build context is `backend/`. The image runs on **Fly.io** (`backend/fly.toml`, internal port `8000`). In production set `ANTHROPIC_API_KEY`, `MONGO_URL`, `ALLOWED_ORIGINS`, and `FIREBASE_SERVICE_ACCOUNT_JSON` as secrets.
-- **Frontend** — Deployed on **Vercel** (`vercel.json`, `framework: nextjs`). Set the `NEXT_PUBLIC_*` env vars in the Vercel project, pointing `NEXT_PUBLIC_API_URL` at the deployed backend.
-- **Menu data** — Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo.
+### Backend → Fly.io
+
+The image runs on **Fly.io** (app `buffbites-backend`, config `backend/fly.toml`, internal port `8000`). The build context **must be the repo root**, because the Dockerfile copies both `backend/` and `scraping_scripts/data/` (the menu JSON lives outside `backend/`).
+
+```bash
+# One-time: install flyctl and log in
+brew install flyctl        # or: curl -L https://fly.io/install.sh | sh
+flyctl auth login
+
+# Deploy — run from the repo root
+flyctl deploy --remote-only --config backend/fly.toml --dockerfile backend/Dockerfile .
+```
+
+`--remote-only` builds on Fly's builders (no local Docker needed). The deploy ships your current working tree, so it bundles the latest backend code **and** the committed menu JSON together.
+
+Set production secrets once (they persist across deploys):
+
+```bash
+flyctl secrets set -a buffbites-backend \
+  ANTHROPIC_API_KEY=... MONGO_URL=... ALLOWED_ORIGINS=https://buffbites.app \
+  FIREBASE_SERVICE_ACCOUNT_JSON='{"type":"service_account",...}'
+```
+
+### Frontend → Vercel
+
+Deployed on **Vercel** (`vercel.json`, `framework: nextjs`). Vercel auto-deploys on push to `main`, or deploy manually:
+
+```bash
+cd frontend
+npx vercel --prod
+```
+
+In the Vercel project settings, set the `NEXT_PUBLIC_*` env vars (Firebase keys + `NEXT_PUBLIC_API_URL` pointing at the deployed Fly backend, e.g. `https://buffbites-backend.fly.dev`).
+
+### Menu data
+
+Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo. The deployed backend only picks up new menus on its next deploy, since the JSON is baked into the Docker image.
 
 ---
 
