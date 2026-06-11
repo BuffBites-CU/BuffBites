@@ -49,17 +49,18 @@ export interface UserResponse extends UserCreate {
   favorites?: FavoriteCombo[]
 }
 
-export type DiningHall = 'alley' | 'c4c' | 'libby' | 'sewall' | 'village_center'
+export type DiningHall = 'alley' | 'c4c' | 'libby' | 'seec' | 'sewall' | 'village_center'
 
 export const DINING_HALL_LABELS: Record<DiningHall, string> = {
   alley: 'The Alley',
   c4c: 'C4C',
   libby: 'Libby',
+  seec: 'SEEC Cafe',
   sewall: 'Sewall',
   village_center: 'Village Center',
 }
 
-export const DINING_HALLS: DiningHall[] = ['alley', 'c4c', 'libby', 'sewall', 'village_center']
+export const DINING_HALLS: DiningHall[] = ['alley', 'c4c', 'libby', 'seec', 'sewall', 'village_center']
 
 export type MealPeriod = 'Breakfast' | 'Lunch' | 'Dinner'
 

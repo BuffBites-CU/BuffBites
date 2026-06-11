@@ -69,6 +69,7 @@ DINING_FILES: dict[str, str] = {
     "alley":          "alley_dining_menus.json",
     "c4c":            "c4c_dining_menus.json",
     "libby":          "libby_dining_menus.json",
+    "seec":           "seec_dining_menus.json",
     "sewall":         "sewall_dining_menus.json",
     "village_center": "village_center_dining_menus.json",
 }

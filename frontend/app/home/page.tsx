@@ -21,6 +21,7 @@ const HALL_ALTERNATES: Record<DiningHall, string> = {
   alley: 'C4C or Sewall',
   c4c: 'Sewall or Village Center',
   libby: 'C4C or Village Center',
+  seec: 'C4C or Village Center',
   sewall: 'C4C or Libby',
   village_center: 'C4C or Sewall',
 }
