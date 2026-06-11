@@ -27,16 +27,11 @@ export function useCombos(
 
   const cacheKey = `${dining}::${resolvedDate}::${gKey}`
 
-  const diningRef = useRef(dining)
-  const dateRef   = useRef(resolvedDate)
-  const goalsRef  = useRef(goals)
-  const prefsRef  = useRef(dietaryPrefs)
-  const gKeyRef   = useRef(gKey)
-  diningRef.current = dining
-  dateRef.current   = resolvedDate
-  goalsRef.current  = goals
-  prefsRef.current  = dietaryPrefs
-  gKeyRef.current   = gKey
+  // Hold the latest request inputs so the fetch effect can stay keyed purely on
+  // cacheKey (which already encodes their content) without re-running on every
+  // render — goals/dietaryPrefs are fresh object refs each render.
+  const argsRef = useRef({ dining, resolvedDate, goals, dietaryPrefs })
+  argsRef.current = { dining, resolvedDate, goals, dietaryPrefs }
 
   const [data, setData]       = useState<ComboResponse | null>(() => comboCache.get(cacheKey) ?? null)
   const [loading, setLoading] = useState(false)
@@ -44,24 +39,26 @@ export function useCombos(
   const [tick, setTick]       = useState(0)
 
   useEffect(() => {
-    const key = `${dining}::${resolvedDate}::${gKey}`
-    const cached = comboCache.get(key)
-    if (cached) { setData(cached); setError(null) }
-    else         { setData(null) }
-  }, [dining, resolvedDate, gKey])
+    const cached = comboCache.get(cacheKey)
+    if (cached) {
+      setData(cached)
+      setError(null)
+      setLoading(false)
+      return
+    }
 
-  useEffect(() => {
-    const key = `${diningRef.current}::${dateRef.current}::${gKeyRef.current}`
-    if (comboCache.has(key)) return
+    // New hall/date/prefs with nothing cached: drop the previous selection's
+    // combos immediately so they never linger on screen during the fetch.
+    setData(null)
+    setError(null)
+    setLoading(true)
 
     let cancelled = false
-    setLoading(true)
-    setError(null)
-
-    generateCombos(diningRef.current, dateRef.current, goalsRef.current, prefsRef.current)
+    const args = argsRef.current
+    generateCombos(args.dining, args.resolvedDate, args.goals, args.dietaryPrefs)
       .then((result) => {
         if (cancelled) return
-        comboCache.set(key, result)
+        comboCache.set(cacheKey, result)
         setData(result)
       })
       .catch((e: unknown) => {
@@ -70,14 +67,16 @@ export function useCombos(
       })
       .finally(() => { if (!cancelled) setLoading(false) })
 
+    // Changing cacheKey (hall/date/prefs) or refetch cancels the in-flight
+    // request, so a late response can never overwrite combos for a different
+    // selection — this is what kept one hall's combos showing under another.
     return () => { cancelled = true }
-  }, [tick])
+  }, [cacheKey, tick])
 
   const refetch = useCallback(() => {
-    const key = `${diningRef.current}::${dateRef.current}::${gKeyRef.current}`
-    comboCache.delete(key)
+    comboCache.delete(cacheKey)
     setTick((n) => n + 1)
-  }, [])
+  }, [cacheKey])
 
   return { data, loading, error, refetch }
 }
