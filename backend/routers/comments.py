@@ -13,11 +13,9 @@ Endpoints:
 from fastapi import APIRouter, HTTPException, Depends
 from datetime import datetime, timezone
 from bson import ObjectId
-from database import db
+from database import comments_collection
 from pydantic_models.comment_models import CommentCreate, CommentResponse
 from auth import get_current_user
-
-comments_collection = db["comments"]
 
 router = APIRouter(tags=["comments"])
 

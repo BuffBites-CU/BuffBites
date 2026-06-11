@@ -124,7 +124,7 @@ Returns raw menu items grouped by station for a given dining hall and date. Appl
 
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
-| `dining` | Yes | string | Dining hall key. One of: `alley`, `c4c`, `libby`, `sewall`, `village_center` |
+| `dining` | Yes | string | Dining hall key. One of: `alley`, `c4c`, `libby`, `seec`, `sewall`, `village_center` |
 | `date` | No | string | Date in `YYYY-MM-DD` format. Defaults to today. |
 
 #### Response `200`
@@ -200,7 +200,7 @@ Each combo contains 2–6 dishes drawn from the day's scraped menu, with cross-s
 
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
-| `dining` | Yes | string | Dining hall key. One of: `alley`, `c4c`, `libby`, `sewall`, `village_center` |
+| `dining` | Yes | string | Dining hall key. One of: `alley`, `c4c`, `libby`, `seec`, `sewall`, `village_center` |
 | `date` | No | string | Date in `YYYY-MM-DD` format. Defaults to today (Mountain Time) if omitted. |
 | `protein_goal` | No | integer | Target protein per meal in grams — combos aim to meet it. |
 | `dietary_focus` | No | string | One of: `balanced`, `high-protein`, `low-carb`, `weight-loss`, `muscle-gain`, `endurance`. |
@@ -406,9 +406,16 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
   "dietary_preferences": ["vegan", "halal"],
   "restrictions": ["gluten-free"],
   "avatar": "avatar_3",
-  "preferred_calories_per_meal": 700
+  "preferred_calories_per_meal": 700,
+  "default_dining_hall": "c4c",
+  "nutrition_goals": {
+    "protein_g_per_meal": 40,
+    "dietary_focus": "high-protein",
+    "priority_nutrients": ["iron", "fiber"]
+  }
 }
 ```
+All fields except `firebase_uid`, `email`, and `username` are optional and default to empty/`null`.
 
 **`GET /api/users/check-username/{username}` response:**
 ```json
@@ -427,14 +434,33 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
   "karma": 42,
   "created_at": "2026-01-15T10:00:00Z",
   "preferred_calories_per_meal": 700,
+  "default_dining_hall": "c4c",
+  "nutrition_goals": {
+    "protein_g_per_meal": 40,
+    "dietary_focus": "high-protein",
+    "priority_nutrients": ["iron", "fiber"]
+  },
   "meal_log": [
     {
       "title": "The Flatiron",
       "calories": 680,
+      "protein_g": 35,
       "date": "2026-06-03",
       "dining_hall": "c4c",
       "meal_period": "Lunch",
       "logged_at": "2026-06-03T13:22:00Z"
+    }
+  ],
+  "favorites": [
+    {
+      "title": "The Flatiron",
+      "dining_hall": "c4c",
+      "date": "2026-06-03",
+      "description": "A hearty high-protein lunch.",
+      "approximate_calories": 680,
+      "tags": ["high-protein"],
+      "dishes": [{ "name": "Grilled Chicken", "station": "Smoke n' Grill" }],
+      "saved_at": "2026-06-03T13:25:00Z"
     }
   ]
 }
@@ -563,6 +589,7 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
 | `alley` | The Alley at Farrand | No |
 | `c4c` | Center for Community (C4C) | Yes |
 | `libby` | Libby Dining | No |
+| `seec` | SEEC Cafe | No |
 | `sewall` | Sewall Dining | No |
 | `village_center` | Village Center Dining | Yes |
 

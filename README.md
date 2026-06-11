@@ -250,6 +250,7 @@ See [`API_DOCS.md`](./API_DOCS.md) for full request/response schemas.
 | `alley` | The Alley at Farrand |
 | `c4c` | Center for Community (C4C) |
 | `libby` | Libby Dining |
+| `seec` | SEEC Cafe |
 | `sewall` | Sewall Dining |
 | `village_center` | Village Center Dining |
 
@@ -284,7 +285,7 @@ Buff_Bites/
 │       ├── test_combo_models.py
 │       └── test_station_classifier.py
 ├── scraping_scripts/
-│   ├── {alley,c4c,libby,sewall,village_center}_dining.py
+│   ├── {alley,c4c,libby,seec,sewall,village_center}_dining.py
 │   └── data/*_dining_menus.json         # Pre-scraped menus, refreshed daily
 ├── frontend/                            # Next.js App Router (TypeScript + Tailwind)
 │   ├── app/
