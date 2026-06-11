@@ -156,12 +156,35 @@ export interface ComboUpdate {
 
 export type VoteType = 'upvote' | 'downvote'
 
+export interface NutritionInfo {
+  calories?: number
+  fat_g?: number
+  saturated_fat_g?: number
+  trans_fat_g?: number
+  cholesterol_mg?: number
+  sodium_mg?: number
+  carbohydrates_g?: number
+  fiber_g?: number
+  added_sugar_g?: number
+  total_sugar_g?: number
+  protein_g?: number
+  potassium_mg?: number
+  calcium_mg?: number
+  iron_mg?: number
+  vitamin_d_mcg?: number
+}
+
 export interface MenuItem {
   name: string
   description?: string
+  serving_size?: string
   calories?: number
+  ingredients?: string
+  allergens?: string[]
+  dietary_labels?: string[]
   is_vegan?: boolean
   is_vegetarian?: boolean
+  nutrition?: NutritionInfo
 }
 
 export interface MenuResponse {
