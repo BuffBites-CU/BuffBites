@@ -38,6 +38,9 @@ jobs:
       - name: Scrape The Alley
         run: python scraping_scripts/alley_dining.py
 
+      - name: Scrape SEEC
+        run: python scraping_scripts/seec_dining.py
+
       - name: Commit updated menus
         run: |
           git config user.name  "github-actions[bot]"

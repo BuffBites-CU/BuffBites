@@ -21,6 +21,7 @@ pip install -r requirements.txt
 | `sewall_dining.py` | Sewall Dining Center | 6 weeks | `data/sewall_dining_menus.json` |
 | `village_center_dining.py` | Village Center Dining | 6 weeks | `data/village_center_dining_menus.json` |
 | `alley_dining.py` | The Alley at Farrand | 4 weeks | `data/alley_dining_menus.json` |
+| `seec_dining.py` | SEEC Cafe (student order-ahead) | 6 weeks | `data/seec_dining_menus.json` |
 
 ---
 
@@ -32,6 +33,7 @@ python3 libby_dining.py
 python3 sewall_dining.py
 python3 village_center_dining.py
 python3 alley_dining.py
+python3 seec_dining.py
 ```
 
 ---
