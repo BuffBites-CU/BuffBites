@@ -1,3 +1,4 @@
+import asyncio
 import hashlib
 import json
 import sys
@@ -10,7 +11,6 @@ from zoneinfo import ZoneInfo
 
 import anthropic
 from fastapi import APIRouter, HTTPException, Query, Request
-from fastapi.concurrency import run_in_threadpool
 from pydantic import BaseModel, ConfigDict
 
 from database import combo_cache_collection
@@ -63,7 +63,17 @@ DATA_DIR = next(
     ),
     _BACKEND_DIR / "scraping_scripts" / "data",
 )
-COMBO_PROMPT = (Path(__file__).parent.parent / "prompts" / "combos.txt").read_text()
+COMBO_PERIOD_PROMPT = (Path(__file__).parent.parent / "prompts" / "combo_period.txt").read_text()
+
+# Extra rules / item sections appended only for the Dinner prompt, which also
+# carries the dessert ("Sweet Finale") combo.
+_DINNER_EXTRA_RULES = (
+    "8. The 3rd combo MUST be a dessert specialty (e.g., titled \"Sweet Finale\") built "
+    "exclusively from the DESSERT ITEMS list:\n"
+    "   - If ice cream or soft serve is available, pair it with a cookie, brownie, cake, or fruit item.\n"
+    "   - If the dessert list is empty, make it a light plant-based dinner combo instead.\n"
+    "   - Never mix dinner and dessert items in this combo."
+)
 
 DINING_FILES: dict[str, str] = {
     "alley":          "alley_dining_menus.json",
@@ -129,11 +139,9 @@ class _CCombo(BaseModel):
     dishes: list[_CDish]
 
 
-class _CCombosOutput(BaseModel):
+class _CPeriodOutput(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    Breakfast: list[_CCombo]
-    Lunch: list[_CCombo]
-    Dinner: list[_CCombo]
+    combos: list[_CCombo]
 
 
 # ── Station / item classification ──────────────────────────────────────────
@@ -382,34 +390,40 @@ def _build_goals_section(
     return "\n".join(lines) + "\n\n"
 
 
-def _generate_with_claude(
+async def _generate_period_with_claude(
+    client: anthropic.AsyncAnthropic,
+    period_name: str,
     dining_location: str,
     date: str,
     day_of_week: str,
-    breakfast_items: list[dict],
-    lunch_items: list[dict],
-    dinner_items: list[dict],
-    dessert_items: list[dict],
+    items: list[dict],
+    dessert_items: list[dict] | None = None,
     goals_section: str = "",
-) -> _CCombosOutput:
-    client = anthropic.Anthropic()
+) -> _CPeriodOutput:
+    is_dinner = period_name == "Dinner"
 
-    prompt = COMBO_PROMPT.format(
+    prompt = COMBO_PERIOD_PROMPT.format(
         dining_location=dining_location,
         day_of_week=day_of_week,
         date=date,
         user_goals_section=goals_section,
-        breakfast_items=_format_pool(breakfast_items),
-        lunch_items=_format_pool(lunch_items),
-        dinner_items=_format_pool(dinner_items),
-        dessert_items=_format_pool(dessert_items, limit=20),
+        period_name=period_name,
+        period_name_upper=period_name.upper(),
+        items=_format_pool(items),
+        extra_rules=_DINNER_EXTRA_RULES if is_dinner else "",
+        dessert_section=(
+            "\nDESSERT ITEMS (Sweet Finale only — do NOT mix with dinner items above):\n"
+            + _format_pool(dessert_items or [], limit=20)
+            if is_dinner
+            else ""
+        ),
     )
 
-    response = client.messages.parse(
+    response = await client.messages.parse(
         model="claude-haiku-4-5",
-        max_tokens=4096,
+        max_tokens=2048,
         messages=[{"role": "user", "content": prompt}],
-        output_format=_CCombosOutput,
+        output_format=_CPeriodOutput,
     )
     return response.parsed_output
 
@@ -552,18 +566,24 @@ async def generate_combos(
     goals_section = _build_goals_section(protein_goal, dietary_focus, nutrient_list, dietary_prefs)
 
     # ── Call Claude (LLM combo generation) ───────────────────────────────
-    # Anthropic's SDK call is blocking, so run it off the event loop.
+    # One call per meal period, run concurrently, so total latency is roughly
+    # the slowest single call instead of the sum of all three.
+    client = anthropic.AsyncAnthropic()
     try:
-        claude_output = await run_in_threadpool(
-            _generate_with_claude,
-            dining_location=menu_data["dining_location"],
-            date=target_date,
-            day_of_week=day_menu["day_of_week"],
-            breakfast_items=breakfast_items,
-            lunch_items=lunch_items,
-            dinner_items=dinner_items,
-            dessert_items=dessert_items,
-            goals_section=goals_section,
+        breakfast_output, lunch_output, dinner_output = await asyncio.gather(
+            _generate_period_with_claude(
+                client, "Breakfast", menu_data["dining_location"], target_date,
+                day_menu["day_of_week"], breakfast_items, goals_section=goals_section,
+            ),
+            _generate_period_with_claude(
+                client, "Lunch", menu_data["dining_location"], target_date,
+                day_menu["day_of_week"], lunch_items, goals_section=goals_section,
+            ),
+            _generate_period_with_claude(
+                client, "Dinner", menu_data["dining_location"], target_date,
+                day_menu["day_of_week"], dinner_items, dessert_items=dessert_items,
+                goals_section=goals_section,
+            ),
         )
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Combo generation failed: {exc}")
@@ -578,9 +598,9 @@ async def generate_combos(
         date=target_date,
         day_of_week=day_menu["day_of_week"],
         combos=CombosMap(
-            Breakfast=_build_period(claude_output.Breakfast, item_lookup, valid_names, "Breakfast"),
-            Lunch=_build_period(claude_output.Lunch, item_lookup, valid_names, "Lunch"),
-            Dinner=_build_period(claude_output.Dinner, item_lookup, valid_names, "Dinner"),
+            Breakfast=_build_period(breakfast_output.combos, item_lookup, valid_names, "Breakfast"),
+            Lunch=_build_period(lunch_output.combos, item_lookup, valid_names, "Lunch"),
+            Dinner=_build_period(dinner_output.combos, item_lookup, valid_names, "Dinner"),
         ),
     )
 
