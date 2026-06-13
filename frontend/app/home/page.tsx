@@ -256,8 +256,26 @@ export default function HomePage() {
           </div>
         )}
 
-        <div className="max-w-md mx-auto">
-          <DiningSelector selected={selectedDining} onChange={setSelectedDining} />
+        {/* Dining hall picker + Combos/Menu toggle share a row to cut down on stacked rows */}
+        <div className="max-w-md mx-auto px-4 pb-2 pt-1.5 flex items-center gap-2">
+          <div className="flex-1 min-w-0">
+            <DiningSelector selected={selectedDining} onChange={setSelectedDining} />
+          </div>
+          <div className="flex-shrink-0 flex gap-1 bg-surface-overlay rounded-full p-0.5">
+            {(['combos', 'menu'] as HomeView[]).map((v) => (
+              <button
+                key={v}
+                onClick={() => setView(v)}
+                className={`px-3 py-1.5 rounded-full text-[11px] font-display font-semibold tracking-wide transition-all whitespace-nowrap ${
+                  view === v
+                    ? 'bg-brand-black text-brand-gold'
+                    : 'text-muted hover:text-brand-black'
+                }`}
+              >
+                {v === 'combos' ? '✦ Combos' : 'Menu'}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="max-w-md mx-auto">
@@ -267,23 +285,6 @@ export default function HomePage() {
             counts={counts}
             nowPeriod={selectedDate === dateOptions[0].iso ? nowPeriod : null}
           />
-        </div>
-
-        {/* Combos / Full Menu toggle */}
-        <div className="max-w-md mx-auto px-4 pb-2.5 pt-1 flex gap-2">
-          {(['combos', 'menu'] as HomeView[]).map((v) => (
-            <button
-              key={v}
-              onClick={() => setView(v)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all ${
-                view === v
-                  ? 'bg-brand-black text-brand-gold'
-                  : 'bg-surface-overlay text-muted hover:bg-surface-warm'
-              }`}
-            >
-              {v === 'combos' ? '✦ AI Combos' : 'Full Menu'}
-            </button>
-          ))}
         </div>
       </header>
 
