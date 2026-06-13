@@ -2,46 +2,11 @@
   "dining_location": "The Alley at Farrand",
   "url": "https://colorado-diningmenus.nutrislice.com/menu/the-alley/the-alley-at-farrand-s-all-day-id2009",
   "date_range": {
-    "start": "2026-05-18",
-    "end": "2026-06-14",
+    "start": "2026-05-25",
+    "end": "2026-06-21",
     "weeks": 4
   },
   "menus": [
-    {
-      "date": "2026-05-18",
-      "day_of_week": "Monday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-19",
-      "day_of_week": "Tuesday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-20",
-      "day_of_week": "Wednesday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-21",
-      "day_of_week": "Thursday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-22",
-      "day_of_week": "Friday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-23",
-      "day_of_week": "Saturday",
-      "categories": {}
-    },
-    {
-      "date": "2026-05-24",
-      "day_of_week": "Sunday",
-      "categories": {}
-    },
     {
       "date": "2026-05-25",
       "day_of_week": "Monday",
@@ -144,6 +109,41 @@
     },
     {
       "date": "2026-06-14",
+      "day_of_week": "Sunday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-15",
+      "day_of_week": "Monday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-16",
+      "day_of_week": "Tuesday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-17",
+      "day_of_week": "Wednesday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-18",
+      "day_of_week": "Thursday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-19",
+      "day_of_week": "Friday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-20",
+      "day_of_week": "Saturday",
+      "categories": {}
+    },
+    {
+      "date": "2026-06-21",
       "day_of_week": "Sunday",
       "categories": {}
     }
