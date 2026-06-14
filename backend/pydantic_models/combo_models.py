@@ -12,6 +12,8 @@ class Combo(BaseModel):
     description: str
     approximate_calories: int
     approximate_protein_g: int = 0
+    approximate_fat_g: int = 0
+    approximate_carbs_g: int = 0
     tags: list[str]
 
     @field_validator("dishes")

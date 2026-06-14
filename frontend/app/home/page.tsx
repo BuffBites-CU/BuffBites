@@ -110,6 +110,8 @@ export default function HomePage() {
         title: combo.title,
         calories: combo.approximate_calories,
         protein_g: combo.approximate_protein_g || undefined,
+        fat_g: combo.approximate_fat_g || undefined,
+        carbs_g: combo.approximate_carbs_g || undefined,
         date: selectedDate,
         dining_hall: selectedDining,
         meal_period: selectedPeriod,

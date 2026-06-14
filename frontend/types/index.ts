@@ -10,6 +10,8 @@ export interface MealLogEntry {
   title: string
   calories: number
   protein_g?: number
+  fat_g?: number
+  carbs_g?: number
   date: string       // YYYY-MM-DD
   dining_hall: string
   meal_period: string
@@ -94,6 +96,8 @@ export interface Combo {
   dishes: Dish[]
   approximate_calories: number
   approximate_protein_g: number
+  approximate_fat_g?: number
+  approximate_carbs_g?: number
   tags: ComboTag[]
 }
 

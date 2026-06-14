@@ -30,6 +30,8 @@ class MealLogEntry(BaseModel):
     title: str
     calories: int
     protein_g: Optional[int] = None
+    fat_g: Optional[int] = None
+    carbs_g: Optional[int] = None
     date: str          # YYYY-MM-DD
     dining_hall: str
     meal_period: str

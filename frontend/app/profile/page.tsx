@@ -121,7 +121,8 @@ function getWeekData(mealLog: MealLogEntry[]) {
     const d = isoToLocalNoon(iso)
     const label = i === 6 ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' }).slice(0, 3)
     const calories = mealLog.filter((e) => e.date === iso).reduce((s, e) => s + e.calories, 0)
-    return { iso, label, calories }
+    const protein = mealLog.filter((e) => e.date === iso).reduce((s, e) => s + (e.protein_g ?? 0), 0)
+    return { iso, label, calories, protein }
   })
 }
 
@@ -178,6 +179,86 @@ function WeeklyChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[]; goalPe
       {dailyGoal && <p className="text-[10px] text-muted mt-2 text-right">— {dailyGoal} cal/day goal</p>}
     </div>
   )
+}
+
+function WeeklyProteinChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[]; goalPerMeal?: number }) {
+  const data = getWeekData(mealLog)
+  const dailyGoal = goalPerMeal ? goalPerMeal * 3 : null
+  const maxProtein = Math.max(...data.map((d) => d.protein), dailyGoal ?? 0, 10)
+  const BAR_H = 72
+  const today = todayISO()
+
+  return (
+    <div className="bg-surface-card rounded-2xl border border-surface-overlay p-4">
+      <div className="flex items-end justify-between gap-1 h-20 relative">
+        {dailyGoal && (
+          <div
+            className="absolute left-0 right-0 border-t border-dashed border-brand-gold/50 pointer-events-none z-10"
+            style={{ bottom: `${(dailyGoal / maxProtein) * BAR_H}px` }}
+          />
+        )}
+        {data.map(({ iso, label, protein }) => {
+          const isToday = iso === today
+          const pct = protein > 0 ? Math.max((protein / maxProtein) * BAR_H, 5) : 0
+          const overGoal = !!(dailyGoal && protein > dailyGoal)
+          return (
+            <div key={iso} className="flex-1 flex flex-col items-center gap-0.5">
+              <div className="w-full flex items-end justify-center" style={{ height: BAR_H }}>
+                <div
+                  className={`w-full rounded-t transition-all duration-500 ${
+                    protein === 0 ? 'bg-surface-overlay rounded' :
+                    overGoal ? 'bg-emerald-400' :
+                    isToday ? 'bg-brand-gold' : 'bg-brand-gold/45'
+                  }`}
+                  style={{ height: protein === 0 ? 3 : pct }}
+                />
+              </div>
+              <span className={`text-[9px] font-display font-semibold uppercase tracking-wide leading-none ${isToday ? 'text-brand-gold' : 'text-muted'}`}>{label}</span>
+              {protein > 0 && <span className="text-[8px] text-muted leading-none">{protein}g</span>}
+            </div>
+          )
+        })}
+      </div>
+      {dailyGoal && <p className="text-[10px] text-muted mt-2 text-right">— {dailyGoal}g protein/day goal</p>}
+    </div>
+  )
+}
+
+function TodaysMacros({ mealLog }: { mealLog: MealLogEntry[] }) {
+  const todayMeals = mealLog.filter((e) => e.date === todayISO())
+  const protein = todayMeals.reduce((s, e) => s + (e.protein_g ?? 0), 0)
+  const carbs = todayMeals.reduce((s, e) => s + (e.carbs_g ?? 0), 0)
+  const fat = todayMeals.reduce((s, e) => s + (e.fat_g ?? 0), 0)
+  const hasData = todayMeals.length > 0
+
+  return (
+    <div className="bg-surface-card rounded-2xl border border-surface-overlay flex divide-x divide-surface-overlay">
+      <div className="flex-1 flex flex-col items-center gap-0.5 py-3">
+        <span className="font-display font-bold text-brand-black text-lg leading-none">{hasData ? `${protein}g` : '—'}</span>
+        <span className="text-[10px] text-muted uppercase tracking-wider font-display">Protein</span>
+      </div>
+      <div className="flex-1 flex flex-col items-center gap-0.5 py-3">
+        <span className="font-display font-bold text-brand-black text-lg leading-none">{hasData ? `${carbs}g` : '—'}</span>
+        <span className="text-[10px] text-muted uppercase tracking-wider font-display">Carbs</span>
+      </div>
+      <div className="flex-1 flex flex-col items-center gap-0.5 py-3">
+        <span className="font-display font-bold text-brand-black text-lg leading-none">{hasData ? `${fat}g` : '—'}</span>
+        <span className="text-[10px] text-muted uppercase tracking-wider font-display">Fat</span>
+      </div>
+    </div>
+  )
+}
+
+/** Count of the last 7 days where all configured goals (calorie + protein) were met */
+function countGoalDays(mealLog: MealLogEntry[], calorieGoalPerMeal?: number, proteinGoalPerMeal?: number): number {
+  if (!calorieGoalPerMeal && !proteinGoalPerMeal) return 0
+  const dailyCalGoal = calorieGoalPerMeal ? calorieGoalPerMeal * 3 : null
+  const dailyProteinGoal = proteinGoalPerMeal ? proteinGoalPerMeal * 3 : null
+  return getWeekData(mealLog).filter(({ calories, protein }) => {
+    if (dailyCalGoal && calories < dailyCalGoal) return false
+    if (dailyProteinGoal && protein < dailyProteinGoal) return false
+    return calories > 0 || protein > 0
+  }).length
 }
 
 function MealHistoryDay({
@@ -452,7 +533,7 @@ export default function ProfilePage() {
             {/* Avatar */}
             <div className="relative w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-brand-gold/40 flex-shrink-0">
               {firebaseUser?.photoURL ? (
-                <Image src={firebaseUser.photoURL} alt="Profile" fill className="object-cover" />
+                <Image src={firebaseUser.photoURL} alt="Profile" fill sizes="64px" className="object-cover" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-brand-gold/20">
                   <span className="text-2xl font-display font-bold text-brand-gold">{profile.username[0]?.toUpperCase()}</span>
@@ -750,6 +831,32 @@ export default function ProfilePage() {
             <WeeklyChart mealLog={mealLog} goalPerMeal={profile.preferred_calories_per_meal} />
           </div>
         )}
+
+        {/* ── Nutrition Dashboard ───────────────────────────────── */}
+        {mealLog.length > 0 && (() => {
+          const goalDays = countGoalDays(mealLog, profile.preferred_calories_per_meal, profile.nutrition_goals?.protein_g_per_meal)
+          const hasGoals = !!(profile.preferred_calories_per_meal || profile.nutrition_goals?.protein_g_per_meal)
+          return (
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <h2 className="text-base font-display font-bold text-brand-black">Nutrition Dashboard</h2>
+                {hasGoals && (
+                  <span className="text-xs text-muted">{goalDays}/7 days on track</span>
+                )}
+              </div>
+
+              <div>
+                <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Today&apos;s Macros</p>
+                <TodaysMacros mealLog={mealLog} />
+              </div>
+
+              <div>
+                <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Weekly Protein Trend</p>
+                <WeeklyProteinChart mealLog={mealLog} goalPerMeal={profile.nutrition_goals?.protein_g_per_meal} />
+              </div>
+            </div>
+          )
+        })()}
 
         {/* ── Meal History ─────────────────────────────────────── */}
         {historyGroups.length > 0 && (

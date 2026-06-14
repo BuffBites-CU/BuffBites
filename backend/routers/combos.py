@@ -287,6 +287,8 @@ def _enrich_combo(claude_combo: _CCombo, item_lookup: dict[str, dict]) -> Combo:
         meta.append({
             "calories":      info.get("calories") or 0,
             "protein_g":     info.get("protein_g") or 0,
+            "fat_g":         info.get("fat_g") or 0,
+            "carbs_g":       info.get("carbs_g") or 0,
             "is_vegan":      info.get("is_vegan"),
             "is_vegetarian": info.get("is_vegetarian"),
         })
@@ -296,6 +298,8 @@ def _enrich_combo(claude_combo: _CCombo, item_lookup: dict[str, dict]) -> Combo:
         dishes=[Dish(name=d.name, station=d.station) for d in claude_combo.dishes],
         approximate_calories=int(sum(m["calories"] for m in meta)),
         approximate_protein_g=int(sum(m["protein_g"] for m in meta)),
+        approximate_fat_g=int(sum(m["fat_g"] for m in meta)),
+        approximate_carbs_g=int(sum(m["carbs_g"] for m in meta)),
         tags=_infer_tags(meta),
     )
 
@@ -521,6 +525,8 @@ async def generate_combos(
                 "category":      station,
                 "calories":      raw.get("calories"),
                 "protein_g":     (raw.get("nutrition") or {}).get("protein_g"),
+                "fat_g":         (raw.get("nutrition") or {}).get("fat_g"),
+                "carbs_g":       (raw.get("nutrition") or {}).get("carbohydrates_g"),
                 "is_vegan":      raw.get("is_vegan"),
                 "is_vegetarian": raw.get("is_vegetarian"),
                 "allergens":     raw.get("allergens", []),
