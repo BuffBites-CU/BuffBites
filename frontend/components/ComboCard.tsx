@@ -234,11 +234,14 @@ export default function ComboCard({
           <button
             onClick={(e) => {
               e.stopPropagation()
-              if (ateState !== 'ate') onAte(approximate_calories ?? 0)
+              if (!ateState) onAte(approximate_calories ?? 0)
             }}
+            disabled={!!ateState}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
               ateState === 'ate'
-                ? 'bg-emerald-100 text-emerald-700'
+                ? 'bg-emerald-100 text-emerald-700 cursor-default'
+                : ateState === 'skipped'
+                ? 'bg-gray-100 text-muted cursor-default opacity-60'
                 : 'bg-gray-100 text-muted hover:bg-emerald-50 hover:text-emerald-700'
             }`}
           >
@@ -247,11 +250,14 @@ export default function ComboCard({
           <button
             onClick={(e) => {
               e.stopPropagation()
-              if (ateState !== 'skipped') onSkip?.()
+              if (!ateState) onSkip?.()
             }}
+            disabled={!!ateState}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
               ateState === 'skipped'
-                ? 'bg-gray-200 text-gray-600'
+                ? 'bg-gray-200 text-gray-600 cursor-default'
+                : ateState === 'ate'
+                ? 'bg-gray-100 text-muted cursor-default opacity-60'
                 : 'bg-gray-100 text-muted hover:bg-gray-200'
             }`}
           >

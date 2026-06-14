@@ -13,7 +13,7 @@ import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
-import { publishCombo } from '@/services/communityService'
+import { publishCombo, getUserCombos } from '@/services/communityService'
 import { isoOffsetMST, isoToLocalNoon, currentMealPeriodMST } from '@/lib/date'
 import type { Combo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals, DietaryPreference } from '@/types'
 
@@ -60,6 +60,8 @@ export default function HomePage() {
   const [dietaryPrefs, setDietaryPrefs] = useState<DietaryPreference[]>([])
   const [pastTitles, setPastTitles] = useState<Set<string>>(new Set())
   const [nutritionGoals, setNutritionGoals] = useState<NutritionGoals | undefined>()
+  const [loggedMealKeys, setLoggedMealKeys] = useState<Set<string>>(new Set())
+  const [postedComboKeys, setPostedComboKeys] = useState<Set<string>>(new Set())
 
   const dateOptions = useMemo(buildDateOptions, [])
   const [selectedDate, setSelectedDate] = useState(dateOptions[0].iso)
@@ -85,12 +87,29 @@ export default function HomePage() {
       setUserRestrictions(p.restrictions ?? [])
       setDietaryPrefs((p.dietary_preferences ?? []) as DietaryPreference[])
       setPastTitles(new Set((p.meal_log ?? []).map((e) => e.title)))
+      setLoggedMealKeys(new Set((p.meal_log ?? []).map((e) => mealLogKey(e.dining_hall, e.date, e.meal_period, e.title))))
       if (p.nutrition_goals) setNutritionGoals(p.nutrition_goals)
+    }).catch(() => {})
+  }, [firebaseUid])
+
+  // Load combos the user has already posted to the community, to keep "Post to community" disabled across reloads.
+  useEffect(() => {
+    if (!firebaseUid) return
+    getUserCombos(firebaseUid).then((combos) => {
+      setPostedComboKeys(new Set(combos.map((c) => comboPostKey(c.dining_hall, c.date, c.title))))
     }).catch(() => {})
   }, [firebaseUid])
 
   function ateKey(combo: Combo, index: number) {
     return `${selectedDining}-${selectedDate}-${selectedPeriod}-${index}`
+  }
+
+  function mealLogKey(dining: string, date: string, period: string, title: string) {
+    return `${dining}-${date}-${period}-${title}`
+  }
+
+  function comboPostKey(dining: string, date: string, title: string) {
+    return `${dining}-${date}-${title}`
   }
 
   // Guests can browse everything; saving/logging/sharing prompts a quick sign-in.
@@ -372,10 +391,16 @@ export default function HomePage() {
                     dishes={combo.dishes}
                     approximate_calories={combo.approximate_calories}
                     onClick={() => setActiveCombo(combo)}
-                    ateState={ateStates[ateKey(combo, i)] ?? null}
+                    ateState={
+                      ateStates[ateKey(combo, i)] ??
+                      (loggedMealKeys.has(mealLogKey(selectedDining, selectedDate, selectedPeriod, combo.title)) ? 'ate' : null)
+                    }
                     onAte={(cal) => handleAte(combo, i)}
                     onSkip={() => handleSkip(combo, i)}
-                    shareState={shareStates[ateKey(combo, i)] ?? null}
+                    shareState={
+                      shareStates[ateKey(combo, i)] ??
+                      (postedComboKeys.has(comboPostKey(selectedDining, selectedDate, combo.title)) ? 'shared' : null)
+                    }
                     onShare={() => handleShare(combo, i)}
                     isFavorited={favorites.some(
                       (f) => f.title === combo.title && f.dining_hall === selectedDining && f.date === selectedDate
