@@ -42,6 +42,15 @@ const PRIORITY_NUTRIENTS: { key: string; label: string; icon: string }[] = [
   { key: 'zinc',      label: 'Zinc',       icon: '⚡' },
 ]
 
+type ProfileTab = 'overview' | 'history' | 'combos' | 'settings'
+
+const TABS: { key: ProfileTab; label: string }[] = [
+  { key: 'overview', label: 'Overview' },
+  { key: 'history',  label: 'History' },
+  { key: 'combos',   label: 'Combos' },
+  { key: 'settings', label: 'Settings' },
+]
+
 /* ── Pure helpers ───────────────────────────────────────────────── */
 
 // Calendar dates follow Mountain Time — see lib/date.ts.
@@ -354,6 +363,7 @@ export default function ProfilePage() {
 
   const [profile, setProfile] = useState<UserResponse | null>(null)
   const [loading, setLoading] = useState(true)
+  const [activeTab, setActiveTab] = useState<ProfileTab>('overview')
   const [editMode, setEditMode] = useState(false)
   const [draft, setDraft] = useState({
     username: '',
@@ -388,6 +398,11 @@ export default function ProfilePage() {
     setCombosLoading(true)
     getUserCombos(firebaseUid).then(setMyCombos).catch(() => setMyCombos([])).finally(() => setCombosLoading(false))
   }, [firebaseUid])
+
+  function selectTab(tab: ProfileTab) {
+    setActiveTab(tab)
+    window.scrollTo(0, 0)
+  }
 
   function enterEdit() {
     if (!profile) return
@@ -522,6 +537,9 @@ export default function ProfilePage() {
   const thisWeekCal = getWeekData(mealLog).reduce((s, d) => s + d.calories, 0)
   const historyGroups = groupByDate(mealLog)
   const visibleGroups = historyGroups.slice(0, historyLimit)
+  const goalDays = countGoalDays(mealLog, profile.preferred_calories_per_meal, profile.nutrition_goals?.protein_g_per_meal)
+  const hasGoals = !!(profile.preferred_calories_per_meal || profile.nutrition_goals?.protein_g_per_meal)
+  const overviewEmpty = badges.length === 0 && !profile.nutrition_goals && mealLog.length === 0 && !profile.preferred_calories_per_meal
 
   return (
     <div className="min-h-screen bg-surface pb-28">
@@ -557,16 +575,6 @@ export default function ProfilePage() {
                 )}
               </div>
             </div>
-
-            {/* Edit button */}
-            {!editMode && (
-              <button
-                onClick={enterEdit}
-                className="flex-shrink-0 w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
-              >
-                <PencilIcon width={14} height={14} className="text-white" />
-              </button>
-            )}
           </div>
 
           {/* Stats row */}
@@ -579,443 +587,492 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      <div className="max-w-md mx-auto px-4 space-y-6 pt-6">
+      {/* ── Tab bar ────────────────────────────────────────────── */}
+      <div className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-overlay px-4 py-2.5">
+        <div className="max-w-md mx-auto flex gap-2">
+          {TABS.map(({ key, label }) => (
+            <button
+              key={key}
+              onClick={() => selectTab(key)}
+              className={`flex-1 px-3 py-1.5 rounded-full text-xs font-display font-semibold transition-all ${
+                activeTab === key ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
 
-        {/* ── Edit form (shown in place of settings card) ────── */}
-        {editMode && (
-          <div className="bg-surface-card rounded-3xl border border-surface-overlay shadow-card-sm p-5 space-y-5">
-            <h2 className="font-display font-bold text-brand-black text-base">Edit Profile</h2>
+      <div className="max-w-md mx-auto px-4 pt-6">
+        <div key={activeTab} className="space-y-6 animate-page-in">
 
-            <div>
-              <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-1.5">Username</label>
-              <div className="relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted text-sm">@</span>
-                <input
-                  value={draft.username}
-                  onChange={(e) => { setDraft((d) => ({ ...d, username: e.target.value })); setUsernameError('') }}
-                  maxLength={20}
-                  className="w-full rounded-xl border border-surface-warm pl-8 pr-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface"
-                />
-              </div>
-              {usernameError && <p className="text-xs text-red-500 mt-1">{usernameError}</p>}
-            </div>
-
-            <div>
-              <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Dietary Preferences</label>
-              <div className="flex flex-wrap gap-2">
-                {DIETARY_OPTIONS.map(({ key, label, style }) => (
-                  <button key={key} onClick={() => togglePref(key)}
-                    className={`rounded-full px-4 py-1.5 text-sm font-medium border transition-all ${draft.dietary_preferences.includes(key) ? `${style} border-transparent` : 'bg-surface-overlay text-muted border-transparent'}`}>
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Default Dining Hall</label>
-              <div className="flex flex-wrap gap-2">
-                <button onClick={() => setDraft((d) => ({ ...d, default_dining_hall: '' }))}
-                  className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === '' ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'}`}>
-                  None
-                </button>
-                {DINING_HALLS.map((hall) => (
-                  <button key={hall} onClick={() => setDraft((d) => ({ ...d, default_dining_hall: hall }))}
-                    className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === hall ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'}`}>
-                    {DINING_HALL_LABELS[hall]}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-1.5">Calorie Goal per Meal</label>
-              <div className="relative">
-                <input type="number" min={100} max={3000} placeholder="e.g. 700"
-                  value={draft.preferred_calories_per_meal}
-                  onChange={(e) => setDraft((d) => ({ ...d, preferred_calories_per_meal: e.target.value }))}
-                  className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface" />
-                <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted text-xs">cal</span>
-              </div>
-            </div>
-
-            {/* Nutrition Goals */}
-            <div className="space-y-4 pt-1 border-t border-surface-warm">
-              <p className="text-xs font-display font-semibold text-brand-black uppercase tracking-wider mt-1">Nutrition Goals</p>
-
-              {/* Dietary Focus */}
-              <div>
-                <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Dietary Focus</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {DIETARY_FOCUS_OPTIONS.map(({ key, label, icon, desc }) => (
-                    <button key={key}
-                      onClick={() => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, dietary_focus: d.nutrition_goals.dietary_focus === key ? '' : key } }))}
-                      className={`flex flex-col items-center gap-1 p-2.5 rounded-xl border text-center transition-all ${
-                        draft.nutrition_goals.dietary_focus === key
-                          ? 'bg-brand-black border-brand-black text-brand-gold'
-                          : 'bg-surface-overlay border-transparent text-muted hover:bg-surface-warm'
-                      }`}>
-                      <span className="text-lg leading-none">{icon}</span>
-                      <span className="text-[10px] font-display font-semibold leading-tight">{label}</span>
-                      <span className="text-[9px] opacity-70 leading-tight">{desc}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Protein Goal */}
-              <div>
-                <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-1.5">Protein Goal per Meal</label>
-                <div className="relative">
-                  <input type="number" min={0} max={200} placeholder="e.g. 35"
-                    value={draft.nutrition_goals.protein_g_per_meal}
-                    onChange={(e) => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, protein_g_per_meal: e.target.value } }))}
-                    className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface" />
-                  <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted text-xs">g</span>
-                </div>
-              </div>
-
-              {/* Priority Nutrients */}
-              <div>
-                <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Priority Nutrients</label>
-                <div className="flex flex-wrap gap-2">
-                  {PRIORITY_NUTRIENTS.map(({ key, label, icon }) => {
-                    const selected = draft.nutrition_goals.priority_nutrients.includes(key)
-                    return (
-                      <button key={key}
-                        onClick={() => setDraft((d) => {
-                          const prev = d.nutrition_goals.priority_nutrients
-                          return { ...d, nutrition_goals: { ...d.nutrition_goals, priority_nutrients: selected ? prev.filter((n) => n !== key) : [...prev, key] } }
-                        })}
-                        className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
-                          selected ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'
-                        }`}>
-                        <span>{icon}</span>{label}
-                      </button>
-                    )
-                  })}
-                </div>
-                <p className="text-[11px] text-muted mt-1.5">Claude will prioritize these nutrients when building your combos</p>
-              </div>
-            </div>
-
-            <div className="flex gap-3 pt-1">
-              <button onClick={() => setEditMode(false)}
-                className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-surface-warm text-sm text-muted hover:bg-surface-overlay transition-colors">
-                <XMarkIcon width={16} height={16} /> Cancel
-              </button>
-              <button onClick={handleSave} disabled={saving}
-                className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-brand-gold text-brand-black text-sm font-display font-semibold disabled:opacity-60 hover:opacity-90 transition-opacity">
-                <CheckIcon width={16} height={16} /> {saving ? 'Saving…' : 'Save'}
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* ── Badges ──────────────────────────────────────────── */}
-        {badges.length > 0 && (
-          <div>
-            <h2 className="text-base font-display font-bold text-brand-black mb-3">Achievements</h2>
-            <div className="grid grid-cols-4 gap-2">
-              {badges.map((b) => (
-                <div key={b.id} title={b.desc}
-                  className="flex flex-col items-center gap-1 bg-surface-card border border-surface-overlay rounded-2xl py-3 px-1 shadow-card-sm">
-                  <span className="text-2xl leading-none">{b.icon}</span>
-                  <span className="text-[9px] font-display font-semibold text-brand-black text-center leading-tight">{b.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ── Nutrition Goals summary (view mode) ─────────────── */}
-        {!editMode && profile.nutrition_goals && (
-          <div>
-            <h2 className="text-base font-display font-bold text-brand-black mb-3">Nutrition Goals</h2>
-            <div className="bg-surface-card rounded-2xl border border-surface-overlay p-4 space-y-3">
-              {profile.nutrition_goals.dietary_focus && (() => {
-                const opt = DIETARY_FOCUS_OPTIONS.find((o) => o.key === profile.nutrition_goals?.dietary_focus)
-                return (
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">{opt?.icon}</span>
-                    <div>
-                      <p className="text-sm font-display font-semibold text-brand-black">{opt?.label ?? profile.nutrition_goals.dietary_focus}</p>
-                      <p className="text-[11px] text-muted">{opt?.desc}</p>
-                    </div>
-                  </div>
-                )
-              })()}
-
-              {profile.nutrition_goals.protein_g_per_meal && (() => {
-                const todayProtein = mealLog.filter((e) => e.date === todayISO()).reduce((s, e) => s + (e.protein_g ?? 0), 0)
-                const goal = profile.nutrition_goals.protein_g_per_meal
-                const mealsToday = mealLog.filter((e) => e.date === todayISO()).length
-                const dailyGoal = goal * 3
-                const pct = Math.min(Math.round((todayProtein / dailyGoal) * 100), 100)
-                return (
-                  <div>
-                    <div className="flex items-end justify-between mb-1.5">
-                      <span className="text-xs font-display font-semibold text-muted uppercase tracking-wider">Protein Today</span>
-                      <span className="text-xs text-muted">{goal}g/meal goal</span>
-                    </div>
-                    <div className="flex items-end justify-between mb-1">
-                      <span className="font-display font-bold text-brand-black text-lg">{todayProtein}g</span>
-                      <span className="text-xs text-muted">/ {dailyGoal}g daily</span>
-                    </div>
-                    <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
-                      <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-emerald-400' : pct >= 66 ? 'bg-brand-gold' : 'bg-brand-gold/50'}`}
-                        style={{ width: `${pct}%` }} />
-                    </div>
-                    {mealsToday === 0 && <p className="text-[11px] text-muted mt-1">Log meals to track protein</p>}
-                  </div>
-                )
-              })()}
-
-              {(profile.nutrition_goals.priority_nutrients ?? []).length > 0 && (
+          {/* ══ Overview tab ════════════════════════════════════ */}
+          {activeTab === 'overview' && (
+            <>
+              {/* Badges */}
+              {badges.length > 0 && (
                 <div>
-                  <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Priority Nutrients</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {(profile.nutrition_goals.priority_nutrients ?? []).map((n) => {
-                      const opt = PRIORITY_NUTRIENTS.find((o) => o.key === n)
+                  <h2 className="text-base font-display font-bold text-brand-black mb-3">Achievements</h2>
+                  <div className="grid grid-cols-4 gap-2">
+                    {badges.map((b) => (
+                      <div key={b.id} title={b.desc}
+                        className="flex flex-col items-center gap-1 bg-surface-card border border-surface-overlay rounded-2xl py-3 px-1 shadow-card-sm">
+                        <span className="text-2xl leading-none">{b.icon}</span>
+                        <span className="text-[9px] font-display font-semibold text-brand-black text-center leading-tight">{b.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Nutrition Goals summary */}
+              {profile.nutrition_goals && (
+                <div>
+                  <h2 className="text-base font-display font-bold text-brand-black mb-3">Nutrition Goals</h2>
+                  <div className="bg-surface-card rounded-2xl border border-surface-overlay p-4 space-y-3">
+                    {profile.nutrition_goals.dietary_focus && (() => {
+                      const opt = DIETARY_FOCUS_OPTIONS.find((o) => o.key === profile.nutrition_goals?.dietary_focus)
                       return (
-                        <span key={n} className="flex items-center gap-1 bg-brand-black text-brand-gold rounded-full px-2.5 py-1 text-xs font-medium">
-                          <span>{opt?.icon}</span>{opt?.label ?? n}
-                        </span>
+                        <div className="flex items-center gap-3">
+                          <span className="text-xl">{opt?.icon}</span>
+                          <div>
+                            <p className="text-sm font-display font-semibold text-brand-black">{opt?.label ?? profile.nutrition_goals.dietary_focus}</p>
+                            <p className="text-[11px] text-muted">{opt?.desc}</p>
+                          </div>
+                        </div>
+                      )
+                    })()}
+
+                    {profile.nutrition_goals.protein_g_per_meal && (() => {
+                      const todayProtein = mealLog.filter((e) => e.date === todayISO()).reduce((s, e) => s + (e.protein_g ?? 0), 0)
+                      const goal = profile.nutrition_goals.protein_g_per_meal
+                      const mealsToday = mealLog.filter((e) => e.date === todayISO()).length
+                      const dailyGoal = goal * 3
+                      const pct = Math.min(Math.round((todayProtein / dailyGoal) * 100), 100)
+                      return (
+                        <div>
+                          <div className="flex items-end justify-between mb-1.5">
+                            <span className="text-xs font-display font-semibold text-muted uppercase tracking-wider">Protein Today</span>
+                            <span className="text-xs text-muted">{goal}g/meal goal</span>
+                          </div>
+                          <div className="flex items-end justify-between mb-1">
+                            <span className="font-display font-bold text-brand-black text-lg">{todayProtein}g</span>
+                            <span className="text-xs text-muted">/ {dailyGoal}g daily</span>
+                          </div>
+                          <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
+                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-emerald-400' : pct >= 66 ? 'bg-brand-gold' : 'bg-brand-gold/50'}`}
+                              style={{ width: `${pct}%` }} />
+                          </div>
+                          {mealsToday === 0 && <p className="text-[11px] text-muted mt-1">Log meals to track protein</p>}
+                        </div>
+                      )
+                    })()}
+
+                    {(profile.nutrition_goals.priority_nutrients ?? []).length > 0 && (
+                      <div>
+                        <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Priority Nutrients</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {(profile.nutrition_goals.priority_nutrients ?? []).map((n) => {
+                            const opt = PRIORITY_NUTRIENTS.find((o) => o.key === n)
+                            return (
+                              <span key={n} className="flex items-center gap-1 bg-brand-black text-brand-gold rounded-full px-2.5 py-1 text-xs font-medium">
+                                <span>{opt?.icon}</span>{opt?.label ?? n}
+                              </span>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Calorie summary */}
+              {(mealLog.length > 0 || profile.preferred_calories_per_meal) && (
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <h2 className="text-base font-display font-bold text-brand-black">Calorie Tracker</h2>
+                    {profile.preferred_calories_per_meal && (
+                      <span className="text-xs text-muted">{profile.preferred_calories_per_meal} cal/meal goal</span>
+                    )}
+                  </div>
+
+                  {/* Today */}
+                  {(() => {
+                    const todayMeals = mealLog.filter((e) => e.date === todayISO())
+                    const todayCal = todayMeals.reduce((s, e) => s + e.calories, 0)
+                    const pct = profile.preferred_calories_per_meal
+                      ? Math.min(Math.round((todayCal / (profile.preferred_calories_per_meal * 3)) * 100), 100)
+                      : null
+                    return (
+                      <div className="bg-surface-card rounded-2xl border border-surface-overlay p-4 mb-2">
+                        <div className="flex items-end justify-between mb-2">
+                          <div>
+                            <span className="font-display font-bold text-2xl text-brand-black">{todayCal}</span>
+                            {profile.preferred_calories_per_meal && (
+                              <span className="text-sm text-muted ml-1.5">/ {profile.preferred_calories_per_meal * 3} cal today</span>
+                            )}
+                          </div>
+                          <span className="text-xs text-muted">{todayMeals.length} meal{todayMeals.length !== 1 ? 's' : ''} logged</span>
+                        </div>
+                        {pct !== null && (
+                          <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
+                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-red-400' : pct >= 75 ? 'bg-amber-400' : 'bg-brand-gold'}`}
+                              style={{ width: `${pct}%` }} />
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })()}
+
+                  <WeeklyChart mealLog={mealLog} goalPerMeal={profile.preferred_calories_per_meal} />
+                </div>
+              )}
+
+              {/* Nutrition Dashboard */}
+              {mealLog.length > 0 && (
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-base font-display font-bold text-brand-black">Nutrition Dashboard</h2>
+                    {hasGoals && (
+                      <span className="text-xs text-muted">{goalDays}/7 days on track</span>
+                    )}
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Today&apos;s Macros</p>
+                    <TodaysMacros mealLog={mealLog} />
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Weekly Protein Trend</p>
+                    <WeeklyProteinChart mealLog={mealLog} goalPerMeal={profile.nutrition_goals?.protein_g_per_meal} />
+                  </div>
+                </div>
+              )}
+
+              {overviewEmpty && (
+                <div className="bg-surface-card rounded-2xl border border-surface-overlay px-5 py-10 text-center">
+                  <p className="text-sm text-muted">Log a meal from the Home tab or set your nutrition goals in Settings to see stats here.</p>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* ══ History tab ═════════════════════════════════════ */}
+          {activeTab === 'history' && (
+            <>
+              {historyGroups.length > 0 ? (
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <h2 className="text-base font-display font-bold text-brand-black">Meal History</h2>
+                    <span className="text-xs text-muted">{historyGroups.length} day{historyGroups.length !== 1 ? 's' : ''}</span>
+                  </div>
+                  <div className="space-y-2">
+                    {visibleGroups.map(({ date, entries, total }) => (
+                      <MealHistoryDay
+                        key={date}
+                        date={date}
+                        entries={entries}
+                        total={total}
+                        goalPerMeal={profile.preferred_calories_per_meal}
+                        onDelete={handleDeleteMeal}
+                      />
+                    ))}
+                  </div>
+                  {historyGroups.length > historyLimit && (
+                    <button
+                      onClick={() => setHistoryLimit((l) => l + 7)}
+                      className="w-full mt-3 py-2.5 rounded-xl border border-surface-warm text-sm text-muted font-display font-semibold hover:bg-surface-overlay transition-colors"
+                    >
+                      Show {Math.min(7, historyGroups.length - historyLimit)} more days
+                    </button>
+                  )}
+                </div>
+              ) : (
+                <div className="bg-surface-card rounded-2xl border border-surface-overlay px-5 py-10 text-center">
+                  <p className="text-sm text-muted">No meals logged yet. Mark a combo as &quot;Ate&quot; on the Home tab to start your history.</p>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* ══ Combos tab ══════════════════════════════════════ */}
+          {activeTab === 'combos' && (
+            <>
+              {/* Saved Combos */}
+              {(profile.favorites ?? []).length > 0 && (
+                <div>
+                  <h2 className="text-base font-display font-bold text-brand-black mb-3">Saved Combos</h2>
+                  <div className="space-y-2">
+                    {(profile.favorites ?? []).slice().reverse().map((fav, i) => (
+                      <div key={i} className="bg-surface-card rounded-xl border border-surface-overlay p-4 flex items-start gap-3">
+                        <span className="text-red-400 mt-0.5 flex-shrink-0 text-base">♥</span>
+                        <div className="min-w-0 flex-1">
+                          <p className="font-display font-semibold text-sm text-brand-black line-clamp-1">{fav.title}</p>
+                          <p className="text-[11px] text-muted mt-0.5">
+                            {DINING_HALL_LABELS[fav.dining_hall as DiningHall] ?? fav.dining_hall} · {fav.date}
+                            {fav.approximate_calories ? ` · ~${fav.approximate_calories} cal` : ''}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* My Published Combos */}
+              <div>
+                <h2 className="text-base font-display font-bold text-brand-black mb-3">My Combos</h2>
+
+                {combosLoading && (
+                  <div className="space-y-2">
+                    {[1, 2].map((i) => (
+                      <div key={i} className="bg-surface-card rounded-xl border border-surface-overlay p-4 animate-pulse">
+                        <div className="h-4 bg-surface-warm rounded-full w-1/2 mb-2" />
+                        <div className="h-3 bg-surface-warm rounded-full w-1/3" />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {!combosLoading && myCombos.length === 0 && (
+                  <div className="bg-surface-card rounded-xl border border-surface-overlay px-5 py-8 text-center space-y-3">
+                    <p className="text-sm text-muted">You haven&apos;t shared any combos yet.</p>
+                    <Link href="/community" className="inline-block px-4 py-2 rounded-xl bg-brand-gold text-brand-black text-sm font-display font-semibold hover:opacity-90 transition-opacity">
+                      Share your first combo →
+                    </Link>
+                  </div>
+                )}
+
+                {!combosLoading && myCombos.length > 0 && (
+                  <div className="space-y-2">
+                    {myCombos.map((combo) => {
+                      const expiry = formatExpiry(combo.expires_at)
+                      return (
+                        <div key={combo.id} className="bg-surface-card rounded-xl border border-surface-overlay overflow-hidden">
+                          <div className="flex">
+                            <div className="w-1 bg-brand-gold flex-shrink-0" />
+                            <div className="flex items-start justify-between gap-3 flex-1 p-4">
+                              <div className="min-w-0 flex-1">
+                                <p className="font-display font-semibold text-sm text-brand-black line-clamp-1">{combo.title}</p>
+                                <div className="flex items-center gap-3 mt-1 flex-wrap">
+                                  <span className="text-xs text-muted">{combo.dishes.length} dishes · {DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall}</span>
+                                  <span className="flex items-center gap-0.5 text-xs text-brand-gold font-medium">
+                                    <ChevronUpIcon width={12} height={12} />{combo.upvotes}
+                                  </span>
+                                  <span className={`flex items-center gap-0.5 text-[11px] ${expiry.urgent ? 'text-orange-500' : 'text-muted'}`}>
+                                    <ClockIcon width={11} height={11} />{expiry.text}
+                                  </span>
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-1 flex-shrink-0">
+                                {confirmDeleteId === combo.id ? (
+                                  <>
+                                    <button onClick={() => setConfirmDeleteId(null)} className="px-2 py-1 rounded-lg text-xs text-muted hover:bg-surface-overlay">Cancel</button>
+                                    <button onClick={() => handleDelete(combo)} disabled={deletingId === combo.id}
+                                      className="px-2 py-1 rounded-lg text-xs font-medium text-red-500 hover:bg-red-50 disabled:opacity-40">
+                                      {deletingId === combo.id ? '…' : 'Delete'}
+                                    </button>
+                                  </>
+                                ) : (
+                                  <>
+                                    <button onClick={() => setEditingCombo(combo)} className="p-2 rounded-full hover:bg-surface-overlay" aria-label="Edit">
+                                      <PencilIcon width={15} height={15} className="text-muted" />
+                                    </button>
+                                    <button onClick={() => setConfirmDeleteId(combo.id)} disabled={deletingId === combo.id}
+                                      className="p-2 rounded-full hover:bg-red-50 disabled:opacity-40" aria-label="Delete">
+                                      <TrashIcon width={15} height={15} className="text-red-400" />
+                                    </button>
+                                  </>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       )
                     })}
                   </div>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* ── Calorie summary ──────────────────────────────────── */}
-        {(mealLog.length > 0 || profile.preferred_calories_per_meal) && (
-          <div>
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="text-base font-display font-bold text-brand-black">Calorie Tracker</h2>
-              {profile.preferred_calories_per_meal && (
-                <span className="text-xs text-muted">{profile.preferred_calories_per_meal} cal/meal goal</span>
-              )}
-            </div>
-
-            {/* Today */}
-            {(() => {
-              const todayMeals = mealLog.filter((e) => e.date === todayISO())
-              const todayCal = todayMeals.reduce((s, e) => s + e.calories, 0)
-              const pct = profile.preferred_calories_per_meal
-                ? Math.min(Math.round((todayCal / (profile.preferred_calories_per_meal * 3)) * 100), 100)
-                : null
-              return (
-                <div className="bg-surface-card rounded-2xl border border-surface-overlay p-4 mb-2">
-                  <div className="flex items-end justify-between mb-2">
-                    <div>
-                      <span className="font-display font-bold text-2xl text-brand-black">{todayCal}</span>
-                      {profile.preferred_calories_per_meal && (
-                        <span className="text-sm text-muted ml-1.5">/ {profile.preferred_calories_per_meal * 3} cal today</span>
-                      )}
-                    </div>
-                    <span className="text-xs text-muted">{todayMeals.length} meal{todayMeals.length !== 1 ? 's' : ''} logged</span>
-                  </div>
-                  {pct !== null && (
-                    <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
-                      <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-red-400' : pct >= 75 ? 'bg-amber-400' : 'bg-brand-gold'}`}
-                        style={{ width: `${pct}%` }} />
-                    </div>
-                  )}
-                </div>
-              )
-            })()}
-
-            <WeeklyChart mealLog={mealLog} goalPerMeal={profile.preferred_calories_per_meal} />
-          </div>
-        )}
-
-        {/* ── Nutrition Dashboard ───────────────────────────────── */}
-        {mealLog.length > 0 && (() => {
-          const goalDays = countGoalDays(mealLog, profile.preferred_calories_per_meal, profile.nutrition_goals?.protein_g_per_meal)
-          const hasGoals = !!(profile.preferred_calories_per_meal || profile.nutrition_goals?.protein_g_per_meal)
-          return (
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <h2 className="text-base font-display font-bold text-brand-black">Nutrition Dashboard</h2>
-                {hasGoals && (
-                  <span className="text-xs text-muted">{goalDays}/7 days on track</span>
                 )}
               </div>
+            </>
+          )}
 
-              <div>
-                <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Today&apos;s Macros</p>
-                <TodaysMacros mealLog={mealLog} />
-              </div>
+          {/* ══ Settings tab ════════════════════════════════════ */}
+          {activeTab === 'settings' && (
+            <>
+              {editMode ? (
+                <div className="bg-surface-card rounded-3xl border border-surface-overlay shadow-card-sm p-5 space-y-5">
+                  <h2 className="font-display font-bold text-brand-black text-base">Edit Profile</h2>
 
-              <div>
-                <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Weekly Protein Trend</p>
-                <WeeklyProteinChart mealLog={mealLog} goalPerMeal={profile.nutrition_goals?.protein_g_per_meal} />
-              </div>
-            </div>
-          )
-        })()}
-
-        {/* ── Meal History ─────────────────────────────────────── */}
-        {historyGroups.length > 0 && (
-          <div>
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="text-base font-display font-bold text-brand-black">Meal History</h2>
-              <span className="text-xs text-muted">{historyGroups.length} day{historyGroups.length !== 1 ? 's' : ''}</span>
-            </div>
-            <div className="space-y-2">
-              {visibleGroups.map(({ date, entries, total }) => (
-                <MealHistoryDay
-                  key={date}
-                  date={date}
-                  entries={entries}
-                  total={total}
-                  goalPerMeal={profile.preferred_calories_per_meal}
-                  onDelete={handleDeleteMeal}
-                />
-              ))}
-            </div>
-            {historyGroups.length > historyLimit && (
-              <button
-                onClick={() => setHistoryLimit((l) => l + 7)}
-                className="w-full mt-3 py-2.5 rounded-xl border border-surface-warm text-sm text-muted font-display font-semibold hover:bg-surface-overlay transition-colors"
-              >
-                Show {Math.min(7, historyGroups.length - historyLimit)} more days
-              </button>
-            )}
-          </div>
-        )}
-
-        {/* ── Saved Combos ─────────────────────────────────────── */}
-        {(profile.favorites ?? []).length > 0 && (
-          <div>
-            <h2 className="text-base font-display font-bold text-brand-black mb-3">Saved Combos</h2>
-            <div className="space-y-2">
-              {(profile.favorites ?? []).slice().reverse().map((fav, i) => (
-                <div key={i} className="bg-surface-card rounded-xl border border-surface-overlay p-4 flex items-start gap-3">
-                  <span className="text-red-400 mt-0.5 flex-shrink-0 text-base">♥</span>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-display font-semibold text-sm text-brand-black line-clamp-1">{fav.title}</p>
-                    <p className="text-[11px] text-muted mt-0.5">
-                      {DINING_HALL_LABELS[fav.dining_hall as DiningHall] ?? fav.dining_hall} · {fav.date}
-                      {fav.approximate_calories ? ` · ~${fav.approximate_calories} cal` : ''}
-                    </p>
+                  <div>
+                    <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-1.5">Username</label>
+                    <div className="relative">
+                      <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted text-sm">@</span>
+                      <input
+                        value={draft.username}
+                        onChange={(e) => { setDraft((d) => ({ ...d, username: e.target.value })); setUsernameError('') }}
+                        maxLength={20}
+                        className="w-full rounded-xl border border-surface-warm pl-8 pr-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface"
+                      />
+                    </div>
+                    {usernameError && <p className="text-xs text-red-500 mt-1">{usernameError}</p>}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
-        {/* ── Settings ─────────────────────────────────────────── */}
-        {!editMode && (
-          <div className="bg-surface-card rounded-3xl border border-surface-overlay shadow-card-sm overflow-hidden">
-            {profile.dietary_preferences.length > 0 && (
-              <div className="px-5 py-4 border-b border-surface-overlay">
-                <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Dietary Preferences</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {profile.dietary_preferences.map((pref) => {
-                    const opt = DIETARY_OPTIONS.find((o) => o.key === pref)
-                    return <span key={pref} className={`rounded-full px-3 py-1 text-sm font-medium ${opt?.style ?? 'bg-surface-overlay text-muted'}`}>{opt?.label ?? pref}</span>
-                  })}
-                </div>
-              </div>
-            )}
-            {profile.default_dining_hall && (
-              <div className="px-5 py-4 border-b border-surface-overlay flex items-center justify-between">
-                <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider">Default Hall</p>
-                <p className="text-sm font-medium text-brand-black">{DINING_HALL_LABELS[profile.default_dining_hall as DiningHall] ?? profile.default_dining_hall}</p>
-              </div>
-            )}
-            {profile.preferred_calories_per_meal != null && (
-              <div className="px-5 py-4 border-b border-surface-overlay flex items-center justify-between">
-                <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider">Calorie Goal</p>
-                <p className="text-sm font-medium text-brand-black">{profile.preferred_calories_per_meal} cal/meal</p>
-              </div>
-            )}
-            <button onClick={signOut} className="w-full px-5 py-4 text-sm font-medium text-red-500 hover:bg-red-50 transition-colors text-left">
-              Sign Out
-            </button>
-          </div>
-        )}
-
-        {/* ── My Published Combos ──────────────────────────────── */}
-        <div>
-          <h2 className="text-base font-display font-bold text-brand-black mb-3">My Combos</h2>
-
-          {combosLoading && (
-            <div className="space-y-2">
-              {[1, 2].map((i) => (
-                <div key={i} className="bg-surface-card rounded-xl border border-surface-overlay p-4 animate-pulse">
-                  <div className="h-4 bg-surface-warm rounded-full w-1/2 mb-2" />
-                  <div className="h-3 bg-surface-warm rounded-full w-1/3" />
-                </div>
-              ))}
-            </div>
-          )}
-
-          {!combosLoading && myCombos.length === 0 && (
-            <div className="bg-surface-card rounded-xl border border-surface-overlay px-5 py-8 text-center space-y-3">
-              <p className="text-sm text-muted">You haven&apos;t shared any combos yet.</p>
-              <Link href="/community" className="inline-block px-4 py-2 rounded-xl bg-brand-gold text-brand-black text-sm font-display font-semibold hover:opacity-90 transition-opacity">
-                Share your first combo →
-              </Link>
-            </div>
-          )}
-
-          {!combosLoading && myCombos.length > 0 && (
-            <div className="space-y-2">
-              {myCombos.map((combo) => {
-                const expiry = formatExpiry(combo.expires_at)
-                return (
-                  <div key={combo.id} className="bg-surface-card rounded-xl border border-surface-overlay overflow-hidden">
-                    <div className="flex">
-                      <div className="w-1 bg-brand-gold flex-shrink-0" />
-                      <div className="flex items-start justify-between gap-3 flex-1 p-4">
-                        <div className="min-w-0 flex-1">
-                          <p className="font-display font-semibold text-sm text-brand-black line-clamp-1">{combo.title}</p>
-                          <div className="flex items-center gap-3 mt-1 flex-wrap">
-                            <span className="text-xs text-muted">{combo.dishes.length} dishes · {DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall}</span>
-                            <span className="flex items-center gap-0.5 text-xs text-brand-gold font-medium">
-                              <ChevronUpIcon width={12} height={12} />{combo.upvotes}
-                            </span>
-                            <span className={`flex items-center gap-0.5 text-[11px] ${expiry.urgent ? 'text-orange-500' : 'text-muted'}`}>
-                              <ClockIcon width={11} height={11} />{expiry.text}
-                            </span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-1 flex-shrink-0">
-                          {confirmDeleteId === combo.id ? (
-                            <>
-                              <button onClick={() => setConfirmDeleteId(null)} className="px-2 py-1 rounded-lg text-xs text-muted hover:bg-surface-overlay">Cancel</button>
-                              <button onClick={() => handleDelete(combo)} disabled={deletingId === combo.id}
-                                className="px-2 py-1 rounded-lg text-xs font-medium text-red-500 hover:bg-red-50 disabled:opacity-40">
-                                {deletingId === combo.id ? '…' : 'Delete'}
-                              </button>
-                            </>
-                          ) : (
-                            <>
-                              <button onClick={() => setEditingCombo(combo)} className="p-2 rounded-full hover:bg-surface-overlay" aria-label="Edit">
-                                <PencilIcon width={15} height={15} className="text-muted" />
-                              </button>
-                              <button onClick={() => setConfirmDeleteId(combo.id)} disabled={deletingId === combo.id}
-                                className="p-2 rounded-full hover:bg-red-50 disabled:opacity-40" aria-label="Delete">
-                                <TrashIcon width={15} height={15} className="text-red-400" />
-                              </button>
-                            </>
-                          )}
-                        </div>
-                      </div>
+                  <div>
+                    <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Dietary Preferences</label>
+                    <div className="flex flex-wrap gap-2">
+                      {DIETARY_OPTIONS.map(({ key, label, style }) => (
+                        <button key={key} onClick={() => togglePref(key)}
+                          className={`rounded-full px-4 py-1.5 text-sm font-medium border transition-all ${draft.dietary_preferences.includes(key) ? `${style} border-transparent` : 'bg-surface-overlay text-muted border-transparent'}`}>
+                          {label}
+                        </button>
+                      ))}
                     </div>
                   </div>
-                )
-              })}
-            </div>
-          )}
-        </div>
 
+                  <div>
+                    <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Default Dining Hall</label>
+                    <div className="flex flex-wrap gap-2">
+                      <button onClick={() => setDraft((d) => ({ ...d, default_dining_hall: '' }))}
+                        className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === '' ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'}`}>
+                        None
+                      </button>
+                      {DINING_HALLS.map((hall) => (
+                        <button key={hall} onClick={() => setDraft((d) => ({ ...d, default_dining_hall: hall }))}
+                          className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === hall ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'}`}>
+                          {DINING_HALL_LABELS[hall]}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-1.5">Calorie Goal per Meal</label>
+                    <div className="relative">
+                      <input type="number" min={100} max={3000} placeholder="e.g. 700"
+                        value={draft.preferred_calories_per_meal}
+                        onChange={(e) => setDraft((d) => ({ ...d, preferred_calories_per_meal: e.target.value }))}
+                        className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface" />
+                      <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted text-xs">cal</span>
+                    </div>
+                  </div>
+
+                  {/* Nutrition Goals */}
+                  <div className="space-y-4 pt-1 border-t border-surface-warm">
+                    <p className="text-xs font-display font-semibold text-brand-black uppercase tracking-wider mt-1">Nutrition Goals</p>
+
+                    {/* Dietary Focus */}
+                    <div>
+                      <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Dietary Focus</label>
+                      <div className="grid grid-cols-3 gap-2">
+                        {DIETARY_FOCUS_OPTIONS.map(({ key, label, icon, desc }) => (
+                          <button key={key}
+                            onClick={() => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, dietary_focus: d.nutrition_goals.dietary_focus === key ? '' : key } }))}
+                            className={`flex flex-col items-center gap-1 p-2.5 rounded-xl border text-center transition-all ${
+                              draft.nutrition_goals.dietary_focus === key
+                                ? 'bg-brand-black border-brand-black text-brand-gold'
+                                : 'bg-surface-overlay border-transparent text-muted hover:bg-surface-warm'
+                            }`}>
+                            <span className="text-lg leading-none">{icon}</span>
+                            <span className="text-[10px] font-display font-semibold leading-tight">{label}</span>
+                            <span className="text-[9px] opacity-70 leading-tight">{desc}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Protein Goal */}
+                    <div>
+                      <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-1.5">Protein Goal per Meal</label>
+                      <div className="relative">
+                        <input type="number" min={0} max={200} placeholder="e.g. 35"
+                          value={draft.nutrition_goals.protein_g_per_meal}
+                          onChange={(e) => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, protein_g_per_meal: e.target.value } }))}
+                          className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface" />
+                        <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted text-xs">g</span>
+                      </div>
+                    </div>
+
+                    {/* Priority Nutrients */}
+                    <div>
+                      <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Priority Nutrients</label>
+                      <div className="flex flex-wrap gap-2">
+                        {PRIORITY_NUTRIENTS.map(({ key, label, icon }) => {
+                          const selected = draft.nutrition_goals.priority_nutrients.includes(key)
+                          return (
+                            <button key={key}
+                              onClick={() => setDraft((d) => {
+                                const prev = d.nutrition_goals.priority_nutrients
+                                return { ...d, nutrition_goals: { ...d.nutrition_goals, priority_nutrients: selected ? prev.filter((n) => n !== key) : [...prev, key] } }
+                              })}
+                              className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
+                                selected ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'
+                              }`}>
+                              <span>{icon}</span>{label}
+                            </button>
+                          )
+                        })}
+                      </div>
+                      <p className="text-[11px] text-muted mt-1.5">Claude will prioritize these nutrients when building your combos</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3 pt-1">
+                    <button onClick={() => setEditMode(false)}
+                      className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-surface-warm text-sm text-muted hover:bg-surface-overlay transition-colors">
+                      <XMarkIcon width={16} height={16} /> Cancel
+                    </button>
+                    <button onClick={handleSave} disabled={saving}
+                      className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-brand-gold text-brand-black text-sm font-display font-semibold disabled:opacity-60 hover:opacity-90 transition-opacity">
+                      <CheckIcon width={16} height={16} /> {saving ? 'Saving…' : 'Save'}
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  <button
+                    onClick={enterEdit}
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-brand-black text-brand-gold text-sm font-display font-semibold hover:opacity-90 active:scale-[0.99] transition-all"
+                  >
+                    <PencilIcon width={14} height={14} /> Edit Profile
+                  </button>
+
+                  <div className="bg-surface-card rounded-3xl border border-surface-overlay shadow-card-sm overflow-hidden">
+                    {profile.dietary_preferences.length > 0 && (
+                      <div className="px-5 py-4 border-b border-surface-overlay">
+                        <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Dietary Preferences</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {profile.dietary_preferences.map((pref) => {
+                            const opt = DIETARY_OPTIONS.find((o) => o.key === pref)
+                            return <span key={pref} className={`rounded-full px-3 py-1 text-sm font-medium ${opt?.style ?? 'bg-surface-overlay text-muted'}`}>{opt?.label ?? pref}</span>
+                          })}
+                        </div>
+                      </div>
+                    )}
+                    {profile.default_dining_hall && (
+                      <div className="px-5 py-4 border-b border-surface-overlay flex items-center justify-between">
+                        <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider">Default Hall</p>
+                        <p className="text-sm font-medium text-brand-black">{DINING_HALL_LABELS[profile.default_dining_hall as DiningHall] ?? profile.default_dining_hall}</p>
+                      </div>
+                    )}
+                    {profile.preferred_calories_per_meal != null && (
+                      <div className="px-5 py-4 border-b border-surface-overlay flex items-center justify-between">
+                        <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider">Calorie Goal</p>
+                        <p className="text-sm font-medium text-brand-black">{profile.preferred_calories_per_meal} cal/meal</p>
+                      </div>
+                    )}
+                    <button onClick={signOut} className="w-full px-5 py-4 text-sm font-medium text-red-500 hover:bg-red-50 transition-colors text-left">
+                      Sign Out
+                    </button>
+                  </div>
+                </div>
+              )}
+            </>
+          )}
+
+        </div>
       </div>
 
       {editingCombo && (
