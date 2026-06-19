@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import Image from 'next/image'
 import { DevicePhoneMobileIcon } from '@/components/icons'
@@ -15,7 +14,6 @@ const FEATURES = [
 ]
 
 export default function LandingPage() {
-  const router = useRouter()
   const { firebaseUser, loading, signIn } = useAuth()
   const [signingIn, setSigningIn] = useState(false)
   const [error, setError] = useState('')
@@ -136,13 +134,6 @@ export default function LandingPage() {
         {error && (
           <p className="text-center text-sm text-red-500 font-medium">{error}</p>
         )}
-
-        <button
-          onClick={() => router.push('/home')}
-          className="w-full text-center text-sm font-semibold text-brand-black/70 hover:text-brand-black py-2 transition-colors"
-        >
-          Browse without signing in →
-        </button>
 
         <p className="text-[11px] text-center text-muted/70 pt-1">
           Sign in to save combos & track meals · 🦬

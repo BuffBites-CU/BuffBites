@@ -8,7 +8,7 @@ import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
 import { getUser, updateUser, deleteMeal } from '@/services/usersService'
 import { getUserCombos, deleteCombo } from '@/services/communityService'
-import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon, ChevronDownIcon, UserCircleIcon } from '@/components/icons'
+import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon, ChevronDownIcon } from '@/components/icons'
 import { DINING_HALLS, DINING_HALL_LABELS } from '@/types'
 import { todayMST, isoOffsetMST, isoToLocalNoon } from '@/lib/date'
 import EditComboModal from '@/components/EditComboModal'
@@ -358,7 +358,7 @@ function MealHistoryDay({
 
 export default function ProfilePage() {
   const router = useRouter()
-  const { firebaseUser, firebaseUid, loading: authLoading, signIn, signOut, setDefaultDiningHall: setCtxHall } = useAuth()
+  const { firebaseUser, firebaseUid, loading: authLoading, signOut, setDefaultDiningHall: setCtxHall } = useAuth()
   const { showToast } = useToast()
 
   const [profile, setProfile] = useState<UserResponse | null>(null)
@@ -389,7 +389,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     if (authLoading) return
-    if (!firebaseUid) { setLoading(false); return }
+    if (!firebaseUid) { router.replace('/'); return }
     getUser(firebaseUid).then(setProfile).catch(() => router.replace('/')).finally(() => setLoading(false))
   }, [firebaseUid, authLoading, router])
 
@@ -506,29 +506,7 @@ export default function ProfilePage() {
     )
   }
 
-  if (!firebaseUser) {
-    return (
-      <div className="min-h-screen bg-surface flex flex-col items-center justify-center px-8 text-center gap-5">
-        <div className="w-16 h-16 rounded-full bg-brand-gold/15 ring-1 ring-brand-gold/30 flex items-center justify-center">
-          <UserCircleIcon width={32} height={32} className="text-brand-gold" />
-        </div>
-        <div className="space-y-1.5">
-          <h1 className="font-display text-xl font-bold text-brand-black">Your profile lives here</h1>
-          <p className="text-sm text-muted max-w-xs">
-            Sign in to set dietary goals, save favorite combos, track calories and your streak.
-          </p>
-        </div>
-        <button
-          onClick={() => signIn().catch(() => {})}
-          className="w-full max-w-xs bg-brand-black text-white rounded-2xl py-3.5 font-display font-semibold text-[15px] hover:opacity-90 active:scale-[0.98] transition-all"
-        >
-          Continue with Google
-        </button>
-      </div>
-    )
-  }
-
-  if (!profile) return null
+  if (!firebaseUser || !profile) return null
 
   const mealLog = profile.meal_log ?? []
   const streak = computeStreak(mealLog)

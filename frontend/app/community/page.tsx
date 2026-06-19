@@ -1,6 +1,7 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
 import { useCommunity } from '@/hooks/useCommunity'
@@ -20,7 +21,8 @@ function isRising(combo: CommunityCombo): boolean {
 }
 
 export default function CommunityPage() {
-  const { firebaseUser, signIn } = useAuth()
+  const router = useRouter()
+  const { firebaseUser, loading: authLoading } = useAuth()
   const { showToast } = useToast()
 
   const [selectedDining, setSelectedDining] = useState<DiningHall | undefined>()
@@ -42,30 +44,20 @@ export default function CommunityPage() {
   useScrollRestoration('community')
   usePullToRefresh(refetch)
 
+  useEffect(() => {
+    if (authLoading) return
+    if (!firebaseUser) router.replace('/')
+  }, [firebaseUser, authLoading, router])
+
   function guardedVote(combo_id: string, type: VoteType) {
-    if (!firebaseUser) {
-      showToast('Sign in to vote', 'neutral')
-      signIn().catch(() => {})
-      return
-    }
     void vote(combo_id, type)
   }
 
   async function handleVote(type: VoteType) {
-    if (!firebaseUser) {
-      showToast('Sign in to vote', 'neutral')
-      signIn().catch(() => {})
-      return
-    }
     if (activeCombo) await vote(activeCombo.id, type)
   }
 
   function handleShareClick() {
-    if (!firebaseUser) {
-      showToast('Sign in to share a combo', 'neutral')
-      signIn().catch(() => {})
-      return
-    }
     setPublishOpen(true)
   }
 
@@ -83,6 +75,17 @@ export default function CommunityPage() {
     }
     return list
   }, [combos, feedTab, searchQuery, favTitles])
+
+  if (authLoading || !firebaseUser) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <svg className="animate-spin h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24">
+          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+        </svg>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-surface pb-24">
