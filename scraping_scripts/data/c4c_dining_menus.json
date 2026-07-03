@@ -13,13 +13,7 @@
     "smokin-grill",
     "c4c_wholesome-field"
   ],
-  "repeat_info": {
-    "first_seen_week": 1,
-    "first_seen_start": "2026-06-15",
-    "repeat_week": 4,
-    "repeat_start": "2026-07-06",
-    "gap_weeks": 3
-  },
+  "repeat_info": null,
   "menus": [
     {
       "date": "2026-06-14",
@@ -12217,6 +12211,159 @@
             }
           }
         ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "Teriyaki Haddock",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 102.0,
+            "ingredients": "Fish Haddock Filets Skin On 30 LB, Teriyaki Sauce (Naturally brewed soy sauce (water, wheat, soybeans, salt), wine, high fructose corn syrup, water, vinegar, salt, spices, onion powder, succinic acid, garlic powder, sodium benzoate: less than 1/10 of 1% as a preservative.), Brown Sugar, Water, Corn Starch (Corn starch.), Garlic, Ginger.",
+            "allergens": [
+              "Wheat",
+              "Soy",
+              "Fish"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 102.0,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 54.0,
+              "sodium_mg": 751.0,
+              "carbohydrates_g": 6.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 5.0,
+              "protein_g": 17.0,
+              "potassium_mg": 295.0,
+              "calcium_mg": 45.0,
+              "iron_mg": 0.2
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Coconut Rice",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 310.0,
+            "ingredients": "Rice Basmati Parboile (White basmati rice.), Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Sugar Granulated, Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 310.0,
+              "fat_g": 3.8,
+              "saturated_fat_g": 2.9,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 19.0,
+              "carbohydrates_g": 62.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 7.0,
+              "potassium_mg": 41.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 1.2
+            }
+          },
+          {
+            "name": "Garlic Green Beans",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 125.0,
+            "ingredients": "Green Beans (Ingredients, Green Beans), Extra Virgin Olive Oil, Kosher Salt, Red  Onions, Garlic, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 125.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 1.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1835.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 2.0,
+              "potassium_mg": 214.0,
+              "calcium_mg": 53.0,
+              "iron_mg": 1.0
+            }
+          }
+        ],
+        "Kosher - Composed Salads": [
+          {
+            "name": "Fruit Salad Mix",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 53.0,
+            "ingredients": "Watermelon, Honeydew, Cantaloupe.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 53.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 10.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 11.0,
+              "protein_g": 1.0,
+              "potassium_mg": 257.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Spicy Coleslaw",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 220.0,
+            "ingredients": "Cabbage Green Shredded, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), English Cucumber, Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum), Red  Onions, Syrup Maple Pure (Pure Maple Syrup.), White Vinegar (Distilled vinegar diluted with water to 5% acidity).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 220.0,
+              "fat_g": 20.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 338.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 6.0,
+              "protein_g": 1.0,
+              "potassium_mg": 30.0,
+              "calcium_mg": 33.0,
+              "iron_mg": 0.4
+            }
+          }
+        ],
         "Black Coats - Greek Yogurt & Fruit Parfait": [
           {
             "name": "Plain Nonfat Greek Yogurt",
@@ -22941,6 +23088,157 @@
               "potassium_mg": 37.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "BBQ Ginger Chicken Thighs",
+            "description": "",
+            "serving_size": "1 thigh",
+            "calories": 202.0,
+            "ingredients": "Chicken Thighs Kosher ESK (Abf Chicken Thigh Filets), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Orange Juice (Ingredient Statement:, CONTAINS FROZEN CONCENTRATED ORANGE JUICE.), Ketchup (Tomato Concentrate, Sugar, Distilled Vinegar, Salt, Onion Powder, Natural Flavors), Water, Honey (Ingredients:, Honey), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Brown Sugar, Extra Virgin Olive Oil, Ginger, Garlic Whole Peeled Case, Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Onion Powder, Black pepper (Black Pepper), Chili Pepper Red Flakes Organic (Red pepper.).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 202.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 1.6,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 205.0,
+              "sodium_mg": 901.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 7.0,
+              "protein_g": 26.0,
+              "potassium_mg": 338.0,
+              "calcium_mg": 14.0,
+              "iron_mg": 1.3
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Garlic Rice",
+            "description": "",
+            "serving_size": "3 oz",
+            "calories": 126.0,
+            "ingredients": "White Rice, Garlic Whole Peeled Case, Extra Virgin Olive Oil, Ginger - Ground (Ginger, sulfur dioxide (added to retain color).).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 126.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 180.0,
+              "carbohydrates_g": 22.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 49.0,
+              "calcium_mg": 18.0,
+              "iron_mg": 1.0
+            }
+          },
+          {
+            "name": "Roasted Yukon Gold Potatoes",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 317.0,
+            "ingredients": "Potatoes Yukon Gold A size, Extra Virgin Olive Oil, Kosher Salt, Onion Granules, Garlic Granules, Black Pepper (Black Pepper), Thyme Leaf.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 317.0,
+              "fat_g": 25.0,
+              "saturated_fat_g": 3.9,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1456.0,
+              "carbohydrates_g": 22.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 3.0,
+              "potassium_mg": 91.0,
+              "calcium_mg": 37.0,
+              "iron_mg": 1.4
+            }
+          }
+        ],
+        "Kosher - Composed Salads": [
+          {
+            "name": "Creamy Coleslaw",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 112.0,
+            "ingredients": "Cabbage Green Shredded, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Sugar Granulated, Celery Salt (Salt and celery seed.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 112.0,
+              "fat_g": 9.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 5.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 38.0,
+              "iron_mg": 0.5
+            }
+          },
+          {
+            "name": "Fruit Salad Mix",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 53.0,
+            "ingredients": "Watermelon, Honeydew, Cantaloupe.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 53.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 10.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 11.0,
+              "protein_g": 1.0,
+              "potassium_mg": 257.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.4
             }
           }
         ],
@@ -33774,6 +34072,160 @@
               "potassium_mg": 37.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "Honey Sriracha Salmon",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 146.0,
+            "ingredients": "Wild Sockeye Salmon Fillet, Honey (Ingredients:, Honey), Corn Starch (Corn starch.), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Extra Virgin Olive Oil, Yellow Onions, Ginger, Garlic.",
+            "allergens": [
+              "Soy",
+              "Fish"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 146.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 0.9,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 55.0,
+              "sodium_mg": 99.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 24.0,
+              "potassium_mg": 397.0,
+              "calcium_mg": 10.0,
+              "iron_mg": 0.5
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Ginger Rice",
+            "description": "",
+            "serving_size": "3 oz",
+            "calories": 252.0,
+            "ingredients": "Rice Basmati Himalayan (White basmati rice.), Water, Sugar Granulated, Ginger.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 252.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 57.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 6.0,
+              "protein_g": 4.0,
+              "potassium_mg": 10.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Roasted Green Peas",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 148.0,
+            "ingredients": "Organic Green Peas, Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 148.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 2.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 319.0,
+              "carbohydrates_g": 14.0,
+              "fiber_g": 5.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 5.0,
+              "potassium_mg": 2.0,
+              "calcium_mg": 23.0,
+              "iron_mg": 1.6
+            }
+          }
+        ],
+        "Kosher - Composed Salads": [
+          {
+            "name": "Fruit Salad Mix",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 53.0,
+            "ingredients": "Watermelon, Honeydew, Cantaloupe.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 53.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 10.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 11.0,
+              "protein_g": 1.0,
+              "potassium_mg": 257.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Creamy Coleslaw",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 112.0,
+            "ingredients": "Cabbage Green Shredded, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Sugar Granulated, Celery Salt (Salt and celery seed.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 112.0,
+              "fat_g": 9.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 5.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 38.0,
+              "iron_mg": 0.5
             }
           }
         ],
@@ -45080,6 +45532,155 @@
               "potassium_mg": 37.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "Chicken Tacos",
+            "description": "",
+            "serving_size": "1 taco",
+            "calories": 149.0,
+            "ingredients": "Chicken Thighs Kosher ESK (Abf Chicken Thigh Filets), Corn Tortillas (Whole Grain Corn, Water, Contains 2% Or Less Of: Cellulose Gum, Guar Gum, Enzymes, And Propionic Acid, Benzoic Acid And Phosphoric Acid (to Maintain Freshness).), Yellow Onions, Green Bell Peppers, Cilantro 30 CT, Chili Powder (Ingredients:  Jalapeno Chili Powder), Spice Chile Powder Ancho (Ingredients:  Jalapeno Chili Powder), Ground Cumin Seed, Garlic Granules, Coriander - Ground.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 149.0,
+              "fat_g": 4.1,
+              "saturated_fat_g": 0.9,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 71.0,
+              "sodium_mg": 134.0,
+              "carbohydrates_g": 11.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 16.0,
+              "potassium_mg": 267.0,
+              "calcium_mg": 26.0,
+              "iron_mg": 1.5
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Carrot and Radish Slaw",
+            "description": "",
+            "serving_size": "3 oz",
+            "calories": 45.0,
+            "ingredients": "Radishes, Baby Carrots, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Syrup (Sugar, 25% Maple Syrup, Caramel Color.), Extra Virgin Olive Oil, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 45.0,
+              "fat_g": 2.2,
+              "saturated_fat_g": 0.4,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 292.0,
+              "carbohydrates_g": 6.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 4.0,
+              "protein_g": 1.0,
+              "potassium_mg": 182.0,
+              "calcium_mg": 22.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Spanish Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 145.0,
+            "ingredients": "Water, White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Tomato Paste (Tomato paste, salt, spices, natural flavors, citric acid.), Kosher Salt, Extra Virgin Olive Oil, Garlic Powder, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Onion Powder, Ground Cumin Seed.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 145.0,
+              "fat_g": 1.2,
+              "saturated_fat_g": 0.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 534.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 3.0,
+              "potassium_mg": 24.0,
+              "calcium_mg": 8.0,
+              "iron_mg": 1.4
+            }
+          }
+        ],
+        "Kosher - Condiments": [
+          {
+            "name": "Salsa Roja",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 13.0,
+            "ingredients": "Roma Tomatoes, Extra Virgin Olive Oil, Yellow Onions, Garlic Whole Peeled Case, Pepper Jalapeno Case, Cilantro, Kosher Salt, Oregano Leaf, Serrano Peppers, Black pepper (Black Pepper), Crushed Red Pepper.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 13.0,
+              "fat_g": 1.1,
+              "saturated_fat_g": 0.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 33.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 36.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "White Bean Cheeze",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 73.0,
+            "ingredients": "Great Northern Beans (Great Northern Beans, Water, Salt, Calcium Chloride.), Water, Nutritional Yeast Seasoning (Dried Yeast, Niacin, Pyridoxine Hydrochloride (Vitamin B6), Thiamin Hydrochloride (Vitamin B1), Riboflavin (Vitamin B2), Folic Acid (Vitamin B9), Cyanocobalamin (Vitamin B12)), Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Onion Granules, Garlic Granules, Kosher Salt, Ground Cumin Seed, Garlic, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 73.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 555.0,
+              "carbohydrates_g": 11.0,
+              "fiber_g": 4.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 6.0,
+              "potassium_mg": 195.0,
+              "calcium_mg": 33.0,
+              "iron_mg": 1.8
             }
           }
         ],
@@ -85616,6 +86217,160 @@
             }
           }
         ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "Sweet Miso Haddock",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 205.0,
+            "ingredients": "Fish Haddock Filets Skin On 30 LB, Water, Extra Virgin Olive Oil, Sugar Granulated, Miso Paste Red (Filtered water, organic whole soybeans, cultured rice, sea salt.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic Granules.",
+            "allergens": [
+              "Soy",
+              "Fish"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 205.0,
+              "fat_g": 7.0,
+              "saturated_fat_g": 1.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 75.0,
+              "sodium_mg": 838.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 24.0,
+              "potassium_mg": 411.0,
+              "calcium_mg": 16.0,
+              "iron_mg": 0.4
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Basmati Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 131.0,
+            "ingredients": "Rice Basmati Himalayan (White basmati rice.), Water, Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 131.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 50.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Roasted Green Peas",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 148.0,
+            "ingredients": "Organic Green Peas, Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 148.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 2.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 319.0,
+              "carbohydrates_g": 14.0,
+              "fiber_g": 5.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 5.0,
+              "potassium_mg": 2.0,
+              "calcium_mg": 23.0,
+              "iron_mg": 1.6
+            }
+          }
+        ],
+        "Kosher - Composed Salads": [
+          {
+            "name": "Creamy Coleslaw",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 112.0,
+            "ingredients": "Cabbage Green Shredded, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Sugar Granulated, Celery Salt (Salt and celery seed.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 112.0,
+              "fat_g": 9.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 5.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 38.0,
+              "iron_mg": 0.5
+            }
+          },
+          {
+            "name": "Fruit Salad Mix",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 53.0,
+            "ingredients": "Watermelon, Honeydew, Cantaloupe.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 53.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 10.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 11.0,
+              "protein_g": 1.0,
+              "potassium_mg": 257.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.4
+            }
+          }
+        ],
         "Black Coats - Greek Yogurt & Fruit Parfait": [
           {
             "name": "Plain Nonfat Greek Yogurt",
@@ -96396,6 +97151,157 @@
               "potassium_mg": 37.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "BBQ Chicken Thighs",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 238.0,
+            "ingredients": "Chicken Thighs Kosher ESK (Abf Chicken Thigh Filets), Sweet & Spicy BBQ Sauce (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), SUGAR, DISTILLED VINEGAR, CORN STARCH, CONTAINS LESS THAN 2% OF SALT, PINEAPPLE JUICE CONCENTRATE, SPICES, FRUIT JUICE (COLOR), NATURAL HICKORY SMOKE FLAVOR, GARLIC*, WATER, MOLASSES, NATURAL FLAVORS (INCLUDES CELERY), CELERY SEED, TAMARIND CONCENTRATE. *DEHYDRATED), Extra Virgin Olive Oil, Kosher Salt, Black pepper (Black Pepper), Garlic Granules.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 238.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 2.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 144.0,
+              "sodium_mg": 570.0,
+              "carbohydrates_g": 6.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 4.0,
+              "total_sugar_g": 5.0,
+              "protein_g": 30.0,
+              "potassium_mg": 406.0,
+              "calcium_mg": 14.0,
+              "iron_mg": 1.3
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Roasted Corn",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 158.0,
+            "ingredients": "Organic Sweet Corn, Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 158.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 2.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 152.0,
+              "carbohydrates_g": 22.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 3.0,
+              "potassium_mg": 222.0,
+              "calcium_mg": 5.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Caramelized Onion Rice",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 306.0,
+            "ingredients": "Rice Basmati Parboile (White basmati rice.), Yellow Onions, Extra Virgin Olive Oil, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 306.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 1.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 138.0,
+              "carbohydrates_g": 48.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 5.0,
+              "potassium_mg": 69.0,
+              "calcium_mg": 11.0,
+              "iron_mg": 0.6
+            }
+          }
+        ],
+        "Kosher - Composed Salads": [
+          {
+            "name": "Creamy Coleslaw",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 112.0,
+            "ingredients": "Cabbage Green Shredded, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Sugar Granulated, Celery Salt (Salt and celery seed.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 112.0,
+              "fat_g": 9.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 5.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 38.0,
+              "iron_mg": 0.5
+            }
+          },
+          {
+            "name": "Fruit Salad Mix",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 53.0,
+            "ingredients": "Watermelon, Honeydew, Cantaloupe.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 53.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 10.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 11.0,
+              "protein_g": 1.0,
+              "potassium_mg": 257.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.4
             }
           }
         ],
@@ -107207,6 +108113,191 @@
               "potassium_mg": 37.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "Sesame Salmon",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 141.0,
+            "ingredients": "Wild Sockeye Salmon Fillet, Water, Juice Lime Concentrate (100% Pure lime juice concentrate.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Green Onion, Sugar Granulated, Black Sesame Seeds (Ingredients: Organic sesame seeds), Sesame Seeds (Ingredients: Organic sesame seeds), Corn Starch (Corn starch.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Sesame Oil (Soybean oil, sesame oil.), Garlic, Ginger, Crushed Red Pepper.",
+            "allergens": [
+              "Soy",
+              "Fish",
+              "Sesame"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 141.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 48.0,
+              "sodium_mg": 236.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 22.0,
+              "potassium_mg": 355.0,
+              "calcium_mg": 19.0,
+              "iron_mg": 0.6
+            }
+          },
+          {
+            "name": "Sesame Sauce",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 156.0,
+            "ingredients": "Water, Sugar Granulated, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Ground Chili Paste (Ingredients: Chili, Salt, Acetic Acid, Potassium Sorbate and Sodium Bisulfite as preservatives, Xanthan Gum.CONTAINS SULPHITE (SODIUM BISULFITE)), Soy Sauce (Soy sauce (water, defatted soybeans), water, sugar, citric acid, modified corn starch, disodium inosinate and disodium guanylate potassium sorbate (preservative).  Less than 1/10 of 1% as a preservative.), Sesame Oil (Soybean oil, sesame oil.), Corn Starch (Corn starch.), Chicken Base (Chicken Stock, Salt, Chicken Fat, Natural Flavor, Sugar, Maltodextrin, Yeast Extract And Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Sesame Seeds (Ingredients: Organic sesame seeds), Black Sesame Seeds (Ingredients: Organic sesame seeds).",
+            "allergens": [
+              "Soy",
+              "Sesame"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 156.0,
+              "fat_g": 3.6,
+              "saturated_fat_g": 0.6,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 428.0,
+              "carbohydrates_g": 31.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 28.0,
+              "protein_g": 0.0,
+              "potassium_mg": 18.0,
+              "calcium_mg": 6.0,
+              "iron_mg": 0.1
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Ginger Rice",
+            "description": "",
+            "serving_size": "3 oz",
+            "calories": 252.0,
+            "ingredients": "Rice Basmati Himalayan (White basmati rice.), Water, Sugar Granulated, Ginger.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 252.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 57.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 6.0,
+              "protein_g": 4.0,
+              "potassium_mg": 10.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Roasted Green Peas",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 148.0,
+            "ingredients": "Organic Green Peas, Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 148.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 2.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 319.0,
+              "carbohydrates_g": 14.0,
+              "fiber_g": 5.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 5.0,
+              "potassium_mg": 2.0,
+              "calcium_mg": 23.0,
+              "iron_mg": 1.6
+            }
+          }
+        ],
+        "Kosher - Composed Salads": [
+          {
+            "name": "Fruit Salad Mix",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 53.0,
+            "ingredients": "Watermelon, Honeydew, Cantaloupe.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 53.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 10.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 11.0,
+              "protein_g": 1.0,
+              "potassium_mg": 257.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Spicy Coleslaw",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 220.0,
+            "ingredients": "Cabbage Green Shredded, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), English Cucumber, Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum), Red  Onions, Syrup Maple Pure (Pure Maple Syrup.), White Vinegar (Distilled vinegar diluted with water to 5% acidity).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 220.0,
+              "fat_g": 20.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 338.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 6.0,
+              "protein_g": 1.0,
+              "potassium_mg": 30.0,
+              "calcium_mg": 33.0,
+              "iron_mg": 0.4
             }
           }
         ],
@@ -118371,6 +119462,158 @@
               "potassium_mg": 37.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "Beef Brisket Tacos",
+            "description": "",
+            "serving_size": "1 taco",
+            "calories": 160.0,
+            "ingredients": "Flour Tortillas (Enriched bleached wheat flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), water, vegetable shortening (interesterified soybean oil, hydrogenated soybean oil and/or palm oil), contains 2% or less of each of the following: salt, leavening (sodium bicarbonate, sodium aluminum sulfate, corn starch, monocalcium phosphate and/or sodium acid pyrophosphate, calcium sulfate), distilled monoglycerides, enzymes, wheat starch, calcium carbonate, antioxidants (tocopherols, ascorbic acid), cellulose gum, dough conditioners (fumaric acid, sodium metabisulfite), preservatives (calcium propionate, sorbic acid and/or citric acid).), Beef Brisket Whole Kosher ESK, Water, Yellow Onions, Orange Juice (Ingredients, Concentrated Orange Juice), Pepper Jalapeno Case.",
+            "allergens": [
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 160.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 2.3,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 19.0,
+              "sodium_mg": 297.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 9.0,
+              "potassium_mg": 107.0,
+              "calcium_mg": 78.0,
+              "iron_mg": 1.9
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Carrot and Radish Slaw",
+            "description": "",
+            "serving_size": "3 oz",
+            "calories": 45.0,
+            "ingredients": "Radishes, Baby Carrots, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Syrup (Sugar, 25% Maple Syrup, Caramel Color.), Extra Virgin Olive Oil, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 45.0,
+              "fat_g": 2.2,
+              "saturated_fat_g": 0.4,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 292.0,
+              "carbohydrates_g": 6.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 4.0,
+              "protein_g": 1.0,
+              "potassium_mg": 182.0,
+              "calcium_mg": 22.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Caramelized Onion Rice",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 306.0,
+            "ingredients": "Rice Basmati Parboile (White basmati rice.), Yellow Onions, Extra Virgin Olive Oil, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 306.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 1.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 138.0,
+              "carbohydrates_g": 48.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 5.0,
+              "potassium_mg": 69.0,
+              "calcium_mg": 11.0,
+              "iron_mg": 0.6
+            }
+          }
+        ],
+        "Kosher - Condiments": [
+          {
+            "name": "Salsa Roja",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 13.0,
+            "ingredients": "Roma Tomatoes, Extra Virgin Olive Oil, Yellow Onions, Garlic Whole Peeled Case, Pepper Jalapeno Case, Cilantro, Kosher Salt, Oregano Leaf, Serrano Peppers, Black pepper (Black Pepper), Crushed Red Pepper.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 13.0,
+              "fat_g": 1.1,
+              "saturated_fat_g": 0.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 33.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 36.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "White Bean Cheeze",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 73.0,
+            "ingredients": "Great Northern Beans (Great Northern Beans, Water, Salt, Calcium Chloride.), Water, Nutritional Yeast Seasoning (Dried Yeast, Niacin, Pyridoxine Hydrochloride (Vitamin B6), Thiamin Hydrochloride (Vitamin B1), Riboflavin (Vitamin B2), Folic Acid (Vitamin B9), Cyanocobalamin (Vitamin B12)), Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Onion Granules, Garlic Granules, Kosher Salt, Ground Cumin Seed, Garlic, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 73.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 555.0,
+              "carbohydrates_g": 11.0,
+              "fiber_g": 4.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 6.0,
+              "potassium_mg": 195.0,
+              "calcium_mg": 33.0,
+              "iron_mg": 1.8
             }
           }
         ],
@@ -158791,6 +160034,157 @@
             }
           }
         ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "Beef Chili",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 176.0,
+            "ingredients": "Beef Ground Kosher ESK, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), Green Bell Peppers, Red Bell Peppers, Yellow Onion, Garlic, Chili Powder (Ingredients:  Jalapeno Chili Powder), Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Extra Virgin Olive Oil, Kosher Salt, Coriander - Ground, Black pepper (Black Pepper), Bay Leaves.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 176.0,
+              "fat_g": 14.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.8,
+              "cholesterol_mg": 38.0,
+              "sodium_mg": 417.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 9.0,
+              "potassium_mg": 187.0,
+              "calcium_mg": 44.0,
+              "iron_mg": 1.5
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Roasted Corn",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 158.0,
+            "ingredients": "Organic Sweet Corn, Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 158.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 2.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 152.0,
+              "carbohydrates_g": 22.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 3.0,
+              "potassium_mg": 222.0,
+              "calcium_mg": 5.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Basmati Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 131.0,
+            "ingredients": "Rice Basmati Himalayan (White basmati rice.), Water, Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 131.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 50.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.0
+            }
+          }
+        ],
+        "Kosher - Composed Salads": [
+          {
+            "name": "Creamy Coleslaw",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 112.0,
+            "ingredients": "Cabbage Green Shredded, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Sugar Granulated, Celery Salt (Salt and celery seed.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 112.0,
+              "fat_g": 9.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 5.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 38.0,
+              "iron_mg": 0.5
+            }
+          },
+          {
+            "name": "Fruit Salad Mix",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 53.0,
+            "ingredients": "Watermelon, Honeydew, Cantaloupe.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 53.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 10.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 11.0,
+              "protein_g": 1.0,
+              "potassium_mg": 257.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.4
+            }
+          }
+        ],
         "Black Coats - Greek Yogurt & Fruit Parfait": [
           {
             "name": "Plain Nonfat Greek Yogurt",
@@ -169564,6 +170958,160 @@
               "potassium_mg": 37.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Kosher - Featured Entree": [
+          {
+            "name": "Coconut Curry Salmon",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 158.0,
+            "ingredients": "Wild Sockeye Salmon Fillet, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Honey (Ingredients:, Honey), Red Bermuda Onions, Heinz Ketchup (Tomato Concentrate Made From Red Ripe Tomatoes, DistilledVinegar, High Fructose Corn Syrup, Corn Syrup, Salt, Spice, Onion Powder, Natural Flavoring), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Kosher Salt, Garlic Powder, Ginger, Garlic Whole Peeled Case, Ginger - Ground (Ginger, sulfur dioxide (added to retain color).), Brown Sugar, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Onion Granules, Garlic Granules, Extra Virgin Olive Oil, Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Ground Cumin Seed.",
+            "allergens": [
+              "Soy",
+              "Fish"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 158.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 1.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 58.0,
+              "sodium_mg": 253.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 25.0,
+              "potassium_mg": 429.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.6
+            }
+          }
+        ],
+        "Kosher - Vegetables & Sides": [
+          {
+            "name": "Roasted Green Peas",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 148.0,
+            "ingredients": "Organic Green Peas, Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 148.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 2.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 319.0,
+              "carbohydrates_g": 14.0,
+              "fiber_g": 5.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 5.0,
+              "potassium_mg": 2.0,
+              "calcium_mg": 23.0,
+              "iron_mg": 1.6
+            }
+          },
+          {
+            "name": "Ginger Rice",
+            "description": "",
+            "serving_size": "3 oz",
+            "calories": 252.0,
+            "ingredients": "Rice Basmati Himalayan (White basmati rice.), Water, Sugar Granulated, Ginger.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 252.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 57.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 6.0,
+              "protein_g": 4.0,
+              "potassium_mg": 10.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.0
+            }
+          }
+        ],
+        "Kosher - Composed Salads": [
+          {
+            "name": "Fruit Salad Mix",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 53.0,
+            "ingredients": "Watermelon, Honeydew, Cantaloupe.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 53.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 10.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 11.0,
+              "protein_g": 1.0,
+              "potassium_mg": 257.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Spicy Coleslaw",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 220.0,
+            "ingredients": "Cabbage Green Shredded, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), English Cucumber, Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum), Red  Onions, Syrup Maple Pure (Pure Maple Syrup.), White Vinegar (Distilled vinegar diluted with water to 5% acidity).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 220.0,
+              "fat_g": 20.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 338.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 6.0,
+              "protein_g": 1.0,
+              "potassium_mg": 30.0,
+              "calcium_mg": 33.0,
+              "iron_mg": 0.4
             }
           }
         ],
@@ -193513,34 +195061,34 @@
         ],
         "Smoke n' Grill - Lunch and Dinner Specials": [
           {
-            "name": "Caramelized Onions and Mushrooms",
+            "name": "Umami Harvest",
             "description": "",
-            "serving_size": "3 oz",
-            "calories": 84.0,
-            "ingredients": "Crimini Mushrooms, Portobello Mushrooms, Yellow Onion, Wine Box Franzia Chardonnay, Unsalted Butter (Cream, (milk), natural flavor.), Extra Virgin Olive Oil, Garlic Granules, Rosemary, Thyme, Kosher Salt, Black pepper (Black Pepper).",
+            "serving_size": "6 oz",
+            "calories": 121.0,
+            "ingredients": "Crimini Mushrooms, Yellow Onion, Portobello Mushrooms, Rice Brown, Whole Soybean Edamame In Pod, Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Wine Box Franzia Chardonnay, Black Vinegar (Water, Vinegar, Sugar, Salt, Onion, Orange Juice (0.6%), Carrot juice (0.6%), Tomato paste, Caramel, Spices.), Extra Virgin Olive Oil, Cane Sugar, Garlic Granules, Rosemary, Thyme, Kosher Salt, Black pepper (Black Pepper), Water.",
             "allergens": [
-              "Milk"
+              "Soy"
             ],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 84.0,
-              "fat_g": 7.0,
-              "saturated_fat_g": 3.1,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 11.0,
-              "sodium_mg": 141.0,
-              "carbohydrates_g": 5.0,
-              "fiber_g": 1.0,
+              "calories": 121.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 1.4,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 172.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 1.0,
-              "potassium_mg": 211.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 0.9
+              "total_sugar_g": 5.0,
+              "protein_g": 4.0,
+              "potassium_mg": 434.0,
+              "calcium_mg": 41.0,
+              "iron_mg": 1.4
             }
           },
           {
@@ -221079,552 +222627,6 @@
               "potassium_mg": 191.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.4
-            }
-          }
-        ],
-        "Persia - Grilled Kabobs & Stews": [
-          {
-            "name": "Chicken Breast Kabob (Halal)",
-            "description": "",
-            "serving_size": "3 oz chicken breast",
-            "calories": 170.0,
-            "ingredients": "Chicken Breast (Halal), Unsalted Butter (Cream, (milk), natural flavor.), Yellow Onion, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Rice Bran Oil, Kosher Salt, Unsweetened Plain Yogurt (CULTURED LOWFAT MILK, FOOD STARCH-MODIFIED, GELATIN, POTASSIUM SORBATE (PRESERVATIVE).), Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Italian Flat Leaf Parsley, Lemon Pepper Seaasoning (Salt, black pepper, citric acid, onion, sugar, garlic, calcium stearate, silicon dioxide, and calcium silicate (added to make free flowing), celery seed, lemon oil, and FD&C yellow 5 lake.), Garlic Whole Peeled Case, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Onion Granules, Fresh Parsley, Coriander - Ground, Dill Weed, Black pepper (Black Pepper), Garlic Powder, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Black Pepper (Black Pepper), Sumac, Onion Powder, Saffron, Ground Cinnamon, Cayenne Pepper (Black Pepper), Ground Nutmeg.",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 8.0,
-              "saturated_fat_g": 3.4,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 90.0,
-              "sodium_mg": 802.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 23.0,
-              "potassium_mg": 350.0,
-              "calcium_mg": 15.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Vegetable Kabob",
-            "description": "",
-            "serving_size": "4 oz",
-            "calories": 68.0,
-            "ingredients": "Yellow Onion, Roma Tomatoes, Fresh Zucchini, Squash Yellow Medium, Green Bell Peppers, Crimini Mushrooms, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Black pepper (Black Pepper), Dill Weed.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 68.0,
-              "fat_g": 4.8,
-              "saturated_fat_g": 1.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 4.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 254.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 0.5
-            }
-          },
-          {
-            "name": "Bamieh Okra Stew",
-            "description": "",
-            "serving_size": "1 serving",
-            "calories": 93.0,
-            "ingredients": "Water, Okra (Okra.), Roma Tomatoes, Yellow Onions, Fresh Parsley, Rice Bran Oil, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Garlic, Kosher Salt, Ground Cumin Seed, Coriander - Ground, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 93.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 1.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 397.0,
-              "carbohydrates_g": 10.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 2.0,
-              "potassium_mg": 201.0,
-              "calcium_mg": 55.0,
-              "iron_mg": 1.2
-            }
-          },
-          {
-            "name": "Bamieh Okra Stew with Lamb",
-            "description": "",
-            "serving_size": "1 serving",
-            "calories": 252.0,
-            "ingredients": "Water, Lamb - 1/2\" Diced (Halal), Okra (Okra.), Roma Tomatoes, Yellow Onions, Fresh Parsley, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Rice Bran Oil, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Garlic, Kosher Salt, Ground Cumin Seed, Coriander - Ground, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.).",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 252.0,
-              "fat_g": 11.0,
-              "saturated_fat_g": 3.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 87.0,
-              "sodium_mg": 441.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 29.0,
-              "potassium_mg": 393.0,
-              "calcium_mg": 65.0,
-              "iron_mg": 3.4
-            }
-          }
-        ],
-        "Persia - Sides": [
-          {
-            "name": "Lavash Bread",
-            "description": "",
-            "serving_size": "1 oz piece",
-            "calories": 83.0,
-            "ingredients": "Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), 2% Milk (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Water, Unsalted Butter (Cream, (milk), natural flavor.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
-            "allergens": [
-              "Milk",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 83.0,
-              "fat_g": 3.6,
-              "saturated_fat_g": 1.4,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 4.0,
-              "sodium_mg": 304.0,
-              "carbohydrates_g": 11.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 2.0,
-              "potassium_mg": 12.0,
-              "calcium_mg": 42.0,
-              "iron_mg": 0.7
-            }
-          },
-          {
-            "name": "Pickled Mixed Vegetables - Torshi",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 4.0,
-            "ingredients": "Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Cauliflower Florets, Celery, Cabbage Nappa, Lemons, Pearl Onions (Pearl onions.), Juice Tomato 46 Oz (Tomato juice from concentrate (water, tomato concentrate), salt, vitamin c (ascorbic acid).), Carrots, Green Bell Peppers, Sugar Granulated, Red Bell Peppers, Yellow Bell Pepper, Tarragon, Italian Flat Leaf Parsley, Dill, Mint, Fresh Basil, Kosher Salt, Garlic Whole Peeled Case, Black Pepper (Black Pepper), Ginger - Ground (Ginger, sulfur dioxide (added to retain color).), Coriander - Whole, Ground Cumin Seed.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 4.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 44.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 0.0,
-              "potassium_mg": 33.0,
-              "calcium_mg": 8.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Dolmas",
-            "description": "",
-            "serving_size": "1 dolma",
-            "calories": 35.0,
-            "ingredients": "Ingredients: Rice (Cooked) 60%, Water, Vine leaves 15%, Onions, Soya Oil 7.5%, Salt, Spices (dill spearmint, black pepper), Acidifying agent: Citric Acid..",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 35.0,
-              "fat_g": 2.6,
-              "saturated_fat_g": 0.4,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 130.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 16.0,
-              "calcium_mg": 13.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Chelo - Persian Rice",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 177.0,
-            "ingredients": "Water, Rice Basmati Parboile (White basmati rice.), Rice Bran Oil, Kosher Salt, Saffron.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 177.0,
-              "fat_g": 3.0,
-              "saturated_fat_g": 0.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 354.0,
-              "carbohydrates_g": 34.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 4.0,
-              "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.4
-            }
-          },
-          {
-            "name": "Pistachio Almond Jeweled Rice",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 205.0,
-            "ingredients": "Water, Rice Basmati Parboile (White basmati rice.), Slivered Almonds (Ingredients, Almonds. Contains: Tree Nuts (almonds).), Craisins (Cranberries, soluble corn fiber, cane sugar, glycerin, sucralose; Refined sunflower oil is used as a processing aid.), Raisins (Raisins.), Pistachio Nuts (Pistachios.), Sugar Granulated, Rice Bran Oil, Kosher Salt, Saffron.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 205.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 0.8,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 280.0,
-              "carbohydrates_g": 36.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 1.0,
-              "total_sugar_g": 6.0,
-              "protein_g": 4.0,
-              "potassium_mg": 58.0,
-              "calcium_mg": 15.0,
-              "iron_mg": 0.6
-            }
-          }
-        ],
-        "Persia - Persian Salads & Toppings": [
-          {
-            "name": "Feta Cheese",
-            "description": "",
-            "serving_size": "2 oz serving",
-            "calories": 161.0,
-            "ingredients": "Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).).",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 161.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 8.0,
-              "trans_fat_g": 0.4,
-              "cholesterol_mg": 38.0,
-              "sodium_mg": 656.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 10.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 122.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Fresh Herbs",
-            "description": "",
-            "serving_size": "0.5 oz",
-            "calories": 12.0,
-            "ingredients": "Green Onion, Parsley Curly 60 CT, Tarragon, Mint, Fresh Basil.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 12.0,
-              "fat_g": 0.4,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 12.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 156.0,
-              "calcium_mg": 60.0,
-              "iron_mg": 1.8
-            }
-          },
-          {
-            "name": "Hadi's Hummus",
-            "description": "",
-            "serving_size": "4 oz",
-            "calories": 204.0,
-            "ingredients": "Garbanzo Beans (Prepared chick peas, water, salt, calcium chloride (firming agent), and disodium EDTA (promotes color restoration).), Sesame Tahini (Sesame Seed.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Water, Extra Virgin Olive Oil, Garlic, Kosher Salt, Cayenne Pepper (Black Pepper).",
-            "allergens": [
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 204.0,
-              "fat_g": 14.0,
-              "saturated_fat_g": 1.8,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 193.0,
-              "carbohydrates_g": 15.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 7.0,
-              "potassium_mg": 223.0,
-              "calcium_mg": 45.0,
-              "iron_mg": 1.9
-            }
-          },
-          {
-            "name": "Cucumber Yogurt Dip",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 8.0,
-            "ingredients": "Unsweetened Plain Yogurt (CULTURED LOWFAT MILK, FOOD STARCH-MODIFIED, GELATIN, POTASSIUM SORBATE (PRESERVATIVE).), Cucumbers, Italian Flat Leaf Parsley, Kosher Salt, Black pepper (Black Pepper), Spice Dry MInt Loose Arash Market.",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 8.0,
-              "fat_g": 0.2,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 1.0,
-              "sodium_mg": 17.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 22.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Tomato & Cucumber Salad",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 21.0,
-            "ingredients": "Cucumbers, Roma Tomatoes, Parsley Italian, Kosher Salt, Spice Dry MInt Loose Arash Market.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 21.0,
-              "fat_g": 0.2,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 31.0,
-              "carbohydrates_g": 5.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 233.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.4
-            }
-          },
-          {
-            "name": "Walnuts",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 52.0,
-            "ingredients": "Nuts walnuts english.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 52.0,
-              "fat_g": 5.0,
-              "saturated_fat_g": 0.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 35.0,
-              "calcium_mg": 8.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Apple Preserves",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 168.0,
-            "ingredients": "Water, Sugar Granulated, Gala Apple, Rose Water Cortas (Ingredients: Rose Water), Water Orange Blossom Cortas 17 OZ (Ingredients: Bitter Orange Blossom Water), Cardamon (Ingredients: Cardamom), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Cinnamon Sticks.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 168.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
-              "carbohydrates_g": 43.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 42.0,
-              "protein_g": 0.0,
-              "potassium_mg": 25.0,
-              "calcium_mg": 4.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Limes",
-            "description": "",
-            "serving_size": "1 each",
-            "calories": 20.0,
-            "ingredients": "Limes raw.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 20.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 7.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 22.0,
-              "iron_mg": 0.4
-            }
-          }
-        ],
-        "Persia - Desserts": [
-          {
-            "name": "Yazdi Cupcake with Pistachio",
-            "description": "",
-            "serving_size": "1 cupcake",
-            "calories": 279.0,
-            "ingredients": "Unsweetened Plain Yogurt (CULTURED LOWFAT MILK, FOOD STARCH-MODIFIED, GELATIN, POTASSIUM SORBATE (PRESERVATIVE).), Rice Bran Oil, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated, Whole Eggs (Cage Free), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Water Orange Blossom Cortas 17 OZ (Ingredients: Bitter Orange Blossom Water), Rose Water Cortas (Ingredients: Rose Water), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Pistachio Nuts (Pistachios.).",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Wheat",
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 279.0,
-              "fat_g": 17.0,
-              "saturated_fat_g": 3.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 53.0,
-              "sodium_mg": 37.0,
-              "carbohydrates_g": 27.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 15.0,
-              "protein_g": 4.0,
-              "potassium_mg": 37.0,
-              "calcium_mg": 38.0,
-              "iron_mg": 0.9
             }
           }
         ],
