@@ -675,8 +675,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -756,9 +756,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -3247,7 +3247,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -10285,8 +10285,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -10308,9 +10308,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -11315,7 +11315,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -13153,7 +13153,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
               "potassium_mg": 3.0,
-              "calcium_mg": 79.0,
+              "calcium_mg": 78.7,
               "iron_mg": 1.4
             }
           },
@@ -13270,8 +13270,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -13594,7 +13594,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -21190,8 +21190,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -21300,7 +21300,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 89.0,
+              "sodium_mg": 80.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -22068,16 +22068,16 @@
               "fat_g": 33.0,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 240.0,
-              "sodium_mg": 648.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 237.0,
+              "sodium_mg": 656.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 39.0,
-              "potassium_mg": 28.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
+              "potassium_mg": 27.0,
+              "calcium_mg": 9.1,
+              "iron_mg": 0.5
             }
           },
           {
@@ -22192,7 +22192,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 1.6,
+              "calcium_mg": 2.0,
               "iron_mg": 0.3
             }
           },
@@ -23080,12 +23080,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           }
@@ -24082,7 +24082,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -24090,7 +24090,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -24804,7 +24804,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -32207,8 +32207,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -32230,9 +32230,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -33185,7 +33185,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -35375,7 +35375,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -35383,7 +35383,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -35532,8 +35532,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -35777,7 +35777,7 @@
               "saturated_fat_g": 1.8,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 83.0,
-              "sodium_mg": 383.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 29.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
@@ -41549,7 +41549,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 156.0,
-            "ingredients": "Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Red Kidney Beans (Ingredients:, Small Red Beans.), Celery, Red Bermuda Onions, GARBANZO BEAN DRIED (Ingredients, Garbanzos), Okra (Okra.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tomato Paste (Tomatoes and Citric Acid.), Pepper Jalapeno Case, Garlic Whole Peeled Case, Louisiana Hot Sauce (Cayenne Peppers; distilled vinegar; salt; guar, sodium alginate & xanthan gums, yellow #6 and red #40.), Rice Bran Oil, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Seafood Seasoning Old Bay 7.5lb (Ingredients, INGREDIENTS: CELERY SALT (SALT, CELERY SEED),, SPICES (INCLUDING RED PEPPER AND BLACK PEPPER),, AND PAPRIKA.), Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Onion Granules, Herb Thyme 4 OZ, Garlic Granules, White Pepper, Cayenne Pepper (Black Pepper), Oregano Leaf, Basil, Black pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Thyme Leaf, Rosemary, Crushed Red Pepper.",
+            "ingredients": "Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Red Kidney Beans (Ingredients:, Small Red Beans.), Celery, Red Bermuda Onions, GARBANZO BEAN DRIED (Ingredients, Garbanzos), Okra (Okra.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tomato Paste (Tomatoes and Citric Acid.), Pepper Jalapeno Case, Garlic Whole Peeled Case, Louisiana Hot Sauce (Cayenne Peppers; distilled vinegar; salt; guar, sodium alginate & xanthan gums, yellow #6 and red #40.), Rice Bran Oil, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Seafood Seasoning Old Bay 7.5lb (Ingredients, INGREDIENTS: CELERY SALT (SALT, CELERY SEED),, SPICES (INCLUDING RED PEPPER AND BLACK PEPPER),, AND PAPRIKA.), Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Herb Thyme 4 OZ, Garlic Granules, Onion Granules, White Pepper, Cayenne Pepper (Black Pepper), Oregano Leaf, Basil, Black pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Thyme Leaf, Rosemary, Crushed Red Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -41562,7 +41562,7 @@
               "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 409.0,
+              "sodium_mg": 380.0,
               "carbohydrates_g": 35.0,
               "fiber_g": 7.0,
               "added_sugar_g": 0.0,
@@ -43535,8 +43535,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -43558,9 +43558,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -44534,7 +44534,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -46391,7 +46391,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -46399,7 +46399,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -54445,8 +54445,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -54468,9 +54468,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -55475,7 +55475,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -57149,7 +57149,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -57157,7 +57157,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -57274,8 +57274,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -65117,8 +65117,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -65140,9 +65140,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -67635,7 +67635,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -73366,7 +73366,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 111.0,
-            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), Kosher Salt, A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
+            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Kosher Salt, Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
             "allergens": [
               "Wheat",
               "Fish"
@@ -73380,7 +73380,7 @@
               "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 787.0,
+              "sodium_mg": 736.0,
               "carbohydrates_g": 13.0,
               "fiber_g": 2.0,
               "added_sugar_g": 1.0,
@@ -74463,8 +74463,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -74544,9 +74544,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -84097,8 +84097,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -84120,9 +84120,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -85132,7 +85132,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -86992,7 +86992,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -87000,7 +87000,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -87086,8 +87086,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -87683,7 +87683,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -94968,8 +94968,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -94991,9 +94991,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -95528,7 +95528,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.3,
               "cholesterol_mg": 41.0,
-              "sodium_mg": 196.0,
+              "sodium_mg": 168.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -95875,16 +95875,16 @@
               "fat_g": 33.0,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 240.0,
-              "sodium_mg": 648.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 237.0,
+              "sodium_mg": 656.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 39.0,
-              "potassium_mg": 28.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
+              "potassium_mg": 27.0,
+              "calcium_mg": 9.1,
+              "iron_mg": 0.5
             }
           },
           {
@@ -95999,7 +95999,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 1.6,
+              "calcium_mg": 2.0,
               "iron_mg": 0.3
             }
           },
@@ -96890,12 +96890,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           }
@@ -97923,7 +97923,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -97931,7 +97931,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -105984,8 +105984,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -106007,9 +106007,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -106989,7 +106989,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -109026,7 +109026,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -109034,7 +109034,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -109152,8 +109152,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -117082,8 +117082,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -117105,9 +117105,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -118083,7 +118083,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -119815,7 +119815,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -119823,7 +119823,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -120297,7 +120297,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -127773,8 +127773,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -127796,9 +127796,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -129968,7 +129968,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -129976,7 +129976,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -130062,8 +130062,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -136057,7 +136057,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 111.0,
-            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), Kosher Salt, A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
+            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Kosher Salt, Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
             "allergens": [
               "Wheat",
               "Fish"
@@ -136071,7 +136071,7 @@
               "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 787.0,
+              "sodium_mg": 736.0,
               "carbohydrates_g": 13.0,
               "fiber_g": 2.0,
               "added_sugar_g": 1.0,
@@ -137925,8 +137925,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -137948,9 +137948,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -140175,7 +140175,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -147273,8 +147273,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -147354,9 +147354,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -149578,7 +149578,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -156889,8 +156889,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -156912,9 +156912,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -157892,7 +157892,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -159578,7 +159578,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
               "potassium_mg": 3.0,
-              "calcium_mg": 79.0,
+              "calcium_mg": 78.7,
               "iron_mg": 1.4
             }
           },
@@ -159695,8 +159695,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -166807,8 +166807,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 4.0,
               "protein_g": 17.0,
-              "potassium_mg": 325.0,
-              "calcium_mg": 29.0,
+              "potassium_mg": 327.0,
+              "calcium_mg": 30.0,
               "iron_mg": 5.4
             }
           }
@@ -167233,43 +167233,11 @@
         ],
         "Italian - Vegetables & Sides": [
           {
-            "name": "Garlic Bread",
+            "name": "Italian Roasted Vegetables",
             "description": "",
-            "serving_size": "1 slice",
-            "calories": 121.0,
-            "ingredients": "Unsalted Butter (Cream, (milk), natural flavor.), Whole Wheat Flour, Parmesan Cheese (Pasteurized cow's milk, cheese culture, salt, enzymes.), Water, Garlic, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Oregano Leaf, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Crushed Red Pepper.",
-            "allergens": [
-              "Milk",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 121.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 5.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 22.0,
-              "sodium_mg": 96.0,
-              "carbohydrates_g": 7.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 4.0,
-              "potassium_mg": 13.0,
-              "calcium_mg": 86.0,
-              "iron_mg": 0.4
-            }
-          },
-          {
-            "name": "Roasted Lemon and Balsamic Zucchini",
-            "description": "",
-            "serving_size": "3 oz serving",
-            "calories": 23.0,
-            "ingredients": "Fresh Zucchini, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Balsamic Vinegar (Organic Balsamic Vinegar.), Extra Virgin Olive Oil, Kosher Salt, Black pepper (Black Pepper), Herb Mint Fresh 1 LB, Sugar Granulated.",
+            "serving_size": "1 1/2 cup serving",
+            "calories": 27.0,
+            "ingredients": "Red Bermuda Onions, Fresh Zucchini, Squash Yellow Medium, Broccoli Florets, Cauliflower Florets, Green Bell Peppers, Baby Carrots, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Garlic Whole Peeled Case, Garlic Granules, Oregano Leaf, Onion Granules, Black pepper (Black Pepper), Basil, Kosher Salt, Crushed Red Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -167277,20 +167245,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 23.0,
-              "fat_g": 1.3,
+              "calories": 27.0,
+              "fat_g": 1.1,
               "saturated_fat_g": 0.2,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 151.0,
-              "carbohydrates_g": 3.0,
+              "sodium_mg": 18.0,
+              "carbohydrates_g": 4.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 1.0,
-              "potassium_mg": 215.0,
-              "calcium_mg": 15.0,
-              "iron_mg": 0.3
+              "potassium_mg": 173.0,
+              "calcium_mg": 17.4,
+              "iron_mg": 0.4
             }
           }
         ],
@@ -167524,8 +167492,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -167634,7 +167602,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 89.0,
+              "sodium_mg": 80.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -168055,7 +168023,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.3,
               "cholesterol_mg": 41.0,
-              "sodium_mg": 196.0,
+              "sodium_mg": 168.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -168404,16 +168372,16 @@
               "fat_g": 33.0,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 240.0,
-              "sodium_mg": 648.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 237.0,
+              "sodium_mg": 656.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 39.0,
-              "potassium_mg": 28.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
+              "potassium_mg": 27.0,
+              "calcium_mg": 9.1,
+              "iron_mg": 0.5
             }
           },
           {
@@ -168528,7 +168496,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 1.6,
+              "calcium_mg": 2.0,
               "iron_mg": 0.3
             }
           },
@@ -169265,12 +169233,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           }
@@ -170265,7 +170233,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -170273,7 +170241,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -170572,7 +170540,7 @@
               "saturated_fat_g": 1.8,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 83.0,
-              "sodium_mg": 383.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 29.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
@@ -170745,7 +170713,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -171074,34 +171042,35 @@
             }
           },
           {
-            "name": "Garlic Butter Mushrooms",
+            "name": "Tahini Mushroom & Quinoa Medley",
             "description": "",
-            "serving_size": "3 oz",
-            "calories": 179.0,
-            "ingredients": "Crimini Mushrooms, Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Rice Bran Oil, Onion Granules, Kosher Salt, Ground Mustard, White Pepper, Rosemary, Thyme.",
+            "serving_size": "6 oz",
+            "calories": 346.0,
+            "ingredients": "Mushroom Mix Case, Roasted Chick Peas with Sea Salt (Ingredients: Chickpeas, Expeller Pressed High Oleic Sunflower or Safflower Oil, Sea Salt.), Water, Organic Baby Kale, Sesame Tahini (Sesame Seed.), Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Quinoa, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Extra Virgin Olive Oil, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Garlic Whole Peeled Case, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Onion Granules, Ground Mustard, Kosher Salt, White Pepper, Rosemary, Thyme.",
             "allergens": [
-              "Milk"
+              "Soy",
+              "Sesame"
             ],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 179.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 10.0,
-              "trans_fat_g": 0.7,
-              "cholesterol_mg": 43.0,
-              "sodium_mg": 176.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
+              "calories": 346.0,
+              "fat_g": 23.0,
+              "saturated_fat_g": 3.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 471.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 10.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 25.0,
-              "iron_mg": 0.5
+              "total_sugar_g": 3.0,
+              "protein_g": 13.0,
+              "potassium_mg": 475.0,
+              "calcium_mg": 81.0,
+              "iron_mg": 2.7
             }
           }
         ],
@@ -176401,7 +176370,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 156.0,
-            "ingredients": "Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Red Kidney Beans (Ingredients:, Small Red Beans.), Celery, Red Bermuda Onions, GARBANZO BEAN DRIED (Ingredients, Garbanzos), Okra (Okra.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tomato Paste (Tomatoes and Citric Acid.), Pepper Jalapeno Case, Garlic Whole Peeled Case, Louisiana Hot Sauce (Cayenne Peppers; distilled vinegar; salt; guar, sodium alginate & xanthan gums, yellow #6 and red #40.), Rice Bran Oil, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Seafood Seasoning Old Bay 7.5lb (Ingredients, INGREDIENTS: CELERY SALT (SALT, CELERY SEED),, SPICES (INCLUDING RED PEPPER AND BLACK PEPPER),, AND PAPRIKA.), Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Onion Granules, Herb Thyme 4 OZ, Garlic Granules, White Pepper, Cayenne Pepper (Black Pepper), Oregano Leaf, Basil, Black pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Thyme Leaf, Rosemary, Crushed Red Pepper.",
+            "ingredients": "Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Red Kidney Beans (Ingredients:, Small Red Beans.), Celery, Red Bermuda Onions, GARBANZO BEAN DRIED (Ingredients, Garbanzos), Okra (Okra.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tomato Paste (Tomatoes and Citric Acid.), Pepper Jalapeno Case, Garlic Whole Peeled Case, Louisiana Hot Sauce (Cayenne Peppers; distilled vinegar; salt; guar, sodium alginate & xanthan gums, yellow #6 and red #40.), Rice Bran Oil, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Seafood Seasoning Old Bay 7.5lb (Ingredients, INGREDIENTS: CELERY SALT (SALT, CELERY SEED),, SPICES (INCLUDING RED PEPPER AND BLACK PEPPER),, AND PAPRIKA.), Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Herb Thyme 4 OZ, Garlic Granules, Onion Granules, White Pepper, Cayenne Pepper (Black Pepper), Oregano Leaf, Basil, Black pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Thyme Leaf, Rosemary, Crushed Red Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -176414,7 +176383,7 @@
               "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 409.0,
+              "sodium_mg": 380.0,
               "carbohydrates_g": 35.0,
               "fiber_g": 7.0,
               "added_sugar_g": 0.0,
@@ -176430,7 +176399,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 111.0,
-            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), Kosher Salt, A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
+            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Kosher Salt, Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
             "allergens": [
               "Wheat",
               "Fish"
@@ -176444,7 +176413,7 @@
               "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 787.0,
+              "sodium_mg": 736.0,
               "carbohydrates_g": 13.0,
               "fiber_g": 2.0,
               "added_sugar_g": 1.0,
@@ -178355,8 +178324,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -178378,9 +178347,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -179392,7 +179361,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -181397,7 +181366,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -181405,7 +181374,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -181554,8 +181523,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -182395,35 +182364,6 @@
               "potassium_mg": 238.0,
               "calcium_mg": 30.0,
               "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Coconut Curry Chicken Thighs",
-            "description": "",
-            "serving_size": "6 oz",
-            "calories": 324.0,
-            "ingredients": "Chicken Thigh Boneless Skin On, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Plain Nonfat Greek Yogurt (Cultured Grade A Non Fat Milk, Live & Active Yogurt Cultures S. Thermophilus And L. Bulgaricus), Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Extra Virgin Olive Oil, Kosher Salt.",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 324.0,
-              "fat_g": 25.0,
-              "saturated_fat_g": 10.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 100.0,
-              "sodium_mg": 683.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 23.0,
-              "potassium_mg": 88.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 2.7
             }
           }
         ],
@@ -189696,8 +189636,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -189719,9 +189659,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -190698,7 +190638,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -192399,7 +192339,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -192407,7 +192347,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -200453,8 +200393,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -200476,9 +200416,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -200952,7 +200892,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.3,
               "cholesterol_mg": 41.0,
-              "sodium_mg": 196.0,
+              "sodium_mg": 168.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -201454,7 +201394,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -203129,7 +203069,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -203137,7 +203077,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -203254,8 +203194,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -203613,7 +203553,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -211269,8 +211209,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -211292,9 +211232,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -213518,7 +213458,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -220620,8 +220560,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -220701,9 +220641,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -221684,7 +221624,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -223738,7 +223678,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -230776,8 +230716,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -230799,9 +230739,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -231806,7 +231746,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -233490,7 +233430,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
               "potassium_mg": 3.0,
-              "calcium_mg": 79.0,
+              "calcium_mg": 78.7,
               "iron_mg": 1.4
             }
           },
@@ -233607,8 +233547,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -233931,7 +233871,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -241527,8 +241467,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -241637,7 +241577,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 89.0,
+              "sodium_mg": 80.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -242405,16 +242345,16 @@
               "fat_g": 33.0,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 240.0,
-              "sodium_mg": 648.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 237.0,
+              "sodium_mg": 656.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 39.0,
-              "potassium_mg": 28.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
+              "potassium_mg": 27.0,
+              "calcium_mg": 9.1,
+              "iron_mg": 0.5
             }
           },
           {
@@ -242529,7 +242469,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 1.6,
+              "calcium_mg": 2.0,
               "iron_mg": 0.3
             }
           },
@@ -243266,12 +243206,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           }
@@ -244268,7 +244208,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -244276,7 +244216,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -244990,7 +244930,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -252393,8 +252333,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -252416,9 +252356,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -253371,7 +253311,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -255376,7 +255316,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -255384,7 +255324,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -255533,8 +255473,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -255778,7 +255718,7 @@
               "saturated_fat_g": 1.8,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 83.0,
-              "sodium_mg": 383.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 29.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
@@ -261550,7 +261490,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 156.0,
-            "ingredients": "Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Red Kidney Beans (Ingredients:, Small Red Beans.), Celery, Red Bermuda Onions, GARBANZO BEAN DRIED (Ingredients, Garbanzos), Okra (Okra.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tomato Paste (Tomatoes and Citric Acid.), Pepper Jalapeno Case, Garlic Whole Peeled Case, Louisiana Hot Sauce (Cayenne Peppers; distilled vinegar; salt; guar, sodium alginate & xanthan gums, yellow #6 and red #40.), Rice Bran Oil, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Seafood Seasoning Old Bay 7.5lb (Ingredients, INGREDIENTS: CELERY SALT (SALT, CELERY SEED),, SPICES (INCLUDING RED PEPPER AND BLACK PEPPER),, AND PAPRIKA.), Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Onion Granules, Herb Thyme 4 OZ, Garlic Granules, White Pepper, Cayenne Pepper (Black Pepper), Oregano Leaf, Basil, Black pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Thyme Leaf, Rosemary, Crushed Red Pepper.",
+            "ingredients": "Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Red Kidney Beans (Ingredients:, Small Red Beans.), Celery, Red Bermuda Onions, GARBANZO BEAN DRIED (Ingredients, Garbanzos), Okra (Okra.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tomato Paste (Tomatoes and Citric Acid.), Pepper Jalapeno Case, Garlic Whole Peeled Case, Louisiana Hot Sauce (Cayenne Peppers; distilled vinegar; salt; guar, sodium alginate & xanthan gums, yellow #6 and red #40.), Rice Bran Oil, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Seafood Seasoning Old Bay 7.5lb (Ingredients, INGREDIENTS: CELERY SALT (SALT, CELERY SEED),, SPICES (INCLUDING RED PEPPER AND BLACK PEPPER),, AND PAPRIKA.), Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Herb Thyme 4 OZ, Garlic Granules, Onion Granules, White Pepper, Cayenne Pepper (Black Pepper), Oregano Leaf, Basil, Black pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Thyme Leaf, Rosemary, Crushed Red Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -261563,7 +261503,7 @@
               "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 409.0,
+              "sodium_mg": 380.0,
               "carbohydrates_g": 35.0,
               "fiber_g": 7.0,
               "added_sugar_g": 0.0,
@@ -263536,8 +263476,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -263559,9 +263499,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -264537,7 +264477,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -266242,7 +266182,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -266250,7 +266190,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -274298,8 +274238,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -274321,9 +274261,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -275328,7 +275268,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -277003,7 +276943,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -277011,7 +276951,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -277128,8 +277068,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -285005,8 +284945,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -285028,9 +284968,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -287523,7 +287463,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -293254,7 +293194,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 111.0,
-            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), Kosher Salt, A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
+            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Kosher Salt, Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
             "allergens": [
               "Wheat",
               "Fish"
@@ -293268,7 +293208,7 @@
               "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 787.0,
+              "sodium_mg": 736.0,
               "carbohydrates_g": 13.0,
               "fiber_g": 2.0,
               "added_sugar_g": 1.0,
@@ -294383,8 +294323,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -294464,9 +294404,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -295447,7 +295387,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -304562,8 +304502,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -304585,9 +304525,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -305597,7 +305537,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -307305,7 +307245,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -307313,7 +307253,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -307399,8 +307339,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -307996,7 +307936,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -315312,8 +315252,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -315335,9 +315275,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -315872,7 +315812,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.3,
               "cholesterol_mg": 41.0,
-              "sodium_mg": 196.0,
+              "sodium_mg": 168.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -316219,16 +316159,16 @@
               "fat_g": 33.0,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 240.0,
-              "sodium_mg": 648.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 237.0,
+              "sodium_mg": 656.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 39.0,
-              "potassium_mg": 28.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
+              "potassium_mg": 27.0,
+              "calcium_mg": 9.1,
+              "iron_mg": 0.5
             }
           },
           {
@@ -316343,7 +316283,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 1.6,
+              "calcium_mg": 2.0,
               "iron_mg": 0.3
             }
           },
@@ -317080,12 +317020,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           }
@@ -318113,7 +318053,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -318121,7 +318061,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -326174,8 +326114,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -326197,9 +326137,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -327179,7 +327119,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -329216,7 +329156,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -329224,7 +329164,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -329342,8 +329282,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -337301,8 +337241,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -337324,9 +337264,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -338302,7 +338242,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -340034,7 +339974,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -340042,7 +339982,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -340516,7 +340456,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -347992,8 +347932,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -348015,9 +347955,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -349026,7 +348966,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -350733,7 +350673,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -350741,7 +350681,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -350827,8 +350767,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -356822,7 +356762,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 111.0,
-            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), Kosher Salt, A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
+            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Kosher Salt, Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
             "allergens": [
               "Wheat",
               "Fish"
@@ -356836,7 +356776,7 @@
               "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 787.0,
+              "sodium_mg": 736.0,
               "carbohydrates_g": 13.0,
               "fiber_g": 2.0,
               "added_sugar_g": 1.0,
@@ -358690,8 +358630,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -358713,9 +358653,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -360940,7 +360880,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -368038,8 +367978,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -368119,9 +368059,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -369102,7 +369042,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -370889,7 +370829,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -378200,8 +378140,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -378223,9 +378163,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -379203,7 +379143,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -380889,7 +380829,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
               "potassium_mg": 3.0,
-              "calcium_mg": 79.0,
+              "calcium_mg": 78.7,
               "iron_mg": 1.4
             }
           },
@@ -381006,8 +380946,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -388147,8 +388087,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 4.0,
               "protein_g": 17.0,
-              "potassium_mg": 325.0,
-              "calcium_mg": 29.0,
+              "potassium_mg": 327.0,
+              "calcium_mg": 30.0,
               "iron_mg": 5.4
             }
           }
@@ -388864,8 +388804,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -388974,7 +388914,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 89.0,
+              "sodium_mg": 80.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -389395,7 +389335,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.3,
               "cholesterol_mg": 41.0,
-              "sodium_mg": 196.0,
+              "sodium_mg": 168.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -389744,16 +389684,16 @@
               "fat_g": 33.0,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 240.0,
-              "sodium_mg": 648.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 237.0,
+              "sodium_mg": 656.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 39.0,
-              "potassium_mg": 28.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
+              "potassium_mg": 27.0,
+              "calcium_mg": 9.1,
+              "iron_mg": 0.5
             }
           },
           {
@@ -389868,7 +389808,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 1.6,
+              "calcium_mg": 2.0,
               "iron_mg": 0.3
             }
           },
@@ -390605,12 +390545,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           }
@@ -391605,7 +391545,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -391613,7 +391553,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -391912,7 +391852,7 @@
               "saturated_fat_g": 1.8,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 83.0,
-              "sodium_mg": 383.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 29.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
@@ -392085,7 +392025,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -392417,8 +392357,8 @@
             "name": "Garlic Butter Mushrooms",
             "description": "",
             "serving_size": "3 oz",
-            "calories": 179.0,
-            "ingredients": "Crimini Mushrooms, Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Rice Bran Oil, Onion Granules, Kosher Salt, Ground Mustard, White Pepper, Rosemary, Thyme.",
+            "calories": 178.0,
+            "ingredients": "Crimini Mushrooms, Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Rice Bran Oil, Onion Granules, Ground Mustard, Kosher Salt, White Pepper, Rosemary, Thyme.",
             "allergens": [
               "Milk"
             ],
@@ -392428,20 +392368,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 179.0,
+              "calories": 178.0,
               "fat_g": 18.0,
               "saturated_fat_g": 10.0,
               "trans_fat_g": 0.7,
               "cholesterol_mg": 43.0,
-              "sodium_mg": 176.0,
+              "sodium_mg": 110.0,
               "carbohydrates_g": 4.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 2.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 25.0,
-              "iron_mg": 0.5
+              "potassium_mg": 289.0,
+              "calcium_mg": 24.0,
+              "iron_mg": 0.4
             }
           }
         ],
@@ -397741,7 +397681,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 156.0,
-            "ingredients": "Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Red Kidney Beans (Ingredients:, Small Red Beans.), Celery, Red Bermuda Onions, GARBANZO BEAN DRIED (Ingredients, Garbanzos), Okra (Okra.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tomato Paste (Tomatoes and Citric Acid.), Pepper Jalapeno Case, Garlic Whole Peeled Case, Louisiana Hot Sauce (Cayenne Peppers; distilled vinegar; salt; guar, sodium alginate & xanthan gums, yellow #6 and red #40.), Rice Bran Oil, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Seafood Seasoning Old Bay 7.5lb (Ingredients, INGREDIENTS: CELERY SALT (SALT, CELERY SEED),, SPICES (INCLUDING RED PEPPER AND BLACK PEPPER),, AND PAPRIKA.), Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Onion Granules, Herb Thyme 4 OZ, Garlic Granules, White Pepper, Cayenne Pepper (Black Pepper), Oregano Leaf, Basil, Black pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Thyme Leaf, Rosemary, Crushed Red Pepper.",
+            "ingredients": "Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Red Kidney Beans (Ingredients:, Small Red Beans.), Celery, Red Bermuda Onions, GARBANZO BEAN DRIED (Ingredients, Garbanzos), Okra (Okra.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tomato Paste (Tomatoes and Citric Acid.), Pepper Jalapeno Case, Garlic Whole Peeled Case, Louisiana Hot Sauce (Cayenne Peppers; distilled vinegar; salt; guar, sodium alginate & xanthan gums, yellow #6 and red #40.), Rice Bran Oil, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Seafood Seasoning Old Bay 7.5lb (Ingredients, INGREDIENTS: CELERY SALT (SALT, CELERY SEED),, SPICES (INCLUDING RED PEPPER AND BLACK PEPPER),, AND PAPRIKA.), Kosher Salt, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Herb Thyme 4 OZ, Garlic Granules, Onion Granules, White Pepper, Cayenne Pepper (Black Pepper), Oregano Leaf, Basil, Black pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Thyme Leaf, Rosemary, Crushed Red Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -397754,7 +397694,7 @@
               "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 409.0,
+              "sodium_mg": 380.0,
               "carbohydrates_g": 35.0,
               "fiber_g": 7.0,
               "added_sugar_g": 0.0,
@@ -397770,7 +397710,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 111.0,
-            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), Kosher Salt, A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
+            "ingredients": "Water, Beef, Baking Potatoes, Green Peas (Green peas, salt.), Celery, Carrots, Guinness Beer (Ingredients: filtered water, malted barley, hops, corn and yeast.), Yellow Onion, Crimini Mushrooms, Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chili Sauce (Tomatoes, distilled vinegar, corn syrup, salt, dehydrated onions, spice,garlic powder, natural flavoring.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Wine Box Franzia Merlot, Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Horseradish (Horseradish, Distilled Vinegar, Water, Soybean oil, Salt, Artificial Flavor.), Rice Bran Oil, Garlic, Olde Tyme Beer Mustard (Ingredients, Mustard, vinegar, beer, sugar, salt, spices, herbs, calcium di-sodium EDTA (retains product freshness).), A-1 Sauce (Tomato puree (water, tomato paste), distilled vinegar, corn syrup, salt, raisin paste, crushed orange puree, spices and herbs, dried garlic and onion, caramel color, potassium sorbate (To preserve freshness) xanthan gum.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Sherry Vinegar (Sherry vinegar.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Kosher Salt, Black pepper (Black Pepper), Tabasco Sauce (Distilled vinegar, red pepper, salt), Rosemary, Herb Thyme 4 OZ, Thyme Leaf, Cayenne Pepper (Black Pepper), Bay Leaves.",
             "allergens": [
               "Wheat",
               "Fish"
@@ -397784,7 +397724,7 @@
               "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 787.0,
+              "sodium_mg": 736.0,
               "carbohydrates_g": 13.0,
               "fiber_g": 2.0,
               "added_sugar_g": 1.0,
@@ -399695,8 +399635,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -399718,9 +399658,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -400732,7 +400672,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.0,
+              "calcium_mg": 2.4,
               "iron_mg": 0.3
             }
           },
@@ -402737,7 +402677,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -402745,7 +402685,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -402894,8 +402834,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -411036,8 +410976,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -411059,9 +410999,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -412038,7 +411978,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -413739,7 +413679,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -413747,7 +413687,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -421793,8 +421733,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.1,
               "iron_mg": 0.8
             }
           },
@@ -421816,9 +421756,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -422292,7 +422232,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.3,
               "cholesterol_mg": 41.0,
-              "sodium_mg": 196.0,
+              "sodium_mg": 168.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -422794,7 +422734,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 4.0,
               "potassium_mg": 1.0,
-              "calcium_mg": 2.2,
+              "calcium_mg": 2.7,
               "iron_mg": 0.4
             }
           },
@@ -424469,7 +424409,7 @@
               "fat_g": 17.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 458.0,
+              "cholesterol_mg": 457.0,
               "sodium_mg": 216.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
@@ -424477,7 +424417,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 5.0,
-              "calcium_mg": 119.0,
+              "calcium_mg": 118.0,
               "iron_mg": 2.1
             }
           },
@@ -424594,8 +424534,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -424953,7 +424893,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
@@ -432609,8 +432549,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 2.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 0.9,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
               "iron_mg": 0.7
             }
           },
@@ -432632,9 +432572,9 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 161.0,
+              "sodium_mg": 144.0,
               "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 0.0,
@@ -434858,7 +434798,7 @@
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean oil, sesame oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper.",
             "allergens": [
               "Soy",
               "Sesame"
