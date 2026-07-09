@@ -177932,36 +177932,6 @@
         ],
         "Italian - Stone-Fired Pizza": [
           {
-            "name": "BBQ Chicken Pizza",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 245.0,
-            "ingredients": "Chicken Breast Chunk (Chicken nuggets containing up to 12% of a solution of water and sea salt.), Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Ketchup (Tomato Concentrate, Sugar, Distilled Vinegar, Salt, Onion Powder, Natural Flavors), Water, Oil Blend (80% soybean oil, 20% olive pomace oil.), Red Bermuda Onions, Tomato Sauce (Tomato concentrate (tomato paste, water), salt, spice, dextrose, garlic powder, onion powder and natural flavors.), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Molasses (Ingredients:, Molasses), Brown Sugar, Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Fresh Parsley, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Kosher Salt, Sugar Granulated, Garlic Granules, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Black Pepper (Black Pepper), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Onion Granules, Chili Powder (Ingredients:  Jalapeno Chili Powder), Celery Seed, Cinnamon Sticks, Cayenne Pepper (Black Pepper).",
-            "allergens": [
-              "Milk",
-              "Wheat"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 245.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 3.5,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 104.0,
-              "sodium_mg": 372.0,
-              "carbohydrates_g": 23.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 1.0,
-              "total_sugar_g": 5.0,
-              "protein_g": 15.0,
-              "potassium_mg": 206.0,
-              "calcium_mg": 168.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
             "name": "Cheese Pizza",
             "description": "",
             "serving_size": "1 slice",
@@ -177991,6 +177961,36 @@
               "potassium_mg": 78.0,
               "calcium_mg": 167.0,
               "iron_mg": 0.6
+            }
+          },
+          {
+            "name": "Prosciutto & Caramelized Onion Pizza",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 211.0,
+            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Yellow Onion, Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Provolone Cheese (Ingredients, Unsmoked Provolone Cheese (pasteurized Milk, Cheese Cultures, Salt, Enzymes). contains: Milk.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Proscuitto (Made in the USA cured with salt, brown sugar, sugar, spices, sodium nitrate, sodium nitrite.), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated, Kosher Salt, Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
+            "allergens": [
+              "Milk",
+              "Wheat"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 211.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 3.4,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 320.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 9.0,
+              "potassium_mg": 65.0,
+              "calcium_mg": 138.0,
+              "iron_mg": 0.5
             }
           }
         ],
