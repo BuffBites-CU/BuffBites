@@ -201773,37 +201773,6 @@
       "date": "2026-07-10",
       "day_of_week": "Friday",
       "categories": {
-        "Italian - Featured Entree": [
-          {
-            "name": "Italian White Bean Soup",
-            "description": "",
-            "serving_size": "6 fl oz",
-            "calories": 97.0,
-            "ingredients": "Great Northern Beans (Great Northern Beans, Water, Salt, Calcium Chloride.), Water, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Yellow Onion, Wine Box Franzia Chardonnay, Carrots, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Organic Baby Kale, Garlic Whole Peeled Case, Extra Virgin Olive Oil, Garlic Granules, Nutritional Yeast Seasoning (Dried Yeast, Niacin, Pyridoxine Hydrochloride (Vitamin B6), Thiamin Hydrochloride (Vitamin B1), Riboflavin (Vitamin B2), Folic Acid (Vitamin B9), Cyanocobalamin (Vitamin B12)), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Fennel Seed - Ground, Oregano Leaf, Ground Mustard, Organic Volcano Lemon Juice (Water, Organic Lemon Juice (30%), Citric Acid, Organic Lemon Oil.), Black pepper (Black Pepper), Crushed Red Pepper, Bay Leaves.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 97.0,
-              "fat_g": 0.7,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 325.0,
-              "carbohydrates_g": 17.0,
-              "fiber_g": 5.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 133.0,
-              "calcium_mg": 50.0,
-              "iron_mg": 1.3
-            }
-          }
-        ],
         "Italian - Build Your Own Pasta Bar": [
           {
             "name": "Alfredo Sauce",
@@ -202191,35 +202160,33 @@
         ],
         "Italian - Stone-Fired Pizza": [
           {
-            "name": "Cheese Pizza",
+            "name": "Salami Pizza with Serrano and Honey",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 240.0,
-            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Sugar Granulated, Kosher Salt, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
+            "calories": 288.0,
+            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Water, Oil Blend (80% soybean oil, 20% olive pomace oil.), Genoa Salami (Pork, beef, salt, contains 2% or less of dextrose, water, spices, lactic acid starter culture, sodium ascorbate, sodium nitrite, garlic powder, BHA, BHT, citric acid.), Serrano Peppers, Honey (Ingredients:, Honey), Sugar Granulated, Kosher Salt, Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat"
             ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
+            "dietary_labels": [],
             "is_vegan": false,
-            "is_vegetarian": true,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 240.0,
-              "fat_g": 12.0,
-              "saturated_fat_g": 3.6,
+              "calories": 288.0,
+              "fat_g": 14.0,
+              "saturated_fat_g": 4.8,
               "trans_fat_g": 0.2,
-              "cholesterol_mg": 14.0,
-              "sodium_mg": 303.0,
-              "carbohydrates_g": 24.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 469.0,
+              "carbohydrates_g": 27.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 10.0,
-              "potassium_mg": 78.0,
-              "calcium_mg": 167.0,
-              "iron_mg": 0.6
+              "total_sugar_g": 6.0,
+              "protein_g": 13.0,
+              "potassium_mg": 104.0,
+              "calcium_mg": 200.0,
+              "iron_mg": 0.9
             }
           },
           {
