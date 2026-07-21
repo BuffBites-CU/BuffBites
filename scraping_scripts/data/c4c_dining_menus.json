@@ -158247,6 +158247,36 @@
               "calcium_mg": 74.0,
               "iron_mg": 0.6
             }
+          },
+          {
+            "name": "Pepperoni Jalapeno Pizza",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 230.0,
+            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Pepper Jalapeno Case, Sugar Granulated, Kosher Salt, Garlic Granules, Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Extra Virgin Olive Oil, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
+            "allergens": [
+              "Milk",
+              "Wheat"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 230.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 4.1,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 18.0,
+              "sodium_mg": 360.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 10.0,
+              "potassium_mg": 96.0,
+              "calcium_mg": 142.0,
+              "iron_mg": 0.6
+            }
           }
         ],
         "Italian - Vegetables & Sides": [
@@ -160268,11 +160298,11 @@
         ],
         "Dessert Station - House-Made Desserts": [
           {
-            "name": "CU Alternative Flour Brownie",
+            "name": "Gluten Free Chocolate Chip Cookie",
             "description": "",
-            "serving_size": "1 brownie",
-            "calories": 199.0,
-            "ingredients": "Sugar Granulated, Chocolate Bitter Dark Couv 70% (cocoa mass, sugar, cocoa butter, soy lecithin, natural vanilla flavor), Heavy Whipping Cream (Heavy cream, carrageenan.), Whole Eggs (Cage Free), Unsalted Butter (Cream, (milk), natural flavor.), Flour GF Cup 4 Cup (Cornstarch, White Rice Flour, Brown Rice Flour, rBST-Free MILK Powder, Tapioca Flour, Potato Starch, Xanthan Gum.), Cocoa Powder (Cocoa powder processed with alkali), Kosher Salt.",
+            "serving_size": "2 oz cookie",
+            "calories": 251.0,
+            "ingredients": "Ingredients, Chocolate Chips (sugar, Chocolate Liquor, Cocoa Butter, Milk Fat, Soy Lecithin, Vanillin, Salt), Sugar, Rice & Tapioca Flour, Butter, Canola Oil, Eggs (pasteurized), Invert Sugar, Soy Flour, Nonfat Dry Milk, Corn Starch, Water, Molasses, Natural Flavor, Baking Soda, Vanilla Extract, Salt, Guar Gum., , Allergen Warning, Contains: Eggs, Milk, Soy, May Contain: NA, Free From: Fish, Peanuts, Tree Nuts, Wheat.",
             "allergens": [
               "Milk",
               "Egg",
@@ -160284,20 +160314,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 199.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 8.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 42.0,
-              "sodium_mg": 78.0,
-              "carbohydrates_g": 20.0,
-              "fiber_g": 2.0,
+              "calories": 251.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 20.0,
+              "sodium_mg": 264.0,
+              "carbohydrates_g": 34.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 14.0,
-              "protein_g": 2.0,
-              "potassium_mg": 108.0,
-              "calcium_mg": 30.0,
-              "iron_mg": 1.5
+              "total_sugar_g": 34.0,
+              "protein_g": 3.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 32.0,
+              "iron_mg": 1.2
             }
           },
           {
@@ -160402,39 +160432,6 @@
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Gluten Free Chocolate Chip Cookie",
-            "description": "",
-            "serving_size": "1.5 oz cookie",
-            "calories": 188.0,
-            "ingredients": "Ingredients, Chocolate Chips (sugar, Chocolate Liquor, Cocoa Butter, Milk Fat, Soy Lecithin, Vanillin, Salt), Sugar, Rice & Tapioca Flour, Butter, Canola Oil, Eggs (pasteurized), Invert Sugar, Soy Flour, Nonfat Dry Milk, Corn Starch, Water, Molasses, Natural Flavor, Baking Soda, Vanilla Extract, Salt, Guar Gum., , Allergen Warning, Contains: Eggs, Milk, Soy, May Contain: NA, Free From: Fish, Peanuts, Tree Nuts, Wheat.",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 188.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 4.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 15.0,
-              "sodium_mg": 198.0,
-              "carbohydrates_g": 26.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 26.0,
-              "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 0.9
             }
           },
           {
@@ -161665,36 +161662,34 @@
             }
           },
           {
-            "name": "Vegetable Spring Rolls",
+            "name": "Pork & Vegetable Egg Roll",
             "description": "",
-            "serving_size": "1 spring roll",
-            "calories": 75.0,
-            "ingredients": "Veggie Spring Rolls (FIlling: Cabbage, water, enriched flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), carrots, bamboo shoots, onion, mushrooms, contains 2 percent or less of modified food starch, sugar, salt, flavor (autolyzed yeast extract, salt, dextrose, natural flavor), cottonseed oil, soy secithin, spice, garlic powder, dextrose, citric acid.).",
+            "serving_size": "1 egg roll",
+            "calories": 180.0,
+            "ingredients": "Pork & Vegetable Egg Rolls (Ingredients, Cabbage, Enriched Bleached Flour (wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic, Acid), Pork, Water, Enriched Durum Flour (durum Flour, Niacin, Ferrous Sulfate, Thiamin Mononitrate, Riboflavin, Folic Acid), Onion, Textured Vegetable Protein (soy Flour, Zinc Oxide, Niacinamide, Ferrous Sulfate, Copper Gluconate, Vitamin A Palmitate, Calcium Pantothenate, Thiamine Mononitrate, Pyridoxine Hydrochloride, Riboflavin, Cyanocobalamin), Carrot, Celery, Contains Less Than 2% Of: Flavor Enhancer (yeast Extract, Natural Flavor), Salt, Spice, Sugar, Wheat Gluten, Dried Whole Eggs, Cottonseed Oil. prefried In Vegetable Oil (soybean And/or Cottonseed). Contains: Wheat, Soy, Egg., , Contains, Eggs, Soy, Wheat).",
             "allergens": [
+              "Egg",
               "Wheat",
-              "Soy",
-              "Sesame"
+              "Soy"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 75.0,
-              "fat_g": 3.4,
-              "saturated_fat_g": 0.8,
+              "calories": 180.0,
+              "fat_g": 9.0,
+              "saturated_fat_g": 2.5,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 184.0,
-              "carbohydrates_g": 10.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 1.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 8.0,
-              "iron_mg": 0.5
+              "cholesterol_mg": 10.0,
+              "sodium_mg": 480.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 7.0,
+              "potassium_mg": 230.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 1.5
             }
           }
         ],
@@ -161731,37 +161726,6 @@
             }
           },
           {
-            "name": "Cashew Whole Raw Unsalted",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 170.0,
-            "ingredients": "Ingredients, Raw Cashews.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 198.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 1.8
-            }
-          },
-          {
             "name": "Sliced Almonds",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -161788,37 +161752,6 @@
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
               "potassium_mg": 43.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Slivered Almonds",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 40.0,
-            "ingredients": "Ingredients, Almonds. Contains: Tree Nuts (almonds)..",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 40.0,
-              "fat_g": 3.5,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 44.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
@@ -172542,37 +172475,6 @@
             }
           },
           {
-            "name": "Cashew Whole Raw Unsalted",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 170.0,
-            "ingredients": "Ingredients, Raw Cashews.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 198.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 1.8
-            }
-          },
-          {
             "name": "Sweet & Sour Sauce",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -172628,37 +172530,6 @@
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
               "potassium_mg": 43.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Slivered Almonds",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 40.0,
-            "ingredients": "Ingredients, Almonds. Contains: Tree Nuts (almonds)..",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 40.0,
-              "fat_g": 3.5,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 44.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
@@ -183613,38 +183484,6 @@
             }
           },
           {
-            "name": "Kheer with Nuts (Indian Rice Pudding)",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 235.0,
-            "ingredients": "Whole Milk, Chef Basmati Rice Sella (White basmati rice.), Sugar Granulated, Cashew Whole Raw Unsalted (Ingredients, Raw Cashews), Raisins (Raisins.), Pistachio Nuts (Pistachios.), Sliced Almonds (Ingredients: Almonds), Coconut (Coconut, Sugar, Water, Propylene Glycol (sustains Freshness), Salt, Sodium Metabisulfite (preserves Whiteness).), Cinnamon Sticks, Ground Cardamon (Ingredients: Cardamom).",
-            "allergens": [
-              "Milk",
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 235.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 2.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 6.0,
-              "sodium_mg": 28.0,
-              "carbohydrates_g": 40.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 11.0,
-              "protein_g": 6.0,
-              "potassium_mg": 136.0,
-              "calcium_mg": 75.0,
-              "iron_mg": 0.7
-            }
-          },
-          {
             "name": "Saffron Rice",
             "description": "",
             "serving_size": "0.5 cups",
@@ -183707,37 +183546,6 @@
             }
           },
           {
-            "name": "Cashew Whole Raw Unsalted",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 170.0,
-            "ingredients": "Ingredients, Raw Cashews.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 198.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 1.8
-            }
-          },
-          {
             "name": "Sliced Almonds",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -183764,37 +183572,6 @@
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
               "potassium_mg": 43.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Slivered Almonds",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 40.0,
-            "ingredients": "Ingredients, Almonds. Contains: Tree Nuts (almonds)..",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 40.0,
-              "fat_g": 3.5,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 44.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
@@ -194429,37 +194206,6 @@
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Cashew Whole Raw Unsalted",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 170.0,
-            "ingredients": "Ingredients, Raw Cashews.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 198.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 1.8
             }
           },
           {
@@ -205101,37 +204847,6 @@
             }
           },
           {
-            "name": "Cashew Whole Raw Unsalted",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 170.0,
-            "ingredients": "Ingredients, Raw Cashews.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 198.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 1.8
-            }
-          },
-          {
             "name": "Sliced Almonds",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -205158,37 +204873,6 @@
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
               "potassium_mg": 43.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Slivered Almonds",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 40.0,
-            "ingredients": "Ingredients, Almonds. Contains: Tree Nuts (almonds)..",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 40.0,
-              "fat_g": 3.5,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 44.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
@@ -214887,37 +214571,6 @@
             }
           },
           {
-            "name": "Cashew Whole Raw Unsalted",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 170.0,
-            "ingredients": "Ingredients, Raw Cashews.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 198.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 1.8
-            }
-          },
-          {
             "name": "Sesame Dipping Sauce",
             "description": "",
             "serving_size": "0.25 cups",
@@ -215005,37 +214658,6 @@
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
               "potassium_mg": 43.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Slivered Almonds",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 40.0,
-            "ingredients": "Ingredients, Almonds. Contains: Tree Nuts (almonds)..",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 40.0,
-              "fat_g": 3.5,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 44.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
@@ -224836,37 +224458,6 @@
             }
           },
           {
-            "name": "Cashew Whole Raw Unsalted",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 170.0,
-            "ingredients": "Ingredients, Raw Cashews.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 198.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 1.8
-            }
-          },
-          {
             "name": "Sesame Dipping Sauce",
             "description": "",
             "serving_size": "0.25 cups",
@@ -224925,37 +224516,6 @@
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
               "potassium_mg": 43.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Slivered Almonds",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 40.0,
-            "ingredients": "Ingredients, Almonds. Contains: Tree Nuts (almonds)..",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 40.0,
-              "fat_g": 3.5,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 44.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
@@ -257255,38 +256815,6 @@
               "potassium_mg": 284.0,
               "calcium_mg": 35.0,
               "iron_mg": 7.5
-            }
-          },
-          {
-            "name": "Curried Chickpea and Cashew Salad",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 201.0,
-            "ingredients": "Garbanzo Beans (Prepared chick peas, water, salt, calcium chloride (firming agent), and disodium EDTA (promotes color restoration).), Raisins (Raisins.), Cashew Whole Raw Unsalted (Ingredients, Raw Cashews), Sesame Tahini (Sesame Seed.), Green Bell Peppers, Water, Syrup (Sugar, 25% Maple Syrup, Caramel Color.), Green Onion, Cilantro 30 CT, Red Bell Peppers, Yellow Bell Pepper, Organic Volcano Lemon Juice (Water, Organic Lemon Juice (30%), Citric Acid, Organic Lemon Oil.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Rice Bran Oil, Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Kosher Salt, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.).",
-            "allergens": [
-              "Tree Nuts",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 201.0,
-              "fat_g": 8.0,
-              "saturated_fat_g": 1.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 168.0,
-              "carbohydrates_g": 26.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 2.0,
-              "total_sugar_g": 11.0,
-              "protein_g": 7.0,
-              "potassium_mg": 254.0,
-              "calcium_mg": 42.0,
-              "iron_mg": 2.0
             }
           }
         ],
