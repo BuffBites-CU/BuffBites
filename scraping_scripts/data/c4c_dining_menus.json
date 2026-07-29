@@ -168071,36 +168071,6 @@
         ],
         "Italian - Stone-Fired Pizza": [
           {
-            "name": "Prosciutto & Caramelized Onion Pizza",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 211.0,
-            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Yellow Onion, Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Provolone Cheese (Ingredients, Unsmoked Provolone Cheese (pasteurized Milk, Cheese Cultures, Salt, Enzymes). contains: Milk.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Proscuitto (Made in the USA cured with salt, brown sugar, sugar, spices, sodium nitrate, sodium nitrite.), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated, Kosher Salt, Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
-            "allergens": [
-              "Milk",
-              "Wheat"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 211.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 3.4,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 15.0,
-              "sodium_mg": 320.0,
-              "carbohydrates_g": 20.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 9.0,
-              "potassium_mg": 65.0,
-              "calcium_mg": 138.0,
-              "iron_mg": 0.5
-            }
-          },
-          {
             "name": "Margherita Pizza",
             "description": "",
             "serving_size": "1 slice",
@@ -170180,11 +170150,11 @@
         ],
         "Dessert Station - House-Made Desserts": [
           {
-            "name": "Snickerdoodle Cookie Bar",
+            "name": "Blueberry Kuchen Bar",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 156.0,
-            "ingredients": "All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated, Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Whole Eggs (Cage Free), Unsalted Butter (Cream, (milk), natural flavor.), Dark Brown Sugar, Grapeseed Oil Cold Pressed 5 L (100% Cold Pressed Grapeseed Oil.), Granulated Beet Sugar, Corn Starch (Corn starch.), Ground Cinnamon, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Kosher Salt, Baking Soda (Ingredients:, Sodium Bicarbonate).",
+            "calories": 170.0,
+            "ingredients": "Blueberries (Blueberries), Sugar Granulated, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Unsalted Butter (Cream, (milk), natural flavor.), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Whole Eggs (Cage Free), Whole Milk, Lemon Zest (Chopped lemon peels, cane sugar, natural lemon flavor.), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Kosher Salt, Ground Nutmeg.",
             "allergens": [
               "Milk",
               "Egg",
@@ -170196,20 +170166,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 156.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 2.6,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 31.0,
-              "sodium_mg": 129.0,
-              "carbohydrates_g": 22.0,
-              "fiber_g": 0.0,
+              "calories": 170.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 2.9,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 21.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 28.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 13.0,
+              "total_sugar_g": 18.0,
               "protein_g": 2.0,
-              "potassium_mg": 40.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 0.7
+              "potassium_mg": 22.0,
+              "calcium_mg": 8.8,
+              "iron_mg": 0.6
             }
           },
           {
@@ -171948,6 +171918,38 @@
         ],
         "Smoke n' Grill - Lunch and Dinner Specials": [
           {
+            "name": "Tahini Mushroom & Quinoa Medley",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 346.0,
+            "ingredients": "Mushroom Mix Case, Roasted Chick Peas with Sea Salt (Ingredients: Chickpeas, Expeller Pressed High Oleic Sunflower or Safflower Oil, Sea Salt.), Water, Organic Baby Kale, Sesame Tahini (Sesame Seed.), Smart Balance® Buttery Spread (Oil blend (canola, palm, olive, and soybean oils), water, less than 2% of: salt, pea protein, natgural and artificial flavors, sunflower lecithin, lactic acid, vitamin A palmitate, beta carotene (color), vitamin D, monoglycerides of vegetable fatty acids (emulsifier), potassium sorbate, calcium disodium EDTA (to preserve freshness).), Quinoa, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Extra Virgin Olive Oil, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Garlic Whole Peeled Case, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Onion Granules, Ground Mustard, Kosher Salt, White Pepper, Rosemary, Thyme.",
+            "allergens": [
+              "Soy",
+              "Sesame"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 346.0,
+              "fat_g": 23.0,
+              "saturated_fat_g": 3.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 471.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 10.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 13.0,
+              "potassium_mg": 475.0,
+              "calcium_mg": 81.0,
+              "iron_mg": 2.7
+            }
+          },
+          {
             "name": "Chicken Nuggets",
             "description": "",
             "serving_size": "4 oz",
@@ -171974,37 +171976,6 @@
               "potassium_mg": 210.0,
               "calcium_mg": 10.0,
               "iron_mg": 0.7
-            }
-          },
-          {
-            "name": "Garlic Butter Mushrooms",
-            "description": "",
-            "serving_size": "3 oz",
-            "calories": 178.0,
-            "ingredients": "Crimini Mushrooms, Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Rice Bran Oil, Onion Granules, Ground Mustard, Kosher Salt, White Pepper, Rosemary, Thyme.",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 178.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 10.0,
-              "trans_fat_g": 0.7,
-              "cholesterol_mg": 43.0,
-              "sodium_mg": 110.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
-              "potassium_mg": 289.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 0.4
             }
           }
         ],
@@ -172155,6 +172126,35 @@
           }
         ],
         "Smoke n' Grill - Vegetables & Sides": [
+          {
+            "name": "Red Hot Cauliflower",
+            "description": "",
+            "serving_size": "4 oz serving",
+            "calories": 34.0,
+            "ingredients": "Cauliflower Florets, Seasoning Hot Red Pepper Simply Organic (Cayenne Pepper), Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 34.0,
+              "fat_g": 0.6,
+              "saturated_fat_g": 0.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 211.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 2.0,
+              "potassium_mg": 369.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.6
+            }
+          },
           {
             "name": "Tater Tots",
             "description": "",
@@ -172390,35 +172390,6 @@
               "potassium_mg": 354193.0,
               "calcium_mg": 35.0,
               "iron_mg": 3.8
-            }
-          },
-          {
-            "name": "Steamed Cauliflower",
-            "description": "",
-            "serving_size": "4 oz serving",
-            "calories": 28.0,
-            "ingredients": "Cauliflower Florets.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 28.0,
-              "fat_g": 0.3,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 34.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 2.0,
-              "potassium_mg": 339.0,
-              "calcium_mg": 25.0,
-              "iron_mg": 0.5
             }
           },
           {
@@ -177238,37 +177209,6 @@
             }
           },
           {
-            "name": "Broccoli Cheddar Soup",
-            "description": "",
-            "serving_size": "6 fl oz",
-            "calories": 273.0,
-            "ingredients": "Water, Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Whole Milk (Milk, vitamin d3.), Baking Potatoes, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Broccoli Florets, Yellow Onion, Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Rice Bran Oil, Kosher Salt, White Pepper.",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 273.0,
-              "fat_g": 20.0,
-              "saturated_fat_g": 11.0,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 37.0,
-              "sodium_mg": 456.0,
-              "carbohydrates_g": 15.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 6.0,
-              "protein_g": 11.0,
-              "potassium_mg": 180.0,
-              "calcium_mg": 334.0,
-              "iron_mg": 0.7
-            }
-          },
-          {
             "name": "Fresh Creamy Tomato Soup",
             "description": "",
             "serving_size": "6 fl oz",
@@ -181313,6 +181253,40 @@
         ],
         "Dessert Station - House-Made Desserts": [
           {
+            "name": "Pumpkin Crunch Cake w/Pecans",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 351.0,
+            "ingredients": "All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Pumpkin (Prepared pumpkin.), Sugar Granulated, Pecans (Pecans contains: Tree Nut (pecan)), Brown Sugar, Cane Sugar, Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Plain Nonfat Greek Yogurt (Cultured Grade A Non Fat Milk, Live & Active Yogurt Cultures S. Thermophilus And L. Bulgaricus), Paste Vanilla Bean Madagascar 100% (Sugar, water, vanilla bean extractives, exhausted vanilla bean seeds, xanthum gum.), Organic Spice (Cinnamon, ginger, nutmeg, cloves.), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt.",
+            "allergens": [
+              "Milk",
+              "Egg",
+              "Wheat",
+              "Tree Nuts"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 351.0,
+              "fat_g": 15.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.3,
+              "cholesterol_mg": 47.0,
+              "sodium_mg": 192.0,
+              "carbohydrates_g": 50.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 33.0,
+              "protein_g": 5.0,
+              "potassium_mg": 90.0,
+              "calcium_mg": 35.0,
+              "iron_mg": 1.4
+            }
+          },
+          {
             "name": "Boulder Almond Cookie",
             "description": "",
             "serving_size": "1 cookie",
@@ -181408,39 +181382,6 @@
               "potassium_mg": 0.0,
               "calcium_mg": 35.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Lemon Brownie",
-            "description": "",
-            "serving_size": "1 brownie",
-            "calories": 162.0,
-            "ingredients": "Sugar Granulated, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Unsalted Butter (Cream, (milk), natural flavor.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Lemon Zest (Chopped lemon peels, cane sugar, natural lemon flavor.), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Kosher Salt, Donut Sugar New Snow 5 LB (dextrose, cornstarch, palm oil, titanium oxide, hydrogenated cottonseed oil, artificial flavor.).",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 162.0,
-              "fat_g": 8.0,
-              "saturated_fat_g": 4.8,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 45.0,
-              "sodium_mg": 67.0,
-              "carbohydrates_g": 20.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 1.0,
-              "total_sugar_g": 13.0,
-              "protein_g": 2.0,
-              "potassium_mg": 15.0,
-              "calcium_mg": 8.0,
-              "iron_mg": 0.6
             }
           },
           {
