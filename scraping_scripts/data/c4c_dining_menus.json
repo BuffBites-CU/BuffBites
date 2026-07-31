@@ -192189,37 +192189,6 @@
         ],
         "Dessert Station - House-Made Desserts": [
           {
-            "name": "Alternative Flour Carrot Pecan Cake",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 34.0,
-            "ingredients": "Gluten-Free Oat Flour, Brown Sugar, Carrots, Oil Coconut Organic, Pecans (Pecans contains: Tree Nut (pecan)), Water, Applesauce (Apples, Sugar, Water. Ascorbic Acid Added To Maintain Color.), Cane Sugar, Syrup Maple Pure (Pure Maple Syrup.), Flaxseed Ground Premium OG, Shredded Coconut, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate), Ground Cinnamon, Paste Vanilla Bean Madagascar 100% (Sugar, water, vanilla bean extractives, exhausted vanilla bean seeds, xanthum gum.), Kosher Salt, Spice Ginger Ground (Ginger, sulfur dioxide (added to retain color).), Ground Nutmeg, Ground Clove.",
-            "allergens": [
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 34.0,
-              "fat_g": 2.2,
-              "saturated_fat_g": 1.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 20.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 0.0,
-              "potassium_mg": 19.0,
-              "calcium_mg": 5.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
             "name": "Boulder Almond Cookie",
             "description": "",
             "serving_size": "1 cookie",
@@ -192418,6 +192387,40 @@
               "potassium_mg": 0.0,
               "calcium_mg": 20.0,
               "iron_mg": 1.1
+            }
+          },
+          {
+            "name": "Chocolate Funfetti Cake",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 161.0,
+            "ingredients": "Sugar Granulated, Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Whole Eggs (Cage Free), Unsalted Butter (Cream, (milk), natural flavor.), Cocoa Powder (Cocoa powder processed with alkali), Instant Espresso (Ingredients: Blend of Imported Espresso Coffees), Chocolate Chips (Sugar, chocolate liquor, cocoa butter, soya lecithin, vanilla extract.), Heavy Whipping Cream (Heavy cream, carrageenan.), Rainbow Sprinkles (Sugar, Corn Starch, Palm Oil & Palm Kernel Oil, Dextrin, Soy Lecithin, Confectioner’s Glaze, Carnauba Wax, Fd&c Yellow #5 Lake, Fd&c Yellow #6 Lake, Fd&c Blue #1 Lake, Fd&c Red#40 Lake, Fd&c Red#3, Fd&c Blue#1 & Fd&c Red#40.), Baking Soda (Ingredients:, Sodium Bicarbonate), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
+            "allergens": [
+              "Milk",
+              "Egg",
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 161.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.4,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 31.0,
+              "sodium_mg": 140.0,
+              "carbohydrates_g": 26.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 17.0,
+              "protein_g": 3.0,
+              "potassium_mg": 146.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 1.0
             }
           }
         ],
@@ -193531,40 +193534,6 @@
             }
           },
           {
-            "name": "Vegetable Egg Rolls",
-            "description": "",
-            "serving_size": "1 egg roll",
-            "calories": 74.0,
-            "ingredients": "Vegetable Egg Roll (Ingredients: Cabbage, Enriched Bleached Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, Carrot, Celery, Enriched Durum Flour (Durum Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Onion, Parboiled Long Grain Rice, Broccoli, Soybean Oil, Contains Less than 2% of Dehydrated Soy Sauce (Soy Sauce (Wheat, Soybeans, Salt), Maltodextrin, and Salt). Vermicelli (Green Mung Beans, Water), Soy Sauce (Water, Soybeans, Salt, and Wheat Flour), Spice, Garlic Powder, Flavor Enhancer (Autolyzed Yeast Extract, Natural Flavor), Modified Corn Starch, Shiitake Mushroom Powder, Vital Wheat Gluten, Dried Whole Egg, Sesame Seed Oil, Sugar, Salt, Cottonseed Oil.  CONTAINS: WHEAT, SOY, EGG).",
-            "allergens": [
-              "Egg",
-              "Wheat",
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 74.0,
-              "fat_g": 2.0,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 2.0,
-              "sodium_mg": 268.0,
-              "carbohydrates_g": 11.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
-              "potassium_mg": 60.0,
-              "calcium_mg": 10.0,
-              "iron_mg": 0.7
-            }
-          },
-          {
             "name": "White Rice",
             "description": "",
             "serving_size": "0.5 cups",
@@ -193954,6 +193923,37 @@
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Wonton Strips",
+            "description": "",
+            "serving_size": "1 2 tablespoon",
+            "calories": 16.0,
+            "ingredients": "Wonton Skin Frozen (INGREDIENTS: ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID AND ENZYMES), WATER, CORNSTARCH, SALT, PRESERVED WITH LESS THAN 1/10TH OF 1% SODIUM BENZOATE AND 1/10TH OF 1% POTASSIUM SORBATE. , CONTAINS: WHEAT).",
+            "allergens": [
+              "Wheat"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 16.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 32.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -203053,39 +203053,6 @@
             }
           },
           {
-            "name": "Persian Love Cake w/Almonds & Pistachios",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 224.0,
-            "ingredients": "Sugar Granulated, Flour GF Cup 4 Cup (Cornstarch, White Rice Flour, Brown Rice Flour, rBST-Free MILK Powder, Tapioca Flour, Potato Starch, Xanthan Gum.), Powdered Sugar (Cane Sugar, Corn Starch), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Almond Flour (Blanched almonds.), Soybean Oil (Ingredients, Soybean Oil), Water, Nut Pistachio Raw Shelled (Pistachios.), Unsalted Butter (Cream, (milk), natural flavor.), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Orange Zest (Chopped Orange Peels, cane sugar, natural orange flavor.), Candy Ginger Chews Nat (Ingredients: Organic Ginger, Organic cane sugar), Rose Flower Water (Bakery) (Ingredients: Rose Water), Spice Cardamom Ground Organic (Ingredients: Cardamom), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt, Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Ground Cinnamon, Almond Extract Organic (Purified water, organic alcohol, glycerin, natural bitter almond oil.), Freeze Dried Rose Petals (Ingredients:, Rose petals.).",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Tree Nuts"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 224.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 1.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 33.0,
-              "sodium_mg": 272.0,
-              "carbohydrates_g": 38.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 11.0,
-              "total_sugar_g": 27.0,
-              "protein_g": 3.0,
-              "potassium_mg": 52.0,
-              "calcium_mg": 36.0,
-              "iron_mg": 0.5
-            }
-          },
-          {
             "name": "Gluten Free Chewy Marshmallow Bar",
             "description": "",
             "serving_size": "2.1 oz bar",
@@ -203147,6 +203114,39 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 20.0,
+              "iron_mg": 0.7
+            }
+          },
+          {
+            "name": "Limoncello Olive Oil Cake",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 246.0,
+            "ingredients": "Sugar Granulated, Whole Milk, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Olive Oil (Ingredients, FIRST COLD PRESSED EXTRA VIRGIN ORGANIC OLIVE OIL.), Whole Eggs (Cage Free), Liqueur Caravella Limoncello, Lemon Juice (Water, Organic Lemon Juice (30%), Citric Acid, Organic Lemon Oil.), Sweet Lemon Zest Puree (Ingredients:  Lemons, Sugar), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate).",
+            "allergens": [
+              "Milk",
+              "Egg",
+              "Wheat"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 246.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 2.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 29.0,
+              "sodium_mg": 110.0,
+              "carbohydrates_g": 31.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 21.0,
+              "protein_g": 3.0,
+              "potassium_mg": 43.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.7
             }
           }
