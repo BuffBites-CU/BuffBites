@@ -3653,7 +3653,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 251.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -3717,7 +3717,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -6050,8 +6050,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -10186,7 +10186,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 225.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -10217,7 +10217,7 @@
             "description": "",
             "serving_size": "12.2 oz pizza",
             "calories": 799.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -10249,7 +10249,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 251.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -10282,7 +10282,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -12307,8 +12307,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -16457,7 +16457,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -18662,8 +18662,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -22586,7 +22586,7 @@
             "description": "",
             "serving_size": "12.2 oz pizza",
             "calories": 799.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -22618,7 +22618,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 251.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -22651,7 +22651,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -24618,8 +24618,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -28456,7 +28456,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 225.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -28552,7 +28552,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -30910,8 +30910,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -35016,7 +35016,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 251.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -35081,7 +35081,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -37111,8 +37111,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -41181,7 +41181,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 225.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -41212,7 +41212,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 251.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -41277,7 +41277,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -43576,8 +43576,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -47633,7 +47633,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 251.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -47666,7 +47666,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -50030,8 +50030,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -53955,7 +53955,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 225.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -53986,7 +53986,7 @@
             "description": "",
             "serving_size": "12.2 oz pizza",
             "calories": 799.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -54018,7 +54018,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 251.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Water, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -54051,7 +54051,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -56019,8 +56019,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
@@ -60192,7 +60192,7 @@
             "description": "",
             "serving_size": "1 personal pizza",
             "calories": 867.0,
-            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Gluten Friendly Cauliflower Pizza Crust (Cauliflower puree, low moisture mozzarella cheese (pasteurized milk, cheese cultures, salt, enzymes), rice flour, tapioca starch, water, egg white, modified rice starch, yeast, sugar, salt, cultured brown rice, garlic powder, spices, xanthan gum.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Egg"
@@ -62460,8 +62460,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 98.0,
-              "calcium_mg": 18.1,
+              "potassium_mg": 99.0,
+              "calcium_mg": 18.0,
               "iron_mg": 3.8
             }
           },
