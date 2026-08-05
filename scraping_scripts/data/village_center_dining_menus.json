@@ -3247,10 +3247,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -3278,8 +3278,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -4393,12 +4393,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -6227,7 +6227,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -6250,11 +6250,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -6262,7 +6262,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -6281,7 +6281,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -6379,7 +6379,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -6403,14 +6403,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -6469,8 +6469,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -6738,7 +6738,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -7898,7 +7898,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -7973,10 +7973,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -8123,8 +8123,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -8177,12 +8177,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -9871,10 +9871,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -9902,8 +9902,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -10686,12 +10686,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -12542,7 +12542,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -12565,11 +12565,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -12577,7 +12577,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -12596,7 +12596,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -12667,7 +12667,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -12691,14 +12691,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -12757,8 +12757,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -12997,7 +12997,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -13278,7 +13278,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 3.0,
-            "ingredients": "Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Cauliflower Florets, Celery, Cabbage Nappa, Lemons, Pearl Onions (Pearl onions.), Juice Tomato 46 Oz (Tomato juice from concentrate (water, tomato concentrate), salt, vitamin c (ascorbic acid).), Carrots, Green Bell Peppers, Sugar Granulated, Red Bell Peppers, Yellow Bell Pepper, Tarragon, Italian Flat Leaf Parsley, Dill, Mint, Fresh Basil, Kosher Salt, Garlic Whole Peeled Case, Black Pepper (Black Pepper), Ginger - Ground (Ginger, sulfur dioxide (added to retain color).), Coriander - Whole, Ground Cumin Seed.",
+            "ingredients": "Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Cauliflower Florets, Celery, Cabbage Nappa, Lemons, Pearl Onions (Pearl onions.), Juice Tomato 46 Oz (Tomato juice from concentrate (water, tomato concentrate), salt, vitamin c (ascorbic acid).), Carrots, Green Bell Peppers, Sugar Granulated (Sugar), Red Bell Peppers, Yellow Bell Pepper, Tarragon, Italian Flat Leaf Parsley, Dill, Mint, Fresh Basil, Kosher Salt, Garlic Whole Peeled Case, Black Pepper (Black Pepper), Ginger - Ground (Ginger, sulfur dioxide (added to retain color).), Coriander - Whole, Ground Cumin Seed.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -14221,7 +14221,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -14296,10 +14296,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -14415,8 +14415,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -14469,12 +14469,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -15101,7 +15101,7 @@
               "saturated_fat_g": 7.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 54.0,
-              "sodium_mg": 1042.0,
+              "sodium_mg": 1043.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -15693,7 +15693,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 282.0,
-            "ingredients": "Cabbage Green Carton, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Shredded Carrots, Sugar Granulated, Celery Seed.",
+            "ingredients": "Cabbage Green Carton, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Shredded Carrots, Sugar Granulated (Sugar), Celery Seed.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -16060,10 +16060,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -16091,8 +16091,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -17053,12 +17053,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -18851,7 +18851,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -18874,11 +18874,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -18886,7 +18886,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -18905,7 +18905,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -18976,7 +18976,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -19000,14 +19000,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -19127,8 +19127,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -19306,7 +19306,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -20440,7 +20440,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -20604,10 +20604,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -20664,8 +20664,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -20689,12 +20689,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -21889,7 +21889,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 282.0,
-            "ingredients": "Cabbage Green Carton, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Shredded Carrots, Sugar Granulated, Celery Seed.",
+            "ingredients": "Cabbage Green Carton, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Shredded Carrots, Sugar Granulated (Sugar), Celery Seed.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -22316,8 +22316,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -22343,10 +22343,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -23040,12 +23040,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -24807,7 +24807,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -24830,11 +24830,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -24842,7 +24842,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -24861,7 +24861,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -24932,7 +24932,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -24956,14 +24956,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -25112,8 +25112,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -25291,7 +25291,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -26359,7 +26359,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -26525,10 +26525,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -26644,8 +26644,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -26698,12 +26698,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -28279,8 +28279,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -28335,10 +28335,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -29301,12 +29301,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -31099,7 +31099,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -31122,11 +31122,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -31134,7 +31134,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -31153,7 +31153,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -31224,7 +31224,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -31248,14 +31248,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -31314,8 +31314,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -31583,7 +31583,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -32770,7 +32770,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -32876,10 +32876,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -32995,8 +32995,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -33049,12 +33049,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -34746,8 +34746,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -34773,10 +34773,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -35470,12 +35470,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -37300,7 +37300,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -37323,11 +37323,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -37335,7 +37335,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -37354,7 +37354,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -37425,7 +37425,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -37449,14 +37449,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -37605,8 +37605,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -37784,7 +37784,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -37909,12 +37909,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 28.0,
-              "calcium_mg": 67.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 67.2,
               "iron_mg": 1.2
             }
           },
@@ -38819,7 +38819,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -38983,10 +38983,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -39102,8 +39102,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -39156,12 +39156,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -40579,10 +40579,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -40610,8 +40610,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -41904,12 +41904,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -43738,7 +43738,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -43761,11 +43761,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -43773,7 +43773,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -43792,7 +43792,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -43890,7 +43890,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -43914,14 +43914,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -43980,8 +43980,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -44220,7 +44220,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -44596,9 +44596,9 @@
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 38.0,
-              "protein_g": 5.0,
+              "protein_g": 4.0,
               "potassium_mg": 131.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.4,
               "iron_mg": 2.6
             }
           }
@@ -45308,7 +45308,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -45354,10 +45354,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -45622,8 +45622,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -45676,12 +45676,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -47303,8 +47303,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -47450,10 +47450,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           }
@@ -48358,12 +48358,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -50219,7 +50219,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -50242,11 +50242,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -50254,7 +50254,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -50273,7 +50273,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -50344,7 +50344,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -50368,14 +50368,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -50434,8 +50434,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -50703,7 +50703,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -51864,7 +51864,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -51970,10 +51970,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -52089,8 +52089,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -52143,12 +52143,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -53625,10 +53625,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -53714,8 +53714,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -54506,12 +54506,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -56340,7 +56340,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -56363,11 +56363,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -56375,7 +56375,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -56394,7 +56394,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -56492,7 +56492,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -56516,14 +56516,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -56582,8 +56582,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -56880,7 +56880,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -57108,7 +57108,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 3.0,
-            "ingredients": "Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Cauliflower Florets, Celery, Cabbage Nappa, Lemons, Pearl Onions (Pearl onions.), Juice Tomato 46 Oz (Tomato juice from concentrate (water, tomato concentrate), salt, vitamin c (ascorbic acid).), Carrots, Green Bell Peppers, Sugar Granulated, Red Bell Peppers, Yellow Bell Pepper, Tarragon, Italian Flat Leaf Parsley, Dill, Mint, Fresh Basil, Kosher Salt, Garlic Whole Peeled Case, Black Pepper (Black Pepper), Ginger - Ground (Ginger, sulfur dioxide (added to retain color).), Coriander - Whole, Ground Cumin Seed.",
+            "ingredients": "Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Cauliflower Florets, Celery, Cabbage Nappa, Lemons, Pearl Onions (Pearl onions.), Juice Tomato 46 Oz (Tomato juice from concentrate (water, tomato concentrate), salt, vitamin c (ascorbic acid).), Carrots, Green Bell Peppers, Sugar Granulated (Sugar), Red Bell Peppers, Yellow Bell Pepper, Tarragon, Italian Flat Leaf Parsley, Dill, Mint, Fresh Basil, Kosher Salt, Garlic Whole Peeled Case, Black Pepper (Black Pepper), Ginger - Ground (Ginger, sulfur dioxide (added to retain color).), Coriander - Whole, Ground Cumin Seed.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -58022,7 +58022,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -58097,10 +58097,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -58216,8 +58216,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -58270,12 +58270,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -58875,7 +58875,7 @@
               "saturated_fat_g": 7.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 54.0,
-              "sodium_mg": 1042.0,
+              "sodium_mg": 1043.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -59782,8 +59782,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -59838,10 +59838,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -60773,12 +60773,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -62634,7 +62634,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -62657,11 +62657,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -62669,7 +62669,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -62688,7 +62688,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -62759,7 +62759,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -62783,14 +62783,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -62849,8 +62849,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -63118,7 +63118,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -64248,7 +64248,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -64412,10 +64412,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -64531,8 +64531,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -64560,8 +64560,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -64585,12 +64585,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -65731,7 +65731,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 282.0,
-            "ingredients": "Cabbage Green Carton, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Shredded Carrots, Sugar Granulated, Celery Seed.",
+            "ingredients": "Cabbage Green Carton, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Shredded Carrots, Sugar Granulated (Sugar), Celery Seed.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -66158,8 +66158,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -66214,10 +66214,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -66975,12 +66975,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -68869,7 +68869,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -68892,11 +68892,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -68904,7 +68904,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -68923,7 +68923,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -69021,7 +69021,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -69045,14 +69045,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -69201,8 +69201,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -69293,7 +69293,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -70349,7 +70349,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -70515,10 +70515,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -70634,8 +70634,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -70663,8 +70663,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -70688,12 +70688,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -72271,8 +72271,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -72327,10 +72327,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -73293,12 +73293,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -75185,7 +75185,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -75212,7 +75212,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 8.0,
-              "sodium_mg": 165.0,
+              "sodium_mg": 166.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -75235,11 +75235,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -75247,7 +75247,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -75266,7 +75266,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -75337,7 +75337,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -75361,14 +75361,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -75427,8 +75427,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -75725,7 +75725,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -76821,7 +76821,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -76985,10 +76985,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -77104,8 +77104,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -77129,12 +77129,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -78765,8 +78765,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -78850,10 +78850,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -79605,12 +79605,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -81439,7 +81439,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -81466,7 +81466,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 8.0,
-              "sodium_mg": 165.0,
+              "sodium_mg": 166.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -81489,11 +81489,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -81501,7 +81501,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -81520,7 +81520,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -81591,7 +81591,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -81615,14 +81615,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -81742,8 +81742,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -81921,7 +81921,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -82090,7 +82090,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 282.0,
-            "ingredients": "Cabbage Green Carton, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Shredded Carrots, Sugar Granulated, Celery Seed.",
+            "ingredients": "Cabbage Green Carton, Vegan Mayonnaise (Soybean Oil, Water, Organic Distilled Vinegar, Contains Less Than 2% Of Salt, Food Starch-modified, Cane Sugar, Spice, Natural Flavor, Lemon Juice Concentrate, Calcium Disodium Edta Added To Protect Flavor, Oleoresin Paprika), Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Shredded Carrots, Sugar Granulated (Sugar), Celery Seed.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -82170,12 +82170,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 28.0,
-              "calcium_mg": 67.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 67.2,
               "iron_mg": 1.2
             }
           },
@@ -83080,7 +83080,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -83244,10 +83244,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -83331,8 +83331,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -83385,12 +83385,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -84809,10 +84809,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           }
@@ -85105,8 +85105,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -86223,12 +86223,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -88026,7 +88026,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -88053,7 +88053,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 8.0,
-              "sodium_mg": 165.0,
+              "sodium_mg": 166.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -88076,11 +88076,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -88088,7 +88088,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -88107,7 +88107,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -88178,7 +88178,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -88202,14 +88202,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -88358,8 +88358,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -88537,7 +88537,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -88852,9 +88852,9 @@
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 38.0,
-              "protein_g": 5.0,
+              "protein_g": 4.0,
               "potassium_mg": 131.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.4,
               "iron_mg": 2.6
             }
           },
@@ -89597,7 +89597,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -89792,10 +89792,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -89911,8 +89911,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -89965,12 +89965,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -91536,8 +91536,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -91683,10 +91683,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           }
@@ -92591,12 +92591,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -94425,7 +94425,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -94452,7 +94452,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 8.0,
-              "sodium_mg": 165.0,
+              "sodium_mg": 166.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -94475,11 +94475,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -94487,7 +94487,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -94506,7 +94506,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -94577,7 +94577,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -94601,14 +94601,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -94667,8 +94667,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -94936,7 +94936,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -96069,7 +96069,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -96204,10 +96204,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -96323,8 +96323,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -96348,12 +96348,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -98014,8 +98014,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -98070,10 +98070,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -98864,12 +98864,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -100698,7 +100698,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -100725,7 +100725,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 8.0,
-              "sodium_mg": 165.0,
+              "sodium_mg": 166.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -100748,11 +100748,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -100760,7 +100760,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -100779,7 +100779,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -100850,7 +100850,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -100874,14 +100874,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -101030,8 +101030,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -101209,7 +101209,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -102290,7 +102290,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -102365,10 +102365,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -102484,8 +102484,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -102509,12 +102509,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -102542,8 +102542,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -103232,7 +103232,7 @@
               "saturated_fat_g": 7.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 54.0,
-              "sodium_mg": 1042.0,
+              "sodium_mg": 1043.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -104171,10 +104171,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -104202,8 +104202,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -105106,12 +105106,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
@@ -106940,7 +106940,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 160.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -106967,7 +106967,7 @@
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 8.0,
-              "sodium_mg": 165.0,
+              "sodium_mg": 166.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -106990,11 +106990,11 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 43.0,
-              "fat_g": 3.6,
+              "fat_g": 3.7,
               "saturated_fat_g": 1.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 11.0,
-              "sodium_mg": 190.0,
+              "sodium_mg": 192.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -107002,7 +107002,7 @@
               "protein_g": 2.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.2
+              "iron_mg": 0.1
             }
           },
           {
@@ -107021,7 +107021,7 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 19.0,
-              "sodium_mg": 253.0,
+              "sodium_mg": 256.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -107092,7 +107092,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 283.0,
+              "calcium_mg": 284.0,
               "iron_mg": 0.0
             }
           },
@@ -107116,14 +107116,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -107182,8 +107182,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -107451,7 +107451,7 @@
               "total_sugar_g": 2.0,
               "protein_g": 8.0,
               "potassium_mg": 233.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 22.3,
               "iron_mg": 0.6
             }
           },
@@ -108581,7 +108581,7 @@
             "description": "",
             "serving_size": "1 Tbsp",
             "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated.",
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -108745,10 +108745,10 @@
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
+              "potassium_mg": 31.0,
+              "calcium_mg": 9.9,
               "iron_mg": 0.2
             }
           },
@@ -108864,8 +108864,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 34.0,
-              "calcium_mg": 1.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 1.7,
               "iron_mg": 0.0
             }
           },
@@ -108893,8 +108893,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 6.0,
+              "calcium_mg": 1.9,
               "iron_mg": 0.0
             }
           },
@@ -108918,12 +108918,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 1.0,
               "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 0.0,
-              "potassium_mg": 41.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 6.3,
               "iron_mg": 0.1
             }
           },
