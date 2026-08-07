@@ -451,8 +451,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -463,19 +463,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           }
@@ -1681,8 +1681,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -1693,27 +1693,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -1724,20 +1724,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -1774,11 +1774,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -1788,19 +1788,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
@@ -2551,8 +2551,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -2563,19 +2563,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           }
@@ -3812,8 +3812,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -3824,27 +3824,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -3855,20 +3855,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -3905,11 +3905,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -3919,19 +3919,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
@@ -4650,8 +4650,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -4662,19 +4662,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           }
@@ -5880,8 +5880,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -5892,27 +5892,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -5923,20 +5923,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -5973,11 +5973,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -5987,19 +5987,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
@@ -6661,8 +6661,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -6673,19 +6673,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           },
@@ -7947,8 +7947,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -7959,27 +7959,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -7990,20 +7990,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -8071,11 +8071,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -8085,19 +8085,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
@@ -8736,8 +8736,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 oz",
-            "calories": 111.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -8748,19 +8748,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 111.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 5.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 30.0,
-              "sodium_mg": 182.0,
-              "carbohydrates_g": 1.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 6.0,
-              "potassium_mg": 20.0,
-              "calcium_mg": 202.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           },
@@ -9990,8 +9990,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -10002,27 +10002,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -10033,20 +10033,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -10083,11 +10083,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -10097,19 +10097,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
@@ -10869,8 +10869,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -10881,19 +10881,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           }
@@ -12099,8 +12099,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -12111,28 +12111,28 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -12142,27 +12142,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -12173,20 +12173,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -12969,8 +12969,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -12981,19 +12981,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           }
@@ -14230,8 +14230,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -14242,27 +14242,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -14273,20 +14273,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -14323,11 +14323,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -14337,19 +14337,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
@@ -15068,8 +15068,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -15080,19 +15080,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           }
@@ -16329,8 +16329,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -16341,27 +16341,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -16372,20 +16372,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -16422,11 +16422,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -16436,19 +16436,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
@@ -17195,8 +17195,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -17207,19 +17207,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           }
@@ -18396,8 +18396,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -18408,27 +18408,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -18439,20 +18439,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -18520,11 +18520,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -18534,19 +18534,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
@@ -19239,8 +19239,8 @@
           {
             "name": "Shredded Cheddar Cheese",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 445.0,
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
             "ingredients": "Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking)..",
             "allergens": [
               "Milk"
@@ -19251,19 +19251,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 445.0,
-              "fat_g": 37.0,
-              "saturated_fat_g": 20.0,
+              "calories": 28.0,
+              "fat_g": 2.3,
+              "saturated_fat_g": 1.3,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 120.0,
-              "sodium_mg": 730.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 24.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 810.0,
+              "protein_g": 2.0,
+              "potassium_mg": 5.0,
+              "calcium_mg": 51.0,
               "iron_mg": 0.0
             }
           },
@@ -20530,8 +20530,8 @@
           {
             "name": "Rudi's Honey Sweet Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 106.0,
             "ingredients": "organic whole wheat flour, water, organic honey, organic wheat gluten, organic cane sugar, organic sunflower and/or safflower oil, sea salt, organic distilled vinegar, yeast, organic molasses, cultured organic wheat starch, organic barley malt extract, ascorbic acid, natural enzymes..",
             "allergens": [
               "Wheat"
@@ -20542,27 +20542,27 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 106.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2468.0,
-              "carbohydrates_g": 291.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1309.0,
-              "calcium_mg": 436.0,
-              "iron_mg": 13.1
+              "sodium_mg": 164.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 87.0,
+              "calcium_mg": 29.0,
+              "iron_mg": 0.9
             }
           },
           {
             "name": "Organic Whole Wheat Bread",
             "description": "",
-            "serving_size": "1 loaf",
-            "calories": 1595.0,
+            "serving_size": "1 slice",
+            "calories": 110.0,
             "ingredients": "Organic whole wheat flour, water, organic cracked wheat, organic brown sugar, organic wheat gluten, organic wheat bran, organic sunflower oil, yeast, sea salt, organic distilled white vinegar, organic molasses, cultured organic wheat starch, organic barley malt syrup, enzymes, ascorbic acid (dough conditioner)., CONTAINS: Wheat.",
             "allergens": [
               "Wheat"
@@ -20573,20 +20573,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1595.0,
-              "fat_g": 15.0,
+              "calories": 110.0,
+              "fat_g": 1.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1885.0,
-              "carbohydrates_g": 290.0,
-              "fiber_g": 44.0,
-              "added_sugar_g": 29.0,
-              "total_sugar_g": 29.0,
-              "protein_g": 58.0,
-              "potassium_mg": 1015.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 4.0,
+              "potassium_mg": 70.0,
               "calcium_mg": 0.0,
-              "iron_mg": 8.7
+              "iron_mg": 0.6
             }
           },
           {
@@ -20623,11 +20623,11 @@
             }
           },
           {
-            "name": "Udi's Gluten Free Bread",
+            "name": "Gluten Free 7 Grain Bread",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 137.0,
-            "ingredients": "WATER, MODIFIED TAPIOCA STARCH, RICE STARCH, CANOLA OIL, BROWN RICE FLOUR (RICE FLOUR, RICE BRAN), SORGHUM FLOUR, CANE SUGAR, TAPIOCA STARCH, SUGAR CANE SYRUP, EGG WHITES, FLAX SEED, AMARANTH FLOUR, MODIFIED CELLULOSE, TEFF FLOUR, CULTURED BROWN RICE, BROWN RICE, SALT, YEAST, GUAR GUM, XANTHAN GUM, ENZYMES..",
+            "calories": 90.0,
+            "ingredients": "WATER, BROWN RICE FLOUR, TAPIOCA FLOUR, WHOLE GRAIN SORGHUM FLOUR, ORGANIC AGAVE SYRUP, CANE SUGAR, WHOLE GRAIN MILLET, CULTURED BROWN RICE FLOUR, EGGS, XANTHAN GUM, CONTAINS 2% OR LESS OF EACH OF THE FOLLOWING: EXTRA VIRGIN OLIVE OIL, WHOLE GRAIN TEFF, YEAST, EGG WHITES, WHOLE GRAIN QUINOA, MOLASSES, WHOLE GRAIN AMARANTH, SEA SALT, ORGANIC CANE SUGAR VINEGAR, WHOLE GRAIN BUCKWHEAT FLOUR, ENZYMES. NOTE: BUCKWHEAT IS A NATURALLY GLUTEN-FREE GRAIN..",
             "allergens": [
               "Egg"
             ],
@@ -20637,19 +20637,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 137.0,
-              "fat_g": 4.6,
+              "calories": 90.0,
+              "fat_g": 1.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 262.0,
-              "sodium_mg": 262.0,
-              "carbohydrates_g": 24.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 130.0,
+              "carbohydrates_g": 16.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 3.0,
-              "total_sugar_g": 3.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 46.0,
+              "potassium_mg": 58.0,
+              "calcium_mg": 12.0,
               "iron_mg": 0.0
             }
           },
