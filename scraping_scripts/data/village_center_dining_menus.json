@@ -22632,6 +22632,37 @@
             }
           },
           {
+            "name": "Pepperoni Pizza",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 225.0,
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "allergens": [
+              "Milk",
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 225.0,
+              "fat_g": 11.0,
+              "saturated_fat_g": 3.8,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 18.0,
+              "sodium_mg": 573.0,
+              "carbohydrates_g": 22.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 9.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 134.0,
+              "iron_mg": 0.6
+            }
+          },
+          {
             "name": "Cauliflower Crust Pepperoni Pizza",
             "description": "",
             "serving_size": "1 personal pizza",
@@ -41162,11 +41193,11 @@
             }
           },
           {
-            "name": "Pepperoni Pizza",
+            "name": "Pesto Chicken Pizza",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 225.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Extra Virgin Olive Oil, Water, Garlic Whole Peeled Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "calories": 234.0,
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Chicken Breast (Boneless Skinless Chicken Breast Meat With Rib Meat, Water, Potato Starch, Vinegar, Sea Salt), Basil Pesto (Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows’ Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt.), Tomatoes, Rice Bran Oil, Fresh Basil.",
             "allergens": [
               "Milk",
               "Wheat",
@@ -41176,20 +41207,20 @@
             "is_vegan": false,
             "is_vegetarian": false,
             "nutrition": {
-              "calories": 225.0,
-              "fat_g": 11.0,
-              "saturated_fat_g": 3.8,
+              "calories": 234.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 3.5,
               "trans_fat_g": 0.1,
-              "cholesterol_mg": 18.0,
-              "sodium_mg": 573.0,
-              "carbohydrates_g": 22.0,
+              "cholesterol_mg": 14.0,
+              "sodium_mg": 576.0,
+              "carbohydrates_g": 20.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 9.0,
-              "potassium_mg": 52.0,
-              "calcium_mg": 134.0,
-              "iron_mg": 0.6
+              "protein_g": 12.0,
+              "potassium_mg": 49.0,
+              "calcium_mg": 156.0,
+              "iron_mg": 0.7
             }
           },
           {
