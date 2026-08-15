@@ -10894,8 +10894,8 @@
             "name": "Blueberry Alternative Flour Pancakes",
             "description": "",
             "serving_size": "1 pancake",
-            "calories": 60.0,
-            "ingredients": "2% Milk (Organic) (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Blueberries, Rice Bran Oil.",
+            "calories": 58.0,
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Blueberries, Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
               "Egg"
@@ -10906,19 +10906,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 60.0,
-              "fat_g": 2.1,
+              "calories": 58.0,
+              "fat_g": 2.2,
               "saturated_fat_g": 0.6,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 33.0,
-              "sodium_mg": 56.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 37.0,
+              "sodium_mg": 99.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 18.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 19.0,
+              "calcium_mg": 31.0,
               "iron_mg": 0.2
             }
           }
@@ -24183,6 +24183,38 @@
             }
           },
           {
+            "name": "Caribbean Coconut Jackfruit Meatballs",
+            "description": "",
+            "serving_size": "3 meatball",
+            "calories": 201.0,
+            "ingredients": "Heavy Whipping Cream (Heavy cream, carrageenan.), Coconut Milk (Coconut Milk, Guar Gum (a Natural Emulsifier).), jack and annie's® Jackfruit Meatballs (INGREDIENTS: JACKFRUIT, WATER, SOY FLOUR, CANOLA OIL, ONION, 2% OR LESS OF: SPICES, ONION POWDER, GARLIC POWDER, SEA SALT, METHYLCELLULOSE (PLANT FIBER), YEAST EXTRACT, NATURAL FLAVORS, FRUIT AND VEGETABLE JUICE (FOR COLOR), , CONTAINS: SOY), * Cremini Mushrooms, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic, Kosher Salt, Caribbean Jerk Spice (Ingredients, SALT, SPICES (INCLUDING RED PEPPER), DEXTROSE,, CARAMEL COLOR, CHIVES, AND SULFITING AGENTS.), Black pepper (Black Pepper).",
+            "allergens": [
+              "Milk",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 201.0,
+              "fat_g": 22.0,
+              "saturated_fat_g": 14.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 463.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 1.0,
+              "potassium_mg": 89.0,
+              "calcium_mg": 62.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
             "name": "Honey Jerk BBQ Sauce",
             "description": "",
             "serving_size": "2 fl oz",
@@ -24211,37 +24243,6 @@
               "potassium_mg": 169.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.4
-            }
-          },
-          {
-            "name": "jack and annie's® Jackfruit Meatballs",
-            "description": "",
-            "serving_size": "3 meatball",
-            "calories": 210.0,
-            "ingredients": "jack and annie's® Jackfruit Meatballs (INGREDIENTS: JACKFRUIT, WATER, SOY FLOUR, CANOLA OIL, ONION, 2% OR LESS OF: SPICES, ONION POWDER, GARLIC POWDER, SEA SALT, METHYLCELLULOSE (PLANT FIBER), YEAST EXTRACT, NATURAL FLAVORS, FRUIT AND VEGETABLE JUICE (FOR COLOR), , CONTAINS: SOY).",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 210.0,
-              "fat_g": 14.0,
-              "saturated_fat_g": 1.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 420.0,
-              "carbohydrates_g": 12.0,
-              "fiber_g": 6.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 8.0,
-              "potassium_mg": 420.0,
-              "calcium_mg": 70.0,
-              "iron_mg": 1.7
             }
           }
         ],
@@ -46177,8 +46178,8 @@
             "name": "Blueberry Alternative Flour Pancakes",
             "description": "",
             "serving_size": "1 pancake",
-            "calories": 60.0,
-            "ingredients": "2% Milk (Organic) (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Blueberries, Rice Bran Oil.",
+            "calories": 58.0,
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Blueberries, Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
               "Egg"
@@ -46189,19 +46190,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 60.0,
-              "fat_g": 2.1,
+              "calories": 58.0,
+              "fat_g": 2.2,
               "saturated_fat_g": 0.6,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 33.0,
-              "sodium_mg": 56.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 37.0,
+              "sodium_mg": 99.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 18.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 19.0,
+              "calcium_mg": 31.0,
               "iron_mg": 0.2
             }
           },

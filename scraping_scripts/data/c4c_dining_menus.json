@@ -3201,17 +3201,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -6996,15 +6996,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -7185,7 +7185,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -7262,7 +7262,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -7293,14 +7293,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -8910,17 +8910,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -13344,7 +13344,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -13392,14 +13392,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -13423,7 +13423,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -17415,14 +17415,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -17446,7 +17446,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -17659,7 +17659,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -19448,17 +19448,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -22935,17 +22935,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -29211,17 +29211,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -32290,17 +32290,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -38508,9 +38508,9 @@
               "Soy"
             ],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 207.0,
@@ -39447,15 +39447,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -39826,17 +39826,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -39955,7 +39955,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -43772,17 +43772,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -46311,11 +46311,11 @@
             }
           },
           {
-            "name": "Pepperoni & Sausage Pizza",
+            "name": "Salami Pizza with Serrano and Honey",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 277.0,
-            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Sliced Cooked Italian Sausage (Pork, water, salt, spices, paprika and natural flavoring (gluten-free and no MSG).), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
+            "calories": 288.0,
+            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Water, Oil Blend (80% soybean oil, 20% olive pomace oil.), Genoa Salami (Pork, beef, salt, contains 2% or less of dextrose, water, spices, lactic acid starter culture, sodium ascorbate, sodium nitrite, garlic powder, BHA, BHT, citric acid.), Serrano Peppers, Honey (Ingredients:, Honey), Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -46324,20 +46324,20 @@
             "is_vegan": false,
             "is_vegetarian": false,
             "nutrition": {
-              "calories": 277.0,
-              "fat_g": 16.0,
-              "saturated_fat_g": 5.0,
+              "calories": 288.0,
+              "fat_g": 14.0,
+              "saturated_fat_g": 4.8,
               "trans_fat_g": 0.2,
-              "cholesterol_mg": 27.0,
-              "sodium_mg": 454.0,
-              "carbohydrates_g": 22.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 469.0,
+              "carbohydrates_g": 27.0,
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 12.0,
-              "potassium_mg": 189.0,
-              "calcium_mg": 178.0,
-              "iron_mg": 1.4
+              "total_sugar_g": 6.0,
+              "protein_g": 13.0,
+              "potassium_mg": 104.0,
+              "calcium_mg": 200.0,
+              "iron_mg": 0.9
             }
           }
         ],
@@ -49651,9 +49651,11 @@
               "Soy",
               "Peanuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 163.0,
               "fat_g": 11.0,
@@ -50035,6 +50037,38 @@
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.3
+            }
+          },
+          {
+            "name": "Garlic Sesame Dipping Sauce",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 20.0,
+            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Cilantro 30 CT, Sesame Oil (Soybean Oil, Sesame Oil.), Green Onions, Garlic Whole Peeled Case, Sesame Seeds (Ingredients: Organic sesame seeds).",
+            "allergens": [
+              "Soy",
+              "Sesame"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 20.0,
+              "fat_g": 1.2,
+              "saturated_fat_g": 0.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 860.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 12.0,
+              "calcium_mg": 8.0,
+              "iron_mg": 0.4
             }
           },
           {
@@ -51025,17 +51059,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -51183,7 +51217,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -54965,17 +54999,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -59930,41 +59964,11 @@
         ],
         "Asia - Featured Entree": [
           {
-            "name": "Orange Chicken",
+            "name": "Edamame Fried Rice",
             "description": "",
             "serving_size": "6 oz",
-            "calories": 243.0,
-            "ingredients": "Chicken Breast (Boneless Skinless Chicken Breast Chunks, Water, Chicken Flavor [modified Rice Starch, Maltodextrin, Hydrolyzed Soy Protein, Flavor, Chicken Fat, Tapioca Dextrin, Onion Juice Concentrate, Autolyzed Yeast Extract, Salt, Contains Less Than 2% (chicken Broth, Citric Acid, Dextrin, Disodium Guanylate, Disodium Inosinate, Disodium Phosphate, Dried Chicken, Lactic Acid, Modified Corn Starch, Pectin, Smoke Flavor, Succinic Acid, Sugar, Thiamine Hydrochloride)], Modified Food Starch, Vinegar, Sodium Phosphates, Salt. Breaded And Battered With: Wheat Flour, Water, Modified Corn Starch, Salt, Leavening (sodium Acid Pyrophosphate, Sodium Bicarbonate), Soybean Oil (as A Processing Aid), Spices (including Celery Seed), Soy Flour, Garlic Powder, Onion Powder, Extractives Of Paprika. Predusted With: Wheat Flour, Wheat Gluten, Salt, Soybean Oil (as A Processing Aid), Spices (including Celery Seed), Soy Flour, Garlic Powder, Onion Powder, Extractives Of Paprika. Breading Set In Vegetable Oil. Contains: Soy, Wheat), Water, Orange Juice (Ingredients, Concentrated Orange Juice), Sugar Granulated (Sugar), Green Onion, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Garlic Whole Peeled Case, Corn Starch (Corn starch.), Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Xanthan Gum, Rice Bran Oil, Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [
-              "Wheat",
-              "Soy"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 243.0,
-              "fat_g": 8.0,
-              "saturated_fat_g": 1.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 50.0,
-              "sodium_mg": 1027.0,
-              "carbohydrates_g": 24.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 18.0,
-              "potassium_mg": 231.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.5
-            }
-          },
-          {
-            "name": "Quinoa Stir Fry",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 118.0,
-            "ingredients": "Water, Quinoa, Yellow Onion, Carrots, Organic Green Peas, Celery, Green Bell Peppers, Rice Bran Oil, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Red Bell Peppers, Yellow Bell Pepper, Green Onion.",
+            "calories": 203.0,
+            "ingredients": "Rice Brown, Whole Soybean Edamame In Pod, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Green Bell Peppers, Organic Green Peas, Celery, Yellow Onion, Carrots, Rice Bran Oil, Red Bell Peppers, Yellow Bell Pepper, Green Onion, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Water.",
             "allergens": [
               "Soy"
             ],
@@ -59974,24 +59978,53 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 118.0,
+              "calories": 203.0,
               "fat_g": 6.0,
               "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 233.0,
-              "carbohydrates_g": 14.0,
-              "fiber_g": 2.0,
+              "sodium_mg": 498.0,
+              "carbohydrates_g": 30.0,
+              "fiber_g": 4.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 3.0,
-              "potassium_mg": 109.0,
-              "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "total_sugar_g": 3.0,
+              "protein_g": 8.0,
+              "potassium_mg": 148.0,
+              "calcium_mg": 39.0,
+              "iron_mg": 1.7
             }
           }
         ],
         "Asia - Stir Fries and Sides": [
+          {
+            "name": "Red Chili Pepper Stir Fried Cauliflower",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 153.0,
+            "ingredients": "Cauliflower Florets, Red Bermuda Onions, Rice Bran Oil, Green Onion, Garlic Whole Peeled Case, Crushed Red Pepper (Cayenne Pepper), Onion Granules, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Cayenne Pepper (Black Pepper), Oregano Leaf, Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 153.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 2.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 224.0,
+              "carbohydrates_g": 11.0,
+              "fiber_g": 4.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 4.0,
+              "protein_g": 3.0,
+              "potassium_mg": 488.0,
+              "calcium_mg": 57.0,
+              "iron_mg": 1.2
+            }
+          },
           {
             "name": "White Rice",
             "description": "",
@@ -60022,34 +60055,36 @@
             }
           },
           {
-            "name": "Wonton Strips",
+            "name": "Crab & Cream Cheese Rangoons",
             "description": "",
-            "serving_size": "2 Tbsp",
-            "calories": 16.0,
-            "ingredients": "Wonton Skin Frozen (INGREDIENTS: ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID AND ENZYMES), WATER, CORNSTARCH, SALT, PRESERVED WITH LESS THAN 1/10TH OF 1% SODIUM BENZOATE AND 1/10TH OF 1% POTASSIUM SORBATE. , CONTAINS: WHEAT).",
+            "serving_size": "1 rangoon",
+            "calories": 83.0,
+            "ingredients": "Cream Cheese Rangoon.",
             "allergens": [
-              "Wheat"
+              "Milk",
+              "Egg",
+              "Wheat",
+              "Soy",
+              "Sesame"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 16.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
+              "calories": 83.0,
+              "fat_g": 3.3,
+              "saturated_fat_g": 2.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 32.0,
-              "carbohydrates_g": 4.0,
+              "cholesterol_mg": 12.0,
+              "sodium_mg": 107.0,
+              "carbohydrates_g": 11.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.3
+              "total_sugar_g": 1.0,
+              "protein_g": 2.0,
+              "potassium_mg": 13.0,
+              "calcium_mg": 17.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -60853,15 +60888,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -61145,17 +61180,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -61276,7 +61311,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -65092,17 +65127,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -70324,71 +70359,97 @@
         ],
         "Asia - Featured Entree": [
           {
-            "name": "Kung Pao Chicken with Peanuts & Sesame",
+            "name": "Kalua Pork",
             "description": "",
-            "serving_size": "6 oz",
-            "calories": 280.0,
-            "ingredients": "Chicken Breast Chunk (Chicken nuggets containing up to 12% of a solution of water and sea salt.), Water Chestnuts, Carrots, Sesame Oil (Soybean oil, sesame oil.), Yellow Onion, Green Bell Peppers, Wine Box Franzia Chardonnay, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Red Bell Peppers, Yellow Bell Pepper, Water, Peanut Topping (Ingredients: Peanuts, Dry Roasted. contains Peanuts., Contains:Peanuts, May contain:Tree Nuts), Green Onion, Corn Starch (Corn starch.), Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic, Sugar Granulated, Thai Chili Peppers, Garlic Granules.",
+            "serving_size": "1 6 oz serving",
+            "calories": 380.0,
+            "ingredients": "Pork Shoulder Butt Boneless, Franks Red Hot Sauce (Aged Cayenne Red Peppers, Distilled Vinegar, Water, Salt and Garlic Powder.), Water, Cabbage Nappa, Brown Sugar, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Rice Bran Oil, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Green Onion, Kosher Salt, Garlic Granules, Onion Granules, White Pepper, Cayenne Pepper (Black Pepper), Black Pepper (Black Pepper), Black pepper (Black Pepper), Chili Pepper Red Flakes Organic (Red pepper.).",
             "allergens": [
-              "Soy",
-              "Peanuts",
-              "Tree Nuts",
-              "Sesame"
+              "Soy"
             ],
             "dietary_labels": [],
             "is_vegan": false,
             "is_vegetarian": false,
             "nutrition": {
-              "calories": 280.0,
-              "fat_g": 15.0,
-              "saturated_fat_g": 2.2,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 43.0,
-              "sodium_mg": 485.0,
-              "carbohydrates_g": 21.0,
-              "fiber_g": 2.0,
+              "calories": 380.0,
+              "fat_g": 21.0,
+              "saturated_fat_g": 8.0,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 140.0,
+              "sodium_mg": 1059.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 16.0,
-              "potassium_mg": 333.0,
-              "calcium_mg": 21.0,
-              "iron_mg": 1.0
+              "total_sugar_g": 6.0,
+              "protein_g": 38.0,
+              "potassium_mg": 511.0,
+              "calcium_mg": 53.0,
+              "iron_mg": 3.2
             }
           }
         ],
         "Asia - Stir Fries and Sides": [
           {
-            "name": "Vegetable Egg Roll",
+            "name": "Bok Choy Stir Fry",
             "description": "",
-            "serving_size": "1 egg roll",
-            "calories": 74.0,
-            "ingredients": "Ingredients: Cabbage, Enriched Bleached Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, Carrot, Celery, Enriched Durum Flour (Durum Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Onion, Parboiled Long Grain Rice, Broccoli, Soybean Oil, Contains Less than 2% of Dehydrated Soy Sauce (Soy Sauce (Wheat, Soybeans, Salt), Maltodextrin, and Salt). Vermicelli (Green Mung Beans, Water), Soy Sauce (Water, Soybeans, Salt, and Wheat Flour), Spice, Garlic Powder, Flavor Enhancer (Autolyzed Yeast Extract, Natural Flavor), Modified Corn Starch, Shiitake Mushroom Powder, Vital Wheat Gluten, Dried Whole Egg, Sesame Seed Oil, Sugar, Salt, Cottonseed Oil.  CONTAINS: WHEAT, SOY, EGG.",
+            "serving_size": "1 1/2 cup serving",
+            "calories": 83.0,
+            "ingredients": "Cabbage Bok Choy  30 LB, Carrots, Celery, Yellow Onion, Green Bell Peppers, Rice Bran Oil, Red Bell Peppers, Yellow Bell Pepper, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Green Onion, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 83.0,
+              "fat_g": 7.0,
+              "saturated_fat_g": 1.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 304.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 2.0,
+              "potassium_mg": 256.0,
+              "calcium_mg": 72.0,
+              "iron_mg": 0.7
+            }
+          },
+          {
+            "name": "Chicken Egg Rolls",
+            "description": "",
+            "serving_size": "1 eggroll",
+            "calories": 85.0,
+            "ingredients": "Chicken & Vegetable Egg Rolls (Crust: Bleached Wheat Flour, Malted Barley Flour, Water, Salt, Fd&c Yellow #5 & #6, Calcium Propionate, Corn Starch. Filling: Cabbage, Chicken, Carrots, Textured Vegetable Protein (soy Flour), Sugar, Salt, Carrageenan, Dextrose, Oil (sesame Oil, Soybean Oil, Or Vegetable Oil), Garlic Powder, Spice. Contains: Eggs, Soy, Wheat).",
             "allergens": [
               "Egg",
               "Wheat",
               "Soy",
               "Sesame"
             ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
+            "dietary_labels": [],
             "is_vegan": false,
-            "is_vegetarian": true,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 74.0,
-              "fat_g": 2.0,
-              "saturated_fat_g": 0.3,
+              "calories": 85.0,
+              "fat_g": 1.1,
+              "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 2.0,
-              "sodium_mg": 268.0,
-              "carbohydrates_g": 11.0,
+              "cholesterol_mg": 5.0,
+              "sodium_mg": 287.0,
+              "carbohydrates_g": 9.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
-              "protein_g": 2.0,
-              "potassium_mg": 60.0,
-              "calcium_mg": 10.0,
-              "iron_mg": 0.7
+              "protein_g": 5.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 27.5,
+              "iron_mg": 0.8
             }
           },
           {
@@ -70546,6 +70607,35 @@
               "potassium_mg": 43.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
+            }
+          },
+          {
+            "name": "Sweet & Sour Sauce",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 56.0,
+            "ingredients": "Water, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Ketchup (Tomato Concentrate, Sugar, Distilled Vinegar, Salt, Onion Powder, Natural Flavors), Sugar Granulated (Sugar), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Corn Starch (Corn starch.), Xanthan Gum.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 56.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 68.0,
+              "sodium_mg": 220.0,
+              "carbohydrates_g": 14.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 13.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
             }
           },
           {
@@ -71478,17 +71568,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -71609,7 +71699,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -75422,17 +75512,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -81056,8 +81146,8 @@
             "name": "Chocolate Chip Alt Flour Pancakes",
             "description": "",
             "serving_size": "1 pancake",
-            "calories": 211.0,
-            "ingredients": "2% Milk (Organic) (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil.",
+            "calories": 205.0,
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
               "Egg",
@@ -81069,19 +81159,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 211.0,
-              "fat_g": 8.0,
+              "calories": 205.0,
+              "fat_g": 9.0,
               "saturated_fat_g": 4.6,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 86.0,
-              "sodium_mg": 151.0,
-              "carbohydrates_g": 29.0,
+              "cholesterol_mg": 96.0,
+              "sodium_mg": 260.0,
+              "carbohydrates_g": 27.0,
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 12.0,
+              "total_sugar_g": 14.0,
               "protein_g": 5.0,
-              "potassium_mg": 42.0,
-              "calcium_mg": 91.0,
+              "potassium_mg": 44.0,
+              "calcium_mg": 80.0,
               "iron_mg": 0.9
             }
           }
@@ -82315,17 +82405,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -82589,7 +82679,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -86431,17 +86521,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -93670,15 +93760,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -94002,7 +94092,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -94050,7 +94140,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -94081,14 +94171,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -97996,17 +98086,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -105777,14 +105867,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -105808,7 +105898,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -105820,7 +105910,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -109805,17 +109895,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -110410,15 +110500,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -116812,15 +116902,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -117282,7 +117372,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -117313,19 +117403,19 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -121285,17 +121375,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -128535,14 +128625,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -128566,7 +128656,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -128636,7 +128726,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -132561,17 +132651,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -138408,7 +138498,7 @@
               "total_sugar_g": 1.0,
               "protein_g": 7.0,
               "potassium_mg": 118064.0,
-              "calcium_mg": 11.7,
+              "calcium_mg": 12.0,
               "iron_mg": 1.3
             }
           },
@@ -138698,14 +138788,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -138729,7 +138819,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -138913,7 +139003,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -142845,17 +142935,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -149066,7 +149156,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -149097,14 +149187,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -149368,7 +149458,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -153177,17 +153267,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -158926,8 +159016,8 @@
             "name": "Chocolate Chip Alt Flour Pancakes",
             "description": "",
             "serving_size": "1 pancake",
-            "calories": 211.0,
-            "ingredients": "2% Milk (Organic) (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil.",
+            "calories": 205.0,
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
               "Egg",
@@ -158939,19 +159029,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 211.0,
-              "fat_g": 8.0,
+              "calories": 205.0,
+              "fat_g": 9.0,
               "saturated_fat_g": 4.6,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 86.0,
-              "sodium_mg": 151.0,
-              "carbohydrates_g": 29.0,
+              "cholesterol_mg": 96.0,
+              "sodium_mg": 260.0,
+              "carbohydrates_g": 27.0,
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 12.0,
+              "total_sugar_g": 14.0,
               "protein_g": 5.0,
-              "potassium_mg": 42.0,
-              "calcium_mg": 91.0,
+              "potassium_mg": 44.0,
+              "calcium_mg": 80.0,
               "iron_mg": 0.9
             }
           }
@@ -160192,17 +160282,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -160551,7 +160641,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -164306,17 +164396,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -171554,15 +171644,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -171734,17 +171824,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -172035,7 +172125,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -175851,17 +175941,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -183518,17 +183608,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -183705,7 +183795,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -187545,17 +187635,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -188210,15 +188300,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -194615,15 +194705,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -194939,17 +195029,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -195099,7 +195189,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -198943,17 +199033,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -206281,17 +206371,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -206383,7 +206473,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -210221,17 +210311,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -216250,15 +216340,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -216542,17 +216632,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -216673,7 +216763,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -220489,17 +220579,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -227021,17 +227111,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -227152,7 +227242,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -230965,17 +231055,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -236626,8 +236716,8 @@
             "name": "Chocolate Chip Alt Flour Pancakes",
             "description": "",
             "serving_size": "1 pancake",
-            "calories": 211.0,
-            "ingredients": "2% Milk (Organic) (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil.",
+            "calories": 205.0,
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
               "Egg",
@@ -236639,19 +236729,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 211.0,
-              "fat_g": 8.0,
+              "calories": 205.0,
+              "fat_g": 9.0,
               "saturated_fat_g": 4.6,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 86.0,
-              "sodium_mg": 151.0,
-              "carbohydrates_g": 29.0,
+              "cholesterol_mg": 96.0,
+              "sodium_mg": 260.0,
+              "carbohydrates_g": 27.0,
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 12.0,
+              "total_sugar_g": 14.0,
               "protein_g": 5.0,
-              "potassium_mg": 42.0,
-              "calcium_mg": 91.0,
+              "potassium_mg": 44.0,
+              "calcium_mg": 80.0,
               "iron_mg": 0.9
             }
           }
@@ -238015,17 +238105,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -238204,7 +238294,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -241959,17 +242049,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -249136,15 +249226,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -249457,17 +249547,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -249530,7 +249620,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -253431,17 +253521,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -261167,17 +261257,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -261267,7 +261357,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -265138,17 +265228,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -271267,9 +271357,9 @@
               "Soy"
             ],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 207.0,
@@ -272206,15 +272296,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -272585,17 +272675,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -272714,7 +272804,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -276531,17 +276621,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -282410,9 +282500,11 @@
               "Soy",
               "Peanuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 163.0,
               "fat_g": 11.0,
@@ -283755,17 +283847,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -283942,7 +284034,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -287724,17 +287816,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -293674,15 +293766,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 546.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 3.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354192.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -293966,17 +294058,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -294097,7 +294189,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso (Comm - CC)",
+            "name": "Sauce - GF Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -297913,17 +298005,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },

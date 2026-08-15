@@ -19450,7 +19450,7 @@
             "description": "",
             "serving_size": "2 pancake",
             "calories": 422.0,
-            "ingredients": "2% Milk (Organic) (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil.",
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
               "Egg",
@@ -19463,19 +19463,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 422.0,
-              "fat_g": 17.0,
-              "saturated_fat_g": 9.0,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 172.0,
-              "sodium_mg": 302.0,
-              "carbohydrates_g": 58.0,
-              "fiber_g": 4.0,
+              "fat_g": 18.0,
+              "saturated_fat_g": 10.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 198.0,
+              "sodium_mg": 535.0,
+              "carbohydrates_g": 55.0,
+              "fiber_g": 3.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 25.0,
+              "total_sugar_g": 29.0,
               "protein_g": 10.0,
-              "potassium_mg": 84.0,
-              "calcium_mg": 182.0,
-              "iron_mg": 1.8
+              "potassium_mg": 91.0,
+              "calcium_mg": 165.0,
+              "iron_mg": 1.9
             }
           },
           {
@@ -23690,8 +23690,8 @@
             "name": "Blueberry Alternative Flour Pancakes",
             "description": "",
             "serving_size": "1 pancake",
-            "calories": 60.0,
-            "ingredients": "2% Milk (Organic) (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Blueberries, Rice Bran Oil.",
+            "calories": 58.0,
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Blueberries, Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
               "Egg"
@@ -23702,19 +23702,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 60.0,
-              "fat_g": 2.1,
+              "calories": 58.0,
+              "fat_g": 2.2,
               "saturated_fat_g": 0.6,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 33.0,
-              "sodium_mg": 56.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 37.0,
+              "sodium_mg": 99.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
               "protein_g": 2.0,
-              "potassium_mg": 18.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 19.0,
+              "calcium_mg": 31.0,
               "iron_mg": 0.2
             }
           },
