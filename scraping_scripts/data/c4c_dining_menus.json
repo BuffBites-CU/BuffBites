@@ -57542,11 +57542,11 @@
         ],
         "Italian - Stone-Fired Pizza": [
           {
-            "name": "Buffalo Chicken Pizza",
+            "name": "Salami Pizza with Serrano and Honey",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 231.0,
-            "ingredients": "Chicken Breast (Boneless Skinless Chicken Breast Meat With Rib Meat, Water, Potato Starch, Vinegar, Sea Salt), Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Franks Red Hot Sauce (Aged Cayenne Red Peppers, Distilled Vinegar, Water, Salt and Garlic Powder.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Bleu Cheese Crumbles (Blue cheese (pasteurized milk, cheese culture, salt, enzymes), powdered cellulose added to prevent caking, natamycin (added to protect flavor).), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated (Sugar), Kosher Salt, Fresh Parsley, Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
+            "calories": 288.0,
+            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Water, Oil Blend (80% soybean oil, 20% olive pomace oil.), Genoa Salami (Pork, beef, salt, contains 2% or less of dextrose, water, spices, lactic acid starter culture, sodium ascorbate, sodium nitrite, garlic powder, BHA, BHT, citric acid.), Serrano Peppers, Honey (Ingredients:, Honey), Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -57555,20 +57555,20 @@
             "is_vegan": false,
             "is_vegetarian": false,
             "nutrition": {
-              "calories": 231.0,
-              "fat_g": 11.0,
-              "saturated_fat_g": 3.6,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 14.0,
-              "sodium_mg": 668.0,
-              "carbohydrates_g": 20.0,
-              "fiber_g": 1.0,
+              "calories": 288.0,
+              "fat_g": 14.0,
+              "saturated_fat_g": 4.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 469.0,
+              "carbohydrates_g": 27.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 14.0,
-              "potassium_mg": 65.0,
-              "calcium_mg": 150.0,
-              "iron_mg": 0.6
+              "total_sugar_g": 6.0,
+              "protein_g": 13.0,
+              "potassium_mg": 104.0,
+              "calcium_mg": 200.0,
+              "iron_mg": 0.9
             }
           },
           {
@@ -57606,35 +57606,6 @@
         ],
         "Italian - Vegetables & Sides": [
           {
-            "name": "Roasted Broccoli",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 47.0,
-            "ingredients": "Broccoli Florets, Extra Virgin Olive Oil, Garlic Granules, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 47.0,
-              "fat_g": 3.8,
-              "saturated_fat_g": 0.6,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 188.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 0.4
-            }
-          },
-          {
             "name": "Garlic Bread",
             "description": "",
             "serving_size": "1 slice",
@@ -57664,6 +57635,35 @@
               "potassium_mg": 13.0,
               "calcium_mg": 86.0,
               "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Italian Green Beans",
+            "description": "",
+            "serving_size": "5 oz",
+            "calories": 87.0,
+            "ingredients": "Green Beans (Ingredients, Green Beans), Rice Bran Oil, Kosher Salt, Black Pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 87.0,
+              "fat_g": 4.4,
+              "saturated_fat_g": 0.9,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1068.0,
+              "carbohydrates_g": 11.0,
+              "fiber_g": 4.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 3.0,
+              "potassium_mg": 278.0,
+              "calcium_mg": 65.0,
+              "iron_mg": 1.3
             }
           }
         ],
