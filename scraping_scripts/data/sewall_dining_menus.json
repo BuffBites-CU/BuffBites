@@ -1842,39 +1842,6 @@
               "calcium_mg": 0.0,
               "iron_mg": 0.0
             }
-          },
-          {
-            "name": "Alt Flour Chocolate Chip Banana Bread",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 390.0,
-            "ingredients": "Banana Puree (Bananas 99.97%, ascorbic acid 0.03%), Flour GF Cup 4 Cup (Cornstarch, White Rice Flour, Brown Rice Flour, rBST-Free MILK Powder, Tapioca Flour, Potato Starch, Xanthan Gum.), Cane Sugar (Sugar), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Cream Sour 32# Bakery (CULTURED CREAM, ENZYMES., CONTAINS: MILK.), Whole Eggs (Cage Free), Unsalted Butter (Cream, (milk), natural flavor.), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Ground Cinnamon, Kosher Salt.",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 390.0,
-              "fat_g": 15.0,
-              "saturated_fat_g": 9.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 65.0,
-              "sodium_mg": 458.0,
-              "carbohydrates_g": 61.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 35.0,
-              "protein_g": 4.0,
-              "potassium_mg": 22.0,
-              "calcium_mg": 79.0,
-              "iron_mg": 0.9
-            }
           }
         ],
         "Breakfast Condiments": [
@@ -33279,39 +33246,6 @@
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Alt Flour Chocolate Chip Banana Bread",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 390.0,
-            "ingredients": "Banana Puree (Bananas 99.97%, ascorbic acid 0.03%), Flour GF Cup 4 Cup (Cornstarch, White Rice Flour, Brown Rice Flour, rBST-Free MILK Powder, Tapioca Flour, Potato Starch, Xanthan Gum.), Cane Sugar (Sugar), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Cream Sour 32# Bakery (CULTURED CREAM, ENZYMES., CONTAINS: MILK.), Whole Eggs (Cage Free), Unsalted Butter (Cream, (milk), natural flavor.), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Ground Cinnamon, Kosher Salt.",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 390.0,
-              "fat_g": 15.0,
-              "saturated_fat_g": 9.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 65.0,
-              "sodium_mg": 458.0,
-              "carbohydrates_g": 61.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 35.0,
-              "protein_g": 4.0,
-              "potassium_mg": 22.0,
-              "calcium_mg": 79.0,
-              "iron_mg": 0.9
             }
           }
         ],

@@ -38394,33 +38394,35 @@
             "name": "Crab & Cream Cheese Rangoons",
             "description": "",
             "serving_size": "1 rangoon",
-            "calories": 83.0,
-            "ingredients": "Cream Cheese Rangoon.",
+            "calories": 160.0,
+            "ingredients": "Cream Cheese Crab Rangoon (Filling: Cream Cheese (pasteurized Milk And Cream, Salt, Carob Bean Gum, Cheese Culture), Imitation Crab Meat (water, Fish Protein (alaska Pollock And/or Pacific Whiting), Wheat Starch, Sugar, Potato Starch, Contains 2% Or Less Of: King Crabmeat, Natural And Artificial Flavor, Sorbitol, Egg Whites, Tapioca Starch, Carrageenan, Salt, Sodium Tripolyphosphate, Tetrasodium Pyrophosphate, Carmine, Paprika Oleoresin, Color Added), Water, Sugar, Green Onion, Salt, Fish Sauce (anchovy Extract, Salt, Sugar, Water), Garlic Powder, Modified Food Starch, Sesame Oil, Spices. Wrapper: All Purpose Flour (bleached Wheat Flour Enriched (bleached Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour), Water, Sunflower Oil, Salt, Butter Sauce (modified Corn Starch, Salt, Whey Solids, Non-fat Dry Milk, Maltodextrin, Butter, Sugar, Buttermilk Powder, Natural Butter Flavor, Xanthan Gum, Lactic Acid, Turmeric And Annatto (for Color)), Sugar, Xanthan Gum.).",
             "allergens": [
               "Milk",
               "Egg",
               "Wheat",
               "Soy",
+              "Fish",
+              "Shellfish",
               "Sesame"
             ],
             "dietary_labels": [],
             "is_vegan": false,
             "is_vegetarian": false,
             "nutrition": {
-              "calories": 83.0,
-              "fat_g": 3.3,
-              "saturated_fat_g": 2.0,
+              "calories": 160.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 3.5,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 12.0,
-              "sodium_mg": 107.0,
-              "carbohydrates_g": 11.0,
+              "cholesterol_mg": 20.0,
+              "sodium_mg": 290.0,
+              "carbohydrates_g": 19.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
-              "potassium_mg": 13.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 3.0,
+              "potassium_mg": 30.0,
               "calcium_mg": 17.0,
-              "iron_mg": 0.2
+              "iron_mg": 1.0
             }
           }
         ],
@@ -57053,6 +57055,40 @@
             }
           }
         ],
+        "Latin - Breakfast Additions": [
+          {
+            "name": "Banana and Chia Seed Overnight Oats",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 114.0,
+            "ingredients": "2% Milk (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), GF Rolled Oats (Whole grain rolled oats.), Bananas Large Premium Green, Chobani Vanilla Fat Free Greek Yogurt (Cultured Nonfat Milk, Cane Sugar, Water, Natural Flavors, Fruit Pectin, Guar Gum, Locust Bean Gum, Vanilla Extract, Lemon Juice Concentrate. Contains Live And Active Cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, And L. Rhamnosus., Contains: Milk), Granola Vanilla 25# Red Plate (Certified gluten free oats, applesauce (apples, citric ascorbic acid), non-GMO canola oil, vegan brown sugar, vanilla, sea salt.), Black Chia Seed, Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.).",
+            "allergens": [
+              "Milk",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 114.0,
+              "fat_g": 4.0,
+              "saturated_fat_g": 1.9,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 7.0,
+              "sodium_mg": 49.0,
+              "carbohydrates_g": 15.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 7.0,
+              "protein_g": 5.0,
+              "potassium_mg": 167.0,
+              "calcium_mg": 128.0,
+              "iron_mg": 0.7
+            }
+          }
+        ],
         "Latin - Featured Entree": [
           {
             "name": "Tofu Tinga",
@@ -68282,6 +68318,40 @@
             }
           }
         ],
+        "Latin - Breakfast Additions": [
+          {
+            "name": "Banana and Chia Seed Overnight Oats",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 114.0,
+            "ingredients": "2% Milk (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), GF Rolled Oats (Whole grain rolled oats.), Bananas Large Premium Green, Chobani Vanilla Fat Free Greek Yogurt (Cultured Nonfat Milk, Cane Sugar, Water, Natural Flavors, Fruit Pectin, Guar Gum, Locust Bean Gum, Vanilla Extract, Lemon Juice Concentrate. Contains Live And Active Cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, And L. Rhamnosus., Contains: Milk), Granola Vanilla 25# Red Plate (Certified gluten free oats, applesauce (apples, citric ascorbic acid), non-GMO canola oil, vegan brown sugar, vanilla, sea salt.), Black Chia Seed, Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.).",
+            "allergens": [
+              "Milk",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 114.0,
+              "fat_g": 4.0,
+              "saturated_fat_g": 1.9,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 7.0,
+              "sodium_mg": 49.0,
+              "carbohydrates_g": 15.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 7.0,
+              "protein_g": 5.0,
+              "potassium_mg": 167.0,
+              "calcium_mg": 128.0,
+              "iron_mg": 0.7
+            }
+          }
+        ],
         "Latin - Featured Entree": [
           {
             "name": "Taco Seitan",
@@ -70994,9 +71064,10 @@
             "name": "Mushroom Sesame Bulgogi",
             "description": "",
             "serving_size": "6 oz",
-            "calories": 238.0,
-            "ingredients": "Whole Bartlett Pear, Crimini Mushrooms, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Sesame Oil (Soybean Oil, Sesame Oil.), Syrup Maple Pure (Pure Maple Syrup.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Korean Chili Paste Gochujang Catering (INGREDIENTS: TAPIOCA SYRUP, WATER, BROWN RICE, RED PEPPER POWDER, SALT, ALCOHOL (TO PRESERVE FRESHNESS, SOYBEAN, GARLIC, ONION, , CONTAINS: SOYBEAN), Honey (Ingredients:, Honey), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Crushed Red Pepper (Cayenne Pepper), Water, Garlic Minced In Water 32 OZ (Garlic, Water. Contains: Naturally Occurring Sulfites.), Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum).",
+            "calories": 242.0,
+            "ingredients": "Whole Bartlett Pear, Crimini Mushrooms, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Sesame Oil (Soybean Oil, Sesame Oil.), Syrup Maple Pure (Pure Maple Syrup.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Korean Chili Paste Gochujang (RED PEPPER SEASONING (RED PEPPER POWDER, WATER, SALT, GARLIC, WHEAT RICE, SALT RICE POWDER, SOYBEAN POWDER, MONOSODIUM L-GLUTAMATE, POTASSIUM SORBATE, SEED MALT), Honey (Ingredients:, Honey), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Crushed Red Pepper (Cayenne Pepper), Water, Garlic Minced In Water 32 OZ (Garlic, Water. Contains: Naturally Occurring Sulfites.), Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum).",
             "allergens": [
+              "Wheat",
               "Soy",
               "Sesame"
             ],
@@ -71006,18 +71077,18 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 238.0,
+              "calories": 242.0,
               "fat_g": 14.0,
               "saturated_fat_g": 2.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1119.0,
-              "carbohydrates_g": 27.0,
+              "sodium_mg": 1130.0,
+              "carbohydrates_g": 28.0,
               "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
+              "added_sugar_g": 1.0,
               "total_sugar_g": 18.0,
               "protein_g": 4.0,
-              "potassium_mg": 334.0,
+              "potassium_mg": 340.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
             }
@@ -71059,33 +71130,30 @@
           {
             "name": "Kimchi",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 19.0,
-            "ingredients": "Cabbage Nappa, Radish Daikon 40 LB, Green Onion, Paste Pepper Hot Korean (Red pepper powder, corn syrup, water, red pepper seasoning (red pepper powder, water, salt, garlic, onion), wheat flour, salt, rice powder, soybean powder, glucose, garlic powder, monosodium L-glutamate, potasium sorbate.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Cayenne Pepper (Black Pepper).",
+            "serving_size": "1 Tbsp",
+            "calories": 1.0,
+            "ingredients": "Spicy Kimchi (Napa Cabbage, Radish, Water, Red Pepper, Garlic, Cane Sugar, Fish Sauce (Anchovies, Salt), Sea Salt, Monosodium Glutamate, Calcium Lactate, Ginger, Sorbitol, Onion, Xanthan Gum.), Cabbage Nappa.",
             "allergens": [
-              "Wheat",
-              "Soy"
+              "Fish"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 19.0,
-              "fat_g": 0.1,
+              "calories": 1.0,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 258.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 37.0,
+              "carbohydrates_g": 0.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 149.0,
-              "calcium_mg": 57.0,
-              "iron_mg": 0.6
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 16.0,
+              "calcium_mg": 4.6,
+              "iron_mg": 0.2
             }
           },
           {
@@ -71118,35 +71186,6 @@
             }
           },
           {
-            "name": "Quinoa",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 71.0,
-            "ingredients": "Water, Quinoa.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 71.0,
-              "fat_g": 1.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
-              "carbohydrates_g": 12.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 1.0,
-              "calcium_mg": 10.0,
-              "iron_mg": 0.8
-            }
-          },
-          {
             "name": "Roasted Sweet Potato Bites",
             "description": "",
             "serving_size": "1 serving",
@@ -71154,9 +71193,9 @@
             "ingredients": "Organic Sweet Potato, Rice Bran Oil, Kosher Salt, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 348.0,
@@ -71270,9 +71309,10 @@
             "name": "Bibimbap Sauce",
             "description": "",
             "serving_size": "2 fl oz",
-            "calories": 107.0,
-            "ingredients": "Korean Chili Paste Gochujang Catering (INGREDIENTS: TAPIOCA SYRUP, WATER, BROWN RICE, RED PEPPER POWDER, SALT, ALCOHOL (TO PRESERVE FRESHNESS, SOYBEAN, GARLIC, ONION, , CONTAINS: SOYBEAN), Honey (Ingredients:, Honey), Cane Sugar (Sugar), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Sesame Oil (Soybean Oil, Sesame Oil.), Water, Garlic Whole Peeled Case.",
+            "calories": 156.0,
+            "ingredients": "Korean Chili Paste Gochujang (RED PEPPER SEASONING (RED PEPPER POWDER, WATER, SALT, GARLIC, WHEAT RICE, SALT RICE POWDER, SOYBEAN POWDER, MONOSODIUM L-GLUTAMATE, POTASSIUM SORBATE, SEED MALT), Honey (Ingredients:, Honey), Cane Sugar (Sugar), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Sesame Oil (Soybean Oil, Sesame Oil.), Water, Garlic Whole Peeled Case.",
             "allergens": [
+              "Wheat",
               "Soy",
               "Sesame"
             ],
@@ -71282,19 +71322,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 107.0,
+              "calories": 156.0,
               "fat_g": 3.2,
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 529.0,
-              "carbohydrates_g": 20.0,
+              "sodium_mg": 690.0,
+              "carbohydrates_g": 31.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 16.0,
-              "protein_g": 0.0,
-              "potassium_mg": 10.0,
-              "calcium_mg": 3.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 24.0,
+              "protein_g": 2.0,
+              "potassium_mg": 109.0,
+              "calcium_mg": 6.0,
               "iron_mg": 0.1
             }
           },
@@ -71327,38 +71367,6 @@
               "potassium_mg": 198.0,
               "calcium_mg": 20.0,
               "iron_mg": 1.8
-            }
-          },
-          {
-            "name": "Sesame Dipping Sauce",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 54.0,
-              "fat_g": 4.0,
-              "saturated_fat_g": 0.6,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1428.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 10.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.8
             }
           },
           {
@@ -79805,6 +79813,40 @@
             }
           }
         ],
+        "Latin - Breakfast Additions": [
+          {
+            "name": "Banana and Chia Seed Overnight Oats",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 114.0,
+            "ingredients": "2% Milk (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), GF Rolled Oats (Whole grain rolled oats.), Bananas Large Premium Green, Chobani Vanilla Fat Free Greek Yogurt (Cultured Nonfat Milk, Cane Sugar, Water, Natural Flavors, Fruit Pectin, Guar Gum, Locust Bean Gum, Vanilla Extract, Lemon Juice Concentrate. Contains Live And Active Cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, And L. Rhamnosus., Contains: Milk), Granola Vanilla 25# Red Plate (Certified gluten free oats, applesauce (apples, citric ascorbic acid), non-GMO canola oil, vegan brown sugar, vanilla, sea salt.), Black Chia Seed, Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.).",
+            "allergens": [
+              "Milk",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 114.0,
+              "fat_g": 4.0,
+              "saturated_fat_g": 1.9,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 7.0,
+              "sodium_mg": 49.0,
+              "carbohydrates_g": 15.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 7.0,
+              "protein_g": 5.0,
+              "potassium_mg": 167.0,
+              "calcium_mg": 128.0,
+              "iron_mg": 0.7
+            }
+          }
+        ],
         "Latin - Featured Entree": [
           {
             "name": "Latin Rice with Mixed Vegetables",
@@ -82836,31 +82878,29 @@
             "name": "Potato & Cauliflower Vindaloo",
             "description": "",
             "serving_size": "4 oz",
-            "calories": 236.0,
-            "ingredients": "Potato Red B 10 LB, Garlic Whole Peeled Case, Cauliflower Florets, Wine Box Franzia Merlot, Unsalted Butter (Cream, (milk), natural flavor.), Yellow Onion, Rice Bran Oil, Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [
-              "Milk"
-            ],
+            "calories": 126.0,
+            "ingredients": "Potato Red B 10 LB, Garlic Whole Peeled Case, Cauliflower Florets, Wine Box Franzia Merlot, Yellow Onion, Rice Bran Oil, Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 236.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 6.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 20.0,
-              "sodium_mg": 102.0,
-              "carbohydrates_g": 27.0,
-              "fiber_g": 3.0,
+              "calories": 126.0,
+              "fat_g": 3.7,
+              "saturated_fat_g": 0.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 76.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 559.0,
-              "calcium_mg": 101.0,
-              "iron_mg": 1.4
+              "protein_g": 3.0,
+              "potassium_mg": 418.0,
+              "calcium_mg": 74.0,
+              "iron_mg": 1.1
             }
           }
         ],
@@ -82991,35 +83031,6 @@
           }
         ],
         "Asia - Sauces and Toppings": [
-          {
-            "name": "Mango Chutney",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 24.0,
-            "ingredients": "Tamarind Concentrate (INGREDIENT: TAMARIND 100%), Mango (Mango 100%), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Tomato Paste (Tomato paste, salt, spices, natural flavors, citric acid.), Sugar Granulated (Sugar), Fenugreek - Whole Seed, Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Ground Cardamon (Ingredients: Cardamom), Coriander - Ground, Crushed Red Pepper (Cayenne Pepper), Saffron.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 24.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 4.0,
-              "carbohydrates_g": 5.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 5.0,
-              "iron_mg": 0.2
-            }
-          },
           {
             "name": "Cashew Whole Raw Unsalted",
             "description": "",
@@ -91663,6 +91674,40 @@
               "potassium_mg": 0.0,
               "calcium_mg": 6.0,
               "iron_mg": 0.2
+            }
+          }
+        ],
+        "Latin - Breakfast Additions": [
+          {
+            "name": "Banana and Chia Seed Overnight Oats",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 114.0,
+            "ingredients": "2% Milk (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), GF Rolled Oats (Whole grain rolled oats.), Bananas Large Premium Green, Chobani Vanilla Fat Free Greek Yogurt (Cultured Nonfat Milk, Cane Sugar, Water, Natural Flavors, Fruit Pectin, Guar Gum, Locust Bean Gum, Vanilla Extract, Lemon Juice Concentrate. Contains Live And Active Cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, And L. Rhamnosus., Contains: Milk), Granola Vanilla 25# Red Plate (Certified gluten free oats, applesauce (apples, citric ascorbic acid), non-GMO canola oil, vegan brown sugar, vanilla, sea salt.), Black Chia Seed, Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.).",
+            "allergens": [
+              "Milk",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 114.0,
+              "fat_g": 4.0,
+              "saturated_fat_g": 1.9,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 7.0,
+              "sodium_mg": 49.0,
+              "carbohydrates_g": 15.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 7.0,
+              "protein_g": 5.0,
+              "potassium_mg": 167.0,
+              "calcium_mg": 128.0,
+              "iron_mg": 0.7
             }
           }
         ],
@@ -103088,6 +103133,40 @@
             }
           }
         ],
+        "Latin - Breakfast Additions": [
+          {
+            "name": "Banana and Chia Seed Overnight Oats",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 114.0,
+            "ingredients": "2% Milk (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), GF Rolled Oats (Whole grain rolled oats.), Bananas Large Premium Green, Chobani Vanilla Fat Free Greek Yogurt (Cultured Nonfat Milk, Cane Sugar, Water, Natural Flavors, Fruit Pectin, Guar Gum, Locust Bean Gum, Vanilla Extract, Lemon Juice Concentrate. Contains Live And Active Cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, And L. Rhamnosus., Contains: Milk), Granola Vanilla 25# Red Plate (Certified gluten free oats, applesauce (apples, citric ascorbic acid), non-GMO canola oil, vegan brown sugar, vanilla, sea salt.), Black Chia Seed, Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.).",
+            "allergens": [
+              "Milk",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 114.0,
+              "fat_g": 4.0,
+              "saturated_fat_g": 1.9,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 7.0,
+              "sodium_mg": 49.0,
+              "carbohydrates_g": 15.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 7.0,
+              "protein_g": 5.0,
+              "potassium_mg": 167.0,
+              "calcium_mg": 128.0,
+              "iron_mg": 0.7
+            }
+          }
+        ],
         "Latin - Featured Entree": [
           {
             "name": "Beef - Taco Meat",
@@ -105667,38 +105746,6 @@
               "potassium_mg": 274.0,
               "calcium_mg": 47.0,
               "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Crispy Garlic Sesame Green Beans",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 97.0,
-            "ingredients": "Green Beans (Ingredients, Green Beans), Sesame Oil (Soybean Oil, Sesame Oil.), Garlic Whole Peeled Case.",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 97.0,
-              "fat_g": 7.0,
-              "saturated_fat_g": 1.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 3.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 2.0,
-              "potassium_mg": 192.0,
-              "calcium_mg": 45.0,
-              "iron_mg": 0.9
             }
           },
           {
@@ -126662,65 +126709,30 @@
           {
             "name": "Kimchi",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 19.0,
-            "ingredients": "Cabbage Nappa, Radish Daikon 40 LB, Green Onion, Paste Pepper Hot Korean (Red pepper powder, corn syrup, water, red pepper seasoning (red pepper powder, water, salt, garlic, onion), wheat flour, salt, rice powder, soybean powder, glucose, garlic powder, monosodium L-glutamate, potasium sorbate.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Cayenne Pepper (Black Pepper).",
+            "serving_size": "1 Tbsp",
+            "calories": 1.0,
+            "ingredients": "Spicy Kimchi (Napa Cabbage, Radish, Water, Red Pepper, Garlic, Cane Sugar, Fish Sauce (Anchovies, Salt), Sea Salt, Monosodium Glutamate, Calcium Lactate, Ginger, Sorbitol, Onion, Xanthan Gum.), Cabbage Nappa.",
             "allergens": [
-              "Wheat",
-              "Soy"
+              "Fish"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 19.0,
-              "fat_g": 0.1,
+              "calories": 1.0,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 258.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 37.0,
+              "carbohydrates_g": 0.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 149.0,
-              "calcium_mg": 57.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Sesame Broccoli",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 86.0,
-            "ingredients": "Broccoli Florets, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Green Onion, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 86.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 0.9,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 463.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 4.0,
-              "potassium_mg": 277.0,
-              "calcium_mg": 80.0,
-              "iron_mg": 1.5
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 16.0,
+              "calcium_mg": 4.6,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -126902,38 +126914,6 @@
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Sesame Dipping Sauce",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 54.0,
-              "fat_g": 4.0,
-              "saturated_fat_g": 0.6,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1428.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 10.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.8
             }
           },
           {
@@ -149335,9 +149315,10 @@
             "name": "Bibimbap Sauce",
             "description": "",
             "serving_size": "2 fl oz",
-            "calories": 107.0,
-            "ingredients": "Korean Chili Paste Gochujang Catering (INGREDIENTS: TAPIOCA SYRUP, WATER, BROWN RICE, RED PEPPER POWDER, SALT, ALCOHOL (TO PRESERVE FRESHNESS, SOYBEAN, GARLIC, ONION, , CONTAINS: SOYBEAN), Honey (Ingredients:, Honey), Cane Sugar (Sugar), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Sesame Oil (Soybean Oil, Sesame Oil.), Water, Garlic Whole Peeled Case.",
+            "calories": 156.0,
+            "ingredients": "Korean Chili Paste Gochujang (RED PEPPER SEASONING (RED PEPPER POWDER, WATER, SALT, GARLIC, WHEAT RICE, SALT RICE POWDER, SOYBEAN POWDER, MONOSODIUM L-GLUTAMATE, POTASSIUM SORBATE, SEED MALT), Honey (Ingredients:, Honey), Cane Sugar (Sugar), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Sesame Oil (Soybean Oil, Sesame Oil.), Water, Garlic Whole Peeled Case.",
             "allergens": [
+              "Wheat",
               "Soy",
               "Sesame"
             ],
@@ -149347,19 +149328,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 107.0,
+              "calories": 156.0,
               "fat_g": 3.2,
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 529.0,
-              "carbohydrates_g": 20.0,
+              "sodium_mg": 690.0,
+              "carbohydrates_g": 31.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 16.0,
-              "protein_g": 0.0,
-              "potassium_mg": 10.0,
-              "calcium_mg": 3.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 24.0,
+              "protein_g": 2.0,
+              "potassium_mg": 109.0,
+              "calcium_mg": 6.0,
               "iron_mg": 0.1
             }
           },
@@ -160661,31 +160642,29 @@
             "name": "Potato & Cauliflower Vindaloo",
             "description": "",
             "serving_size": "4 oz",
-            "calories": 236.0,
-            "ingredients": "Potato Red B 10 LB, Garlic Whole Peeled Case, Cauliflower Florets, Wine Box Franzia Merlot, Unsalted Butter (Cream, (milk), natural flavor.), Yellow Onion, Rice Bran Oil, Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [
-              "Milk"
-            ],
+            "calories": 126.0,
+            "ingredients": "Potato Red B 10 LB, Garlic Whole Peeled Case, Cauliflower Florets, Wine Box Franzia Merlot, Yellow Onion, Rice Bran Oil, Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 236.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 6.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 20.0,
-              "sodium_mg": 102.0,
-              "carbohydrates_g": 27.0,
-              "fiber_g": 3.0,
+              "calories": 126.0,
+              "fat_g": 3.7,
+              "saturated_fat_g": 0.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 76.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 559.0,
-              "calcium_mg": 101.0,
-              "iron_mg": 1.4
+              "protein_g": 3.0,
+              "potassium_mg": 418.0,
+              "calcium_mg": 74.0,
+              "iron_mg": 1.1
             }
           }
         ],
@@ -238205,31 +238184,29 @@
             "name": "Potato & Cauliflower Vindaloo",
             "description": "",
             "serving_size": "4 oz",
-            "calories": 236.0,
-            "ingredients": "Potato Red B 10 LB, Garlic Whole Peeled Case, Cauliflower Florets, Wine Box Franzia Merlot, Unsalted Butter (Cream, (milk), natural flavor.), Yellow Onion, Rice Bran Oil, Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [
-              "Milk"
-            ],
+            "calories": 126.0,
+            "ingredients": "Potato Red B 10 LB, Garlic Whole Peeled Case, Cauliflower Florets, Wine Box Franzia Merlot, Yellow Onion, Rice Bran Oil, Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 236.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 6.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 20.0,
-              "sodium_mg": 102.0,
-              "carbohydrates_g": 27.0,
-              "fiber_g": 3.0,
+              "calories": 126.0,
+              "fat_g": 3.7,
+              "saturated_fat_g": 0.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 76.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 559.0,
-              "calcium_mg": 101.0,
-              "iron_mg": 1.4
+              "protein_g": 3.0,
+              "potassium_mg": 418.0,
+              "calcium_mg": 74.0,
+              "iron_mg": 1.1
             }
           },
           {
@@ -271212,33 +271189,35 @@
             "name": "Crab & Cream Cheese Rangoons",
             "description": "",
             "serving_size": "1 rangoon",
-            "calories": 83.0,
-            "ingredients": "Cream Cheese Rangoon.",
+            "calories": 160.0,
+            "ingredients": "Cream Cheese Crab Rangoon (Filling: Cream Cheese (pasteurized Milk And Cream, Salt, Carob Bean Gum, Cheese Culture), Imitation Crab Meat (water, Fish Protein (alaska Pollock And/or Pacific Whiting), Wheat Starch, Sugar, Potato Starch, Contains 2% Or Less Of: King Crabmeat, Natural And Artificial Flavor, Sorbitol, Egg Whites, Tapioca Starch, Carrageenan, Salt, Sodium Tripolyphosphate, Tetrasodium Pyrophosphate, Carmine, Paprika Oleoresin, Color Added), Water, Sugar, Green Onion, Salt, Fish Sauce (anchovy Extract, Salt, Sugar, Water), Garlic Powder, Modified Food Starch, Sesame Oil, Spices. Wrapper: All Purpose Flour (bleached Wheat Flour Enriched (bleached Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour), Water, Sunflower Oil, Salt, Butter Sauce (modified Corn Starch, Salt, Whey Solids, Non-fat Dry Milk, Maltodextrin, Butter, Sugar, Buttermilk Powder, Natural Butter Flavor, Xanthan Gum, Lactic Acid, Turmeric And Annatto (for Color)), Sugar, Xanthan Gum.).",
             "allergens": [
               "Milk",
               "Egg",
               "Wheat",
               "Soy",
+              "Fish",
+              "Shellfish",
               "Sesame"
             ],
             "dietary_labels": [],
             "is_vegan": false,
             "is_vegetarian": false,
             "nutrition": {
-              "calories": 83.0,
-              "fat_g": 3.3,
-              "saturated_fat_g": 2.0,
+              "calories": 160.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 3.5,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 12.0,
-              "sodium_mg": 107.0,
-              "carbohydrates_g": 11.0,
+              "cholesterol_mg": 20.0,
+              "sodium_mg": 290.0,
+              "carbohydrates_g": 19.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
-              "potassium_mg": 13.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 3.0,
+              "potassium_mg": 30.0,
               "calcium_mg": 17.0,
-              "iron_mg": 0.2
+              "iron_mg": 1.0
             }
           },
           {
@@ -299505,9 +299484,10 @@
             "name": "Mushroom Sesame Bulgogi",
             "description": "",
             "serving_size": "6 oz",
-            "calories": 238.0,
-            "ingredients": "Whole Bartlett Pear, Crimini Mushrooms, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Sesame Oil (Soybean Oil, Sesame Oil.), Syrup Maple Pure (Pure Maple Syrup.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Korean Chili Paste Gochujang Catering (INGREDIENTS: TAPIOCA SYRUP, WATER, BROWN RICE, RED PEPPER POWDER, SALT, ALCOHOL (TO PRESERVE FRESHNESS, SOYBEAN, GARLIC, ONION, , CONTAINS: SOYBEAN), Honey (Ingredients:, Honey), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Crushed Red Pepper (Cayenne Pepper), Water, Garlic Minced In Water 32 OZ (Garlic, Water. Contains: Naturally Occurring Sulfites.), Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum).",
+            "calories": 242.0,
+            "ingredients": "Whole Bartlett Pear, Crimini Mushrooms, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Sesame Oil (Soybean Oil, Sesame Oil.), Syrup Maple Pure (Pure Maple Syrup.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Korean Chili Paste Gochujang (RED PEPPER SEASONING (RED PEPPER POWDER, WATER, SALT, GARLIC, WHEAT RICE, SALT RICE POWDER, SOYBEAN POWDER, MONOSODIUM L-GLUTAMATE, POTASSIUM SORBATE, SEED MALT), Honey (Ingredients:, Honey), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Crushed Red Pepper (Cayenne Pepper), Water, Garlic Minced In Water 32 OZ (Garlic, Water. Contains: Naturally Occurring Sulfites.), Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum).",
             "allergens": [
+              "Wheat",
               "Soy",
               "Sesame"
             ],
@@ -299517,18 +299497,18 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 238.0,
+              "calories": 242.0,
               "fat_g": 14.0,
               "saturated_fat_g": 2.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1119.0,
-              "carbohydrates_g": 27.0,
+              "sodium_mg": 1130.0,
+              "carbohydrates_g": 28.0,
               "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
+              "added_sugar_g": 1.0,
               "total_sugar_g": 18.0,
               "protein_g": 4.0,
-              "potassium_mg": 334.0,
+              "potassium_mg": 340.0,
               "calcium_mg": 38.0,
               "iron_mg": 0.9
             }
@@ -299570,33 +299550,30 @@
           {
             "name": "Kimchi",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 19.0,
-            "ingredients": "Cabbage Nappa, Radish Daikon 40 LB, Green Onion, Paste Pepper Hot Korean (Red pepper powder, corn syrup, water, red pepper seasoning (red pepper powder, water, salt, garlic, onion), wheat flour, salt, rice powder, soybean powder, glucose, garlic powder, monosodium L-glutamate, potasium sorbate.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Cayenne Pepper (Black Pepper).",
+            "serving_size": "1 Tbsp",
+            "calories": 1.0,
+            "ingredients": "Spicy Kimchi (Napa Cabbage, Radish, Water, Red Pepper, Garlic, Cane Sugar, Fish Sauce (Anchovies, Salt), Sea Salt, Monosodium Glutamate, Calcium Lactate, Ginger, Sorbitol, Onion, Xanthan Gum.), Cabbage Nappa.",
             "allergens": [
-              "Wheat",
-              "Soy"
+              "Fish"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 19.0,
-              "fat_g": 0.1,
+              "calories": 1.0,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 258.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 37.0,
+              "carbohydrates_g": 0.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 149.0,
-              "calcium_mg": 57.0,
-              "iron_mg": 0.6
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 16.0,
+              "calcium_mg": 4.6,
+              "iron_mg": 0.2
             }
           },
           {
@@ -299629,35 +299606,6 @@
             }
           },
           {
-            "name": "Quinoa",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 71.0,
-            "ingredients": "Water, Quinoa.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 71.0,
-              "fat_g": 1.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
-              "carbohydrates_g": 12.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 1.0,
-              "calcium_mg": 10.0,
-              "iron_mg": 0.8
-            }
-          },
-          {
             "name": "Roasted Sweet Potato Bites",
             "description": "",
             "serving_size": "1 serving",
@@ -299665,9 +299613,9 @@
             "ingredients": "Organic Sweet Potato, Rice Bran Oil, Kosher Salt, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 348.0,
@@ -299781,9 +299729,10 @@
             "name": "Bibimbap Sauce",
             "description": "",
             "serving_size": "2 fl oz",
-            "calories": 107.0,
-            "ingredients": "Korean Chili Paste Gochujang Catering (INGREDIENTS: TAPIOCA SYRUP, WATER, BROWN RICE, RED PEPPER POWDER, SALT, ALCOHOL (TO PRESERVE FRESHNESS, SOYBEAN, GARLIC, ONION, , CONTAINS: SOYBEAN), Honey (Ingredients:, Honey), Cane Sugar (Sugar), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Sesame Oil (Soybean Oil, Sesame Oil.), Water, Garlic Whole Peeled Case.",
+            "calories": 156.0,
+            "ingredients": "Korean Chili Paste Gochujang (RED PEPPER SEASONING (RED PEPPER POWDER, WATER, SALT, GARLIC, WHEAT RICE, SALT RICE POWDER, SOYBEAN POWDER, MONOSODIUM L-GLUTAMATE, POTASSIUM SORBATE, SEED MALT), Honey (Ingredients:, Honey), Cane Sugar (Sugar), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Sesame Oil (Soybean Oil, Sesame Oil.), Water, Garlic Whole Peeled Case.",
             "allergens": [
+              "Wheat",
               "Soy",
               "Sesame"
             ],
@@ -299793,19 +299742,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 107.0,
+              "calories": 156.0,
               "fat_g": 3.2,
               "saturated_fat_g": 0.5,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 529.0,
-              "carbohydrates_g": 20.0,
+              "sodium_mg": 690.0,
+              "carbohydrates_g": 31.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 16.0,
-              "protein_g": 0.0,
-              "potassium_mg": 10.0,
-              "calcium_mg": 3.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 24.0,
+              "protein_g": 2.0,
+              "potassium_mg": 109.0,
+              "calcium_mg": 6.0,
               "iron_mg": 0.1
             }
           },
@@ -299838,38 +299787,6 @@
               "potassium_mg": 198.0,
               "calcium_mg": 20.0,
               "iron_mg": 1.8
-            }
-          },
-          {
-            "name": "Sesame Dipping Sauce",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 54.0,
-            "ingredients": "Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Sesame Seeds (Ingredients: Organic sesame seeds), Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 54.0,
-              "fat_g": 4.0,
-              "saturated_fat_g": 0.6,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1428.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 10.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.8
             }
           },
           {
@@ -308523,31 +308440,29 @@
             "name": "Potato & Cauliflower Vindaloo",
             "description": "",
             "serving_size": "4 oz",
-            "calories": 236.0,
-            "ingredients": "Potato Red B 10 LB, Garlic Whole Peeled Case, Cauliflower Florets, Wine Box Franzia Merlot, Unsalted Butter (Cream, (milk), natural flavor.), Yellow Onion, Rice Bran Oil, Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [
-              "Milk"
-            ],
+            "calories": 126.0,
+            "ingredients": "Potato Red B 10 LB, Garlic Whole Peeled Case, Cauliflower Florets, Wine Box Franzia Merlot, Yellow Onion, Rice Bran Oil, Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 236.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 6.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 20.0,
-              "sodium_mg": 102.0,
-              "carbohydrates_g": 27.0,
-              "fiber_g": 3.0,
+              "calories": 126.0,
+              "fat_g": 3.7,
+              "saturated_fat_g": 0.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 76.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 559.0,
-              "calcium_mg": 101.0,
-              "iron_mg": 1.4
+              "protein_g": 3.0,
+              "potassium_mg": 418.0,
+              "calcium_mg": 74.0,
+              "iron_mg": 1.1
             }
           }
         ],
@@ -308678,35 +308593,6 @@
           }
         ],
         "Asia - Sauces and Toppings": [
-          {
-            "name": "Mango Chutney",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 24.0,
-            "ingredients": "Tamarind Concentrate (INGREDIENT: TAMARIND 100%), Mango (Mango 100%), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Tomato Paste (Tomato paste, salt, spices, natural flavors, citric acid.), Sugar Granulated (Sugar), Fenugreek - Whole Seed, Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Ground Cardamon (Ingredients: Cardamom), Coriander - Ground, Crushed Red Pepper (Cayenne Pepper), Saffron.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 24.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 4.0,
-              "carbohydrates_g": 5.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 5.0,
-              "iron_mg": 0.2
-            }
-          },
           {
             "name": "Cashew Whole Raw Unsalted",
             "description": "",
@@ -325871,38 +325757,6 @@
               "potassium_mg": 274.0,
               "calcium_mg": 47.0,
               "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Crispy Garlic Sesame Green Beans",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 97.0,
-            "ingredients": "Green Beans (Ingredients, Green Beans), Sesame Oil (Soybean Oil, Sesame Oil.), Garlic Whole Peeled Case.",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 97.0,
-              "fat_g": 7.0,
-              "saturated_fat_g": 1.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 3.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 2.0,
-              "potassium_mg": 192.0,
-              "calcium_mg": 45.0,
-              "iron_mg": 0.9
             }
           },
           {
