@@ -59676,35 +59676,36 @@
         ],
         "Asia - Stir Fries and Sides": [
           {
-            "name": "Chicken Egg Rolls",
+            "name": "Vegetable Spring Rolls",
             "description": "",
-            "serving_size": "2 eggroll",
-            "calories": 170.0,
-            "ingredients": "Chicken & Vegetable Egg Rolls (Crust: Bleached Wheat Flour, Malted Barley Flour, Water, Salt, Fd&c Yellow #5 & #6, Calcium Propionate, Corn Starch. Filling: Cabbage, Chicken, Carrots, Textured Vegetable Protein (soy Flour), Sugar, Salt, Carrageenan, Dextrose, Oil (sesame Oil, Soybean Oil, Or Vegetable Oil), Garlic Powder, Spice. Contains: Eggs, Soy, Wheat).",
+            "serving_size": "1 spring roll",
+            "calories": 75.0,
+            "ingredients": "Veggie Spring Rolls (FIlling: Cabbage, water, enriched flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), carrots, bamboo shoots, onion, mushrooms, contains 2 percent or less of modified food starch, sugar, salt, flavor (autolyzed yeast extract, salt, dextrose, natural flavor), cottonseed oil, soy secithin, spice, garlic powder, dextrose, citric acid.).",
             "allergens": [
-              "Egg",
               "Wheat",
               "Soy",
               "Sesame"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
-              "calories": 170.0,
-              "fat_g": 2.1,
-              "saturated_fat_g": 0.0,
+              "calories": 75.0,
+              "fat_g": 3.4,
+              "saturated_fat_g": 0.8,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 9.0,
-              "sodium_mg": 574.0,
-              "carbohydrates_g": 17.0,
-              "fiber_g": 2.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 184.0,
+              "carbohydrates_g": 10.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 11.0,
+              "protein_g": 1.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 55.0,
-              "iron_mg": 1.5
+              "calcium_mg": 8.0,
+              "iron_mg": 0.5
             }
           },
           {
@@ -105749,36 +105750,35 @@
             }
           },
           {
-            "name": "Vegetable Spring Rolls",
+            "name": "Chicken Egg Rolls",
             "description": "",
-            "serving_size": "1 spring roll",
-            "calories": 75.0,
-            "ingredients": "Veggie Spring Rolls (FIlling: Cabbage, water, enriched flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), carrots, bamboo shoots, onion, mushrooms, contains 2 percent or less of modified food starch, sugar, salt, flavor (autolyzed yeast extract, salt, dextrose, natural flavor), cottonseed oil, soy secithin, spice, garlic powder, dextrose, citric acid.).",
+            "serving_size": "2 eggroll",
+            "calories": 170.0,
+            "ingredients": "Chicken & Vegetable Egg Rolls (Crust: Bleached Wheat Flour, Malted Barley Flour, Water, Salt, Fd&c Yellow #5 & #6, Calcium Propionate, Corn Starch. Filling: Cabbage, Chicken, Carrots, Textured Vegetable Protein (soy Flour), Sugar, Salt, Carrageenan, Dextrose, Oil (sesame Oil, Soybean Oil, Or Vegetable Oil), Garlic Powder, Spice. Contains: Eggs, Soy, Wheat).",
             "allergens": [
+              "Egg",
               "Wheat",
               "Soy",
               "Sesame"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 75.0,
-              "fat_g": 3.4,
-              "saturated_fat_g": 0.8,
+              "calories": 170.0,
+              "fat_g": 2.1,
+              "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 184.0,
-              "carbohydrates_g": 10.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 9.0,
+              "sodium_mg": 574.0,
+              "carbohydrates_g": 17.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 1.0,
+              "protein_g": 11.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 8.0,
-              "iron_mg": 0.5
+              "calcium_mg": 55.0,
+              "iron_mg": 1.5
             }
           },
           {
@@ -290919,35 +290919,36 @@
         ],
         "Asia - Stir Fries and Sides": [
           {
-            "name": "Chicken Egg Rolls",
+            "name": "Vegetable Spring Rolls",
             "description": "",
-            "serving_size": "2 eggroll",
-            "calories": 170.0,
-            "ingredients": "Chicken & Vegetable Egg Rolls (Crust: Bleached Wheat Flour, Malted Barley Flour, Water, Salt, Fd&c Yellow #5 & #6, Calcium Propionate, Corn Starch. Filling: Cabbage, Chicken, Carrots, Textured Vegetable Protein (soy Flour), Sugar, Salt, Carrageenan, Dextrose, Oil (sesame Oil, Soybean Oil, Or Vegetable Oil), Garlic Powder, Spice. Contains: Eggs, Soy, Wheat).",
+            "serving_size": "1 spring roll",
+            "calories": 75.0,
+            "ingredients": "Veggie Spring Rolls (FIlling: Cabbage, water, enriched flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), carrots, bamboo shoots, onion, mushrooms, contains 2 percent or less of modified food starch, sugar, salt, flavor (autolyzed yeast extract, salt, dextrose, natural flavor), cottonseed oil, soy secithin, spice, garlic powder, dextrose, citric acid.).",
             "allergens": [
-              "Egg",
               "Wheat",
               "Soy",
               "Sesame"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
-              "calories": 170.0,
-              "fat_g": 2.1,
-              "saturated_fat_g": 0.0,
+              "calories": 75.0,
+              "fat_g": 3.4,
+              "saturated_fat_g": 0.8,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 9.0,
-              "sodium_mg": 574.0,
-              "carbohydrates_g": 17.0,
-              "fiber_g": 2.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 184.0,
+              "carbohydrates_g": 10.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 11.0,
+              "protein_g": 1.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 55.0,
-              "iron_mg": 1.5
+              "calcium_mg": 8.0,
+              "iron_mg": 0.5
             }
           },
           {
@@ -325760,36 +325761,35 @@
             }
           },
           {
-            "name": "Vegetable Spring Rolls",
+            "name": "Chicken Egg Rolls",
             "description": "",
-            "serving_size": "1 spring roll",
-            "calories": 75.0,
-            "ingredients": "Veggie Spring Rolls (FIlling: Cabbage, water, enriched flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), carrots, bamboo shoots, onion, mushrooms, contains 2 percent or less of modified food starch, sugar, salt, flavor (autolyzed yeast extract, salt, dextrose, natural flavor), cottonseed oil, soy secithin, spice, garlic powder, dextrose, citric acid.).",
+            "serving_size": "2 eggroll",
+            "calories": 170.0,
+            "ingredients": "Chicken & Vegetable Egg Rolls (Crust: Bleached Wheat Flour, Malted Barley Flour, Water, Salt, Fd&c Yellow #5 & #6, Calcium Propionate, Corn Starch. Filling: Cabbage, Chicken, Carrots, Textured Vegetable Protein (soy Flour), Sugar, Salt, Carrageenan, Dextrose, Oil (sesame Oil, Soybean Oil, Or Vegetable Oil), Garlic Powder, Spice. Contains: Eggs, Soy, Wheat).",
             "allergens": [
+              "Egg",
               "Wheat",
               "Soy",
               "Sesame"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 75.0,
-              "fat_g": 3.4,
-              "saturated_fat_g": 0.8,
+              "calories": 170.0,
+              "fat_g": 2.1,
+              "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 184.0,
-              "carbohydrates_g": 10.0,
-              "fiber_g": 1.0,
+              "cholesterol_mg": 9.0,
+              "sodium_mg": 574.0,
+              "carbohydrates_g": 17.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 1.0,
+              "protein_g": 11.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 8.0,
-              "iron_mg": 0.5
+              "calcium_mg": 55.0,
+              "iron_mg": 1.5
             }
           },
           {
