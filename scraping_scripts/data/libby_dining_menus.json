@@ -213,7 +213,7 @@
         ],
         "Gluten Free Sides": [
           {
-            "name": "Pork Sausage Breakfast Maple Links",
+            "name": "Maple Link Sausage",
             "description": "",
             "serving_size": "1 sausage link",
             "calories": 103.0,
@@ -7391,30 +7391,30 @@
         ],
         "Gluten Free Sides": [
           {
-            "name": "Sausage Patties",
+            "name": "Maple Link Sausage",
             "description": "",
-            "serving_size": "1 patty",
-            "calories": 182.0,
-            "ingredients": "Ingredients, Ingredients: Pork, Water, Salt, Spices, Dextrose, Sugar, Flavoring, Lime Juice Concentrate..",
+            "serving_size": "1 sausage link",
+            "calories": 103.0,
+            "ingredients": "Pork, water, salt, sugar, dextrose, natural flavors (contains maltodextrin, sugar, caramel color, natural flavor, molasses, maple syrup), corn syrup solids, maple granules (cane refinery syrups, maple syrup, natural maple flavors). In collagen casing..",
             "allergens": [],
             "dietary_labels": [],
             "is_vegan": false,
             "is_vegetarian": false,
             "nutrition": {
-              "calories": 182.0,
-              "fat_g": 17.0,
-              "saturated_fat_g": 6.0,
+              "calories": 103.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 4.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 38.0,
-              "sodium_mg": 273.0,
-              "carbohydrates_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 200.0,
+              "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 6.0,
+              "protein_g": 3.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 0.0
+              "iron_mg": 0.4
             }
           },
           {
@@ -18239,7 +18239,7 @@
         ],
         "Gluten Free Sides": [
           {
-            "name": "Pork Sausage Breakfast Maple Links",
+            "name": "Maple Link Sausage",
             "description": "",
             "serving_size": "1 sausage link",
             "calories": 103.0,
@@ -36491,7 +36491,7 @@
         ],
         "Gluten Free Sides": [
           {
-            "name": "Pork Sausage Breakfast Maple Links",
+            "name": "Maple Link Sausage",
             "description": "",
             "serving_size": "1 sausage link",
             "calories": 103.0,
@@ -52909,7 +52909,7 @@
         ],
         "Gluten Free Sides": [
           {
-            "name": "Pork Sausage Breakfast Maple Links",
+            "name": "Maple Link Sausage",
             "description": "",
             "serving_size": "1 sausage link",
             "calories": 103.0,

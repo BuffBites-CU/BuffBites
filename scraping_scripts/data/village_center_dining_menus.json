@@ -39323,38 +39323,6 @@
             }
           },
           {
-            "name": "Huevo Rancheros",
-            "description": "",
-            "serving_size": "1 serving",
-            "calories": 386.0,
-            "ingredients": "White Flour Tortilla (Ingredients, ENRICHED UNBLEACHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN AND FOLIC ACID), WATER, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PALM AND/OR CORN OIL), CONTAINS 2% OR LESS OF THE FOLLOWING: SALT, ALUMINUM-FREE LEAVENING (SODIUM ACID PYROPHOSPHATE, SODIUM BICARBONATE, CORNSTARCH, MONOCALCIUM PHOSPHATE), WHEAT PROTEIN, PRESERVATIVES (CALCIUM PROPIONATE, SORBIC ACID), DOUGH CONDITIONER (FUMARIC ACID, XANTHAN GUM, MONO- AND DIGLYCERIDES, SODIUM METABISULPHITE). ALLERGENS: WHEAT), Whole Eggs (Cage Free), Pinto Beans, Water, Roma Tomatoes, Red Bermuda Onions, Pepper Jalapeno Case, Yellow Onion, Cilantro 30 CT, Garlic Whole Peeled Case, Green Chilis, Fresh Limes, Chipotle Peppers in Adobo Sauce, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt, Oregano Leaf, Whole Cumin Seed, Black pepper (Black Pepper), Coriander - Whole, Garlic Granules, Onion Granules, Thyme Leaf.",
-            "allergens": [
-              "Egg",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 386.0,
-              "fat_g": 12.0,
-              "saturated_fat_g": 5.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 211.0,
-              "sodium_mg": 742.0,
-              "carbohydrates_g": 54.0,
-              "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 19.0,
-              "potassium_mg": 506.0,
-              "calcium_mg": 162.0,
-              "iron_mg": 4.6
-            }
-          },
-          {
             "name": "Quinoa Hash",
             "description": "",
             "serving_size": "0.5 cups",
@@ -39387,35 +39355,6 @@
           }
         ],
         "Vegetables & Sides": [
-          {
-            "name": "Refried Beans",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 43.0,
-            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 43.0,
-              "fat_g": 0.4,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 247.0,
-              "carbohydrates_g": 7.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
-              "potassium_mg": 3.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.6
-            }
-          },
           {
             "name": "Pork Green Chili",
             "description": "",
@@ -82665,38 +82604,6 @@
               "potassium_mg": 37.0,
               "calcium_mg": 194.0,
               "iron_mg": 2.9
-            }
-          },
-          {
-            "name": "Huevo Rancheros",
-            "description": "",
-            "serving_size": "1 serving",
-            "calories": 386.0,
-            "ingredients": "White Flour Tortilla (Ingredients, ENRICHED UNBLEACHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN AND FOLIC ACID), WATER, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PALM AND/OR CORN OIL), CONTAINS 2% OR LESS OF THE FOLLOWING: SALT, ALUMINUM-FREE LEAVENING (SODIUM ACID PYROPHOSPHATE, SODIUM BICARBONATE, CORNSTARCH, MONOCALCIUM PHOSPHATE), WHEAT PROTEIN, PRESERVATIVES (CALCIUM PROPIONATE, SORBIC ACID), DOUGH CONDITIONER (FUMARIC ACID, XANTHAN GUM, MONO- AND DIGLYCERIDES, SODIUM METABISULPHITE). ALLERGENS: WHEAT), Whole Eggs (Cage Free), Pinto Beans, Water, Roma Tomatoes, Red Bermuda Onions, Pepper Jalapeno Case, Yellow Onion, Cilantro 30 CT, Garlic Whole Peeled Case, Green Chilis, Fresh Limes, Chipotle Peppers in Adobo Sauce, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt, Oregano Leaf, Whole Cumin Seed, Black pepper (Black Pepper), Coriander - Whole, Garlic Granules, Onion Granules, Thyme Leaf.",
-            "allergens": [
-              "Egg",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 386.0,
-              "fat_g": 12.0,
-              "saturated_fat_g": 5.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 211.0,
-              "sodium_mg": 742.0,
-              "carbohydrates_g": 54.0,
-              "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 19.0,
-              "potassium_mg": 506.0,
-              "calcium_mg": 162.0,
-              "iron_mg": 4.6
             }
           },
           {
@@ -168896,38 +168803,6 @@
             }
           },
           {
-            "name": "Huevo Rancheros",
-            "description": "",
-            "serving_size": "1 serving",
-            "calories": 386.0,
-            "ingredients": "White Flour Tortilla (Ingredients, ENRICHED UNBLEACHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN AND FOLIC ACID), WATER, VEGETABLE SHORTENING (CONTAINS ONE OR MORE OF THE FOLLOWING: PALM AND/OR CORN OIL), CONTAINS 2% OR LESS OF THE FOLLOWING: SALT, ALUMINUM-FREE LEAVENING (SODIUM ACID PYROPHOSPHATE, SODIUM BICARBONATE, CORNSTARCH, MONOCALCIUM PHOSPHATE), WHEAT PROTEIN, PRESERVATIVES (CALCIUM PROPIONATE, SORBIC ACID), DOUGH CONDITIONER (FUMARIC ACID, XANTHAN GUM, MONO- AND DIGLYCERIDES, SODIUM METABISULPHITE). ALLERGENS: WHEAT), Whole Eggs (Cage Free), Pinto Beans, Water, Roma Tomatoes, Red Bermuda Onions, Pepper Jalapeno Case, Yellow Onion, Cilantro 30 CT, Garlic Whole Peeled Case, Green Chilis, Fresh Limes, Chipotle Peppers in Adobo Sauce, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt, Oregano Leaf, Whole Cumin Seed, Black pepper (Black Pepper), Coriander - Whole, Garlic Granules, Onion Granules, Thyme Leaf.",
-            "allergens": [
-              "Egg",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 386.0,
-              "fat_g": 12.0,
-              "saturated_fat_g": 5.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 211.0,
-              "sodium_mg": 742.0,
-              "carbohydrates_g": 54.0,
-              "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 19.0,
-              "potassium_mg": 506.0,
-              "calcium_mg": 162.0,
-              "iron_mg": 4.6
-            }
-          },
-          {
             "name": "Quinoa Hash",
             "description": "",
             "serving_size": "0.5 cups",
@@ -168960,35 +168835,6 @@
           }
         ],
         "Vegetables & Sides": [
-          {
-            "name": "Refried Beans",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 43.0,
-            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 43.0,
-              "fat_g": 0.4,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 247.0,
-              "carbohydrates_g": 7.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
-              "potassium_mg": 3.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.6
-            }
-          },
           {
             "name": "Pork Green Chili",
             "description": "",
