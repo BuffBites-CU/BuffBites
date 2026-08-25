@@ -20468,8 +20468,8 @@
             "name": "Bok Choy Stir Fry",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 83.0,
-            "ingredients": "Cabbage Bok Choy  30 LB, Carrots, Celery, Yellow Onion, Green Bell Peppers, Rice Bran Oil, Red Bell Peppers, Yellow Bell Pepper, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Green Onion, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic, Kosher Salt, Black pepper (Black Pepper).",
+            "calories": 55.0,
+            "ingredients": "Cabbage Bok Choy  30 LB, Carrots, Celery, Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Bran Oil, Green Onion, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic, Kosher Salt, Black pepper (Black Pepper).",
             "allergens": [
               "Soy"
             ],
@@ -20479,9 +20479,9 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 83.0,
-              "fat_g": 7.0,
-              "saturated_fat_g": 1.3,
+              "calories": 55.0,
+              "fat_g": 3.4,
+              "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 304.0,
