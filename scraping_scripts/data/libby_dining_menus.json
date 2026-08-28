@@ -9597,7 +9597,7 @@
             }
           },
           {
-            "name": "* Vegetarian Chili",
+            "name": "Vegetarian Chili",
             "description": "",
             "serving_size": "6 fl oz serving",
             "calories": 182.0,
@@ -28791,7 +28791,7 @@
         ],
         "Specialty Soup": [
           {
-            "name": "* Vegetarian Chili",
+            "name": "Vegetarian Chili",
             "description": "",
             "serving_size": "6 fl oz serving",
             "calories": 182.0,
@@ -29291,7 +29291,7 @@
             }
           },
           {
-            "name": "* Italian Green Beans",
+            "name": "Italian Green Beans",
             "description": "",
             "serving_size": "1 x 0.5 cup",
             "calories": 23.0,
@@ -31498,14 +31498,13 @@
             }
           },
           {
-            "name": "Creamy Pesto Sauce",
+            "name": "Basil Pesto",
             "description": "",
-            "serving_size": "4 fl oz serving",
-            "calories": 232.0,
-            "ingredients": "2% Milk (Organic) (Grade A Reduced Fat Organic Milk, Vitamin A Palmitate, Vitamin D3**.), Heavy Whipping Cream (Heavy cream, carrageenan.), Basil Pesto (Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows’ Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt.), Water, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Unsalted Butter (Cream, (milk), natural flavor.), Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Parmesan Cheese (Pasteurized cow's milk, cheese culture, salt, enzymes.), Wine Box Franzia Chardonnay, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Garlic Chopped In Water (Garlic, water, citric acid. Contains: naturally occurring sulfites.), Onion Granules, Kosher Salt, Black pepper (Black Pepper).",
+            "serving_size": "2 fl oz",
+            "calories": 214.0,
+            "ingredients": "Heavy Whipping Cream (Heavy cream, carrageenan.), Basil Pesto (Ingredients, Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows’ Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt. contains: Milk), Unsalted Butter (Cream, (milk), natural flavor.), Garlic, GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Kosher Salt, Oregano Leaf, Basil, Crushed Red Pepper.",
             "allergens": [
-              "Milk",
-              "Wheat"
+              "Milk"
             ],
             "dietary_labels": [
               "Vegetarian"
@@ -31513,19 +31512,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 232.0,
-              "fat_g": 21.0,
+              "calories": 214.0,
+              "fat_g": 24.0,
               "saturated_fat_g": 12.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 23.0,
-              "sodium_mg": 163.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 0.0,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 8.0,
+              "sodium_mg": 371.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 5.0,
-              "potassium_mg": 80.0,
-              "calcium_mg": 188.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 1.0,
+              "potassium_mg": 16.0,
+              "calcium_mg": 101.0,
               "iron_mg": 0.4
             }
           }
@@ -35029,11 +35028,11 @@
             "name": "Teriyaki Tofu",
             "description": "",
             "serving_size": "6 oz serving",
-            "calories": 176.0,
-            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Teriyaki Sauce (Naturally brewed soy sauce (water, wheat, soybeans, salt), wine, high fructose corn syrup, water, vinegar, salt, spices, onion powder, succinic acid, garlic powder, sodium benzoate: less than 1/10 of 1% as a preservative.), Yellow Onions, Green Bell Peppers, Water, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Carrots, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Brown Sugar, Corn Starch (Corn starch.), Sherry (Wine, salt, contains 1% or less of each of the following:  malic acid, caramel color, natural flavor, potassium metabisulfite (preservative).), Green Onion, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Ginger, Garlic Granules.",
+            "calories": 145.0,
+            "ingredients": "Water, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Orange Juice (Ingredients, Concentrated Orange Juice), Yellow Onions, Green Bell Peppers, Sugar Granulated, Carrots, Brown Sugar, Ginger, Garlic Whole Peeled Case, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Corn Starch (Corn starch.), Sesame Oil (Soybean oil, sesame oil.), Green Onion, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Xanthan Gum, Rice Bran Oil, Crushed Red Pepper.",
             "allergens": [
-              "Wheat",
-              "Soy"
+              "Soy",
+              "Sesame"
             ],
             "dietary_labels": [
               "Vegan"
@@ -35041,20 +35040,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 176.0,
-              "fat_g": 4.5,
-              "saturated_fat_g": 0.6,
+              "calories": 145.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2025.0,
-              "carbohydrates_g": 21.0,
-              "fiber_g": 3.0,
+              "sodium_mg": 1954.0,
+              "carbohydrates_g": 25.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 12.0,
-              "protein_g": 13.0,
-              "potassium_mg": 481.0,
-              "calcium_mg": 173.0,
-              "iron_mg": 3.8
+              "total_sugar_g": 17.0,
+              "protein_g": 7.0,
+              "potassium_mg": 202.0,
+              "calcium_mg": 41.0,
+              "iron_mg": 1.9
             }
           },
           {
@@ -62293,7 +62292,7 @@
             }
           },
           {
-            "name": "* Vegetarian Chili",
+            "name": "Vegetarian Chili",
             "description": "",
             "serving_size": "6 fl oz serving",
             "calories": 182.0,
