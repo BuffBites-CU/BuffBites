@@ -99790,35 +99790,6 @@
         ],
         "Curry Bowls": [
           {
-            "name": "Chickpea & Cauliflower Coconut Curry",
-            "description": "",
-            "serving_size": "3 oz",
-            "calories": 78.0,
-            "ingredients": "Cauliflower Florets, Garbanzo Beans (Prepared chick peas, water, salt, calcium chloride (firming agent), and disodium EDTA (promotes color restoration).), Roma Tomatoes, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Red Bermuda Onions, Water, Extra Virgin Olive Oil, Ginger, Garlic Whole Peeled Case, Kosher Salt, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Chili Powder (Ingredients:  Jalapeno Chili Powder), Ground Cumin Seed, Garam Masala (Spices, turmeric, canola oil.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 78.0,
-              "fat_g": 5.0,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 165.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 2.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 17.0,
-              "iron_mg": 0.8
-            }
-          },
-          {
             "name": "Red Lentil Curry",
             "description": "",
             "serving_size": "0.5 cups",
@@ -104605,33 +104576,6 @@
               "protein_g": 1.0,
               "potassium_mg": 104.0,
               "calcium_mg": 4.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Beef Gravy",
-            "description": "",
-            "serving_size": "1 x tablespoon",
-            "calories": 7.0,
-            "ingredients": "Water, Yellow Onion, Celery, Carrots, Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Tomato Paste (Tomato paste, salt, spices, natural flavors, citric acid.).",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 7.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 60.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 13.0,
-              "calcium_mg": 2.0,
               "iron_mg": 0.1
             }
           },
@@ -229536,35 +229480,6 @@
         ],
         "Curry Bowls": [
           {
-            "name": "Chickpea & Cauliflower Coconut Curry",
-            "description": "",
-            "serving_size": "3 oz",
-            "calories": 78.0,
-            "ingredients": "Cauliflower Florets, Garbanzo Beans (Prepared chick peas, water, salt, calcium chloride (firming agent), and disodium EDTA (promotes color restoration).), Roma Tomatoes, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Red Bermuda Onions, Water, Extra Virgin Olive Oil, Ginger, Garlic Whole Peeled Case, Kosher Salt, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Chili Powder (Ingredients:  Jalapeno Chili Powder), Ground Cumin Seed, Garam Masala (Spices, turmeric, canola oil.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 78.0,
-              "fat_g": 5.0,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 165.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 2.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 17.0,
-              "iron_mg": 0.8
-            }
-          },
-          {
             "name": "Red Lentil Curry",
             "description": "",
             "serving_size": "0.5 cups",
@@ -234351,33 +234266,6 @@
               "protein_g": 1.0,
               "potassium_mg": 104.0,
               "calcium_mg": 4.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Beef Gravy",
-            "description": "",
-            "serving_size": "1 x tablespoon",
-            "calories": 7.0,
-            "ingredients": "Water, Yellow Onion, Celery, Carrots, Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Tomato Paste (Tomato paste, salt, spices, natural flavors, citric acid.).",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 7.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 60.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 13.0,
-              "calcium_mg": 2.0,
               "iron_mg": 0.1
             }
           },

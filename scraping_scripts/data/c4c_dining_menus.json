@@ -13,13 +13,7 @@
     "smokin-grill",
     "c4c_wholesome-field"
   ],
-  "repeat_info": {
-    "first_seen_week": 2,
-    "first_seen_start": "2026-08-24",
-    "repeat_week": 5,
-    "repeat_start": "2026-09-14",
-    "gap_weeks": 3
-  },
+  "repeat_info": null,
   "menus": [
     {
       "date": "2026-08-16",
@@ -2165,9 +2159,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -24034,9 +24030,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -80225,9 +80223,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -102055,9 +102055,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -158006,9 +158008,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -170553,15 +170557,14 @@
             }
           },
           {
-            "name": "Chocolate Chip Alt Flour Pancakes",
+            "name": "Blueberry Alternative Flour Pancakes",
             "description": "",
             "serving_size": "1 pancake",
-            "calories": 205.0,
-            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
+            "calories": 58.0,
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Blueberries, Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
-              "Egg",
-              "Soy"
+              "Egg"
             ],
             "dietary_labels": [
               "Vegetarian"
@@ -170569,20 +170572,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 205.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 4.6,
+              "calories": 58.0,
+              "fat_g": 2.2,
+              "saturated_fat_g": 0.6,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 96.0,
-              "sodium_mg": 260.0,
-              "carbohydrates_g": 27.0,
-              "fiber_g": 2.0,
+              "cholesterol_mg": 37.0,
+              "sodium_mg": 99.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 14.0,
-              "protein_g": 5.0,
-              "potassium_mg": 44.0,
-              "calcium_mg": 80.0,
-              "iron_mg": 0.9
+              "total_sugar_g": 2.0,
+              "protein_g": 2.0,
+              "potassium_mg": 19.0,
+              "calcium_mg": 31.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -179487,6 +179490,37 @@
             }
           },
           {
+            "name": "Chipotle Tofu",
+            "description": "",
+            "serving_size": "1 2 oz serving",
+            "calories": 41.0,
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Water, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Chipotle Peppers in Adobo Sauce (Chipotle peppers, adobo sauce.).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 41.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1189.0,
+              "carbohydrates_g": 14.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 2.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 41.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
             "name": "Shredded Skirt Steak",
             "description": "",
             "serving_size": "2 oz",
@@ -179875,9 +179909,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -182080,11 +182116,11 @@
             }
           },
           {
-            "name": "Donburi Eggplant",
+            "name": "Bok Choy Stir Fry",
             "description": "",
-            "serving_size": "6 oz",
-            "calories": 226.0,
-            "ingredients": "Eggplant, Gekkeikan Sake 750 Ml, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Cane Sugar (Sugar), Rice Bran Oil, Corn Starch (Corn starch.), Kosher Salt, Black pepper (Black Pepper).",
+            "serving_size": "1 1/2 cup serving",
+            "calories": 83.0,
+            "ingredients": "Cabbage Bok Choy  30 LB, Carrots, Celery, Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Bran Oil, Green Onion, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic, Kosher Salt, Black pepper (Black Pepper).",
             "allergens": [
               "Soy"
             ],
@@ -182094,20 +182130,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 226.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 1.8,
+              "calories": 83.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1369.0,
-              "carbohydrates_g": 28.0,
-              "fiber_g": 3.0,
+              "sodium_mg": 459.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 16.0,
+              "total_sugar_g": 3.0,
               "protein_g": 3.0,
-              "potassium_mg": 142.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.6
+              "potassium_mg": 386.0,
+              "calcium_mg": 109.0,
+              "iron_mg": 1.0
             }
           },
           {
@@ -182145,13 +182181,14 @@
         ],
         "Asia - Stir Fries and Sides": [
           {
-            "name": "Curried Enoki Mushrooms",
+            "name": "Sesame Green Bean & Carrot Stir Fry",
             "description": "",
-            "serving_size": "4 oz",
-            "calories": 94.0,
-            "ingredients": "Mushroom Enoki, Gekkeikan Sake 750 Ml, Yellow Onion, Sugar Granulated (Sugar), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Bran Oil, Garlic Whole Peeled Case, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Kosher Salt, Garam Masala (Spices, turmeric, canola oil.), Ground Cumin Seed, Coriander - Ground, Cayenne Pepper (Black Pepper).",
+            "serving_size": "0.5 cups",
+            "calories": 113.0,
+            "ingredients": "Green Beans (Ingredients, Green Beans), Carrots, Red Bermuda Onions, Sesame Oil (Soybean Oil, Sesame Oil.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Garlic Whole Peeled Case, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.).",
             "allergens": [
-              "Soy"
+              "Soy",
+              "Sesame"
             ],
             "dietary_labels": [
               "Vegan"
@@ -182159,20 +182196,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 94.0,
-              "fat_g": 3.6,
-              "saturated_fat_g": 0.7,
+              "calories": 113.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 1.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 561.0,
-              "carbohydrates_g": 13.0,
-              "fiber_g": 3.0,
+              "sodium_mg": 460.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
+              "total_sugar_g": 3.0,
               "protein_g": 3.0,
-              "potassium_mg": 351.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 2.3
+              "potassium_mg": 211.0,
+              "calcium_mg": 42.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -215161,38 +215198,6 @@
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
-          },
-          {
-            "name": "Conchas",
-            "description": "",
-            "serving_size": "1 concha",
-            "calories": 351.0,
-            "ingredients": "Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Cane Sugar (Sugar), Shortening (Palm Oil.), Unsalted Butter (Cream, (milk), natural flavor.), Water, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Sea Salt (Sea Salt, Magnesium Carbonate.).",
-            "allergens": [
-              "Milk",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 351.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 8.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 14.0,
-              "sodium_mg": 700.0,
-              "carbohydrates_g": 43.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 13.0,
-              "protein_g": 5.0,
-              "potassium_mg": 2.0,
-              "calcium_mg": 92.0,
-              "iron_mg": 2.0
-            }
           }
         ],
         "Dessert Station - House-Made Desserts": [
@@ -235636,9 +235641,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -257537,9 +257544,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -293106,38 +293115,6 @@
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
-          },
-          {
-            "name": "Conchas",
-            "description": "",
-            "serving_size": "1 concha",
-            "calories": 351.0,
-            "ingredients": "Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Cane Sugar (Sugar), Shortening (Palm Oil.), Unsalted Butter (Cream, (milk), natural flavor.), Water, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Sea Salt (Sea Salt, Magnesium Carbonate.).",
-            "allergens": [
-              "Milk",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 351.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 8.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 14.0,
-              "sodium_mg": 700.0,
-              "carbohydrates_g": 43.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 13.0,
-              "protein_g": 5.0,
-              "potassium_mg": 2.0,
-              "calcium_mg": 92.0,
-              "iron_mg": 2.0
-            }
           }
         ],
         "Dessert Station - House-Made Desserts": [
@@ -313728,9 +313705,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -335558,9 +335537,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -370897,38 +370878,6 @@
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
-          },
-          {
-            "name": "Conchas",
-            "description": "",
-            "serving_size": "1 concha",
-            "calories": 351.0,
-            "ingredients": "Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Cane Sugar (Sugar), Shortening (Palm Oil.), Unsalted Butter (Cream, (milk), natural flavor.), Water, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Sea Salt (Sea Salt, Magnesium Carbonate.).",
-            "allergens": [
-              "Milk",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 351.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 8.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 14.0,
-              "sodium_mg": 700.0,
-              "carbohydrates_g": 43.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 13.0,
-              "protein_g": 5.0,
-              "potassium_mg": 2.0,
-              "calcium_mg": 92.0,
-              "iron_mg": 2.0
-            }
           }
         ],
         "Dessert Station - House-Made Desserts": [
@@ -391509,9 +391458,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -404056,15 +404007,14 @@
             }
           },
           {
-            "name": "Chocolate Chip Alt Flour Pancakes",
+            "name": "Blueberry Alternative Flour Pancakes",
             "description": "",
             "serving_size": "1 pancake",
-            "calories": 205.0,
-            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Chocolate Chips (Sugar, partially hydrogenated palm kernel oil, cocoa, cocoa processed with alkali, dextrose, nonfat dry milk, soy lecithin.), Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
+            "calories": 58.0,
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), GF Pancake Mix (Gluten Free Flour Blend (Sweet White Rice Flour, Brown Rice Flour, Potato Starch, Sweet White Sorghum Flour, Tapioca Flour, Xanthan Gum), Sugar, Baking Powder (Monocalcium Phosphate, Baking Soda, Cornstarch), Salt. *Manufactured in a facility that also uses tree nuts and soy.), Blueberries, Rice Bran Oil, Sugar Granulated (Sugar), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
             "allergens": [
               "Milk",
-              "Egg",
-              "Soy"
+              "Egg"
             ],
             "dietary_labels": [
               "Vegetarian"
@@ -404072,20 +404022,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 205.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 4.6,
+              "calories": 58.0,
+              "fat_g": 2.2,
+              "saturated_fat_g": 0.6,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 96.0,
-              "sodium_mg": 260.0,
-              "carbohydrates_g": 27.0,
-              "fiber_g": 2.0,
+              "cholesterol_mg": 37.0,
+              "sodium_mg": 99.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 14.0,
-              "protein_g": 5.0,
-              "potassium_mg": 44.0,
-              "calcium_mg": 80.0,
-              "iron_mg": 0.9
+              "total_sugar_g": 2.0,
+              "protein_g": 2.0,
+              "potassium_mg": 19.0,
+              "calcium_mg": 31.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -412990,6 +412940,37 @@
             }
           },
           {
+            "name": "Chipotle Tofu",
+            "description": "",
+            "serving_size": "1 2 oz serving",
+            "calories": 41.0,
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Water, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Chipotle Peppers in Adobo Sauce (Chipotle peppers, adobo sauce.).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 41.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1189.0,
+              "carbohydrates_g": 14.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 2.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 41.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
             "name": "Shredded Skirt Steak",
             "description": "",
             "serving_size": "2 oz",
@@ -413378,9 +413359,11 @@
               "Peanuts",
               "Tree Nuts"
             ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
             "nutrition": {
               "calories": 205.0,
               "fat_g": 6.0,
@@ -415551,43 +415534,71 @@
         ],
         "Asia - Featured Entree": [
           {
-            "name": "Donburi Bowl Stir Fry",
+            "name": "Kalua Pork",
             "description": "",
-            "serving_size": "6 oz",
-            "calories": 191.0,
-            "ingredients": "Whole Soybean Edamame In Pod, Carrots, Cabbage Bok Choy  30 LB, Crimini Mushrooms, Sesame Oil (Soybean Oil, Sesame Oil.), Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, Sesame Seeds (Ingredients: Organic sesame seeds), Kosher Salt, Black Sesame Seeds (Ingredients: Organic sesame seeds), Black pepper (Black Pepper).",
+            "serving_size": "3 oz serving",
+            "calories": 165.0,
+            "ingredients": "Pork Shoulder Butt Boneless, Franks Red Hot Sauce (Aged Cayenne Red Peppers, Distilled Vinegar, Water, Salt and Garlic Powder.), Water, Cabbage Nappa, Brown Sugar, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Rice Bran Oil, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Green Onion, Kosher Salt, Garlic Granules, Onion Granules, White Pepper, Cayenne Pepper (Black Pepper), Black Pepper (Black Pepper), Black pepper (Black Pepper), Chili Pepper Red Flakes Organic (Red pepper.).",
             "allergens": [
-              "Soy",
-              "Sesame"
+              "Soy"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 191.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 2.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 411.0,
-              "carbohydrates_g": 12.0,
-              "fiber_g": 4.0,
+              "calories": 165.0,
+              "fat_g": 9.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 61.0,
+              "sodium_mg": 460.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 8.0,
-              "potassium_mg": 360.0,
-              "calcium_mg": 103.0,
-              "iron_mg": 1.8
+              "total_sugar_g": 2.0,
+              "protein_g": 17.0,
+              "potassium_mg": 222.0,
+              "calcium_mg": 23.0,
+              "iron_mg": 1.4
             }
           },
           {
-            "name": "Donburi Eggplant",
+            "name": "Hawaiian Fried Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 345.0,
+            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Ham (Ham cured with: water, dextrose, salt, modified food starch, potassium lactate, sodium phosphates, sodium diacetate, sodium erythorbate, smoke flavoring, sodium nitrite. May contain sodium ascorbate.), Water, Yellow Onion, Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Pineapple (Pineapple, Pineapple Juice.), Organic Green Peas, Green Onion, Shallots - Peeled, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Bran Oil, Garlic Whole Peeled Case, Sugar Granulated, Sesame Oil (Soybean oil, sesame oil.), Kosher Salt.",
+            "allergens": [
+              "Egg",
+              "Soy",
+              "Sesame"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 345.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 2.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 111.0,
+              "sodium_mg": 941.0,
+              "carbohydrates_g": 52.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 7.0,
+              "protein_g": 16.0,
+              "potassium_mg": 86.0,
+              "calcium_mg": 36.0,
+              "iron_mg": 2.6
+            }
+          },
+          {
+            "name": "Hawaiian Quinoa with Edamame",
             "description": "",
             "serving_size": "6 oz",
-            "calories": 226.0,
-            "ingredients": "Eggplant, Gekkeikan Sake 750 Ml, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Cane Sugar (Sugar), Rice Bran Oil, Corn Starch (Corn starch.), Kosher Salt, Black pepper (Black Pepper).",
+            "calories": 140.0,
+            "ingredients": "Water, Whole Soybean Edamame In Pod, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Organic Green Peas, Quinoa, Pineapple (Pineapple, Pineapple Juice.), Carrots, Red Bermuda Onions, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil.",
             "allergens": [
               "Soy"
             ],
@@ -415597,190 +415608,129 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 226.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 1.8,
+              "calories": 140.0,
+              "fat_g": 2.6,
+              "saturated_fat_g": 0.2,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1369.0,
-              "carbohydrates_g": 28.0,
-              "fiber_g": 3.0,
+              "sodium_mg": 1218.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 4.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 16.0,
-              "protein_g": 3.0,
-              "potassium_mg": 142.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Roasted Tofu",
-            "description": "",
-            "serving_size": "6 oz",
-            "calories": 75.0,
-            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic Whole Peeled Case.",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 75.0,
-              "fat_g": 5.0,
-              "saturated_fat_g": 0.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2440.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 5.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.9
+              "total_sugar_g": 3.0,
+              "protein_g": 9.0,
+              "potassium_mg": 41.0,
+              "calcium_mg": 39.0,
+              "iron_mg": 2.1
             }
           }
         ],
         "Asia - Stir Fries and Sides": [
           {
-            "name": "Curried Enoki Mushrooms",
+            "name": "Chicken Egg Rolls",
             "description": "",
-            "serving_size": "4 oz",
-            "calories": 94.0,
-            "ingredients": "Mushroom Enoki, Gekkeikan Sake 750 Ml, Yellow Onion, Sugar Granulated (Sugar), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Bran Oil, Garlic Whole Peeled Case, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Kosher Salt, Garam Masala (Spices, turmeric, canola oil.), Ground Cumin Seed, Coriander - Ground, Cayenne Pepper (Black Pepper).",
+            "serving_size": "2 each serving",
+            "calories": 170.0,
+            "ingredients": "Chicken & Vegetable Egg Rolls (Crust: Bleached Wheat Flour, Malted Barley Flour, Water, Salt, Fd&c Yellow #5 & #6, Calcium Propionate, Corn Starch. Filling: Cabbage, Chicken, Carrots, Textured Vegetable Protein (soy Flour), Sugar, Salt, Carrageenan, Dextrose, Oil (sesame Oil, Soybean Oil, Or Vegetable Oil), Garlic Powder, Spice. Contains: Eggs, Soy, Wheat).",
             "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 94.0,
-              "fat_g": 3.6,
-              "saturated_fat_g": 0.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 561.0,
-              "carbohydrates_g": 13.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 3.0,
-              "potassium_mg": 351.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 2.3
-            }
-          },
-          {
-            "name": "Kimchi",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 19.0,
-            "ingredients": "Cabbage Nappa, Radish Daikon 40 LB, Green Onion, Paste Pepper Hot Korean (Red pepper powder, corn syrup, water, red pepper seasoning (red pepper powder, water, salt, garlic, onion), wheat flour, salt, rice powder, soybean powder, glucose, garlic powder, monosodium L-glutamate, potasium sorbate.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Cayenne Pepper (Black Pepper).",
-            "allergens": [
+              "Egg",
               "Wheat",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 19.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 258.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 149.0,
-              "calcium_mg": 57.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Soy Egg Marinade",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 90.0,
-            "ingredients": "Water, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Sesame Oil (Soybean Oil, Sesame Oil.), Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic Whole Peeled Case.",
-            "allergens": [
               "Soy",
               "Sesame"
             ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 90.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 0.9,
+              "calories": 170.0,
+              "fat_g": 2.1,
+              "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2954.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 0.0,
+              "cholesterol_mg": 9.0,
+              "sodium_mg": 574.0,
+              "carbohydrates_g": 17.0,
+              "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 6.0,
-              "potassium_mg": 6.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 1.1
+              "total_sugar_g": 2.0,
+              "protein_g": 11.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 55.0,
+              "iron_mg": 1.5
             }
           },
           {
-            "name": "White Rice",
+            "name": "Hawaiian Honey Glazed Coconut Carrots",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 180.0,
-            "ingredients": "Rice Calrose Medium White - WONDER ROSE.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
+            "calories": 116.0,
+            "ingredients": "Baby Carrots, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Honey (Ingredients:, Honey), Coconut (Coconut, Sugar, Water, Propylene Glycol (sustains Freshness), Salt, Sodium Metabisulfite (preserves Whiteness).), Cilantro 30 CT, Unsalted Butter (Cream, (milk), natural flavor.), Water, Corn Starch (Corn starch.).",
+            "allergens": [
+              "Milk"
             ],
-            "is_vegan": true,
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 180.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 39.0,
-              "fiber_g": 0.0,
+              "calories": 116.0,
+              "fat_g": 4.4,
+              "saturated_fat_g": 3.2,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 7.0,
+              "sodium_mg": 91.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 3.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 4.0,
-              "iron_mg": 0.4
+              "total_sugar_g": 14.0,
+              "protein_g": 1.0,
+              "potassium_mg": 267.0,
+              "calcium_mg": 37.0,
+              "iron_mg": 1.0
+            }
+          },
+          {
+            "name": "Island Macaroni Salad",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 119.0,
+            "ingredients": "Elbow Macaroni Salad (Ingredients:Macaroni (semolina wheat flour [enriched with niacin, iron, thiamine mononitrate, riboflavin, folic acid], egg white), Mayonnaise (soybean oil, water, egg yolks, vinegar, salt), Sweet Pickle Relish (cucumbers, sugar, distilled vinegar, salt, contains less than 2% of: mustard seed, xanthan gum, calcium chloride, celery seed, dehydrated red bell pepper, natural flavoring, turmeric, minced onion), Water, Celery, Sugar, Onion, Red Bell Pepper, Salt, Vinegar, Mustard (water, vinegar, mustard seed, salt, sugar, soybean oil, turmeric and paprika, garlic powder, spices, xanthan gum, annatto color, citric acid, natural flavor), Modified Corn Starch, Sodium Benzoate (preservative), Potassium Sorbate (preservative), Annatto Extract (color), Xanthan Gum, Allergens:Eggs,Wheat).",
+            "allergens": [
+              "Egg",
+              "Wheat"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 119.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 1.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 6.0,
+              "sodium_mg": 305.0,
+              "carbohydrates_g": 10.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 3.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 2.0,
+              "potassium_mg": 71.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.7
             }
           }
         ],
         "Asia - Sauces and Toppings": [
           {
-            "name": "Cashew Whole Raw Unsalted",
+            "name": "Chow Mein Noodles",
             "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 170.0,
-            "ingredients": "Ingredients, Raw Cashews.",
+            "serving_size": "1 Tbsp",
+            "calories": 12.0,
+            "ingredients": "Chow Mein Noodles (Enriched Wheat Flour (wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Palm Oil, Less Than 2% Of: Salt, Yeast, Sugar, Corn Starch. Contains: Wheat).",
             "allergens": [
-              "Tree Nuts"
+              "Wheat"
             ],
             "dietary_labels": [
               "Vegan"
@@ -415788,28 +415738,28 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 170.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 3.0,
+              "calories": 12.0,
+              "fat_g": 0.4,
+              "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 29.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 5.0,
-              "potassium_mg": 198.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 1.8
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
             }
           },
           {
-            "name": "Sliced Green Onion",
+            "name": "Sweet & Sour Sauce",
             "description": "",
             "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Green Onion.",
+            "calories": 14.0,
+            "ingredients": "Water, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Ketchup (Tomato Concentrate, Sugar, Distilled Vinegar, Salt, Onion Powder, Natural Flavors), Sugar Granulated (Sugar), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Corn Starch (Corn starch.), Xanthan Gum.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -415817,30 +415767,29 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1.0,
+              "calories": 14.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 0.0,
+              "cholesterol_mg": 17.0,
+              "sodium_mg": 55.0,
+              "carbohydrates_g": 4.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
+              "total_sugar_g": 3.0,
               "protein_g": 0.0,
-              "potassium_mg": 6.0,
-              "calcium_mg": 1.9,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
               "iron_mg": 0.0
             }
           },
           {
-            "name": "Slivered Almonds",
+            "name": "Sliced Almonds",
             "description": "",
             "serving_size": "1 Tbsp",
-            "calories": 40.0,
-            "ingredients": "Ingredients, Almonds. Contains: Tree Nuts (almonds). May Contain Peanuts.",
+            "calories": 33.0,
+            "ingredients": "Ingredients: Almonds.",
             "allergens": [
-              "Peanuts",
               "Tree Nuts"
             ],
             "dietary_labels": [
@@ -415849,18 +415798,18 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 40.0,
-              "fat_g": 3.5,
-              "saturated_fat_g": 0.3,
+              "calories": 33.0,
+              "fat_g": 2.9,
+              "saturated_fat_g": 0.2,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
+              "sodium_mg": 0.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 44.0,
+              "potassium_mg": 43.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
             }
@@ -416042,65 +415991,6 @@
               "potassium_mg": 14.0,
               "calcium_mg": 29.0,
               "iron_mg": 0.4
-            }
-          },
-          {
-            "name": "Chili Oil - House Made",
-            "description": "",
-            "serving_size": "1 oz",
-            "calories": 228.0,
-            "ingredients": "Sesame Oil (Soybean Oil, Sesame Oil.), Crushed Red Pepper (Cayenne Pepper), Black pepper (Black Pepper), Anise Star, Cinnamon Sticks.",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 228.0,
-              "fat_g": 24.0,
-              "saturated_fat_g": 3.4,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 55.0,
-              "calcium_mg": 8.0,
-              "iron_mg": 0.3
-            }
-          },
-          {
-            "name": "Sambal",
-            "description": "",
-            "serving_size": "2 fl oz",
-            "calories": 38.0,
-            "ingredients": "Fresno Red Peppers, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Water, Roma Tomatoes, Ginger, Garlic, Green Onion, Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 38.0,
-              "fat_g": 0.2,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 446.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 6.0,
-              "protein_g": 1.0,
-              "potassium_mg": 130.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.3
             }
           }
         ],
@@ -448663,38 +448553,6 @@
               "potassium_mg": 12.0,
               "calcium_mg": 16.0,
               "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Conchas",
-            "description": "",
-            "serving_size": "1 concha",
-            "calories": 351.0,
-            "ingredients": "Bread Flour (Bleached wheat flour, malted barley flour, niacin, reduced iron, potassium bromate, thiamine mononitrate, riboflavin, folic acid.), Cane Sugar (Sugar), Shortening (Palm Oil.), Unsalted Butter (Cream, (milk), natural flavor.), Water, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Sea Salt (Sea Salt, Magnesium Carbonate.).",
-            "allergens": [
-              "Milk",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 351.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 8.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 14.0,
-              "sodium_mg": 700.0,
-              "carbohydrates_g": 43.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 13.0,
-              "protein_g": 5.0,
-              "potassium_mg": 2.0,
-              "calcium_mg": 92.0,
-              "iron_mg": 2.0
             }
           }
         ],
