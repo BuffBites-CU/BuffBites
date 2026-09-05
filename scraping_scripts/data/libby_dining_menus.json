@@ -47191,35 +47191,6 @@
               "calcium_mg": 12.0,
               "iron_mg": 1.6
             }
-          },
-          {
-            "name": "Tater Tots",
-            "description": "",
-            "serving_size": "1 1/2 cup serving",
-            "calories": 111.0,
-            "ingredients": "Tater Tots (Potatoes, Vegetable Oil (contains One Or More Of The Following Oils: Canola, Soybean, Cottonseed, Sunflower, Corn). Contains 2% Or Less Of Dextrose, Natural Flavor, Salt, Sodium Acid Pyrophosphate Added To Maintain Color.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 111.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 0.9,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 307.0,
-              "carbohydrates_g": 14.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 205.0,
-              "calcium_mg": 8.2,
-              "iron_mg": 0.2
-            }
           }
         ],
         "Hot Cereal & Toppings": [

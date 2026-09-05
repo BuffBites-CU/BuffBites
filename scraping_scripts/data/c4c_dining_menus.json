@@ -235078,6 +235078,66 @@
             }
           }
         ],
+        "Latin - Featured Entree": [
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          }
+        ],
         "Latin - Burrito Proteins": [
           {
             "name": "Pork Green Chili",
@@ -245745,6 +245805,64 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
             }
           }
         ],
@@ -257039,6 +257157,64 @@
               "potassium_mg": 191.0,
               "calcium_mg": 16.0,
               "iron_mg": 1.4
+            }
+          },
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
             }
           }
         ],
@@ -268622,6 +268798,64 @@
               "protein_g": 0.0,
               "potassium_mg": 6.0,
               "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
               "iron_mg": 0.0
             }
           }
@@ -280427,6 +280661,64 @@
               "calcium_mg": 24.0,
               "iron_mg": 2.6
             }
+          },
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
           }
         ],
         "Latin - Burrito Proteins": [
@@ -291941,6 +292233,64 @@
               "calcium_mg": 18.0,
               "iron_mg": 0.7
             }
+          },
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
           }
         ],
         "Latin - Burrito Proteins": [
@@ -303068,6 +303418,66 @@
               "potassium_mg": 52.0,
               "calcium_mg": 30.0,
               "iron_mg": 0.4
+            }
+          }
+        ],
+        "Latin - Featured Entree": [
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
             }
           }
         ],
