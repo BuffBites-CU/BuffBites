@@ -13,13 +13,7 @@
     "smokin-grill",
     "c4c_wholesome-field"
   ],
-  "repeat_info": {
-    "first_seen_week": 3,
-    "first_seen_start": "2026-09-07",
-    "repeat_week": 6,
-    "repeat_start": "2026-09-28",
-    "gap_weeks": 3
-  },
+  "repeat_info": null,
   "menus": [
     {
       "date": "2026-08-23",
@@ -170894,6 +170888,38 @@
         ],
         "Smoke n' Grill - Grill Menu": [
           {
+            "name": "Nashville Hot Portobello Sandwich",
+            "description": "",
+            "serving_size": "1 sandwich",
+            "calories": 202.0,
+            "ingredients": "Portobello Mushrooms, Brioche Slider Bun (Ingredients, Unbleached Enriched Flour (wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, Yeast, Fully Refined Soybean Oil, Granulated Sugar, Wheat Gluten, Salt, Honey, Calcium Propionate (to Retain Freshness), Dough Improver (malted Wheat Flour, Enzymes And 2% Or Less Of Ascorbic Acid), Natural Flavor, Enriched Wheat Flour (wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin , Folic Acid), Contains Less Than 2% Of Enzymes, Yellow Corn Flour, Colors (turmeric, Paprika), And 2% Or Less Of Each Of The Following: Natural Flavor, Vegetable Proteins, Vegetable Oil, Dextrose, Maltodextrins, Starch, , Contains: Wheat, May contain: Sesame seeds), Extra Virgin Olive Oil, Brown Sugar, Cayenne Pepper (Black Pepper), Kosher Salt, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Black pepper (Black Pepper), Seasoning Chipotle Powder Simply Organic (Organic Chipotle Peppers.), Celery Salt (Salt and celery seed.), Garlic Granules.",
+            "allergens": [
+              "Wheat",
+              "Sesame"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 202.0,
+              "fat_g": 8.0,
+              "saturated_fat_g": 0.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 467.0,
+              "carbohydrates_g": 28.0,
+              "fiber_g": 6.0,
+              "added_sugar_g": 3.0,
+              "total_sugar_g": 7.0,
+              "protein_g": 8.0,
+              "potassium_mg": 523.0,
+              "calcium_mg": 66.0,
+              "iron_mg": 1.6
+            }
+          },
+          {
             "name": "Chicken Breast",
             "description": "",
             "serving_size": "4 oz breast",
@@ -170918,35 +170944,6 @@
               "potassium_mg": 486.0,
               "calcium_mg": 10.0,
               "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Marinated Portobello Mushroom",
-            "description": "",
-            "serving_size": "0.5 mushroom",
-            "calories": 128.0,
-            "ingredients": "Portobello Mushrooms, Balsamic Vinegar (Organic Balsamic Vinegar.), Rice Bran Oil, Water, Garlic Granules, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Black pepper (Black Pepper), Thyme, Crushed Red Pepper (Cayenne Pepper), Cayenne Pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 128.0,
-              "fat_g": 11.0,
-              "saturated_fat_g": 2.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 617.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 2.0,
-              "potassium_mg": 305.0,
-              "calcium_mg": 18.0,
-              "iron_mg": 0.8
             }
           },
           {
