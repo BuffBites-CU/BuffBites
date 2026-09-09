@@ -93038,40 +93038,6 @@
             }
           }
         ],
-        "Composed Salads": [
-          {
-            "name": "Asian Tri-Cabbage Coleslaw with Sesame",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 106.0,
-            "ingredients": "Cabbage Nappa, Red Cabbage, Rice Bran Oil, Red Bermuda Onions, Carrots, Lemon Grass (Lemon grass.), Green Bell Peppers, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Cilantro 30 CT, Sesame Oil (Soybean Oil, Sesame Oil.), Red Bell Peppers, Yellow Bell Pepper, Sugar Granulated, Ginger, Black pepper (Black Pepper), Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 106.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 157.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 246.0,
-              "calcium_mg": 71.0,
-              "iron_mg": 1.0
-            }
-          }
-        ],
         "Curry Bowls": [
           {
             "name": "Thai Green Coconut Tofu Curry",
@@ -99453,6 +99419,35 @@
         ],
         "Featured Entree": [
           {
+            "name": "Filipino Coconut Curry Chicken",
+            "description": "",
+            "serving_size": "3 oz",
+            "calories": 138.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Water, Potato Sweet 10 LB, Red Bell Peppers, Extra Virgin Olive Oil, Cilantro 30 CT, Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Fish Sauce (Anchovy, Sea Salt, Sugar, Fructose), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Fish"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 138.0,
+              "fat_g": 11.0,
+              "saturated_fat_g": 6.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 32.0,
+              "sodium_mg": 153.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 8.0,
+              "potassium_mg": 129.0,
+              "calcium_mg": 10.0,
+              "iron_mg": 1.6
+            }
+          },
+          {
             "name": "Cauliflower Coconut Tikka Masala",
             "description": "",
             "serving_size": "3 oz",
@@ -99479,6 +99474,37 @@
               "potassium_mg": 197.0,
               "calcium_mg": 14.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Curry Bowls": [
+          {
+            "name": "Red Lentil Curry",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 47.0,
+            "ingredients": "Water, Red Lentils, Yellow Onion, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Rice Bran Oil, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Garlic, Coriander - Whole, Whole Cumin Seed, Kosher Salt, Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Cayenne Pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 47.0,
+              "fat_g": 0.8,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 117.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 3.0,
+              "potassium_mg": 11.0,
+              "calcium_mg": 6.0,
+              "iron_mg": 1.0
             }
           },
           {
@@ -99511,66 +99537,6 @@
               "potassium_mg": 427.0,
               "calcium_mg": 56.0,
               "iron_mg": 0.9
-            }
-          }
-        ],
-        "Curry Bowls": [
-          {
-            "name": "Filipino Coconut Curry Chicken",
-            "description": "",
-            "serving_size": "3 oz",
-            "calories": 138.0,
-            "ingredients": "Chicken Thigh Bnls/Skls ABF, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Water, Potato Sweet 10 LB, Red Bell Peppers, Extra Virgin Olive Oil, Cilantro 30 CT, Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Fish Sauce (Anchovy, Sea Salt, Sugar, Fructose), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [
-              "Fish"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 138.0,
-              "fat_g": 11.0,
-              "saturated_fat_g": 6.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 32.0,
-              "sodium_mg": 153.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 8.0,
-              "potassium_mg": 129.0,
-              "calcium_mg": 10.0,
-              "iron_mg": 1.6
-            }
-          },
-          {
-            "name": "Red Lentil Curry",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 47.0,
-            "ingredients": "Water, Red Lentils, Yellow Onion, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Rice Bran Oil, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Garlic, Coriander - Whole, Whole Cumin Seed, Kosher Salt, Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Cayenne Pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 47.0,
-              "fat_g": 0.8,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 117.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 11.0,
-              "calcium_mg": 6.0,
-              "iron_mg": 1.0
             }
           },
           {
@@ -104759,33 +104725,6 @@
               "potassium_mg": 181.0,
               "calcium_mg": 67.0,
               "iron_mg": 1.8
-            }
-          },
-          {
-            "name": "Smoked Kielbasa Sausage",
-            "description": "",
-            "serving_size": "0.5 link",
-            "calories": 146.0,
-            "ingredients": "Kielbasa (Pork, Water, Salt, Garlic, Rosemary Extract, Dextrose, Spices, Paprika.).",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 146.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 4.9,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 32.0,
-              "sodium_mg": 324.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 6.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.6
             }
           },
           {
@@ -222600,40 +222539,6 @@
             }
           }
         ],
-        "Composed Salads": [
-          {
-            "name": "Asian Tri-Cabbage Coleslaw with Sesame",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 106.0,
-            "ingredients": "Cabbage Nappa, Red Cabbage, Rice Bran Oil, Red Bermuda Onions, Carrots, Lemon Grass (Lemon grass.), Green Bell Peppers, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Cilantro 30 CT, Sesame Oil (Soybean Oil, Sesame Oil.), Red Bell Peppers, Yellow Bell Pepper, Sugar Granulated, Ginger, Black pepper (Black Pepper), Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 106.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 157.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 246.0,
-              "calcium_mg": 71.0,
-              "iron_mg": 1.0
-            }
-          }
-        ],
         "Curry Bowls": [
           {
             "name": "Thai Green Coconut Tofu Curry",
@@ -229015,6 +228920,35 @@
         ],
         "Featured Entree": [
           {
+            "name": "Filipino Coconut Curry Chicken",
+            "description": "",
+            "serving_size": "3 oz",
+            "calories": 138.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Water, Potato Sweet 10 LB, Red Bell Peppers, Extra Virgin Olive Oil, Cilantro 30 CT, Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Fish Sauce (Anchovy, Sea Salt, Sugar, Fructose), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [
+              "Fish"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 138.0,
+              "fat_g": 11.0,
+              "saturated_fat_g": 6.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 32.0,
+              "sodium_mg": 153.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 8.0,
+              "potassium_mg": 129.0,
+              "calcium_mg": 10.0,
+              "iron_mg": 1.6
+            }
+          },
+          {
             "name": "Cauliflower Coconut Tikka Masala",
             "description": "",
             "serving_size": "3 oz",
@@ -229041,6 +228975,37 @@
               "potassium_mg": 197.0,
               "calcium_mg": 14.0,
               "iron_mg": 0.9
+            }
+          }
+        ],
+        "Curry Bowls": [
+          {
+            "name": "Red Lentil Curry",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 47.0,
+            "ingredients": "Water, Red Lentils, Yellow Onion, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Rice Bran Oil, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Garlic, Coriander - Whole, Whole Cumin Seed, Kosher Salt, Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Cayenne Pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 47.0,
+              "fat_g": 0.8,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 117.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 3.0,
+              "potassium_mg": 11.0,
+              "calcium_mg": 6.0,
+              "iron_mg": 1.0
             }
           },
           {
@@ -229073,66 +229038,6 @@
               "potassium_mg": 427.0,
               "calcium_mg": 56.0,
               "iron_mg": 0.9
-            }
-          }
-        ],
-        "Curry Bowls": [
-          {
-            "name": "Filipino Coconut Curry Chicken",
-            "description": "",
-            "serving_size": "3 oz",
-            "calories": 138.0,
-            "ingredients": "Chicken Thigh Bnls/Skls ABF, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Water, Potato Sweet 10 LB, Red Bell Peppers, Extra Virgin Olive Oil, Cilantro 30 CT, Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Fish Sauce (Anchovy, Sea Salt, Sugar, Fructose), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [
-              "Fish"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 138.0,
-              "fat_g": 11.0,
-              "saturated_fat_g": 6.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 32.0,
-              "sodium_mg": 153.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 8.0,
-              "potassium_mg": 129.0,
-              "calcium_mg": 10.0,
-              "iron_mg": 1.6
-            }
-          },
-          {
-            "name": "Red Lentil Curry",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 47.0,
-            "ingredients": "Water, Red Lentils, Yellow Onion, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Rice Bran Oil, Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Garlic, Coriander - Whole, Whole Cumin Seed, Kosher Salt, Curry Powder (Coriander, fenugreek, turmeric, cumin, black pepper, bay leaves, celery seed, nutmeg, cloves, onion, red pepper, ginger.), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Cayenne Pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 47.0,
-              "fat_g": 0.8,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 117.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 11.0,
-              "calcium_mg": 6.0,
-              "iron_mg": 1.0
             }
           },
           {
