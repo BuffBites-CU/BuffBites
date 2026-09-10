@@ -157948,6 +157948,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -168672,6 +168703,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -180090,6 +180152,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -191732,6 +191825,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -193654,8 +193778,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -193664,20 +193788,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -203592,6 +203716,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -205286,8 +205441,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -205296,20 +205451,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -215105,6 +215260,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -216608,8 +216794,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -216618,20 +216804,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -225773,6 +225959,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -236362,6 +236579,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -246956,6 +247204,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -258317,6 +258596,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -269820,6 +270130,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -271742,8 +272083,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 Tbsp",
+            "calories": 52.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -271752,20 +272093,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 52.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 13.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 10.0,
+              "total_sugar_g": 13.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.1
             }
           }
         ],
@@ -281536,6 +281877,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -283230,8 +283602,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 Tbsp",
+            "calories": 52.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -283240,20 +283612,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 52.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 13.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 10.0,
+              "total_sugar_g": 13.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.1
             }
           }
         ],
@@ -292928,6 +293300,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -294431,8 +294834,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 Tbsp",
+            "calories": 52.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -294441,20 +294844,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 52.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 13.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 10.0,
+              "total_sugar_g": 13.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.1
             }
           }
         ],
@@ -303534,6 +303937,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -314291,6 +314725,37 @@
               "potassium_mg": 90.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.7
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           }
         ],
@@ -336316,6 +336781,37 @@
               "calcium_mg": 0.0,
               "iron_mg": 0.7
             }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
           }
         ],
         "Black Coats - Sushi": [
@@ -349458,8 +349954,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -349468,20 +349964,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -359386,6 +359882,37 @@
               "calcium_mg": 0.0,
               "iron_mg": 0.7
             }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
           }
         ],
         "Black Coats - Sushi": [
@@ -360906,8 +361433,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -360916,20 +361443,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -372107,8 +372634,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -372117,20 +372644,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -381337,6 +381864,37 @@
               "potassium_mg": 90.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.7
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           }
         ],
@@ -391654,6 +392212,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -402323,6 +402912,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -413680,6 +414300,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -425264,6 +425915,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -427186,8 +427868,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -427196,20 +427878,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -437066,6 +437748,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -438760,8 +439473,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -438770,20 +439483,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -448521,6 +449234,37 @@
             }
           },
           {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
             "name": "Vanilla Nonfat Greek Yogurt",
             "description": "",
             "serving_size": "0.5 cups",
@@ -450024,8 +450768,8 @@
           {
             "name": "Syrup",
             "description": "",
-            "serving_size": "1 gallons",
-            "calories": 13247.0,
+            "serving_size": "1 1 fluid oz serving",
+            "calories": 103.0,
             "ingredients": "Sugar, 25% Maple Syrup, Caramel Color..",
             "allergens": [],
             "dietary_labels": [
@@ -450034,20 +450778,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 13247.0,
+              "calories": 103.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 0.0,
-              "carbohydrates_g": 3359.0,
+              "carbohydrates_g": 26.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 2534.0,
-              "total_sugar_g": 3359.0,
+              "added_sugar_g": 20.0,
+              "total_sugar_g": 26.0,
               "protein_g": 0.0,
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
-              "iron_mg": 23.2
+              "iron_mg": 0.2
             }
           }
         ],
@@ -459129,6 +459873,37 @@
               "potassium_mg": 95.0,
               "calcium_mg": 95.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Whole Milk Plain Greek Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 113.0,
+            "ingredients": "Cultured milk (Contains live and active cultures: S. Thermophilus, L. Bulgaricus, L. Acidophilus, Bifidus, L. Casei, and L. Rhamnosus).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 113.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 3.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 23.0,
+              "sodium_mg": 40.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 10.0,
+              "potassium_mg": 153.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 0.1
             }
           },
           {
