@@ -127975,6 +127975,74 @@
         ],
         "Desserts": [
           {
+            "name": "Brown Sugar Cake w/Bourbon Icing",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 359.0,
+            "ingredients": "Unsalted Butter (Cream, (milk), natural flavor.), Dark Brown Sugar, Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Powdered Sugar (Cane Sugar, Corn Starch), Whole Eggs (Cage Free), Mixed Chocolate Microdrops (Sugar, Unsweetened Chocolate, Cocoa Butter, Whole MILKfat, Natural Vanilla Extract, emulsifier: SOY lecithin.), Woodford Reserve Bourbon 750 ML, Heavy Whipping Cream (Heavy cream, carrageenan.), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate).",
+            "allergens": [
+              "Milk",
+              "Egg",
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 359.0,
+              "fat_g": 18.0,
+              "saturated_fat_g": 11.0,
+              "trans_fat_g": 0.6,
+              "cholesterol_mg": 75.0,
+              "sodium_mg": 158.0,
+              "carbohydrates_g": 46.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 13.0,
+              "total_sugar_g": 33.0,
+              "protein_g": 4.0,
+              "potassium_mg": 103.0,
+              "calcium_mg": 56.0,
+              "iron_mg": 1.3
+            }
+          },
+          {
+            "name": "Chocolate Mint Dessert",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 228.0,
+            "ingredients": "Cane Sugar (Sugar), Unsalted Butter (Cream, (milk), natural flavor.), Powdered Sugar (Cane Sugar, Corn Starch), Chocolate Chips (Sugar, chocolate liquor, cocoa butter, soya lecithin, vanilla extract.), Water, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Soybean Oil (Ingredients, Soybean Oil), Cocoa Powder (Cocoa powder processed with alkali), Extract Peppermint Flavor Organic (Ingredients: Alcohol, Water & Oil Of Peppermint.), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt, Coloring Gel Food Green Leaf (Water, High Fructose Corn Syrup, Glycerin, FD&C Yellow 5 (E102), Sugar, Modified Food Starch, FD&C Blue 1 (E133), Citric Acid, Sodium Benzoate and Potassium Sorbate (Preservatives), Carrageenan Gum, Xanthan Gum.).",
+            "allergens": [
+              "Milk",
+              "Egg",
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 228.0,
+              "fat_g": 13.0,
+              "saturated_fat_g": 7.0,
+              "trans_fat_g": 0.3,
+              "cholesterol_mg": 30.0,
+              "sodium_mg": 110.0,
+              "carbohydrates_g": 28.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 12.0,
+              "total_sugar_g": 22.0,
+              "protein_g": 2.0,
+              "potassium_mg": 57.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.7
+            }
+          },
+          {
             "name": "Boulder Almond Cookie",
             "description": "",
             "serving_size": "1 cookie",
@@ -128004,35 +128072,6 @@
               "potassium_mg": 142.0,
               "calcium_mg": 31.0,
               "iron_mg": 1.8
-            }
-          },
-          {
-            "name": "Gluten Free Chewy Marshmallow Bar",
-            "description": "",
-            "serving_size": "2.1 oz bar",
-            "calories": 218.0,
-            "ingredients": "Marshmallow [glucose syrup, sugar, modified corn starch, gelatin, water, tetrasodium pyrophosphate, natural vanilla flavor], Gluten Free Crisped Rice [rice, brown sugar, salt, distilled monoglycerides], Corn Syrup, Butter, Sugar, Brown Butter, Sea Salt, Maltodextrin, Vanilla., Contains: Milk..",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 218.0,
-              "fat_g": 4.5,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 15.0,
-              "sodium_mg": 218.0,
-              "carbohydrates_g": 42.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 18.0,
-              "total_sugar_g": 18.0,
-              "protein_g": 2.0,
-              "potassium_mg": 20.0,
-              "calcium_mg": 6.0,
-              "iron_mg": 0.0
             }
           },
           {
@@ -128216,40 +128255,6 @@
             }
           },
           {
-            "name": "Chocolate Mint Dessert",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 228.0,
-            "ingredients": "Cane Sugar (Sugar), Unsalted Butter (Cream, (milk), natural flavor.), Powdered Sugar (Cane Sugar, Corn Starch), Chocolate Chips (Sugar, chocolate liquor, cocoa butter, soya lecithin, vanilla extract.), Water, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Soybean Oil (Ingredients, Soybean Oil), Cocoa Powder (Cocoa powder processed with alkali), Extract Peppermint Flavor Organic (Ingredients: Alcohol, Water & Oil Of Peppermint.), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt, Coloring Gel Food Green Leaf (Water, High Fructose Corn Syrup, Glycerin, FD&C Yellow 5 (E102), Sugar, Modified Food Starch, FD&C Blue 1 (E133), Citric Acid, Sodium Benzoate and Potassium Sorbate (Preservatives), Carrageenan Gum, Xanthan Gum.).",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Wheat",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 228.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 7.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 30.0,
-              "sodium_mg": 110.0,
-              "carbohydrates_g": 28.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 12.0,
-              "total_sugar_g": 22.0,
-              "protein_g": 2.0,
-              "potassium_mg": 57.0,
-              "calcium_mg": 12.0,
-              "iron_mg": 0.7
-            }
-          },
-          {
             "name": "White Chocolate Macadamia Cookie",
             "description": "",
             "serving_size": "1 cookie",
@@ -128284,37 +128289,32 @@
             }
           },
           {
-            "name": "Pumpkin Crunch Cake w/Pecans",
+            "name": "Gluten Free Chewy Marshmallow Bar",
             "description": "",
-            "serving_size": "1 slice",
-            "calories": 351.0,
-            "ingredients": "All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Pumpkin (Prepared pumpkin.), Sugar Granulated (Sugar), Pecans (Pecans contains: Tree Nut (pecan)), Brown Sugar, Cane Sugar (Sugar), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Plain Nonfat Greek Yogurt (Cultured Grade A Non Fat Milk, Live & Active Yogurt Cultures S. Thermophilus And L. Bulgaricus), Paste Vanilla Bean Madagascar 100% (Sugar, water, vanilla bean extractives, exhausted vanilla bean seeds, xanthum gum.), Organic Spice (Cinnamon, ginger, nutmeg, cloves.), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt.",
+            "serving_size": "2.1 oz bar",
+            "calories": 218.0,
+            "ingredients": "Marshmallow [glucose syrup, sugar, modified corn starch, gelatin, water, tetrasodium pyrophosphate, natural vanilla flavor], Gluten Free Crisped Rice [rice, brown sugar, salt, distilled monoglycerides], Corn Syrup, Butter, Sugar, Brown Butter, Sea Salt, Maltodextrin, Vanilla., Contains: Milk..",
             "allergens": [
-              "Milk",
-              "Egg",
-              "Wheat",
-              "Tree Nuts"
+              "Milk"
             ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
+            "dietary_labels": [],
             "is_vegan": false,
-            "is_vegetarian": true,
+            "is_vegetarian": false,
             "nutrition": {
-              "calories": 351.0,
-              "fat_g": 15.0,
-              "saturated_fat_g": 5.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 47.0,
-              "sodium_mg": 192.0,
-              "carbohydrates_g": 50.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 33.0,
-              "protein_g": 5.0,
-              "potassium_mg": 90.0,
-              "calcium_mg": 35.0,
-              "iron_mg": 1.4
+              "calories": 218.0,
+              "fat_g": 4.5,
+              "saturated_fat_g": 3.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 218.0,
+              "carbohydrates_g": 42.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 18.0,
+              "total_sugar_g": 18.0,
+              "protein_g": 2.0,
+              "potassium_mg": 20.0,
+              "calcium_mg": 6.0,
+              "iron_mg": 0.0
             }
           }
         ],
@@ -257628,16 +257628,15 @@
         ],
         "Breakfast  Pastries": [
           {
-            "name": "Apple Strudel",
+            "name": "Assorted Mini Danish",
             "description": "",
-            "serving_size": "1 strudel slice",
-            "calories": 134.0,
-            "ingredients": "Dough Strudel Apple Braided (Water, Enriched Wheat Flour (Flour, Niacin, Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Margarine (Palm oil, Canola Oil, Water, Sugar, Soy Lecithin, Mon- And Diglycerides, Preservative [Potassium Sorbate], Citric Acid, Natural Flavor, Vitamin A Palmitate, Vitamin D, Beta-Carotene [Color]), Sugar, High Fructose Corn Syrup, Dried Apples (Apples, Preservative [Sodium Sulfite]), Contains 2% or less of: Cinnamon, Citric Acid, Corn Syrup, Dough Conditioner (Ascorbic Acid), Enzymes, Food Starch-Modified, Leavening (Yeast), Preservatives (Potassium Sorbate, Sodium Benzoate), Salt, Spice.  , Contains: Soy, Wheat, May Contain: Milk, Egg, Tree Nuts).",
+            "serving_size": "1 mini danish",
+            "calories": 132.0,
+            "ingredients": "Mini Danish Selection (Wheat Flour, Margarine (palm Oil, Canola Oil, Water, Coconut Oil, Salt, Mono And Diglycerides, Citric Acid, Natural Flavor, Vitamin A), Water, Sugar, Pecans, Glaze (water, Isomalt, Sugar, Agar, Potassium Sorbate, Citric Acid), Egg Yolk (egg Yolk, Salt), Yeast, Maple Syrup, Custard Powder (sugar, Modified Potato Starch, Whey, Skim Milk Powder, Coconut Oil, Corn Syrup, Calcium Alginate, Natural Flavor, Tetrasodium Diphosphate, Disodium Phosphate, Salt, Casein, Beta Carotene), Baking Agent (dextrose, Datem, Wheat Starch, Wheat Flour, Calcium Carbonate, Enzymes, Ascorbic Acid), Pectin, Cane Sugar Syrup, Salt, Sodium Alginate, Natural Flavor, Malted Wheat Flour.glaze: Cane Sugar Syrup, Natural Flavor. &nbsp;contains: Wheat, Eggs, Pecans, Milk.).",
             "allergens": [
               "Milk",
               "Egg",
               "Wheat",
-              "Soy",
               "Tree Nuts"
             ],
             "dietary_labels": [
@@ -257646,51 +257645,19 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 134.0,
+              "calories": 132.0,
               "fat_g": 7.0,
-              "saturated_fat_g": 3.5,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 3.0,
-              "sodium_mg": 76.0,
-              "carbohydrates_g": 16.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 7.0,
-              "protein_g": 2.0,
-              "potassium_mg": 11.0,
-              "calcium_mg": 5.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Coconut Bread",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 470.0,
-            "ingredients": "Cane Sugar (Sugar), Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Coconut (Coconut, Sugar, Water, Propylene Glycol (sustains Freshness), Salt, Sodium Metabisulfite (preserves Whiteness).), Soybean Oil (Ingredients, Soybean Oil), Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Water, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Flaxseed Meal (INGREDIENT: Whole Flaxseed.), Sea Salt (Sea Salt, Magnesium Carbonate.), Baking Soda (Ingredients:, Sodium Bicarbonate), Ground Cinnamon.",
-            "allergens": [
-              "Wheat",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 470.0,
-              "fat_g": 23.0,
-              "saturated_fat_g": 12.0,
+              "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 313.0,
-              "carbohydrates_g": 61.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 38.0,
-              "protein_g": 5.0,
-              "potassium_mg": 131.0,
-              "calcium_mg": 22.0,
+              "cholesterol_mg": 10.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 15.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 15.0,
+              "total_sugar_g": 15.0,
+              "protein_g": 2.0,
+              "potassium_mg": 30.0,
+              "calcium_mg": 30.0,
               "iron_mg": 2.6
             }
           },
@@ -257824,6 +257791,39 @@
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Pumpkin Bread",
+            "description": "",
+            "serving_size": "1 slice",
+            "calories": 489.0,
+            "ingredients": "Sugar Granulated (Sugar), Pumpkin (Prepared pumpkin.), Grapeseed Oil (100% Cold Pressed Grapeseed Oil.), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Pepitas Raw 27.5#, Cake Pan Grease Starch Free 35# (Canola Oil an/or soybean oil, lecithin (soy), hydrogenated canola oil and/or hydrogenated cottonseed oil, TBHQ and citric acid in propylene glycol added as antioxidants.), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Kosher Salt, Ground Cinnamon, Baking Soda (Ingredients:, Sodium Bicarbonate), Ground Nutmeg, Ground Clove.",
+            "allergens": [
+              "Egg",
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 489.0,
+              "fat_g": 30.0,
+              "saturated_fat_g": 3.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 62.0,
+              "sodium_mg": 224.0,
+              "carbohydrates_g": 51.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 31.0,
+              "protein_g": 5.0,
+              "potassium_mg": 28.0,
+              "calcium_mg": 26.0,
+              "iron_mg": 1.6
             }
           }
         ],
@@ -258070,11 +258070,11 @@
             }
           },
           {
-            "name": "Chocolate Mint Dessert",
+            "name": "Brown Sugar Cake w/Bourbon Icing",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 228.0,
-            "ingredients": "Cane Sugar (Sugar), Unsalted Butter (Cream, (milk), natural flavor.), Powdered Sugar (Cane Sugar, Corn Starch), Chocolate Chips (Sugar, chocolate liquor, cocoa butter, soya lecithin, vanilla extract.), Water, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Soybean Oil (Ingredients, Soybean Oil), Cocoa Powder (Cocoa powder processed with alkali), Extract Peppermint Flavor Organic (Ingredients: Alcohol, Water & Oil Of Peppermint.), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt, Coloring Gel Food Green Leaf (Water, High Fructose Corn Syrup, Glycerin, FD&C Yellow 5 (E102), Sugar, Modified Food Starch, FD&C Blue 1 (E133), Citric Acid, Sodium Benzoate and Potassium Sorbate (Preservatives), Carrageenan Gum, Xanthan Gum.).",
+            "calories": 359.0,
+            "ingredients": "Unsalted Butter (Cream, (milk), natural flavor.), Dark Brown Sugar, Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Powdered Sugar (Cane Sugar, Corn Starch), Whole Eggs (Cage Free), Mixed Chocolate Microdrops (Sugar, Unsweetened Chocolate, Cocoa Butter, Whole MILKfat, Natural Vanilla Extract, emulsifier: SOY lecithin.), Woodford Reserve Bourbon 750 ML, Heavy Whipping Cream (Heavy cream, carrageenan.), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate).",
             "allergens": [
               "Milk",
               "Egg",
@@ -258087,20 +258087,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 228.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 7.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 30.0,
-              "sodium_mg": 110.0,
-              "carbohydrates_g": 28.0,
+              "calories": 359.0,
+              "fat_g": 18.0,
+              "saturated_fat_g": 11.0,
+              "trans_fat_g": 0.6,
+              "cholesterol_mg": 75.0,
+              "sodium_mg": 158.0,
+              "carbohydrates_g": 46.0,
               "fiber_g": 1.0,
-              "added_sugar_g": 12.0,
-              "total_sugar_g": 22.0,
-              "protein_g": 2.0,
-              "potassium_mg": 57.0,
-              "calcium_mg": 12.0,
-              "iron_mg": 0.7
+              "added_sugar_g": 13.0,
+              "total_sugar_g": 33.0,
+              "protein_g": 4.0,
+              "potassium_mg": 103.0,
+              "calcium_mg": 56.0,
+              "iron_mg": 1.3
             }
           },
           {
@@ -258138,16 +258138,16 @@
             }
           },
           {
-            "name": "Pumpkin Crunch Cake w/Pecans",
+            "name": "Chocolate Mint Dessert",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 351.0,
-            "ingredients": "All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Pumpkin (Prepared pumpkin.), Sugar Granulated (Sugar), Pecans (Pecans contains: Tree Nut (pecan)), Brown Sugar, Cane Sugar (Sugar), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Plain Nonfat Greek Yogurt (Cultured Grade A Non Fat Milk, Live & Active Yogurt Cultures S. Thermophilus And L. Bulgaricus), Paste Vanilla Bean Madagascar 100% (Sugar, water, vanilla bean extractives, exhausted vanilla bean seeds, xanthum gum.), Organic Spice (Cinnamon, ginger, nutmeg, cloves.), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt.",
+            "calories": 228.0,
+            "ingredients": "Cane Sugar (Sugar), Unsalted Butter (Cream, (milk), natural flavor.), Powdered Sugar (Cane Sugar, Corn Starch), Chocolate Chips (Sugar, chocolate liquor, cocoa butter, soya lecithin, vanilla extract.), Water, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Soybean Oil (Ingredients, Soybean Oil), Cocoa Powder (Cocoa powder processed with alkali), Extract Peppermint Flavor Organic (Ingredients: Alcohol, Water & Oil Of Peppermint.), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt, Coloring Gel Food Green Leaf (Water, High Fructose Corn Syrup, Glycerin, FD&C Yellow 5 (E102), Sugar, Modified Food Starch, FD&C Blue 1 (E133), Citric Acid, Sodium Benzoate and Potassium Sorbate (Preservatives), Carrageenan Gum, Xanthan Gum.).",
             "allergens": [
               "Milk",
               "Egg",
               "Wheat",
-              "Tree Nuts"
+              "Soy"
             ],
             "dietary_labels": [
               "Vegetarian"
@@ -258155,20 +258155,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 351.0,
-              "fat_g": 15.0,
-              "saturated_fat_g": 5.0,
+              "calories": 228.0,
+              "fat_g": 13.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.3,
-              "cholesterol_mg": 47.0,
-              "sodium_mg": 192.0,
-              "carbohydrates_g": 50.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 33.0,
-              "protein_g": 5.0,
-              "potassium_mg": 90.0,
-              "calcium_mg": 35.0,
-              "iron_mg": 1.4
+              "cholesterol_mg": 30.0,
+              "sodium_mg": 110.0,
+              "carbohydrates_g": 28.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 12.0,
+              "total_sugar_g": 22.0,
+              "protein_g": 2.0,
+              "potassium_mg": 57.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 0.7
             }
           }
         ],
@@ -258232,38 +258232,6 @@
               "protein_g": 5.0,
               "potassium_mg": 209.0,
               "calcium_mg": 169.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "White Chocolate Chips",
-            "description": "",
-            "serving_size": "0.1 lb bag",
-            "calories": 22680.0,
-            "ingredients": "Sugar, palm kernel oil, whole milk powder, nonfat dry milk, palm oil, soy lecithin - an emulsifier, vanilla..",
-            "allergens": [
-              "Milk",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 22680.0,
-              "fat_g": 1458.0,
-              "saturated_fat_g": 1296.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 1620.0,
-              "sodium_mg": 6480.0,
-              "carbohydrates_g": 2592.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2592.0,
-              "protein_g": 324.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 12960.0,
               "iron_mg": 0.0
             }
           },
