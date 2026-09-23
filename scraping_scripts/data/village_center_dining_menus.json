@@ -150,7 +150,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -3291,8 +3291,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -3620,7 +3620,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -3644,14 +3644,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -9549,8 +9549,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -9878,7 +9878,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -9902,14 +9902,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -12401,7 +12401,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -12426,7 +12426,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -13626,7 +13626,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 254.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -15752,8 +15752,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -16081,7 +16081,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -16105,14 +16105,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -16601,12 +16601,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -19072,7 +19072,7 @@
             "name": "Vegetarian Sushi Roll",
             "description": "",
             "serving_size": "2 piece",
-            "calories": null,
+            "calories": 75.0,
             "ingredients": "Milled Medium Grain Rice, Rice Vinegar (Sugar, Water, Distilled Vinegar, Salt, Rice Vinegar, Brown Sugar)., Sesame Seeds, Roasted Seaweed., Carrot, Avocado, Cucumber, Wasabi (Horseradish, Mustard, Mustard extract, Spirulina), Mustard, Mustard extract, Spirulina), Pickled Ginger (Ginger, Water, Salt, Acetic Acid, Citric Acid, Aspartame, Monosodium Glutamate, Potassium Sorbaate).",
             "allergens": [
               "Sesame"
@@ -19082,7 +19082,22 @@
             ],
             "is_vegan": true,
             "is_vegetarian": true,
-            "nutrition": {}
+            "nutrition": {
+              "calories": 75.0,
+              "fat_g": 1.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 59.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
           },
           {
             "name": "California Sushi Roll",
@@ -22237,8 +22252,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -22566,7 +22581,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -22590,14 +22605,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -28757,8 +28772,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -29086,7 +29101,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -29110,14 +29125,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -31545,7 +31560,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -32457,7 +32472,7 @@
             "description": "",
             "serving_size": "8 oz",
             "calories": 245.0,
-            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated, Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
+            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated (Sugar), Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
             "allergens": [
               "Milk"
             ],
@@ -34360,8 +34375,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -34848,7 +34863,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -34872,14 +34887,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -37362,7 +37377,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -40451,8 +40466,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -40780,7 +40795,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -40804,14 +40819,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -43307,7 +43322,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -46595,8 +46610,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -47046,7 +47061,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -47070,14 +47085,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -52965,8 +52980,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -53419,7 +53434,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -53443,14 +53458,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -55971,7 +55986,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -55996,7 +56011,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -57196,7 +57211,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 254.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -59288,8 +59303,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -59711,7 +59726,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -59735,14 +59750,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -60166,12 +60181,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -62642,7 +62657,7 @@
             "name": "Vegetarian Sushi Roll",
             "description": "",
             "serving_size": "2 piece",
-            "calories": null,
+            "calories": 75.0,
             "ingredients": "Milled Medium Grain Rice, Rice Vinegar (Sugar, Water, Distilled Vinegar, Salt, Rice Vinegar, Brown Sugar)., Sesame Seeds, Roasted Seaweed., Carrot, Avocado, Cucumber, Wasabi (Horseradish, Mustard, Mustard extract, Spirulina), Mustard, Mustard extract, Spirulina), Pickled Ginger (Ginger, Water, Salt, Acetic Acid, Citric Acid, Aspartame, Monosodium Glutamate, Potassium Sorbaate).",
             "allergens": [
               "Sesame"
@@ -62652,7 +62667,22 @@
             ],
             "is_vegan": true,
             "is_vegetarian": true,
-            "nutrition": {}
+            "nutrition": {
+              "calories": 75.0,
+              "fat_g": 1.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 59.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
           }
         ],
         "Pho Bar": [
@@ -65769,8 +65799,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -66192,7 +66222,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -66216,14 +66246,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -72199,8 +72229,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -72622,7 +72652,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -72646,14 +72676,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -75114,7 +75144,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -76094,7 +76124,7 @@
             "description": "",
             "serving_size": "8 oz",
             "calories": 245.0,
-            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated, Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
+            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated (Sugar), Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
             "allergens": [
               "Milk"
             ],
@@ -78062,8 +78092,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -78485,7 +78515,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -78509,14 +78539,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -81290,7 +81320,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -83958,8 +83988,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -84287,7 +84317,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -84311,14 +84341,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -86838,7 +86868,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -86863,7 +86893,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -90068,8 +90098,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -90426,7 +90456,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -90450,14 +90480,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -91069,6 +91099,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -94803,14 +94864,14 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 15.0,
+              "sodium_mg": 16.0,
               "carbohydrates_g": 2.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 22.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 23.0,
+              "calcium_mg": 2.6,
               "iron_mg": 0.2
             }
           }
@@ -96570,8 +96631,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -97027,7 +97088,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -97051,14 +97112,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -97572,6 +97633,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -99540,7 +99632,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -99565,7 +99657,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -100736,7 +100828,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 254.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -102703,8 +102795,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -103222,7 +103314,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -103246,14 +103338,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -103682,6 +103774,37 @@
             }
           }
         ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Breakfast  Pastries": [
           {
             "name": "Scratch Made Cream Scone",
@@ -103706,12 +103829,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -104400,6 +104523,35 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
+            "name": "White Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 207.0,
+            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 207.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 41.0,
+              "carbohydrates_g": 45.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 5.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 1.8
+            }
+          },
+          {
             "name": "Pinto Beans",
             "description": "",
             "serving_size": "0.5 cups",
@@ -104426,35 +104578,6 @@
               "potassium_mg": 2.0,
               "calcium_mg": 21.0,
               "iron_mg": 1.2
-            }
-          },
-          {
-            "name": "Green Rice",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 147.0,
-            "ingredients": "Water, Rice Royal Basmati (White basmati rice.), Yellow Onions, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Cilantro 30 CT, Celery, Rice Bran Oil, Baby Spinach, Pepper Jalapeno Case, Garlic.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 147.0,
-              "fat_g": 2.0,
-              "saturated_fat_g": 0.4,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1092.0,
-              "carbohydrates_g": 29.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 33.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
             }
           }
         ],
@@ -106186,7 +106309,7 @@
             "name": "Vegetarian Sushi Roll",
             "description": "",
             "serving_size": "2 piece",
-            "calories": null,
+            "calories": 75.0,
             "ingredients": "Milled Medium Grain Rice, Rice Vinegar (Sugar, Water, Distilled Vinegar, Salt, Rice Vinegar, Brown Sugar)., Sesame Seeds, Roasted Seaweed., Carrot, Avocado, Cucumber, Wasabi (Horseradish, Mustard, Mustard extract, Spirulina), Mustard, Mustard extract, Spirulina), Pickled Ginger (Ginger, Water, Salt, Acetic Acid, Citric Acid, Aspartame, Monosodium Glutamate, Potassium Sorbaate).",
             "allergens": [
               "Sesame"
@@ -106196,7 +106319,22 @@
             ],
             "is_vegan": true,
             "is_vegetarian": true,
-            "nutrition": {}
+            "nutrition": {
+              "calories": 75.0,
+              "fat_g": 1.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 59.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
           },
           {
             "name": "California Sushi Roll",
@@ -109292,8 +109430,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -109622,7 +109760,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -109646,14 +109784,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -110166,6 +110304,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -112872,7 +113041,7 @@
             "name": "Roasted Tofu",
             "description": "",
             "serving_size": "6 oz",
-            "calories": 75.0,
+            "calories": 210.0,
             "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic Whole Peeled Case.",
             "allergens": [
               "Soy",
@@ -112884,20 +113053,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 75.0,
-              "fat_g": 5.0,
-              "saturated_fat_g": 0.7,
+              "calories": 210.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 1.6,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 2440.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 0.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 3.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 5.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.9
+              "protein_g": 19.0,
+              "potassium_mg": 597.0,
+              "calcium_mg": 122.0,
+              "iron_mg": 6.0
             }
           },
           {
@@ -115752,8 +115921,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -116081,7 +116250,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -116105,14 +116274,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -116628,6 +116797,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -118542,7 +118742,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -121478,8 +121678,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -121838,7 +122038,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -121862,14 +122062,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -122380,6 +122580,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -124329,7 +124560,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -127384,8 +127615,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -127713,7 +127944,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -127737,14 +127968,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -128232,6 +128463,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -130149,7 +130411,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -133290,8 +133552,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -133619,7 +133881,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -133643,14 +133905,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -134166,6 +134428,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -139548,8 +139841,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -139877,7 +140170,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -139901,14 +140194,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -140427,6 +140720,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -142400,7 +142724,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -142425,7 +142749,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -143625,7 +143949,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 254.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -145751,8 +146075,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -146080,7 +146404,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -146104,14 +146428,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -146540,6 +146864,37 @@
             }
           }
         ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Breakfast  Pastries": [
           {
             "name": "Breakfast Apple Sticks",
@@ -146600,12 +146955,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -149071,7 +149426,7 @@
             "name": "Vegetarian Sushi Roll",
             "description": "",
             "serving_size": "2 piece",
-            "calories": null,
+            "calories": 75.0,
             "ingredients": "Milled Medium Grain Rice, Rice Vinegar (Sugar, Water, Distilled Vinegar, Salt, Rice Vinegar, Brown Sugar)., Sesame Seeds, Roasted Seaweed., Carrot, Avocado, Cucumber, Wasabi (Horseradish, Mustard, Mustard extract, Spirulina), Mustard, Mustard extract, Spirulina), Pickled Ginger (Ginger, Water, Salt, Acetic Acid, Citric Acid, Aspartame, Monosodium Glutamate, Potassium Sorbaate).",
             "allergens": [
               "Sesame"
@@ -149081,7 +149436,22 @@
             ],
             "is_vegan": true,
             "is_vegetarian": true,
-            "nutrition": {}
+            "nutrition": {
+              "calories": 75.0,
+              "fat_g": 1.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 59.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
           },
           {
             "name": "California Sushi Roll",
@@ -152236,8 +152606,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -152565,7 +152935,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -152589,14 +152959,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -153109,6 +153479,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -156529,14 +156930,14 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 15.0,
+              "sodium_mg": 16.0,
               "carbohydrates_g": 2.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 22.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 23.0,
+              "calcium_mg": 2.6,
               "iron_mg": 0.2
             }
           },
@@ -158455,8 +158856,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -158784,7 +159185,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -158808,14 +159209,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -159332,6 +159733,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -161243,7 +161675,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -162218,7 +162650,7 @@
             "description": "",
             "serving_size": "8 oz",
             "calories": 245.0,
-            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated, Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
+            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated (Sugar), Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
             "allergens": [
               "Milk"
             ],
@@ -164121,8 +164553,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -164609,7 +165041,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -164633,14 +165065,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -165156,6 +165588,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -167123,7 +167586,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -170212,8 +170675,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -170541,7 +171004,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -170565,14 +171028,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -171085,6 +171548,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -173036,7 +173530,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -176479,8 +176973,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -176930,7 +177424,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -176954,14 +177448,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -177378,6 +177872,37 @@
               "potassium_mg": 152.0,
               "calcium_mg": 327.0,
               "iron_mg": 0.6
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -182849,8 +183374,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -183303,7 +183828,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -183327,14 +183852,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -183849,6 +184374,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -185855,7 +186411,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -185880,7 +186436,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -187080,7 +187636,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 254.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -189172,8 +189728,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -189595,7 +190151,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -189619,14 +190175,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -190026,6 +190582,37 @@
             }
           }
         ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Breakfast  Pastries": [
           {
             "name": "Scratch Made Cream Scone",
@@ -190050,12 +190637,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -192526,7 +193113,7 @@
             "name": "Vegetarian Sushi Roll",
             "description": "",
             "serving_size": "2 piece",
-            "calories": null,
+            "calories": 75.0,
             "ingredients": "Milled Medium Grain Rice, Rice Vinegar (Sugar, Water, Distilled Vinegar, Salt, Rice Vinegar, Brown Sugar)., Sesame Seeds, Roasted Seaweed., Carrot, Avocado, Cucumber, Wasabi (Horseradish, Mustard, Mustard extract, Spirulina), Mustard, Mustard extract, Spirulina), Pickled Ginger (Ginger, Water, Salt, Acetic Acid, Citric Acid, Aspartame, Monosodium Glutamate, Potassium Sorbaate).",
             "allergens": [
               "Sesame"
@@ -192536,7 +193123,22 @@
             ],
             "is_vegan": true,
             "is_vegetarian": true,
-            "nutrition": {}
+            "nutrition": {
+              "calories": 75.0,
+              "fat_g": 1.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 59.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
           }
         ],
         "Pho Bar": [
@@ -195653,8 +196255,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -196076,7 +196678,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -196100,14 +196702,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -196621,6 +197223,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -202083,8 +202716,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -202506,7 +203139,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -202530,14 +203163,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -203055,6 +203688,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -204998,7 +205662,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -205978,7 +206642,7 @@
             "description": "",
             "serving_size": "8 oz",
             "calories": 245.0,
-            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated, Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
+            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated (Sugar), Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
             "allergens": [
               "Milk"
             ],
@@ -207946,8 +208610,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -208369,7 +209033,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -208393,14 +209057,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -208917,6 +209581,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -211174,7 +211869,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -213842,8 +214537,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -214171,7 +214866,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -214195,14 +214890,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -214715,6 +215410,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -216722,7 +217448,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -216747,7 +217473,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -219952,8 +220678,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -220310,7 +221036,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -220334,14 +221060,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -220953,6 +221679,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -224687,14 +225444,14 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 15.0,
+              "sodium_mg": 16.0,
               "carbohydrates_g": 2.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 22.0,
-              "calcium_mg": 3.0,
+              "potassium_mg": 23.0,
+              "calcium_mg": 2.6,
               "iron_mg": 0.2
             }
           }
@@ -226454,8 +227211,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -226911,7 +227668,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -226935,14 +227692,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -227456,6 +228213,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -229424,7 +230212,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -229449,7 +230237,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -230620,7 +231408,7 @@
             "description": "",
             "serving_size": "1 slice",
             "calories": 254.0,
-            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated, Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
+            "ingredients": "Crust (Soft wheat flour, water, extra virgin olive oil, sunflower oil, salt, yeast.,  May Contain: Soy), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Water, Pork Italian Crumbles (Pork, Water, Salt, Spices, Paprika, Hog Casing.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Extra Virgin Olive Oil, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Kosher Salt, Garlic Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat",
@@ -232587,8 +233375,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -233106,7 +233894,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -233130,14 +233918,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -233566,6 +234354,37 @@
             }
           }
         ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Breakfast  Pastries": [
           {
             "name": "Scratch Made Cream Scone",
@@ -233590,12 +234409,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -236070,7 +236889,7 @@
             "name": "Vegetarian Sushi Roll",
             "description": "",
             "serving_size": "2 piece",
-            "calories": null,
+            "calories": 75.0,
             "ingredients": "Milled Medium Grain Rice, Rice Vinegar (Sugar, Water, Distilled Vinegar, Salt, Rice Vinegar, Brown Sugar)., Sesame Seeds, Roasted Seaweed., Carrot, Avocado, Cucumber, Wasabi (Horseradish, Mustard, Mustard extract, Spirulina), Mustard, Mustard extract, Spirulina), Pickled Ginger (Ginger, Water, Salt, Acetic Acid, Citric Acid, Aspartame, Monosodium Glutamate, Potassium Sorbaate).",
             "allergens": [
               "Sesame"
@@ -236080,7 +236899,22 @@
             ],
             "is_vegan": true,
             "is_vegetarian": true,
-            "nutrition": {}
+            "nutrition": {
+              "calories": 75.0,
+              "fat_g": 1.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 59.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
           },
           {
             "name": "California Sushi Roll",
@@ -239176,8 +240010,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -239506,7 +240340,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -239530,14 +240364,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -240050,6 +240884,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -242725,7 +243590,7 @@
             "name": "Roasted Tofu",
             "description": "",
             "serving_size": "6 oz",
-            "calories": 75.0,
+            "calories": 210.0,
             "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Water, Sesame Oil (Soybean Oil, Sesame Oil.), Ginger Puree (Ginger, phosphoric acid, sodium benzoate and potassium sorbate as preservatives.), Garlic Whole Peeled Case.",
             "allergens": [
               "Soy",
@@ -242737,20 +243602,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 75.0,
-              "fat_g": 5.0,
-              "saturated_fat_g": 0.7,
+              "calories": 210.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 1.6,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
               "sodium_mg": 2440.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 0.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 3.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 5.0,
-              "potassium_mg": 4.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.9
+              "protein_g": 19.0,
+              "potassium_mg": 597.0,
+              "calcium_mg": 122.0,
+              "iron_mg": 6.0
             }
           },
           {
@@ -245605,8 +246470,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -245934,7 +246799,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -245958,14 +246823,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -246481,6 +247346,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -248422,7 +249318,7 @@
               "saturated_fat_g": 3.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 18.0,
-              "sodium_mg": 162.0,
+              "sodium_mg": 161.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -249338,7 +250234,7 @@
             "description": "",
             "serving_size": "8 oz",
             "calories": 245.0,
-            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated, Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
+            "ingredients": "Roma Tomatoes, English Cucumber, Red Bermuda Onions, Feta Cheese (Feta Cheese (pasteurized milk, cheese cultures, salt, enzymes), Natamycin (to protect flavor).), Extra Virgin Olive Oil, Kalamata Olives (Kalamata Olives, Water, Salt, Red Wine Vinegar, Extra Virgin Olive Oil.), White Vinegar (Distilled vinegar diluted with water to 5% acidity), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Sugar Granulated (Sugar), Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
             "allergens": [
               "Milk"
             ],
@@ -251364,8 +252260,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -251724,7 +252620,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -251748,14 +252644,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -252266,6 +253162,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -254246,7 +255173,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 101.0,
-              "fat_g": 4.0,
+              "fat_g": 4.1,
               "saturated_fat_g": 0.7,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -257237,8 +258164,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 9.0,
-              "potassium_mg": 99.0,
-              "calcium_mg": 18.0,
+              "potassium_mg": 98.0,
+              "calcium_mg": 18.1,
               "iron_mg": 3.8
             }
           },
@@ -257566,7 +258493,7 @@
               "total_sugar_g": 0.0,
               "protein_g": 10.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 284.0,
+              "calcium_mg": 283.0,
               "iron_mg": 0.0
             }
           },
@@ -257590,14 +258517,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 61.0,
+              "sodium_mg": 60.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 253.0,
+              "calcium_mg": 252.0,
               "iron_mg": 0.0
             }
           }
@@ -258085,6 +259012,37 @@
               "potassium_mg": 17.0,
               "calcium_mg": 108.0,
               "iron_mg": 1.5
+            }
+          }
+        ],
+        "Yogurt Alternatives": [
+          {
+            "name": "Dairy Free Vanilla Coconut Yogurt",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 107.0,
+            "ingredients": "Cultured Coconut Base (water, Coconut Cream, Cane Sugar, Modified Food Starch, Natural Flavor, Malic Acid, Potassium Sorbate Added To Maintain Freshness)..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 107.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 5.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 7.0,
+              "carbohydrates_g": 13.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 8.0,
+              "total_sugar_g": 8.0,
+              "protein_g": 1.0,
+              "potassium_mg": 67.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.3
             }
           }
         ],
