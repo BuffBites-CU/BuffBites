@@ -270,15 +270,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -2311,15 +2311,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -4612,12 +4612,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -4641,12 +4641,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -4702,9 +4702,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -6561,15 +6561,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -7784,15 +7784,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -9886,15 +9886,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -12061,15 +12061,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -14157,15 +14157,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -16307,15 +16307,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -18344,15 +18344,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -20444,15 +20444,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -22657,12 +22657,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -22686,12 +22686,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -22747,9 +22747,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -24569,15 +24569,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -26024,12 +26024,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -26053,12 +26053,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -26114,9 +26114,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -28056,15 +28056,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -29545,12 +29545,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -29574,12 +29574,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -29635,9 +29635,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -31401,15 +31401,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -32855,12 +32855,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -32884,12 +32884,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -32945,9 +32945,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -34771,15 +34771,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -36286,12 +36286,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -36315,12 +36315,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -36376,9 +36376,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -38174,15 +38174,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -39667,12 +39667,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -39696,12 +39696,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -39757,9 +39757,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -41639,15 +41639,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -43094,12 +43094,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -43123,12 +43123,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -43184,9 +43184,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -45043,15 +45043,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -46534,12 +46534,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -46563,12 +46563,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -46624,9 +46624,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -48388,15 +48388,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -49844,12 +49844,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -49873,12 +49873,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -49934,9 +49934,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -51818,15 +51818,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -53307,12 +53307,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -53336,12 +53336,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -53397,9 +53397,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -55341,15 +55341,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -56821,12 +56821,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -56850,12 +56850,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -56911,9 +56911,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -58824,15 +58824,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -60401,12 +60401,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -60430,12 +60430,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -60491,9 +60491,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -62320,15 +62320,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -63805,12 +63805,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -63834,12 +63834,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -63895,9 +63895,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -65929,15 +65929,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -67385,12 +67385,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -67414,12 +67414,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -67475,9 +67475,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -69363,15 +69363,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -70879,12 +70879,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 105.0,
-            "ingredients": "Whole grain oats, corn starch, sugar, salt, tripotassium phosphate, vitamin e (mixed tocopherols) added to preserve freshness.  Vitamins and Minerals:  Calcium carbonate, zinc and iron, vitamin C (sodium ascorbate), a B vitamin (niacinamide), vitamin B6 (pyroxidine hydrochloride), vitamin B2 (riboflavin), vitamin B1 (thiamine mononitrate), vitamin A (palmitate), a B vitamin (folate), vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Oats, Corn Starch, Sugar, Salt, Tripotassium Phosphate. Vitamin E (mixed tocopherols) Added to Preserve Freshness. Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B1 (thiamin mononitrate), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 105.0,
@@ -70908,12 +70908,12 @@
             "description": "",
             "serving_size": "1 cups",
             "calories": 125.0,
-            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness.Vitamins and Minerals: Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B1 (thiamin mononitrate), Vitamin B6 (pyridoxine hydrochloride), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin(folic acid), Vitamin B12, Vitamin D3..",
+            "ingredients": "Whole Grain Corn, Corn Meal, Sugar, Corn Starch, Salt, Baking Soda. Vitamin E (mixed tocopherols) Added to Preserve Freshness., Vitamins & minerals:, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3...",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 125.0,
@@ -70969,9 +70969,9 @@
             "ingredients": "INGREDIENTS:, Whole Grain Rice, Rice, Sugar, Salt, Molasses. Vitamin E (mixed tocopherols) Added to Preserve Freshness., , VITAMINS & MINERALS, Calcium Carbonate, Iron and Zinc (mineral nutrients), Vitamin C (sodium ascorbate), A B Vitamin (niacinamide), Vitamin B6 (pyridoxine hydrochloride), Vitamin B1 (thiamin mononitrate), Vitamin A (palmitate), Vitamin B2 (riboflavin), A B Vitamin (folic acid), Vitamin B12, Vitamin D3..",
             "allergens": [],
             "dietary_labels": [
-              "Vegan"
+              "Vegetarian"
             ],
-            "is_vegan": true,
+            "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
               "calories": 127.0,
@@ -72831,15 +72831,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -74246,15 +74246,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -76188,15 +76188,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -78286,15 +78286,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -80230,15 +80230,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
@@ -82210,15 +82210,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 22.0,
+              "sodium_mg": 21.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 158.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 0.8
+              "potassium_mg": 140.0,
+              "calcium_mg": 24.5,
+              "iron_mg": 0.7
             }
           },
           {
