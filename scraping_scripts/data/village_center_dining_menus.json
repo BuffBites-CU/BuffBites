@@ -850,8 +850,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -1700,8 +1700,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -7020,8 +7020,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -8046,8 +8046,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           },
@@ -12774,7 +12774,7 @@
             "description": "",
             "serving_size": "1 serving",
             "calories": 268.0,
-            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Himalayan (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Parboile (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
             "allergens": [
               "Egg"
             ],
@@ -12783,19 +12783,19 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 268.0,
-              "fat_g": 14.0,
-              "saturated_fat_g": 4.2,
+              "fat_g": 13.0,
+              "saturated_fat_g": 4.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 188.0,
-              "sodium_mg": 380.0,
-              "carbohydrates_g": 23.0,
-              "fiber_g": 0.0,
+              "cholesterol_mg": 178.0,
+              "sodium_mg": 360.0,
+              "carbohydrates_g": 24.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
-              "potassium_mg": 104.0,
-              "calcium_mg": 31.0,
-              "iron_mg": 1.1
+              "potassium_mg": 98.0,
+              "calcium_mg": 29.4,
+              "iron_mg": 1.3
             }
           },
           {
@@ -13610,8 +13610,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -14425,8 +14425,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -17009,12 +17009,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -19848,8 +19848,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -20966,8 +20966,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -26250,8 +26250,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -27365,8 +27365,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -33228,8 +33228,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -39030,8 +39030,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -44414,8 +44414,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -45263,8 +45263,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -50775,8 +50775,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           },
@@ -51801,8 +51801,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -56405,7 +56405,7 @@
             "description": "",
             "serving_size": "1 serving",
             "calories": 268.0,
-            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Himalayan (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Parboile (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
             "allergens": [
               "Egg"
             ],
@@ -56414,19 +56414,19 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 268.0,
-              "fat_g": 14.0,
-              "saturated_fat_g": 4.2,
+              "fat_g": 13.0,
+              "saturated_fat_g": 4.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 188.0,
-              "sodium_mg": 380.0,
-              "carbohydrates_g": 23.0,
-              "fiber_g": 0.0,
+              "cholesterol_mg": 178.0,
+              "sodium_mg": 360.0,
+              "carbohydrates_g": 24.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
-              "potassium_mg": 104.0,
-              "calcium_mg": 31.0,
-              "iron_mg": 1.1
+              "potassium_mg": 98.0,
+              "calcium_mg": 29.4,
+              "iron_mg": 1.3
             }
           },
           {
@@ -57446,8 +57446,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           },
@@ -58027,8 +58027,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -60642,12 +60642,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -63550,8 +63550,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           },
@@ -64458,8 +64458,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -69976,8 +69976,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           },
@@ -70948,8 +70948,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -76683,8 +76683,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           },
@@ -82676,8 +82676,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -87878,8 +87878,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -88670,8 +88670,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -93844,8 +93844,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -94928,8 +94928,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -99479,7 +99479,7 @@
             "description": "",
             "serving_size": "1 serving",
             "calories": 268.0,
-            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Himalayan (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Parboile (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
             "allergens": [
               "Egg"
             ],
@@ -99488,19 +99488,19 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 268.0,
-              "fat_g": 14.0,
-              "saturated_fat_g": 4.2,
+              "fat_g": 13.0,
+              "saturated_fat_g": 4.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 188.0,
-              "sodium_mg": 380.0,
-              "carbohydrates_g": 23.0,
-              "fiber_g": 0.0,
+              "cholesterol_mg": 178.0,
+              "sodium_mg": 360.0,
+              "carbohydrates_g": 24.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
-              "potassium_mg": 104.0,
-              "calcium_mg": 31.0,
-              "iron_mg": 1.1
+              "potassium_mg": 98.0,
+              "calcium_mg": 29.4,
+              "iron_mg": 1.3
             }
           },
           {
@@ -100117,7 +100117,7 @@
             "description": "",
             "serving_size": "3 oz",
             "calories": 138.0,
-            "ingredients": "Chicken Thigh Bnls/Skls ABF, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Water, Potato Sweet 10 LB, Red Bell Peppers, Extra Virgin Olive Oil, Cilantro 30 CT, Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Fish Sauce (Anchovy, Sea Salt, Sugar, Fructose), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Kosher Salt, Black pepper (Black Pepper).",
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Water, Sweet Potatoes, Red Bell Peppers, Extra Virgin Olive Oil, Cilantro 30 CT, Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Fish Sauce (Anchovy, Sea Salt, Sugar, Fructose), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Kosher Salt, Black pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -100130,14 +100130,14 @@
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 32.0,
-              "sodium_mg": 153.0,
+              "sodium_mg": 143.0,
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 8.0,
-              "potassium_mg": 129.0,
-              "calcium_mg": 10.0,
+              "potassium_mg": 127.0,
+              "calcium_mg": 10.1,
               "iron_mg": 1.6
             }
           },
@@ -100206,7 +100206,7 @@
             "description": "",
             "serving_size": "1 serving",
             "calories": 270.0,
-            "ingredients": "Broccoli Florets, Sesame Oil (Soybean Oil, Sesame Oil.), Red Bermuda Onions, Crimini Mushrooms, Water, Ginger, Green Onion, Carrots, Garlic, Sugar Granulated, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.).",
+            "ingredients": "Broccoli Florets, Sesame Oil (Soybean Oil, Sesame Oil.), Red Bermuda Onions, Crimini Mushrooms, Water, Ginger, Green Onion, Carrots, Garlic, Sugar Granulated (Sugar), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.).",
             "allergens": [
               "Soy",
               "Sesame"
@@ -100315,8 +100315,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -101130,8 +101130,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -103750,12 +103750,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -106618,8 +106618,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -107615,8 +107615,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -113051,8 +113051,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -113865,8 +113865,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -119721,8 +119721,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -125655,8 +125655,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -131165,8 +131165,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -132015,8 +132015,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -137366,8 +137366,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -138392,8 +138392,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           },
@@ -143151,7 +143151,7 @@
             "description": "",
             "serving_size": "1 serving",
             "calories": 268.0,
-            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Himalayan (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Parboile (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
             "allergens": [
               "Egg"
             ],
@@ -143160,19 +143160,19 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 268.0,
-              "fat_g": 14.0,
-              "saturated_fat_g": 4.2,
+              "fat_g": 13.0,
+              "saturated_fat_g": 4.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 188.0,
-              "sodium_mg": 380.0,
-              "carbohydrates_g": 23.0,
-              "fiber_g": 0.0,
+              "cholesterol_mg": 178.0,
+              "sodium_mg": 360.0,
+              "carbohydrates_g": 24.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
-              "potassium_mg": 104.0,
-              "calcium_mg": 31.0,
-              "iron_mg": 1.1
+              "potassium_mg": 98.0,
+              "calcium_mg": 29.4,
+              "iron_mg": 1.3
             }
           },
           {
@@ -143987,8 +143987,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -144802,8 +144802,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -147417,12 +147417,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -150256,8 +150256,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -151374,8 +151374,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -156689,8 +156689,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -157804,8 +157804,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -163698,8 +163698,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -169531,8 +169531,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -174946,8 +174946,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -175795,8 +175795,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -181307,8 +181307,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           },
@@ -182333,8 +182333,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -186937,7 +186937,7 @@
             "description": "",
             "serving_size": "1 serving",
             "calories": 268.0,
-            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Himalayan (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
+            "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Basmati Parboile (White basmati rice.), Water, Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Green Onion, Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, White Pepper, Black pepper (Black Pepper), Kosher Salt.",
             "allergens": [
               "Egg"
             ],
@@ -186946,19 +186946,19 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 268.0,
-              "fat_g": 14.0,
-              "saturated_fat_g": 4.2,
+              "fat_g": 13.0,
+              "saturated_fat_g": 4.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 188.0,
-              "sodium_mg": 380.0,
-              "carbohydrates_g": 23.0,
-              "fiber_g": 0.0,
+              "cholesterol_mg": 178.0,
+              "sodium_mg": 360.0,
+              "carbohydrates_g": 24.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 12.0,
-              "potassium_mg": 104.0,
-              "calcium_mg": 31.0,
-              "iron_mg": 1.1
+              "potassium_mg": 98.0,
+              "calcium_mg": 29.4,
+              "iron_mg": 1.3
             }
           },
           {
@@ -187978,8 +187978,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           },
@@ -188559,8 +188559,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -191174,12 +191174,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -194082,8 +194082,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           },
@@ -194990,8 +194990,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -200477,8 +200477,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           },
@@ -201449,8 +201449,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -207217,8 +207217,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           },
@@ -213177,8 +213177,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -218407,8 +218407,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -219199,8 +219199,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -224372,8 +224372,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -225456,8 +225456,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -230647,7 +230647,7 @@
             "description": "",
             "serving_size": "3 oz",
             "calories": 138.0,
-            "ingredients": "Chicken Thigh Bnls/Skls ABF, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Water, Potato Sweet 10 LB, Red Bell Peppers, Extra Virgin Olive Oil, Cilantro 30 CT, Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Fish Sauce (Anchovy, Sea Salt, Sugar, Fructose), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Kosher Salt, Black pepper (Black Pepper).",
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Unsweetened Coconut Milk (Coconut Milk, Water, Guar Gum, Sodium Carboxymethyl Cellulose, Polysorbate 60, Sodium Metabisulfite (preservative). Or Coconut Milk, Water, Guar Gum, Polysorbate 60, Sodium Metabisulfite (preservative). Contains Sulfites.), Water, Sweet Potatoes, Red Bell Peppers, Extra Virgin Olive Oil, Cilantro 30 CT, Red Curry Paste (Red chili pepper, garlic, lemongrass, galangal (Thai ginger), salt, shallot, spices, Kaffir lime.), Fish Sauce (Anchovy, Sea Salt, Sugar, Fructose), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Ginger, Garlic Whole Peeled Case, Brown Sugar, Kosher Salt, Black pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -230660,14 +230660,14 @@
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 32.0,
-              "sodium_mg": 153.0,
+              "sodium_mg": 143.0,
               "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 8.0,
-              "potassium_mg": 129.0,
-              "calcium_mg": 10.0,
+              "potassium_mg": 127.0,
+              "calcium_mg": 10.1,
               "iron_mg": 1.6
             }
           },
@@ -230736,7 +230736,7 @@
             "description": "",
             "serving_size": "1 serving",
             "calories": 270.0,
-            "ingredients": "Broccoli Florets, Sesame Oil (Soybean Oil, Sesame Oil.), Red Bermuda Onions, Crimini Mushrooms, Water, Ginger, Green Onion, Carrots, Garlic, Sugar Granulated, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.).",
+            "ingredients": "Broccoli Florets, Sesame Oil (Soybean Oil, Sesame Oil.), Red Bermuda Onions, Crimini Mushrooms, Water, Ginger, Green Onion, Carrots, Garlic, Sugar Granulated (Sugar), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.).",
             "allergens": [
               "Soy",
               "Sesame"
@@ -230845,8 +230845,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -231660,8 +231660,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -234280,12 +234280,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -237115,8 +237115,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -238112,8 +238112,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -243546,8 +243546,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 45.0,
-              "calcium_mg": 8.0,
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.2
             }
           }
@@ -244360,8 +244360,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -250212,8 +250212,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
@@ -256113,8 +256113,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
               "iron_mg": 0.3
             }
           }
