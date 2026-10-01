@@ -42577,34 +42577,32 @@
             }
           },
           {
-            "name": "Honey Glazed Baby Carrots",
+            "name": "Oven Roasted Vegetables",
             "description": "",
-            "serving_size": "1 cups",
-            "calories": 175.0,
-            "ingredients": "Baby Carrots, Honey (Ingredients:, Honey), Unsalted Butter (Cream, (milk), natural flavor.), Brown Sugar, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Italian Flat Leaf Parsley, Kosher Salt.",
-            "allergens": [
-              "Milk"
-            ],
+            "serving_size": "1 1/2 cup serving",
+            "calories": 52.0,
+            "ingredients": "Fresh Zucchini, Yellow Squash, Tomatoes, Fresh White Medium Mushrooms, Red Bermuda Onions, Balsamic Vinegar (Organic Balsamic Vinegar.), Extra Virgin Olive Oil, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Black pepper (Black Pepper).",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 175.0,
-              "fat_g": 8.0,
-              "saturated_fat_g": 5.0,
-              "trans_fat_g": 0.3,
-              "cholesterol_mg": 21.0,
-              "sodium_mg": 326.0,
-              "carbohydrates_g": 26.0,
-              "fiber_g": 3.0,
+              "calories": 52.0,
+              "fat_g": 3.3,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 230.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 22.0,
+              "total_sugar_g": 3.0,
               "protein_g": 1.0,
-              "potassium_mg": 291.0,
-              "calcium_mg": 45.0,
-              "iron_mg": 1.2
+              "potassium_mg": 269.0,
+              "calcium_mg": 17.0,
+              "iron_mg": 0.4
             }
           },
           {

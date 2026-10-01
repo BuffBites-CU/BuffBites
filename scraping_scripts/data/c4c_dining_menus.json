@@ -190100,13 +190100,14 @@
         ],
         "Italian - Featured Entree": [
           {
-            "name": "Pasta Di Zucca (Kabocha Squash Pasta)",
+            "name": "Cheese Tortellini",
             "description": "",
-            "serving_size": "6 oz",
-            "calories": 447.0,
-            "ingredients": "Cellentani Pasta (Durum semolina (Wheat), niacin, ferrous sulfate (iron), thiamine mononitrate, riboflavin, folic acid.), Squash Kabocha 40 LB, Heavy Whipping Cream (Heavy cream, carrageenan.), Whole Milk (Milk, vitamin d3.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Yellow Onion, Unsalted Butter (Cream, (milk), natural flavor.), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Pumpkin Seeds (Pumpkin seeds (pepitas).), Rice Bran Oil, Honey (Ingredients:, Honey), Garlic Whole Peeled Case, Thyme, Kosher Salt, Sage - Ground, Rosemary, Black pepper (Black Pepper), Ground Nutmeg, White Pepper, Garlic Granules, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "serving_size": "1 cups",
+            "calories": 277.0,
+            "ingredients": "Tri-Color Cheese Tortellini (Enriched Durum Flour (Wheat Flour, Niacin, Iron, Thiamin Mononitrate [Vitamin B1],, Riboflavin [Vitamin B2], Folic Acid), Water, Ricotta Cheese (Whey, Cream, Vinegar, Carrageenan [Stabilizer]), Bread Crumbs (Wheat Flour, Dextrose, Salt, Yeast, Soybean Oil), Imported Pecorino Romano Cheese (Pasteurized Sheep's Milk, Cheese Cultures, Salt, Enzymes), Eggs, Contains Less Than 2% Of: Parmesan Cheese (Pasteurized Part Skim Milk, Cheese Cultures, Salt, Enzymes), Spinach Powder, Dehydrated Parsley, Spices, Natural Red Color (Glycerine, Water, Polysorbate 80, Carmine [Color], Propylene Glycol, Paprika Oleoresin [Color], Soybean Oil, Annato Extract [Color]), Beta Carotene (Color), Salt.).",
             "allergens": [
               "Milk",
+              "Egg",
               "Wheat"
             ],
             "dietary_labels": [
@@ -190115,20 +190116,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 447.0,
-              "fat_g": 19.0,
-              "saturated_fat_g": 10.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 9.0,
-              "sodium_mg": 89.0,
-              "carbohydrates_g": 59.0,
-              "fiber_g": 4.0,
+              "calories": 277.0,
+              "fat_g": 5.0,
+              "saturated_fat_g": 2.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 25.0,
+              "sodium_mg": 340.0,
+              "carbohydrates_g": 48.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 7.0,
+              "total_sugar_g": 3.0,
               "protein_g": 11.0,
-              "potassium_mg": 115.0,
-              "calcium_mg": 81.0,
-              "iron_mg": 3.1
+              "potassium_mg": 189.0,
+              "calcium_mg": 113.0,
+              "iron_mg": 1.9
             }
           }
         ],
@@ -192674,306 +192675,6 @@
               "potassium_mg": 90.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.7
-            }
-          }
-        ],
-        "Black Coats - Vietnamese Pho Bar": [
-          {
-            "name": "Ramen Noodles",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 474.0,
-            "ingredients": "UNBLEACHED ENRICHED WHEAT FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE, MONONITRATE, RIBOFLAVIN, FOLIC ACID), UNENRICHED WHEAT FLOUR), WATER, CONTAINS 2% OR, LESS OF: WHEAT GLUTEN, KANSUI (POTASSIUM CARBONATE, SODIUM CARBONATE), SALT, RIBOFLAVIN, (FOR COLOR),CORNSTARCH, SAGO STARCH.",
-            "allergens": [
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 474.0,
-              "fat_g": 1.8,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 509.0,
-              "carbohydrates_g": 98.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 16.0,
-              "potassium_mg": 649.0,
-              "calcium_mg": 21.0,
-              "iron_mg": 3.5
-            }
-          },
-          {
-            "name": "Shoyu Ramen Broth",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 27.0,
-            "ingredients": "Water, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.).",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 27.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1063.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 2.0,
-              "potassium_mg": 2.0,
-              "calcium_mg": 6.0,
-              "iron_mg": 0.3
-            }
-          },
-          {
-            "name": "Broth - Chicken Ramen",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 8.0,
-            "ingredients": "Water, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Shiitake Mushroom, Garlic Whole Peeled Case, Ginger Root, Rice Bran Oil, Garlic Granules, Ginger - Ground (Ginger, sulfur dioxide (added to retain color).), Kombu, Chicken Base (Chicken Stock, Salt, Chicken Fat, Natural Flavor, Sugar, Maltodextrin, Yeast Extract And Stabilizer (xanthan Gum, Propylene Glycol Alginate).).",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 8.0,
-              "fat_g": 0.3,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 194.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 17.0,
-              "calcium_mg": 8.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Bamboo Shoots",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 11.0,
-            "ingredients": "Bamboo Shoot Strip PACKER.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 11.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.3
-            }
-          },
-          {
-            "name": "Sliced Green Onion",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Green Onion.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 1.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 9.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Hard Boiled Cage Free Eggs",
-            "description": "",
-            "serving_size": "1 egg",
-            "calories": 70.0,
-            "ingredients": "Ingredients:, Cage Free Whole Eggs.",
-            "allergens": [
-              "Egg"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 70.0,
-              "fat_g": 4.5,
-              "saturated_fat_g": 1.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 200.0,
-              "sodium_mg": 70.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 6.0,
-              "potassium_mg": 60.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 0.8
-            }
-          },
-          {
-            "name": "Green Nori Seaweed",
-            "description": "",
-            "serving_size": "1 g",
-            "calories": 0.0,
-            "ingredients": "Ingredients: Toasted Seaweed Sheets.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 0.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Fresh Mung Sprouts",
-            "description": "",
-            "serving_size": "0.25 cups",
-            "calories": 5.0,
-            "ingredients": "Mung beans mature seeds sprouted raw.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 5.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 26.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Spicy Kimchi",
-            "description": "",
-            "serving_size": "2 oz",
-            "calories": 9.0,
-            "ingredients": "Napa Cabbage, Radish, Water, Red Pepper, Garlic, Cane Sugar, Fish Sauce (Anchovies, Salt), Sea Salt, Monosodium Glutamate, Calcium Lactate, Ginger, Sorbitol, Onion, Xanthan Gum..",
-            "allergens": [
-              "Fish"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.3,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 282.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 86.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 1.4
-            }
-          },
-          {
-            "name": "Wonton Strips",
-            "description": "",
-            "serving_size": "2 Tbsp",
-            "calories": 16.0,
-            "ingredients": "Wonton Skin Frozen (INGREDIENTS: ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID AND ENZYMES), WATER, CORNSTARCH, SALT, PRESERVED WITH LESS THAN 1/10TH OF 1% SODIUM BENZOATE AND 1/10TH OF 1% POTASSIUM SORBATE. , CONTAINS: WHEAT).",
-            "allergens": [
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 16.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 32.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 1.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.3
             }
           }
         ],
@@ -206260,37 +205961,6 @@
             }
           },
           {
-            "name": "Pork & Vegetable Egg Roll",
-            "description": "",
-            "serving_size": "1 egg roll",
-            "calories": 180.0,
-            "ingredients": "Pork & Vegetable Egg Rolls (Ingredients, Cabbage, Enriched Bleached Flour (wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic, Acid), Pork, Water, Enriched Durum Flour (durum Flour, Niacin, Ferrous Sulfate, Thiamin Mononitrate, Riboflavin, Folic Acid), Onion, Textured Vegetable Protein (soy Flour, Zinc Oxide, Niacinamide, Ferrous Sulfate, Copper Gluconate, Vitamin A Palmitate, Calcium Pantothenate, Thiamine Mononitrate, Pyridoxine Hydrochloride, Riboflavin, Cyanocobalamin), Carrot, Celery, Contains Less Than 2% Of: Flavor Enhancer (yeast Extract, Natural Flavor), Salt, Spice, Sugar, Wheat Gluten, Dried Whole Eggs, Cottonseed Oil. prefried In Vegetable Oil (soybean And/or Cottonseed). Contains: Wheat, Soy, Egg., , Contains, Eggs, Soy, Wheat).",
-            "allergens": [
-              "Egg",
-              "Wheat",
-              "Soy"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 180.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 2.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 10.0,
-              "sodium_mg": 480.0,
-              "carbohydrates_g": 19.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 1.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 7.0,
-              "potassium_mg": 230.0,
-              "calcium_mg": 30.0,
-              "iron_mg": 1.5
-            }
-          },
-          {
             "name": "Kimchi",
             "description": "",
             "serving_size": "0.5 cups",
@@ -206320,6 +205990,37 @@
               "potassium_mg": 149.0,
               "calcium_mg": 57.0,
               "iron_mg": 0.6
+            }
+          },
+          {
+            "name": "Wonton Strips",
+            "description": "",
+            "serving_size": "1 .5oz serving",
+            "calories": 41.0,
+            "ingredients": "Wonton Skin Frozen (INGREDIENTS: ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID AND ENZYMES), WATER, CORNSTARCH, SALT, PRESERVED WITH LESS THAN 1/10TH OF 1% SODIUM BENZOATE AND 1/10TH OF 1% POTASSIUM SORBATE. , CONTAINS: WHEAT).",
+            "allergens": [
+              "Wheat"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 41.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 82.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.7
             }
           }
         ],
@@ -440716,37 +440417,6 @@
             }
           },
           {
-            "name": "Pork & Vegetable Egg Roll",
-            "description": "",
-            "serving_size": "1 egg roll",
-            "calories": 180.0,
-            "ingredients": "Pork & Vegetable Egg Rolls (Ingredients, Cabbage, Enriched Bleached Flour (wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic, Acid), Pork, Water, Enriched Durum Flour (durum Flour, Niacin, Ferrous Sulfate, Thiamin Mononitrate, Riboflavin, Folic Acid), Onion, Textured Vegetable Protein (soy Flour, Zinc Oxide, Niacinamide, Ferrous Sulfate, Copper Gluconate, Vitamin A Palmitate, Calcium Pantothenate, Thiamine Mononitrate, Pyridoxine Hydrochloride, Riboflavin, Cyanocobalamin), Carrot, Celery, Contains Less Than 2% Of: Flavor Enhancer (yeast Extract, Natural Flavor), Salt, Spice, Sugar, Wheat Gluten, Dried Whole Eggs, Cottonseed Oil. prefried In Vegetable Oil (soybean And/or Cottonseed). Contains: Wheat, Soy, Egg., , Contains, Eggs, Soy, Wheat).",
-            "allergens": [
-              "Egg",
-              "Wheat",
-              "Soy"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 180.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 2.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 10.0,
-              "sodium_mg": 480.0,
-              "carbohydrates_g": 19.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 1.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 7.0,
-              "potassium_mg": 230.0,
-              "calcium_mg": 30.0,
-              "iron_mg": 1.5
-            }
-          },
-          {
             "name": "Kimchi",
             "description": "",
             "serving_size": "0.5 cups",
@@ -440776,6 +440446,37 @@
               "potassium_mg": 149.0,
               "calcium_mg": 57.0,
               "iron_mg": 0.6
+            }
+          },
+          {
+            "name": "Wonton Strips",
+            "description": "",
+            "serving_size": "1 .5oz serving",
+            "calories": 41.0,
+            "ingredients": "Wonton Skin Frozen (INGREDIENTS: ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID AND ENZYMES), WATER, CORNSTARCH, SALT, PRESERVED WITH LESS THAN 1/10TH OF 1% SODIUM BENZOATE AND 1/10TH OF 1% POTASSIUM SORBATE. , CONTAINS: WHEAT).",
+            "allergens": [
+              "Wheat"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 41.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 82.0,
+              "carbohydrates_g": 9.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.7
             }
           }
         ],
