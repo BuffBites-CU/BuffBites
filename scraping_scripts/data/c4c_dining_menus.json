@@ -223125,6 +223125,35 @@
             }
           },
           {
+            "name": "Avgolemono Soup (Greek Lemon Chicken)",
+            "description": "",
+            "serving_size": "6 fl oz",
+            "calories": 128.0,
+            "ingredients": "Water, Chicken Thigh Bnls/Skls ABF, Carrots, Celery, Yellow Onion, Chicken Base (Chicken Stock, Salt, Chicken Fat, Natural Flavor, Sugar, Maltodextrin, Yeast Extract And Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Organic Wild Rice Blend (Organic Long Grain Brown Rice, Organic Sweet Brown Rice, Organic Wild Rice, Organic Wehani Red Rice, Organic Black Rice.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Garlic Whole Peeled Case, Kosher Salt, Rice Bran Oil, Parsley Flakes, Black pepper (Black Pepper), Bay Leaves.",
+            "allergens": [
+              "Egg"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 128.0,
+              "fat_g": 4.4,
+              "saturated_fat_g": 1.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 56.0,
+              "sodium_mg": 912.0,
+              "carbohydrates_g": 14.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 9.0,
+              "potassium_mg": 197.0,
+              "calcium_mg": 34.0,
+              "iron_mg": 0.9
+            }
+          },
+          {
             "name": "Chowder - New England Clam",
             "description": "",
             "serving_size": "6 fl oz",
