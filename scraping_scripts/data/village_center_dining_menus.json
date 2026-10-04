@@ -128796,11 +128796,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Black Beans",
+            "name": "Spicy Red Beans",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 84.0,
-            "ingredients": "Black Beans (Prepared black beans, water, salt, and calcium chloride (firming agent).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "calories": 96.0,
+            "ingredients": "Dark Red Kidney Beans (Prepared Kidney Beans, Water, Sugar, Dextrose, Salt, Calcium Chloride (Firming Agent), and Disodium EDTA (Promotes Color Retention).), Tomato, Yellow Onions, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Green Bell Peppers, Celery, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Water, Garlic, Shallots - Peeled, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Tabasco Sauce (Distilled vinegar, red pepper, salt), Extra Virgin Olive Oil, Fresh Basil, Crushed Red Pepper (Cayenne Pepper), Oregano Leaf, Garlic Granules, Onion Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -128808,20 +128808,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 84.0,
-              "fat_g": 0.4,
-              "saturated_fat_g": 0.0,
+              "calories": 96.0,
+              "fat_g": 1.7,
+              "saturated_fat_g": 0.3,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 197.0,
+              "sodium_mg": 136.0,
               "carbohydrates_g": 16.0,
               "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 3.0,
               "protein_g": 5.0,
-              "potassium_mg": 314.0,
-              "calcium_mg": 43.0,
-              "iron_mg": 1.3
+              "potassium_mg": 390.0,
+              "calcium_mg": 50.0,
+              "iron_mg": 1.6
             }
           },
           {
