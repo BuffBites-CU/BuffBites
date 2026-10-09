@@ -11,6 +11,7 @@ def _client():
     app = FastAPI()
     app.include_router(combos.router)
     app.include_router(vision.router)
+    app.dependency_overrides[vision.get_current_user] = lambda: {"uid": "student-1"}
     return TestClient(app)
 
 

@@ -38,6 +38,9 @@ class SlidingWindowLimiter:
             hits = self._hits[key]
             while hits and hits[0] <= now - self.window:
                 hits.popleft()
+            if len(self._hits) > 10_000:
+                for k in [k for k, v in self._hits.items() if not v]:
+                    del self._hits[k]
             if len(hits) >= self.limit:
                 raise HTTPException(status_code=429, detail=self.detail)
             hits.append(now)

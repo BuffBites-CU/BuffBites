@@ -20,12 +20,15 @@ import base64
 import binascii
 import os
 import sys
+from datetime import date as date_cls
+from threading import Lock
 from typing import Literal
 
 import anthropic
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field, ValidationError
 
+from auth import get_current_user
 from menu_store import DINING_FILES, load_menu
 from rate_limit import SlidingWindowLimiter, client_ip
 from routers.combos import _today_mt, ensure_open
@@ -39,18 +42,51 @@ VISION_MODEL = os.getenv("VISION_MODEL", "claude-opus-5-5")
 
 _ALLOWED_MEDIA = {"image/jpeg", "image/png", "image/webp"}
 _MAX_IMAGE_BYTES = 5 * 1024 * 1024
+# Base64 is 4/3 the size of the bytes; leave room for a data: URL prefix.
+_MAX_B64_CHARS = _MAX_IMAGE_BYTES * 4 // 3 + 128
 _MAX_MENU_ITEMS = 450
 _MAX_PORTION = 4.0
 
-# Vision calls cost more than combo generation; give them their own, tighter bucket.
-_limiter = SlidingWindowLimiter(limit=6, window_seconds=60)
+# Every scan is a paid vision call, so it needs sign-in plus three limits:
+# a burst limit and a daily cap per student, and a daily cap for the whole app
+# so a bug or abuse can't run up an unbounded bill.
+_limiter = SlidingWindowLimiter(
+    limit=6, window_seconds=60, detail="Slow down a little. Try again in a minute."
+)
+VISION_DAILY_PER_USER = int(os.getenv("VISION_DAILY_PER_USER", "20"))
+VISION_DAILY_TOTAL = int(os.getenv("VISION_DAILY_TOTAL", "300"))
+
+
+class _DailyQuota:
+    """Per-user and app-wide scan counters that reset at midnight Mountain Time."""
+
+    def __init__(self) -> None:
+        self.day = ""
+        self.total = 0
+        self.per_user: dict[str, int] = {}
+        self._lock = Lock()
+
+    def take(self, uid: str) -> None:
+        today = _today_mt()
+        with self._lock:
+            if today != self.day:
+                self.day, self.total, self.per_user = today, 0, {}
+            if self.per_user.get(uid, 0) >= VISION_DAILY_PER_USER:
+                raise HTTPException(status_code=429, detail="You've hit today's plate-scan limit. It resets at midnight.")
+            if self.total >= VISION_DAILY_TOTAL:
+                raise HTTPException(status_code=503, detail="Plate scanning is paused for today. Try again tomorrow.")
+            self.per_user[uid] = self.per_user.get(uid, 0) + 1
+            self.total += 1
+
+
+_quota = _DailyQuota()
 
 
 
 # ── Request / response models ──────────────────────────────────────────────
 
 class PlateRequest(BaseModel):
-    image_base64: str = Field(..., description="Base64-encoded image, no data: prefix")
+    image_base64: str = Field(..., max_length=_MAX_B64_CHARS, description="Base64-encoded image")
     media_type: str = "image/jpeg"
     dining: str
     date: str | None = None
@@ -189,6 +225,8 @@ def _decode_image(req: PlateRequest) -> str:
     if req.media_type not in _ALLOWED_MEDIA:
         raise HTTPException(status_code=415, detail="Use a JPEG, PNG or WebP photo.")
     data = req.image_base64.split(",", 1)[-1] if req.image_base64.startswith("data:") else req.image_base64
+    if len(data) * 3 // 4 > _MAX_IMAGE_BYTES:
+        raise HTTPException(status_code=413, detail="Photo is too large (max 5 MB).")
     try:
         raw = base64.b64decode(data, validate=True)
     except (binascii.Error, ValueError):
@@ -207,8 +245,9 @@ async def _call_model(image_b64: str, media_type: str, menu_text: str, hall: str
     try:
         response = await client.beta.messages.parse(
             model=VISION_MODEL,
-            # Thinking counts against max_tokens; leave room for it plus the JSON.
-            max_tokens=16000,
+            # Thinking counts against max_tokens. 8k leaves room for it plus the
+            # short JSON; a cut-off reply maps to a friendly 422 (see below).
+            max_tokens=8000,
             output_config={"effort": "medium"},
             # Server-side retry on Anthropic's recommended model if a safety
             # classifier declines (rare for food photos, but costs nothing).
@@ -257,16 +296,34 @@ async def _call_model(image_b64: str, media_type: str, menu_text: str, hall: str
     return response.parsed_output
 
 
-@router.post("/api/vision/plate", response_model=PlateResponse)
-async def analyze_plate(req: PlateRequest, request: Request) -> PlateResponse:
-    _limiter.check(client_ip(request))
+def _check_date(value: str | None) -> str:
+    """A plate photo is about a meal you're eating now: allow yesterday through
+    tomorrow (MT). This also stops callers from forcing a menu cache miss on
+    every request by cycling through dates."""
+    today = date_cls.fromisoformat(_today_mt())
+    if value is None:
+        return today.isoformat()
+    try:
+        d = date_cls.fromisoformat(value)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="date must be YYYY-MM-DD")
+    if abs((d - today).days) > 1:
+        raise HTTPException(status_code=400, detail="Plate scans are for today's menu only.")
+    return d.isoformat()
 
+
+@router.post("/api/vision/plate", response_model=PlateResponse)
+async def analyze_plate(
+    req: PlateRequest,
+    request: Request,
+    current_user: dict = Depends(get_current_user),
+) -> PlateResponse:
     if req.dining not in DINING_FILES:
         raise HTTPException(status_code=400, detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}")
     ensure_open(req.dining)
     image_b64 = _decode_image(req)
 
-    target_date = req.date or _today_mt()
+    target_date = _check_date(req.date)
     try:
         menu_data = await asyncio.to_thread(load_menu, req.dining)
     except Exception:
@@ -276,6 +333,11 @@ async def analyze_plate(req: PlateRequest, request: Request) -> PlateResponse:
         raise HTTPException(status_code=404, detail=f"No menu for {menu_data['dining_location']} on {target_date}.")
 
     menu_text, lookup = _menu_lines(day_menu)
+
+    # Count against limits only once the request is valid and about to cost money.
+    uid = current_user.get("uid") or client_ip(request)
+    _limiter.check(uid)
+    _quota.take(uid)
     parsed = await _call_model(image_b64, req.media_type, menu_text, menu_data["dining_location"])
 
     if not parsed.is_food:

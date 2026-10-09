@@ -4,6 +4,7 @@ import { useMemo, useRef, useState } from 'react'
 import { analyzePlate, photoToJpegBase64 } from '@/services/visionService'
 import { logMeal } from '@/services/usersService'
 import { useToast } from '@/context/ToastContext'
+import { useAuth } from '@/context/AuthContext'
 import { fuelScore } from '@/lib/nutrition'
 import { XMarkIcon } from './icons'
 import { DINING_HALL_LABELS } from '@/types'
@@ -39,6 +40,7 @@ function withPortion(item: PlateItem, portion: number): PlateItem {
 
 export default function SnapPlate({ dining, date, period, firebaseUid, calorieTarget }: Props) {
   const { showToast } = useToast()
+  const { firebaseUser } = useAuth()
   const inputRef = useRef<HTMLInputElement>(null)
   const [phase, setPhase] = useState<Phase>('idle')
   const [preview, setPreview] = useState<string | null>(null)
@@ -71,8 +73,9 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
     setLogged(false)
     setPreview(URL.createObjectURL(file))
     try {
-      const b64 = await photoToJpegBase64(file)
-      const res = await analyzePlate(b64, dining, date)
+      if (!firebaseUser) throw new Error('Sign in to scan your plate.')
+      const [b64, token] = await Promise.all([photoToJpegBase64(file), firebaseUser.getIdToken()])
+      const res = await analyzePlate(b64, dining, date, token)
       setResult(res)
       setItems(res.items)
       setPhase('result')

@@ -6,6 +6,8 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from body_limit import BodySizeLimitMiddleware
+
 load_dotenv()
 
 structlog.configure(
@@ -66,6 +68,10 @@ else:
         msg="ALLOWED_ORIGINS not set — allowing all origins. Set it to your frontend domains in production.",
     )
     _allow_origins = ["*"]
+
+# Added before CORS so CORS stays the outer layer and 413s still carry CORS
+# headers. 8 MB fits a 5 MB photo as base64 plus JSON; nothing else is close.
+app.add_middleware(BodySizeLimitMiddleware, max_bytes=8 * 1024 * 1024)
 
 app.add_middleware(
     CORSMiddleware,

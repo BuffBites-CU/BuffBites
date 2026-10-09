@@ -43,6 +43,7 @@ def _menu(monkeypatch):
     menu_store._cache["c4c"] = {"dining_location": "C4C", "menus": [DAY]}
     monkeypatch.setattr(vision, "_today_mt", lambda: TODAY)
     vision._limiter._hits.clear()
+    vision._quota.day = ""
 
 
 def _lookup():
@@ -93,9 +94,11 @@ def test_decode_image_strips_data_url():
     assert vision._decode_image(req) == PNG_1PX
 
 
-def _app():
+def _app(uid: str | None = "student-1"):
     app = FastAPI()
     app.include_router(vision.router)
+    if uid is not None:
+        app.dependency_overrides[vision.get_current_user] = lambda: {"uid": uid}
     return TestClient(app)
 
 
@@ -200,17 +203,62 @@ def test_matching_ignores_double_spaces_and_case():
     assert [i.name for i in items] == ["Tomato Cheddar  Bagel"] and unmatched == []
 
 
-def test_rate_limit_keys_on_fly_client_ip_not_proxy(monkeypatch):
+def _ok_model(monkeypatch):
     async def fake(*_a, **_k):
         return _VPlate(is_food=False, notes="", items=[])
     monkeypatch.setattr(vision, "_call_model", fake)
-    c = _app()
-    body = {"image_base64": PNG_1PX, "media_type": "image/png", "dining": "c4c"}
+
+
+BODY = {"image_base64": PNG_1PX, "media_type": "image/png", "dining": "c4c"}
+
+
+def test_requires_sign_in():
+    app = FastAPI()
+    app.include_router(vision.router)  # no override: the stub dependency refuses
+    with pytest.raises(RuntimeError):
+        TestClient(app).post("/api/vision/plate", json=BODY)
+
+
+def test_burst_limit_is_per_student(monkeypatch):
+    _ok_model(monkeypatch)
+    a, b = _app("a"), _app("b")
     for _ in range(vision._limiter.limit):
-        assert c.post("/api/vision/plate", json=body, headers={"Fly-Client-IP": "1.1.1.1"}).status_code == 200
-    # Same proxy address, different student: must not be throttled.
-    assert c.post("/api/vision/plate", json=body, headers={"Fly-Client-IP": "2.2.2.2"}).status_code == 200
-    assert c.post("/api/vision/plate", json=body, headers={"Fly-Client-IP": "1.1.1.1"}).status_code == 429
+        assert a.post("/api/vision/plate", json=BODY).status_code == 200
+    assert a.post("/api/vision/plate", json=BODY).status_code == 429
+    assert b.post("/api/vision/plate", json=BODY).status_code == 200
+
+
+def test_invalid_requests_do_not_use_up_limits(monkeypatch):
+    _ok_model(monkeypatch)
+    c = _app("a")
+    for _ in range(vision._limiter.limit + 3):
+        assert c.post("/api/vision/plate", json={**BODY, "dining": "nope"}).status_code == 400
+    assert c.post("/api/vision/plate", json=BODY).status_code == 200
+
+
+def test_daily_caps(monkeypatch):
+    _ok_model(monkeypatch)
+    monkeypatch.setattr(vision, "VISION_DAILY_PER_USER", 2)
+    monkeypatch.setattr(vision, "VISION_DAILY_TOTAL", 3)
+    monkeypatch.setattr(vision._limiter, "limit", 100)
+    a, b = _app("a"), _app("b")
+    assert [a.post("/api/vision/plate", json=BODY).status_code for _ in range(3)] == [200, 200, 429]
+    assert b.post("/api/vision/plate", json=BODY).status_code == 200
+    assert b.post("/api/vision/plate", json=BODY).status_code == 503   # app-wide cap reached
+
+
+@pytest.mark.parametrize("d,status", [("2026-10-08", 404), ("2026-10-10", 404), ("2026-10-12", 400), ("nope", 400)])
+def test_date_window(monkeypatch, d, status):
+    # Yesterday/tomorrow are allowed (404 here only because the fixture menu has
+    # just today); anything further out is rejected before any model call.
+    _ok_model(monkeypatch)
+    assert _app().post("/api/vision/plate", json={**BODY, "date": d}).status_code == status
+
+
+def test_oversized_base64_rejected_before_decode():
+    big = "A" * (vision._MAX_B64_CHARS + 1)
+    r = _app().post("/api/vision/plate", json={**BODY, "image_base64": big})
+    assert r.status_code == 422  # pydantic max_length
 
 
 def test_menu_load_failure_maps_to_500_detail(monkeypatch):

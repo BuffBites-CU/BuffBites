@@ -335,7 +335,7 @@ export default function HomePage() {
         <Greeting name={username} period={selectedPeriod} hall={selectedDining} />
         <SnapPlate
           dining={selectedDining}
-          date={selectedDate}
+          date={dateOptions[0].iso /* a plate photo is always today's meal */}
           period={selectedPeriod}
           firebaseUid={firebaseUid}
           calorieTarget={calorieTarget}

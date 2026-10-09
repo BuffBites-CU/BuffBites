@@ -1,10 +1,11 @@
 import { apiFetch } from './api'
 import type { DiningHall, PlateAnalysis } from '@/types'
 
-export function analyzePlate(image_base64: string, dining: DiningHall, date: string): Promise<PlateAnalysis> {
+export function analyzePlate(image_base64: string, dining: DiningHall, date: string, token: string): Promise<PlateAnalysis> {
   return apiFetch<PlateAnalysis>('/api/vision/plate', {
     method: 'POST',
     body: JSON.stringify({ image_base64, media_type: 'image/jpeg', dining, date }),
+    token,
   })
 }
 
