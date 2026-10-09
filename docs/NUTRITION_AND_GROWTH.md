@@ -36,7 +36,7 @@ You can show far more than calories and protein without new scraping.
 
 ## 2. Features to attract a Gen Z CU Boulder audience
 
-Ranked by impact against effort. ✅ = shipped in this branch.
+Ranked by impact against effort. ✅ = live in the app.
 
 ### Social and identity (highest pull)
 - ✅ **Trending posts by student handle.** "@maya.eats's Leg Day Power Bowl" with a podium and a rank.
@@ -47,7 +47,7 @@ Ranked by impact against effort. ✅ = shipped in this branch.
 - **Weekly "Combo Drop" challenge.** A theme each week ("Best under 600 cal", "Best vegan"). The winner gets featured, and ideally CU Dining gives a prize.
 
 ### Utility (daily habit)
-- **"What's good right now" push at 11:15 and 5:15 MT.** Send the top combo at the user's favorite hall. `PushNotification` / web push works for installed PWAs.
+- **"What's good right now" push at 11:15 and 5:15 MT.** Send the top combo at the user's favorite hall. Web Push (Push API + a service worker, or Firebase Cloud Messaging) works for installed PWAs.
 - **Menu alerts.** "Notify me when Smoke n' Grill has brisket." The scraper already has six weeks of future menus, so this is cheap to build.
 - **Crowd meter.** Self-reported "how busy?" taps, or time-of-day heuristics.
 - **Meal-swipe / Munch Money tracker.** Students constantly worry about running out.

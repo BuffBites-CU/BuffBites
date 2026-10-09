@@ -11,6 +11,15 @@
 
 const TZ = 'America/Denver'
 
+/**
+ * Parse a timestamp from the API. The backend stores UTC but serializes it
+ * without an offset ("2026-10-09T15:00:00"), and `new Date()` reads that as
+ * *local* time, which in Boulder makes every post 6-7 hours too young.
+ */
+export function parseApiDate(iso: string): Date {
+  return new Date(/[zZ]|[+-]\d\d:?\d\d$/.test(iso) ? iso : `${iso}Z`)
+}
+
 /** Today's date in Mountain Time as `YYYY-MM-DD`. */
 export function todayMST(): string {
   // en-CA formats as YYYY-MM-DD.

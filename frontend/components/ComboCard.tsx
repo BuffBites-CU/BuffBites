@@ -3,6 +3,7 @@
 import { ClockIcon, ChevronUpIcon } from './icons'
 import type { ComboTag } from '@/types'
 import { fuelScore, macroSplit } from '@/lib/nutrition'
+import { parseApiDate } from '@/lib/date'
 
 const TAG_STYLES: Record<string, string> = {
   vegan: 'bg-emerald-100 text-emerald-800',
@@ -26,7 +27,7 @@ function tagStyle(tag: string) {
 }
 
 function formatExpiry(iso: string): { text: string; level: 'normal' | 'amber' | 'red' } {
-  const ms = new Date(iso).getTime() - Date.now()
+  const ms = parseApiDate(iso).getTime() - Date.now()
   if (ms <= 0) return { text: 'Expired', level: 'red' }
   const h = Math.floor(ms / 3_600_000)
   const m = Math.floor((ms % 3_600_000) / 60_000)

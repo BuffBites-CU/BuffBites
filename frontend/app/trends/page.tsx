@@ -11,13 +11,14 @@ import TrendingPost, { StudentAvatar } from '@/components/TrendingPost'
 import ComboDetail from '@/components/ComboDetail'
 import { ChevronUpIcon } from '@/components/icons'
 import { DINING_HALL_LABELS } from '@/types'
+import { parseApiDate } from '@/lib/date'
 import type { CommunityCombo, DiningHall, VoteType } from '@/types'
 
 const MEDALS = ['', '🥇', '🥈', '🥉'] as const
 type TrendsTab = 'today' | 'weekly'
 
 function isRising(combo: CommunityCombo): boolean {
-  const ageMs = Date.now() - new Date(combo.created_at).getTime()
+  const ageMs = Date.now() - parseApiDate(combo.created_at).getTime()
   return ageMs < 6 * 3_600_000 && combo.upvotes >= 3
 }
 

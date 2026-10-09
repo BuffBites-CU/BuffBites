@@ -180,7 +180,7 @@ def test_call_model_refusal_maps_to_422(monkeypatch):
     assert exc.value.status_code == 422
 
 
-# ── Regression tests from review ───────────────────────────────────────────
+# ── Error mapping, name matching and limits ────────────────────────────────
 
 @pytest.mark.parametrize("text,stop", [
     ('{"is_food": true, "items": [{"menu_item": "Brown', "max_tokens"),

@@ -3,6 +3,7 @@
 import { FireIcon } from './icons'
 import { DINING_HALL_LABELS } from '@/types'
 import type { CommunityCombo } from '@/types'
+import { parseApiDate } from '@/lib/date'
 
 // Deterministic avatar color per username so the same student is always the same color.
 const AVATAR_COLORS = [
@@ -20,7 +21,7 @@ function avatarClass(name: string): string {
 }
 
 export function timeAgo(iso: string): string {
-  const mins = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 60_000))
+  const mins = Math.max(0, Math.round((Date.now() - parseApiDate(iso).getTime()) / 60_000))
   if (mins < 1) return 'just now'
   if (mins < 60) return `${mins}m`
   const h = Math.floor(mins / 60)
@@ -54,7 +55,8 @@ interface Props {
  */
 export default function TrendingPost({ combo, rank, onClick, variant = 'feed' }: Props) {
   const hall = DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall
-  const score = combo.upvotes - (combo.downvotes ?? 0)
+  // Same number the feed is ranked by, so #1 never shows fewer votes than #2.
+  const score = combo.upvotes
   const compact = variant === 'compact'
 
   return (
