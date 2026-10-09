@@ -353,7 +353,7 @@ In the Vercel project settings, set the `NEXT_PUBLIC_*` env vars (Firebase keys 
 
 ### Menu data
 
-Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo. The backend (`backend/menu_store.py`) keeps menus in memory and re-downloads them from `MENU_DATA_URL` every hour, so new scrapes go live without a redeploy. The JSON baked into the Docker image is the fallback. If a hall's scrape comes back empty, `scraping_scripts/menu_guard.py` keeps the previous file, and `validate_menus.py` posts a per-hall report to the Actions run summary.
+Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo. The backend (`backend/menu_store.py`) keeps menus in memory and re-downloads them from `MENU_DATA_URL` every hour, so new scrapes go live without a redeploy. The JSON baked into the Docker image is the fallback. The API loads the small copies in `scraping_scripts/data/live/` (built by `build_live_menus.py`: yesterday through 10 days ahead, no ingredient text, minified). The full 6-week C4C file needs ~80 MB to parse and OOM-killed the 256 MB Fly machines. If a hall's scrape comes back empty, `scraping_scripts/menu_guard.py` keeps the previous file, and `validate_menus.py` posts a per-hall report to the Actions run summary.
 
 ---
 

@@ -15,9 +15,11 @@ Set MENU_DATA_URL="" to disable remote refresh (e.g. local dev offline).
 """
 
 import asyncio
+import gc
 import json
 import os
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -41,9 +43,13 @@ CLOSED_HALLS: dict[str, str] = {
 
 MENU_DATA_URL = os.getenv(
     "MENU_DATA_URL",
-    "https://raw.githubusercontent.com/BuffBites-CU/BuffBites/main/scraping_scripts/data",
+    # The small live copies (scraping_scripts/build_live_menus.py), not the full
+    # 6-week files: parsing full C4C needs ~80 MB and OOM-killed the 256 MB VMs.
+    "https://raw.githubusercontent.com/BuffBites-CU/BuffBites/main/scraping_scripts/data/live",
 ).rstrip("/")
 MENU_REFRESH_SECONDS = int(os.getenv("MENU_REFRESH_SECONDS", "3600"))
+# Let the machine pass its health checks before the first download.
+MENU_REFRESH_INITIAL_DELAY = int(os.getenv("MENU_REFRESH_INITIAL_DELAY", "60"))
 
 # In Docker the data is copied to backend/scraping_scripts/data; in local dev it
 # lives at the repo root. Pick whichever exists so both layouts work.
@@ -67,6 +73,7 @@ _KEEP_FUTURE_DAYS = 28
 _DROP_FIELDS = ("ingredients",)
 
 _cache: dict[str, dict] = {}
+_etags: dict[str, str] = {}
 _lock = Lock()
 
 
@@ -98,19 +105,38 @@ def load_menu(dining: str) -> dict:
         cached = _cache.get(dining)
     if cached is not None:
         return cached
-    data = _slim(json.loads((DATA_DIR / DINING_FILES[dining]).read_text(encoding="utf-8")))
+    live = DATA_DIR / "live" / DINING_FILES[dining]
+    path = live if live.exists() else DATA_DIR / DINING_FILES[dining]
+    data = _slim(json.loads(path.read_text(encoding="utf-8")))
     with _lock:
         _cache.setdefault(dining, data)
         return _cache[dining]
 
 
+class _NotModified(Exception):
+    pass
+
+
 def _fetch_remote(dining: str) -> dict | None:
     url = f"{MENU_DATA_URL}/{DINING_FILES[dining]}"
-    req = urllib.request.Request(url, headers={"User-Agent": "buffbites-backend"})
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        data = json.loads(resp.read())
+    headers = {"User-Agent": "buffbites-backend"}
+    if dining in _etags:
+        headers["If-None-Match"] = _etags[dining]
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            raw = resp.read()
+            etag = resp.headers.get("ETag")
+    except urllib.error.HTTPError as e:
+        if e.code == 304:  # unchanged since last pull: skip the download and parse
+            raise _NotModified from None
+        raise
+    data = json.loads(raw)
+    del raw
     if not isinstance(data, dict) or not isinstance(data.get("menus"), list):
         return None
+    if etag:
+        _etags[dining] = etag
     return _slim(data)
 
 
@@ -122,6 +148,9 @@ def refresh_all() -> dict[str, str]:
     for dining in DINING_FILES:
         try:
             data = _fetch_remote(dining)
+        except _NotModified:
+            status[dining] = "unchanged"
+            continue
         except Exception as exc:  # network, JSON, HTTP errors — keep last good copy
             status[dining] = f"error: {exc}"
             continue
@@ -129,13 +158,17 @@ def refresh_all() -> dict[str, str]:
             status[dining] = "skipped: empty"
             continue
         with _lock:
+            old = _cache.get(dining)
             _cache[dining] = data
+        del old, data
+        gc.collect()  # return the replaced copy's memory before the next hall
         status[dining] = "ok"
     return status
 
 
 async def refresh_loop() -> None:
-    """Background task: refresh menus now and then every MENU_REFRESH_SECONDS."""
+    """Background task: refresh menus shortly after boot, then every MENU_REFRESH_SECONDS."""
+    await asyncio.sleep(MENU_REFRESH_INITIAL_DELAY)
     while True:
         status = await asyncio.to_thread(refresh_all)
         print(f"[MENU REFRESH] {status}", file=sys.stderr)

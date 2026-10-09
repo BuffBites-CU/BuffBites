@@ -45,3 +45,15 @@ def test_empty_scrape_ok_for_closed_hall(tmp_path):
     out = tmp_path / "m.json"
     assert guarded_write(out, EMPTY, allow_empty=True)
     assert json.loads(out.read_text()) == EMPTY
+
+
+def test_live_menus_keep_window_and_drop_ingredients():
+    from datetime import date
+    from build_live_menus import slim
+    data = {"dining_location": "X", "menus": [
+        {"date": d, "categories": {"Grill": [{"name": "Burger", "ingredients": "beef, bun"}]}}
+        for d in ["2026-10-07", "2026-10-08", "2026-10-09", "2026-10-19", "2026-10-20"]]}
+    live = slim(data, date(2026, 10, 9))
+    assert [m["date"] for m in live["menus"]] == ["2026-10-08", "2026-10-09", "2026-10-19"]
+    assert "ingredients" not in live["menus"][0]["categories"]["Grill"][0]
+    assert live["dining_location"] == "X"

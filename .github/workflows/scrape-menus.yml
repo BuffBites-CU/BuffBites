@@ -62,6 +62,10 @@ jobs:
         continue-on-error: true
         run: python scraping_scripts/seec_dining.py
 
+      # Small copies the API loads (full C4C is too big for the 256 MB VMs).
+      - name: Build live menus
+        run: python scraping_scripts/build_live_menus.py
+
       - name: Validate menus
         id: validate
         continue-on-error: true

@@ -59,3 +59,23 @@ def test_refresh_swaps_in_new_data(monkeypatch):
     monkeypatch.setattr(menu_store, "_fetch_remote", lambda d: json.loads(json.dumps(fresh)))
     menu_store.refresh_all()
     assert menu_store.load_menu("c4c")["dining_location"] == "Fresh Hall"
+
+
+def test_refresh_skips_unchanged_files(monkeypatch):
+    menu_store._cache["c4c"] = _menu([_today()])
+    monkeypatch.setattr(menu_store, "MENU_DATA_URL", "https://example.invalid")
+
+    def not_modified(_d):
+        raise menu_store._NotModified
+    monkeypatch.setattr(menu_store, "_fetch_remote", not_modified)
+    assert menu_store.refresh_all()["c4c"] == "unchanged"
+    assert menu_store.load_menu("c4c")["dining_location"] == "Test Hall"
+
+
+def test_load_prefers_small_live_file(monkeypatch, tmp_path):
+    (tmp_path / "live").mkdir()
+    (tmp_path / "c4c_dining_menus.json").write_text(json.dumps({**_menu([_today()]), "dining_location": "Full"}))
+    (tmp_path / "live" / "c4c_dining_menus.json").write_text(json.dumps({**_menu([_today()]), "dining_location": "Live"}))
+    monkeypatch.setattr(menu_store, "DATA_DIR", tmp_path)
+    menu_store._cache.pop("c4c", None)
+    assert menu_store.load_menu("c4c")["dining_location"] == "Live"
