@@ -338,6 +338,8 @@ flyctl secrets set -a buffbites-backend \
   FIREBASE_SERVICE_ACCOUNT_JSON='{"type":"service_account",...}'
 ```
 
+**Automatic deploys:** `.github/workflows/deploy-backend.yml` runs the backend tests and deploys to Fly on every push to `main` that touches `backend/`. One-time setup: `flyctl tokens create deploy -a buffbites-backend`, then add the token as the repo secret `FLY_API_TOKEN`. Without the secret, the workflow runs the tests and skips the deploy with a warning.
+
 ### Frontend → Vercel
 
 Deployed on **Vercel** (`vercel.json`, `framework: nextjs`). Vercel auto-deploys on push to `main`, or deploy manually:
