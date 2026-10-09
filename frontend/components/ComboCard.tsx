@@ -2,6 +2,7 @@
 
 import { ClockIcon, ChevronUpIcon } from './icons'
 import type { ComboTag } from '@/types'
+import { fuelScore, macroSplit } from '@/lib/nutrition'
 
 const TAG_STYLES: Record<string, string> = {
   vegan: 'bg-emerald-100 text-emerald-800',
@@ -63,6 +64,10 @@ interface Props {
   onFavorite?: () => void
   allergyWarning?: string   // e.g. "Contains: gluten, dairy"
   ateBeforeHint?: boolean   // show "you had this before" hint
+  protein_g?: number
+  carbs_g?: number
+  fat_g?: number
+  calorieTarget?: number    // user's per-meal calorie goal, for the Fuel Score
 }
 
 export default function ComboCard({
@@ -87,6 +92,10 @@ export default function ComboCard({
   onFavorite,
   allergyWarning,
   ateBeforeHint,
+  protein_g,
+  carbs_g,
+  fat_g,
+  calorieTarget,
 }: Props) {
   const expiry = expires_at ? formatExpiry(expires_at) : null
   const visibleTags = tags.slice(0, 2)
@@ -103,7 +112,7 @@ export default function ComboCard({
           onClick()
         }
       }}
-      className="w-full text-left bg-surface-card rounded-2xl shadow-card border border-surface-overlay p-4 transition-all duration-150 hover:shadow-card-lg hover:scale-[1.005] active:scale-[0.99] cursor-pointer"
+      className="w-full text-left bg-surface-card rounded-2xl border-2 border-brand-black shadow-sticker p-4 transition-transform duration-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none cursor-pointer"
     >
       <div className="flex items-center gap-2 mb-1 min-w-0">
         {rank !== undefined && (
@@ -140,7 +149,7 @@ export default function ComboCard({
       {/* Ate before hint */}
       {ateBeforeHint && (
         <div className="flex items-center gap-1 mb-2">
-          <span className="text-[10px] text-brand-gold/80 font-medium bg-brand-gold/10 rounded-full px-2 py-0.5">
+          <span className="text-[10px] text-brand/80 font-medium bg-brand/10 rounded-full px-2 py-0.5">
             ✓ You&apos;ve had this before
           </span>
         </div>
@@ -148,8 +157,8 @@ export default function ComboCard({
 
       {author && (
         <div className="flex items-center gap-1.5 mb-2">
-          <div className="w-5 h-5 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-            <span className="text-[9px] font-bold text-brand-gold leading-none">
+          <div className="w-5 h-5 rounded-full bg-brand/20 flex items-center justify-center flex-shrink-0">
+            <span className="text-[9px] font-bold text-brand-deep leading-none">
               {author[0].toUpperCase()}
             </span>
           </div>
@@ -158,6 +167,16 @@ export default function ComboCard({
       )}
 
       <p className="text-sm text-muted line-clamp-2 mb-3 leading-relaxed">{description}</p>
+
+      {approximate_calories !== undefined && protein_g !== undefined && (
+        <MacroStrip
+          calories={approximate_calories}
+          protein_g={protein_g}
+          carbs_g={carbs_g}
+          fat_g={fat_g}
+          calorieTarget={calorieTarget}
+        />
+      )}
 
       {dishes && dishes.length > 0 && (
         <>
@@ -200,19 +219,19 @@ export default function ComboCard({
               aria-label={`Upvote (${upvotes ?? 0})`}
               className={`flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-lg transition-colors ${
                 hasVoted
-                  ? 'text-brand-gold bg-brand-gold/10 cursor-default'
-                  : 'text-muted hover:text-brand-gold hover:bg-brand-gold/10 active:scale-95'
+                  ? 'text-brand-deep bg-brand/10 cursor-default'
+                  : 'text-muted hover:text-brand-deep hover:bg-brand/10 active:scale-95'
               }`}
             >
               <ChevronUpIcon width={13} height={13} />
               {upvotes ?? 0}
             </button>
           ) : upvotes !== undefined ? (
-            <span className="flex items-center gap-1 text-xs text-brand-gold font-medium">
+            <span className="flex items-center gap-1 text-xs text-brand-deep font-medium">
               <ChevronUpIcon width={13} height={13} />
               {upvotes}
             </span>
-          ) : approximate_calories !== undefined ? (
+          ) : approximate_calories !== undefined && protein_g === undefined ? (
             <span className="text-[11px] text-muted">~{approximate_calories} cal</span>
           ) : null}
         </div>
@@ -276,15 +295,54 @@ export default function ComboCard({
             disabled={!!shareState}
             className={`w-full flex items-center justify-center gap-1.5 py-1.5 rounded-xl text-[11px] font-medium transition-colors ${
               shareState === 'shared'
-                ? 'bg-brand-gold/15 text-brand-gold cursor-default'
+                ? 'bg-brand/15 text-brand-deep cursor-default'
                 : shareState === 'sharing'
                 ? 'bg-gray-100 text-muted cursor-default'
-                : 'bg-gray-100 text-muted hover:bg-brand-gold/10 hover:text-brand-gold'
+                : 'bg-gray-100 text-muted hover:bg-brand/10 hover:text-brand-deep'
             }`}
           >
             {shareState === 'shared' ? '✓ Posted to community' : shareState === 'sharing' ? 'Posting…' : '↗ Post to community'}
           </button>
         </div>
+      )}
+    </div>
+  )
+}
+
+function MacroStrip({
+  calories, protein_g, carbs_g, fat_g, calorieTarget,
+}: { calories: number; protein_g: number; carbs_g?: number; fat_g?: number; calorieTarget?: number }) {
+  const fuel = fuelScore({ calories, protein_g, carbs_g, fat_g }, calorieTarget)
+  const split = macroSplit({ calories, protein_g, carbs_g, fat_g })
+  return (
+    <div className="mb-3 rounded-xl bg-surface-overlay/70 px-3 py-2">
+      <div className="flex items-center justify-between gap-2">
+        {fuel && (
+          <span className="flex items-center gap-1 text-[12px] font-display font-bold text-brand-black">
+            <span aria-hidden>{fuel.emoji}</span>
+            {fuel.label}
+            <span className="text-muted font-sans font-medium">· {fuel.score}</span>
+          </span>
+        )}
+        <span className="text-[11px] text-muted whitespace-nowrap">
+          ~{calories} cal · <b className="text-brand-black">{protein_g}g</b> P
+          {carbs_g !== undefined && <> · {carbs_g}g C</>}
+          {fat_g !== undefined && <> · {fat_g}g F</>}
+        </span>
+      </div>
+      {split && (
+        <div
+          className="mt-1.5 flex h-1.5 rounded-full overflow-hidden bg-surface-warm"
+          role="img"
+          aria-label={`Calories from protein ${Math.round(split.protein * 100)}%, carbs ${Math.round(split.carbs * 100)}%, fat ${Math.round(split.fat * 100)}%`}
+        >
+          <span className="bg-brand-black" style={{ width: `${split.protein * 100}%` }} />
+          <span className="bg-brand" style={{ width: `${split.carbs * 100}%` }} />
+          <span className="bg-brand-gold" style={{ width: `${split.fat * 100}%` }} />
+        </div>
+      )}
+      {fuel && fuel.reasons.length > 0 && (
+        <p className="mt-1 text-[10px] text-muted">{fuel.reasons.join(' · ')}</p>
       )}
     </div>
   )

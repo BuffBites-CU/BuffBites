@@ -101,7 +101,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
               maxLength={60}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
             />
           </div>
 
@@ -119,7 +119,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Why does this combo work?"
-              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold resize-none"
+              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
             />
           </div>
 
@@ -152,7 +152,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
                     value={dish.name}
                     onChange={(e) => updateDish(i, 'name', e.target.value)}
                     placeholder="Dish name"
-                    className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                    className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand"
                   />
                   <input
                     type="number"
@@ -160,7 +160,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
                     max={5}
                     value={dish.servings}
                     onChange={(e) => updateDish(i, 'servings', Number(e.target.value))}
-                    className="w-12 rounded-lg border border-gray-200 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                    className="w-12 rounded-lg border border-gray-200 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
                   />
                   <button
                     onClick={() => removeDish(i)}
@@ -173,7 +173,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
               ))}
             </div>
             {dishes.length < 8 && (
-              <button onClick={addDish} className="flex items-center gap-1.5 mt-2 text-sm text-brand-gold font-medium">
+              <button onClick={addDish} className="flex items-center gap-1.5 mt-2 text-sm text-brand-deep font-medium">
                 <PlusIcon width={16} height={16} />
                 Add dish
               </button>
@@ -194,7 +194,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Any tips or context?"
-              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold resize-none"
+              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
             />
           </div>
 
@@ -211,7 +211,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="flex-1 py-3 rounded-xl bg-brand-gold text-brand-black text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
+            className="flex-1 py-3 rounded-xl bg-brand text-brand-black text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
           >
             {saving ? 'Saving…' : 'Save Changes'}
           </button>

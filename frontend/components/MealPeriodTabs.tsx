@@ -29,11 +29,11 @@ export default function MealPeriodTabs({ selected, onChange, counts, nowPeriod }
             onClick={() => onChange(period)}
             className={`relative flex-1 flex items-center justify-center gap-1.5 py-3 text-[13px] font-display font-semibold tracking-wide transition-all border-b-2 -mb-px ${
               active
-                ? 'border-brand-gold text-brand-black'
+                ? 'border-brand text-brand-black'
                 : 'border-transparent text-muted hover:text-brand-black'
             }`}
           >
-            <span className={`text-[11px] transition-all ${active ? 'text-brand-gold' : 'opacity-50'}`}>
+            <span className={`text-[11px] transition-all ${active ? 'text-brand-deep' : 'opacity-50'}`}>
               {PERIOD_ICONS[period]}
             </span>
             {period}
@@ -41,7 +41,7 @@ export default function MealPeriodTabs({ selected, onChange, counts, nowPeriod }
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" aria-label="fewer combos available" />
             )}
             {isNow && (
-              <span className="absolute top-1.5 right-2 text-[8px] font-bold uppercase tracking-wider text-brand-gold" aria-label="serving now">
+              <span className="absolute top-1.5 right-2 text-[8px] font-bold uppercase tracking-wider text-brand-deep" aria-label="serving now">
                 Now
               </span>
             )}

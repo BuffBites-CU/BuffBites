@@ -88,6 +88,8 @@ Edit `backend/.env`:
 | `PORT` | No | Uvicorn port — used in Docker/production (default: `8000`) |
 | `ALLOWED_ORIGINS` | No | Comma-separated allowed CORS origins (e.g. `https://buffbites.app,http://localhost:3000`). Leave unset locally to allow all origins (logs a warning). `*.vercel.app` is always allowed. |
 | `FIREBASE_SERVICE_ACCOUNT_JSON` | Production only | Full Firebase service account JSON as a single-line string |
+| `MENU_DATA_URL` | No | Where the API re-pulls scraped menus from every hour (default: this repo's `main` on raw.githubusercontent.com). Set to empty to use only the bundled JSON. |
+| `MENU_REFRESH_SECONDS` | No | Menu refresh interval (default `3600`) |
 
 #### 4. Set up Firebase Admin credentials (for protected routes)
 
@@ -347,7 +349,7 @@ In the Vercel project settings, set the `NEXT_PUBLIC_*` env vars (Firebase keys 
 
 ### Menu data
 
-Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo. The deployed backend only picks up new menus on its next deploy, since the JSON is baked into the Docker image.
+Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo. The backend (`backend/menu_store.py`) keeps menus in memory and re-downloads them from `MENU_DATA_URL` every hour, so new scrapes go live without a redeploy. The JSON baked into the Docker image is the fallback. If a hall's scrape comes back empty, `scraping_scripts/menu_guard.py` keeps the previous file, and `validate_menus.py` posts a per-hall report to the Actions run summary.
 
 ---
 

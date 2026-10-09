@@ -42,7 +42,7 @@ function handleAllClick(props: Props) {
   else props.onChangeMulti([])
 }
 
-const PILL_ACTIVE = 'border border-brand-gold text-brand-gold bg-white'
+const PILL_ACTIVE = 'border border-brand text-brand-deep bg-white'
 const PILL_INACTIVE = 'border border-transparent bg-gray-100 text-muted hover:bg-gray-200'
 
 export default function FilterBar(props: Props) {

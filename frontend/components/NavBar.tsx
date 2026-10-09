@@ -24,45 +24,28 @@ export default function NavBar() {
       role="navigation"
       aria-label="Main navigation"
     >
-      {/* Thin gold gradient top border */}
-      <div className="h-px bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent" />
-
       <div
-        className="bg-surface-card/95 backdrop-blur-xl"
+        className="bg-brand-black border-t-2 border-brand-black"
         style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       >
-        <div className="max-w-md mx-auto flex h-[60px]">
+        <div className="max-w-md mx-auto flex h-[64px] px-2 gap-1">
           {TABS.map(({ href, label, Icon }) => {
             const active = pathname.startsWith(href)
             return (
               <Link
                 key={href}
                 href={href}
-                className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2 transition-opacity active:opacity-60"
+                className="flex-1 flex items-center justify-center transition-opacity active:opacity-70"
                 aria-label={label}
                 aria-current={active ? 'page' : undefined}
               >
-                {/* Active dot */}
                 <span
-                  className={`block rounded-full bg-brand-gold transition-all duration-300 mb-0.5 ${
-                    active ? 'w-1 h-1 opacity-100 animate-dot-pop' : 'w-0 h-0 opacity-0'
-                  }`}
-                />
-
-                <Icon
-                  className={`transition-all duration-200 ${
-                    active ? 'text-brand-gold' : 'text-muted'
-                  }`}
-                  width={21}
-                  height={21}
-                />
-
-                <span
-                  className={`font-display text-[9px] font-semibold tracking-widest uppercase transition-all duration-200 ${
-                    active ? 'text-brand-gold' : 'text-muted'
+                  className={`flex flex-col items-center gap-0.5 rounded-2xl px-3 py-1.5 transition-colors duration-200 ${
+                    active ? 'bg-brand text-brand-black' : 'text-surface-warm/80'
                   }`}
                 >
-                  {label}
+                  <Icon width={21} height={21} />
+                  <span className="font-display text-[10px] font-bold tracking-wide">{label}</span>
                 </span>
               </Link>
             )

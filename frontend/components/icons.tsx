@@ -59,12 +59,12 @@ export function BuffBitesLogo({
     <div className={`flex flex-col items-center gap-3 ${className}`}>
       {/* Badge */}
       <div
-        className="rounded-[22%] bg-brand-black flex items-center justify-center shadow-gold flex-shrink-0"
+        className="rounded-[22%] bg-brand-black flex items-center justify-center shadow-brand flex-shrink-0"
         style={{ width: badgeSize, height: badgeSize }}
       >
         <BisonIcon
           size={Math.round(badgeSize * 0.60)}
-          className="text-brand-gold"
+          className="text-brand-deep"
         />
       </div>
 

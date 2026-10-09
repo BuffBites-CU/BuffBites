@@ -105,13 +105,13 @@ export default function OnboardingPage() {
         {/* Progress bar */}
         <div className="h-1 bg-gray-200 rounded-full mb-10 overflow-hidden">
           <div
-            className="h-full bg-brand-gold rounded-full transition-all duration-300"
+            className="h-full bg-brand rounded-full transition-all duration-300"
             style={{ width: step === 1 ? '50%' : '100%' }}
           />
         </div>
 
         {step === 1 && (
-          <div className="bg-brand-gold/10 rounded-2xl px-5 py-4 mb-6 text-center">
+          <div className="bg-brand/10 rounded-2xl px-5 py-4 mb-6 text-center">
             <p className="text-lg font-bold text-brand-black">Welcome to Buff Bites 🏔</p>
             <p className="text-sm text-muted mt-0.5">Let&apos;s set up your profile in 2 quick steps.</p>
           </div>
@@ -134,7 +134,7 @@ export default function OnboardingPage() {
                     onChange={(e) => { setUsernameInput(e.target.value); setUsernameError('') }}
                     placeholder="buffraj"
                     maxLength={20}
-                    className={`w-full rounded-xl border pl-8 pr-9 py-3 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold ${
+                    className={`w-full rounded-xl border pl-8 pr-9 py-3 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand ${
                       usernameStatus === 'taken' ? 'border-red-300' : usernameStatus === 'available' ? 'border-emerald-300' : 'border-gray-200'
                     }`}
                   />
@@ -159,7 +159,7 @@ export default function OnboardingPage() {
               <button
                 onClick={handleStep1Next}
                 disabled={usernameStatus === 'checking' || usernameStatus === 'taken'}
-                className="w-full py-3.5 rounded-2xl bg-brand-gold text-brand-black font-semibold text-sm hover:opacity-90 active:scale-95 transition-all disabled:opacity-50"
+                className="w-full py-3.5 rounded-2xl bg-brand text-brand-black font-semibold text-sm hover:opacity-90 active:scale-95 transition-all disabled:opacity-50"
               >
                 Next →
               </button>
@@ -200,7 +200,7 @@ export default function OnboardingPage() {
                 <button
                   onClick={handleSubmit}
                   disabled={submitting}
-                  className="flex-1 py-3.5 rounded-2xl bg-brand-gold text-brand-black font-semibold text-sm disabled:opacity-60 hover:opacity-90 active:scale-95 transition-all"
+                  className="flex-1 py-3.5 rounded-2xl bg-brand text-brand-black font-semibold text-sm disabled:opacity-60 hover:opacity-90 active:scale-95 transition-all"
                 >
                   {submitting ? (
                     <span className="flex items-center justify-center gap-2">

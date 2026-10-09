@@ -179,11 +179,11 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
         {/* Step progress */}
         <div className="flex items-center justify-between px-5 py-2 flex-shrink-0">
           <div className="flex items-center gap-2 text-xs">
-            <span className={step >= 1 ? 'text-brand-gold font-semibold' : 'text-muted'}>
+            <span className={step >= 1 ? 'text-brand-deep font-semibold' : 'text-muted'}>
               ① Hall &amp; Date
             </span>
             <span className="text-gray-300">→</span>
-            <span className={step >= 2 ? 'text-brand-gold font-semibold' : 'text-muted'}>
+            <span className={step >= 2 ? 'text-brand-deep font-semibold' : 'text-muted'}>
               ② Combo Details
             </span>
           </div>
@@ -208,7 +208,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 <select
                   value={form.dining_hall}
                   onChange={(e) => changeDiningHall(e.target.value as DiningHall | '')}
-                  className={`w-full rounded-xl border px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold ${
+                  className={`w-full rounded-xl border px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand ${
                     fieldErrors.dining_hall ? 'border-red-300' : 'border-gray-200'
                   }`}
                 >
@@ -232,7 +232,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                     setForm((f) => ({ ...f, date: e.target.value }))
                     setFieldErrors((err) => ({ ...err, date: undefined }))
                   }}
-                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold ${
+                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand ${
                     fieldErrors.date ? 'border-red-300' : 'border-gray-200'
                   }`}
                 />
@@ -254,7 +254,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 <select
                   value={form.dining_hall}
                   onChange={(e) => changeDiningHall(e.target.value as DiningHall | '')}
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
                 >
                   <option value="">Select a dining hall…</option>
                   {DINING_HALLS.map((h) => (
@@ -276,7 +276,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                     setFieldErrors((err) => ({ ...err, title: undefined }))
                   }}
                   placeholder="e.g. The Midnight Special"
-                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold ${
+                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand ${
                     fieldErrors.title ? 'border-red-300' : 'border-gray-200'
                   }`}
                 />
@@ -296,7 +296,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   value={form.description}
                   onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
                   placeholder="Why does this combo work?"
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold resize-none"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
                 />
               </div>
 
@@ -330,7 +330,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                         <select
                           value={dish.name}
                           onChange={(e) => updateDishFromSelect(i, e.target.value)}
-                          className="flex-1 rounded-xl border border-gray-200 px-3 py-2 text-sm text-brand-black bg-white focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                          className="flex-1 rounded-xl border border-gray-200 px-3 py-2 text-sm text-brand-black bg-white focus:outline-none focus:ring-2 focus:ring-brand"
                         >
                           <option value="">Select a dish…</option>
                           {Object.entries(menuByStation).map(([station, names]) => (
@@ -347,7 +347,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                           onChange={(e) => updateDish(i, 'name', e.target.value)}
                           placeholder={menuLoading ? 'Loading…' : 'Dish name'}
                           disabled={menuLoading}
-                          className="flex-1 rounded-xl border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold disabled:opacity-50"
+                          className="flex-1 rounded-xl border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand disabled:opacity-50"
                         />
                       )}
                       <input
@@ -356,7 +356,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                         max={5}
                         value={dish.servings}
                         onChange={(e) => updateDish(i, 'servings', Number(e.target.value))}
-                        className="w-12 rounded-xl border border-gray-200 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                        className="w-12 rounded-xl border border-gray-200 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
                       />
                       <button
                         onClick={() => removeDish(i)}
@@ -375,7 +375,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 {form.dishes.length < 8 && (
                   <button
                     onClick={addDish}
-                    className="flex items-center gap-1.5 mt-2 text-sm text-brand-gold font-medium"
+                    className="flex items-center gap-1.5 mt-2 text-sm text-brand-deep font-medium"
                   >
                     <PlusIcon width={16} height={16} />
                     Add dish
@@ -394,7 +394,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   value={form.notes}
                   onChange={(e) => setForm((f) => ({ ...f, notes: e.target.value }))}
                   placeholder="Any tips or context?"
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold resize-none"
+                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
                 />
               </div>
 
@@ -417,7 +417,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
           {step < 2 ? (
             <button
               onClick={() => { if (validateStep1()) setStep(2) }}
-              className="flex-1 py-3 rounded-xl bg-brand-gold text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="flex-1 py-3 rounded-xl bg-brand text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Next →
             </button>
@@ -425,7 +425,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
             <button
               onClick={handlePublish}
               disabled={submitting}
-              className="flex-1 py-3 rounded-xl bg-brand-gold text-brand-black text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
+              className="flex-1 py-3 rounded-xl bg-brand text-brand-black text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
             >
               {submitting ? 'Publishing…' : 'Publish'}
             </button>

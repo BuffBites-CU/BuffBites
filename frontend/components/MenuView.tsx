@@ -86,7 +86,7 @@ export default function MenuView({ dining, date, period }: Props) {
                   onClick={() => { setSelectedStation(station); setDropdownOpen(false) }}
                   className={`w-full flex items-center justify-between gap-3 px-4 py-2.5 text-left transition-colors ${
                     station === activeStation
-                      ? 'bg-brand-gold/15 text-brand-black'
+                      ? 'bg-brand/15 text-brand-black'
                       : 'text-brand-black hover:bg-surface-overlay/60'
                   }`}
                 >

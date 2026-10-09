@@ -47,7 +47,7 @@ export default function VoteButtons({ upvotes, downvotes, hasVoted, onVote }: Pr
         className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-sm transition-all ${
           disabled
             ? 'bg-gray-100 text-muted cursor-not-allowed'
-            : 'bg-brand-gold/10 text-brand-gold hover:bg-brand-gold/20 active:scale-95'
+            : 'bg-brand/10 text-brand-deep hover:bg-brand/20 active:scale-95'
         }`}
       >
         {pending === 'upvote' ? (

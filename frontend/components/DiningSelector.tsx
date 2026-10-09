@@ -41,7 +41,7 @@ export default function DiningSelector({ selected, onChange }: Props) {
                 onClick={() => { onChange(hall); setOpen(false) }}
                 className={`w-full px-4 py-2.5 text-left font-display text-[13px] font-semibold tracking-wide transition-colors ${
                   hall === selected
-                    ? 'bg-brand-gold/15 text-brand-black'
+                    ? 'bg-brand/15 text-brand-black'
                     : 'text-brand-black hover:bg-surface-overlay/60'
                 }`}
               >

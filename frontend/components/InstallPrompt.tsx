@@ -142,7 +142,7 @@ export default function InstallPrompt() {
               key={p}
               onClick={() => setPlatform(p)}
               className={`rounded-full px-4 py-1.5 text-xs font-semibold transition ${
-                platform === p ? 'bg-brand-gold text-brand-black' : 'text-white/70'
+                platform === p ? 'bg-brand text-brand-black' : 'text-white/70'
               }`}
             >
               {COPY[p].device}
@@ -156,7 +156,7 @@ export default function InstallPrompt() {
               key={i}
               className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10"
             >
-              <span className="flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-brand-gold text-base font-semibold text-brand-black">
+              <span className="flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-brand text-base font-semibold text-brand-black">
                 {step.icon}
               </span>
               <span className="text-sm leading-snug text-white/90">{step.text}</span>
@@ -166,7 +166,7 @@ export default function InstallPrompt() {
 
         <button
           onClick={() => setMode('closed')}
-          className="mt-7 w-full rounded-xl bg-brand-gold py-3 text-sm font-semibold text-brand-black transition active:scale-[0.98]"
+          className="mt-7 w-full rounded-xl bg-brand py-3 text-sm font-semibold text-brand-black transition active:scale-[0.98]"
         >
           Got it{mode === 'auto' && remaining > 0 ? ` (${remaining})` : ''}
         </button>
@@ -175,7 +175,7 @@ export default function InstallPrompt() {
         {mode === 'auto' && (
           <div className="mt-4 h-1 w-full overflow-hidden rounded-full bg-white/10">
             <div
-              className="h-full rounded-full bg-brand-gold transition-[width] duration-1000 ease-linear"
+              className="h-full rounded-full bg-brand transition-[width] duration-1000 ease-linear"
               style={{ width: `${progress}%` }}
             />
           </div>

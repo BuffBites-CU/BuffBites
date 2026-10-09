@@ -7,7 +7,7 @@ import { useCommunity } from '@/hooks/useCommunity'
 import { usePullToRefresh } from '@/hooks/usePullToRefresh'
 import { useScrollRestoration } from '@/hooks/useScrollRestoration'
 import FilterBar from '@/components/FilterBar'
-import ComboCard from '@/components/ComboCard'
+import TrendingPost, { StudentAvatar } from '@/components/TrendingPost'
 import ComboDetail from '@/components/ComboDetail'
 import { ChevronUpIcon } from '@/components/icons'
 import { DINING_HALL_LABELS } from '@/types'
@@ -40,16 +40,18 @@ interface PodiumCardProps {
 function PodiumCard({ rank, combo, onClick }: PodiumCardProps) {
   const medal = MEDALS[rank]
   const minH = rank === 1 ? 'min-h-[148px]' : rank === 2 ? 'min-h-[120px]' : 'min-h-[104px]'
-  const ring = rank === 1 ? 'ring-2 ring-brand-gold' : 'ring-1 ring-gray-100'
+  const ring = rank === 1 ? 'bg-brand' : 'bg-surface-card'
 
   return (
     <button
       onClick={onClick}
-      className={`w-full ${minH} bg-surface-card rounded-2xl shadow-sm p-3 flex flex-col items-center text-center transition-all hover:shadow-md active:scale-[0.98] ${ring}`}
+      className={`w-full ${minH} rounded-2xl border-2 border-brand-black shadow-sticker p-3 flex flex-col items-center text-center transition-transform active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${ring}`}
     >
       <span className={`text-2xl leading-none mb-1 ${rank === 1 ? 'scale-125' : ''}`}>{medal}</span>
+      <StudentAvatar name={combo.author_username} size={rank === 1 ? 34 : 28} />
+      <p className="mt-1 text-[11px] font-semibold text-brand-black truncate max-w-full">@{combo.author_username}</p>
       <p className="text-xs font-semibold text-brand-black line-clamp-3 leading-tight flex-1">{combo.title}</p>
-      <div className="mt-1.5 flex items-center gap-0.5 text-[11px] text-brand-gold font-semibold">
+      <div className="mt-1.5 flex items-center gap-0.5 text-[11px] text-brand-black font-bold">
         <ChevronUpIcon width={11} height={11} />
         {combo.upvotes}
       </div>
@@ -138,8 +140,8 @@ export default function TrendsPage() {
     <div className="min-h-screen bg-surface pb-24">
       {/* Header */}
       <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
-        <div className="max-w-md mx-auto px-4 pt-4 pb-1 flex items-center justify-between">
-          <h1 className="font-display text-xl font-bold text-brand-black">Trending</h1>
+        <div className="max-w-md mx-auto px-4 pt-4 pb-3 flex items-center justify-between">
+          <h1 className="font-brush text-3xl text-brand-black leading-none">Trending <span aria-hidden>🔥</span></h1>
           {activeTab === 'today' && (
             <span className={`flex items-center gap-1 text-xs font-display font-medium px-2.5 py-1 rounded-full ${
               resetInfo.urgent ? 'bg-amber-100 text-amber-700' : 'bg-surface-overlay text-muted'
@@ -157,7 +159,7 @@ export default function TrendsPage() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all ${
                 activeTab === tab
-                  ? 'bg-brand-black text-brand-gold'
+                  ? 'bg-brand-black text-brand'
                   : 'bg-surface-overlay text-muted hover:bg-surface-warm'
               }`}
             >
@@ -216,7 +218,7 @@ export default function TrendsPage() {
               </>
             )}
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               {(hasPodium ? listTrends : displayTrends).map((combo, i) => {
                 const rank = hasPodium ? i + 4 : i + 1
                 const medal = !hasPodium && rank <= 3 ? MEDALS[rank] : undefined
@@ -232,17 +234,7 @@ export default function TrendsPage() {
                         <span className="flex items-center gap-1 bg-amber-400 text-amber-900 text-[9px] font-display font-bold uppercase rounded-full px-2 py-0.5 shadow-sm">⚡ Rising</span>
                       </div>
                     )}
-                    <div className={!hasPodium && rank === 1 ? 'ring-2 ring-brand-gold rounded-xl' : ''}>
-                      <ComboCard
-                        title={combo.title}
-                        description={combo.description ?? ''}
-                        tags={combo.tags}
-                        dishes={combo.dishes}
-                        upvotes={combo.upvotes}
-                        rank={medal ? undefined : rank}
-                        onClick={() => setActiveCombo(combo)}
-                      />
-                    </div>
+                    <TrendingPost combo={combo} rank={medal ? undefined : rank} onClick={() => setActiveCombo(combo)} />
                   </div>
                 )
               })}

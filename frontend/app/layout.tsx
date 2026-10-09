@@ -1,5 +1,5 @@
-import type { Metadata } from 'next'
-import { Syne, DM_Sans } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Syne, DM_Sans, Kaushan_Script } from 'next/font/google'
 import './globals.css'
 import { AuthProvider } from '@/context/AuthContext'
 import { ToastProvider } from '@/context/ToastContext'
@@ -20,6 +20,21 @@ const dmSans = DM_Sans({
   display: 'swap',
 })
 
+// Brush-script display face echoing the hand-lettered BuffBites logo.
+const brush = Kaushan_Script({
+  subsets: ['latin'],
+  variable: '--font-brush',
+  weight: '400',
+  display: 'swap',
+})
+
+export const viewport: Viewport = {
+  themeColor: '#EE8D00',
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+}
+
 export const metadata: Metadata = {
   title: 'BuffBites',
   description: 'AI-powered dining combo discovery for CU Boulder',
@@ -39,7 +54,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${syne.variable} ${dmSans.variable} font-sans bg-surface text-brand-black antialiased`}>
+      <body className={`${syne.variable} ${dmSans.variable} ${brush.variable} font-sans bg-surface text-brand-black antialiased`}>
         <AuthProvider>
           <ToastProvider>
             <main className="min-h-screen">{children}</main>

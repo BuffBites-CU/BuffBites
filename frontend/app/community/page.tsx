@@ -79,7 +79,7 @@ export default function CommunityPage() {
   if (authLoading || !firebaseUser) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <svg className="animate-spin h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24">
+        <svg className="animate-spin h-8 w-8 text-brand-deep" fill="none" viewBox="0 0 24 24">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
         </svg>
@@ -97,7 +97,7 @@ export default function CommunityPage() {
 
         {/* Search bar */}
         <div className="max-w-md mx-auto px-4 pb-2">
-          <div className={`flex items-center gap-2 bg-surface-overlay rounded-xl px-3 py-2 transition-all ${searchFocused ? 'ring-2 ring-brand-gold' : ''}`}>
+          <div className={`flex items-center gap-2 bg-surface-overlay rounded-xl px-3 py-2 transition-all ${searchFocused ? 'ring-2 ring-brand' : ''}`}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-muted flex-shrink-0">
               <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
             </svg>
@@ -123,7 +123,7 @@ export default function CommunityPage() {
               onClick={() => setFeedTab(tab)}
               className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all capitalize ${
                 feedTab === tab
-                  ? 'bg-brand-black text-brand-gold'
+                  ? 'bg-brand-black text-brand'
                   : 'bg-surface-overlay text-muted hover:bg-surface-warm'
               }`}
             >
@@ -144,7 +144,7 @@ export default function CommunityPage() {
         {!loading && error && (
           <div className="flex flex-col items-center gap-4 py-16 text-center">
             <p className="text-sm text-muted">{error}</p>
-            <button onClick={refetch} className="px-5 py-2.5 rounded-xl bg-brand-gold text-brand-black text-sm font-display font-medium">Try again</button>
+            <button onClick={refetch} className="px-5 py-2.5 rounded-xl bg-brand text-brand-black text-sm font-display font-medium">Try again</button>
           </div>
         )}
 
@@ -165,9 +165,9 @@ export default function CommunityPage() {
             ) : (
               <>
                 <svg width="72" height="72" viewBox="0 0 72 72" fill="none" className="opacity-60">
-                  <circle cx="36" cy="36" r="30" stroke="#CFB87C" strokeWidth="2" strokeDasharray="4 3" />
-                  <path d="M24 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#CFB87C" strokeWidth="2" strokeLinecap="round" />
-                  <circle cx="36" cy="42" r="5" fill="#CFB87C" fillOpacity="0.3" stroke="#CFB87C" strokeWidth="1.5" />
+                  <circle cx="36" cy="36" r="30" stroke="#EE8D00" strokeWidth="2" strokeDasharray="4 3" />
+                  <path d="M24 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#EE8D00" strokeWidth="2" strokeLinecap="round" />
+                  <circle cx="36" cy="42" r="5" fill="#EE8D00" fillOpacity="0.3" stroke="#EE8D00" strokeWidth="1.5" />
                 </svg>
                 <p className="font-display font-semibold text-brand-black">No combos yet today</p>
                 <p className="text-sm text-muted">Be the first to share what you made!</p>
@@ -209,7 +209,7 @@ export default function CommunityPage() {
       {(
         <button
           onClick={handleShareClick}
-          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand-gold text-brand-black text-sm font-display font-semibold shadow-gold hover:opacity-90 active:scale-95 transition-all"
+          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand text-brand-black text-sm font-display font-semibold shadow-brand hover:opacity-90 active:scale-95 transition-all"
           aria-label="Share a combo"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

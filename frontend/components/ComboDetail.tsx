@@ -249,7 +249,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
                       </div>
                       <div className="flex items-center gap-2 flex-shrink-0">
                         {n?.calories != null && (
-                          <span className="text-xs font-semibold text-brand-gold bg-brand-gold/10 rounded-full px-2 py-0.5">
+                          <span className="text-xs font-semibold text-brand-deep bg-brand/10 rounded-full px-2 py-0.5">
                             {Math.round(n.calories)} cal
                           </span>
                         )}
@@ -267,9 +267,9 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
           </div>
 
           {type === 'ai' && 'approximate_calories' in combo && (
-            <div className="bg-brand-gold/10 rounded-xl px-4 py-3 flex items-center justify-between">
+            <div className="bg-brand/10 rounded-xl px-4 py-3 flex items-center justify-between">
               <span className="text-sm font-medium text-brand-black">Estimated calories</span>
-              <span className="text-sm font-bold text-brand-gold">
+              <span className="text-sm font-bold text-brand-deep">
                 ~{(combo as Combo).approximate_calories} cal
               </span>
             </div>
@@ -314,8 +314,8 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
                 <div className="space-y-3">
                   {comments.map((c) => (
                     <div key={c.id} className="flex items-start gap-2.5">
-                      <div className="w-7 h-7 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-[10px] font-bold text-brand-gold">{c.author_username[0].toUpperCase()}</span>
+                      <div className="w-7 h-7 rounded-full bg-brand/20 flex items-center justify-center flex-shrink-0">
+                        <span className="text-[10px] font-bold text-brand-deep">{c.author_username[0].toUpperCase()}</span>
                       </div>
                       <div className="flex-1 min-w-0 bg-surface-overlay rounded-2xl px-3 py-2">
                         <p className="text-[11px] font-display font-semibold text-brand-black mb-0.5">@{c.author_username}</p>
@@ -340,8 +340,8 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
               {/* Add comment input */}
               {firebaseUser && (
                 <div className="flex items-center gap-2 mt-4">
-                  <div className="w-7 h-7 rounded-full bg-brand-gold/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-[10px] font-bold text-brand-gold">{(username ?? 'U')[0].toUpperCase()}</span>
+                  <div className="w-7 h-7 rounded-full bg-brand/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-[10px] font-bold text-brand-deep">{(username ?? 'U')[0].toUpperCase()}</span>
                   </div>
                   <div className="flex-1 flex items-center gap-2 bg-surface-overlay rounded-2xl px-3 py-2">
                     <input
@@ -355,7 +355,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
                     <button
                       onClick={handleAddComment}
                       disabled={!commentText.trim() || submitting}
-                      className="text-brand-gold disabled:opacity-40 transition-opacity"
+                      className="text-brand-deep disabled:opacity-40 transition-opacity"
                       aria-label="Post comment"
                     >
                       <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">

@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Palette ──────────────────────────────────────────────────
+   Pulled from the BuffBites logo (#EE8D00 orange + cream + ink) with CU
+   gold as a secondary accent. Edit these to retheme the whole app. */
+:root {
+  --brand:           238 141 0;    /* #EE8D00 */
+  --brand-deep:      168 90 0;     /* #A85A00 — 4.8:1 on surface */
+  --brand-pale:      255 222 176;  /* #FFDEB0 */
+  --ink:             26 20 16;     /* #1A1410 */
+  --stone:           196 184 164;
+  --cu-gold:         207 184 124;  /* #CFB87C */
+  --hot:             255 77 46;    /* #FF4D2E */
+  --surface:         255 248 238;  /* #FFF8EE */
+  --surface-card:    255 255 255;
+  --surface-overlay: 253 236 212;  /* #FDECD4 */
+  --surface-warm:    245 222 190;
+  --muted:           122 104 86;   /* #7A6856 — 4.9:1 on surface */
+}
+
 /* ── Scrollbar ───────────────────────────────────────────────── */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
@@ -12,7 +30,7 @@
 /* ── Focus ring (keyboard nav only) ─────────────────────────── */
 @layer base {
   *:focus-visible {
-    @apply outline-none ring-2 ring-brand-gold ring-offset-2;
+    @apply outline-none ring-2 ring-brand ring-offset-2;
   }
 }
 
@@ -38,9 +56,9 @@
 .shimmer {
   background: linear-gradient(
     90deg,
-    #ede6d8 25%,
-    #f8f3ea 50%,
-    #ede6d8 75%
+    #fbe6c8 25%,
+    #fff5e6 50%,
+    #fbe6c8 75%
   );
   background-size: 200% 100%;
   animation: shimmer 1.6s ease-in-out infinite;
@@ -75,3 +93,16 @@
     text-rendering: optimizeLegibility;
   }
 }
+
+/* ── Poster texture: subtle halftone dots behind hero blocks ─── */
+.bg-halftone {
+  background-image: radial-gradient(rgb(var(--ink) / 0.07) 1px, transparent 1.2px);
+  background-size: 10px 10px;
+}
+
+/* ── Sticker wiggle for trending badges ─────────────────────── */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50%      { transform: rotate(3deg); }
+}
+.animate-wiggle { animation: wiggle 1.8s ease-in-out infinite; }

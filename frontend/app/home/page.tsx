@@ -10,13 +10,15 @@ import MealPeriodTabs from '@/components/MealPeriodTabs'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
 import MenuView from '@/components/MenuView'
+import TrendingRail from '@/components/TrendingRail'
 import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo, getUserCombos } from '@/services/communityService'
 import { isoOffsetMST, isoToLocalNoon, currentMealPeriodMST } from '@/lib/date'
-import type { Combo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals, DietaryPreference } from '@/types'
+import { DINING_HALL_LABELS } from '@/types'
+import type { Combo, CommunityCombo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals, DietaryPreference } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
   alley: 'C4C or Sewall',
@@ -54,6 +56,7 @@ export default function HomePage() {
   const [selectedPeriod, setSelectedPeriod] = useState<MealPeriod>(nowPeriod)
   const [view, setView] = useState<HomeView>('combos')
   const [activeCombo, setActiveCombo] = useState<Combo | null>(null)
+  const [activeTrend, setActiveTrend] = useState<CommunityCombo | null>(null)
   const [showDatePicker, setShowDatePicker] = useState(false)
   const [ateStates, setAteStates] = useState<Record<string, 'ate' | 'skipped'>>({})
   const [shareStates, setShareStates] = useState<Record<string, 'sharing' | 'shared'>>({})
@@ -62,6 +65,7 @@ export default function HomePage() {
   const [dietaryPrefs, setDietaryPrefs] = useState<DietaryPreference[]>([])
   const [pastTitles, setPastTitles] = useState<Set<string>>(new Set())
   const [nutritionGoals, setNutritionGoals] = useState<NutritionGoals | undefined>()
+  const [calorieTarget, setCalorieTarget] = useState<number | undefined>()
   const [loggedMealKeys, setLoggedMealKeys] = useState<Set<string>>(new Set())
   const [postedComboKeys, setPostedComboKeys] = useState<Set<string>>(new Set())
 
@@ -91,6 +95,7 @@ export default function HomePage() {
       setPastTitles(new Set((p.meal_log ?? []).map((e) => e.title)))
       setLoggedMealKeys(new Set((p.meal_log ?? []).map((e) => mealLogKey(e.dining_hall, e.date, e.meal_period, e.title))))
       if (p.nutrition_goals) setNutritionGoals(p.nutrition_goals)
+      if (p.preferred_calories_per_meal) setCalorieTarget(p.preferred_calories_per_meal)
     }).catch(() => {})
   }, [firebaseUid])
 
@@ -214,7 +219,7 @@ export default function HomePage() {
   if (authLoading || !firebaseUid) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <svg className="animate-spin h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24">
+        <svg className="animate-spin h-8 w-8 text-brand-deep" fill="none" viewBox="0 0 24 24">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
         </svg>
@@ -226,13 +231,13 @@ export default function HomePage() {
     <div className="min-h-screen bg-surface pb-24">
       <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
         <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
-          {/* Logo */}
+          {/* Logo — brush wordmark echoes the hand-lettered logo */}
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full overflow-hidden flex-shrink-0">
-              <Image src="/logoi.jpeg" alt="BuffBites" width={28} height={28} className="object-cover w-full h-full" />
+            <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-brand-black">
+              <Image src="/logoi.jpeg" alt="" width={32} height={32} className="object-cover w-full h-full" />
             </div>
-            <span className="font-display text-[17px] font-bold text-brand-black tracking-tight leading-none">
-              BuffBites
+            <span className="font-brush text-[24px] text-brand-black leading-none -rotate-2">
+              Buff Bites
             </span>
           </div>
 
@@ -240,7 +245,7 @@ export default function HomePage() {
             <button
               onClick={openInstallGuide}
               aria-label="How to add BuffBites to your home screen"
-              className="flex items-center gap-1 rounded-full bg-brand-gold/15 text-brand-gold ring-1 ring-brand-gold/30 px-2.5 py-1 hover:bg-brand-gold/25 transition-colors"
+              className="flex items-center gap-1 rounded-full bg-brand/15 text-brand-deep ring-1 ring-brand/30 px-2.5 py-1 hover:bg-brand/25 transition-colors"
             >
               <DevicePhoneMobileIcon width={15} height={15} />
               <span className="text-[11px] font-semibold">Install</span>
@@ -274,7 +279,7 @@ export default function HomePage() {
                   onClick={() => { setSelectedDate(opt.iso); setShowDatePicker(false) }}
                   className={`flex flex-col items-center px-3 py-1.5 rounded-xl text-xs font-display font-semibold transition-all flex-shrink-0 ${
                     opt.iso === selectedDate
-                      ? 'bg-brand-gold text-brand-black shadow-gold-sm'
+                      ? 'bg-brand text-brand-black shadow-brand-sm'
                       : 'bg-surface-overlay text-muted hover:bg-surface-warm'
                   }`}
                 >
@@ -298,7 +303,7 @@ export default function HomePage() {
                 onClick={() => setView(v)}
                 className={`px-3 py-1.5 rounded-full text-[11px] font-display font-semibold tracking-wide transition-all whitespace-nowrap ${
                   view === v
-                    ? 'bg-brand-black text-brand-gold'
+                    ? 'bg-brand-black text-brand'
                     : 'text-muted hover:text-brand-black'
                 }`}
               >
@@ -324,6 +329,11 @@ export default function HomePage() {
         )}
 
         {view === 'combos' && <>
+        <Greeting name={username} period={selectedPeriod} hall={selectedDining} />
+        <TrendingRail onOpen={setActiveTrend} />
+        <h2 className="font-brush text-2xl text-brand-black leading-none mb-3">
+          Your {selectedPeriod.toLowerCase()} picks <span aria-hidden>✦</span>
+        </h2>
         {loading && <ComboSkeletons />}
 
         {!loading && error && (
@@ -331,7 +341,7 @@ export default function HomePage() {
             <p className="text-sm text-muted">{error}</p>
             <button
               onClick={refetch}
-              className="px-5 py-2.5 rounded-xl bg-brand-gold text-brand-black text-sm font-medium hover:opacity-90 transition-opacity"
+              className="px-5 py-2.5 rounded-xl bg-brand text-brand-black text-sm font-medium hover:opacity-90 transition-opacity"
             >
               Try again
             </button>
@@ -344,7 +354,7 @@ export default function HomePage() {
             <button
               onClick={refetch}
               disabled={loading}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-gold text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-60"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-60"
             >
               {loading ? (
                 <>
@@ -386,6 +396,10 @@ export default function HomePage() {
                     tags={combo.tags}
                     dishes={combo.dishes}
                     approximate_calories={combo.approximate_calories}
+                    protein_g={combo.approximate_protein_g || undefined}
+                    carbs_g={combo.approximate_carbs_g}
+                    fat_g={combo.approximate_fat_g}
+                    calorieTarget={calorieTarget}
                     onClick={() => setActiveCombo(combo)}
                     ateState={
                       ateStates[ateKey(combo, i)] ??
@@ -423,6 +437,37 @@ export default function HomePage() {
           onClose={() => setActiveCombo(null)}
         />
       )}
+
+      {activeTrend && (
+        <ComboDetail
+          combo={activeTrend}
+          type="community"
+          onClose={() => setActiveTrend(null)}
+        />
+      )}
+    </div>
+  )
+}
+
+const PERIOD_LINES: Record<MealPeriod, string> = {
+  Breakfast: 'Fuel up before that 8 AM.',
+  Lunch: 'Midday refuel — between classes.',
+  Dinner: 'Dinner plans, sorted.',
+}
+
+function Greeting({ name, period, hall }: { name: string | null; period: MealPeriod; hall: DiningHall }) {
+  return (
+    <div className="relative mb-5 rounded-3xl bg-brand border-2 border-brand-black shadow-sticker px-4 py-4 overflow-hidden">
+      <div className="absolute inset-0 bg-halftone" aria-hidden />
+      <div className="relative">
+        <p className="text-[11px] font-display font-bold uppercase tracking-widest text-brand-black/70">
+          {DINING_HALL_LABELS[hall]} · {period}
+        </p>
+        <p className="font-brush text-[28px] leading-tight text-brand-black mt-0.5">
+          Hey{name ? ` ${name}` : ''}, what&apos;s the bite?
+        </p>
+        <p className="text-sm text-brand-black/80 mt-0.5">{PERIOD_LINES[period]}</p>
+      </div>
     </div>
   )
 }
