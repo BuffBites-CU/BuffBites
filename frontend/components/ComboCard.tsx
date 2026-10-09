@@ -150,7 +150,7 @@ export default function ComboCard({
       {/* Ate before hint */}
       {ateBeforeHint && (
         <div className="flex items-center gap-1 mb-2">
-          <span className="text-[10px] text-brand/80 font-medium bg-brand/10 rounded-full px-2 py-0.5">
+          <span className="text-[10px] text-brand-deep font-medium bg-brand/10 rounded-full px-2 py-0.5">
             ✓ You&apos;ve had this before
           </span>
         </div>

@@ -209,7 +209,7 @@ export default function CommunityPage() {
       {(
         <button
           onClick={handleShareClick}
-          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand text-brand-black text-sm font-display font-semibold shadow-brand hover:opacity-90 active:scale-95 transition-all"
+          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand text-brand-black text-sm font-display font-semibold shadow-glow hover:opacity-90 active:scale-95 transition-all"
           aria-label="Share a combo"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

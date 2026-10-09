@@ -46,7 +46,7 @@ export default function LandingPage() {
       <div className="absolute top-0 left-0 right-0 z-20 flex justify-end px-4 pt-4">
         <button
           onClick={openInstallGuide}
-          className="flex items-center gap-1.5 rounded-full bg-brand border border-brand px-3.5 py-1.5 text-xs font-semibold text-brand-black shadow-brand hover:opacity-90 active:scale-[0.97] transition-all animate-gold-pulse"
+          className="flex items-center gap-1.5 rounded-full bg-brand border border-brand px-3.5 py-1.5 text-xs font-semibold text-brand-black shadow-glow hover:opacity-90 active:scale-[0.97] transition-all animate-gold-pulse"
         >
           <DevicePhoneMobileIcon width={14} height={14} />
           Add to Home Screen
@@ -135,7 +135,7 @@ export default function LandingPage() {
         </button>
 
         {error && (
-          <p className="text-center text-sm text-red-500 font-medium">{error}</p>
+          <p role="alert" className="text-center text-sm text-red-700 font-medium bg-surface-card border-2 border-brand-black rounded-full px-4 py-1.5">{error}</p>
         )}
 
         <p className="text-[11px] text-center text-brand-black/80 font-medium pt-1">

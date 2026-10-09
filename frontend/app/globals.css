@@ -7,7 +7,7 @@
    gold as a secondary accent. Edit these to retheme the whole app. */
 :root {
   --brand:           238 141 0;    /* #EE8D00 */
-  --brand-deep:      168 90 0;     /* #A85A00 — 4.8:1 on surface */
+  --brand-deep:      150 78 0;     /* #964E00 — 5.9:1 on surface, ≥4.75:1 on brand/15–25 tints */
   --brand-pale:      255 222 176;  /* #FFDEB0 */
   --ink:             26 20 16;     /* #1A1410 */
   --stone:           196 184 164;

@@ -282,7 +282,7 @@ export default function HomePage() {
                   onClick={() => { setSelectedDate(opt.iso); setShowDatePicker(false) }}
                   className={`flex flex-col items-center px-3 py-1.5 rounded-xl text-xs font-display font-semibold transition-all flex-shrink-0 ${
                     opt.iso === selectedDate
-                      ? 'bg-brand text-brand-black shadow-brand-sm'
+                      ? 'bg-brand text-brand-black shadow-glow-sm'
                       : 'bg-surface-overlay text-muted hover:bg-surface-warm'
                   }`}
                 >
@@ -470,7 +470,7 @@ function Greeting({ name, period, hall }: { name: string | null; period: MealPer
     <div className="relative mb-5 rounded-3xl bg-brand border-2 border-brand-black shadow-sticker px-4 py-4 overflow-hidden">
       <div className="absolute inset-0 bg-halftone" aria-hidden />
       <div className="relative">
-        <p className="text-[11px] font-display font-bold uppercase tracking-widest text-brand-black/70">
+        <p className="text-[11px] font-display font-bold uppercase tracking-widest text-brand-black/80">
           {DINING_HALL_LABELS[hall]} · {period}
         </p>
         <p className="font-brush text-[28px] leading-tight text-brand-black mt-0.5">

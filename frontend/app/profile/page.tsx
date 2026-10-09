@@ -532,7 +532,7 @@ export default function ProfilePage() {
                 <Image src={firebaseUser.photoURL} alt="Profile" fill sizes="64px" className="object-cover" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-brand/20">
-                  <span className="text-2xl font-display font-bold text-brand-deep">{profile.username[0]?.toUpperCase()}</span>
+                  <span className="text-2xl font-display font-bold text-brand-pale">{profile.username[0]?.toUpperCase()}</span>
                 </div>
               )}
             </div>
@@ -541,7 +541,7 @@ export default function ProfilePage() {
             <div className="flex-1 min-w-0">
               <h1 className="font-display font-bold text-white text-xl tracking-tight leading-none">@{profile.username}</h1>
               <div className="flex items-center gap-2 mt-1.5 flex-wrap">
-                <span className="flex items-center gap-1 text-xs text-brand-deep font-display font-semibold">
+                <span className="flex items-center gap-1 text-xs text-brand font-display font-semibold">
                   <StarIcon width={12} height={12} className="fill-brand" />
                   {profile.karma} karma
                 </span>

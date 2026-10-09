@@ -10,7 +10,7 @@ const AVATAR_COLORS = [
   'bg-brand text-brand-black',
   'bg-brand-black text-brand',
   'bg-brand-gold text-brand-black',
-  'bg-brand-hot text-white',
+  'bg-brand-hot text-brand-black',
   'bg-brand-pale text-brand-black',
 ]
 
@@ -68,7 +68,7 @@ export default function TrendingPost({ combo, rank, onClick, variant = 'feed' }:
     >
       {rank !== undefined && rank <= 3 && (
         <span
-          className="absolute -top-3 -right-2 bg-brand-hot text-white font-brush text-sm px-2.5 py-0.5 rounded-full border-2 border-brand-black animate-wiggle"
+          className="absolute -top-3 -right-2 bg-brand-hot text-brand-black font-brush text-sm px-2.5 py-0.5 rounded-full border-2 border-brand-black animate-wiggle"
           aria-label={`Rank ${rank}`}
         >
           #{rank}

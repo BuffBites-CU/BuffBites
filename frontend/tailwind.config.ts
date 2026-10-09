@@ -4,6 +4,9 @@ const config: Config = {
   content: [
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
+    './context/**/*.{ts,tsx}',
+    './hooks/**/*.{ts,tsx}',
+    './lib/**/*.{ts,tsx}',
   ],
   theme: {
     extend: {
@@ -43,8 +46,10 @@ const config: Config = {
         'card-sm':  '0 1px 3px rgba(26,20,16,0.06), 0 1px 2px rgba(26,20,16,0.04)',
         'card':     '0 4px 12px rgba(26,20,16,0.08), 0 1px 3px rgba(26,20,16,0.04)',
         'card-lg':  '0 8px 24px rgba(26,20,16,0.10), 0 2px 6px rgba(26,20,16,0.06)',
-        'brand':    '0 6px 20px rgb(var(--brand) / 0.35)',
-        'brand-sm': '0 2px 8px rgb(var(--brand) / 0.25)',
+        // Not named 'brand': that would collide with the shadow-<color> utility
+        // Tailwind generates for colors.brand and render a solid orange halo.
+        'glow':     '0 6px 20px rgb(var(--brand) / 0.35)',
+        'glow-sm':  '0 2px 8px rgb(var(--brand) / 0.25)',
         'sticker':  '3px 3px 0 rgb(var(--ink))',
       },
     },
