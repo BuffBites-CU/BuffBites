@@ -50,9 +50,11 @@ export function fuelScore(m: Macros, perMealCalorieTarget = 700): FuelScore | nu
   const split = macroSplit(m)
   const reasons: string[] = []
 
-  // Protein density (40 pts): 20–35% of calories from protein is ideal.
+  // Protein density (40 pts): full credit from 20% of calories. The DGA range
+  // tops out at 35%, but a lean, protein-heavy plate isn't a problem for
+  // students, so only penalize past 50%.
   const proteinPct = ((m.protein_g ?? 0) * 4) / m.calories
-  const proteinPts = 40 * band(proteinPct, 0.2, 0.35, 0.15)
+  const proteinPts = 40 * band(proteinPct, 0.2, 0.5, 0.15)
   if (proteinPct >= 0.2) reasons.push(`${m.protein_g}g protein`)
   else reasons.push('Low on protein')
 

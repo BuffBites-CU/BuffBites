@@ -2,11 +2,9 @@ import asyncio
 import hashlib
 import json
 import sys
-import time
-from collections import defaultdict, deque
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from threading import Lock
 from zoneinfo import ZoneInfo
 
 import anthropic
@@ -15,6 +13,7 @@ from pydantic import BaseModel, ConfigDict
 
 from database import combo_cache_collection
 from menu_store import DINING_FILES, load_menu
+from rate_limit import SlidingWindowLimiter
 from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish
 
 router = APIRouter()
@@ -22,28 +21,17 @@ router = APIRouter()
 # Dining halls are in Boulder, CO — "today" follows Mountain Time, not UTC.
 MT = ZoneInfo("America/Denver")
 
-# ── Lightweight per-IP rate limiter ────────────────────────────────────────
 # Combo generation is unauthenticated and calls the Anthropic API, so it needs
-# abuse protection. An in-memory sliding window is sufficient at this scale
-# (single instance); swap for Redis if you scale horizontally.
-_RATE_LIMIT = 20          # requests
-_RATE_WINDOW = 60         # seconds
-_rate_hits: dict[str, deque] = defaultdict(deque)
-_rate_lock = Lock()
+# per-IP abuse protection.
+_combo_limiter = SlidingWindowLimiter(
+    limit=20,
+    window_seconds=60,
+    detail="Too many combo requests. Please wait a moment and try again.",
+)
 
 
 def _check_rate_limit(client_ip: str) -> None:
-    now = time.monotonic()
-    with _rate_lock:
-        hits = _rate_hits[client_ip]
-        while hits and hits[0] <= now - _RATE_WINDOW:
-            hits.popleft()
-        if len(hits) >= _RATE_LIMIT:
-            raise HTTPException(
-                status_code=429,
-                detail="Too many combo requests. Please wait a moment and try again.",
-            )
-        hits.append(now)
+    _combo_limiter.check(client_ip)
 
 
 def _today_mt() -> str:

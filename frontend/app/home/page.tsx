@@ -11,6 +11,7 @@ import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
 import MenuView from '@/components/MenuView'
 import TrendingRail from '@/components/TrendingRail'
+import SnapPlate from '@/components/SnapPlate'
 import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
@@ -330,6 +331,13 @@ export default function HomePage() {
 
         {view === 'combos' && <>
         <Greeting name={username} period={selectedPeriod} hall={selectedDining} />
+        <SnapPlate
+          dining={selectedDining}
+          date={selectedDate}
+          period={selectedPeriod}
+          firebaseUid={firebaseUid}
+          calorieTarget={calorieTarget}
+        />
         <TrendingRail onOpen={setActiveTrend} />
         <h2 className="font-brush text-2xl text-brand-black leading-none mb-3">
           Your {selectedPeriod.toLowerCase()} picks <span aria-hidden>✦</span>

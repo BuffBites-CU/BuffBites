@@ -175,3 +175,27 @@ export interface MenuResponse {
   day_of_week: string
   categories: Record<string, MenuItem[]>
 }
+
+export interface PlateItem {
+  name: string
+  station: string
+  portion: number
+  confidence: 'high' | 'medium' | 'low'
+  calories: number
+  protein_g: number
+  carbs_g: number
+  fat_g: number
+  fiber_g: number
+  sodium_mg: number
+  added_sugar_g: number
+}
+
+export interface PlateAnalysis {
+  dining_location: string
+  date: string
+  is_food: boolean
+  items: PlateItem[]
+  unmatched: Array<{ description: string }>
+  totals: Record<'calories' | 'protein_g' | 'carbs_g' | 'fat_g' | 'fiber_g' | 'sodium_mg' | 'added_sugar_g', number>
+  notes: string
+}

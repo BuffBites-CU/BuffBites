@@ -70,6 +70,9 @@ Ranked by impact against effort. ✅ = shipped in this branch.
 
 ---
 
+### AI: Snap your plate ✅
+Shipped in `backend/routers/vision.py`. Claude vision matches the photo against **today's scraped menu at that hall**, and the server computes nutrition from Nutrislice data × portion. Generic photo-calorie apps have to guess from a global food database; this one only has to pick from a known menu, which is a much easier and more accurate problem.
+
 ## 3. Suggested next sprint
 1. Photo upload on posts (field exists). This gives the most visual upgrade for the feed.
 2. Fuel Score v2 from real nutrition, with fiber, sodium and added-sugar chips.

@@ -90,6 +90,7 @@ Edit `backend/.env`:
 | `FIREBASE_SERVICE_ACCOUNT_JSON` | Production only | Full Firebase service account JSON as a single-line string |
 | `MENU_DATA_URL` | No | Where the API re-pulls scraped menus from every hour (default: this repo's `main` on raw.githubusercontent.com). Set to empty to use only the bundled JSON. |
 | `MENU_REFRESH_SECONDS` | No | Menu refresh interval (default `3600`) |
+| `VISION_MODEL` | No | Model for Snap-your-plate (default `claude-opus-5-5`; e.g. `claude-haiku-5-5` to cut cost) |
 
 #### 4. Set up Firebase Admin credentials (for protected routes)
 
@@ -215,6 +216,7 @@ Dish-verification and cross-station warnings are written to **stderr** and do no
 | `GET` | `/api/combos/generate` | No | Generate 9 AI meal combos (optional personalization params) |
 | `GET` | `/api/menu` | No | Raw classified menu (no Claude call) |
 | `GET` | `/api/menu/nutrition` | No | Per-dish nutrition for a list of dish names |
+| `POST` | `/api/vision/plate` | No (rate-limited 6/min/IP) | Snap your plate: photo → items matched to today's menu → macros |
 | `POST` | `/api/users/` | No | Create user profile |
 | `GET` | `/api/users/check-username/{username}` | No | Check username availability |
 | `GET` | `/api/users/{firebase_uid}` | No | Get user profile (includes meal log + favorites) |
