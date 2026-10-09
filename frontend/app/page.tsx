@@ -8,7 +8,7 @@ import { openInstallGuide } from '@/components/InstallPrompt'
 
 const FEATURES = [
   { icon: '✦', label: 'AI-crafted combos' },
-  { icon: '◈', label: 'All 6 dining halls' },
+  { icon: '◈', label: 'All 5 dining halls' },
   { icon: '🔥', label: 'Trending student combos' },
   { icon: '◇', label: 'Fuel Score + macros' },
 ]

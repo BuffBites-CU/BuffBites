@@ -27,7 +27,7 @@ from pydantic import BaseModel, Field
 
 from menu_store import DINING_FILES, load_menu
 from rate_limit import SlidingWindowLimiter
-from routers.combos import _today_mt
+from routers.combos import _today_mt, ensure_open
 
 router = APIRouter()
 
@@ -250,6 +250,7 @@ async def analyze_plate(req: PlateRequest, request: Request) -> PlateResponse:
 
     if req.dining not in DINING_FILES:
         raise HTTPException(status_code=400, detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}")
+    ensure_open(req.dining)
     image_b64 = _decode_image(req)
 
     target_date = req.date or _today_mt()

@@ -12,7 +12,7 @@ from fastapi import APIRouter, HTTPException, Query, Request
 from pydantic import BaseModel, ConfigDict
 
 from database import combo_cache_collection
-from menu_store import DINING_FILES, load_menu
+from menu_store import CLOSED_HALLS, DINING_FILES, load_menu
 from rate_limit import SlidingWindowLimiter
 from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish
 
@@ -32,6 +32,12 @@ _combo_limiter = SlidingWindowLimiter(
 
 def _check_rate_limit(client_ip: str) -> None:
     _combo_limiter.check(client_ip)
+
+
+def ensure_open(dining: str) -> None:
+    """404 with a clear reason for halls that are temporarily closed."""
+    if dining in CLOSED_HALLS:
+        raise HTTPException(status_code=404, detail=CLOSED_HALLS[dining])
 
 
 def _today_mt() -> str:
@@ -443,6 +449,7 @@ async def generate_combos(
             status_code=400,
             detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}",
         )
+    ensure_open(dining)
 
     target_date = date or _today_mt()
 
@@ -624,6 +631,7 @@ def get_menu(
             status_code=400,
             detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}",
         )
+    ensure_open(dining)
 
     target_date = date or _today_mt()
     try:

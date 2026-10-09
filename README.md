@@ -251,7 +251,7 @@ See [`API_DOCS.md`](./API_DOCS.md) for full request/response schemas.
 
 | Key | Dining Hall |
 |-----|-------------|
-| `alley` | The Alley at Farrand |
+| `alley` | The Alley at Farrand. **Closed for remodel, expected to reopen Aug 2028.** Hidden in the app via `CLOSED_HALLS` (`frontend/types/index.ts`, `backend/menu_store.py`). |
 | `c4c` | Center for Community (C4C) |
 | `libby` | Libby Dining |
 | `seec` | SEEC Cafe |

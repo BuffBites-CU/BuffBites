@@ -20,7 +20,7 @@ pip install -r requirements.txt
 | `libby_dining.py` | Libby Dining | 6 weeks | `data/libby_dining_menus.json` |
 | `sewall_dining.py` | Sewall Dining Center | 6 weeks | `data/sewall_dining_menus.json` |
 | `village_center_dining.py` | Village Center Dining | 6 weeks | `data/village_center_dining_menus.json` |
-| `alley_dining.py` | The Alley at Farrand | 4 weeks | `data/alley_dining_menus.json` |
+| `alley_dining.py` | The Alley at Farrand (closed for remodel until Aug 2028; empty scrapes are expected) | 6 weeks | `data/alley_dining_menus.json` |
 | `seec_dining.py` | SEEC Cafe (student order-ahead) | 6 weeks | `data/seec_dining_menus.json` |
 
 ---

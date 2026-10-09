@@ -11,9 +11,10 @@ import requests
 from menu_guard import guarded_write
 
 API_BASE   = "https://colorado-diningmenus.api.nutrislice.com"
-# Nutrislice renames/re-IDs The Alley's menus between semesters, which is why the
-# old hardcoded (38643, 8911) pair silently returned empty weeks. We now discover
-# the live school + menu types from the schools index and fall back to these.
+# The Alley at Farrand closed for remodel (CU Dining lists it as expected to
+# reopen Aug 2028), which is why every scrape since August has been empty. We
+# keep scraping so the menu shows up automatically when it reopens: discover the
+# live school + menu types from the schools index, then fall back to these.
 FALLBACK_SOURCES: list[tuple[str | int, str | int]] = [
     ("the-alley", "the-alley-at-farrand-s-all-day-id2009"),
     (38643, 8911),
@@ -154,7 +155,11 @@ def discover_sources(session: requests.Session) -> list[tuple[str | int, str | i
         print(f"Discovery failed — {exc}")
         return sources
 
-    for school in schools if isinstance(schools, list) else []:
+    if not isinstance(schools, list):
+        print(f"Discovery: unexpected schools response ({type(schools).__name__}), using fallbacks")
+        return sources
+
+    for school in schools:
         haystack = f"{school.get('name', '')} {school.get('slug', '')}".lower()
         if not any(k in haystack for k in DISCOVERY_KEYWORDS):
             continue
@@ -163,6 +168,8 @@ def discover_sources(session: requests.Session) -> list[tuple[str | int, str | i
             if mt_key:
                 sources.append((school.get("slug") or school.get("id"), mt_key))
                 print(f"Discovered: {school.get('name')} → {mt.get('name')} ({mt_key})")
+    if not sources:
+        print(f"Discovery: no school matching {DISCOVERY_KEYWORDS} among {len(schools)} schools")
     return sources
 
 
@@ -245,7 +252,9 @@ def main() -> None:
             "categories":  cats,
         })
 
-    guarded_write(OUTPUT, result)
+    # Closed for remodel, so an empty scrape is expected. menu_guard still refuses
+    # to overwrite real data with an empty scrape if Nutrislice glitches later.
+    guarded_write(OUTPUT, result, allow_empty=True)
 
     n_items = sum(sum(len(v) for v in day["categories"].values()) for day in result["menus"])
     print(f"\nSaved → {OUTPUT}")

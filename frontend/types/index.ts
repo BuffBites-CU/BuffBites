@@ -62,7 +62,17 @@ export const DINING_HALL_LABELS: Record<DiningHall, string> = {
   village_center: 'Village Center',
 }
 
-export const DINING_HALLS: DiningHall[] = ['alley', 'c4c', 'libby', 'seec', 'sewall', 'village_center']
+/** Halls that aren't serving right now. They stay in the type and labels so old
+ *  community posts still render, but every picker hides them. Delete the entry
+ *  when the hall reopens. */
+export const CLOSED_HALLS: Partial<Record<DiningHall, string>> = {
+  alley: 'Closed for remodel until Aug 2028',
+}
+
+export const ALL_DINING_HALLS: DiningHall[] = ['alley', 'c4c', 'libby', 'seec', 'sewall', 'village_center']
+
+/** Halls students can pick today. */
+export const DINING_HALLS: DiningHall[] = ALL_DINING_HALLS.filter((h) => !CLOSED_HALLS[h])
 
 export type MealPeriod = 'Breakfast' | 'Lunch' | 'Dinner'
 

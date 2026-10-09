@@ -33,6 +33,12 @@ DINING_FILES: dict[str, str] = {
     "village_center": "village_center_dining_menus.json",
 }
 
+# Halls that aren't serving. Requests for them get a clear 404 instead of
+# "No menu found". Remove the entry when the hall reopens.
+CLOSED_HALLS: dict[str, str] = {
+    "alley": "The Alley is closed for remodel (expected to reopen Aug 2028). Try C4C or Sewall.",
+}
+
 MENU_DATA_URL = os.getenv(
     "MENU_DATA_URL",
     "https://raw.githubusercontent.com/BuffBites-CU/BuffBites/main/scraping_scripts/data",

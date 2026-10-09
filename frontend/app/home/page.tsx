@@ -18,11 +18,11 @@ import Image from 'next/image'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo, getUserCombos } from '@/services/communityService'
 import { isoOffsetMST, isoToLocalNoon, currentMealPeriodMST } from '@/lib/date'
-import { DINING_HALL_LABELS } from '@/types'
+import { CLOSED_HALLS, DINING_HALL_LABELS } from '@/types'
 import type { Combo, CommunityCombo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals, DietaryPreference } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
-  alley: 'C4C or Sewall',
+  alley: 'C4C or Sewall', // closed until Aug 2028; kept for type completeness
   c4c: 'Sewall or Village Center',
   libby: 'C4C or Village Center',
   seec: 'C4C or Village Center',
@@ -51,9 +51,11 @@ export default function HomePage() {
   // "Eat Now" — open straight to the meal period the dining hall is serving now.
   const nowPeriod = useMemo(() => currentMealPeriodMST(), [])
 
-  const [selectedDining, setSelectedDining] = useState<DiningHall>(
-    (defaultDiningHall as DiningHall | null) ?? 'c4c'
-  )
+  const [selectedDining, setSelectedDining] = useState<DiningHall>(() => {
+    // A saved default can point at a hall that has since closed (The Alley).
+    const saved = defaultDiningHall as DiningHall | null
+    return saved && !CLOSED_HALLS[saved] ? saved : 'c4c'
+  })
   const [selectedPeriod, setSelectedPeriod] = useState<MealPeriod>(nowPeriod)
   const [view, setView] = useState<HomeView>('combos')
   const [activeCombo, setActiveCombo] = useState<Combo | null>(null)
