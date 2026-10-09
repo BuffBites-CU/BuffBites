@@ -10,6 +10,8 @@ from pathlib import Path
 
 import requests
 
+from menu_guard import guarded_write
+
 API_BASE    = "https://colorado-diningmenus.api.nutrislice.com"
 SCHOOL_SLUG = "center-for-community"
 _today      = date.today()
@@ -285,8 +287,7 @@ def main() -> None:
 
 
 def _save(result: dict, n_weeks: int) -> None:
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    guarded_write(OUTPUT, result)
     n_items = sum(sum(len(v) for v in day["categories"].values()) for day in result["menus"])
     print(f"\nSaved  → {OUTPUT}")
     print(f"Weeks  : {n_weeks}")

@@ -78,7 +78,13 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def _startup() -> None:
+    import asyncio
     from database import ensure_indexes
+    from menu_store import refresh_loop
+
+    # Pull the latest scraped menus from GitHub so the API doesn't depend on a
+    # redeploy to see the daily scrape.
+    app.state.menu_refresh_task = asyncio.create_task(refresh_loop())
     try:
         await ensure_indexes()
         logger.info("startup_indexes_ready")
