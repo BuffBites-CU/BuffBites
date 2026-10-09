@@ -14,6 +14,7 @@ from fastapi import APIRouter, HTTPException, Query, Request
 from pydantic import BaseModel, ConfigDict
 
 from database import combo_cache_collection
+from menu_store import DINING_FILES, load_menu
 from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish
 
 router = APIRouter()
@@ -49,20 +50,6 @@ def _today_mt() -> str:
     return datetime.now(MT).strftime("%Y-%m-%d")
 
 
-# In Docker the data is copied to backend/scraping_scripts/data; in local dev it
-# lives at the repo root. Pick whichever exists so both layouts work.
-_BACKEND_DIR = Path(__file__).parent.parent
-DATA_DIR = next(
-    (
-        p
-        for p in (
-            _BACKEND_DIR / "scraping_scripts" / "data",
-            _BACKEND_DIR.parent / "scraping_scripts" / "data",
-        )
-        if p.is_dir()
-    ),
-    _BACKEND_DIR / "scraping_scripts" / "data",
-)
 COMBO_PERIOD_PROMPT = (Path(__file__).parent.parent / "prompts" / "combo_period.txt").read_text()
 
 # Extra rules / item sections appended only for the Dinner prompt, which also
@@ -75,14 +62,6 @@ _DINNER_EXTRA_RULES = (
     "   - Never mix dinner and dessert items in this combo."
 )
 
-DINING_FILES: dict[str, str] = {
-    "alley":          "alley_dining_menus.json",
-    "c4c":            "c4c_dining_menus.json",
-    "libby":          "libby_dining_menus.json",
-    "seec":           "seec_dining_menus.json",
-    "sewall":         "sewall_dining_menus.json",
-    "village_center": "village_center_dining_menus.json",
-}
 
 # ── Station classification keyword sets ────────────────────────────────────
 
@@ -492,9 +471,8 @@ async def generate_combos(
     if cached:
         return ComboResponse(**cached["response"])
 
-    file_path = DATA_DIR / DINING_FILES[dining]
     try:
-        menu_data = json.loads(file_path.read_text())
+        menu_data = await asyncio.to_thread(load_menu, dining)
     except Exception:
         raise HTTPException(status_code=500, detail="Failed to load menu data")
 
@@ -660,9 +638,8 @@ def get_menu(
         )
 
     target_date = date or _today_mt()
-    file_path = DATA_DIR / DINING_FILES[dining]
     try:
-        menu_data = json.loads(file_path.read_text())
+        menu_data = load_menu(dining)
     except Exception:
         raise HTTPException(status_code=500, detail="Failed to load menu data")
 
@@ -716,9 +693,8 @@ def get_nutrition(
         raise HTTPException(status_code=400, detail="Invalid dining location")
 
     target_date = date or _today_mt()
-    file_path = DATA_DIR / DINING_FILES[dining]
     try:
-        menu_data = json.loads(file_path.read_text())
+        menu_data = load_menu(dining)
     except Exception:
         raise HTTPException(status_code=500, detail="Failed to load menu data")
 

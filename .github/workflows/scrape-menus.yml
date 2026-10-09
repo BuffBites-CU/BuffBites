@@ -2,8 +2,21 @@ name: Scrape Daily Menus
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # 8 AM UTC = 2 AM Mountain (summer)
+    # GitHub delays scheduled runs at busy times, so run twice: 2 AM MT for the
+    # day's menus and 9 AM MT to catch late Nutrislice edits.
+    - cron: '0 8 * * *'
+    - cron: '0 15 * * *'
   workflow_dispatch:
+  # Dry run on scraper changes: scrapes + validates, but only main commits data.
+  push:
+    branches-ignore: [main]
+    paths:
+      - 'scraping_scripts/**.py'
+      - '.github/workflows/scrape-menus.yml'
+
+concurrency:
+  group: scrape-menus-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   scrape:
@@ -23,25 +36,39 @@ jobs:
       - name: Install dependencies
         run: pip install -r scraping_scripts/requirements.txt
 
+      # continue-on-error: one hall's outage must not stop the others from
+      # refreshing. menu_guard keeps the previous JSON if a scrape comes back empty.
       - name: Scrape C4C
+        continue-on-error: true
         run: python scraping_scripts/c4c_dining.py
 
       - name: Scrape Libby
+        continue-on-error: true
         run: python scraping_scripts/libby_dining.py
 
       - name: Scrape Sewall
+        continue-on-error: true
         run: python scraping_scripts/sewall_dining.py
 
       - name: Scrape Village Center
+        continue-on-error: true
         run: python scraping_scripts/village_center_dining.py
 
       - name: Scrape The Alley
+        continue-on-error: true
         run: python scraping_scripts/alley_dining.py
 
       - name: Scrape SEEC
+        continue-on-error: true
         run: python scraping_scripts/seec_dining.py
 
+      - name: Validate menus
+        id: validate
+        continue-on-error: true
+        run: python scraping_scripts/validate_menus.py
+
       - name: Commit updated menus
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -49,6 +76,11 @@ jobs:
           if git diff --cached --quiet; then
             echo "No menu changes today"
           else
-            git commit -m "chore: refresh dining menus $(date -u +%Y-%m-%d)"
+            git commit -m "chore: refresh dining menus $(TZ=America/Denver date +%Y-%m-%d)"
+            git pull --rebase origin main
             git push
           fi
+
+      - name: Fail if validation failed
+        if: steps.validate.outcome == 'failure'
+        run: exit 1

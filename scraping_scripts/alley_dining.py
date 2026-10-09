@@ -8,12 +8,20 @@ from pathlib import Path
 
 import requests
 
+from menu_guard import guarded_write
+
 API_BASE   = "https://colorado-diningmenus.api.nutrislice.com"
-SCHOOL_ID  = 38643
-MENU_TYPE  = 8911
+# Nutrislice renames/re-IDs The Alley's menus between semesters, which is why the
+# old hardcoded (38643, 8911) pair silently returned empty weeks. We now discover
+# the live school + menu types from the schools index and fall back to these.
+FALLBACK_SOURCES: list[tuple[str | int, str | int]] = [
+    ("the-alley", "the-alley-at-farrand-s-all-day-id2009"),
+    (38643, 8911),
+]
+DISCOVERY_KEYWORDS = ("alley", "farrand")
 _today     = date.today()
 START_DATE = _today - timedelta(days=_today.weekday()) - timedelta(weeks=2)
-WEEKS      = 4
+WEEKS      = 6
 OUTPUT     = Path(__file__).parent / "data" / "alley_dining_menus.json"
 
 HEADERS = {
@@ -135,15 +143,48 @@ def parse_day(items: list) -> dict[str, list]:
     return cats
 
 
-def fetch_week(wk_start: date, session: requests.Session) -> dict:
+def discover_sources(session: requests.Session) -> list[tuple[str | int, str | int]]:
+    """Find every active menu type for any school matching The Alley / Farrand."""
+    sources: list[tuple[str | int, str | int]] = []
+    try:
+        resp = session.get(f"{API_BASE}/menu/api/schools/", headers=HEADERS, timeout=20)
+        resp.raise_for_status()
+        schools = resp.json()
+    except Exception as exc:
+        print(f"Discovery failed — {exc}")
+        return sources
+
+    for school in schools if isinstance(schools, list) else []:
+        haystack = f"{school.get('name', '')} {school.get('slug', '')}".lower()
+        if not any(k in haystack for k in DISCOVERY_KEYWORDS):
+            continue
+        for mt in school.get("active_menu_types") or school.get("menu_types") or []:
+            mt_key = mt.get("slug") or mt.get("id")
+            if mt_key:
+                sources.append((school.get("slug") or school.get("id"), mt_key))
+                print(f"Discovered: {school.get('name')} → {mt.get('name')} ({mt_key})")
+    return sources
+
+
+def fetch_week(wk_start: date, school: str | int, menu_type: str | int, session: requests.Session) -> dict:
     url = (
-        f"{API_BASE}/menu/api/weeks/school/{SCHOOL_ID}"
-        f"/menu-type/{MENU_TYPE}"
+        f"{API_BASE}/menu/api/weeks/school/{school}"
+        f"/menu-type/{menu_type}"
         f"/{wk_start.year}/{wk_start.month:02d}/{wk_start.day:02d}"
     )
     resp = session.get(url, headers=HEADERS, timeout=20)
     resp.raise_for_status()
     return resp.json()
+
+
+def merge_categories(base: dict[str, list], new: dict[str, list]) -> None:
+    for cat, items in new.items():
+        bucket = base.setdefault(cat, [])
+        existing = {i["name"].lower() for i in bucket}
+        for item in items:
+            if item["name"].lower() not in existing:
+                bucket.append(item)
+                existing.add(item["name"].lower())
 
 
 def main() -> None:
@@ -164,33 +205,31 @@ def main() -> None:
     day_map: dict[str, dict] = {}
     session = requests.Session()
 
-    for wk in range(WEEKS):
-        wk_start = START_DATE + timedelta(weeks=wk)
-        print(f"Fetching week {wk + 1}/{WEEKS}  ({wk_start}) ...", end=" ", flush=True)
+    sources = discover_sources(session)
+    for fb in FALLBACK_SOURCES:
+        if fb not in sources:
+            sources.append(fb)
 
-        try:
-            data = fetch_week(wk_start, session)
-        except Exception as exc:
-            print(f"ERROR — {exc}")
-            continue
+    for school, menu_type in sources:
+        found = 0
+        for wk in range(WEEKS):
+            wk_start = START_DATE + timedelta(weeks=wk)
+            try:
+                data = fetch_week(wk_start, school, menu_type, session)
+            except Exception as exc:
+                print(f"  [{school}/{menu_type}] week {wk_start} ERROR — {exc}")
+                continue
 
-        days = data.get("days") or []
-        print(f"{len(days)} days received")
-
-        for day_obj in days:
-            day_date = day_obj.get("date")
-            items    = day_obj.get("menu_items") or day_obj.get("items") or []
-
-            if not items and isinstance(day_obj, dict):
-                for key in ("sections", "menu_items", "items"):
-                    items = day_obj.get(key) or []
-                    if items:
-                        break
-
-            if day_date:
-                day_map[day_date] = parse_day(items)
-
-        time.sleep(0.5)
+            for day_obj in data.get("days") or []:
+                day_date = day_obj.get("date")
+                items    = day_obj.get("menu_items") or day_obj.get("items") or []
+                if not day_date or not items:
+                    continue
+                cats = parse_day(items)
+                found += sum(len(v) for v in cats.values())
+                merge_categories(day_map.setdefault(day_date, {}), cats)
+            time.sleep(0.3)
+        print(f"  [{school}/{menu_type}] {found} items")
 
     for i in range(total_days):
         target   = START_DATE + timedelta(days=i)
@@ -206,8 +245,7 @@ def main() -> None:
             "categories":  cats,
         })
 
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    guarded_write(OUTPUT, result)
 
     n_items = sum(sum(len(v) for v in day["categories"].values()) for day in result["menus"])
     print(f"\nSaved → {OUTPUT}")
