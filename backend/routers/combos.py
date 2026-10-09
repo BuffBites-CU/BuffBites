@@ -13,7 +13,7 @@ from pydantic import BaseModel, ConfigDict
 
 from database import combo_cache_collection
 from menu_store import CLOSED_HALLS, DINING_FILES, load_menu
-from rate_limit import SlidingWindowLimiter
+from rate_limit import SlidingWindowLimiter, client_ip
 from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish
 
 router = APIRouter()
@@ -442,7 +442,7 @@ async def generate_combos(
     priority_nutrients: str | None = Query(None, description="Comma-separated: iron,calcium,vitamin-d,fiber,omega-3,b12,zinc"),
     dietary_preferences: str | None = Query(None, description="Comma-separated: vegan,vegetarian,gluten-free,halal"),
 ):
-    _check_rate_limit(request.client.host if request.client else "unknown")
+    _check_rate_limit(client_ip(request))
 
     if dining not in DINING_FILES:
         raise HTTPException(

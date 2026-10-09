@@ -175,3 +175,47 @@ def test_call_model_refusal_maps_to_422(monkeypatch):
     with pytest.raises(HTTPException) as exc:
         asyncio.run(vision._call_model(PNG_1PX, "image/png", "menu", "C4C"))
     assert exc.value.status_code == 422
+
+
+# ── Regression tests from review ───────────────────────────────────────────
+
+@pytest.mark.parametrize("text,stop", [
+    ('{"is_food": true, "items": [{"menu_item": "Brown', "max_tokens"),
+    ("I can't help with that.", "refusal"),
+])
+def test_unparseable_output_maps_to_422_not_500(monkeypatch, text, stop):
+    _mock_client(monkeypatch, _reply(text, stop_reason=stop), {})
+    with pytest.raises(HTTPException) as exc:
+        asyncio.run(vision._call_model(PNG_1PX, "image/png", "menu", "C4C"))
+    assert exc.value.status_code == 422
+
+
+def test_matching_ignores_double_spaces_and_case():
+    day = {"categories": {"Grill": [{"name": "Tomato Cheddar  Bagel", "calories": 300,
+                                     "nutrition": {"protein_g": 12}}]}}
+    lookup = vision._menu_lines(day)[1]
+    parsed = _VPlate(is_food=True, notes="", items=[
+        _VPlateItem(menu_item="tomato cheddar bagel", seen_as="bagel", portion=1, confidence="high")])
+    items, unmatched = ground_items(parsed, lookup)
+    assert [i.name for i in items] == ["Tomato Cheddar  Bagel"] and unmatched == []
+
+
+def test_rate_limit_keys_on_fly_client_ip_not_proxy(monkeypatch):
+    async def fake(*_a, **_k):
+        return _VPlate(is_food=False, notes="", items=[])
+    monkeypatch.setattr(vision, "_call_model", fake)
+    c = _app()
+    body = {"image_base64": PNG_1PX, "media_type": "image/png", "dining": "c4c"}
+    for _ in range(vision._limiter.limit):
+        assert c.post("/api/vision/plate", json=body, headers={"Fly-Client-IP": "1.1.1.1"}).status_code == 200
+    # Same proxy address, different student: must not be throttled.
+    assert c.post("/api/vision/plate", json=body, headers={"Fly-Client-IP": "2.2.2.2"}).status_code == 200
+    assert c.post("/api/vision/plate", json=body, headers={"Fly-Client-IP": "1.1.1.1"}).status_code == 429
+
+
+def test_menu_load_failure_maps_to_500_detail(monkeypatch):
+    def broken(_d):
+        raise OSError("disk gone")
+    monkeypatch.setattr(vision, "load_menu", broken)
+    r = _app().post("/api/vision/plate", json={"image_base64": PNG_1PX, "media_type": "image/png", "dining": "c4c"})
+    assert r.status_code == 500 and r.json()["detail"] == "Failed to load menu data"

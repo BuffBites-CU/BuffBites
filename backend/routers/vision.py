@@ -15,6 +15,7 @@ grounded matching problem:
 Images are processed in memory and never stored.
 """
 
+import asyncio
 import base64
 import binascii
 import os
@@ -23,10 +24,10 @@ from typing import Literal
 
 import anthropic
 from fastapi import APIRouter, HTTPException, Request
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ValidationError
 
 from menu_store import DINING_FILES, load_menu
-from rate_limit import SlidingWindowLimiter
+from rate_limit import SlidingWindowLimiter, client_ip
 from routers.combos import _today_mt, ensure_open
 
 router = APIRouter()
@@ -117,6 +118,12 @@ If the photo is not a meal, set is_food to false and return no items.
 Never invent nutrition numbers; the server computes them from the menu."""
 
 
+def _key(name: str) -> str:
+    """Match key: case- and whitespace-insensitive. Some scraped names contain
+    double spaces ("Tomato Cheddar  Bagel") that a model will collapse."""
+    return " ".join(name.split()).casefold()
+
+
 def _menu_lines(day_menu: dict) -> tuple[str, dict[str, dict]]:
     """Render the day's menu for the prompt and build a name → item lookup."""
     lookup: dict[str, dict] = {}
@@ -124,7 +131,7 @@ def _menu_lines(day_menu: dict) -> tuple[str, dict[str, dict]]:
     for station, items in (day_menu.get("categories") or {}).items():
         for raw in items:
             name = (raw.get("name") or "").strip()
-            key = name.lower()
+            key = _key(name)
             if not name or key in lookup:
                 continue
             lookup[key] = {**raw, "station": station}
@@ -149,7 +156,7 @@ def ground_items(parsed: _VPlate, lookup: dict[str, dict]) -> tuple[list[PlateIt
     items: list[PlateItemOut] = []
     unmatched: list[UnmatchedItem] = []
     for pick in parsed.items:
-        raw = lookup.get((pick.menu_item or "").strip().lower())
+        raw = lookup.get(_key(pick.menu_item or ""))
         if raw is None:
             if pick.menu_item:
                 print(f"[VISION] dropped off-menu pick: {pick.menu_item!r}", file=sys.stderr)
@@ -200,7 +207,8 @@ async def _call_model(image_b64: str, media_type: str, menu_text: str, hall: str
     try:
         response = await client.beta.messages.parse(
             model=VISION_MODEL,
-            max_tokens=8000,
+            # Thinking counts against max_tokens; leave room for it plus the JSON.
+            max_tokens=16000,
             output_config={"effort": "medium"},
             # Server-side retry on Anthropic's recommended model if a safety
             # classifier declines (rare for food photos, but costs nothing).
@@ -225,6 +233,11 @@ async def _call_model(image_b64: str, media_type: str, menu_text: str, hall: str
             }],
             output_format=_VPlate,
         )
+    except ValidationError as e:
+        # parse() validates inside the call, so a response cut off at max_tokens
+        # or a refusal that returned prose surfaces here, not via stop_reason.
+        print(f"[VISION] unparseable model output: {e.error_count()} errors", file=sys.stderr)
+        raise HTTPException(status_code=422, detail="Couldn't read that photo. Try a clearer shot of your plate.")
     except anthropic.RateLimitError:
         raise HTTPException(status_code=503, detail="Plate scanner is busy. Try again in a minute.")
     except anthropic.BadRequestError as e:
@@ -246,7 +259,7 @@ async def _call_model(image_b64: str, media_type: str, menu_text: str, hall: str
 
 @router.post("/api/vision/plate", response_model=PlateResponse)
 async def analyze_plate(req: PlateRequest, request: Request) -> PlateResponse:
-    _limiter.check(request.client.host if request.client else "unknown")
+    _limiter.check(client_ip(request))
 
     if req.dining not in DINING_FILES:
         raise HTTPException(status_code=400, detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}")
@@ -254,7 +267,10 @@ async def analyze_plate(req: PlateRequest, request: Request) -> PlateResponse:
     image_b64 = _decode_image(req)
 
     target_date = req.date or _today_mt()
-    menu_data = load_menu(req.dining)
+    try:
+        menu_data = await asyncio.to_thread(load_menu, req.dining)
+    except Exception:
+        raise HTTPException(status_code=500, detail="Failed to load menu data")
     day_menu = next((m for m in menu_data["menus"] if m["date"] == target_date), None)
     if not day_menu or not day_menu.get("categories"):
         raise HTTPException(status_code=404, detail=f"No menu for {menu_data['dining_location']} on {target_date}.")
