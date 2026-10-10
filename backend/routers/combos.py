@@ -34,6 +34,11 @@ def _check_rate_limit(client_ip: str) -> None:
     _combo_limiter.check(client_ip)
 
 
+_COMBOS_UNAVAILABLE = (
+    "Combo suggestions aren't available right now. The full menu is still in the Menu tab."
+)
+
+
 def ensure_open(dining: str) -> None:
     """404 with a clear reason for halls that are temporarily closed."""
     if dining in CLOSED_HALLS:
@@ -564,8 +569,19 @@ async def generate_combos(
                 goals_section=goals_section,
             ),
         )
+    # Never show provider error text to students; log it for us instead.
+    except (anthropic.AuthenticationError, anthropic.PermissionDeniedError) as exc:
+        print(f"[COMBOS] Anthropic auth failed, check ANTHROPIC_API_KEY: {exc}", file=sys.stderr)
+        raise HTTPException(status_code=503, detail=_COMBOS_UNAVAILABLE)
+    except anthropic.RateLimitError as exc:
+        print(f"[COMBOS] Anthropic rate limited: {exc}", file=sys.stderr)
+        raise HTTPException(status_code=503, detail="Combo suggestions are busy right now. Try again in a minute.")
+    except (anthropic.APIStatusError, anthropic.APIConnectionError) as exc:
+        print(f"[COMBOS] Anthropic API error: {exc}", file=sys.stderr)
+        raise HTTPException(status_code=502, detail=_COMBOS_UNAVAILABLE)
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"Combo generation failed: {exc}")
+        print(f"[COMBOS] generation failed: {exc!r}", file=sys.stderr)
+        raise HTTPException(status_code=500, detail=_COMBOS_UNAVAILABLE)
 
     # ── Build lookup for calorie / tag enrichment ─────────────────────────
     all_items = breakfast_items + lunch_items + dinner_items + dessert_items
