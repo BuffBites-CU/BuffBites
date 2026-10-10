@@ -65,7 +65,6 @@ build/
 dump.rdb
 
 # Docker
-.dockerignore
 docker-compose.override.yml
 
 # Misc
