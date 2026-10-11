@@ -2,15 +2,15 @@
 """Sanity-check the scraped menu JSON after a scrape run.
 
 Prints one row per dining hall (items today, last scraped date) and writes the
-same table to the GitHub Actions job summary. Exits 1 if a hall that should be
-serving has no menu for today (Mountain Time), so a broken scrape is visible in
-the Actions tab instead of surfacing as an empty screen in the app.
+same table to the GitHub Actions job summary. Exits 1 only when a scrape looks
+broken (no menus in the coming week, or data about to run out), so a hall that
+is simply closed today, like Libby on weekends, doesn't turn the run red.
 """
 
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -23,33 +23,60 @@ HALLS = {
     "sewall":         "sewall_dining_menus.json",
     "village_center": "village_center_dining_menus.json",
 }
-# SEEC is weekday-only and The Alley's menu is intermittently unpublished, so
-# they warn instead of failing the run.
-OPTIONAL = {"seec", "alley"}
+# Halls that are closed for a long stretch (The Alley: remodel until Aug 2028).
+# Reported, never failed.
+CLOSED = {"alley"}
+
+# A hall that is merely closed today (Libby and Sewall on weekends, SEEC on
+# weekends) is normal. A broken scrape looks different: nothing at all in the
+# coming week, or data that runs out within a few days.
+LOOKAHEAD_DAYS = 7
+MIN_DAYS_AHEAD = 3
 
 
-def main() -> int:
-    today = datetime.now(ZoneInfo("America/Denver")).date().isoformat()
+def check(halls: dict[str, list[dict]], today: date) -> tuple[list[tuple], list[str]]:
+    """Return (table rows, failed hall keys) for {hall: menus}."""
     rows, failed = [], []
-    for key, fname in HALLS.items():
-        path = DATA_DIR / fname
-        try:
-            menus = json.loads(path.read_text(encoding="utf-8")).get("menus", [])
-        except (OSError, ValueError) as exc:
-            rows.append((key, "—", "—", f"unreadable: {exc}"))
-            failed.append(key)
-            continue
+    week = {(today + timedelta(days=i)).isoformat() for i in range(LOOKAHEAD_DAYS)}
+    min_last = (today + timedelta(days=MIN_DAYS_AHEAD)).isoformat()
+    for key, menus in halls.items():
         by_date = {
             m["date"]: sum(len(v) for v in (m.get("categories") or {}).values())
             for m in menus
         }
-        n_today = by_date.get(today, 0)
+        n_today = by_date.get(today.isoformat(), 0)
+        n_week = sum(n for d, n in by_date.items() if d in week)
         last = max((d for d, n in by_date.items() if n), default="—")
-        ok = n_today > 0 or key in OPTIONAL
-        status = "ok" if n_today else ("warn: empty today" if ok else "FAIL: empty today")
-        rows.append((key, str(n_today), last, status))
-        if not ok:
+
+        if key in CLOSED:
+            status = "closed (expected)"
+        elif n_week == 0:
+            status = f"FAIL: no menus in the next {LOOKAHEAD_DAYS} days"
+        elif last < min_last:
+            status = f"FAIL: data ends {last}"
+        elif n_today == 0:
+            status = "closed today"
+        else:
+            status = "ok"
+        if status.startswith("FAIL"):
             failed.append(key)
+        rows.append((key, str(n_today), last, status))
+    return rows, failed
+
+
+def main() -> int:
+    today = datetime.now(ZoneInfo("America/Denver")).date()
+    halls: dict[str, list[dict]] = {}
+    unreadable: list[tuple] = []
+    for key, fname in HALLS.items():
+        try:
+            halls[key] = json.loads((DATA_DIR / fname).read_text(encoding="utf-8")).get("menus", [])
+        except (OSError, ValueError) as exc:
+            unreadable.append((key, "—", "—", f"FAIL: unreadable: {exc}"))
+
+    rows, failed = check(halls, today)
+    rows += unreadable
+    failed += [r[0] for r in unreadable]
 
     table = [f"### Menu check — {today} (MT)", "", "| Hall | Items today | Last day with items | Status |", "|---|---|---|---|"]
     table += [f"| {r[0]} | {r[1]} | {r[2]} | {r[3]} |" for r in rows]
