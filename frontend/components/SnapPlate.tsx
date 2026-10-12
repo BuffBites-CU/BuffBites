@@ -8,6 +8,7 @@ import { useToast } from '@/context/ToastContext'
 import { useAuth } from '@/context/AuthContext'
 import { fuelScore } from '@/lib/nutrition'
 import { XMarkIcon } from './icons'
+import Doodle from './Doodle'
 import { DINING_HALL_LABELS } from '@/types'
 import type { DiningHall, MealPeriod, PlateAnalysis, PlateItem } from '@/types'
 
@@ -168,11 +169,11 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
   const sheet = (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-brand-black/50" role="dialog" aria-modal="true" aria-label="Plate scan">
       <div
-        className="w-full max-w-md max-h-[90vh] overflow-y-auto overscroll-contain bg-surface rounded-t-3xl border-t-2 border-x-2 border-brand-black p-4 animate-page-in"
+        className="w-full max-w-md max-h-[90vh] overflow-y-auto overscroll-contain bg-surface rounded-t-[28px] shadow-soft-lg p-4 animate-page-in"
         style={{ paddingBottom: 'calc(2rem + env(safe-area-inset-bottom))' }}
       >
         <div className="flex items-center justify-between mb-3">
-          <h2 className="font-brush text-2xl text-brand-black leading-none">Your plate</h2>
+          <h2 className="text-[28px] text-brand-black leading-none">Your plate</h2>
           <button onClick={close} aria-label="Close" className="w-10 h-10 -mr-2 flex items-center justify-center rounded-full hover:bg-surface-overlay">
             <XMarkIcon width={20} height={20} />
           </button>
@@ -180,7 +181,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
 
         {preview && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={preview} alt="Your plate" className="w-full h-44 object-cover rounded-2xl border-2 border-brand-black mb-3" />
+          <img src={preview} alt="Your plate" className="w-full h-44 object-cover rounded-3xl mb-3" />
         )}
 
         {phase === 'reading' && (
@@ -206,9 +207,9 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
 
         {phase === 'result' && result?.is_food && (
           <>
-            <div className="rounded-2xl bg-brand border-2 border-brand-black shadow-sticker p-3 mb-3" aria-live="polite">
+            <div className="card p-4 mb-3" aria-live="polite">
               <div className="flex items-baseline justify-between">
-                <span className="font-display text-2xl font-bold text-brand-black">{totals.calories} cal</span>
+                <span className="font-display text-[30px] leading-none text-brand-black">{totals.calories} cal</span>
                 {fuel && <span className="text-sm font-display font-bold text-brand-black">{fuel.emoji} {fuel.label} · {fuel.score}</span>}
               </div>
               <p className="text-[13px] text-brand-black mt-0.5">
@@ -224,7 +225,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
 
             <ul className="space-y-2 mb-3">
               {rows.map((row) => (
-                <li key={row.id} className="bg-surface-card rounded-xl border border-surface-warm px-3 py-2">
+                <li key={row.id} className="card px-3 py-2.5 animate-pop-in">
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0 pt-1">
                       <p className="text-[13px] font-semibold text-brand-black truncate">
@@ -252,7 +253,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
                           aria-pressed={selected}
                           onClick={() => setRows((prev) => prev.map((r) => (r.id === row.id ? { ...r, portion: p } : r)))}
                           className={`min-w-[44px] h-8 px-2 rounded-full text-[12px] font-semibold ${
-                            selected ? 'bg-brand-black text-brand' : 'bg-surface-overlay text-brand-black'
+                            selected ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-brand-black'
                           }`}
                         >
                           {p}×
@@ -266,7 +267,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
                         aria-label={`${row.item.portion}× (estimate)`}
                         onClick={() => setRows((prev) => prev.map((r) => (r.id === row.id ? { ...r, portion: r.item.portion } : r)))}
                         className={`min-w-[44px] h-8 px-2 rounded-full text-[12px] font-semibold ${
-                          Math.abs(row.portion - row.item.portion) < 0.01 ? 'bg-brand-black text-brand' : 'bg-surface-overlay text-brand-black'
+                          Math.abs(row.portion - row.item.portion) < 0.01 ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-brand-black'
                         }`}
                       >
                         {row.item.portion}×
@@ -287,7 +288,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
             <button
               onClick={handleLog}
               disabled={logState !== 'idle' || rows.length === 0 || !firebaseUid}
-              className="w-full py-3 rounded-2xl bg-brand-black text-brand font-display font-bold disabled:opacity-60"
+              className="w-full py-3.5 rounded-2xl bg-brand text-brand-black font-display text-[19px] card-press disabled:opacity-60"
             >
               {logState === 'logged' ? '✓ Logged' : logState === 'logging' ? 'Logging…' : `Log ${period.toLowerCase()} · ${totals.calories} cal`}
             </button>
@@ -302,16 +303,23 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
 
   return (
     <>
-      <button
-        onClick={pickPhoto}
-        className="w-full mb-5 flex items-center gap-3 rounded-2xl bg-brand-black text-white px-4 py-3 border-2 border-brand-black shadow-sticker active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-transform"
-      >
-        <span className="text-2xl" aria-hidden>📸</span>
-        <span className="flex-1 text-left">
-          <span className="block font-display font-bold text-[15px] text-brand">Snap your plate</span>
-          <span className="block text-[12px] text-surface-warm/90">AI reads your tray and logs the macros from today&apos;s menu</span>
-        </span>
-      </button>
+      {/* Dark hero banner (the reference's "Compose your imagery with AI" card) */}
+      <div className="relative mb-4 overflow-hidden rounded-3xl bg-brand-black px-4 py-5 shadow-soft-lg">
+        <div className="flex items-center gap-3">
+          <div className="relative flex-shrink-0 w-[104px] h-[104px] rounded-2xl bg-white/5 flex items-center justify-center">
+            <Doodle name="scan" size={84} className="text-white animate-float" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="font-display text-[22px] leading-tight text-white">Snap your plate,<br />we count the macros</p>
+            <button
+              onClick={pickPhoto}
+              className="mt-3 rounded-xl bg-brand px-4 py-2 font-display text-[17px] text-brand-black card-press"
+            >
+              Scan now
+            </button>
+          </div>
+        </div>
+      </div>
       {/* No `capture` attribute: phones then offer both Camera and Photo Library. */}
       <input
         ref={inputRef}

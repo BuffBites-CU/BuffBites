@@ -1,5 +1,6 @@
 'use client'
 
+import Avatar from '@/components/Avatar'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -141,8 +142,8 @@ function StatPill({ icon, value, label }: { icon: string; value: string | number
   return (
     <div className="flex-1 flex flex-col items-center gap-0.5 py-3">
       <span className="text-xl leading-none">{icon}</span>
-      <span className="font-display font-bold text-brand-black text-lg leading-none">{value}</span>
-      <span className="text-[10px] text-muted uppercase tracking-wider font-display">{label}</span>
+      <span className="font-display text-brand-black text-[22px] leading-none">{value}</span>
+      <span className="text-[11px] text-muted">{label}</span>
     </div>
   )
 }
@@ -522,41 +523,32 @@ export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-surface pb-28">
 
-      {/* ── Hero header card ───────────────────────────────────── */}
-      <div className="bg-brand-black px-4 pt-14 pb-6">
+      {/* ── Hero header ─────────────────────────────────────────── */}
+      <div className="px-4 pt-12 pb-5">
         <div className="max-w-md mx-auto">
           <div className="flex items-center gap-4">
-            {/* Avatar */}
-            <div className="relative w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-brand/40 flex-shrink-0">
-              {firebaseUser?.photoURL ? (
+            {firebaseUser?.photoURL ? (
+              <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-soft">
                 <Image src={firebaseUser.photoURL} alt="Profile" fill sizes="64px" className="object-cover" />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-brand/20">
-                  <span className="text-2xl font-display font-bold text-brand-pale">{profile.username[0]?.toUpperCase()}</span>
-                </div>
-              )}
-            </div>
+              </div>
+            ) : (
+              <Avatar name={profile.username} size={64} className="shadow-soft" />
+            )}
 
-            {/* Name + karma */}
             <div className="flex-1 min-w-0">
-              <h1 className="font-display font-bold text-white text-xl tracking-tight leading-none">@{profile.username}</h1>
+              <h1 className="text-[30px] text-brand-black leading-none truncate">@{profile.username}</h1>
               <div className="flex items-center gap-2 mt-1.5 flex-wrap">
-                <span className="flex items-center gap-1 text-xs text-brand font-display font-semibold">
-                  <StarIcon width={12} height={12} className="fill-brand" />
+                <span className="flex items-center gap-1 text-[13px] text-brand-deep font-semibold">
+                  <StarIcon width={13} height={13} className="fill-brand text-brand" />
                   {profile.karma} karma
                 </span>
-                <span className="text-[10px] text-brand-stone">· {karmaLabel(profile.karma)}</span>
-                {streak > 0 && (
-                  <span className="text-[10px] font-display font-semibold text-amber-400 bg-amber-400/15 rounded-full px-2 py-0.5">
-                    🔥 {streak}-day streak
-                  </span>
-                )}
+                <span className="text-[12px] text-muted">· {karmaLabel(profile.karma)}</span>
+                {streak > 0 && <span className="pill-gold !text-[13px] !py-0.5">🔥 {streak}-day streak</span>}
               </div>
             </div>
           </div>
 
-          {/* Stats row */}
-          <div className="mt-5 bg-white/8 rounded-2xl divide-x divide-white/10 flex overflow-hidden">
+          <div className="mt-5 card flex divide-x divide-surface-overlay overflow-hidden">
             <StatPill icon="🍽" value={totalMeals} label="Meals" />
             <StatPill icon="🔥" value={`${thisWeekCal}`} label="Cal/wk" />
             <StatPill icon="📮" value={myCombos.length} label="Shared" />
@@ -566,14 +558,14 @@ export default function ProfilePage() {
       </div>
 
       {/* ── Tab bar ────────────────────────────────────────────── */}
-      <div className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-overlay px-4 py-2.5">
+      <div className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md px-4 py-2.5">
         <div className="max-w-md mx-auto flex gap-2">
           {TABS.map(({ key, label }) => (
             <button
               key={key}
               onClick={() => selectTab(key)}
               className={`flex-1 px-3 py-1.5 rounded-full text-xs font-display font-semibold transition-all ${
-                activeTab === key ? 'bg-brand-black text-brand' : 'bg-surface-overlay text-muted'
+                activeTab === key ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-muted'
               }`}
             >
               {label}
@@ -654,7 +646,7 @@ export default function ProfilePage() {
                           {(profile.nutrition_goals.priority_nutrients ?? []).map((n) => {
                             const opt = PRIORITY_NUTRIENTS.find((o) => o.key === n)
                             return (
-                              <span key={n} className="flex items-center gap-1 bg-brand-black text-brand rounded-full px-2.5 py-1 text-xs font-medium">
+                              <span key={n} className="flex items-center gap-1 bg-brand text-brand-black rounded-full px-2.5 py-1 text-xs font-medium">
                                 <span>{opt?.icon}</span>{opt?.label ?? n}
                               </span>
                             )
@@ -914,12 +906,12 @@ export default function ProfilePage() {
                     <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Default Dining Hall</label>
                     <div className="flex flex-wrap gap-2">
                       <button onClick={() => setDraft((d) => ({ ...d, default_dining_hall: '' }))}
-                        className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === '' ? 'bg-brand-black text-brand' : 'bg-surface-overlay text-muted'}`}>
+                        className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === '' ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-muted'}`}>
                         None
                       </button>
                       {DINING_HALLS.map((hall) => (
                         <button key={hall} onClick={() => setDraft((d) => ({ ...d, default_dining_hall: hall }))}
-                          className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === hall ? 'bg-brand-black text-brand' : 'bg-surface-overlay text-muted'}`}>
+                          className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === hall ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-muted'}`}>
                           {DINING_HALL_LABELS[hall]}
                         </button>
                       ))}
@@ -950,7 +942,7 @@ export default function ProfilePage() {
                             onClick={() => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, dietary_focus: d.nutrition_goals.dietary_focus === key ? '' : key } }))}
                             className={`flex flex-col items-center gap-1 p-2.5 rounded-xl border text-center transition-all ${
                               draft.nutrition_goals.dietary_focus === key
-                                ? 'bg-brand-black border-brand-black text-brand'
+                                ? 'bg-brand border-brand text-brand-black'
                                 : 'bg-surface-overlay border-transparent text-muted hover:bg-surface-warm'
                             }`}>
                             <span className="text-lg leading-none">{icon}</span>
@@ -986,7 +978,7 @@ export default function ProfilePage() {
                                 return { ...d, nutrition_goals: { ...d.nutrition_goals, priority_nutrients: selected ? prev.filter((n) => n !== key) : [...prev, key] } }
                               })}
                               className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
-                                selected ? 'bg-brand-black text-brand' : 'bg-surface-overlay text-muted'
+                                selected ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-muted'
                               }`}>
                               <span>{icon}</span>{label}
                             </button>
@@ -1012,7 +1004,7 @@ export default function ProfilePage() {
                 <div className="space-y-3">
                   <button
                     onClick={enterEdit}
-                    className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-brand-black text-brand text-sm font-display font-semibold hover:opacity-90 active:scale-[0.99] transition-all"
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-brand text-brand-black text-sm font-display font-semibold hover:opacity-90 active:scale-[0.99] transition-all"
                   >
                     <PencilIcon width={14} height={14} /> Edit Profile
                   </button>

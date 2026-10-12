@@ -3,21 +3,43 @@
 @tailwind utilities;
 
 /* ── Palette ──────────────────────────────────────────────────
-   Pulled from the BuffBites logo (#EE8D00 orange + cream + ink) with CU
-   gold as a secondary accent. Edit these to retheme the whole app. */
+   Minimal peach + coral with black line-art. Edit these to retheme the app. */
 :root {
-  --brand:           238 141 0;    /* #EE8D00 */
-  --brand-deep:      150 78 0;     /* #964E00 — 5.9:1 on surface, ≥4.75:1 on brand/15–25 tints */
-  --brand-pale:      255 222 176;  /* #FFDEB0 */
-  --ink:             26 20 16;     /* #1A1410 */
-  --stone:           196 184 164;
-  --cu-gold:         207 184 124;  /* #CFB87C */
+  --brand:           242 128 74;   /* #F2804A coral — fills, buttons (ink text on it: 6.0:1) */
+  --brand-deep:      168 72 24;    /* #A84818 — coral text on light bg: 5.8:1 white, 5.0:1 overlay */
+  --brand-pale:      255 224 208;  /* #FFE0D0 */
+  --ink:             38 33 31;     /* #26211F */
+  --stone:           214 200 192;
+  --cu-gold:         248 203 79;   /* #F8CB4F — yellow pill badges */
   --hot:             255 77 46;    /* #FF4D2E */
-  --surface:         255 248 238;  /* #FFF8EE */
+  --surface:         255 243 237;  /* #FFF3ED peach page */
   --surface-card:    255 255 255;
-  --surface-overlay: 253 236 212;  /* #FDECD4 */
-  --surface-warm:    245 222 190;
-  --muted:           122 104 86;   /* #7A6856 — 4.9:1 on surface */
+  --surface-overlay: 255 233 222;  /* #FFE9DE */
+  --surface-warm:    250 216 200;
+  --muted:           115 100 94;   /* #73645E — 5.2:1 on surface, 5.7:1 on white */
+  --shadow:          214 104 60;   /* warm shadow tint */
+}
+
+@layer base {
+  body {
+    background:
+      radial-gradient(120% 60% at 50% 0%, #FFE2D2 0%, transparent 60%),
+      rgb(var(--surface));
+    background-attachment: fixed;
+  }
+}
+
+/* White card on peach: the one surface style used across the app. */
+@layer components {
+  .card {
+    @apply bg-surface-card rounded-3xl shadow-soft;
+  }
+  .card-press {
+    @apply transition-transform duration-150 active:scale-[0.97];
+  }
+  .pill-gold {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-brand-gold px-3 py-1 font-display text-[15px] text-brand-black;
+  }
 }
 
 /* ── Scrollbar ───────────────────────────────────────────────── */
@@ -84,7 +106,7 @@
 /* ── Typography defaults ─────────────────────────────────────── */
 @layer base {
   h1, h2, h3 {
-    font-family: var(--font-syne), ui-sans-serif, sans-serif;
+    font-family: var(--font-hand), ui-rounded, sans-serif;
     letter-spacing: -0.01em;
   }
 
@@ -96,15 +118,43 @@
   }
 }
 
-/* ── Poster texture: subtle halftone dots behind hero blocks ─── */
-.bg-halftone {
-  background-image: radial-gradient(rgb(var(--ink) / 0.07) 1px, transparent 1.2px);
-  background-size: 10px 10px;
+/* ── Motion ─────────────────────────────────────────────────── */
+/* Line-art "draws itself": give paths pathLength="1" and the .doodle-draw class. */
+@keyframes draw {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+.doodle-draw path, .doodle-draw circle, .doodle-draw ellipse, .doodle-draw line, .doodle-draw polyline, .doodle-draw rect {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
-/* ── Sticker wiggle for trending badges ─────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+.animate-float { animation: float 3.2s ease-in-out infinite; }
+
+@keyframes pop-in {
+  0%   { opacity: 0; transform: scale(0.92) translateY(6px); }
+  100% { opacity: 1; transform: none; }
+}
+.animate-pop-in { animation: pop-in 0.35s cubic-bezier(0.34, 1.4, 0.64, 1) both; }
+
 @keyframes wiggle {
   0%, 100% { transform: rotate(-3deg); }
   50%      { transform: rotate(3deg); }
 }
 .animate-wiggle { animation: wiggle 1.8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .doodle-draw path, .doodle-draw circle, .doodle-draw ellipse, .doodle-draw line, .doodle-draw polyline, .doodle-draw rect {
+    stroke-dashoffset: 0;
+  }
+}

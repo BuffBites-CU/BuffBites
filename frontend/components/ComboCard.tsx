@@ -4,6 +4,7 @@ import { ClockIcon, ChevronUpIcon } from './icons'
 import type { ComboTag } from '@/types'
 import { fuelScore, macroSplit } from '@/lib/nutrition'
 import { parseApiDate } from '@/lib/date'
+import Doodle, { doodleFor } from './Doodle'
 
 const TAG_STYLES: Record<string, string> = {
   vegan: 'bg-emerald-100 text-emerald-800',
@@ -113,15 +114,18 @@ export default function ComboCard({
           onClick()
         }
       }}
-      className="w-full text-left bg-surface-card rounded-2xl border-2 border-brand-black shadow-sticker p-4 transition-transform duration-100 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none cursor-pointer"
+      className="card card-press w-full text-left p-4 cursor-pointer"
     >
-      <div className="flex items-center gap-2 mb-1 min-w-0">
+      <div className="flex items-center gap-3 mb-1 min-w-0">
+        <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-surface-overlay/70 flex items-center justify-center text-brand-black">
+          <Doodle name={doodleFor(title, ...(dishes ?? []).map((d) => d.name), ...tags)} size={38} />
+        </div>
         {rank !== undefined && (
           <span className="flex-shrink-0 font-display text-lg font-bold text-brand-black w-7 text-center">
             {rank}
           </span>
         )}
-        <h3 className="font-display font-semibold text-brand-black text-[14px] leading-snug line-clamp-1 flex-1">
+        <h3 className="font-display text-brand-black text-[20px] leading-tight line-clamp-2 flex-1">
           {title}
         </h3>
         {onFavorite !== undefined && (

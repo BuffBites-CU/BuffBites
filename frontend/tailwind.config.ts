@@ -31,9 +31,11 @@ const config: Config = {
         muted: 'rgb(var(--muted) / <alpha-value>)',
       },
       fontFamily: {
-        sans:    ['var(--font-dm-sans)',  'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['var(--font-syne)',     'ui-sans-serif', 'system-ui', 'sans-serif'],
-        brush:   ['var(--font-brush)',    'cursive'],
+        sans:    ['var(--font-outfit)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // Hand-drawn face. `display` and `brush` both map to it so every
+        // heading, label and button shares one handwriting style.
+        display: ['var(--font-hand)',   'ui-rounded', 'system-ui', 'sans-serif'],
+        brush:   ['var(--font-hand)',   'ui-rounded', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         title:   ['1.375rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
@@ -50,7 +52,10 @@ const config: Config = {
         // Tailwind generates for colors.brand and render a solid orange halo.
         'glow':     '0 6px 20px rgb(var(--brand) / 0.35)',
         'glow-sm':  '0 2px 8px rgb(var(--brand) / 0.25)',
-        'sticker':  '3px 3px 0 rgb(var(--ink))',
+        // Minimal, soft, warm-tinted elevation for white cards on peach.
+        'soft':     '0 6px 20px rgb(var(--shadow) / 0.10), 0 1px 3px rgb(var(--shadow) / 0.06)',
+        'soft-lg':  '0 14px 36px rgb(var(--shadow) / 0.14), 0 2px 6px rgb(var(--shadow) / 0.06)',
+        'sticker':  '0 6px 20px rgb(var(--shadow) / 0.10), 0 1px 3px rgb(var(--shadow) / 0.06)',
       },
     },
   },

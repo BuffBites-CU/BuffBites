@@ -11,6 +11,8 @@ import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
 import MenuView from '@/components/MenuView'
 import TrendingRail from '@/components/TrendingRail'
+import Doodle from '@/components/Doodle'
+import Link from 'next/link'
 import SnapPlate from '@/components/SnapPlate'
 import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
@@ -18,7 +20,7 @@ import Image from 'next/image'
 import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
 import { publishCombo, getUserCombos } from '@/services/communityService'
 import { isoOffsetMST, isoToLocalNoon, currentMealPeriodMST } from '@/lib/date'
-import { CLOSED_HALLS, DINING_HALL_LABELS } from '@/types'
+import { CLOSED_HALLS } from '@/types'
 import type { Combo, CommunityCombo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals, DietaryPreference } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
@@ -231,90 +233,75 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-surface pb-24">
-      <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
-        <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
-          {/* Logo — brush wordmark echoes the hand-lettered logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-brand-black">
-              <Image src="/logoi.jpeg" alt="" width={32} height={32} className="object-cover w-full h-full" />
+    <div className="min-h-screen pb-28">
+      <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
+        <div className="max-w-md mx-auto flex items-center justify-between px-4 h-16">
+          {/* Logo + hand-drawn wordmark */}
+          <div className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-2xl overflow-hidden flex-shrink-0 shadow-soft">
+              <Image src="/logoi.jpeg" alt="" width={36} height={36} className="object-cover w-full h-full" />
             </div>
-            <span className="font-brush text-[24px] text-brand-black leading-none -rotate-2">
-              Buff Bites
-            </span>
+            <span className="font-display text-[26px] text-brand-black leading-none">Buff Bites</span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <button
               onClick={openInstallGuide}
               aria-label="How to add BuffBites to your home screen"
-              className="flex items-center gap-1 rounded-full bg-brand/15 text-brand-deep ring-1 ring-brand/30 px-2.5 py-1 hover:bg-brand/25 transition-colors"
+              className="pill-gold card-press"
             >
               <DevicePhoneMobileIcon width={15} height={15} />
-              <span className="text-[11px] font-semibold">Install</span>
-            </button>
-            <button
-              onClick={() => setShowDatePicker((v) => !v)}
-              className="flex items-center gap-1 text-xs font-medium text-muted bg-surface-overlay rounded-full px-3 py-1.5 hover:bg-surface-warm transition-colors"
-            >
-              {selectedDateObj.label === 'Today' ? 'Today' : `${selectedDateObj.label} ${selectedDateObj.day}`}
-              <svg className={`w-3 h-3 transition-transform ${showDatePicker ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
+              Add app
             </button>
             <button
               onClick={refetch}
               disabled={loading}
               aria-label="Refresh combos"
-              className="p-1.5 rounded-full text-muted hover:text-brand-black hover:bg-surface-overlay transition-colors disabled:opacity-40"
+              className="w-9 h-9 flex items-center justify-center rounded-full text-muted hover:text-brand-black hover:bg-surface-card transition-colors disabled:opacity-40"
             >
-              <ArrowPathIcon width={17} height={17} className={loading ? 'animate-spin' : ''} />
+              <ArrowPathIcon width={18} height={18} className={loading ? 'animate-spin' : ''} />
             </button>
           </div>
+        </div>
+
+        {/* Hall + day */}
+        <div className="max-w-md mx-auto px-4 pb-2 flex items-center gap-2">
+          <div className="flex-1 min-w-0">
+            <DiningSelector selected={selectedDining} onChange={setSelectedDining} />
+          </div>
+          <button
+            onClick={() => setShowDatePicker((v) => !v)}
+            aria-expanded={showDatePicker}
+            className="flex-shrink-0 flex items-center gap-1 font-display text-[15px] text-brand-black bg-surface-card shadow-soft rounded-full px-3.5 py-2 card-press"
+          >
+            {selectedDateObj.label === 'Today' ? 'Today' : `${selectedDateObj.label} ${selectedDateObj.day}`}
+            <svg className={`w-3 h-3 transition-transform ${showDatePicker ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
         </div>
 
         {showDatePicker && (
           <div className="max-w-md mx-auto px-4 pb-2 overflow-x-auto scrollbar-hide">
             <div className="flex gap-2 w-max">
-              {dateOptions.map((opt) => (
+              {dateOptions.map((opt, i) => (
                 <button
                   key={opt.iso}
                   onClick={() => { setSelectedDate(opt.iso); setShowDatePicker(false) }}
-                  className={`flex flex-col items-center px-3 py-1.5 rounded-xl text-xs font-display font-semibold transition-all flex-shrink-0 ${
+                  className={`flex flex-col items-center px-3.5 py-2 rounded-2xl font-display transition-all flex-shrink-0 animate-pop-in ${
                     opt.iso === selectedDate
-                      ? 'bg-brand text-brand-black shadow-glow-sm'
-                      : 'bg-surface-overlay text-muted hover:bg-surface-warm'
+                      ? 'bg-brand text-brand-black'
+                      : 'bg-surface-card text-muted shadow-soft'
                   }`}
+                  style={{ animationDelay: `${i * 30}ms` }}
                 >
-                  <span className="text-[10px] uppercase tracking-wide">{opt.label}</span>
-                  <span className="text-base font-bold leading-none mt-0.5">{opt.day}</span>
+                  <span className="text-[13px] leading-none">{opt.label}</span>
+                  <span className="text-xl leading-none mt-1">{opt.day}</span>
                 </button>
               ))}
             </div>
           </div>
         )}
-
-        {/* Dining hall picker + Combos/Menu toggle share a row to cut down on stacked rows */}
-        <div className="max-w-md mx-auto px-4 pb-2 pt-1.5 flex items-center gap-2">
-          <div className="flex-1 min-w-0">
-            <DiningSelector selected={selectedDining} onChange={setSelectedDining} />
-          </div>
-          <div className="flex-shrink-0 flex gap-1 bg-surface-overlay rounded-full p-0.5">
-            {(['combos', 'menu'] as HomeView[]).map((v) => (
-              <button
-                key={v}
-                onClick={() => setView(v)}
-                className={`px-3 py-1.5 rounded-full text-[11px] font-display font-semibold tracking-wide transition-all whitespace-nowrap ${
-                  view === v
-                    ? 'bg-brand-black text-brand'
-                    : 'text-muted hover:text-brand-black'
-                }`}
-              >
-                {v === 'combos' ? '✦ Combos' : 'Menu'}
-              </button>
-            ))}
-          </div>
-        </div>
 
         <div className="max-w-md mx-auto">
           <MealPeriodTabs
@@ -326,13 +313,11 @@ export default function HomePage() {
         </div>
       </header>
 
-      <div className="max-w-md mx-auto px-4 pt-4 animate-page-in">
-        {view === 'menu' && (
-          <MenuView dining={selectedDining} date={selectedDate} period={selectedPeriod} />
-        )}
+      <div className="max-w-md mx-auto px-4 pt-3 animate-page-in">
+        <p className="text-sm text-muted mb-3">
+          Hey{username ? ` ${username}` : ''} 👋 {PERIOD_LINES[selectedPeriod]}
+        </p>
 
-        {view === 'combos' && <>
-        <Greeting name={username} period={selectedPeriod} hall={selectedDining} />
         <SnapPlate
           dining={selectedDining}
           date={dateOptions[0].iso /* a plate photo is always today's meal */}
@@ -340,10 +325,35 @@ export default function HomePage() {
           firebaseUid={firebaseUid}
           calorieTarget={calorieTarget}
         />
+
+        {/* Two big tiles, like Gallery / Camera in the reference */}
+        <div className="grid grid-cols-2 gap-3 mb-6" role="tablist" aria-label="View">
+          {([
+            { v: 'combos', label: 'AI combos', doodle: 'bowl' },
+            { v: 'menu', label: 'Full menu', doodle: 'plate' },
+          ] as const).map(({ v, label, doodle }) => (
+            <button
+              key={v}
+              role="tab"
+              aria-selected={view === v}
+              onClick={() => setView(v)}
+              className={`card card-press flex items-center gap-2.5 px-4 py-3.5 text-left ring-2 transition-colors ${
+                view === v ? 'ring-brand' : 'ring-transparent'
+              }`}
+            >
+              <Doodle name={doodle} size={30} draw={false} className="text-brand-black flex-shrink-0" />
+              <span className="font-display text-[19px] text-brand-black leading-none">{label}</span>
+            </button>
+          ))}
+        </div>
+
+        {view === 'menu' && (
+          <MenuView dining={selectedDining} date={selectedDate} period={selectedPeriod} />
+        )}
+
+        {view === 'combos' && <>
         <TrendingRail onOpen={setActiveTrend} />
-        <h2 className="font-brush text-2xl text-brand-black leading-none mb-3">
-          Your {selectedPeriod.toLowerCase()} picks <span aria-hidden>✦</span>
-        </h2>
+        <SectionHeader title={`Your ${selectedPeriod.toLowerCase()} picks`} />
         {loading && <ComboSkeletons />}
 
         {!loading && error && (
@@ -465,19 +475,15 @@ const PERIOD_LINES: Record<MealPeriod, string> = {
   Dinner: 'Dinner plans, sorted.',
 }
 
-function Greeting({ name, period, hall }: { name: string | null; period: MealPeriod; hall: DiningHall }) {
+function SectionHeader({ title, href, linkLabel = 'See all' }: { title: string; href?: string; linkLabel?: string }) {
   return (
-    <div className="relative mb-5 rounded-3xl bg-brand border-2 border-brand-black shadow-sticker px-4 py-4 overflow-hidden">
-      <div className="absolute inset-0 bg-halftone" aria-hidden />
-      <div className="relative">
-        <p className="text-[11px] font-display font-bold uppercase tracking-widest text-brand-black/80">
-          {DINING_HALL_LABELS[hall]} · {period}
-        </p>
-        <p className="font-brush text-[28px] leading-tight text-brand-black mt-0.5">
-          Hey{name ? ` ${name}` : ''}, what&apos;s the bite?
-        </p>
-        <p className="text-sm text-brand-black/80 mt-0.5">{PERIOD_LINES[period]}</p>
-      </div>
+    <div className="flex items-baseline justify-between mb-3">
+      <h2 className="text-[24px] text-brand-black leading-none">{title}</h2>
+      {href && (
+        <Link href={href} className="font-display text-[17px] text-brand-deep">
+          {linkLabel}
+        </Link>
+      )}
     </div>
   )
 }

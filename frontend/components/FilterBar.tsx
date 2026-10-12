@@ -42,15 +42,15 @@ function handleAllClick(props: Props) {
   else props.onChangeMulti([])
 }
 
-const PILL_ACTIVE = 'border border-brand text-brand-deep bg-white'
-const PILL_INACTIVE = 'border border-transparent bg-gray-100 text-muted hover:bg-gray-200'
+const PILL_ACTIVE = 'bg-brand text-brand-black'
+const PILL_INACTIVE = 'bg-surface-card text-muted shadow-soft hover:text-brand-black'
 
 export default function FilterBar(props: Props) {
   return (
     <div className="flex gap-2 overflow-x-auto scrollbar-hide px-4 py-2">
       <button
         onClick={() => handleAllClick(props)}
-        className={`flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+        className={`flex-shrink-0 rounded-full px-4 py-1.5 font-display text-[16px] transition-colors ${
           isAllActive(props) ? PILL_ACTIVE : PILL_INACTIVE
         }`}
       >
@@ -60,7 +60,7 @@ export default function FilterBar(props: Props) {
         <button
           key={hall}
           onClick={() => handleClick(props, hall)}
-          className={`flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+          className={`flex-shrink-0 rounded-full px-4 py-1.5 font-display text-[16px] transition-colors ${
             isActive(props, hall) ? PILL_ACTIVE : PILL_INACTIVE
           }`}
         >

@@ -5,12 +5,13 @@ import { useAuth } from '@/context/AuthContext'
 import Image from 'next/image'
 import { DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
+import Doodle from '@/components/Doodle'
 
 const FEATURES = [
-  { icon: '✦', label: 'AI-crafted combos' },
-  { icon: '◈', label: 'All 5 dining halls' },
-  { icon: '🔥', label: 'Trending student combos' },
-  { icon: '◇', label: 'Fuel Score + macros' },
+  { icon: '✨', label: 'AI combos' },
+  { icon: '📸', label: 'Snap your plate' },
+  { icon: '🔥', label: 'Trending picks' },
+  { icon: '💪', label: 'Fuel Score' },
 ]
 
 export default function LandingPage() {
@@ -40,105 +41,69 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-surface relative overflow-hidden flex flex-col">
+    <div className="min-h-screen relative overflow-hidden flex flex-col">
 
-      {/* ── Top nav: add-to-home-screen guide ───────────────────── */}
+      {/* ── Top: add-to-home-screen guide ─────────────────────── */}
       <div className="absolute top-0 left-0 right-0 z-20 flex justify-end px-4 pt-4">
-        <button
-          onClick={openInstallGuide}
-          className="flex items-center gap-1.5 rounded-full bg-brand border border-brand px-3.5 py-1.5 text-xs font-semibold text-brand-black shadow-glow hover:opacity-90 active:scale-[0.97] transition-all animate-gold-pulse"
-        >
-          <DevicePhoneMobileIcon width={14} height={14} />
+        <button onClick={openInstallGuide} className="pill-gold card-press shadow-soft">
+          <DevicePhoneMobileIcon width={15} height={15} />
           Add to Home Screen
         </button>
       </div>
 
-      {/* ── Background: warm gradient ───────────────────────────── */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 80%, #FFD9A3 0%, transparent 70%)',
-        }}
-      />
+      <div className="flex-1 flex flex-col items-center justify-center px-6 pt-20 pb-6 relative z-10">
+        {/* Logo */}
+        <div className="w-24 h-24 rounded-[28px] overflow-hidden shadow-soft-lg animate-pop-in">
+          <Image src="/logoi.jpeg" alt="BuffBites logo" width={96} height={96} className="object-cover w-full h-full" priority />
+        </div>
 
-      {/* ── Mountain ridge silhouette ───────────────────────────── */}
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none select-none">
-        <svg
-          viewBox="0 0 390 160"
-          preserveAspectRatio="xMidYMax slice"
-          className="w-full h-44"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* Far range — lightest */}
-          <path
-            d="M0 160 L0 105 L38 72 L65 88 L95 52 L122 74 L148 45 L178 68 L200 50 L222 65 L250 38 L278 62 L305 44 L332 68 L355 50 L390 72 L390 160Z"
-            fill="#FDD39A"
-          />
-          {/* Mid range */}
-          <path
-            d="M0 160 L0 120 L55 88 L85 102 L115 78 L145 94 L168 72 L195 88 L215 74 L242 90 L268 68 L295 84 L318 66 L345 82 L365 70 L390 86 L390 160Z"
-            fill="#F7AE48"
-          />
-          {/* Near ridge — darkest */}
-          <path
-            d="M0 160 L0 135 L45 112 L75 124 L100 108 L130 118 L155 100 L180 114 L200 104 L225 116 L250 98 L278 112 L302 96 L330 110 L355 98 L390 112 L390 160Z"
-            fill="#EE8D00"
-          />
-        </svg>
-      </div>
+        <h1 className="mt-6 text-[46px] leading-none text-brand-black text-center">Eat smarter, Buffs.</h1>
+        <p className="mt-3 text-[15px] text-muted text-center leading-relaxed">
+          AI meal combos from today&apos;s menus<br />at every CU Boulder dining hall
+        </p>
 
-      {/* ── Main content ────────────────────────────────────────── */}
-      <div className="flex-1 flex flex-col items-center justify-center px-6 pt-16 pb-8 relative z-10">
-
-        {/* Logo block */}
-        <div className="flex flex-col items-center gap-5 mb-10">
-          {/* Logo */}
-          <div className="w-28 h-28 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-brand-black"
-            style={{ boxShadow: '0 8px 28px rgba(238,141,0,0.40), 0 2px 8px rgba(26,20,16,0.20)' }}>
-            <Image src="/logoi.jpeg" alt="BuffBites logo" width={96} height={96} className="object-cover w-full h-full" priority />
-          </div>
-
-          {/* Tagline */}
-          <div className="text-center">
-            <h1 className="font-brush text-[44px] leading-none text-brand-black -rotate-2 mb-3">
-              Eat smarter, Buffs.
-            </h1>
-            <p className="text-sm text-muted leading-relaxed">
-              AI-crafted meal combos for<br />CU Boulder dining halls
-            </p>
-          </div>
+        {/* Floating doodles: what's on the menu */}
+        <div className="mt-8 grid grid-cols-3 gap-3 w-full max-w-[300px]">
+          {(['burger', 'bowl', 'pizza', 'salad', 'taco', 'icecream'] as const).map((d, i) => (
+            <div
+              key={d}
+              className="card aspect-square flex items-center justify-center text-brand-black animate-pop-in"
+              style={{ animationDelay: `${120 + i * 70}ms` }}
+            >
+              <div className="animate-float" style={{ animationDelay: `${i * 0.35}s` }}>
+                <Doodle name={d} size={52} />
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Feature pills */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="mt-7 flex flex-wrap justify-center gap-2">
           {FEATURES.map(({ icon, label }) => (
-            <span
-              key={label}
-              className="flex items-center gap-1.5 rounded-full bg-surface-card border-2 border-brand-black px-3.5 py-1.5 text-xs text-brand-black font-semibold shadow-sticker"
-            >
-              <span className="text-brand-deep text-[10px]">{icon}</span>
+            <span key={label} className="flex items-center gap-1.5 rounded-full bg-surface-card shadow-soft px-3.5 py-1.5 text-[13px] text-brand-black">
+              <span aria-hidden>{icon}</span>
               {label}
             </span>
           ))}
         </div>
       </div>
 
-      {/* ── Sign-in panel ───────────────────────────────────────── */}
-      <div className="relative z-10 px-6 pb-12 flex flex-col items-center gap-3 w-full max-w-sm mx-auto">
+      {/* ── Sign-in ───────────────────────────────────────────── */}
+      <div className="relative z-10 px-6 pb-10 flex flex-col items-center gap-3 w-full max-w-sm mx-auto">
         <button
           onClick={handleSignIn}
           disabled={signingIn}
-          className="w-full flex items-center justify-center gap-3 bg-brand-black text-white rounded-2xl py-4 font-display font-semibold text-[15px] tracking-wide shadow-card-lg hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-60"
+          className="w-full flex items-center justify-center gap-3 bg-brand-black text-white rounded-2xl py-4 font-display text-[20px] shadow-soft-lg card-press disabled:opacity-60"
         >
           {signingIn ? <LoadingSpinner white /> : <GoogleIcon />}
           {signingIn ? 'Signing in…' : 'Continue with Google'}
         </button>
 
         {error && (
-          <p role="alert" className="text-center text-sm text-red-700 font-medium bg-surface-card border-2 border-brand-black rounded-full px-4 py-1.5">{error}</p>
+          <p role="alert" className="text-center text-sm text-red-700 font-medium bg-surface-card shadow-soft rounded-full px-4 py-1.5">{error}</p>
         )}
 
-        <p className="text-[11px] text-center text-brand-black/80 font-medium pt-1">
+        <p className="text-[12px] text-center text-muted pt-1">
           Sign in to save combos & track meals · 🦬
         </p>
       </div>

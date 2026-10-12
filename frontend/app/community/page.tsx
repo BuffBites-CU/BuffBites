@@ -88,9 +88,9 @@ export default function CommunityPage() {
   }
 
   return (
-    <div className="min-h-screen bg-surface pb-24">
+    <div className="min-h-screen pb-28">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
+      <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
         <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
           <h1 className="font-display text-xl font-bold text-brand-black">Community</h1>
         </div>
@@ -123,7 +123,7 @@ export default function CommunityPage() {
               onClick={() => setFeedTab(tab)}
               className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all capitalize ${
                 feedTab === tab
-                  ? 'bg-brand-black text-brand'
+                  ? 'bg-brand text-brand-black'
                   : 'bg-surface-overlay text-muted hover:bg-surface-warm'
               }`}
             >

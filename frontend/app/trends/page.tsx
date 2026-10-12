@@ -40,25 +40,24 @@ interface PodiumCardProps {
 
 function PodiumCard({ rank, combo, onClick }: PodiumCardProps) {
   const medal = MEDALS[rank]
-  const minH = rank === 1 ? 'min-h-[148px]' : rank === 2 ? 'min-h-[120px]' : 'min-h-[104px]'
-  const ring = rank === 1 ? 'bg-brand' : 'bg-surface-card'
+  const minH = rank === 1 ? 'min-h-[176px]' : rank === 2 ? 'min-h-[152px]' : 'min-h-[140px]'
 
   return (
     <button
       onClick={onClick}
-      className={`w-full ${minH} rounded-2xl border-2 border-brand-black shadow-sticker p-3 flex flex-col items-center text-center transition-transform active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${ring}`}
+      className={`card card-press w-full ${minH} p-3 flex flex-col items-center text-center animate-pop-in ring-2 ${
+        rank === 1 ? 'ring-brand' : 'ring-transparent'
+      }`}
+      style={{ animationDelay: `${(3 - rank) * 80}ms` }}
     >
-      <span className={`text-2xl leading-none mb-1 ${rank === 1 ? 'scale-125' : ''}`}>{medal}</span>
-      <StudentAvatar name={combo.author_username} size={rank === 1 ? 34 : 28} />
-      <p className="mt-1 text-[11px] font-semibold text-brand-black truncate max-w-full">@{combo.author_username}</p>
-      <p className="text-xs font-semibold text-brand-black line-clamp-3 leading-tight flex-1">{combo.title}</p>
-      <div className="mt-1.5 flex items-center gap-0.5 text-[11px] text-brand-black font-bold">
-        <ChevronUpIcon width={11} height={11} />
+      <span className="text-xl leading-none mb-1.5">{medal}</span>
+      <StudentAvatar name={combo.author_username} size={rank === 1 ? 52 : 42} />
+      <p className="mt-1.5 text-[11px] text-muted truncate max-w-full">@{combo.author_username}</p>
+      <p className="font-display text-[16px] text-brand-black line-clamp-2 leading-tight flex-1">{combo.title}</p>
+      <div className="mt-1 flex items-center gap-0.5 text-[12px] text-brand-deep font-semibold">
+        <ChevronUpIcon width={12} height={12} />
         {combo.upvotes}
       </div>
-      <span className="mt-1 text-[9px] bg-gray-100 text-muted rounded-full px-1.5 py-0.5 leading-none line-clamp-1 max-w-full">
-        {DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall}
-      </span>
     </button>
   )
 }
@@ -138,11 +137,11 @@ export default function TrendsPage() {
   const hasPodium = podiumTrends.length === 3
 
   return (
-    <div className="min-h-screen bg-surface pb-24">
+    <div className="min-h-screen pb-28">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
+      <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
         <div className="max-w-md mx-auto px-4 pt-4 pb-3 flex items-center justify-between">
-          <h1 className="font-brush text-3xl text-brand-black leading-none">Trending <span aria-hidden>🔥</span></h1>
+          <h1 className="text-[32px] text-brand-black leading-none">Trending <span aria-hidden>🔥</span></h1>
           {activeTab === 'today' && (
             <span className={`flex items-center gap-1 text-xs font-display font-medium px-2.5 py-1 rounded-full ${
               resetInfo.urgent ? 'bg-amber-100 text-amber-700' : 'bg-surface-overlay text-muted'
@@ -160,7 +159,7 @@ export default function TrendsPage() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all ${
                 activeTab === tab
-                  ? 'bg-brand-black text-brand'
+                  ? 'bg-brand text-brand-black'
                   : 'bg-surface-overlay text-muted hover:bg-surface-warm'
               }`}
             >

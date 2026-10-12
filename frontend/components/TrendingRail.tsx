@@ -33,21 +33,23 @@ export default function TrendingRail({ onOpen }: Props) {
   if (combos !== null && combos.length === 0) return null
 
   return (
-    <section className="mb-5" aria-labelledby="trending-rail-heading">
-      <div className="flex items-baseline justify-between mb-2">
-        <h2 id="trending-rail-heading" className="font-brush text-2xl text-brand-black leading-none">
-          Trending {weekly ? 'this week' : 'on campus'} <span aria-hidden>🔥</span>
+    <section className="mb-6" aria-labelledby="trending-rail-heading">
+      <div className="flex items-baseline justify-between mb-3">
+        <h2 id="trending-rail-heading" className="text-[24px] text-brand-black leading-none">
+          Trending {weekly ? 'this week' : 'on campus'}
         </h2>
-        <Link href="/trends" className="text-xs font-semibold text-brand-deep">
+        <Link href="/trends" className="font-display text-[17px] text-brand-deep">
           See all
         </Link>
       </div>
-      <div className="-mx-4 px-4 pt-3 pb-2 overflow-x-auto scrollbar-hide">
+      <div className="-mx-4 px-4 pb-3 overflow-x-auto scrollbar-hide">
         <div className="flex gap-3 w-max">
           {combos === null
-            ? [0, 1, 2].map((i) => <div key={i} className="w-[220px] h-[168px] shimmer rounded-2xl" />)
+            ? [0, 1, 2].map((i) => <div key={i} className="w-[150px] h-[190px] shimmer rounded-3xl" />)
             : combos.map((c, i) => (
-                <TrendingPost key={c.id} combo={c} rank={i + 1} variant="compact" onClick={() => onOpen(c)} />
+                <div key={c.id} className="animate-pop-in" style={{ animationDelay: `${i * 60}ms` }}>
+                  <TrendingPost combo={c} rank={i + 1} variant="compact" onClick={() => onOpen(c)} />
+                </div>
               ))}
         </div>
       </div>

@@ -56,7 +56,7 @@ export function fuelScore(m: Macros, perMealCalorieTarget = 700): FuelScore | nu
   const proteinPct = ((m.protein_g ?? 0) * 4) / m.calories
   const proteinPts = 40 * band(proteinPct, 0.2, 0.5, 0.15)
   if (proteinPct >= 0.2) reasons.push(`${m.protein_g}g protein`)
-  else reasons.push('Low on protein')
+  else if (proteinPct < 0.15) reasons.push('Low on protein')
 
   // Calorie fit (30 pts): within ±25% of the per-meal target.
   const t = perMealCalorieTarget

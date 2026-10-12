@@ -1,31 +1,35 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { XMarkIcon } from './icons'
+import InstallAnimation, { type InstallPlatform } from './InstallAnimation'
 
 const SEEN_KEY = 'buffbites_install_prompt_seen'
 const OPEN_EVENT = 'buffbites:open-install'
-const DURATION = 5 // seconds, auto-show only
-
-type Platform = 'ios' | 'android'
+const DURATION = 5 // seconds: one loop of the animation, auto-show only
 
 /** Open the install guide from anywhere (e.g. a header button). */
 export function openInstallGuide() {
   window.dispatchEvent(new Event(OPEN_EVENT))
 }
 
-/** Detect mobile platform; returns null on desktop / already-installed. */
-function detectPlatform(): Platform | null {
-  if (typeof window === 'undefined') return null
+/** Chrome's install event (not in the TS DOM lib yet). */
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => Promise<void>
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
+}
 
-  // Already running as an installed app — nothing to teach.
-  const standalone =
+function isStandalone(): boolean {
+  return (
     window.matchMedia('(display-mode: standalone)').matches ||
     // iOS Safari exposes this non-standard flag.
     (window.navigator as Navigator & { standalone?: boolean }).standalone === true
-  if (standalone) return null
+  )
+}
 
+/** Detect mobile platform; returns null on desktop / already-installed. */
+function detectPlatform(): InstallPlatform | null {
+  if (typeof window === 'undefined' || isStandalone()) return null
   const ua = window.navigator.userAgent
   if (/android/i.test(ua)) return 'android'
   if (/iphone|ipad|ipod/i.test(ua)) return 'ios'
@@ -34,31 +38,28 @@ function detectPlatform(): Platform | null {
   return null
 }
 
-const COPY: Record<Platform, { device: string; steps: { icon: string; text: string }[] }> = {
-  ios: {
-    device: 'iPhone',
-    steps: [
-      { icon: '1', text: 'Tap the Share button (⬆️) in Safari\'s toolbar' },
-      { icon: '2', text: 'Scroll down and choose “Add to Home Screen”' },
-      { icon: '3', text: 'Tap “Add” — BuffBites lands on your home screen' },
-    ],
-  },
-  android: {
-    device: 'Android',
-    steps: [
-      { icon: '1', text: 'Tap the menu (⋮) in Chrome\'s top-right' },
-      { icon: '2', text: 'Choose “Add to Home screen” or “Install app”' },
-      { icon: '3', text: 'Confirm — BuffBites lands on your home screen' },
-    ],
-  },
-}
-
 type Mode = 'closed' | 'auto' | 'manual'
 
 export default function InstallPrompt() {
   const [mode, setMode] = useState<Mode>('closed')
-  const [platform, setPlatform] = useState<Platform>('ios')
+  const [platform, setPlatform] = useState<InstallPlatform>('ios')
   const [remaining, setRemaining] = useState(DURATION)
+  const [installEvent, setInstallEvent] = useState<BeforeInstallPromptEvent | null>(null)
+
+  // Android/Chrome can install in one tap; keep the event for the button.
+  useEffect(() => {
+    const onPrompt = (e: Event) => {
+      e.preventDefault()
+      setInstallEvent(e as BeforeInstallPromptEvent)
+    }
+    const onInstalled = () => { setInstallEvent(null); setMode('closed') }
+    window.addEventListener('beforeinstallprompt', onPrompt)
+    window.addEventListener('appinstalled', onInstalled)
+    return () => {
+      window.removeEventListener('beforeinstallprompt', onPrompt)
+      window.removeEventListener('appinstalled', onInstalled)
+    }
+  }, [])
 
   // Auto-show once on mobile; manual open via the global event anywhere.
   useEffect(() => {
@@ -73,7 +74,7 @@ export default function InstallPrompt() {
     try {
       seen = !!localStorage.getItem(SEEN_KEY)
     } catch {
-      /* private mode — just proceed */
+      /* private mode: just proceed */
     }
     if (!seen) {
       const p = detectPlatform()
@@ -86,7 +87,7 @@ export default function InstallPrompt() {
     return () => window.removeEventListener(OPEN_EVENT, openManual)
   }, [])
 
-  // Countdown + auto-dismiss (auto mode only).
+  // Auto mode plays the 5 s animation once, then closes.
   useEffect(() => {
     if (mode !== 'auto') return
     try {
@@ -107,78 +108,79 @@ export default function InstallPrompt() {
     return () => clearInterval(tick)
   }, [mode])
 
+  // Escape closes it.
+  useEffect(() => {
+    if (mode === 'closed') return
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setMode('closed') }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [mode])
+
+  async function installNow() {
+    if (!installEvent) return
+    await installEvent.prompt()
+    await installEvent.userChoice.catch(() => null)
+    setInstallEvent(null)
+  }
+
   if (mode === 'closed') return null
 
-  const copy = COPY[platform]
-  const progress = (remaining / DURATION) * 100
-
   return (
-    <div className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-brand-black/95 px-6 text-center backdrop-blur-sm">
-      {/* Dismiss */}
-      <button
-        onClick={() => setMode('closed')}
-        aria-label="Dismiss"
-        className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 transition hover:bg-white/20"
+    <div
+      className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center bg-brand-black/40 backdrop-blur-[2px]"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="install-title"
+      onClick={() => setMode('closed')}
+    >
+      <div
+        className="relative w-full max-w-sm rounded-t-[32px] sm:rounded-[32px] bg-surface px-5 pt-6 shadow-soft-lg animate-page-in"
+        style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}
+        onClick={(e) => e.stopPropagation()}
       >
-        <XMarkIcon className="h-5 w-5" />
-      </button>
+        <button
+          onClick={() => setMode('closed')}
+          aria-label="Close"
+          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-surface-card text-muted shadow-soft"
+        >
+          <XMarkIcon width={18} height={18} />
+        </button>
 
-      <div className="flex w-full max-w-sm flex-col items-center">
-        <div className="mb-5 overflow-hidden rounded-2xl shadow-lg ring-1 ring-white/15">
-          <Image src="/logoi.jpeg" alt="BuffBites" width={72} height={72} priority />
-        </div>
+        <h2 id="install-title" className="pr-10 text-[30px] leading-none text-brand-black">Add BuffBites to your home screen</h2>
+        <p className="mt-2 text-[14px] text-muted">Opens like an app, one tap away. Takes 5 seconds:</p>
 
-        <h1 className="font-sans text-2xl font-bold text-white">
-          Add BuffBites to your {copy.device}
-        </h1>
-        <p className="mt-2 text-sm text-white/60">
-          Install it like an app — one tap from your home screen, no browser needed.
-        </p>
-
-        {/* Platform toggle — lets anyone view either guide */}
-        <div className="mt-5 inline-flex rounded-full bg-white/10 p-1">
-          {(['ios', 'android'] as Platform[]).map((p) => (
+        <div className="mt-4 mb-4 inline-flex rounded-full bg-surface-card p-1 shadow-soft" role="tablist" aria-label="Phone type">
+          {(['ios', 'android'] as InstallPlatform[]).map((p) => (
             <button
               key={p}
+              role="tab"
+              aria-selected={platform === p}
               onClick={() => setPlatform(p)}
-              className={`rounded-full px-4 py-1.5 text-xs font-semibold transition ${
-                platform === p ? 'bg-brand text-brand-black' : 'text-white/70'
+              className={`rounded-full px-4 py-1.5 font-display text-[16px] transition-colors ${
+                platform === p ? 'bg-brand text-brand-black' : 'text-muted'
               }`}
             >
-              {COPY[p].device}
+              {p === 'ios' ? 'iPhone' : 'Android'}
             </button>
           ))}
         </div>
 
-        <ol className="mt-6 w-full space-y-3 text-left">
-          {copy.steps.map((step, i) => (
-            <li
-              key={i}
-              className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10"
-            >
-              <span className="flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-brand text-base font-semibold text-brand-black">
-                {step.icon}
-              </span>
-              <span className="text-sm leading-snug text-white/90">{step.text}</span>
-            </li>
-          ))}
-        </ol>
+        <InstallAnimation platform={platform} />
 
-        <button
-          onClick={() => setMode('closed')}
-          className="mt-7 w-full rounded-xl bg-brand py-3 text-sm font-semibold text-brand-black transition active:scale-[0.98]"
-        >
-          Got it{mode === 'auto' && remaining > 0 ? ` (${remaining})` : ''}
-        </button>
-
-        {/* Auto-dismiss progress bar */}
-        {mode === 'auto' && (
-          <div className="mt-4 h-1 w-full overflow-hidden rounded-full bg-white/10">
-            <div
-              className="h-full rounded-full bg-brand transition-[width] duration-1000 ease-linear"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
+        {platform === 'android' && installEvent ? (
+          <button
+            onClick={installNow}
+            className="mt-5 w-full rounded-2xl bg-brand py-3.5 font-display text-[20px] text-brand-black card-press"
+          >
+            Install now
+          </button>
+        ) : (
+          <button
+            onClick={() => setMode('closed')}
+            className="mt-5 w-full rounded-2xl bg-brand-black py-3.5 font-display text-[20px] text-white card-press"
+          >
+            Got it{mode === 'auto' && remaining > 0 ? ` (${remaining})` : ''}
+          </button>
         )}
       </div>
     </div>
