@@ -88,6 +88,9 @@ Edit `backend/.env`:
 | `PORT` | No | Uvicorn port — used in Docker/production (default: `8000`) |
 | `ALLOWED_ORIGINS` | No | Comma-separated allowed CORS origins (e.g. `https://buffbites.app,http://localhost:3000`). Leave unset locally to allow all origins (logs a warning). `*.vercel.app` is always allowed. |
 | `FIREBASE_SERVICE_ACCOUNT_JSON` | Production only | Full Firebase service account JSON as a single-line string |
+| `MENU_DATA_URL` | No | Where the API re-pulls scraped menus from every hour (default: this repo's `main` on raw.githubusercontent.com). Set to empty to use only the bundled JSON. |
+| `MENU_REFRESH_SECONDS` | No | Menu refresh interval (default `3600`) |
+| `VISION_MODEL` | No | Model for Snap-your-plate (default `claude-opus-5-5`; e.g. `claude-haiku-5-5` to cut cost) |
 
 #### 4. Set up Firebase Admin credentials (for protected routes)
 
@@ -213,6 +216,7 @@ Dish-verification and cross-station warnings are written to **stderr** and do no
 | `GET` | `/api/combos/generate` | No | Generate 9 AI meal combos (optional personalization params) |
 | `GET` | `/api/menu` | No | Raw classified menu (no Claude call) |
 | `GET` | `/api/menu/nutrition` | No | Per-dish nutrition for a list of dish names |
+| `POST` | `/api/vision/plate` | No (rate-limited 6/min/IP) | Snap your plate: photo → items matched to today's menu → macros |
 | `POST` | `/api/users/` | No | Create user profile |
 | `GET` | `/api/users/check-username/{username}` | No | Check username availability |
 | `GET` | `/api/users/{firebase_uid}` | No | Get user profile (includes meal log + favorites) |
@@ -247,7 +251,7 @@ See [`API_DOCS.md`](./API_DOCS.md) for full request/response schemas.
 
 | Key | Dining Hall |
 |-----|-------------|
-| `alley` | The Alley at Farrand |
+| `alley` | The Alley at Farrand. **Closed for remodel, expected to reopen Aug 2028.** Hidden in the app via `CLOSED_HALLS` (`frontend/types/index.ts`, `backend/menu_store.py`). |
 | `c4c` | Center for Community (C4C) |
 | `libby` | Libby Dining |
 | `seec` | SEEC Cafe |
@@ -334,6 +338,8 @@ flyctl secrets set -a buffbites-backend \
   FIREBASE_SERVICE_ACCOUNT_JSON='{"type":"service_account",...}'
 ```
 
+**Automatic deploys:** `.github/workflows/deploy-backend.yml` runs the backend tests and deploys to Fly on every push to `main` that touches `backend/`. One-time setup: `flyctl tokens create deploy -a buffbites-backend`, then add the token as the repo secret `FLY_API_TOKEN`. Without the secret, the workflow runs the tests and skips the deploy with a warning.
+
 ### Frontend → Vercel
 
 Deployed on **Vercel** (`vercel.json`, `framework: nextjs`). Vercel auto-deploys on push to `main`, or deploy manually:
@@ -347,7 +353,7 @@ In the Vercel project settings, set the `NEXT_PUBLIC_*` env vars (Firebase keys 
 
 ### Menu data
 
-Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo. The deployed backend only picks up new menus on its next deploy, since the JSON is baked into the Docker image.
+Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo. The backend (`backend/menu_store.py`) keeps menus in memory and re-downloads them from `MENU_DATA_URL` every hour, so new scrapes go live without a redeploy. The JSON baked into the Docker image is the fallback. The API loads the small copies in `scraping_scripts/data/live/` (built by `build_live_menus.py`: yesterday through 10 days ahead, no ingredient text, minified). The full 6-week C4C file needs ~80 MB to parse and OOM-killed the 256 MB Fly machines. If a hall's scrape comes back empty, `scraping_scripts/menu_guard.py` keeps the previous file, and `validate_menus.py` posts a per-hall report to the Actions run summary.
 
 ---
 

@@ -20,12 +20,13 @@ def count_items(result: dict) -> int:
     )
 
 
-def guarded_write(output: Path, result: dict) -> bool:
+def guarded_write(output: Path, result: dict, allow_empty: bool = False) -> bool:
     """Write `result` to `output` unless it would wipe out existing menu data.
 
     Returns True if the file was written. Exits with status 1 when the new
     scrape is empty, so CI surfaces the failure instead of silently committing
-    blank menus.
+    blank menus. `allow_empty=True` is for halls that are known to be closed:
+    an empty scrape is expected there, as long as it isn't replacing real data.
     """
     new_count = count_items(result)
     old_count = 0
@@ -45,6 +46,9 @@ def guarded_write(output: Path, result: dict) -> bool:
             sys.exit(1)
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+        if allow_empty:
+            print(f"\n[guard] {output.name}: no menu published (hall is closed).")
+            return True
         print(f"\n[guard] Scrape returned 0 items for {output.name}.", file=sys.stderr)
         sys.exit(1)
 

@@ -1,0 +1,25 @@
+# The backend image is built with the repo root as context
+# (flyctl deploy ... --dockerfile backend/Dockerfile .), so Docker reads THIS
+# file, not backend/.dockerignore. Without it, local secrets and virtualenvs
+# under backend/ were copied into the image by `COPY backend/ .`.
+
+# Secrets: production values come from `flyctl secrets`
+**/.env
+**/.env.*
+**/serviceAccountKey.json
+
+# Local environments and caches
+**/.venv
+**/venv
+**/__pycache__
+**/*.py[co]
+**/.pytest_cache
+**/.DS_Store
+**/*.log
+
+# Not needed in the backend image
+.git
+.github
+frontend
+docs
+backend/tests

@@ -62,7 +62,17 @@ export const DINING_HALL_LABELS: Record<DiningHall, string> = {
   village_center: 'Village Center',
 }
 
-export const DINING_HALLS: DiningHall[] = ['alley', 'c4c', 'libby', 'seec', 'sewall', 'village_center']
+/** Halls that aren't serving right now. They stay in the type and labels so old
+ *  community posts still render, but every picker hides them. Delete the entry
+ *  when the hall reopens. */
+export const CLOSED_HALLS: Partial<Record<DiningHall, string>> = {
+  alley: 'Closed for remodel until Aug 2028',
+}
+
+export const ALL_DINING_HALLS: DiningHall[] = ['alley', 'c4c', 'libby', 'seec', 'sewall', 'village_center']
+
+/** Halls students can pick today. */
+export const DINING_HALLS: DiningHall[] = ALL_DINING_HALLS.filter((h) => !CLOSED_HALLS[h])
 
 export type MealPeriod = 'Breakfast' | 'Lunch' | 'Dinner'
 
@@ -174,4 +184,28 @@ export interface MenuResponse {
   date: string
   day_of_week: string
   categories: Record<string, MenuItem[]>
+}
+
+export interface PlateItem {
+  name: string
+  station: string
+  portion: number
+  confidence: 'high' | 'medium' | 'low'
+  calories: number
+  protein_g: number
+  carbs_g: number
+  fat_g: number
+  fiber_g: number
+  sodium_mg: number
+  added_sugar_g: number
+}
+
+export interface PlateAnalysis {
+  dining_location: string
+  date: string
+  is_food: boolean
+  items: PlateItem[]
+  unmatched: Array<{ description: string }>
+  totals: Record<'calories' | 'protein_g' | 'carbs_g' | 'fat_g' | 'fiber_g' | 'sodium_mg' | 'added_sugar_g', number>
+  notes: string
 }

@@ -1,0 +1,64 @@
+name: Deploy Backend
+
+# Deploys the FastAPI backend to Fly.io whenever backend code changes on main.
+# Menu data does not need a deploy: backend/menu_store.py re-pulls the scraped
+# JSON from this repo every hour.
+#
+# One-time setup: create a deploy token with
+#   flyctl tokens create deploy -a buffbites-backend
+# and add it as the repository secret FLY_API_TOKEN
+# (GitHub → Settings → Secrets and variables → Actions).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/deploy-backend.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-backend
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Run backend tests
+        working-directory: backend
+        env:
+          MONGO_URL: mongodb://localhost:27017
+          ANTHROPIC_API_KEY: test
+        run: |
+          pip install -r requirements.txt pytest
+          PYTHONPATH=. pytest tests -q
+
+      - name: Check deploy token
+        id: token
+        run: |
+          if [ -z "$FLY_API_TOKEN" ]; then
+            echo "::warning::FLY_API_TOKEN secret is not set, skipping deploy. See the setup note at the top of this workflow."
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+        if: steps.token.outputs.present == 'true'
+
+      # Build context must be the repo root: the Dockerfile copies backend/ and
+      # scraping_scripts/data/.
+      - name: Deploy to Fly.io
+        if: steps.token.outputs.present == 'true'
+        run: flyctl deploy --remote-only --config backend/fly.toml --dockerfile backend/Dockerfile .

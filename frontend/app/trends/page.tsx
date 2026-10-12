@@ -7,17 +7,18 @@ import { useCommunity } from '@/hooks/useCommunity'
 import { usePullToRefresh } from '@/hooks/usePullToRefresh'
 import { useScrollRestoration } from '@/hooks/useScrollRestoration'
 import FilterBar from '@/components/FilterBar'
-import ComboCard from '@/components/ComboCard'
+import TrendingPost, { StudentAvatar } from '@/components/TrendingPost'
 import ComboDetail from '@/components/ComboDetail'
 import { ChevronUpIcon } from '@/components/icons'
 import { DINING_HALL_LABELS } from '@/types'
+import { parseApiDate } from '@/lib/date'
 import type { CommunityCombo, DiningHall, VoteType } from '@/types'
 
 const MEDALS = ['', '🥇', '🥈', '🥉'] as const
 type TrendsTab = 'today' | 'weekly'
 
 function isRising(combo: CommunityCombo): boolean {
-  const ageMs = Date.now() - new Date(combo.created_at).getTime()
+  const ageMs = Date.now() - parseApiDate(combo.created_at).getTime()
   return ageMs < 6 * 3_600_000 && combo.upvotes >= 3
 }
 
@@ -39,23 +40,24 @@ interface PodiumCardProps {
 
 function PodiumCard({ rank, combo, onClick }: PodiumCardProps) {
   const medal = MEDALS[rank]
-  const minH = rank === 1 ? 'min-h-[148px]' : rank === 2 ? 'min-h-[120px]' : 'min-h-[104px]'
-  const ring = rank === 1 ? 'ring-2 ring-brand-gold' : 'ring-1 ring-gray-100'
+  const minH = rank === 1 ? 'min-h-[176px]' : rank === 2 ? 'min-h-[152px]' : 'min-h-[140px]'
 
   return (
     <button
       onClick={onClick}
-      className={`w-full ${minH} bg-surface-card rounded-2xl shadow-sm p-3 flex flex-col items-center text-center transition-all hover:shadow-md active:scale-[0.98] ${ring}`}
+      className={`card card-press w-full ${minH} p-3 flex flex-col items-center text-center animate-pop-in ring-2 ${
+        rank === 1 ? 'ring-brand' : 'ring-transparent'
+      }`}
+      style={{ animationDelay: `${(3 - rank) * 80}ms` }}
     >
-      <span className={`text-2xl leading-none mb-1 ${rank === 1 ? 'scale-125' : ''}`}>{medal}</span>
-      <p className="text-xs font-semibold text-brand-black line-clamp-3 leading-tight flex-1">{combo.title}</p>
-      <div className="mt-1.5 flex items-center gap-0.5 text-[11px] text-brand-gold font-semibold">
-        <ChevronUpIcon width={11} height={11} />
+      <span className="plan-label !text-brand-black mb-1.5">No. 0{rank}</span>
+      <StudentAvatar name={combo.author_username} size={rank === 1 ? 52 : 42} />
+      <p className="mt-1.5 text-[11px] text-muted truncate max-w-full">@{combo.author_username}</p>
+      <p className="font-display text-[16px] text-brand-black line-clamp-2 leading-tight flex-1">{combo.title}</p>
+      <div className="mt-1 flex items-center gap-0.5 text-[12px] text-brand-deep font-semibold">
+        <ChevronUpIcon width={12} height={12} />
         {combo.upvotes}
       </div>
-      <span className="mt-1 text-[9px] bg-gray-100 text-muted rounded-full px-1.5 py-0.5 leading-none line-clamp-1 max-w-full">
-        {DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall}
-      </span>
     </button>
   )
 }
@@ -135,16 +137,16 @@ export default function TrendsPage() {
   const hasPodium = podiumTrends.length === 3
 
   return (
-    <div className="min-h-screen bg-surface pb-24">
+    <div className="min-h-screen pb-28">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-warm">
-        <div className="max-w-md mx-auto px-4 pt-4 pb-1 flex items-center justify-between">
-          <h1 className="font-display text-xl font-bold text-brand-black">Trending</h1>
+      <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
+        <div className="max-w-md mx-auto px-4 pt-4 pb-3 flex items-center justify-between">
+          <div><span className="plan-label">Sheet B-01</span><h1 className="text-[32px] text-brand-black leading-none">Trending</h1></div>
           {activeTab === 'today' && (
             <span className={`flex items-center gap-1 text-xs font-display font-medium px-2.5 py-1 rounded-full ${
-              resetInfo.urgent ? 'bg-amber-100 text-amber-700' : 'bg-surface-overlay text-muted'
+              resetInfo.urgent ? 'bg-surface-overlay text-brand-black' : 'bg-surface-overlay text-muted'
             }`}>
-              🔄 Resets in {resetInfo.text}
+              Resets in {resetInfo.text}
             </span>
           )}
         </div>
@@ -157,7 +159,7 @@ export default function TrendsPage() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all ${
                 activeTab === tab
-                  ? 'bg-brand-black text-brand-gold'
+                  ? 'bg-brand text-white'
                   : 'bg-surface-overlay text-muted hover:bg-surface-warm'
               }`}
             >
@@ -175,7 +177,7 @@ export default function TrendsPage() {
         </div>
         {multiLoading && selectedHalls.length > 1 && (
           <div className="max-w-md mx-auto px-4 pb-2">
-            <span className="inline-flex items-center gap-1.5 text-xs text-muted bg-gray-100 rounded-full px-3 py-1">
+            <span className="inline-flex items-center gap-1.5 text-xs text-muted bg-surface-overlay rounded-full px-3 py-1">
               <svg className="animate-spin h-3 w-3 flex-shrink-0" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
@@ -216,7 +218,7 @@ export default function TrendsPage() {
               </>
             )}
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               {(hasPodium ? listTrends : displayTrends).map((combo, i) => {
                 const rank = hasPodium ? i + 4 : i + 1
                 const medal = !hasPodium && rank <= 3 ? MEDALS[rank] : undefined
@@ -229,20 +231,10 @@ export default function TrendsPage() {
                     )}
                     {isRising(combo) && (
                       <div className="absolute -top-1.5 right-2 z-10">
-                        <span className="flex items-center gap-1 bg-amber-400 text-amber-900 text-[9px] font-display font-bold uppercase rounded-full px-2 py-0.5 shadow-sm">⚡ Rising</span>
+                        <span className="flex items-center gap-1 bg-brand-black text-white text-[9px] font-display font-bold uppercase rounded-full px-2 py-0.5 shadow-sm">⚡ Rising</span>
                       </div>
                     )}
-                    <div className={!hasPodium && rank === 1 ? 'ring-2 ring-brand-gold rounded-xl' : ''}>
-                      <ComboCard
-                        title={combo.title}
-                        description={combo.description ?? ''}
-                        tags={combo.tags}
-                        dishes={combo.dishes}
-                        upvotes={combo.upvotes}
-                        rank={medal ? undefined : rank}
-                        onClick={() => setActiveCombo(combo)}
-                      />
-                    </div>
+                    <TrendingPost combo={combo} rank={medal ? undefined : rank} onClick={() => setActiveCombo(combo)} />
                   </div>
                 )
               })}
@@ -273,9 +265,9 @@ function TrendSkeletons() {
         <div className="min-h-[148px] shimmer rounded-2xl" />
         <div className="min-h-[104px] shimmer rounded-2xl" />
       </div>
-      <div className="border-t border-gray-100 mb-2" />
+      <div className="border-t border-brand-black/25 mb-2" />
       {[1, 2, 3, 4].map((i) => (
-        <div key={i} className="bg-surface-card rounded-2xl border border-gray-100 p-4 space-y-3 overflow-hidden">
+        <div key={i} className="bg-surface-card rounded-2xl border border-brand-black/25 p-4 space-y-3 overflow-hidden">
           <div className="flex gap-3 items-center">
             <div className="h-5 shimmer rounded w-6" />
             <div className="h-4 shimmer rounded-full flex-1" />

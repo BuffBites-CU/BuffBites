@@ -10,10 +10,10 @@ const USERNAME_REGEX = /^[a-zA-Z0-9_]{3,20}$/
 const DEBOUNCE_MS = 500
 
 const DIETARY_OPTIONS: { key: DietaryPreference; label: string; icon: string; style: string }[] = [
-  { key: 'vegan', label: 'Vegan', icon: '🌱', style: 'bg-emerald-100 text-emerald-800 border-emerald-200' },
-  { key: 'vegetarian', label: 'Vegetarian', icon: '🥗', style: 'bg-green-100 text-green-800 border-green-200' },
-  { key: 'gluten-free', label: 'Gluten-Free', icon: '🌾', style: 'bg-yellow-100 text-yellow-800 border-yellow-200' },
-  { key: 'halal', label: 'Halal', icon: '☪️', style: 'bg-indigo-100 text-indigo-800 border-indigo-200' },
+  { key: 'vegan', label: 'Vegan', icon: '🌱', style: 'bg-surface-overlay text-brand-black border-brand-black/25' },
+  { key: 'vegetarian', label: 'Vegetarian', icon: '🥗', style: 'bg-surface-overlay text-brand-black border-brand-black/25' },
+  { key: 'gluten-free', label: 'Gluten-Free', icon: '🌾', style: 'bg-surface-overlay text-brand-black border-brand-black/25' },
+  { key: 'halal', label: 'Halal', icon: '☪️', style: 'bg-surface-overlay text-brand-black border-brand-black/25' },
 ]
 
 type UsernameStatus = 'idle' | 'checking' | 'available' | 'taken'
@@ -100,24 +100,24 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-surface flex flex-col items-center justify-center px-6 py-12">
+    <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
         {/* Progress bar */}
-        <div className="h-1 bg-gray-200 rounded-full mb-10 overflow-hidden">
+        <div className="h-1 bg-surface-warm rounded-full mb-10 overflow-hidden">
           <div
-            className="h-full bg-brand-gold rounded-full transition-all duration-300"
+            className="h-full bg-brand rounded-full transition-all duration-300"
             style={{ width: step === 1 ? '50%' : '100%' }}
           />
         </div>
 
         {step === 1 && (
-          <div className="bg-brand-gold/10 rounded-2xl px-5 py-4 mb-6 text-center">
+          <div className="bg-brand/10 rounded-2xl px-5 py-4 mb-6 text-center">
             <p className="text-lg font-bold text-brand-black">Welcome to Buff Bites 🏔</p>
             <p className="text-sm text-muted mt-0.5">Let&apos;s set up your profile in 2 quick steps.</p>
           </div>
         )}
 
-        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-7 space-y-6">
+        <div className="bg-white rounded-3xl shadow-sm border border-brand-black/25 p-7 space-y-6">
           {step === 1 && (
             <>
               <div>
@@ -134,8 +134,8 @@ export default function OnboardingPage() {
                     onChange={(e) => { setUsernameInput(e.target.value); setUsernameError('') }}
                     placeholder="buffraj"
                     maxLength={20}
-                    className={`w-full rounded-xl border pl-8 pr-9 py-3 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-gold ${
-                      usernameStatus === 'taken' ? 'border-red-300' : usernameStatus === 'available' ? 'border-emerald-300' : 'border-gray-200'
+                    className={`w-full rounded-xl border pl-8 pr-9 py-3 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand ${
+                      usernameStatus === 'taken' ? 'border-brand-black/25' : usernameStatus === 'available' ? 'border-brand-black/25' : 'border-brand-black/25'
                     }`}
                   />
                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm">
@@ -145,21 +145,21 @@ export default function OnboardingPage() {
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                       </svg>
                     )}
-                    {usernameStatus === 'available' && <span className="text-emerald-500">✓</span>}
-                    {usernameStatus === 'taken' && <span className="text-red-400">✗</span>}
+                    {usernameStatus === 'available' && <span className="text-brand-black">✓</span>}
+                    {usernameStatus === 'taken' && <span className="text-muted">✗</span>}
                   </span>
                 </div>
                 {usernameError ? (
-                  <p className="text-xs text-red-500 mt-1.5">{usernameError}</p>
+                  <p className="text-xs text-brand-black mt-1.5">{usernameError}</p>
                 ) : usernameStatus === 'available' ? (
-                  <p className="text-xs text-emerald-600 mt-1.5">Username is available!</p>
+                  <p className="text-xs text-brand-black mt-1.5">Username is available!</p>
                 ) : null}
               </div>
 
               <button
                 onClick={handleStep1Next}
                 disabled={usernameStatus === 'checking' || usernameStatus === 'taken'}
-                className="w-full py-3.5 rounded-2xl bg-brand-gold text-brand-black font-semibold text-sm hover:opacity-90 active:scale-95 transition-all disabled:opacity-50"
+                className="w-full py-3.5 rounded-2xl bg-brand text-white font-semibold text-sm hover:opacity-90 active:scale-95 transition-all disabled:opacity-50"
               >
                 Next →
               </button>
@@ -181,7 +181,7 @@ export default function OnboardingPage() {
                     key={key}
                     onClick={() => togglePref(key)}
                     className={`rounded-full px-4 py-2 text-sm font-medium border transition-all flex items-center gap-1.5 ${
-                      prefs.includes(key) ? style : 'bg-gray-100 text-muted border-transparent'
+                      prefs.includes(key) ? style : 'bg-surface-overlay text-muted border-transparent'
                     }`}
                   >
                     <span>{icon}</span>
@@ -193,14 +193,14 @@ export default function OnboardingPage() {
               <div className="flex gap-3">
                 <button
                   onClick={() => setStep(1)}
-                  className="flex-1 py-3.5 rounded-2xl border border-gray-200 text-sm font-medium text-brand-black hover:bg-gray-50 transition-colors"
+                  className="flex-1 py-3.5 rounded-2xl border border-brand-black/25 text-sm font-medium text-brand-black hover:bg-surface-overlay transition-colors"
                 >
                   Back
                 </button>
                 <button
                   onClick={handleSubmit}
                   disabled={submitting}
-                  className="flex-1 py-3.5 rounded-2xl bg-brand-gold text-brand-black font-semibold text-sm disabled:opacity-60 hover:opacity-90 active:scale-95 transition-all"
+                  className="flex-1 py-3.5 rounded-2xl bg-brand text-white font-semibold text-sm disabled:opacity-60 hover:opacity-90 active:scale-95 transition-all"
                 >
                   {submitting ? (
                     <span className="flex items-center justify-center gap-2">

@@ -2,11 +2,9 @@ import asyncio
 import hashlib
 import json
 import sys
-import time
-from collections import defaultdict, deque
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from threading import Lock
 from zoneinfo import ZoneInfo
 
 import anthropic
@@ -14,7 +12,8 @@ from fastapi import APIRouter, HTTPException, Query, Request
 from pydantic import BaseModel, ConfigDict
 
 from database import combo_cache_collection
-from menu_store import DINING_FILES, load_menu
+from menu_store import CLOSED_HALLS, DINING_FILES, load_menu
+from rate_limit import SlidingWindowLimiter, client_ip
 from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish
 
 router = APIRouter()
@@ -22,28 +21,28 @@ router = APIRouter()
 # Dining halls are in Boulder, CO — "today" follows Mountain Time, not UTC.
 MT = ZoneInfo("America/Denver")
 
-# ── Lightweight per-IP rate limiter ────────────────────────────────────────
 # Combo generation is unauthenticated and calls the Anthropic API, so it needs
-# abuse protection. An in-memory sliding window is sufficient at this scale
-# (single instance); swap for Redis if you scale horizontally.
-_RATE_LIMIT = 20          # requests
-_RATE_WINDOW = 60         # seconds
-_rate_hits: dict[str, deque] = defaultdict(deque)
-_rate_lock = Lock()
+# per-IP abuse protection.
+_combo_limiter = SlidingWindowLimiter(
+    limit=20,
+    window_seconds=60,
+    detail="Too many combo requests. Please wait a moment and try again.",
+)
 
 
 def _check_rate_limit(client_ip: str) -> None:
-    now = time.monotonic()
-    with _rate_lock:
-        hits = _rate_hits[client_ip]
-        while hits and hits[0] <= now - _RATE_WINDOW:
-            hits.popleft()
-        if len(hits) >= _RATE_LIMIT:
-            raise HTTPException(
-                status_code=429,
-                detail="Too many combo requests. Please wait a moment and try again.",
-            )
-        hits.append(now)
+    _combo_limiter.check(client_ip)
+
+
+_COMBOS_UNAVAILABLE = (
+    "Combo suggestions aren't available right now. The full menu is still in the Menu tab."
+)
+
+
+def ensure_open(dining: str) -> None:
+    """404 with a clear reason for halls that are temporarily closed."""
+    if dining in CLOSED_HALLS:
+        raise HTTPException(status_code=404, detail=CLOSED_HALLS[dining])
 
 
 def _today_mt() -> str:
@@ -448,13 +447,14 @@ async def generate_combos(
     priority_nutrients: str | None = Query(None, description="Comma-separated: iron,calcium,vitamin-d,fiber,omega-3,b12,zinc"),
     dietary_preferences: str | None = Query(None, description="Comma-separated: vegan,vegetarian,gluten-free,halal"),
 ):
-    _check_rate_limit(request.client.host if request.client else "unknown")
+    _check_rate_limit(client_ip(request))
 
     if dining not in DINING_FILES:
         raise HTTPException(
             status_code=400,
             detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}",
         )
+    ensure_open(dining)
 
     target_date = date or _today_mt()
 
@@ -569,8 +569,19 @@ async def generate_combos(
                 goals_section=goals_section,
             ),
         )
+    # Never show provider error text to students; log it for us instead.
+    except (anthropic.AuthenticationError, anthropic.PermissionDeniedError) as exc:
+        print(f"[COMBOS] Anthropic auth failed, check ANTHROPIC_API_KEY: {exc}", file=sys.stderr)
+        raise HTTPException(status_code=503, detail=_COMBOS_UNAVAILABLE)
+    except anthropic.RateLimitError as exc:
+        print(f"[COMBOS] Anthropic rate limited: {exc}", file=sys.stderr)
+        raise HTTPException(status_code=503, detail="Combo suggestions are busy right now. Try again in a minute.")
+    except (anthropic.APIStatusError, anthropic.APIConnectionError) as exc:
+        print(f"[COMBOS] Anthropic API error: {exc}", file=sys.stderr)
+        raise HTTPException(status_code=502, detail=_COMBOS_UNAVAILABLE)
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"Combo generation failed: {exc}")
+        print(f"[COMBOS] generation failed: {exc!r}", file=sys.stderr)
+        raise HTTPException(status_code=500, detail=_COMBOS_UNAVAILABLE)
 
     # ── Build lookup for calorie / tag enrichment ─────────────────────────
     all_items = breakfast_items + lunch_items + dinner_items + dessert_items
@@ -636,6 +647,7 @@ def get_menu(
             status_code=400,
             detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}",
         )
+    ensure_open(dining)
 
     target_date = date or _today_mt()
     try:

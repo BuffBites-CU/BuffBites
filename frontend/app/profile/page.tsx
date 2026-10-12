@@ -1,5 +1,6 @@
 'use client'
 
+import Avatar from '@/components/Avatar'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,10 +18,10 @@ import type { DietaryPreference, DiningHall, NutritionGoals, UserResponse, Commu
 /* ── Constants ─────────────────────────────────────────────────── */
 
 const DIETARY_OPTIONS: { key: DietaryPreference; label: string; style: string }[] = [
-  { key: 'vegan',       label: 'Vegan',       style: 'bg-emerald-100 text-emerald-800' },
-  { key: 'vegetarian',  label: 'Vegetarian',  style: 'bg-green-100 text-green-800' },
-  { key: 'gluten-free', label: 'Gluten-Free', style: 'bg-yellow-100 text-yellow-800' },
-  { key: 'halal',       label: 'Halal',       style: 'bg-indigo-100 text-indigo-800' },
+  { key: 'vegan',       label: 'Vegan',       style: 'bg-surface-overlay text-brand-black' },
+  { key: 'vegetarian',  label: 'Vegetarian',  style: 'bg-surface-overlay text-brand-black' },
+  { key: 'gluten-free', label: 'Gluten-Free', style: 'bg-surface-overlay text-brand-black' },
+  { key: 'halal',       label: 'Halal',       style: 'bg-surface-overlay text-brand-black' },
 ]
 
 const DIETARY_FOCUS_OPTIONS: { key: NonNullable<NutritionGoals['dietary_focus']>; label: string; icon: string; desc: string }[] = [
@@ -141,8 +142,8 @@ function StatPill({ icon, value, label }: { icon: string; value: string | number
   return (
     <div className="flex-1 flex flex-col items-center gap-0.5 py-3">
       <span className="text-xl leading-none">{icon}</span>
-      <span className="font-display font-bold text-brand-black text-lg leading-none">{value}</span>
-      <span className="text-[10px] text-muted uppercase tracking-wider font-display">{label}</span>
+      <span className="font-display text-brand-black text-[22px] leading-none">{value}</span>
+      <span className="text-[11px] text-muted">{label}</span>
     </div>
   )
 }
@@ -159,7 +160,7 @@ function WeeklyChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[]; goalPe
       <div className="flex items-end justify-between gap-1 h-20 relative">
         {dailyGoal && (
           <div
-            className="absolute left-0 right-0 border-t border-dashed border-brand-gold/50 pointer-events-none z-10"
+            className="absolute left-0 right-0 border-t border-dashed border-brand/50 pointer-events-none z-10"
             style={{ bottom: `${(dailyGoal / maxCal) * BAR_H}px` }}
           />
         )}
@@ -173,13 +174,13 @@ function WeeklyChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[]; goalPe
                 <div
                   className={`w-full rounded-t transition-all duration-500 ${
                     calories === 0 ? 'bg-surface-overlay rounded' :
-                    overGoal ? 'bg-amber-400' :
-                    isToday ? 'bg-brand-gold' : 'bg-brand-gold/45'
+                    overGoal ? 'bg-brand-black' :
+                    isToday ? 'bg-brand' : 'bg-brand/45'
                   }`}
                   style={{ height: calories === 0 ? 3 : pct }}
                 />
               </div>
-              <span className={`text-[9px] font-display font-semibold uppercase tracking-wide leading-none ${isToday ? 'text-brand-gold' : 'text-muted'}`}>{label}</span>
+              <span className={`text-[9px] font-display font-semibold uppercase tracking-wide leading-none ${isToday ? 'text-brand-deep' : 'text-muted'}`}>{label}</span>
               {calories > 0 && <span className="text-[8px] text-muted leading-none">{calories}</span>}
             </div>
           )
@@ -202,7 +203,7 @@ function WeeklyProteinChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[];
       <div className="flex items-end justify-between gap-1 h-20 relative">
         {dailyGoal && (
           <div
-            className="absolute left-0 right-0 border-t border-dashed border-brand-gold/50 pointer-events-none z-10"
+            className="absolute left-0 right-0 border-t border-dashed border-brand/50 pointer-events-none z-10"
             style={{ bottom: `${(dailyGoal / maxProtein) * BAR_H}px` }}
           />
         )}
@@ -216,13 +217,13 @@ function WeeklyProteinChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[];
                 <div
                   className={`w-full rounded-t transition-all duration-500 ${
                     protein === 0 ? 'bg-surface-overlay rounded' :
-                    overGoal ? 'bg-emerald-400' :
-                    isToday ? 'bg-brand-gold' : 'bg-brand-gold/45'
+                    overGoal ? 'bg-brand-black' :
+                    isToday ? 'bg-brand' : 'bg-brand/45'
                   }`}
                   style={{ height: protein === 0 ? 3 : pct }}
                 />
               </div>
-              <span className={`text-[9px] font-display font-semibold uppercase tracking-wide leading-none ${isToday ? 'text-brand-gold' : 'text-muted'}`}>{label}</span>
+              <span className={`text-[9px] font-display font-semibold uppercase tracking-wide leading-none ${isToday ? 'text-brand-deep' : 'text-muted'}`}>{label}</span>
               {protein > 0 && <span className="text-[8px] text-muted leading-none">{protein}g</span>}
             </div>
           )
@@ -287,14 +288,14 @@ function MealHistoryDay({
         className="w-full flex items-center gap-3 px-4 py-3.5 hover:bg-surface-overlay/40 transition-colors"
       >
         {/* Date badge */}
-        <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${isToday ? 'bg-brand-gold' : 'bg-surface-overlay'}`}>
+        <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${isToday ? 'bg-brand' : 'bg-surface-overlay'}`}>
           <span className={`text-xs font-display font-bold ${isToday ? 'text-brand-black' : 'text-muted'}`}>
             {isoToLocalNoon(date).getDate()}
           </span>
         </div>
 
         <div className="flex-1 min-w-0 text-left">
-          <p className={`text-sm font-display font-bold ${isToday ? 'text-brand-gold' : 'text-brand-black'}`}>
+          <p className={`text-sm font-display font-bold ${isToday ? 'text-brand-deep' : 'text-brand-black'}`}>
             {formatDateLabel(date)}
           </p>
           <div className="flex items-center gap-2 mt-0.5">
@@ -302,7 +303,7 @@ function MealHistoryDay({
             {pct !== null && (
               <div className="flex-1 h-1 bg-surface-warm rounded-full overflow-hidden max-w-[60px]">
                 <div
-                  className={`h-full rounded-full ${pct >= 100 ? 'bg-red-400' : pct >= 75 ? 'bg-amber-400' : 'bg-brand-gold'}`}
+                  className={`h-full rounded-full ${pct >= 100 ? 'bg-brand-black' : pct >= 75 ? 'bg-brand-black' : 'bg-brand'}`}
                   style={{ width: `${pct}%` }}
                 />
               </div>
@@ -311,7 +312,7 @@ function MealHistoryDay({
         </div>
 
         <div className="flex items-center gap-2 flex-shrink-0">
-          <span className="font-display font-bold text-brand-gold text-sm">{total} cal</span>
+          <span className="font-display font-bold text-brand-deep text-sm">{total} cal</span>
           {open ? (
             <ChevronUpIcon width={14} height={14} className="text-muted" />
           ) : (
@@ -324,7 +325,7 @@ function MealHistoryDay({
         <div className="divide-y divide-surface-overlay border-t border-surface-overlay">
           {entries.map((entry, i) => (
             <div key={i} className="flex items-center gap-3 px-4 py-3 group">
-              <div className="w-2 h-2 rounded-full bg-brand-gold/60 flex-shrink-0 ml-1" />
+              <div className="w-2 h-2 rounded-full bg-brand/60 flex-shrink-0 ml-1" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-display font-semibold text-brand-black line-clamp-1">{entry.title}</p>
                 <p className="text-[11px] text-muted mt-0.5 capitalize">
@@ -333,17 +334,17 @@ function MealHistoryDay({
               </div>
               <div className="flex items-center gap-2 flex-shrink-0">
                 <div className="flex flex-col items-end gap-0.5">
-                  <span className="text-xs font-semibold text-brand-gold">{entry.calories} cal</span>
+                  <span className="text-xs font-semibold text-brand-deep">{entry.calories} cal</span>
                   {entry.protein_g != null && entry.protein_g > 0 && (
                     <span className="text-[10px] text-muted">{entry.protein_g}g protein</span>
                   )}
                 </div>
                 <button
                   onClick={() => onDelete(entry.logged_at)}
-                  className="opacity-0 group-hover:opacity-100 active:opacity-100 p-1.5 rounded-full hover:bg-red-50 transition-all"
+                  className="opacity-0 group-hover:opacity-100 active:opacity-100 p-1.5 rounded-full hover:bg-surface-overlay transition-all"
                   aria-label="Remove meal"
                 >
-                  <XMarkIcon width={13} height={13} className="text-red-400" />
+                  <XMarkIcon width={13} height={13} className="text-muted" />
                 </button>
               </div>
             </div>
@@ -498,7 +499,7 @@ export default function ProfilePage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <svg className="animate-spin h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24">
+        <svg className="animate-spin h-8 w-8 text-brand-deep" fill="none" viewBox="0 0 24 24">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
         </svg>
@@ -520,43 +521,34 @@ export default function ProfilePage() {
   const overviewEmpty = badges.length === 0 && !profile.nutrition_goals && mealLog.length === 0 && !profile.preferred_calories_per_meal
 
   return (
-    <div className="min-h-screen bg-surface pb-28">
+    <div className="min-h-screen pb-28">
 
-      {/* ── Hero header card ───────────────────────────────────── */}
-      <div className="bg-brand-black px-4 pt-14 pb-6">
+      {/* ── Hero header ─────────────────────────────────────────── */}
+      <div className="px-4 pt-12 pb-5">
         <div className="max-w-md mx-auto">
           <div className="flex items-center gap-4">
-            {/* Avatar */}
-            <div className="relative w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-brand-gold/40 flex-shrink-0">
-              {firebaseUser?.photoURL ? (
+            {firebaseUser?.photoURL ? (
+              <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-soft">
                 <Image src={firebaseUser.photoURL} alt="Profile" fill sizes="64px" className="object-cover" />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-brand-gold/20">
-                  <span className="text-2xl font-display font-bold text-brand-gold">{profile.username[0]?.toUpperCase()}</span>
-                </div>
-              )}
-            </div>
+              </div>
+            ) : (
+              <Avatar name={profile.username} size={64} className="shadow-soft" />
+            )}
 
-            {/* Name + karma */}
             <div className="flex-1 min-w-0">
-              <h1 className="font-display font-bold text-white text-xl tracking-tight leading-none">@{profile.username}</h1>
+              <h1 className="text-[30px] text-brand-black leading-none truncate">@{profile.username}</h1>
               <div className="flex items-center gap-2 mt-1.5 flex-wrap">
-                <span className="flex items-center gap-1 text-xs text-brand-gold font-display font-semibold">
-                  <StarIcon width={12} height={12} className="fill-brand-gold" />
+                <span className="flex items-center gap-1 text-[13px] text-brand-deep font-semibold">
+                  <StarIcon width={13} height={13} className="fill-brand text-brand" />
                   {profile.karma} karma
                 </span>
-                <span className="text-[10px] text-brand-stone">· {karmaLabel(profile.karma)}</span>
-                {streak > 0 && (
-                  <span className="text-[10px] font-display font-semibold text-amber-400 bg-amber-400/15 rounded-full px-2 py-0.5">
-                    🔥 {streak}-day streak
-                  </span>
-                )}
+                <span className="text-[12px] text-muted">· {karmaLabel(profile.karma)}</span>
+                {streak > 0 && <span className="pill-gold !text-[13px] !py-0.5">🔥 {streak}-day streak</span>}
               </div>
             </div>
           </div>
 
-          {/* Stats row */}
-          <div className="mt-5 bg-white/8 rounded-2xl divide-x divide-white/10 flex overflow-hidden">
+          <div className="mt-5 card flex divide-x divide-surface-overlay overflow-hidden">
             <StatPill icon="🍽" value={totalMeals} label="Meals" />
             <StatPill icon="🔥" value={`${thisWeekCal}`} label="Cal/wk" />
             <StatPill icon="📮" value={myCombos.length} label="Shared" />
@@ -566,14 +558,14 @@ export default function ProfilePage() {
       </div>
 
       {/* ── Tab bar ────────────────────────────────────────────── */}
-      <div className="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-overlay px-4 py-2.5">
+      <div className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md px-4 py-2.5">
         <div className="max-w-md mx-auto flex gap-2">
           {TABS.map(({ key, label }) => (
             <button
               key={key}
               onClick={() => selectTab(key)}
               className={`flex-1 px-3 py-1.5 rounded-full text-xs font-display font-semibold transition-all ${
-                activeTab === key ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'
+                activeTab === key ? 'bg-brand text-white' : 'bg-surface-overlay text-muted'
               }`}
             >
               {label}
@@ -639,7 +631,7 @@ export default function ProfilePage() {
                             <span className="text-xs text-muted">/ {dailyGoal}g daily</span>
                           </div>
                           <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
-                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-emerald-400' : pct >= 66 ? 'bg-brand-gold' : 'bg-brand-gold/50'}`}
+                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-brand-black' : pct >= 66 ? 'bg-brand' : 'bg-brand/50'}`}
                               style={{ width: `${pct}%` }} />
                           </div>
                           {mealsToday === 0 && <p className="text-[11px] text-muted mt-1">Log meals to track protein</p>}
@@ -654,7 +646,7 @@ export default function ProfilePage() {
                           {(profile.nutrition_goals.priority_nutrients ?? []).map((n) => {
                             const opt = PRIORITY_NUTRIENTS.find((o) => o.key === n)
                             return (
-                              <span key={n} className="flex items-center gap-1 bg-brand-black text-brand-gold rounded-full px-2.5 py-1 text-xs font-medium">
+                              <span key={n} className="flex items-center gap-1 bg-brand text-white rounded-full px-2.5 py-1 text-xs font-medium">
                                 <span>{opt?.icon}</span>{opt?.label ?? n}
                               </span>
                             )
@@ -696,7 +688,7 @@ export default function ProfilePage() {
                         </div>
                         {pct !== null && (
                           <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
-                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-red-400' : pct >= 75 ? 'bg-amber-400' : 'bg-brand-gold'}`}
+                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-brand-black' : pct >= 75 ? 'bg-brand-black' : 'bg-brand'}`}
                               style={{ width: `${pct}%` }} />
                           </div>
                         )}
@@ -786,7 +778,7 @@ export default function ProfilePage() {
                   <div className="space-y-2">
                     {(profile.favorites ?? []).slice().reverse().map((fav, i) => (
                       <div key={i} className="bg-surface-card rounded-xl border border-surface-overlay p-4 flex items-start gap-3">
-                        <span className="text-red-400 mt-0.5 flex-shrink-0 text-base">♥</span>
+                        <span className="text-muted mt-0.5 flex-shrink-0 text-base">♥</span>
                         <div className="min-w-0 flex-1">
                           <p className="font-display font-semibold text-sm text-brand-black line-clamp-1">{fav.title}</p>
                           <p className="text-[11px] text-muted mt-0.5">
@@ -818,7 +810,7 @@ export default function ProfilePage() {
                 {!combosLoading && myCombos.length === 0 && (
                   <div className="bg-surface-card rounded-xl border border-surface-overlay px-5 py-8 text-center space-y-3">
                     <p className="text-sm text-muted">You haven&apos;t shared any combos yet.</p>
-                    <Link href="/community" className="inline-block px-4 py-2 rounded-xl bg-brand-gold text-brand-black text-sm font-display font-semibold hover:opacity-90 transition-opacity">
+                    <Link href="/community" className="inline-block px-4 py-2 rounded-xl bg-brand text-white text-sm font-display font-semibold hover:opacity-90 transition-opacity">
                       Share your first combo →
                     </Link>
                   </div>
@@ -831,16 +823,16 @@ export default function ProfilePage() {
                       return (
                         <div key={combo.id} className="bg-surface-card rounded-xl border border-surface-overlay overflow-hidden">
                           <div className="flex">
-                            <div className="w-1 bg-brand-gold flex-shrink-0" />
+                            <div className="w-1 bg-brand flex-shrink-0" />
                             <div className="flex items-start justify-between gap-3 flex-1 p-4">
                               <div className="min-w-0 flex-1">
                                 <p className="font-display font-semibold text-sm text-brand-black line-clamp-1">{combo.title}</p>
                                 <div className="flex items-center gap-3 mt-1 flex-wrap">
                                   <span className="text-xs text-muted">{combo.dishes.length} dishes · {DINING_HALL_LABELS[combo.dining_hall] ?? combo.dining_hall}</span>
-                                  <span className="flex items-center gap-0.5 text-xs text-brand-gold font-medium">
+                                  <span className="flex items-center gap-0.5 text-xs text-brand-deep font-medium">
                                     <ChevronUpIcon width={12} height={12} />{combo.upvotes}
                                   </span>
-                                  <span className={`flex items-center gap-0.5 text-[11px] ${expiry.urgent ? 'text-orange-500' : 'text-muted'}`}>
+                                  <span className={`flex items-center gap-0.5 text-[11px] ${expiry.urgent ? 'text-brand-black' : 'text-muted'}`}>
                                     <ClockIcon width={11} height={11} />{expiry.text}
                                   </span>
                                 </div>
@@ -850,7 +842,7 @@ export default function ProfilePage() {
                                   <>
                                     <button onClick={() => setConfirmDeleteId(null)} className="px-2 py-1 rounded-lg text-xs text-muted hover:bg-surface-overlay">Cancel</button>
                                     <button onClick={() => handleDelete(combo)} disabled={deletingId === combo.id}
-                                      className="px-2 py-1 rounded-lg text-xs font-medium text-red-500 hover:bg-red-50 disabled:opacity-40">
+                                      className="px-2 py-1 rounded-lg text-xs font-medium text-brand-black hover:bg-surface-overlay disabled:opacity-40">
                                       {deletingId === combo.id ? '…' : 'Delete'}
                                     </button>
                                   </>
@@ -860,8 +852,8 @@ export default function ProfilePage() {
                                       <PencilIcon width={15} height={15} className="text-muted" />
                                     </button>
                                     <button onClick={() => setConfirmDeleteId(combo.id)} disabled={deletingId === combo.id}
-                                      className="p-2 rounded-full hover:bg-red-50 disabled:opacity-40" aria-label="Delete">
-                                      <TrashIcon width={15} height={15} className="text-red-400" />
+                                      className="p-2 rounded-full hover:bg-surface-overlay disabled:opacity-40" aria-label="Delete">
+                                      <TrashIcon width={15} height={15} className="text-muted" />
                                     </button>
                                   </>
                                 )}
@@ -892,10 +884,10 @@ export default function ProfilePage() {
                         value={draft.username}
                         onChange={(e) => { setDraft((d) => ({ ...d, username: e.target.value })); setUsernameError('') }}
                         maxLength={20}
-                        className="w-full rounded-xl border border-surface-warm pl-8 pr-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface"
+                        className="w-full rounded-xl border border-surface-warm pl-8 pr-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand bg-surface"
                       />
                     </div>
-                    {usernameError && <p className="text-xs text-red-500 mt-1">{usernameError}</p>}
+                    {usernameError && <p className="text-xs text-brand-black mt-1">{usernameError}</p>}
                   </div>
 
                   <div>
@@ -914,12 +906,12 @@ export default function ProfilePage() {
                     <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Default Dining Hall</label>
                     <div className="flex flex-wrap gap-2">
                       <button onClick={() => setDraft((d) => ({ ...d, default_dining_hall: '' }))}
-                        className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === '' ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'}`}>
+                        className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === '' ? 'bg-brand text-white' : 'bg-surface-overlay text-muted'}`}>
                         None
                       </button>
                       {DINING_HALLS.map((hall) => (
                         <button key={hall} onClick={() => setDraft((d) => ({ ...d, default_dining_hall: hall }))}
-                          className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === hall ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'}`}>
+                          className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === hall ? 'bg-brand text-white' : 'bg-surface-overlay text-muted'}`}>
                           {DINING_HALL_LABELS[hall]}
                         </button>
                       ))}
@@ -932,7 +924,7 @@ export default function ProfilePage() {
                       <input type="number" min={100} max={3000} placeholder="e.g. 700"
                         value={draft.preferred_calories_per_meal}
                         onChange={(e) => setDraft((d) => ({ ...d, preferred_calories_per_meal: e.target.value }))}
-                        className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface" />
+                        className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand bg-surface" />
                       <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted text-xs">cal</span>
                     </div>
                   </div>
@@ -950,7 +942,7 @@ export default function ProfilePage() {
                             onClick={() => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, dietary_focus: d.nutrition_goals.dietary_focus === key ? '' : key } }))}
                             className={`flex flex-col items-center gap-1 p-2.5 rounded-xl border text-center transition-all ${
                               draft.nutrition_goals.dietary_focus === key
-                                ? 'bg-brand-black border-brand-black text-brand-gold'
+                                ? 'bg-brand border-brand text-white'
                                 : 'bg-surface-overlay border-transparent text-muted hover:bg-surface-warm'
                             }`}>
                             <span className="text-lg leading-none">{icon}</span>
@@ -968,7 +960,7 @@ export default function ProfilePage() {
                         <input type="number" min={0} max={200} placeholder="e.g. 35"
                           value={draft.nutrition_goals.protein_g_per_meal}
                           onChange={(e) => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, protein_g_per_meal: e.target.value } }))}
-                          className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand-gold bg-surface" />
+                          className="w-full rounded-xl border border-surface-warm px-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand bg-surface" />
                         <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted text-xs">g</span>
                       </div>
                     </div>
@@ -986,7 +978,7 @@ export default function ProfilePage() {
                                 return { ...d, nutrition_goals: { ...d.nutrition_goals, priority_nutrients: selected ? prev.filter((n) => n !== key) : [...prev, key] } }
                               })}
                               className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
-                                selected ? 'bg-brand-black text-brand-gold' : 'bg-surface-overlay text-muted'
+                                selected ? 'bg-brand text-white' : 'bg-surface-overlay text-muted'
                               }`}>
                               <span>{icon}</span>{label}
                             </button>
@@ -1003,7 +995,7 @@ export default function ProfilePage() {
                       <XMarkIcon width={16} height={16} /> Cancel
                     </button>
                     <button onClick={handleSave} disabled={saving}
-                      className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-brand-gold text-brand-black text-sm font-display font-semibold disabled:opacity-60 hover:opacity-90 transition-opacity">
+                      className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-brand text-white text-sm font-display font-semibold disabled:opacity-60 hover:opacity-90 transition-opacity">
                       <CheckIcon width={16} height={16} /> {saving ? 'Saving…' : 'Save'}
                     </button>
                   </div>
@@ -1012,7 +1004,7 @@ export default function ProfilePage() {
                 <div className="space-y-3">
                   <button
                     onClick={enterEdit}
-                    className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-brand-black text-brand-gold text-sm font-display font-semibold hover:opacity-90 active:scale-[0.99] transition-all"
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-brand text-white text-sm font-display font-semibold hover:opacity-90 active:scale-[0.99] transition-all"
                   >
                     <PencilIcon width={14} height={14} /> Edit Profile
                   </button>
@@ -1041,7 +1033,7 @@ export default function ProfilePage() {
                         <p className="text-sm font-medium text-brand-black">{profile.preferred_calories_per_meal} cal/meal</p>
                       </div>
                     )}
-                    <button onClick={signOut} className="w-full px-5 py-4 text-sm font-medium text-red-500 hover:bg-red-50 transition-colors text-left">
+                    <button onClick={signOut} className="w-full px-5 py-4 text-sm font-medium text-brand-black hover:bg-surface-overlay transition-colors text-left">
                       Sign Out
                     </button>
                   </div>

@@ -46,8 +46,8 @@ export default function VoteButtons({ upvotes, downvotes, hasVoted, onVote }: Pr
         aria-label={`Upvote (${upvotes})`}
         className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-sm transition-all ${
           disabled
-            ? 'bg-gray-100 text-muted cursor-not-allowed'
-            : 'bg-brand-gold/10 text-brand-gold hover:bg-brand-gold/20 active:scale-95'
+            ? 'bg-surface-overlay text-muted cursor-not-allowed'
+            : 'bg-brand/10 text-brand-deep hover:bg-brand/20 active:scale-95'
         }`}
       >
         {pending === 'upvote' ? (
@@ -64,8 +64,8 @@ export default function VoteButtons({ upvotes, downvotes, hasVoted, onVote }: Pr
         aria-label={`Downvote (${downvotes})`}
         className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-sm transition-all ${
           disabled
-            ? 'bg-gray-100 text-muted cursor-not-allowed'
-            : 'bg-red-50 text-red-400 hover:bg-red-100 active:scale-95'
+            ? 'bg-surface-overlay text-muted cursor-not-allowed'
+            : 'bg-surface-overlay text-muted hover:bg-surface-overlay active:scale-95'
         }`}
       >
         {pending === 'downvote' ? (

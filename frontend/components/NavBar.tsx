@@ -24,45 +24,24 @@ export default function NavBar() {
       role="navigation"
       aria-label="Main navigation"
     >
-      {/* Thin gold gradient top border */}
-      <div className="h-px bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent" />
-
-      <div
-        className="bg-surface-card/95 backdrop-blur-xl"
-        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-      >
-        <div className="max-w-md mx-auto flex h-[60px]">
+      {/* Floating white bar on the peach page */}
+      <div className="px-3" style={{ paddingBottom: 'max(10px, env(safe-area-inset-bottom))' }}>
+        <div className="max-w-md mx-auto flex h-[60px] card shadow-soft-lg p-1.5 gap-1.5">
           {TABS.map(({ href, label, Icon }) => {
             const active = pathname.startsWith(href)
             return (
               <Link
                 key={href}
                 href={href}
-                className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2 transition-opacity active:opacity-60"
+                className="flex-1 flex items-stretch card-press"
                 aria-label={label}
                 aria-current={active ? 'page' : undefined}
               >
-                {/* Active dot */}
-                <span
-                  className={`block rounded-full bg-brand-gold transition-all duration-300 mb-0.5 ${
-                    active ? 'w-1 h-1 opacity-100 animate-dot-pop' : 'w-0 h-0 opacity-0'
-                  }`}
-                />
-
-                <Icon
-                  className={`transition-all duration-200 ${
-                    active ? 'text-brand-gold' : 'text-muted'
-                  }`}
-                  width={21}
-                  height={21}
-                />
-
-                <span
-                  className={`font-display text-[9px] font-semibold tracking-widest uppercase transition-all duration-200 ${
-                    active ? 'text-brand-gold' : 'text-muted'
-                  }`}
-                >
-                  {label}
+                <span className={`flex w-full flex-col items-center gap-1 py-1.5 transition-colors duration-200 ${
+                  active ? 'bg-brand-black text-white' : 'text-brand-black'
+                }`}>
+                  <Icon width={21} height={21} />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.12em] leading-none">{label}</span>
                 </span>
               </Link>
             )
