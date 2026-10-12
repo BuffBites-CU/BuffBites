@@ -235,44 +235,52 @@ export default function HomePage() {
   return (
     <div className="min-h-screen pb-28">
       <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
-        <div className="max-w-md mx-auto flex items-center justify-between px-4 h-16">
-          {/* Logo + hand-drawn wordmark */}
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-2xl overflow-hidden flex-shrink-0 shadow-soft">
-              <Image src="/logoi.jpeg" alt="" width={36} height={36} className="object-cover w-full h-full" />
+        {/* Title block, like the corner of an architectural drawing */}
+        <div className="max-w-md mx-auto px-4 pt-3">
+          <div className="grid grid-cols-[1fr_auto] border-[1.5px] border-brand-black bg-surface-card">
+            <div className="flex items-center gap-2.5 px-3 py-2 border-r-[1.5px] border-brand-black min-w-0">
+              <div className="w-9 h-9 overflow-hidden flex-shrink-0 border-[1.5px] border-brand-black">
+                <Image src="/logoi.jpeg" alt="" width={36} height={36} className="object-cover w-full h-full grayscale contrast-125" />
+              </div>
+              <div className="min-w-0">
+                <span className="block font-display text-[22px] text-brand-black leading-none">Buff Bites</span>
+                <span className="plan-label block mt-1 truncate">Campus mess plan</span>
+              </div>
             </div>
-            <span className="font-display text-[26px] text-brand-black leading-none">Buff Bites</span>
-          </div>
-
-          <div className="flex items-center gap-1.5">
-            <button
-              onClick={openInstallGuide}
-              aria-label="How to add BuffBites to your home screen"
-              className="pill-gold card-press"
-            >
-              <DevicePhoneMobileIcon width={15} height={15} />
-              Add app
-            </button>
-            <button
-              onClick={refetch}
-              disabled={loading}
-              aria-label="Refresh combos"
-              className="w-9 h-9 flex items-center justify-center rounded-full text-muted hover:text-brand-black hover:bg-surface-card transition-colors disabled:opacity-40"
-            >
-              <ArrowPathIcon width={18} height={18} className={loading ? 'animate-spin' : ''} />
-            </button>
+            <div className="flex items-center gap-1 px-2">
+              <button
+                onClick={openInstallGuide}
+                aria-label="How to add BuffBites to your home screen"
+                className="pill-gold card-press !px-2.5"
+              >
+                <DevicePhoneMobileIcon width={14} height={14} />
+                App
+              </button>
+              <button
+                onClick={refetch}
+                disabled={loading}
+                aria-label="Refresh combos"
+                className="w-9 h-9 flex items-center justify-center text-brand-black hover:bg-surface-overlay transition-colors disabled:opacity-40"
+              >
+                <ArrowPathIcon width={18} height={18} className={loading ? 'animate-spin' : ''} />
+              </button>
+            </div>
+            <div className="col-span-2 flex items-center justify-between gap-2 border-t-[1.5px] border-brand-black px-3 py-1">
+              <span className="plan-label !text-brand-black">Sheet A-01 · Discover</span>
+              <span className="plan-label">{selectedDate.replaceAll('-', '.')}</span>
+            </div>
           </div>
         </div>
 
         {/* Hall + day */}
-        <div className="max-w-md mx-auto px-4 pb-2 flex items-center gap-2">
+        <div className="max-w-md mx-auto px-4 pt-2.5 pb-2 flex items-center gap-2">
           <div className="flex-1 min-w-0">
             <DiningSelector selected={selectedDining} onChange={setSelectedDining} />
           </div>
           <button
             onClick={() => setShowDatePicker((v) => !v)}
             aria-expanded={showDatePicker}
-            className="flex-shrink-0 flex items-center gap-1 font-display text-[15px] text-brand-black bg-surface-card shadow-soft rounded-full px-3.5 py-2 card-press"
+            className="flex-shrink-0 flex items-center gap-1 font-display text-[16px] text-brand-black bg-surface-card shadow-soft px-3.5 py-2 card-press"
           >
             {selectedDateObj.label === 'Today' ? 'Today' : `${selectedDateObj.label} ${selectedDateObj.day}`}
             <svg className={`w-3 h-3 transition-transform ${showDatePicker ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -290,7 +298,7 @@ export default function HomePage() {
                   onClick={() => { setSelectedDate(opt.iso); setShowDatePicker(false) }}
                   className={`flex flex-col items-center px-3.5 py-2 rounded-2xl font-display transition-all flex-shrink-0 animate-pop-in ${
                     opt.iso === selectedDate
-                      ? 'bg-brand text-brand-black'
+                      ? 'bg-brand text-white'
                       : 'bg-surface-card text-muted shadow-soft'
                   }`}
                   style={{ animationDelay: `${i * 30}ms` }}
@@ -315,7 +323,8 @@ export default function HomePage() {
 
       <div className="max-w-md mx-auto px-4 pt-3 animate-page-in">
         <p className="text-sm text-muted mb-3">
-          Hey{username ? ` ${username}` : ''} 👋 {PERIOD_LINES[selectedPeriod]}
+          <span className="plan-label !text-brand-black mr-1.5">Note</span>
+          Hey{username ? ` ${username}` : ''}. {PERIOD_LINES[selectedPeriod]}
         </p>
 
         <SnapPlate
@@ -329,20 +338,23 @@ export default function HomePage() {
         {/* Two big tiles, like Gallery / Camera in the reference */}
         <div className="grid grid-cols-2 gap-3 mb-6" role="tablist" aria-label="View">
           {([
-            { v: 'combos', label: 'AI combos', doodle: 'bowl' },
-            { v: 'menu', label: 'Full menu', doodle: 'plate' },
-          ] as const).map(({ v, label, doodle }) => (
+            { v: 'combos', label: 'AI combos', doodle: 'bowl', room: 'Room 01' },
+            { v: 'menu', label: 'Full menu', doodle: 'plate', room: 'Room 02' },
+          ] as const).map(({ v, label, doodle, room }) => (
             <button
               key={v}
               role="tab"
               aria-selected={view === v}
               onClick={() => setView(v)}
-              className={`card card-press flex items-center gap-2.5 px-4 py-3.5 text-left ring-2 transition-colors ${
-                view === v ? 'ring-brand' : 'ring-transparent'
+              className={`card card-press flex items-center gap-2.5 px-3.5 py-3 text-left ring-2 transition-colors ${
+                view === v ? 'ring-brand-black hatch' : 'ring-transparent'
               }`}
             >
-              <Doodle name={doodle} size={30} draw={false} className="text-brand-black flex-shrink-0" />
-              <span className="font-display text-[19px] text-brand-black leading-none">{label}</span>
+              <Doodle name={doodle} size={32} draw={false} className="text-brand-black flex-shrink-0" />
+              <span className="min-w-0">
+                <span className="plan-label block">{room}</span>
+                <span className="block font-display text-[18px] text-brand-black leading-tight">{label}</span>
+              </span>
             </button>
           ))}
         </div>
@@ -353,7 +365,7 @@ export default function HomePage() {
 
         {view === 'combos' && <>
         <TrendingRail onOpen={setActiveTrend} />
-        <SectionHeader title={`Your ${selectedPeriod.toLowerCase()} picks`} />
+        <SectionHeader sec="02" title={`Your ${selectedPeriod.toLowerCase()} picks`} />
         {loading && <ComboSkeletons />}
 
         {!loading && error && (
@@ -361,7 +373,7 @@ export default function HomePage() {
             <p className="text-sm text-muted">{error}</p>
             <button
               onClick={refetch}
-              className="px-5 py-2.5 rounded-xl bg-brand text-brand-black text-sm font-medium hover:opacity-90 transition-opacity"
+              className="px-5 py-2.5 rounded-xl bg-brand text-white text-sm font-medium hover:opacity-90 transition-opacity"
             >
               Try again
             </button>
@@ -374,7 +386,7 @@ export default function HomePage() {
             <button
               onClick={refetch}
               disabled={loading}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-60"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand text-white text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-60"
             >
               {loading ? (
                 <>
@@ -475,15 +487,21 @@ const PERIOD_LINES: Record<MealPeriod, string> = {
   Dinner: 'Dinner plans, sorted.',
 }
 
-function SectionHeader({ title, href, linkLabel = 'See all' }: { title: string; href?: string; linkLabel?: string }) {
+function SectionHeader({ sec, title, href, linkLabel = 'See all' }: { sec: string; title: string; href?: string; linkLabel?: string }) {
   return (
-    <div className="flex items-baseline justify-between mb-3">
-      <h2 className="text-[24px] text-brand-black leading-none">{title}</h2>
-      {href && (
-        <Link href={href} className="font-display text-[17px] text-brand-deep">
-          {linkLabel}
-        </Link>
-      )}
+    <div className="mb-3">
+      <div className="flex items-end justify-between gap-2">
+        <div>
+          <span className="plan-label">Sec. {sec}</span>
+          <h2 className="text-[24px] text-brand-black leading-tight">{title}</h2>
+        </div>
+        {href && (
+          <Link href={href} className="font-display text-[16px] text-brand-black underline underline-offset-4">
+            {linkLabel}
+          </Link>
+        )}
+      </div>
+      <div className="dim-line mt-1.5" aria-hidden />
     </div>
   )
 }
@@ -492,7 +510,7 @@ function ComboSkeletons() {
   return (
     <div className="space-y-3">
       {[1, 2, 3].map((i) => (
-        <div key={i} className="bg-surface-card rounded-2xl border border-gray-100 p-4 space-y-3 overflow-hidden">
+        <div key={i} className="bg-surface-card rounded-2xl border border-brand-black/25 p-4 space-y-3 overflow-hidden">
           <div className="flex justify-between items-center">
             <div className="h-4 shimmer rounded-full w-2/3" />
             <div className="h-4 shimmer rounded-full w-14" />
@@ -501,7 +519,7 @@ function ComboSkeletons() {
             <div className="h-3 shimmer rounded-full" />
             <div className="h-3 shimmer rounded-full w-4/5" />
           </div>
-          <div className="border-t border-gray-50 pt-2.5">
+          <div className="border-t border-brand-black/25 pt-2.5">
             <div className="h-3 shimmer rounded-full w-3/4" />
           </div>
           <div className="flex gap-2">

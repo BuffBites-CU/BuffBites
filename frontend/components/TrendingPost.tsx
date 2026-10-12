@@ -43,7 +43,7 @@ export default function TrendingPost({ combo, rank, onClick, variant = 'feed' }:
     return (
       <button onClick={onClick} className="card card-press relative w-[150px] flex-shrink-0 p-3 text-left">
         {rank !== undefined && rank <= 3 && (
-          <span className="absolute top-2.5 left-2.5 font-display text-[15px] text-brand-deep">#{rank}</span>
+          <span className="absolute top-2 left-2.5 plan-label !text-brand-black">No. 0{rank}</span>
         )}
         <div className="flex h-[92px] items-center justify-center text-brand-black">
           <Doodle name={doodle} size={78} />
@@ -68,7 +68,7 @@ export default function TrendingPost({ combo, rank, onClick, variant = 'feed' }:
           <p className="truncate text-[14px] font-semibold text-brand-black">@{combo.author_username}</p>
           <p className="truncate text-[12px] text-muted">{hall} · {timeAgo(combo.created_at)}</p>
         </div>
-        {rank !== undefined && <span className="font-display text-[18px] text-brand-deep">#{rank}</span>}
+        {rank !== undefined && <span className="plan-label !text-brand-black">No. {String(rank).padStart(2, '0')}</span>}
       </div>
 
       <div className="mt-3 flex items-center gap-3">

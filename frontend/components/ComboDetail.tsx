@@ -32,7 +32,7 @@ function ShareButton({ title, hall }: { title: string; hall?: string }) {
   return (
     <button
       onClick={handleShare}
-      className="flex-shrink-0 p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+      className="flex-shrink-0 p-1.5 rounded-full hover:bg-surface-overlay transition-colors"
       aria-label="Share combo"
     >
       {copied ? (
@@ -174,10 +174,10 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
         className={`relative bg-white rounded-t-3xl max-h-[88vh] flex flex-col transition-transform duration-300 ease-out ${visible ? 'translate-y-0' : 'translate-y-full'}`}
       >
         <div className="flex-shrink-0 flex justify-center pt-3 pb-1">
-          <div className="w-10 h-1 rounded-full bg-gray-200" />
+          <div className="w-10 h-1 rounded-full bg-surface-warm" />
         </div>
 
-        <div className="flex-shrink-0 flex items-start justify-between px-5 py-3 border-b border-gray-100">
+        <div className="flex-shrink-0 flex items-start justify-between px-5 py-3 border-b border-brand-black/25">
           <h2 className="text-lg font-bold text-brand-black pr-2 leading-tight flex-1">{combo.title}</h2>
           <div className="flex items-center gap-0.5 flex-shrink-0">
             <ShareButton
@@ -186,7 +186,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
             />
             <button
               onClick={handleClose}
-              className="p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+              className="p-1.5 rounded-full hover:bg-surface-overlay transition-colors"
               aria-label="Close"
             >
               <XMarkIcon width={20} height={20} className="text-muted" />
@@ -197,10 +197,10 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
         <div className="flex-1 overflow-y-auto px-5 py-4 space-y-5">
           {community && (
             <div className="flex flex-wrap gap-2 text-xs">
-              <span className="bg-gray-100 text-muted rounded-full px-3 py-1">
+              <span className="bg-surface-overlay text-muted rounded-full px-3 py-1">
                 {DINING_HALL_LABELS[community.dining_hall]}
               </span>
-              <span className="bg-gray-100 text-muted rounded-full px-3 py-1">
+              <span className="bg-surface-overlay text-muted rounded-full px-3 py-1">
                 {community.date}
               </span>
               <span className="text-muted">@{community.author_username}</span>
@@ -227,11 +227,11 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
             {detailLoading ? (
               <div className="space-y-2">
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="animate-pulse h-10 bg-gray-100 rounded-lg" />
+                  <div key={i} className="animate-pulse h-10 bg-surface-overlay rounded-lg" />
                 ))}
               </div>
             ) : (
-              <ul className="divide-y divide-gray-50">
+              <ul className="divide-y divide-brand-black/25">
                 {displayDishes.map((dish, i) => {
                   const n = nutrition[dish.name]
                   return (
@@ -276,7 +276,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
           )}
 
           {community?.notes && (
-            <blockquote className="border-l-2 border-gray-200 pl-3 text-sm italic text-muted">
+            <blockquote className="border-l-2 border-brand-black/25 pl-3 text-sm italic text-muted">
               {community.notes}
             </blockquote>
           )}
@@ -285,7 +285,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
             <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
               {community.images.map((src, i) => (
                 <a key={i} href={src} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-                  <div className="relative w-24 h-24 rounded-xl overflow-hidden bg-gray-100">
+                  <div className="relative w-24 h-24 rounded-xl overflow-hidden bg-surface-overlay">
                     <Image src={src} alt={`Photo ${i + 1}`} fill className="object-cover" />
                   </div>
                 </a>
@@ -324,7 +324,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
                       {firebaseUser?.uid === c.author_firebase_uid && (
                         <button
                           onClick={() => handleDeleteComment(c.id)}
-                          className="p-1 text-muted hover:text-red-400 transition-colors flex-shrink-0"
+                          className="p-1 text-muted hover:text-muted transition-colors flex-shrink-0"
                           aria-label="Delete comment"
                         >
                           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -372,7 +372,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
         </div>
 
         {type === 'community' && community && onVote && (
-          <div className="flex-shrink-0 sticky bottom-0 bg-white border-t border-gray-100 px-5 py-3">
+          <div className="flex-shrink-0 sticky bottom-0 bg-white border-t border-brand-black/25 px-5 py-3">
             <VoteButtons
               comboId={community.id}
               upvotes={community.upvotes}

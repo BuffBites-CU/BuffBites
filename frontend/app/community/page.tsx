@@ -123,7 +123,7 @@ export default function CommunityPage() {
               onClick={() => setFeedTab(tab)}
               className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all capitalize ${
                 feedTab === tab
-                  ? 'bg-brand text-brand-black'
+                  ? 'bg-brand text-white'
                   : 'bg-surface-overlay text-muted hover:bg-surface-warm'
               }`}
             >
@@ -144,7 +144,7 @@ export default function CommunityPage() {
         {!loading && error && (
           <div className="flex flex-col items-center gap-4 py-16 text-center">
             <p className="text-sm text-muted">{error}</p>
-            <button onClick={refetch} className="px-5 py-2.5 rounded-xl bg-brand text-brand-black text-sm font-display font-medium">Try again</button>
+            <button onClick={refetch} className="px-5 py-2.5 rounded-xl bg-brand text-white text-sm font-display font-medium">Try again</button>
           </div>
         )}
 
@@ -182,7 +182,7 @@ export default function CommunityPage() {
               <div key={combo.id} className="relative">
                 {isRising(combo) && (
                   <div className="absolute -top-1.5 left-3 z-10">
-                    <span className="flex items-center gap-1 bg-amber-400 text-amber-900 text-[9px] font-display font-bold tracking-wider uppercase rounded-full px-2 py-0.5 shadow-sm">
+                    <span className="flex items-center gap-1 bg-brand-black text-white text-[9px] font-display font-bold tracking-wider uppercase rounded-full px-2 py-0.5 shadow-sm">
                       ⚡ Rising
                     </span>
                   </div>
@@ -209,7 +209,7 @@ export default function CommunityPage() {
       {(
         <button
           onClick={handleShareClick}
-          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand text-brand-black text-sm font-display font-semibold shadow-glow hover:opacity-90 active:scale-95 transition-all"
+          className="fixed bottom-24 right-4 z-40 flex items-center gap-2 px-4 py-3 rounded-2xl bg-brand text-white text-sm font-display font-semibold shadow-glow hover:opacity-90 active:scale-95 transition-all"
           aria-label="Share a combo"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

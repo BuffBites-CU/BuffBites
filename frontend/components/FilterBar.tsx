@@ -42,7 +42,7 @@ function handleAllClick(props: Props) {
   else props.onChangeMulti([])
 }
 
-const PILL_ACTIVE = 'bg-brand text-brand-black'
+const PILL_ACTIVE = 'bg-brand text-white'
 const PILL_INACTIVE = 'bg-surface-card text-muted shadow-soft hover:text-brand-black'
 
 export default function FilterBar(props: Props) {

@@ -26,21 +26,22 @@ export default function NavBar() {
     >
       {/* Floating white bar on the peach page */}
       <div className="px-3" style={{ paddingBottom: 'max(10px, env(safe-area-inset-bottom))' }}>
-        <div className="max-w-md mx-auto flex h-[62px] card shadow-soft-lg px-1.5">
+        <div className="max-w-md mx-auto flex h-[60px] card shadow-soft-lg p-1.5 gap-1.5">
           {TABS.map(({ href, label, Icon }) => {
             const active = pathname.startsWith(href)
             return (
               <Link
                 key={href}
                 href={href}
-                className="flex-1 flex items-center justify-center card-press"
+                className="flex-1 flex items-stretch card-press"
                 aria-label={label}
                 aria-current={active ? 'page' : undefined}
               >
-                <span className={`flex flex-col items-center gap-0.5 transition-colors duration-200 ${active ? 'text-brand-deep' : 'text-muted'}`}>
-                  <Icon width={22} height={22} />
-                  <span className="font-display text-[13px] leading-none">{label}</span>
-                  <span className={`h-1 w-1 rounded-full bg-brand transition-opacity ${active ? 'opacity-100 animate-dot-pop' : 'opacity-0'}`} />
+                <span className={`flex w-full flex-col items-center gap-1 py-1.5 transition-colors duration-200 ${
+                  active ? 'bg-brand-black text-white' : 'text-brand-black'
+                }`}>
+                  <Icon width={21} height={21} />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.12em] leading-none">{label}</span>
                 </span>
               </Link>
             )

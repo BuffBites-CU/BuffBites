@@ -34,7 +34,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
   const variantStyle: Record<ToastVariant, string> = {
     success: 'bg-brand-black text-white border border-brand/30',
-    error:   'bg-red-600 text-white',
+    error:   'bg-brand-black text-white',
     neutral: 'bg-brand-black text-white',
   }
 

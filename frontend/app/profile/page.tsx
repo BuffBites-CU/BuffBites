@@ -18,10 +18,10 @@ import type { DietaryPreference, DiningHall, NutritionGoals, UserResponse, Commu
 /* ── Constants ─────────────────────────────────────────────────── */
 
 const DIETARY_OPTIONS: { key: DietaryPreference; label: string; style: string }[] = [
-  { key: 'vegan',       label: 'Vegan',       style: 'bg-emerald-100 text-emerald-800' },
-  { key: 'vegetarian',  label: 'Vegetarian',  style: 'bg-green-100 text-green-800' },
-  { key: 'gluten-free', label: 'Gluten-Free', style: 'bg-yellow-100 text-yellow-800' },
-  { key: 'halal',       label: 'Halal',       style: 'bg-indigo-100 text-indigo-800' },
+  { key: 'vegan',       label: 'Vegan',       style: 'bg-surface-overlay text-brand-black' },
+  { key: 'vegetarian',  label: 'Vegetarian',  style: 'bg-surface-overlay text-brand-black' },
+  { key: 'gluten-free', label: 'Gluten-Free', style: 'bg-surface-overlay text-brand-black' },
+  { key: 'halal',       label: 'Halal',       style: 'bg-surface-overlay text-brand-black' },
 ]
 
 const DIETARY_FOCUS_OPTIONS: { key: NonNullable<NutritionGoals['dietary_focus']>; label: string; icon: string; desc: string }[] = [
@@ -174,7 +174,7 @@ function WeeklyChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[]; goalPe
                 <div
                   className={`w-full rounded-t transition-all duration-500 ${
                     calories === 0 ? 'bg-surface-overlay rounded' :
-                    overGoal ? 'bg-amber-400' :
+                    overGoal ? 'bg-brand-black' :
                     isToday ? 'bg-brand' : 'bg-brand/45'
                   }`}
                   style={{ height: calories === 0 ? 3 : pct }}
@@ -217,7 +217,7 @@ function WeeklyProteinChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[];
                 <div
                   className={`w-full rounded-t transition-all duration-500 ${
                     protein === 0 ? 'bg-surface-overlay rounded' :
-                    overGoal ? 'bg-emerald-400' :
+                    overGoal ? 'bg-brand-black' :
                     isToday ? 'bg-brand' : 'bg-brand/45'
                   }`}
                   style={{ height: protein === 0 ? 3 : pct }}
@@ -303,7 +303,7 @@ function MealHistoryDay({
             {pct !== null && (
               <div className="flex-1 h-1 bg-surface-warm rounded-full overflow-hidden max-w-[60px]">
                 <div
-                  className={`h-full rounded-full ${pct >= 100 ? 'bg-red-400' : pct >= 75 ? 'bg-amber-400' : 'bg-brand'}`}
+                  className={`h-full rounded-full ${pct >= 100 ? 'bg-brand-black' : pct >= 75 ? 'bg-brand-black' : 'bg-brand'}`}
                   style={{ width: `${pct}%` }}
                 />
               </div>
@@ -341,10 +341,10 @@ function MealHistoryDay({
                 </div>
                 <button
                   onClick={() => onDelete(entry.logged_at)}
-                  className="opacity-0 group-hover:opacity-100 active:opacity-100 p-1.5 rounded-full hover:bg-red-50 transition-all"
+                  className="opacity-0 group-hover:opacity-100 active:opacity-100 p-1.5 rounded-full hover:bg-surface-overlay transition-all"
                   aria-label="Remove meal"
                 >
-                  <XMarkIcon width={13} height={13} className="text-red-400" />
+                  <XMarkIcon width={13} height={13} className="text-muted" />
                 </button>
               </div>
             </div>
@@ -521,7 +521,7 @@ export default function ProfilePage() {
   const overviewEmpty = badges.length === 0 && !profile.nutrition_goals && mealLog.length === 0 && !profile.preferred_calories_per_meal
 
   return (
-    <div className="min-h-screen bg-surface pb-28">
+    <div className="min-h-screen pb-28">
 
       {/* ── Hero header ─────────────────────────────────────────── */}
       <div className="px-4 pt-12 pb-5">
@@ -565,7 +565,7 @@ export default function ProfilePage() {
               key={key}
               onClick={() => selectTab(key)}
               className={`flex-1 px-3 py-1.5 rounded-full text-xs font-display font-semibold transition-all ${
-                activeTab === key ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-muted'
+                activeTab === key ? 'bg-brand text-white' : 'bg-surface-overlay text-muted'
               }`}
             >
               {label}
@@ -631,7 +631,7 @@ export default function ProfilePage() {
                             <span className="text-xs text-muted">/ {dailyGoal}g daily</span>
                           </div>
                           <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
-                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-emerald-400' : pct >= 66 ? 'bg-brand' : 'bg-brand/50'}`}
+                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-brand-black' : pct >= 66 ? 'bg-brand' : 'bg-brand/50'}`}
                               style={{ width: `${pct}%` }} />
                           </div>
                           {mealsToday === 0 && <p className="text-[11px] text-muted mt-1">Log meals to track protein</p>}
@@ -646,7 +646,7 @@ export default function ProfilePage() {
                           {(profile.nutrition_goals.priority_nutrients ?? []).map((n) => {
                             const opt = PRIORITY_NUTRIENTS.find((o) => o.key === n)
                             return (
-                              <span key={n} className="flex items-center gap-1 bg-brand text-brand-black rounded-full px-2.5 py-1 text-xs font-medium">
+                              <span key={n} className="flex items-center gap-1 bg-brand text-white rounded-full px-2.5 py-1 text-xs font-medium">
                                 <span>{opt?.icon}</span>{opt?.label ?? n}
                               </span>
                             )
@@ -688,7 +688,7 @@ export default function ProfilePage() {
                         </div>
                         {pct !== null && (
                           <div className="h-2 bg-surface-overlay rounded-full overflow-hidden">
-                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-red-400' : pct >= 75 ? 'bg-amber-400' : 'bg-brand'}`}
+                            <div className={`h-full rounded-full transition-all duration-500 ${pct >= 100 ? 'bg-brand-black' : pct >= 75 ? 'bg-brand-black' : 'bg-brand'}`}
                               style={{ width: `${pct}%` }} />
                           </div>
                         )}
@@ -778,7 +778,7 @@ export default function ProfilePage() {
                   <div className="space-y-2">
                     {(profile.favorites ?? []).slice().reverse().map((fav, i) => (
                       <div key={i} className="bg-surface-card rounded-xl border border-surface-overlay p-4 flex items-start gap-3">
-                        <span className="text-red-400 mt-0.5 flex-shrink-0 text-base">♥</span>
+                        <span className="text-muted mt-0.5 flex-shrink-0 text-base">♥</span>
                         <div className="min-w-0 flex-1">
                           <p className="font-display font-semibold text-sm text-brand-black line-clamp-1">{fav.title}</p>
                           <p className="text-[11px] text-muted mt-0.5">
@@ -810,7 +810,7 @@ export default function ProfilePage() {
                 {!combosLoading && myCombos.length === 0 && (
                   <div className="bg-surface-card rounded-xl border border-surface-overlay px-5 py-8 text-center space-y-3">
                     <p className="text-sm text-muted">You haven&apos;t shared any combos yet.</p>
-                    <Link href="/community" className="inline-block px-4 py-2 rounded-xl bg-brand text-brand-black text-sm font-display font-semibold hover:opacity-90 transition-opacity">
+                    <Link href="/community" className="inline-block px-4 py-2 rounded-xl bg-brand text-white text-sm font-display font-semibold hover:opacity-90 transition-opacity">
                       Share your first combo →
                     </Link>
                   </div>
@@ -832,7 +832,7 @@ export default function ProfilePage() {
                                   <span className="flex items-center gap-0.5 text-xs text-brand-deep font-medium">
                                     <ChevronUpIcon width={12} height={12} />{combo.upvotes}
                                   </span>
-                                  <span className={`flex items-center gap-0.5 text-[11px] ${expiry.urgent ? 'text-orange-500' : 'text-muted'}`}>
+                                  <span className={`flex items-center gap-0.5 text-[11px] ${expiry.urgent ? 'text-brand-black' : 'text-muted'}`}>
                                     <ClockIcon width={11} height={11} />{expiry.text}
                                   </span>
                                 </div>
@@ -842,7 +842,7 @@ export default function ProfilePage() {
                                   <>
                                     <button onClick={() => setConfirmDeleteId(null)} className="px-2 py-1 rounded-lg text-xs text-muted hover:bg-surface-overlay">Cancel</button>
                                     <button onClick={() => handleDelete(combo)} disabled={deletingId === combo.id}
-                                      className="px-2 py-1 rounded-lg text-xs font-medium text-red-500 hover:bg-red-50 disabled:opacity-40">
+                                      className="px-2 py-1 rounded-lg text-xs font-medium text-brand-black hover:bg-surface-overlay disabled:opacity-40">
                                       {deletingId === combo.id ? '…' : 'Delete'}
                                     </button>
                                   </>
@@ -852,8 +852,8 @@ export default function ProfilePage() {
                                       <PencilIcon width={15} height={15} className="text-muted" />
                                     </button>
                                     <button onClick={() => setConfirmDeleteId(combo.id)} disabled={deletingId === combo.id}
-                                      className="p-2 rounded-full hover:bg-red-50 disabled:opacity-40" aria-label="Delete">
-                                      <TrashIcon width={15} height={15} className="text-red-400" />
+                                      className="p-2 rounded-full hover:bg-surface-overlay disabled:opacity-40" aria-label="Delete">
+                                      <TrashIcon width={15} height={15} className="text-muted" />
                                     </button>
                                   </>
                                 )}
@@ -887,7 +887,7 @@ export default function ProfilePage() {
                         className="w-full rounded-xl border border-surface-warm pl-8 pr-4 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand bg-surface"
                       />
                     </div>
-                    {usernameError && <p className="text-xs text-red-500 mt-1">{usernameError}</p>}
+                    {usernameError && <p className="text-xs text-brand-black mt-1">{usernameError}</p>}
                   </div>
 
                   <div>
@@ -906,12 +906,12 @@ export default function ProfilePage() {
                     <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Default Dining Hall</label>
                     <div className="flex flex-wrap gap-2">
                       <button onClick={() => setDraft((d) => ({ ...d, default_dining_hall: '' }))}
-                        className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === '' ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-muted'}`}>
+                        className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === '' ? 'bg-brand text-white' : 'bg-surface-overlay text-muted'}`}>
                         None
                       </button>
                       {DINING_HALLS.map((hall) => (
                         <button key={hall} onClick={() => setDraft((d) => ({ ...d, default_dining_hall: hall }))}
-                          className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === hall ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-muted'}`}>
+                          className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${draft.default_dining_hall === hall ? 'bg-brand text-white' : 'bg-surface-overlay text-muted'}`}>
                           {DINING_HALL_LABELS[hall]}
                         </button>
                       ))}
@@ -942,7 +942,7 @@ export default function ProfilePage() {
                             onClick={() => setDraft((d) => ({ ...d, nutrition_goals: { ...d.nutrition_goals, dietary_focus: d.nutrition_goals.dietary_focus === key ? '' : key } }))}
                             className={`flex flex-col items-center gap-1 p-2.5 rounded-xl border text-center transition-all ${
                               draft.nutrition_goals.dietary_focus === key
-                                ? 'bg-brand border-brand text-brand-black'
+                                ? 'bg-brand border-brand text-white'
                                 : 'bg-surface-overlay border-transparent text-muted hover:bg-surface-warm'
                             }`}>
                             <span className="text-lg leading-none">{icon}</span>
@@ -978,7 +978,7 @@ export default function ProfilePage() {
                                 return { ...d, nutrition_goals: { ...d.nutrition_goals, priority_nutrients: selected ? prev.filter((n) => n !== key) : [...prev, key] } }
                               })}
                               className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
-                                selected ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-muted'
+                                selected ? 'bg-brand text-white' : 'bg-surface-overlay text-muted'
                               }`}>
                               <span>{icon}</span>{label}
                             </button>
@@ -995,7 +995,7 @@ export default function ProfilePage() {
                       <XMarkIcon width={16} height={16} /> Cancel
                     </button>
                     <button onClick={handleSave} disabled={saving}
-                      className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-brand text-brand-black text-sm font-display font-semibold disabled:opacity-60 hover:opacity-90 transition-opacity">
+                      className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-brand text-white text-sm font-display font-semibold disabled:opacity-60 hover:opacity-90 transition-opacity">
                       <CheckIcon width={16} height={16} /> {saving ? 'Saving…' : 'Save'}
                     </button>
                   </div>
@@ -1004,7 +1004,7 @@ export default function ProfilePage() {
                 <div className="space-y-3">
                   <button
                     onClick={enterEdit}
-                    className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-brand text-brand-black text-sm font-display font-semibold hover:opacity-90 active:scale-[0.99] transition-all"
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-brand text-white text-sm font-display font-semibold hover:opacity-90 active:scale-[0.99] transition-all"
                   >
                     <PencilIcon width={14} height={14} /> Edit Profile
                   </button>
@@ -1033,7 +1033,7 @@ export default function ProfilePage() {
                         <p className="text-sm font-medium text-brand-black">{profile.preferred_calories_per_meal} cal/meal</p>
                       </div>
                     )}
-                    <button onClick={signOut} className="w-full px-5 py-4 text-sm font-medium text-red-500 hover:bg-red-50 transition-colors text-left">
+                    <button onClick={signOut} className="w-full px-5 py-4 text-sm font-medium text-brand-black hover:bg-surface-overlay transition-colors text-left">
                       Sign Out
                     </button>
                   </div>

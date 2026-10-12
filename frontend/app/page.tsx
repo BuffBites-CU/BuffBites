@@ -8,10 +8,10 @@ import { openInstallGuide } from '@/components/InstallPrompt'
 import Doodle from '@/components/Doodle'
 
 const FEATURES = [
-  { icon: '✨', label: 'AI combos' },
-  { icon: '📸', label: 'Snap your plate' },
-  { icon: '🔥', label: 'Trending picks' },
-  { icon: '💪', label: 'Fuel Score' },
+  { icon: 'A', label: 'AI combos' },
+  { icon: 'B', label: 'Snap your plate' },
+  { icon: 'C', label: 'Trending picks' },
+  { icon: 'D', label: 'Fuel Score' },
 ]
 
 export default function LandingPage() {
@@ -53,25 +53,30 @@ export default function LandingPage() {
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 pt-20 pb-6 relative z-10">
         {/* Logo */}
-        <div className="w-24 h-24 rounded-[28px] overflow-hidden shadow-soft-lg animate-pop-in">
-          <Image src="/logoi.jpeg" alt="BuffBites logo" width={96} height={96} className="object-cover w-full h-full" priority />
+        <div className="w-24 h-24 overflow-hidden shadow-soft-lg animate-pop-in">
+          <Image src="/logoi.jpeg" alt="BuffBites logo" width={96} height={96} className="object-cover w-full h-full grayscale contrast-125" priority />
         </div>
 
-        <h1 className="mt-6 text-[46px] leading-none text-brand-black text-center">Eat smarter, Buffs.</h1>
+        <span className="plan-label mt-6">Campus mess · Ground floor plan</span>
+        <h1 className="mt-2 text-[44px] leading-none text-brand-black text-center">Eat smarter, Buffs.</h1>
         <p className="mt-3 text-[15px] text-muted text-center leading-relaxed">
           AI meal combos from today&apos;s menus<br />at every CU Boulder dining hall
         </p>
 
         {/* Floating doodles: what's on the menu */}
         <div className="mt-8 grid grid-cols-3 gap-3 w-full max-w-[300px]">
-          {(['burger', 'bowl', 'pizza', 'salad', 'taco', 'icecream'] as const).map((d, i) => (
+          {([
+            ['burger', 'Grill'], ['bowl', 'Wok'], ['pizza', 'Oven'],
+            ['salad', 'Greens'], ['taco', 'Latin'], ['icecream', 'Dessert'],
+          ] as const).map(([d, room], i) => (
             <div
               key={d}
-              className="card aspect-square flex items-center justify-center text-brand-black animate-pop-in"
+              className="card relative aspect-square flex items-center justify-center text-brand-black animate-pop-in"
               style={{ animationDelay: `${120 + i * 70}ms` }}
             >
-              <div className="animate-float" style={{ animationDelay: `${i * 0.35}s` }}>
-                <Doodle name={d} size={52} />
+              <span className="absolute left-1.5 top-1 font-mono text-[9px] uppercase tracking-[0.12em] text-muted">{String(i + 1).padStart(2, '0')} {room}</span>
+              <div className="animate-float mt-2" style={{ animationDelay: `${i * 0.35}s` }}>
+                <Doodle name={d} size={48} />
               </div>
             </div>
           ))}
@@ -81,7 +86,7 @@ export default function LandingPage() {
         <div className="mt-7 flex flex-wrap justify-center gap-2">
           {FEATURES.map(({ icon, label }) => (
             <span key={label} className="flex items-center gap-1.5 rounded-full bg-surface-card shadow-soft px-3.5 py-1.5 text-[13px] text-brand-black">
-              <span aria-hidden>{icon}</span>
+              <span aria-hidden className="font-mono text-[10px] text-muted">{icon}</span>
               {label}
             </span>
           ))}
@@ -100,11 +105,11 @@ export default function LandingPage() {
         </button>
 
         {error && (
-          <p role="alert" className="text-center text-sm text-red-700 font-medium bg-surface-card shadow-soft rounded-full px-4 py-1.5">{error}</p>
+          <p role="alert" className="text-center text-sm text-brand-black font-medium bg-surface-card shadow-soft rounded-full px-4 py-1.5">{error}</p>
         )}
 
         <p className="text-[12px] text-center text-muted pt-1">
-          Sign in to save combos & track meals · 🦬
+          Sign in to save combos & track meals
         </p>
       </div>
     </div>

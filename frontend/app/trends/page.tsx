@@ -50,7 +50,7 @@ function PodiumCard({ rank, combo, onClick }: PodiumCardProps) {
       }`}
       style={{ animationDelay: `${(3 - rank) * 80}ms` }}
     >
-      <span className="text-xl leading-none mb-1.5">{medal}</span>
+      <span className="plan-label !text-brand-black mb-1.5">No. 0{rank}</span>
       <StudentAvatar name={combo.author_username} size={rank === 1 ? 52 : 42} />
       <p className="mt-1.5 text-[11px] text-muted truncate max-w-full">@{combo.author_username}</p>
       <p className="font-display text-[16px] text-brand-black line-clamp-2 leading-tight flex-1">{combo.title}</p>
@@ -141,12 +141,12 @@ export default function TrendsPage() {
       {/* Header */}
       <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
         <div className="max-w-md mx-auto px-4 pt-4 pb-3 flex items-center justify-between">
-          <h1 className="text-[32px] text-brand-black leading-none">Trending <span aria-hidden>🔥</span></h1>
+          <div><span className="plan-label">Sheet B-01</span><h1 className="text-[32px] text-brand-black leading-none">Trending</h1></div>
           {activeTab === 'today' && (
             <span className={`flex items-center gap-1 text-xs font-display font-medium px-2.5 py-1 rounded-full ${
-              resetInfo.urgent ? 'bg-amber-100 text-amber-700' : 'bg-surface-overlay text-muted'
+              resetInfo.urgent ? 'bg-surface-overlay text-brand-black' : 'bg-surface-overlay text-muted'
             }`}>
-              🔄 Resets in {resetInfo.text}
+              Resets in {resetInfo.text}
             </span>
           )}
         </div>
@@ -159,7 +159,7 @@ export default function TrendsPage() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all ${
                 activeTab === tab
-                  ? 'bg-brand text-brand-black'
+                  ? 'bg-brand text-white'
                   : 'bg-surface-overlay text-muted hover:bg-surface-warm'
               }`}
             >
@@ -177,7 +177,7 @@ export default function TrendsPage() {
         </div>
         {multiLoading && selectedHalls.length > 1 && (
           <div className="max-w-md mx-auto px-4 pb-2">
-            <span className="inline-flex items-center gap-1.5 text-xs text-muted bg-gray-100 rounded-full px-3 py-1">
+            <span className="inline-flex items-center gap-1.5 text-xs text-muted bg-surface-overlay rounded-full px-3 py-1">
               <svg className="animate-spin h-3 w-3 flex-shrink-0" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
@@ -231,7 +231,7 @@ export default function TrendsPage() {
                     )}
                     {isRising(combo) && (
                       <div className="absolute -top-1.5 right-2 z-10">
-                        <span className="flex items-center gap-1 bg-amber-400 text-amber-900 text-[9px] font-display font-bold uppercase rounded-full px-2 py-0.5 shadow-sm">⚡ Rising</span>
+                        <span className="flex items-center gap-1 bg-brand-black text-white text-[9px] font-display font-bold uppercase rounded-full px-2 py-0.5 shadow-sm">⚡ Rising</span>
                       </div>
                     )}
                     <TrendingPost combo={combo} rank={medal ? undefined : rank} onClick={() => setActiveCombo(combo)} />
@@ -265,9 +265,9 @@ function TrendSkeletons() {
         <div className="min-h-[148px] shimmer rounded-2xl" />
         <div className="min-h-[104px] shimmer rounded-2xl" />
       </div>
-      <div className="border-t border-gray-100 mb-2" />
+      <div className="border-t border-brand-black/25 mb-2" />
       {[1, 2, 3, 4].map((i) => (
-        <div key={i} className="bg-surface-card rounded-2xl border border-gray-100 p-4 space-y-3 overflow-hidden">
+        <div key={i} className="bg-surface-card rounded-2xl border border-brand-black/25 p-4 space-y-3 overflow-hidden">
           <div className="flex gap-3 items-center">
             <div className="h-5 shimmer rounded w-6" />
             <div className="h-4 shimmer rounded-full flex-1" />

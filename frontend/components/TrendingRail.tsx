@@ -34,15 +34,21 @@ export default function TrendingRail({ onOpen }: Props) {
 
   return (
     <section className="mb-6" aria-labelledby="trending-rail-heading">
-      <div className="flex items-baseline justify-between mb-3">
-        <h2 id="trending-rail-heading" className="text-[24px] text-brand-black leading-none">
-          Trending {weekly ? 'this week' : 'on campus'}
-        </h2>
-        <Link href="/trends" className="font-display text-[17px] text-brand-deep">
-          See all
-        </Link>
+      <div className="mb-3">
+        <div className="flex items-end justify-between gap-2">
+          <div>
+            <span className="plan-label">Sec. 01</span>
+            <h2 id="trending-rail-heading" className="text-[24px] text-brand-black leading-tight">
+              Trending {weekly ? 'this week' : 'on campus'}
+            </h2>
+          </div>
+          <Link href="/trends" className="font-display text-[16px] text-brand-black underline underline-offset-4">
+            See all
+          </Link>
+        </div>
+        <div className="dim-line mt-1.5" aria-hidden />
       </div>
-      <div className="-mx-4 px-4 pb-3 overflow-x-auto scrollbar-hide">
+      <div className="-mx-4 px-4 pt-1 pb-3 overflow-x-auto scrollbar-hide">
         <div className="flex gap-3 w-max">
           {combos === null
             ? [0, 1, 2].map((i) => <div key={i} className="w-[150px] h-[190px] shimmer rounded-3xl" />)

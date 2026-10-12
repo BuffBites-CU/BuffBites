@@ -186,7 +186,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
 
         {phase === 'reading' && (
           <div className="flex flex-col items-center gap-2 py-6 text-center" role="status">
-            <span className="text-3xl animate-wiggle" aria-hidden>🍽</span>
+            <Doodle name="plate" size={48} className="text-brand-black animate-float" />
             <p className="text-sm font-semibold text-brand-black">Reading your plate…</p>
             <p className="text-xs text-muted">Matching it against {DINING_HALL_LABELS[dining]}&apos;s menu today</p>
           </div>
@@ -195,7 +195,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
         {phase === 'error' && (
           <div className="py-6 text-center" role="alert">
             <p className="text-sm text-brand-black font-medium">{error}</p>
-            <button onClick={pickPhoto} className="mt-3 px-4 py-2.5 rounded-xl bg-brand text-brand-black text-sm font-semibold">
+            <button onClick={pickPhoto} className="mt-3 px-4 py-2.5 rounded-xl bg-brand text-white text-sm font-semibold">
               Try another photo
             </button>
           </div>
@@ -210,7 +210,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
             <div className="card p-4 mb-3" aria-live="polite">
               <div className="flex items-baseline justify-between">
                 <span className="font-display text-[30px] leading-none text-brand-black">{totals.calories} cal</span>
-                {fuel && <span className="text-sm font-display font-bold text-brand-black">{fuel.emoji} {fuel.label} · {fuel.score}</span>}
+                {fuel && <span className="font-display text-[17px] text-brand-black">{fuel.label} · {fuel.score}</span>}
               </div>
               <p className="text-[13px] text-brand-black mt-0.5">
                 <b>{totals.protein_g}g</b> protein · {totals.carbs_g}g carbs · {totals.fat_g}g fat · {totals.fiber_g}g fiber
@@ -253,7 +253,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
                           aria-pressed={selected}
                           onClick={() => setRows((prev) => prev.map((r) => (r.id === row.id ? { ...r, portion: p } : r)))}
                           className={`min-w-[44px] h-8 px-2 rounded-full text-[12px] font-semibold ${
-                            selected ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-brand-black'
+                            selected ? 'bg-brand text-white' : 'bg-surface-overlay text-white'
                           }`}
                         >
                           {p}×
@@ -267,7 +267,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
                         aria-label={`${row.item.portion}× (estimate)`}
                         onClick={() => setRows((prev) => prev.map((r) => (r.id === row.id ? { ...r, portion: r.item.portion } : r)))}
                         className={`min-w-[44px] h-8 px-2 rounded-full text-[12px] font-semibold ${
-                          Math.abs(row.portion - row.item.portion) < 0.01 ? 'bg-brand text-brand-black' : 'bg-surface-overlay text-brand-black'
+                          Math.abs(row.portion - row.item.portion) < 0.01 ? 'bg-brand text-white' : 'bg-surface-overlay text-white'
                         }`}
                       >
                         {row.item.portion}×
@@ -283,12 +283,12 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
                 Not on today&apos;s menu, so not counted: {result.unmatched.map((u) => u.description).join(', ')}
               </p>
             )}
-            {result.notes && <p className="text-[12px] text-brand-black mb-3">💬 {result.notes}</p>}
+            {result.notes && <p className="text-[12px] text-brand-black mb-3"><span className="plan-label !text-brand-black mr-1.5">Note</span>{result.notes}</p>}
 
             <button
               onClick={handleLog}
               disabled={logState !== 'idle' || rows.length === 0 || !firebaseUid}
-              className="w-full py-3.5 rounded-2xl bg-brand text-brand-black font-display text-[19px] card-press disabled:opacity-60"
+              className="w-full py-3.5 rounded-2xl bg-brand text-white font-display text-[19px] card-press disabled:opacity-60"
             >
               {logState === 'logged' ? '✓ Logged' : logState === 'logging' ? 'Logging…' : `Log ${period.toLowerCase()} · ${totals.calories} cal`}
             </button>
@@ -303,17 +303,19 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
 
   return (
     <>
-      {/* Dark hero banner (the reference's "Compose your imagery with AI" card) */}
-      <div className="relative mb-4 overflow-hidden rounded-3xl bg-brand-black px-4 py-5 shadow-soft-lg">
+      {/* Hero panel: an ink "detail" sheet with white linework */}
+      <div className="relative mb-4 overflow-hidden rounded-3xl bg-brand-black px-4 pt-7 pb-5 shadow-soft-lg">
+        <span className="absolute left-4 top-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-white/60">Fig. 1 · Plate scan</span>
+        <span className="absolute right-4 top-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-white/60">1:1</span>
         <div className="flex items-center gap-3">
-          <div className="relative flex-shrink-0 w-[104px] h-[104px] rounded-2xl bg-white/5 flex items-center justify-center">
+          <div className="relative flex-shrink-0 w-[104px] h-[104px] border border-dashed border-white/40 flex items-center justify-center">
             <Doodle name="scan" size={84} className="text-white animate-float" />
           </div>
           <div className="min-w-0 flex-1">
             <p className="font-display text-[22px] leading-tight text-white">Snap your plate,<br />we count the macros</p>
             <button
               onClick={pickPhoto}
-              className="mt-3 rounded-xl bg-brand px-4 py-2 font-display text-[17px] text-brand-black card-press"
+              className="mt-3 rounded-xl bg-white px-4 py-2 font-display text-[17px] text-brand-black card-press"
             >
               Scan now
             </button>

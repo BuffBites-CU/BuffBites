@@ -80,12 +80,12 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
 
       <div className="relative bg-white rounded-t-2xl max-h-[92vh] flex flex-col">
         <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
-          <div className="w-10 h-1 rounded-full bg-gray-200" />
+          <div className="w-10 h-1 rounded-full bg-surface-warm" />
         </div>
 
         <div className="flex items-center justify-between px-5 py-2 flex-shrink-0">
           <h2 className="text-lg font-bold text-brand-black">Edit Combo</h2>
-          <button onClick={onClose} className="p-1.5 rounded-full hover:bg-gray-100 transition-colors">
+          <button onClick={onClose} className="p-1.5 rounded-full hover:bg-surface-overlay transition-colors">
             <XMarkIcon width={20} height={20} className="text-muted" />
           </button>
         </div>
@@ -101,7 +101,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
               maxLength={60}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
+              className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
             />
           </div>
 
@@ -119,7 +119,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Why does this combo work?"
-              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
+              className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand resize-none"
             />
           </div>
 
@@ -133,7 +133,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
                   type="button"
                   onClick={() => toggleTag(tag)}
                   className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${
-                    tags.includes(tag) ? tagStyle(tag) : 'bg-gray-100 text-muted'
+                    tags.includes(tag) ? tagStyle(tag) : 'bg-surface-overlay text-muted'
                   }`}
                 >
                   {tag}
@@ -152,7 +152,7 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
                     value={dish.name}
                     onChange={(e) => updateDish(i, 'name', e.target.value)}
                     placeholder="Dish name"
-                    className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand"
+                    className="flex-1 rounded-lg border border-brand-black/25 px-3 py-2 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand"
                   />
                   <input
                     type="number"
@@ -160,12 +160,12 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
                     max={5}
                     value={dish.servings}
                     onChange={(e) => updateDish(i, 'servings', Number(e.target.value))}
-                    className="w-12 rounded-lg border border-gray-200 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
+                    className="w-12 rounded-lg border border-brand-black/25 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
                   />
                   <button
                     onClick={() => removeDish(i)}
                     disabled={dishes.length <= 1}
-                    className="flex-shrink-0 p-1.5 rounded-full hover:bg-gray-100 disabled:opacity-30 transition-colors"
+                    className="flex-shrink-0 p-1.5 rounded-full hover:bg-surface-overlay disabled:opacity-30 transition-colors"
                   >
                     <XMarkIcon width={16} height={16} className="text-muted" />
                   </button>
@@ -194,24 +194,24 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Any tips or context?"
-              className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
+              className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand resize-none"
             />
           </div>
 
-          {error && <p className="text-sm text-red-500">{error}</p>}
+          {error && <p className="text-sm text-brand-black">{error}</p>}
         </div>
 
-        <div className="flex-shrink-0 px-5 py-4 border-t border-gray-100 flex gap-3">
+        <div className="flex-shrink-0 px-5 py-4 border-t border-brand-black/25 flex gap-3">
           <button
             onClick={onClose}
-            className="flex-1 py-3 rounded-xl border border-gray-200 text-sm font-medium text-brand-black hover:bg-gray-50 transition-colors"
+            className="flex-1 py-3 rounded-xl border border-brand-black/25 text-sm font-medium text-brand-black hover:bg-surface-overlay transition-colors"
           >
             Cancel
           </button>
           <button
             onClick={handleSave}
             disabled={saving}
-            className="flex-1 py-3 rounded-xl bg-brand text-brand-black text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
+            className="flex-1 py-3 rounded-xl bg-brand text-white text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
           >
             {saving ? 'Saving…' : 'Save Changes'}
           </button>

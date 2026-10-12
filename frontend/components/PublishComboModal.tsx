@@ -173,7 +173,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
 
       <div className="relative bg-white rounded-t-3xl max-h-[92vh] flex flex-col">
         <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
-          <div className="w-10 h-1 rounded-full bg-gray-200" />
+          <div className="w-10 h-1 rounded-full bg-surface-warm" />
         </div>
 
         {/* Step progress */}
@@ -182,14 +182,14 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
             <span className={step >= 1 ? 'text-brand-deep font-semibold' : 'text-muted'}>
               ① Hall &amp; Date
             </span>
-            <span className="text-gray-300">→</span>
+            <span className="text-muted">→</span>
             <span className={step >= 2 ? 'text-brand-deep font-semibold' : 'text-muted'}>
               ② Combo Details
             </span>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+            className="p-1.5 rounded-full hover:bg-surface-overlay transition-colors"
             aria-label="Close"
           >
             <XMarkIcon width={20} height={20} className="text-muted" />
@@ -209,7 +209,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   value={form.dining_hall}
                   onChange={(e) => changeDiningHall(e.target.value as DiningHall | '')}
                   className={`w-full rounded-xl border px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand ${
-                    fieldErrors.dining_hall ? 'border-red-300' : 'border-gray-200'
+                    fieldErrors.dining_hall ? 'border-brand-black/25' : 'border-brand-black/25'
                   }`}
                 >
                   <option value="">Select a dining hall…</option>
@@ -218,7 +218,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   ))}
                 </select>
                 {fieldErrors.dining_hall && (
-                  <p className="text-xs text-red-500 mt-1">{fieldErrors.dining_hall}</p>
+                  <p className="text-xs text-brand-black mt-1">{fieldErrors.dining_hall}</p>
                 )}
               </div>
 
@@ -233,11 +233,11 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                     setFieldErrors((err) => ({ ...err, date: undefined }))
                   }}
                   className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand ${
-                    fieldErrors.date ? 'border-red-300' : 'border-gray-200'
+                    fieldErrors.date ? 'border-brand-black/25' : 'border-brand-black/25'
                   }`}
                 />
                 {fieldErrors.date && (
-                  <p className="text-xs text-red-500 mt-1">{fieldErrors.date}</p>
+                  <p className="text-xs text-brand-black mt-1">{fieldErrors.date}</p>
                 )}
               </div>
             </div>
@@ -254,7 +254,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 <select
                   value={form.dining_hall}
                   onChange={(e) => changeDiningHall(e.target.value as DiningHall | '')}
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
+                  className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
                 >
                   <option value="">Select a dining hall…</option>
                   {DINING_HALLS.map((h) => (
@@ -276,12 +276,12 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                     setFieldErrors((err) => ({ ...err, title: undefined }))
                   }}
                   placeholder="e.g. The Midnight Special"
-                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand ${
-                    fieldErrors.title ? 'border-red-300' : 'border-gray-200'
+                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand ${
+                    fieldErrors.title ? 'border-brand-black/25' : 'border-brand-black/25'
                   }`}
                 />
                 {fieldErrors.title && (
-                  <p className="text-xs text-red-500 mt-1">{fieldErrors.title}</p>
+                  <p className="text-xs text-brand-black mt-1">{fieldErrors.title}</p>
                 )}
               </div>
 
@@ -296,7 +296,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   value={form.description}
                   onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
                   placeholder="Why does this combo work?"
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
+                  className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand resize-none"
                 />
               </div>
 
@@ -309,7 +309,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                       type="button"
                       onClick={() => toggleTag(tag)}
                       className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${
-                        form.tags.includes(tag) ? tagStyle(tag) : 'bg-gray-100 text-muted'
+                        form.tags.includes(tag) ? tagStyle(tag) : 'bg-surface-overlay text-muted'
                       }`}
                     >
                       {tag}
@@ -330,7 +330,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                         <select
                           value={dish.name}
                           onChange={(e) => updateDishFromSelect(i, e.target.value)}
-                          className="flex-1 rounded-xl border border-gray-200 px-3 py-2 text-sm text-brand-black bg-white focus:outline-none focus:ring-2 focus:ring-brand"
+                          className="flex-1 rounded-xl border border-brand-black/25 px-3 py-2 text-sm text-brand-black bg-white focus:outline-none focus:ring-2 focus:ring-brand"
                         >
                           <option value="">Select a dish…</option>
                           {Object.entries(menuByStation).map(([station, names]) => (
@@ -347,7 +347,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                           onChange={(e) => updateDish(i, 'name', e.target.value)}
                           placeholder={menuLoading ? 'Loading…' : 'Dish name'}
                           disabled={menuLoading}
-                          className="flex-1 rounded-xl border border-gray-200 px-3 py-2 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand disabled:opacity-50"
+                          className="flex-1 rounded-xl border border-brand-black/25 px-3 py-2 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand disabled:opacity-50"
                         />
                       )}
                       <input
@@ -356,12 +356,12 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                         max={5}
                         value={dish.servings}
                         onChange={(e) => updateDish(i, 'servings', Number(e.target.value))}
-                        className="w-12 rounded-xl border border-gray-200 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
+                        className="w-12 rounded-xl border border-brand-black/25 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
                       />
                       <button
                         onClick={() => removeDish(i)}
                         disabled={form.dishes.length <= 1}
-                        className="flex-shrink-0 p-1.5 rounded-full hover:bg-gray-100 disabled:opacity-30 transition-colors"
+                        className="flex-shrink-0 p-1.5 rounded-full hover:bg-surface-overlay disabled:opacity-30 transition-colors"
                         aria-label="Remove dish"
                       >
                         <XMarkIcon width={16} height={16} className="text-muted" />
@@ -370,7 +370,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   ))}
                 </div>
                 {fieldErrors.dishes && (
-                  <p className="text-xs text-red-500 mt-1">{fieldErrors.dishes}</p>
+                  <p className="text-xs text-brand-black mt-1">{fieldErrors.dishes}</p>
                 )}
                 {form.dishes.length < 8 && (
                   <button
@@ -394,22 +394,22 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   value={form.notes}
                   onChange={(e) => setForm((f) => ({ ...f, notes: e.target.value }))}
                   placeholder="Any tips or context?"
-                  className="w-full rounded-xl border border-gray-200 px-3 py-2.5 text-sm text-brand-black placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-brand resize-none"
+                  className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand resize-none"
                 />
               </div>
 
               {submitError && (
-                <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">{submitError}</p>
+                <p className="text-sm text-brand-black bg-surface-overlay rounded-xl px-4 py-3">{submitError}</p>
               )}
             </div>
           )}
         </div>
 
-        <div className="flex-shrink-0 px-5 py-4 border-t border-gray-100 flex gap-3">
+        <div className="flex-shrink-0 px-5 py-4 border-t border-brand-black/25 flex gap-3">
           {step > 1 && (
             <button
               onClick={() => setStep((s) => (s - 1) as 1 | 2)}
-              className="flex-1 py-3 rounded-xl border border-gray-200 text-sm font-medium text-brand-black hover:bg-gray-50 transition-colors"
+              className="flex-1 py-3 rounded-xl border border-brand-black/25 text-sm font-medium text-brand-black hover:bg-surface-overlay transition-colors"
             >
               Back
             </button>
@@ -417,7 +417,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
           {step < 2 ? (
             <button
               onClick={() => { if (validateStep1()) setStep(2) }}
-              className="flex-1 py-3 rounded-xl bg-brand text-brand-black text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="flex-1 py-3 rounded-xl bg-brand text-white text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Next →
             </button>
@@ -425,7 +425,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
             <button
               onClick={handlePublish}
               disabled={submitting}
-              className="flex-1 py-3 rounded-xl bg-brand text-brand-black text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
+              className="flex-1 py-3 rounded-xl bg-brand text-white text-sm font-semibold disabled:opacity-50 hover:opacity-90 transition-opacity"
             >
               {submitting ? 'Publishing…' : 'Publish'}
             </button>

@@ -157,7 +157,7 @@ export default function InstallPrompt() {
               aria-selected={platform === p}
               onClick={() => setPlatform(p)}
               className={`rounded-full px-4 py-1.5 font-display text-[16px] transition-colors ${
-                platform === p ? 'bg-brand text-brand-black' : 'text-muted'
+                platform === p ? 'bg-brand text-white' : 'text-muted'
               }`}
             >
               {p === 'ios' ? 'iPhone' : 'Android'}
@@ -170,7 +170,7 @@ export default function InstallPrompt() {
         {platform === 'android' && installEvent ? (
           <button
             onClick={installNow}
-            className="mt-5 w-full rounded-2xl bg-brand py-3.5 font-display text-[20px] text-brand-black card-press"
+            className="mt-5 w-full rounded-2xl bg-brand py-3.5 font-display text-[20px] text-white card-press"
           >
             Install now
           </button>

@@ -106,8 +106,8 @@ export default function MenuView({ dining, date, period }: Props) {
               <div className="min-w-0">
                 <p className="text-sm font-medium text-brand-black leading-snug">{item.name}</p>
                 <div className="flex flex-wrap gap-1 mt-1">
-                  {item.is_vegan && <Badge className="bg-emerald-100 text-emerald-800">Vegan</Badge>}
-                  {!item.is_vegan && item.is_vegetarian && <Badge className="bg-green-100 text-green-800">Veg</Badge>}
+                  {item.is_vegan && <Badge className="bg-surface-overlay text-brand-black">Vegan</Badge>}
+                  {!item.is_vegan && item.is_vegetarian && <Badge className="bg-surface-overlay text-brand-black">Veg</Badge>}
                 </div>
               </div>
               {item.calories != null && (

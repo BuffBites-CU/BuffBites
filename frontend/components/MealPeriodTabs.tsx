@@ -38,7 +38,7 @@ export default function MealPeriodTabs({ selected, onChange, counts, nowPeriod }
             </span>
             {period}
             {hasWarning && (
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" aria-label="fewer combos available" />
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-black flex-shrink-0" aria-label="fewer combos available" />
             )}
             {isNow && (
               <span className="absolute top-1.5 right-2 text-[8px] font-bold uppercase tracking-wider text-brand-deep" aria-label="serving now">

@@ -31,11 +31,12 @@ const config: Config = {
         muted: 'rgb(var(--muted) / <alpha-value>)',
       },
       fontFamily: {
-        sans:    ['var(--font-outfit)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        // Hand-drawn face. `display` and `brush` both map to it so every
-        // heading, label and button shares one handwriting style.
-        display: ['var(--font-hand)',   'ui-rounded', 'system-ui', 'sans-serif'],
-        brush:   ['var(--font-hand)',   'ui-rounded', 'system-ui', 'sans-serif'],
+        sans:    ['var(--font-body)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // Architect's lettering. `display` and `brush` both map to it so every
+        // heading, label and button shares one hand.
+        display: ['var(--font-hand)', 'ui-rounded', 'system-ui', 'sans-serif'],
+        brush:   ['var(--font-hand)', 'ui-rounded', 'system-ui', 'sans-serif'],
+        mono:    ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
         title:   ['1.375rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
@@ -43,6 +44,16 @@ const config: Config = {
         body:    ['0.9375rem', { lineHeight: '1.5' }],
         caption: ['0.75rem',   { lineHeight: '1.4' }],
         label:   ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.07em' }],
+      },
+      // Drawings use near-square corners; only `full` (avatars, dots) stays round.
+      borderRadius: {
+        sm:    '1px',
+        DEFAULT: '2px',
+        md:    '2px',
+        lg:    '3px',
+        xl:    '3px',
+        '2xl': '4px',
+        '3xl': '4px',
       },
       boxShadow: {
         'card-sm':  '0 1px 3px rgba(26,20,16,0.06), 0 1px 2px rgba(26,20,16,0.04)',
@@ -52,10 +63,12 @@ const config: Config = {
         // Tailwind generates for colors.brand and render a solid orange halo.
         'glow':     '0 6px 20px rgb(var(--brand) / 0.35)',
         'glow-sm':  '0 2px 8px rgb(var(--brand) / 0.25)',
-        // Minimal, soft, warm-tinted elevation for white cards on peach.
-        'soft':     '0 6px 20px rgb(var(--shadow) / 0.10), 0 1px 3px rgb(var(--shadow) / 0.06)',
-        'soft-lg':  '0 14px 36px rgb(var(--shadow) / 0.14), 0 2px 6px rgb(var(--shadow) / 0.06)',
-        'sticker':  '0 6px 20px rgb(var(--shadow) / 0.10), 0 1px 3px rgb(var(--shadow) / 0.06)',
+        // Architectural plan: elements are drawn with a hairline, not lifted
+        // with shadows. `soft` is a 1.5px outline; `soft-lg` adds a faint
+        // offset like a drop line on a drawing.
+        'soft':     '0 0 0 1.5px rgb(var(--ink))',
+        'soft-lg':  '0 0 0 1.5px rgb(var(--ink)), 5px 5px 0 0 rgb(var(--ink) / 0.10)',
+        'sticker':  '0 0 0 1.5px rgb(var(--ink))',
       },
     },
   },

@@ -18,10 +18,11 @@ export default function DiningSelector({ selected, onChange }: Props) {
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="w-full flex items-center justify-between gap-2 rounded-full bg-surface-overlay px-4 py-2 text-left hover:bg-surface-warm transition-colors"
+        className="w-full flex items-center justify-between gap-2 bg-surface-card shadow-soft px-3.5 py-2 text-left hover:bg-surface-overlay transition-colors"
       >
-        <span className="font-display text-[13px] font-semibold tracking-wide text-brand-black truncate">
-          {DINING_HALL_LABELS[selected]}
+        <span className="flex items-baseline gap-2 min-w-0">
+          <span className="plan-label flex-shrink-0">Hall</span>
+          <span className="font-display text-[16px] text-brand-black truncate">{DINING_HALL_LABELS[selected]}</span>
         </span>
         <ChevronDownIcon
           width={14}
@@ -33,7 +34,7 @@ export default function DiningSelector({ selected, onChange }: Props) {
       {open && (
         <>
           <div className="fixed inset-0 z-10" onClick={() => setOpen(false)} />
-          <div className="absolute left-0 right-0 mt-1.5 z-20 bg-surface-card rounded-2xl border border-surface-overlay shadow-card-lg overflow-hidden">
+          <div className="absolute left-0 right-0 mt-1.5 z-20 bg-surface-card shadow-soft-lg overflow-hidden">
             {DINING_HALLS.map((hall) => (
               <button
                 key={hall}

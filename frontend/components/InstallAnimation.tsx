@@ -158,7 +158,7 @@ export default function InstallAnimation({ platform }: { platform: InstallPlatfo
           {/* iOS share sheet / Android menu */}
           {ios ? (
             <div className="ia-loop ia-sheet absolute inset-x-0 bottom-0 h-[42%] rounded-t-2xl bg-white shadow-soft-lg px-2.5 pt-2">
-              <div className="mx-auto mb-1.5 h-1 w-8 rounded-full bg-stone-300" />
+              <div className="mx-auto mb-1.5 h-1 w-8 rounded-full bg-surface-warm" />
               {['Copy', 'Add to Reading List', 'Add Bookmark'].map((r) => (
                 <div key={r} className="py-1.5 text-[9px] text-brand-black border-b border-surface-overlay">{r}</div>
               ))}
@@ -186,7 +186,7 @@ export default function InstallAnimation({ platform }: { platform: InstallPlatfo
               <span className={`ia-loop ia-addbtn rounded-md px-1 font-semibold text-brand-deep ${ios ? '' : 'invisible'}`}>Add</span>
             </div>
             <div className="mt-2 flex items-center gap-2">
-              <Image src="/logoi.jpeg" alt="" width={28} height={28} className="rounded-lg" />
+              <Image src="/logoi.jpeg" alt="" width={28} height={28} className="grayscale contrast-125 rounded-lg" />
               <span className="text-[10px] text-brand-black">BuffBites</span>
             </div>
             {!ios && (
@@ -197,7 +197,7 @@ export default function InstallAnimation({ platform }: { platform: InstallPlatfo
           </div>
 
           {/* Home screen */}
-          <div className="ia-loop ia-home absolute inset-0 bg-gradient-to-b from-[#FFD9C6] to-[#FFF1EA] px-3 pt-8">
+          <div className="ia-loop ia-home absolute inset-0 bg-surface-overlay hatch px-3 pt-8">
             <div className="grid grid-cols-4 gap-x-2 gap-y-3">
               {Array.from({ length: 11 }, (_, i) => (
                 <div key={i} className="flex flex-col items-center gap-0.5">
@@ -207,10 +207,10 @@ export default function InstallAnimation({ platform }: { platform: InstallPlatfo
               ))}
               <div className="relative flex flex-col items-center gap-0.5">
                 <div className="ia-loop ia-newicon h-7 w-7 overflow-hidden rounded-lg shadow-soft">
-                  <Image src="/logoi.jpeg" alt="" width={28} height={28} />
+                  <Image src="/logoi.jpeg" alt="" width={28} height={28} className="grayscale contrast-125" />
                 </div>
                 <span className="text-[6px] leading-none text-brand-black">BuffBites</span>
-                <span className="ia-loop ia-spark absolute -right-1.5 -top-1.5 text-[10px]">✨</span>
+                <span className="ia-loop ia-spark absolute -right-1.5 -top-1.5 text-[10px] text-brand-black">✳</span>
               </div>
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function InstallAnimation({ platform }: { platform: InstallPlatfo
       <ol key={`steps-${platform}`} className="ia-steps mt-4 w-full space-y-1.5">
         {steps.map((text, i) => (
           <li key={i} className={`ia-loop ia-step-${i} flex items-center gap-2.5`}>
-            <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-brand font-display text-[15px] text-brand-black">{i + 1}</span>
+            <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-brand font-display text-[15px] text-white">{i + 1}</span>
             <span className="text-[14px] text-brand-black">{text}</span>
           </li>
         ))}
