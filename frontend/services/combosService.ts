@@ -33,6 +33,8 @@ export function getNutrition(
   date: string,
   dishes: string[],
 ): Promise<Record<string, NutritionInfo>> {
-  const params = new URLSearchParams({ dining, date, dishes: dishes.join(',') })
+  // One `dish` param per name: dish names can contain commas.
+  const params = new URLSearchParams({ dining, date })
+  for (const d of dishes) params.append('dish', d)
   return apiFetch<Record<string, NutritionInfo>>(`/api/menu/nutrition?${params}`)
 }

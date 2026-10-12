@@ -1,12 +1,10 @@
 import { apiFetch } from './api'
 import type { ComboCreate, ComboUpdate, CommunityCombo, DiningHall, VoteType } from '@/types'
 
-export function getCombos(dining_hall?: DiningHall, firebase_uid?: string): Promise<CommunityCombo[]> {
-  const params = new URLSearchParams()
-  if (dining_hall) params.set('dining_hall', dining_hall)
-  if (firebase_uid) params.set('firebase_uid', firebase_uid)
-  const qs = params.toString()
-  return apiFetch<CommunityCombo[]>(`/api/community/combos${qs ? `?${qs}` : ''}`)
+export function getCombos(dining_hall?: DiningHall): Promise<CommunityCombo[]> {
+  const qs = dining_hall ? `?${new URLSearchParams({ dining_hall })}` : ''
+  // The sign-in token (when there is one) lets the server fill in has_voted.
+  return apiFetch<CommunityCombo[]>(`/api/community/combos${qs}`, { auth: 'optional' })
 }
 
 export function getCombo(combo_id: string): Promise<CommunityCombo> {
@@ -32,13 +30,9 @@ export function deleteCombo(combo_id: string, token: string): Promise<{ message:
   })
 }
 
-export function publishCombo(
-  combo: ComboCreate,
-  token: string,
-  username: string,
-): Promise<CommunityCombo> {
-  const params = new URLSearchParams({ username })
-  return apiFetch<CommunityCombo>(`/api/community/combos?${params}`, {
+/** The author's username comes from their profile on the server, not the client. */
+export function publishCombo(combo: ComboCreate, token: string): Promise<CommunityCombo> {
+  return apiFetch<CommunityCombo>('/api/community/combos', {
     method: 'POST',
     body: JSON.stringify(combo),
     token,
@@ -57,18 +51,14 @@ export function vote(
   )
 }
 
-export function getTrends(dining_hall?: DiningHall, firebase_uid?: string): Promise<CommunityCombo[]> {
-  const params = new URLSearchParams()
-  if (dining_hall) params.set('dining_hall', dining_hall)
-  if (firebase_uid) params.set('firebase_uid', firebase_uid)
-  const qs = params.toString()
-  return apiFetch<CommunityCombo[]>(`/api/community/trends${qs ? `?${qs}` : ''}`)
+export function getTrends(dining_hall?: DiningHall): Promise<CommunityCombo[]> {
+  const qs = dining_hall ? `?${new URLSearchParams({ dining_hall })}` : ''
+  // The sign-in token (when there is one) lets the server fill in has_voted.
+  return apiFetch<CommunityCombo[]>(`/api/community/trends${qs}`, { auth: 'optional' })
 }
 
-export function getWeeklyTrends(dining_hall?: DiningHall, firebase_uid?: string): Promise<CommunityCombo[]> {
-  const params = new URLSearchParams()
-  if (dining_hall) params.set('dining_hall', dining_hall)
-  if (firebase_uid) params.set('firebase_uid', firebase_uid)
-  const qs = params.toString()
-  return apiFetch<CommunityCombo[]>(`/api/community/trends/weekly${qs ? `?${qs}` : ''}`)
+export function getWeeklyTrends(dining_hall?: DiningHall): Promise<CommunityCombo[]> {
+  const qs = dining_hall ? `?${new URLSearchParams({ dining_hall })}` : ''
+  // The sign-in token (when there is one) lets the server fill in has_voted.
+  return apiFetch<CommunityCombo[]>(`/api/community/trends/weekly${qs}`, { auth: 'optional' })
 }

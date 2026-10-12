@@ -212,7 +212,6 @@ export default function HomePage() {
           images: [],
         },
         token,
-        username,
       )
       setShareStates((prev) => ({ ...prev, [key]: 'shared' }))
       showToast('Posted to community!', 'success')

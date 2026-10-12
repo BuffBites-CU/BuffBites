@@ -1,9 +1,34 @@
+import { getFirebaseAuth } from '@/lib/firebase'
+
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000'
 
-type ApiFetchOptions = RequestInit & { token?: string }
+/** An HTTP error from the API. `message` is the server's `detail` when it sent one. */
+export class ApiError extends Error {
+  constructor(message: string, readonly status: number) {
+    super(message)
+    this.name = 'ApiError'
+  }
+}
+
+type ApiFetchOptions = RequestInit & {
+  /** An explicit Firebase ID token. */
+  token?: string
+  /**
+   * Attach the signed-in user's ID token automatically.
+   * `true` requires a signed-in user; `'optional'` sends it only if there is one.
+   */
+  auth?: boolean | 'optional'
+}
+
+async function currentUserToken(): Promise<string | undefined> {
+  return getFirebaseAuth().currentUser?.getIdToken()
+}
 
 export async function apiFetch<T>(path: string, options?: ApiFetchOptions): Promise<T> {
-  const { token, ...fetchOptions } = options ?? {}
+  const { token: explicitToken, auth, ...fetchOptions } = options ?? {}
+  const token = explicitToken ?? (auth ? await currentUserToken() : undefined)
+  if (auth === true && !token) throw new ApiError('Sign in first.', 401)
+
   const headers: Record<string, string> = {}
   if (fetchOptions.body) headers['Content-Type'] = 'application/json'
   if (token) headers['Authorization'] = `Bearer ${token}`
@@ -19,8 +44,13 @@ export async function apiFetch<T>(path: string, options?: ApiFetchOptions): Prom
     } catch {
       // ignore parse errors — use the default message
     }
-    throw new Error(message)
+    throw new ApiError(message, res.status)
   }
 
   return res.json() as Promise<T>
+}
+
+/** True when `err` is an API error with the given status. */
+export function isApiStatus(err: unknown, status: number): boolean {
+  return err instanceof ApiError && err.status === status
 }
