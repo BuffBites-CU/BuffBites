@@ -18,13 +18,21 @@ Usage:
 """
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Literal, Optional
 from datetime import datetime, timezone
 
 class NutritionGoals(BaseModel):
     protein_g_per_meal: Optional[int] = None        # target grams of protein per meal
     dietary_focus: Optional[str] = None             # "balanced"|"high-protein"|"low-carb"|"weight-loss"|"muscle-gain"|"endurance"
     priority_nutrients: list[str] = []              # e.g. ["iron","calcium","vitamin-d","fiber","omega-3","b12"]
+
+class BodyStats(BaseModel):
+    """Optional stats for the fuel coach's calorie estimate. Never returned by
+    the public profile endpoint; read and written only via /api/coach/body."""
+    weight_kg: Optional[float] = Field(None, ge=30, le=250)
+    height_cm: Optional[float] = Field(None, ge=120, le=230)
+    age: Optional[int] = Field(None, ge=16, le=90)
+    sex: Optional[Literal["male", "female", "unspecified"]] = None
 
 class MealLogEntry(BaseModel):
     title: str

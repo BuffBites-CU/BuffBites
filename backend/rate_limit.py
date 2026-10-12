@@ -44,3 +44,41 @@ class SlidingWindowLimiter:
             if len(hits) >= self.limit:
                 raise HTTPException(status_code=429, detail=self.detail)
             hits.append(now)
+
+
+class DailyQuota:
+    """Per-key and app-wide counters for paid calls, reset when `today()` changes.
+
+    `per_key` and `total` are read on every call, so they can be changed at
+    runtime (tests do).
+    """
+
+    def __init__(
+        self,
+        per_key: int,
+        total: int,
+        today,
+        key_detail: str = "You've hit today's limit. It resets at midnight.",
+        total_detail: str = "This is paused for today. Try again tomorrow.",
+    ):
+        self.per_key = per_key
+        self.total = total
+        self._today = today
+        self.key_detail = key_detail
+        self.total_detail = total_detail
+        self.day = ""
+        self.used = 0
+        self.by_key: dict[str, int] = {}
+        self._lock = Lock()
+
+    def take(self, key: str) -> None:
+        today = self._today()
+        with self._lock:
+            if today != self.day:
+                self.day, self.used, self.by_key = today, 0, {}
+            if self.by_key.get(key, 0) >= self.per_key:
+                raise HTTPException(status_code=429, detail=self.key_detail)
+            if self.used >= self.total:
+                raise HTTPException(status_code=503, detail=self.total_detail)
+            self.by_key[key] = self.by_key.get(key, 0) + 1
+            self.used += 1

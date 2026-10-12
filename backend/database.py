@@ -10,6 +10,8 @@ Collections:
     comments_collection    — comments on community combos
     drafts_collection      — saved drafts under user profile (never expire)
     combo_cache_collection — AI-generated combos cached by (dining, date, prefs)
+    strava_links_collection — opt-in Strava links (tokens encrypted), one per user
+    coach_plans_collection — fuel-coach day plans cached per user for a few hours
 
 Usage:
     from database import users_collection, combos_collection, drafts_collection
@@ -37,6 +39,8 @@ combos_collection = db["combos"]
 comments_collection = db["comments"]
 drafts_collection = db["drafts"]
 combo_cache_collection = db["combo_cache"]
+strava_links_collection = db["strava_links"]
+coach_plans_collection = db["coach_plans"]
 
 
 async def ensure_indexes() -> None:
@@ -67,3 +71,11 @@ async def ensure_indexes() -> None:
     # combo_cache — keyed lookup with a 24h TTL on AI-generated combos.
     await combo_cache_collection.create_index("key", unique=True)
     await combo_cache_collection.create_index("expires_at", expireAfterSeconds=0)
+
+    # strava_links — one per user; deleted outright on disconnect.
+    await strava_links_collection.create_index("firebase_uid", unique=True)
+
+    # coach_plans — keyed lookup, short TTL, and removable per user on disconnect.
+    await coach_plans_collection.create_index("key", unique=True)
+    await coach_plans_collection.create_index("expires_at", expireAfterSeconds=0)
+    await coach_plans_collection.create_index("firebase_uid")

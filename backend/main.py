@@ -47,6 +47,8 @@ from routers.combos import router as combos_router
 from routers.drafts import router as drafts_router
 from routers.comments import router as comments_router
 from routers.vision import router as vision_router
+from routers.strava import router as strava_router
+from routers.coach import router as coach_router
 
 
 app.include_router(users_router)
@@ -55,6 +57,8 @@ app.include_router(combos_router)
 app.include_router(drafts_router)
 app.include_router(comments_router)
 app.include_router(vision_router)
+app.include_router(strava_router)
+app.include_router(coach_router)
 
 # CORS — lock to known origins in production via ALLOWED_ORIGINS (comma-separated).
 # Falls back to "*" with a loud warning so existing deploys keep working, but you

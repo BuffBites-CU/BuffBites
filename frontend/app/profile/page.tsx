@@ -1,6 +1,7 @@
 'use client'
 
 import Avatar from '@/components/Avatar'
+import TrainingLink from '@/components/TrainingLink'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -580,6 +581,8 @@ export default function ProfilePage() {
           {/* ══ Overview tab ════════════════════════════════════ */}
           {activeTab === 'overview' && (
             <>
+              <TrainingLink />
+
               {/* Badges */}
               {badges.length > 0 && (
                 <div>
