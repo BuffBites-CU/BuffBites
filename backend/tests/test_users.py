@@ -1,4 +1,5 @@
 import copy
+import re
 from datetime import datetime, timezone
 
 import pytest
@@ -38,6 +39,13 @@ class UsersCollection(FakeCollection):
 
     async def find_one(self, flt, projection=None):
         if self.race and "username" in flt:
+            return None
+        cond = flt.get("username")
+        if isinstance(cond, dict) and "$regex" in cond:
+            flags = re.IGNORECASE if "i" in cond.get("$options", "") else 0
+            for d in self.docs:
+                if re.match(cond["$regex"], d.get("username", ""), flags):
+                    return {k: v for k, v in d.items() if not projection or k in projection or k == "_id"}
             return None
         return await super().find_one(flt, projection)
 
@@ -289,3 +297,11 @@ def test_get_user_tolerates_entries_stored_before_validation(monkeypatch):
     r = _client("u1").get("/api/users/u1")
     assert r.status_code == 200, r.text
     assert r.json()["meal_log"][0]["calories"] == -5
+
+
+def test_usernames_are_unique_regardless_of_case(col):
+    assert _client("u2").get("/api/users/check-username/RALPHIE").json() == {"available": False}
+    r = _client("u2").put("/api/users/u2", json={"username": "Ralphie"})
+    assert r.status_code == 400 and r.json()["detail"] == "Username already taken"
+    # Changing the case of your own name is fine.
+    assert _client("u1").put("/api/users/u1", json={"username": "Ralphie"}).status_code == 200

@@ -31,17 +31,20 @@ def calls(monkeypatch):
     async def forget(uid):
         log.append(("forget", uid))
 
-    async def invalidate(uid):
+    def invalidate(uid):
         log.append(("invalidate", uid))
 
     for name, fn in [("uids_for_athlete", uids_for_athlete), ("still_authorized", still_authorized),
                      ("forget", forget), ("invalidate", invalidate)]:
         monkeypatch.setattr(strava_client, name, fn)
     monkeypatch.setattr(strava_webhook, "STRAVA_WEBHOOK_VERIFY_TOKEN", "s3cret")
-    monkeypatch.setattr(strava_webhook, "STRAVA_WEBHOOK_SUBSCRIPTION_ID", "")
     strava_webhook._limiter._hits.clear()
+    strava_webhook._last_revoke_check.clear()
     log.state = state
     return log
+
+
+URL = "/api/strava/webhook/s3cret"
 
 
 def _client() -> TestClient:
@@ -56,53 +59,60 @@ def _event(**kw):
 
 
 def test_subscription_validation_echoes_challenge(calls):
-    r = _client().get("/api/strava/webhook", params={"hub.mode": "subscribe", "hub.challenge": "abc", "hub.verify_token": "s3cret"})
+    r = _client().get(URL, params={"hub.mode": "subscribe", "hub.challenge": "abc", "hub.verify_token": "s3cret"})
     assert r.status_code == 200 and r.json() == {"hub.challenge": "abc"}
 
 
 @pytest.mark.parametrize("token", ["wrong", ""])
 def test_subscription_validation_rejects_bad_token(calls, token):
-    r = _client().get("/api/strava/webhook", params={"hub.mode": "subscribe", "hub.challenge": "abc", "hub.verify_token": token})
+    r = _client().get(URL, params={"hub.mode": "subscribe", "hub.challenge": "abc", "hub.verify_token": token})
     assert r.status_code == 403
 
 
 def test_validation_refused_when_no_token_configured(calls, monkeypatch):
     monkeypatch.setattr(strava_webhook, "STRAVA_WEBHOOK_VERIFY_TOKEN", "")
-    r = _client().get("/api/strava/webhook", params={"hub.mode": "subscribe", "hub.challenge": "abc", "hub.verify_token": ""})
-    assert r.status_code == 403
+    r = _client().get(URL, params={"hub.mode": "subscribe", "hub.challenge": "abc", "hub.verify_token": ""})
+    assert r.status_code == 404  # with no secret configured the webhook doesn't exist
 
 
 def test_activity_event_invalidates_that_students_cache(calls):
-    assert _client().post("/api/strava/webhook", json=_event()).status_code == 200
+    assert _client().post(URL, json=_event()).status_code == 200
     assert calls == [("invalidate", "u1")]
 
 
 def test_events_for_unknown_athletes_are_ignored(calls):
-    _client().post("/api/strava/webhook", json=_event(owner_id=999))
+    _client().post(URL, json=_event(owner_id=999))
     assert calls == []
 
 
 def test_revoke_is_confirmed_with_strava_before_deleting(calls):
     calls.state["authorized"] = True  # a spoofed event: the token still works
-    _client().post("/api/strava/webhook", json=_event(object_type="athlete", aspect_type="update", updates={"authorized": "false"}))
+    _client().post(URL, json=_event(object_type="athlete", aspect_type="update", updates={"authorized": "false"}))
     assert calls == [("check", "u1")]
 
     calls.clear()
+    strava_webhook._last_revoke_check.clear()  # next check window
     calls.state["authorized"] = False  # a real revoke
-    _client().post("/api/strava/webhook", json=_event(object_type="athlete", aspect_type="update", updates={"authorized": "false"}))
+    _client().post(URL, json=_event(object_type="athlete", aspect_type="update", updates={"authorized": "false"}))
     assert calls == [("check", "u1"), ("forget", "u1")]
 
 
-def test_other_subscriptions_are_ignored_once_pinned(calls, monkeypatch):
-    monkeypatch.setattr(strava_webhook, "STRAVA_WEBHOOK_SUBSCRIPTION_ID", "8")
-    _client().post("/api/strava/webhook", json=_event(subscription_id=7))
+def test_events_without_the_secret_path_are_rejected(calls):
+    for url in ("/api/strava/webhook/wrong", "/api/strava/webhook/"):
+        assert _client().post(url, json=_event()).status_code == 404
     assert calls == []
-    _client().post("/api/strava/webhook", json=_event(subscription_id=8))
-    assert calls == [("invalidate", "u1")]
+
+
+def test_spoofed_revokes_check_strava_at_most_once_per_window(calls):
+    calls.state["authorized"] = True
+    revoke = _event(object_type="athlete", aspect_type="update", updates={"authorized": "false"})
+    for _ in range(5):
+        _client().post(URL, json=revoke)
+    assert calls == [("check", "u1")]
 
 
 def test_malformed_event_is_422(calls):
-    assert _client().post("/api/strava/webhook", json={"object_type": "activity"}).status_code == 422
+    assert _client().post(URL, json={"object_type": "activity"}).status_code == 422
 
 
 # ── strava_client's webhook helpers against fake storage and a fake Strava ──
@@ -138,9 +148,10 @@ def test_uids_for_athlete_and_invalidate(stored):
     strava_client._activity_cache["u1"] = (0.0, [])
     assert asyncio.run(strava_client.uids_for_athlete(42)) == ["u1"]
     assert asyncio.run(strava_client.uids_for_athlete(7)) == []
-    asyncio.run(strava_client.invalidate("u1"))
+    strava_client.invalidate("u1")
     assert "u1" not in strava_client._activity_cache
-    assert [d["key"] for d in plans.docs] == ["q"]
+    # Plans stay: their cache key changes when the day's workouts do.
+    assert [d["key"] for d in plans.docs] == ["p", "q"]
 
 
 @pytest.mark.parametrize("status,expected", [(200, True), (400, False), (503, True)])

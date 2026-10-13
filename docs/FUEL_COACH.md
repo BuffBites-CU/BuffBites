@@ -75,17 +75,20 @@ PULL  fuel card / plan ──► strava_client.recent_activities(uid)
                            refresh token if expired → GET /athlete/activities (last 7 days)
                            → trimmed fields, 5-minute memory cache → energy.py
 
-PUSH  Strava ──► POST /api/strava/webhook (answered at once, handled in the background)
-        activity create/update/delete → drop that student's cached workouts + plans
+PUSH  Strava ──► POST /api/strava/webhook/<secret> (answered at once, handled in the background)
+        activity create/update/delete → drop that student's cached workouts
         athlete authorized=false      → confirm with Strava, then delete the link
 ```
 
 - **Pull**: `backend/strava_client.py`. Workouts are never written to the
   database.
 - **Push**: `backend/routers/strava_webhook.py`. Strava's webhooks aren't
-  signed, so a "revoked" event deletes data only after a token refresh at
-  Strava fails. A spoofed event can't disconnect anyone. Other events only
-  clear caches.
+  signed, so the callback URL includes `STRAVA_WEBHOOK_VERIFY_TOKEN`; only Strava
+  learns that URL, and any other URL returns 404. A "revoked" event deletes
+  data only after a token refresh at Strava fails, and it is checked at most
+  once per student every 10 minutes. Activity events only clear the cached
+  workouts. Plans are keyed by the day's workouts, so a changed day gets a
+  fresh plan.
 - **Subscription management**: `backend/scripts/strava_webhook.py`
   (`create`, `view`, `delete`). Strava allows one subscription per app.
 
@@ -127,10 +130,10 @@ flyctl secrets set -a buffbites-backend \
 flyctl ssh console -a buffbites-backend -C "python scripts/strava_webhook.py create"
 flyctl ssh console -a buffbites-backend -C "python scripts/strava_webhook.py view"
 ```
-`create` should print a success status and the subscription `id`. Optionally pin events to that id:
-```bash
-flyctl secrets set -a buffbites-backend STRAVA_WEBHOOK_SUBSCRIPTION_ID=<id>
-```
+`create` should print a success status and the subscription `id`. Strava
+calls `https://buffbites-backend.fly.dev/api/strava/webhook/<verify token>` to
+confirm the URL before it answers. If you rotate `STRAVA_WEBHOOK_VERIFY_TOKEN`,
+run `delete` and then `create` again.
 
 **5. Check it end to end**
 1. Open BuffBites, go to Profile → Training & fuel → Connect, then agree and

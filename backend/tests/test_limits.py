@@ -42,6 +42,14 @@ def test_client_ip_prefers_fly_header():
     assert c.post("/echo", content=b"").json()["ip"] == "testclient"
 
 
+def test_ipv6_clients_are_counted_per_64():
+    c = _echo_app(1000)
+    a = c.post("/echo", content=b"", headers={"Fly-Client-IP": "2001:db8:1:2:aaaa::1"}).json()["ip"]
+    b = c.post("/echo", content=b"", headers={"Fly-Client-IP": "2001:db8:1:2:ffff::9"}).json()["ip"]
+    other = c.post("/echo", content=b"", headers={"Fly-Client-IP": "2001:db8:1:3::1"}).json()["ip"]
+    assert a == b == "2001:db8:1:2::/64" and other != a
+
+
 @pytest.fixture
 def clock(monkeypatch):
     now = [1000.0]

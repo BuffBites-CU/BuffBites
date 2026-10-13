@@ -476,7 +476,7 @@ def real_auth(monkeypatch):
     return module
 
 
-def test_get_optional_user_is_none_for_guests_and_401_for_bad_tokens(real_auth):
+def test_get_optional_user_treats_missing_and_bad_tokens_as_guests(real_auth):
     app = FastAPI()
 
     @app.get("/who")
@@ -487,7 +487,8 @@ def test_get_optional_user_is_none_for_guests_and_401_for_bad_tokens(real_auth):
     assert client.get("/who").json() == {"uid": None}
     assert client.get("/who", headers={"Authorization": "Basic abc"}).json() == {"uid": None}
     assert client.get("/who", headers={"Authorization": "Bearer good"}).json() == {"uid": "bob-uid"}
-    assert client.get("/who", headers={"Authorization": "Bearer forged"}).status_code == 401
+    # An expired or unverifiable token must not break a public read.
+    assert client.get("/who", headers={"Authorization": "Bearer forged"}).json() == {"uid": None}
 
 
 # ── app wiring ───────────────────────────────────────────────────────────────

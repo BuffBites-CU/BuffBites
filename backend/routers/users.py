@@ -34,6 +34,8 @@ Usage:
 """
 
 
+import re
+
 from fastapi import APIRouter, Depends, HTTPException
 from datetime import datetime, timedelta, timezone
 from pymongo.errors import DuplicateKeyError
@@ -50,6 +52,15 @@ FAVORITES_CAP = 200
 USERNAME_TAKEN = "Username already taken"
 
 
+async def _username_owner(username: str) -> dict | None:
+    """The profile using this username in any letter case, so "Ralphie" can't
+    be registered next to "ralphie" and pass as them in the community feed."""
+    pattern = f"^{re.escape(username)}$"
+    return await users_collection.find_one(
+        {"username": {"$regex": pattern, "$options": "i"}}, {"firebase_uid": 1}
+    )
+
+
 async def own_uid(firebase_uid: str, current_user: dict = Depends(get_current_user)) -> str:
     """The path's firebase_uid, once it is checked against the caller's token."""
     if firebase_uid != current_user["uid"]:
@@ -59,8 +70,7 @@ async def own_uid(firebase_uid: str, current_user: dict = Depends(get_current_us
 
 @router.get("/check-username/{username}")
 async def check_username(username: str):
-    taken = await users_collection.find_one({"username": username})
-    return {"available": taken is None}
+    return {"available": await _username_owner(username) is None}
 
 @router.post("/", response_model=UserResponse)
 async def create_user(user: UserCreate, current_user: dict = Depends(get_current_user)):
@@ -71,8 +81,7 @@ async def create_user(user: UserCreate, current_user: dict = Depends(get_current
         raise HTTPException(status_code=400, detail="User already exists")
 
     # Check if username is taken
-    username_taken = await users_collection.find_one({"username": user.username})
-    if username_taken:
+    if await _username_owner(user.username):
         raise HTTPException(status_code=400, detail=USERNAME_TAKEN)
 
     user_doc = {
@@ -107,7 +116,7 @@ async def update_user(updates: UserUpdate, firebase_uid: str = Depends(own_uid))
         return {"message": "User updated successfully"}
 
     if "username" in changes:
-        taken = await users_collection.find_one({"username": changes["username"]}, {"firebase_uid": 1})
+        taken = await _username_owner(changes["username"])
         if taken and taken["firebase_uid"] != firebase_uid:
             raise HTTPException(status_code=400, detail=USERNAME_TAKEN)
     try:

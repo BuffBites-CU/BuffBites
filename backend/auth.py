@@ -73,4 +73,9 @@ def get_optional_user(
 ) -> dict | None:
     if credentials is None:
         return None
-    return verify_token(credentials.credentials)
+    # The token only personalises a public read (has_voted, quotas). An expired
+    # or unverifiable one makes the caller a guest instead of failing the read.
+    try:
+        return verify_token(credentials.credentials)
+    except HTTPException:
+        return None

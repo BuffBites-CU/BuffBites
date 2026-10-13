@@ -13,7 +13,8 @@ export function generateCombos(
   if (goals?.dietary_focus)      params.set('dietary_focus', goals.dietary_focus)
   if (goals?.priority_nutrients?.length) params.set('priority_nutrients', goals.priority_nutrients.join(','))
   if (dietaryPreferences?.length) params.set('dietary_preferences', dietaryPreferences.join(','))
-  return apiFetch<ComboResponse>(`/api/combos/generate?${params}`)
+  // Signed-in students are rate-limited per account instead of per network.
+  return apiFetch<ComboResponse>(`/api/combos/generate?${params}`, { auth: 'optional' })
 }
 
 export function getMenu(dining: DiningHall, date: string): Promise<MenuResponse> {

@@ -8,9 +8,10 @@ from pathlib import Path
 
 import anthropic
 import structlog
-from fastapi import APIRouter, HTTPException, Query, Request
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, ConfigDict
 
+from auth import get_optional_user
 from database import combo_cache_collection
 from menu_rules import (
     classify_station,
@@ -27,10 +28,11 @@ from pydantic_models.combo_models import Combo, ComboResponse, CombosMap, Dish
 router = APIRouter()
 logger = structlog.get_logger()
 
-# Combo generation is unauthenticated and calls the Anthropic API, so it needs
-# per-IP abuse protection. Cache misses (three paid calls each) also count
-# against a daily cap per IP and one for the whole app, so the bill has a
-# ceiling. Cache hits are free.
+# Combo generation is open to guests and calls the Anthropic API, so it needs
+# abuse protection: per account when the request carries a sign-in token,
+# otherwise per IP. Cache misses (up to three paid calls each) also count
+# against a daily cap per caller (COMBOS_DAILY_PER_IP) and one for the whole
+# app, so the bill has a ceiling. Cache hits are free.
 _combo_limiter = SlidingWindowLimiter(
     limit=20,
     window_seconds=60,
@@ -43,6 +45,10 @@ _combo_quota = DailyQuota(
     key_detail="You've hit today's limit for new combo suggestions. It resets at midnight.",
     total_detail="Combo suggestions are paused for today. The full menu is still in the Menu tab.",
 )
+
+_MIN_DISHES = 2
+_CACHE_TTL = timedelta(hours=24)
+_CACHE_TTL_PARTIAL = timedelta(hours=1)
 
 _COMBOS_UNAVAILABLE = (
     "Combo suggestions aren't available right now. The full menu is still in the Menu tab."
@@ -348,11 +354,13 @@ def _normalize_goals(
     priority_nutrients: str | None,
     dietary_preferences: str | None,
 ) -> tuple[int | None, str | None, list[str], set[str]]:
-    """Drop unknown values and clamp the protein goal. The prompt ignores
+    """Drop unknown values and bucket the protein goal. The prompt ignores
     unknown values anyway; dropping them here keeps them out of the cache key,
     so made-up values can't force a paid cache miss."""
     if protein_goal is not None:
-        protein_goal = min(protein_goal, _MAX_PROTEIN_GOAL) if protein_goal > 0 else None
+        # Nearest 10 g: the prompt can't tell 34 g from 35 g, and every distinct
+        # value would otherwise be its own paid cache miss.
+        protein_goal = max(10, round(min(protein_goal, _MAX_PROTEIN_GOAL) / 10) * 10) if protein_goal > 0 else None
     focus = (dietary_focus or "").strip().lower()
     focus = focus if focus in _FOCUS_DESCRIPTIONS else None
     nutrients = sorted({
@@ -375,13 +383,15 @@ async def generate_combos(
     request: Request,
     dining: str = Query(..., description="One of: " + ", ".join(DINING_FILES)),
     date: str | None = Query(None, description="YYYY-MM-DD, defaults to today"),
-    protein_goal: int | None = Query(None, description="Target protein per meal in grams (clamped to 1-300)"),
+    protein_goal: int | None = Query(None, description="Target protein per meal in grams (rounded to the nearest 10, max 300)"),
     dietary_focus: str | None = Query(None, description="balanced|high-protein|low-carb|weight-loss|muscle-gain|endurance"),
     priority_nutrients: str | None = Query(None, description="Comma-separated: iron,calcium,vitamin-d,fiber,omega-3,b12,zinc"),
     dietary_preferences: str | None = Query(None, description="Comma-separated: vegan,vegetarian,gluten-free,halal"),
+    current_user: dict | None = Depends(get_optional_user),
 ):
-    ip = client_ip(request)
-    _combo_limiter.check(ip)
+    # Signed-in students are limited per account; guests per IP (an IPv6 /64).
+    caller = (current_user or {}).get("uid") or client_ip(request)
+    _combo_limiter.check(caller)
 
     if dining not in DINING_FILES:
         raise HTTPException(
@@ -477,7 +487,9 @@ async def generate_combos(
     dinner_items    = _pad(dinner_items, lunch_items)
     breakfast_items = _pad(breakfast_items, lunch_items)
 
-    if not breakfast_items or not lunch_items or not dinner_items:
+    # A combo needs at least two dishes. Padding means a thin period leaves all
+    # three thin, so stop here before paying for calls that can't succeed.
+    if min(len(breakfast_items), len(lunch_items), len(dinner_items)) < _MIN_DISHES:
         raise HTTPException(status_code=404, detail="Not enough menu items to build combos")
 
     # ── Build user goals section for the prompt ───────────────────────────
@@ -486,7 +498,7 @@ async def generate_combos(
     # ── Call Claude (LLM combo generation) ───────────────────────────────
     # Count against the daily caps only now, once the request is valid and
     # about to cost money.
-    _combo_quota.take(ip)
+    _combo_quota.take(caller)
     # One call per meal period, run concurrently, so total latency is roughly
     # the slowest single call instead of the sum of all three.
     client = _make_client()
@@ -550,17 +562,18 @@ async def generate_combos(
                 )
 
     # ── Cache the result (TTL index evicts it after expires_at) ───────────
-    # A period with no combos left is worth a fresh try, so don't keep it.
-    if not all((response.combos.Breakfast, response.combos.Lunch, response.combos.Dinner)):
-        logger.warning("combos_not_cached_empty_period", dining=dining, date=target_date)
-        return response
+    # A period that came back empty is worth another try later, but not on
+    # every page load: keep that result for an hour instead of a day.
+    complete = all((response.combos.Breakfast, response.combos.Lunch, response.combos.Dinner))
+    if not complete:
+        logger.warning("combos_empty_period", dining=dining, date=target_date)
     try:
         await combo_cache_collection.update_one(
             {"key": cache_key},
             {"$set": {
                 "key": cache_key,
                 "response": response.model_dump(),
-                "expires_at": datetime.now(timezone.utc) + timedelta(hours=24),
+                "expires_at": datetime.now(timezone.utc) + (_CACHE_TTL if complete else _CACHE_TTL_PARTIAL),
             }},
             upsert=True,
         )

@@ -17,7 +17,7 @@ Usage:
     from database import users_collection, combos_collection, comments_collection
 """
 
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 
 import certifi
 import os
@@ -118,6 +118,14 @@ async def ensure_indexes() -> None:
     # comments — always fetched for a single combo; expire with their combo.
     await _create_index(comments_collection, "combo_id")
     await _create_index(comments_collection, "expires_at", expireAfterSeconds=0)
+    # Comments written before expires_at existed would otherwise never expire.
+    try:
+        await comments_collection.update_many(
+            {"expires_at": {"$exists": False}},
+            {"$set": {"expires_at": datetime.now(timezone.utc) + COMBO_RETENTION}},
+        )
+    except Exception as e:
+        logger.warning("comment_expiry_backfill_failed", error=str(e))
 
     # combo_cache — keyed lookup with a 24h TTL on AI-generated combos.
     await _create_index(combo_cache_collection, "key", unique=True)

@@ -1,5 +1,7 @@
 """Tests for the combo models and for how routers/combos.py handles AI combos:
 the production dish filter (_build_period) and the generate/nutrition routes."""
+from datetime import datetime, timedelta, timezone
+
 import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
@@ -270,14 +272,31 @@ def test_protein_goal_is_clamped(claude):
     assert "at least 300g per meal" in claude.calls[0]["goals"]
 
 
-def test_results_with_an_empty_period_are_not_cached(claude):
+def test_results_with_an_empty_period_are_cached_briefly(claude):
     claude.combos["Lunch"] = [_claude_combo(("Lobster", "Grill"), ("Caviar", "Grill"))]
     c = _client()
     r = _generate(c)
     assert r.status_code == 200 and r.json()["combos"]["Lunch"] == []
-    assert combos.combo_cache_collection.docs == []
+    [doc] = combos.combo_cache_collection.docs
+    ttl = doc["expires_at"] - datetime.now(timezone.utc)
+    assert timedelta(minutes=55) < ttl <= timedelta(hours=1)
     _generate(c)
-    assert len(claude.calls) == 6
+    assert len(claude.calls) == 3  # the retry waits for the hour, not every page load
+
+
+def test_a_menu_too_thin_for_any_combo_skips_the_paid_calls(claude):
+    day = menu_store._cache["c4c"]["menus"][0]
+    first = next(iter(day["categories"]))
+    day["categories"] = {first: day["categories"][first][:1]}
+    assert _generate(_client()).status_code == 404
+    assert claude.calls == []
+
+
+def test_protein_goal_is_bucketed_so_it_cannot_bust_the_cache(claude):
+    c = _client()
+    _generate(c, protein_goal=34)
+    _generate(c, protein_goal=26)
+    assert len(claude.calls) == 3
 
 
 def test_cache_key_follows_menu_edits(claude):

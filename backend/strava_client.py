@@ -203,11 +203,11 @@ async def uids_for_athlete(athlete_id: int) -> list[str]:
     return [d["firebase_uid"] for d in await cursor.to_list(10)]
 
 
-async def invalidate(uid: str) -> None:
-    """A workout was added, edited or deleted: drop cached workouts and plans
-    so the next budget or plan reads the new data."""
+def invalidate(uid: str) -> None:
+    """A workout was added, edited or deleted: drop the cached workouts so the
+    next budget or plan reads the new data. Cached plans stay: their key
+    includes the day's workouts, so a changed day gets a new plan anyway."""
     _activity_cache.pop(uid, None)
-    await coach_plans_collection.delete_many({"firebase_uid": uid})
 
 
 async def still_authorized(uid: str) -> bool:

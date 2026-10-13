@@ -64,7 +64,10 @@ def test_combo_provider_errors_are_not_shown_to_students(monkeypatch):
     from zoneinfo import ZoneInfo
     today = datetime.now(ZoneInfo("America/Denver")).date().isoformat()
     monkeypatch.setitem(menu_store._cache, "c4c", {"dining_location": "C4C", "menus": [{"date": today, "day_of_week": "Friday",
-        "categories": {"Smoke n' Grill - Grill Menu": [{"name": "Burger", "calories": 500, "nutrition": {}}]}}]})
+        "categories": {"Smoke n' Grill - Grill Menu": [
+            {"name": "Burger", "calories": 500, "nutrition": {}},
+            {"name": "Fries", "calories": 300, "nutrition": {}},
+        ]}}]})
 
     r = _client().get("/api/combos/generate", params={"dining": "c4c", "date": today})
     assert r.status_code == 503

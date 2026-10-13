@@ -11,7 +11,8 @@ Run where the Strava secrets are set, e.g. on the Fly machine:
     flyctl ssh console -a buffbites-backend -C "python scripts/strava_webhook.py delete"
 
 Needs STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET and STRAVA_WEBHOOK_VERIFY_TOKEN.
-The callback defaults to STRAVA_WEBHOOK_CALLBACK_URL, or the Fly app URL.
+The callback is <base>/api/strava/webhook/<STRAVA_WEBHOOK_VERIFY_TOKEN>, where
+<base> is --base-url, STRAVA_WEBHOOK_BASE_URL, or the Fly app's URL.
 """
 
 import argparse
@@ -30,28 +31,30 @@ def _env(name: str) -> str:
     return value
 
 
-def _default_callback() -> str:
-    explicit = os.getenv("STRAVA_WEBHOOK_CALLBACK_URL", "").strip()
+def _default_base() -> str:
+    explicit = os.getenv("STRAVA_WEBHOOK_BASE_URL", "").strip().rstrip("/")
     if explicit:
         return explicit
-    app = os.getenv("FLY_APP_NAME", "buffbites-backend")
-    return f"https://{app}.fly.dev/api/strava/webhook"
+    return f"https://{os.getenv('FLY_APP_NAME', 'buffbites-backend')}.fly.dev"
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("action", choices=["create", "view", "delete"])
-    parser.add_argument("--callback", default=None, help="public URL of /api/strava/webhook")
+    parser.add_argument("--base-url", default=None, help="public backend URL, e.g. https://buffbites-backend.fly.dev")
     args = parser.parse_args()
 
     auth = {"client_id": _env("STRAVA_CLIENT_ID"), "client_secret": _env("STRAVA_CLIENT_SECRET")}
     with httpx.Client(timeout=30) as http:
         if args.action == "create":
             # Strava calls the callback (GET) to validate it before answering this request.
+            token = _env("STRAVA_WEBHOOK_VERIFY_TOKEN")
+            base = (args.base_url or _default_base()).rstrip("/")
             r = http.post(PUSH_URL, data={
                 **auth,
-                "callback_url": args.callback or _default_callback(),
-                "verify_token": _env("STRAVA_WEBHOOK_VERIFY_TOKEN"),
+                # The token in the path is how the webhook knows a POST came from Strava.
+                "callback_url": f"{base}/api/strava/webhook/{token}",
+                "verify_token": token,
             })
         elif args.action == "view":
             r = http.get(PUSH_URL, params=auth)

@@ -3,6 +3,7 @@
 Sufficient for a single Fly instance; swap for Redis if you scale horizontally.
 """
 
+import ipaddress
 import time
 from collections import defaultdict, deque
 from threading import Lock
@@ -19,9 +20,18 @@ def client_ip(request: Request) -> str:
     trust only that header (X-Forwarded-For's first hop is client-controlled).
     """
     fly = request.headers.get("fly-client-ip", "").strip()
-    if fly:
-        return fly
-    return request.client.host if request.client else "unknown"
+    ip = fly or (request.client.host if request.client else "unknown")
+    return _collapse_ipv6(ip)
+
+
+def _collapse_ipv6(ip: str) -> str:
+    """An IPv6 user usually controls a whole /64, so count it as one client."""
+    if ":" not in ip:
+        return ip
+    try:
+        return str(ipaddress.ip_network(f"{ip}/64", strict=False))
+    except ValueError:
+        return ip
 
 
 class SlidingWindowLimiter:
