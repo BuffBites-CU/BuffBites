@@ -1,8 +1,11 @@
-/** The app's loading spinner. `page` centers it in a full-height screen. */
-export default function Spinner({ size = 32, page = false, className = '' }: { size?: number; page?: boolean; className?: string }) {
+/**
+ * The app's loading spinner. `page` centers it in a full-height screen.
+ * `className` replaces the default color, e.g. `text-white` inside a dark button.
+ */
+export default function Spinner({ size = 32, page = false, className = 'text-brand-deep' }: { size?: number; page?: boolean; className?: string }) {
   const svg = (
     <svg
-      className={`animate-spin text-brand-deep ${className}`}
+      className={`animate-spin ${className}`}
       width={size}
       height={size}
       fill="none"

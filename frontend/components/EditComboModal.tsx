@@ -1,13 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { XMarkIcon, PlusIcon } from './icons'
-import { tagStyle } from './ComboCard'
+import { useEffect, useRef, useState } from 'react'
+import { XMarkIcon } from './icons'
+import { DishListEditor, TagPicker, cleanDishes } from './ComboFormFields'
 import { updateCombo } from '@/services/communityService'
 import { useAuth } from '@/context/AuthContext'
 import type { ComboTag, CommunityCombo, DishItem } from '@/types'
-
-const AVAILABLE_TAGS: ComboTag[] = ['vegan', 'vegetarian', 'high-protein', 'light', 'hearty', 'balanced']
 
 interface Props {
   combo: CommunityCombo
@@ -24,34 +22,26 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
   const [notes, setNotes] = useState(combo.notes ?? '')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
+  const dialogRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     document.body.style.overflow = 'hidden'
+    dialogRef.current?.focus({ preventScroll: true })
     return () => { document.body.style.overflow = '' }
   }, [])
 
-  function toggleTag(tag: ComboTag) {
-    setTags((t) => t.includes(tag) ? t.filter((x) => x !== tag) : [...t, tag])
-  }
-
-  function updateDish(i: number, field: keyof DishItem, value: string | number) {
-    setDishes((prev) => prev.map((d, idx) => idx === i ? { ...d, [field]: value } : d))
-  }
-
-  function addDish() {
-    if (dishes.length >= 8) return
-    setDishes((prev) => [...prev, { name: '', station: '', servings: 1 }])
-  }
-
-  function removeDish(i: number) {
-    if (dishes.length <= 1) return
-    setDishes((prev) => prev.filter((_, idx) => idx !== i))
-  }
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [onClose])
 
   async function handleSave() {
     if (!firebaseUser) return
     if (!title.trim()) { setError('Title is required.'); return }
-    const validDishes = dishes.filter((d) => d.name.trim())
+    const validDishes = cleanDishes(dishes)
     if (validDishes.length < 1) { setError('Add at least one dish.'); return }
 
     setSaving(true)
@@ -78,14 +68,14 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
     <div className="fixed inset-0 z-50 flex flex-col justify-end">
       <div className="absolute inset-0 bg-black/50" onMouseDown={onClose} />
 
-      <div className="relative bg-white rounded-t-2xl max-h-[92vh] flex flex-col">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="edit-combo-title" tabIndex={-1} className="relative outline-none bg-white rounded-t-2xl max-h-[92vh] flex flex-col">
         <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
           <div className="w-10 h-1 rounded-full bg-surface-warm" />
         </div>
 
         <div className="flex items-center justify-between px-5 py-2 flex-shrink-0">
-          <h2 className="text-lg font-bold text-brand-black">Edit Combo</h2>
-          <button onClick={onClose} className="p-1.5 rounded-full hover:bg-surface-overlay transition-colors">
+          <h2 id="edit-combo-title" className="text-lg font-bold text-brand-black">Edit Combo</h2>
+          <button onClick={onClose} className="p-1.5 rounded-full hover:bg-surface-overlay transition-colors" aria-label="Close">
             <XMarkIcon width={20} height={20} className="text-muted" />
           </button>
         </div>
@@ -126,58 +116,13 @@ export default function EditComboModal({ combo, onClose, onSaved }: Props) {
           {/* Tags */}
           <div>
             <label className="text-sm font-medium text-brand-black block mb-2">Tags</label>
-            <div className="flex flex-wrap gap-1.5">
-              {AVAILABLE_TAGS.map((tag) => (
-                <button
-                  key={tag}
-                  type="button"
-                  onClick={() => toggleTag(tag)}
-                  className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${
-                    tags.includes(tag) ? tagStyle(tag) : 'bg-surface-overlay text-muted'
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
-            </div>
+            <TagPicker tags={tags} onChange={setTags} />
           </div>
 
           {/* Dishes */}
           <div>
             <label className="text-sm font-medium text-brand-black block mb-2">Dishes</label>
-            <div className="space-y-2">
-              {dishes.map((dish, i) => (
-                <div key={i} className="flex gap-2 items-center">
-                  <input
-                    value={dish.name}
-                    onChange={(e) => updateDish(i, 'name', e.target.value)}
-                    placeholder="Dish name"
-                    className="flex-1 rounded-lg border border-brand-black/25 px-3 py-2 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand"
-                  />
-                  <input
-                    type="number"
-                    min={1}
-                    max={5}
-                    value={dish.servings}
-                    onChange={(e) => updateDish(i, 'servings', Number(e.target.value))}
-                    className="w-12 rounded-lg border border-brand-black/25 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
-                  />
-                  <button
-                    onClick={() => removeDish(i)}
-                    disabled={dishes.length <= 1}
-                    className="flex-shrink-0 p-1.5 rounded-full hover:bg-surface-overlay disabled:opacity-30 transition-colors"
-                  >
-                    <XMarkIcon width={16} height={16} className="text-muted" />
-                  </button>
-                </div>
-              ))}
-            </div>
-            {dishes.length < 8 && (
-              <button onClick={addDish} className="flex items-center gap-1.5 mt-2 text-sm text-brand-deep font-medium">
-                <PlusIcon width={16} height={16} />
-                Add dish
-              </button>
-            )}
+            <DishListEditor dishes={dishes} onChange={setDishes} />
           </div>
 
           {/* Notes */}

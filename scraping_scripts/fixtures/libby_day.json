@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-13",
+  "day_of_week": "Tuesday",
+  "categories": {
+    "Breakfast Daily Special": [
+      {
+        "name": "Scrambled Eggs",
+        "description": "",
+        "serving_size": "4 oz",
+        "calories": 200.0,
+        "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Rice Bran Oil.",
+        "allergens": [
+          "Egg"
+        ],
+        "dietary_labels": [
+          "Vegetarian"
+        ],
+        "is_vegan": false,
+        "is_vegetarian": true,
+        "nutrition": {
+          "calories": 200.0,
+          "fat_g": 14.0,
+          "saturated_fat_g": 4.3,
+          "trans_fat_g": 0.0,
+          "cholesterol_mg": 449.0,
+          "sodium_mg": 170.0,
+          "carbohydrates_g": 1.0,
+          "fiber_g": 0.0,
+          "added_sugar_g": 0.0,
+          "total_sugar_g": 0.0,
+          "protein_g": 16.0,
+          "potassium_mg": 0.0,
+          "calcium_mg": 68.0,
+          "iron_mg": 2.1
+        }
+      },
+      {
+        "name": "Scrambled Eggs with Cheese",
+        "description": "",
+        "serving_size": "4 oz",
+        "calories": 228.0,
+        "ingredients": "Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Shredded Cheddar Cheese (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (color). Potato Starch, Corn Starch, Powdered Cellulose (added to prevent caking).), Rice Bran Oil.",
+        "allergens": [
+          "Milk",
+          "Egg"
+        ],
+        "dietary_labels": [
+          "Vegetarian"
+        ],
+        "is_vegan": false,
+        "is_vegetarian": true,
+        "nutrition": {
+          "calories": 228.0,
+          "fat_g": 17.0,
+          "saturated_fat_g": 6.0,
+          "trans_fat_g": 0.0,
+          "cholesterol_mg": 457.0,
+          "sodium_mg": 216.0,
+          "carbohydrates_g": 1.0,
+          "fiber_g": 0.0,
+          "added_sugar_g": 0.0,
+          "total_sugar_g": 0.0,
+          "protein_g": 17.0,
+          "potassium_mg": 5.0,
+          "calcium_mg": 118.0,
+          "iron_mg": 2.1
+        }
+      }
+    ],
+    "Gluten Free Bread": [
+      {
+        "name": "Rudi's Homestyle Multigran GF Bread",
+        "description": "",
+        "serving_size": "1 slice",
+        "calories": 90.0,
+        "ingredients": "ingredients, Water, modified tapioca starch, white sorghum flour, potato starch, cane sugar, canola oil, teff flour, molasses, amaranth flour, sunflower seeds, rolled oats, yeast, psyllium husk fiber, rice bran, golden flaxseeds, brown flaxseeds, salt, hydroxypropyl methylcellulose, distilled white vinegar, rice starch, millet, cultured brown rice flour, guar gum, sugarcane fiber, rice flour, calcium sulfate, enzymes..",
+        "allergens": [],
+        "dietary_labels": [
+          "Vegan",
+          "Vegetarian"
+        ],
+        "is_vegan": true,
+        "is_vegetarian": true,
+        "nutrition": {
+          "calories": 90.0,
+          "fat_g": 2.0,
+          "saturated_fat_g": 0.0,
+          "trans_fat_g": 0.0,
+          "cholesterol_mg": 0.0,
+          "sodium_mg": 135.0,
+          "carbohydrates_g": 17.0,
+          "fiber_g": 2.0,
+          "added_sugar_g": 2.0,
+          "total_sugar_g": 2.0,
+          "protein_g": 1.0,
+          "potassium_mg": 40.0,
+          "calcium_mg": 10.0,
+          "iron_mg": 0.4
+        }
+      }
+    ],
+    "Milk and Alternatives": [
+      {
+        "name": "Soy Milk",
+        "description": "",
+        "serving_size": "8 fl oz",
+        "calories": 93.0,
+        "ingredients": "Organic Soymilk (Filtered Water, Organic Soybeans), Contains 2% or Less of: Vitamin and Mineral Blend (Calcium Carbonate, Vitamin A Palmitate, Vitamin D2, Riboflavin [B2], Vitamin B12), Sea Salt, Gellan Gum, Ascorbic Acid (Vitamin C To Protect Freshness), Natural Flavor., , CONTAINS SOY..",
+        "allergens": [
+          "Soy"
+        ],
+        "dietary_labels": [
+          "Vegan"
+        ],
+        "is_vegan": true,
+        "is_vegetarian": true,
+        "nutrition": {
+          "calories": 93.0,
+          "fat_g": 3.7,
+          "saturated_fat_g": 0.5,
+          "trans_fat_g": 0.0,
+          "cholesterol_mg": 0.0,
+          "sodium_mg": 111.0,
+          "carbohydrates_g": 7.0,
+          "fiber_g": 1.0,
+          "added_sugar_g": 0.0,
+          "total_sugar_g": 6.0,
+          "protein_g": 7.0,
+          "potassium_mg": 279.0,
+          "calcium_mg": 279.0,
+          "iron_mg": 1.0
+        }
+      }
+    ],
+    "Deli Bar": [
+      {
+        "name": "Salami Sliced Kosher",
+        "description": "",
+        "serving_size": "4 oz pkg",
+        "calories": null,
+        "ingredients": "Salami Sliced Kosher.",
+        "allergens": [],
+        "dietary_labels": [],
+        "is_vegan": false,
+        "is_vegetarian": false,
+        "nutrition": {}
+      }
+    ]
+  }
+}

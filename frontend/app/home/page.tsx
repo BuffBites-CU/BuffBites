@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
 import { useCombos } from '@/hooks/useCombos'
+import { useRequireAuth } from '@/hooks/useRequireAuth'
 import DiningSelector from '@/components/DiningSelector'
 import MealPeriodTabs from '@/components/MealPeriodTabs'
 import ComboCard from '@/components/ComboCard'
@@ -12,17 +12,17 @@ import ComboDetail from '@/components/ComboDetail'
 import MenuView from '@/components/MenuView'
 import TrendingRail from '@/components/TrendingRail'
 import Doodle from '@/components/Doodle'
-import Link from 'next/link'
+import Spinner from '@/components/Spinner'
 import SnapPlate from '@/components/SnapPlate'
 import FuelPlanCard from '@/components/FuelPlanCard'
 import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
-import { logMeal, addFavorite, removeFavorite, getUser } from '@/services/usersService'
+import { logMeal, addFavorite, removeFavorite } from '@/services/usersService'
 import { publishCombo, getUserCombos } from '@/services/communityService'
 import { isoOffsetMST, isoToLocalNoon, currentMealPeriodMST } from '@/lib/date'
 import { CLOSED_HALLS } from '@/types'
-import type { Combo, CommunityCombo, DiningHall, MealPeriod, FavoriteCombo, NutritionGoals, DietaryPreference } from '@/types'
+import type { Combo, CommunityCombo, DiningHall, MealPeriod, FavoriteCombo } from '@/types'
 
 const HALL_ALTERNATES: Record<DiningHall, string> = {
   alley: 'C4C or Sewall', // closed until Aug 2028; kept for type completeness
@@ -47,8 +47,25 @@ function buildDateOptions() {
 type HomeView = 'combos' | 'menu'
 
 export default function HomePage() {
-  const router = useRouter()
-  const { firebaseUser, firebaseUid, username, defaultDiningHall, loading: authLoading } = useAuth()
+  // Mount the page only once auth has resolved. By then AuthContext has loaded the
+  // profile, so the saved hall, goals and preferences are in place before the first
+  // combo request (a cold start used to generate C4C combos with no preferences first).
+  const signedIn = useRequireAuth()
+  const { profile, refreshProfile } = useAuth()
+  const [profileTried, setProfileTried] = useState(false)
+  // A failed first profile load gets one retry; after that Home runs with defaults.
+  useEffect(() => {
+    if (!signedIn || profile) return
+    let alive = true
+    refreshProfile().catch(() => {}).finally(() => { if (alive) setProfileTried(true) })
+    return () => { alive = false }
+  }, [signedIn, profile, refreshProfile])
+  if (!signedIn || (!profile && !profileTried)) return <Spinner page />
+  return <Home />
+}
+
+function Home() {
+  const { firebaseUser, firebaseUid, username, profile, refreshProfile, defaultDiningHall } = useAuth()
   const { showToast } = useToast()
 
   // "Eat Now" — open straight to the meal period the dining hall is serving now.
@@ -66,14 +83,13 @@ export default function HomePage() {
   const [showDatePicker, setShowDatePicker] = useState(false)
   const [ateStates, setAteStates] = useState<Record<string, 'ate' | 'skipped'>>({})
   const [shareStates, setShareStates] = useState<Record<string, 'sharing' | 'shared'>>({})
-  const [favorites, setFavorites] = useState<FavoriteCombo[]>([])
-  const [userRestrictions, setUserRestrictions] = useState<string[]>([])
-  const [dietaryPrefs, setDietaryPrefs] = useState<DietaryPreference[]>([])
-  const [pastTitles, setPastTitles] = useState<Set<string>>(new Set())
-  const [nutritionGoals, setNutritionGoals] = useState<NutritionGoals | undefined>()
-  const [calorieTarget, setCalorieTarget] = useState<number | undefined>()
-  const [loggedMealKeys, setLoggedMealKeys] = useState<Set<string>>(new Set())
+  const [favorites, setFavorites] = useState<FavoriteCombo[]>(() => profile?.favorites ?? [])
+  const [pastTitles] = useState(() => new Set((profile?.meal_log ?? []).map((e) => e.title)))
+  const [loggedMealKeys] = useState(() => new Set((profile?.meal_log ?? []).map((e) => mealLogKey(e.dining_hall, e.date, e.meal_period, e.title))))
   const [postedComboKeys, setPostedComboKeys] = useState<Set<string>>(new Set())
+  const dietaryPrefs = profile?.dietary_preferences ?? []
+  const nutritionGoals = profile?.nutrition_goals ?? undefined
+  const calorieTarget = profile?.preferred_calories_per_meal || undefined
 
   const dateOptions = useMemo(buildDateOptions, [])
   const [selectedDate, setSelectedDate] = useState(dateOptions[0].iso)
@@ -91,20 +107,6 @@ export default function HomePage() {
     [data],
   )
 
-  // Load user favorites + restrictions once on mount
-  useEffect(() => {
-    if (!firebaseUid) return
-    getUser(firebaseUid).then((p) => {
-      setFavorites(p.favorites ?? [])
-      setUserRestrictions(p.restrictions ?? [])
-      setDietaryPrefs((p.dietary_preferences ?? []) as DietaryPreference[])
-      setPastTitles(new Set((p.meal_log ?? []).map((e) => e.title)))
-      setLoggedMealKeys(new Set((p.meal_log ?? []).map((e) => mealLogKey(e.dining_hall, e.date, e.meal_period, e.title))))
-      if (p.nutrition_goals) setNutritionGoals(p.nutrition_goals)
-      if (p.preferred_calories_per_meal) setCalorieTarget(p.preferred_calories_per_meal)
-    }).catch(() => {})
-  }, [firebaseUid])
-
   // Load combos the user has already posted to the community, to keep "Post to community" disabled across reloads.
   useEffect(() => {
     if (!firebaseUid) return
@@ -113,12 +115,7 @@ export default function HomePage() {
     }).catch(() => {})
   }, [firebaseUid])
 
-  useEffect(() => {
-    if (authLoading) return
-    if (!firebaseUid) router.replace('/')
-  }, [firebaseUid, authLoading, router])
-
-  function ateKey(combo: Combo, index: number) {
+  function ateKey(index: number) {
     return `${selectedDining}-${selectedDate}-${selectedPeriod}-${index}`
   }
 
@@ -132,7 +129,7 @@ export default function HomePage() {
 
   async function handleAte(combo: Combo, index: number) {
     if (!firebaseUid) return
-    const key = ateKey(combo, index)
+    const key = ateKey(index)
     setAteStates((prev) => ({ ...prev, [key]: 'ate' }))
     try {
       await logMeal(firebaseUid, {
@@ -146,20 +143,21 @@ export default function HomePage() {
         meal_period: selectedPeriod,
       })
       showToast(`Logged ${combo.approximate_calories} cal`, 'success')
+      // Keep the shared profile current, so this meal still shows as logged when /home is opened again.
+      refreshProfile().catch(() => {})
     } catch {
       setAteStates((prev) => { const n = { ...prev }; delete n[key]; return n })
       showToast('Failed to log meal', 'error')
     }
   }
 
-  function handleSkip(combo: Combo, index: number) {
-    const key = ateKey(combo, index)
+  function handleSkip(index: number) {
+    const key = ateKey(index)
     setAteStates((prev) => ({ ...prev, [key]: 'skipped' }))
   }
 
-  async function handleFavorite(combo: Combo, index: number) {
+  async function handleFavorite(combo: Combo) {
     if (!firebaseUid) return
-    const key = ateKey(combo, index)
     const alreadyFav = favorites.some(
       (f) => f.title === combo.title && f.dining_hall === selectedDining && f.date === selectedDate
     )
@@ -167,7 +165,7 @@ export default function HomePage() {
       setFavorites((prev) => prev.filter(
         (f) => !(f.title === combo.title && f.dining_hall === selectedDining && f.date === selectedDate)
       ))
-      removeFavorite(firebaseUid, combo.title, selectedDining, selectedDate).catch(() => {})
+      removeFavorite(firebaseUid, combo.title, selectedDining, selectedDate).then(() => refreshProfile()).catch(() => {})
     } else {
       const fav: Omit<FavoriteCombo, 'saved_at'> = {
         title: combo.title,
@@ -179,25 +177,13 @@ export default function HomePage() {
         dishes: combo.dishes,
       }
       setFavorites((prev) => [...prev, { ...fav, saved_at: new Date().toISOString() }])
-      addFavorite(firebaseUid, fav).catch(() => {})
+      addFavorite(firebaseUid, fav).then(() => refreshProfile()).catch(() => {})
     }
-    void key
-  }
-
-  function getAllergyWarning(combo: Combo): string | undefined {
-    if (userRestrictions.length === 0) return undefined
-    const dishText = combo.dishes.map((d) => d.name.toLowerCase()).join(' ')
-    const tagText = combo.tags.join(' ').toLowerCase()
-    const matched = userRestrictions.filter((r) => {
-      const rLower = r.toLowerCase()
-      return dishText.includes(rLower) || tagText.includes(rLower)
-    })
-    return matched.length > 0 ? `May contain: ${matched.join(', ')}` : undefined
   }
 
   async function handleShare(combo: Combo, index: number) {
-    if (!firebaseUser || !username) return
-    const key = ateKey(combo, index)
+    if (!firebaseUser) return
+    const key = ateKey(index)
     setShareStates((prev) => ({ ...prev, [key]: 'sharing' }))
     try {
       const token = await firebaseUser.getIdToken()
@@ -219,17 +205,6 @@ export default function HomePage() {
       setShareStates((prev) => { const n = { ...prev }; delete n[key]; return n })
       showToast('Failed to post', 'error')
     }
-  }
-
-  if (authLoading || !firebaseUid) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <svg className="animate-spin h-8 w-8 text-brand-deep" fill="none" viewBox="0 0 24 24">
-          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-        </svg>
-      </div>
-    )
   }
 
   return (
@@ -387,18 +362,9 @@ export default function HomePage() {
             <p className="text-sm text-muted">Tap to generate AI combos for today&apos;s menu.</p>
             <button
               onClick={refetch}
-              disabled={loading}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand text-white text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-60"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand text-white text-sm font-semibold hover:opacity-90 transition-opacity"
             >
-              {loading ? (
-                <>
-                  <svg className="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                  </svg>
-                  Generating…
-                </>
-              ) : '✦ Generate combos'}
+              ✦ Generate combos
             </button>
           </div>
         )}
@@ -436,21 +402,20 @@ export default function HomePage() {
                     calorieTarget={calorieTarget}
                     onClick={() => setActiveCombo(combo)}
                     ateState={
-                      ateStates[ateKey(combo, i)] ??
+                      ateStates[ateKey(i)] ??
                       (loggedMealKeys.has(mealLogKey(selectedDining, selectedDate, selectedPeriod, combo.title)) ? 'ate' : null)
                     }
-                    onAte={(cal) => handleAte(combo, i)}
-                    onSkip={() => handleSkip(combo, i)}
+                    onAte={() => handleAte(combo, i)}
+                    onSkip={() => handleSkip(i)}
                     shareState={
-                      shareStates[ateKey(combo, i)] ??
+                      shareStates[ateKey(i)] ??
                       (postedComboKeys.has(comboPostKey(selectedDining, selectedDate, combo.title)) ? 'shared' : null)
                     }
                     onShare={() => handleShare(combo, i)}
                     isFavorited={favorites.some(
                       (f) => f.title === combo.title && f.dining_hall === selectedDining && f.date === selectedDate
                     )}
-                    onFavorite={() => handleFavorite(combo, i)}
-                    allergyWarning={getAllergyWarning(combo)}
+                    onFavorite={() => handleFavorite(combo)}
                     ateBeforeHint={pastTitles.has(combo.title)}
                   />
                 </div>
@@ -489,7 +454,7 @@ const PERIOD_LINES: Record<MealPeriod, string> = {
   Dinner: 'Dinner plans, sorted.',
 }
 
-function SectionHeader({ sec, title, href, linkLabel = 'See all' }: { sec: string; title: string; href?: string; linkLabel?: string }) {
+function SectionHeader({ sec, title }: { sec: string; title: string }) {
   return (
     <div className="mb-3">
       <div className="flex items-end justify-between gap-2">
@@ -497,11 +462,6 @@ function SectionHeader({ sec, title, href, linkLabel = 'See all' }: { sec: strin
           <span className="plan-label">Sec. {sec}</span>
           <h2 className="text-[24px] text-brand-black leading-tight">{title}</h2>
         </div>
-        {href && (
-          <Link href={href} className="font-display text-[16px] text-brand-black underline underline-offset-4">
-            {linkLabel}
-          </Link>
-        )}
       </div>
       <div className="dim-line mt-1.5" aria-hidden />
     </div>

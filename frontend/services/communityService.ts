@@ -8,7 +8,8 @@ export function getCombos(dining_hall?: DiningHall): Promise<CommunityCombo[]> {
 }
 
 export function getCombo(combo_id: string): Promise<CommunityCombo> {
-  return apiFetch<CommunityCombo>(`/api/community/combos/${combo_id}`)
+  // The sign-in token (when there is one) lets the server fill in has_voted.
+  return apiFetch<CommunityCombo>(`/api/community/combos/${combo_id}`, { auth: 'optional' })
 }
 
 export function getUserCombos(firebase_uid: string): Promise<CommunityCombo[]> {

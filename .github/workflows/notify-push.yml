@@ -1,16 +1,22 @@
 name: Notify on Push
 
+# Recipients: the repository variable NOTIFY_EMAILS, a comma-separated list
+# (Settings → Secrets and variables → Actions → Variables). Unset = no email.
+
 on:
   push:
     branches:
       - main
 
+permissions: {}
+
 jobs:
   send-email:
+    if: vars.NOTIFY_EMAILS != ''
     runs-on: ubuntu-latest
     steps:
       - name: Send email notification
-        uses: dawidd6/action-send-mail@v4
+        uses: dawidd6/action-send-mail@611879133a9569642c41be66f4a323286e9b8a3b # v4
         with:
           server_address: smtp.gmail.com
           server_port: 465
@@ -18,7 +24,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "[${{ github.repository }}] New push by ${{ github.actor }}"
-          to: patilrajvardhan27@gmail.com,sejalhukare09@gmail.com,ishitapawar19@gmail.com
+          to: ${{ vars.NOTIFY_EMAILS }}
           from: BuffBites Notifications
           body: |
             New commit pushed to ${{ github.ref_name }}

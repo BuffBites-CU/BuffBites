@@ -1,5 +1,5 @@
 import { apiFetch } from './api'
-import type { UserCreate, UserResponse, MealLogEntry, FavoriteCombo } from '@/types'
+import type { UserCreate, UserUpdate, UserResponse, MealLogEntry, FavoriteCombo } from '@/types'
 
 // Every /api/users route except check-username acts on the signed-in user's
 // own profile and sends their Firebase ID token (`auth: true`).
@@ -22,7 +22,7 @@ export function getUser(firebase_uid: string): Promise<UserResponse> {
 
 export function updateUser(
   firebase_uid: string,
-  updates: Partial<UserCreate>,
+  updates: UserUpdate,
 ): Promise<{ message: string }> {
   return apiFetch<{ message: string }>(`/api/users/${firebase_uid}`, {
     method: 'PUT',

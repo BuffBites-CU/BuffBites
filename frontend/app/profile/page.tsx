@@ -2,28 +2,27 @@
 
 import Avatar from '@/components/Avatar'
 import TrainingLink from '@/components/TrainingLink'
-import { useEffect, useState } from 'react'
+import Spinner from '@/components/Spinner'
+import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
-import { getUser, updateUser, deleteMeal } from '@/services/usersService'
+import { useRequireAuth } from '@/hooks/useRequireAuth'
+import { updateUser, deleteMeal } from '@/services/usersService'
+import { isApiStatus } from '@/services/api'
 import { getUserCombos, deleteCombo } from '@/services/communityService'
 import { PencilIcon, CheckIcon, XMarkIcon, StarIcon, TrashIcon, ClockIcon, ChevronUpIcon, ChevronDownIcon } from '@/components/icons'
 import { DINING_HALLS, DINING_HALL_LABELS } from '@/types'
-import { todayMST, isoOffsetMST, isoToLocalNoon } from '@/lib/date'
+import { todayMST, isoOffsetMST, isoToLocalNoon, parseApiDate } from '@/lib/date'
+import { DIETARY_OPTIONS, USERNAME_REGEX, USERNAME_RULE } from '@/lib/profile'
 import EditComboModal from '@/components/EditComboModal'
-import type { DietaryPreference, DiningHall, NutritionGoals, UserResponse, CommunityCombo, MealLogEntry } from '@/types'
+import type { DietaryPreference, DiningHall, NutritionGoals, UserResponse, UserUpdate, CommunityCombo, MealLogEntry } from '@/types'
 
 /* ── Constants ─────────────────────────────────────────────────── */
 
-const DIETARY_OPTIONS: { key: DietaryPreference; label: string; style: string }[] = [
-  { key: 'vegan',       label: 'Vegan',       style: 'bg-surface-overlay text-brand-black' },
-  { key: 'vegetarian',  label: 'Vegetarian',  style: 'bg-surface-overlay text-brand-black' },
-  { key: 'gluten-free', label: 'Gluten-Free', style: 'bg-surface-overlay text-brand-black' },
-  { key: 'halal',       label: 'Halal',       style: 'bg-surface-overlay text-brand-black' },
-]
+const DIETARY_CHIP = 'bg-surface-overlay text-brand-black'
 
 const DIETARY_FOCUS_OPTIONS: { key: NonNullable<NutritionGoals['dietary_focus']>; label: string; icon: string; desc: string }[] = [
   { key: 'balanced',    label: 'Balanced',     icon: '⚖️', desc: 'Varied macros' },
@@ -69,7 +68,7 @@ function formatDateLabel(iso: string): string {
 }
 
 function formatExpiry(iso: string) {
-  const ms = new Date(iso).getTime() - Date.now()
+  const ms = parseApiDate(iso).getTime() - Date.now()
   if (ms <= 0) return { text: 'Expired', urgent: true }
   const h = Math.floor(ms / 3_600_000)
   const m = Math.floor((ms % 3_600_000) / 60_000)
@@ -149,53 +148,16 @@ function StatPill({ icon, value, label }: { icon: string; value: string | number
   )
 }
 
-function WeeklyChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[]; goalPerMeal?: number }) {
-  const data = getWeekData(mealLog)
-  const dailyGoal = goalPerMeal ? goalPerMeal * 3 : null
-  const maxCal = Math.max(...data.map((d) => d.calories), dailyGoal ?? 0, 100)
-  const BAR_H = 72
-  const today = todayISO()
-
-  return (
-    <div className="bg-surface-card rounded-2xl border border-surface-overlay p-4">
-      <div className="flex items-end justify-between gap-1 h-20 relative">
-        {dailyGoal && (
-          <div
-            className="absolute left-0 right-0 border-t border-dashed border-brand/50 pointer-events-none z-10"
-            style={{ bottom: `${(dailyGoal / maxCal) * BAR_H}px` }}
-          />
-        )}
-        {data.map(({ iso, label, calories }) => {
-          const isToday = iso === today
-          const pct = calories > 0 ? Math.max((calories / maxCal) * BAR_H, 5) : 0
-          const overGoal = !!(dailyGoal && calories > dailyGoal)
-          return (
-            <div key={iso} className="flex-1 flex flex-col items-center gap-0.5">
-              <div className="w-full flex items-end justify-center" style={{ height: BAR_H }}>
-                <div
-                  className={`w-full rounded-t transition-all duration-500 ${
-                    calories === 0 ? 'bg-surface-overlay rounded' :
-                    overGoal ? 'bg-brand-black' :
-                    isToday ? 'bg-brand' : 'bg-brand/45'
-                  }`}
-                  style={{ height: calories === 0 ? 3 : pct }}
-                />
-              </div>
-              <span className={`text-[9px] font-display font-semibold uppercase tracking-wide leading-none ${isToday ? 'text-brand-deep' : 'text-muted'}`}>{label}</span>
-              {calories > 0 && <span className="text-[8px] text-muted leading-none">{calories}</span>}
-            </div>
-          )
-        })}
-      </div>
-      {dailyGoal && <p className="text-[10px] text-muted mt-2 text-right">— {dailyGoal} cal/day goal</p>}
-    </div>
-  )
+const WEEKLY_METRICS = {
+  calories: { floor: 100, unit: '',  goalUnit: ' cal' },
+  protein:  { floor: 10,  unit: 'g', goalUnit: 'g protein' },
 }
 
-function WeeklyProteinChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[]; goalPerMeal?: number }) {
-  const data = getWeekData(mealLog)
+function WeeklyChart({ mealLog, metric, goalPerMeal }: { mealLog: MealLogEntry[]; metric: keyof typeof WEEKLY_METRICS; goalPerMeal?: number | null }) {
+  const { floor, unit, goalUnit } = WEEKLY_METRICS[metric]
+  const data = getWeekData(mealLog).map((d) => ({ iso: d.iso, label: d.label, value: d[metric] }))
   const dailyGoal = goalPerMeal ? goalPerMeal * 3 : null
-  const maxProtein = Math.max(...data.map((d) => d.protein), dailyGoal ?? 0, 10)
+  const maxValue = Math.max(...data.map((d) => d.value), dailyGoal ?? 0, floor)
   const BAR_H = 72
   const today = todayISO()
 
@@ -205,32 +167,32 @@ function WeeklyProteinChart({ mealLog, goalPerMeal }: { mealLog: MealLogEntry[];
         {dailyGoal && (
           <div
             className="absolute left-0 right-0 border-t border-dashed border-brand/50 pointer-events-none z-10"
-            style={{ bottom: `${(dailyGoal / maxProtein) * BAR_H}px` }}
+            style={{ bottom: `${(dailyGoal / maxValue) * BAR_H}px` }}
           />
         )}
-        {data.map(({ iso, label, protein }) => {
+        {data.map(({ iso, label, value }) => {
           const isToday = iso === today
-          const pct = protein > 0 ? Math.max((protein / maxProtein) * BAR_H, 5) : 0
-          const overGoal = !!(dailyGoal && protein > dailyGoal)
+          const pct = value > 0 ? Math.max((value / maxValue) * BAR_H, 5) : 0
+          const overGoal = !!(dailyGoal && value > dailyGoal)
           return (
             <div key={iso} className="flex-1 flex flex-col items-center gap-0.5">
               <div className="w-full flex items-end justify-center" style={{ height: BAR_H }}>
                 <div
                   className={`w-full rounded-t transition-all duration-500 ${
-                    protein === 0 ? 'bg-surface-overlay rounded' :
+                    value === 0 ? 'bg-surface-overlay rounded' :
                     overGoal ? 'bg-brand-black' :
                     isToday ? 'bg-brand' : 'bg-brand/45'
                   }`}
-                  style={{ height: protein === 0 ? 3 : pct }}
+                  style={{ height: value === 0 ? 3 : pct }}
                 />
               </div>
               <span className={`text-[9px] font-display font-semibold uppercase tracking-wide leading-none ${isToday ? 'text-brand-deep' : 'text-muted'}`}>{label}</span>
-              {protein > 0 && <span className="text-[8px] text-muted leading-none">{protein}g</span>}
+              {value > 0 && <span className="text-[8px] text-muted leading-none">{value}{unit}</span>}
             </div>
           )
         })}
       </div>
-      {dailyGoal && <p className="text-[10px] text-muted mt-2 text-right">— {dailyGoal}g protein/day goal</p>}
+      {dailyGoal && <p className="text-[10px] text-muted mt-2 text-right">— {dailyGoal}{goalUnit}/day goal</p>}
     </div>
   )
 }
@@ -261,7 +223,7 @@ function TodaysMacros({ mealLog }: { mealLog: MealLogEntry[] }) {
 }
 
 /** Count of the last 7 days where all configured goals (calorie + protein) were met */
-function countGoalDays(mealLog: MealLogEntry[], calorieGoalPerMeal?: number, proteinGoalPerMeal?: number): number {
+function countGoalDays(mealLog: MealLogEntry[], calorieGoalPerMeal?: number | null, proteinGoalPerMeal?: number | null): number {
   if (!calorieGoalPerMeal && !proteinGoalPerMeal) return 0
   const dailyCalGoal = calorieGoalPerMeal ? calorieGoalPerMeal * 3 : null
   const dailyProteinGoal = proteinGoalPerMeal ? proteinGoalPerMeal * 3 : null
@@ -275,7 +237,7 @@ function countGoalDays(mealLog: MealLogEntry[], calorieGoalPerMeal?: number, pro
 function MealHistoryDay({
   date, entries, total, goalPerMeal, onDelete,
 }: {
-  date: string; entries: MealLogEntry[]; total: number; goalPerMeal?: number
+  date: string; entries: MealLogEntry[]; total: number; goalPerMeal?: number | null
   onDelete: (logged_at: string) => void
 }) {
   const [open, setOpen] = useState(date === todayISO())
@@ -290,7 +252,7 @@ function MealHistoryDay({
       >
         {/* Date badge */}
         <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${isToday ? 'bg-brand' : 'bg-surface-overlay'}`}>
-          <span className={`text-xs font-display font-bold ${isToday ? 'text-brand-black' : 'text-muted'}`}>
+          <span className={`text-xs font-display font-bold ${isToday ? 'text-white' : 'text-muted'}`}>
             {isoToLocalNoon(date).getDate()}
           </span>
         </div>
@@ -360,11 +322,11 @@ function MealHistoryDay({
 
 export default function ProfilePage() {
   const router = useRouter()
-  const { firebaseUser, firebaseUid, loading: authLoading, signOut, setDefaultDiningHall: setCtxHall } = useAuth()
+  const ready = useRequireAuth()
+  const { firebaseUser, firebaseUid, profile, refreshProfile, updateProfile, signOut } = useAuth()
   const { showToast } = useToast()
 
-  const [profile, setProfile] = useState<UserResponse | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [loadFailed, setLoadFailed] = useState(false)
   const [activeTab, setActiveTab] = useState<ProfileTab>('overview')
   const [editMode, setEditMode] = useState(false)
   const [draft, setDraft] = useState({
@@ -389,11 +351,19 @@ export default function ProfilePage() {
   const [deletingId, setDeletingId] = useState<string | null>(null)
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null)
 
+  // The profile comes from AuthContext. Refresh it on open so meals logged on
+  // other pages since sign-in show up; the copy already loaded shows meanwhile.
+  const loadProfile = useCallback(() => {
+    setLoadFailed(false)
+    refreshProfile().catch((e) => {
+      if (isApiStatus(e, 404)) router.replace('/onboarding')
+      else setLoadFailed(true)
+    })
+  }, [refreshProfile, router])
+
   useEffect(() => {
-    if (authLoading) return
-    if (!firebaseUid) { router.replace('/'); return }
-    getUser(firebaseUid).then(setProfile).catch(() => router.replace('/')).finally(() => setLoading(false))
-  }, [firebaseUid, authLoading, router])
+    if (ready) loadProfile()
+  }, [ready, loadProfile])
 
   useEffect(() => {
     if (!firebaseUid) return
@@ -434,50 +404,56 @@ export default function ProfilePage() {
 
   async function handleSave() {
     if (!firebaseUid || !profile) return
-    if (!draft.username.trim() || draft.username.length < 3) { setUsernameError('Username must be at least 3 characters.'); return }
+    const name = draft.username.trim()
+    // Only a changed name must meet the rule; older accounts may hold names saved before it existed.
+    if (name !== profile.username && !USERNAME_REGEX.test(name)) { setUsernameError(USERNAME_RULE); return }
     setSaving(true)
-    const parsedCal = draft.preferred_calories_per_meal !== '' ? parseInt(draft.preferred_calories_per_meal, 10) : undefined
+    const parsedCal = draft.preferred_calories_per_meal !== '' ? parseInt(draft.preferred_calories_per_meal, 10) : null
     const newHall = draft.default_dining_hall || null
-    const parsedProtein = draft.nutrition_goals.protein_g_per_meal !== '' ? parseInt(draft.nutrition_goals.protein_g_per_meal, 10) : undefined
+    const parsedProtein = draft.nutrition_goals.protein_g_per_meal !== '' ? parseInt(draft.nutrition_goals.protein_g_per_meal, 10) : null
+    // Unset goal fields are null, as the API returns them, so an unchanged
+    // goal compares equal below.
     const newGoals: NutritionGoals | null = (parsedProtein || draft.nutrition_goals.dietary_focus || draft.nutrition_goals.priority_nutrients.length > 0)
       ? {
           protein_g_per_meal: parsedProtein,
-          dietary_focus: (draft.nutrition_goals.dietary_focus as NutritionGoals['dietary_focus']) || undefined,
+          dietary_focus: (draft.nutrition_goals.dietary_focus as NutritionGoals['dietary_focus']) || null,
           priority_nutrients: draft.nutrition_goals.priority_nutrients,
         }
       : null
 
-    const changes: Record<string, unknown> = {}
-    if (draft.username !== profile.username) changes.username = draft.username
+    const changes: UserUpdate = {}
+    if (name !== profile.username) changes.username = name
     if (JSON.stringify(draft.dietary_preferences) !== JSON.stringify(profile.dietary_preferences)) changes.dietary_preferences = draft.dietary_preferences
-    if (parsedCal !== profile.preferred_calories_per_meal) changes.preferred_calories_per_meal = parsedCal ?? null
-    if (newHall !== (profile.default_dining_hall ?? null)) changes.default_dining_hall = newHall
-    if (JSON.stringify(newGoals) !== JSON.stringify(profile.nutrition_goals ?? null)) changes.nutrition_goals = newGoals
+    if (parsedCal !== profile.preferred_calories_per_meal) changes.preferred_calories_per_meal = parsedCal
+    if (newHall !== profile.default_dining_hall) changes.default_dining_hall = newHall
+    if (JSON.stringify(newGoals) !== JSON.stringify(profile.nutrition_goals)) changes.nutrition_goals = newGoals
 
     try {
-      await updateUser(firebaseUid, changes as Parameters<typeof updateUser>[1])
-      setProfile((p) => p ? { ...p, ...changes, preferred_calories_per_meal: parsedCal ?? undefined, default_dining_hall: newHall ?? undefined, nutrition_goals: newGoals ?? undefined } : p)
-      if (newHall !== (profile.default_dining_hall ?? null)) setCtxHall(newHall)
+      await updateUser(firebaseUid, changes)
+      // Also updates the username and default hall the rest of the app reads.
+      updateProfile(changes)
       setEditMode(false)
       showToast('Profile updated!', 'success')
     } catch (e) {
-      const msg = e instanceof Error ? e.message : ''
-      if (msg.toLowerCase().includes('username')) setUsernameError('That username is already taken.')
+      // 400 is the API's "Username already taken"; 422 names the invalid field.
+      if (isApiStatus(e, 400)) setUsernameError('That username is already taken.')
+      else if (isApiStatus(e, 422)) showToast(e.message, 'error')
+      else showToast('Could not save your profile. Please try again.', 'error')
     } finally {
       setSaving(false)
     }
   }
 
   async function handleDeleteMeal(logged_at: string) {
-    if (!firebaseUid || deletingMeal) return
+    if (!firebaseUid || !profile || deletingMeal) return
     setDeletingMeal(logged_at)
     // Optimistic update
-    setProfile((p) => p ? { ...p, meal_log: (p.meal_log ?? []).filter((e) => e.logged_at !== logged_at) } : p)
+    updateProfile({ meal_log: profile.meal_log.filter((e) => e.logged_at !== logged_at) })
     try {
       await deleteMeal(firebaseUid, logged_at)
     } catch {
       // Roll back on failure by refetching
-      getUser(firebaseUid).then(setProfile).catch(() => {})
+      refreshProfile().catch(() => {})
       showToast('Failed to remove meal', 'error')
     } finally {
       setDeletingMeal(null)
@@ -497,18 +473,20 @@ export default function ProfilePage() {
     finally { setDeletingId(null) }
   }
 
-  if (loading) {
+  if (!firebaseUser || !profile) {
+    if (!ready || !loadFailed) return <Spinner page />
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <svg className="animate-spin h-8 w-8 text-brand-deep" fill="none" viewBox="0 0 24 24">
-          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-        </svg>
+      <div className="min-h-screen flex flex-col items-center justify-center gap-3 px-6 text-center">
+        <p className="text-sm text-muted">Couldn&apos;t load your profile.</p>
+        <button
+          onClick={loadProfile}
+          className="px-4 py-2 rounded-xl bg-brand text-white text-sm font-display font-semibold hover:opacity-90 transition-opacity"
+        >
+          Try again
+        </button>
       </div>
     )
   }
-
-  if (!firebaseUser || !profile) return null
 
   const mealLog = profile.meal_log ?? []
   const streak = computeStreak(mealLog)
@@ -699,7 +677,7 @@ export default function ProfilePage() {
                     )
                   })()}
 
-                  <WeeklyChart mealLog={mealLog} goalPerMeal={profile.preferred_calories_per_meal} />
+                  <WeeklyChart mealLog={mealLog} metric="calories" goalPerMeal={profile.preferred_calories_per_meal} />
                 </div>
               )}
 
@@ -720,7 +698,7 @@ export default function ProfilePage() {
 
                   <div>
                     <p className="text-xs font-display font-semibold text-muted uppercase tracking-wider mb-2">Weekly Protein Trend</p>
-                    <WeeklyProteinChart mealLog={mealLog} goalPerMeal={profile.nutrition_goals?.protein_g_per_meal} />
+                    <WeeklyChart mealLog={mealLog} metric="protein" goalPerMeal={profile.nutrition_goals?.protein_g_per_meal} />
                   </div>
                 </div>
               )}
@@ -896,9 +874,9 @@ export default function ProfilePage() {
                   <div>
                     <label className="text-xs font-display font-semibold text-muted uppercase tracking-wider block mb-2">Dietary Preferences</label>
                     <div className="flex flex-wrap gap-2">
-                      {DIETARY_OPTIONS.map(({ key, label, style }) => (
+                      {DIETARY_OPTIONS.map(({ key, label }) => (
                         <button key={key} onClick={() => togglePref(key)}
-                          className={`rounded-full px-4 py-1.5 text-sm font-medium border transition-all ${draft.dietary_preferences.includes(key) ? `${style} border-transparent` : 'bg-surface-overlay text-muted border-transparent'}`}>
+                          className={`rounded-full px-4 py-1.5 text-sm font-medium border transition-all ${draft.dietary_preferences.includes(key) ? `${DIETARY_CHIP} border-transparent` : 'bg-surface-overlay text-muted border-transparent'}`}>
                           {label}
                         </button>
                       ))}
@@ -1019,7 +997,7 @@ export default function ProfilePage() {
                         <div className="flex flex-wrap gap-1.5">
                           {profile.dietary_preferences.map((pref) => {
                             const opt = DIETARY_OPTIONS.find((o) => o.key === pref)
-                            return <span key={pref} className={`rounded-full px-3 py-1 text-sm font-medium ${opt?.style ?? 'bg-surface-overlay text-muted'}`}>{opt?.label ?? pref}</span>
+                            return <span key={pref} className={`rounded-full px-3 py-1 text-sm font-medium ${opt ? DIETARY_CHIP : 'bg-surface-overlay text-muted'}`}>{opt?.label ?? pref}</span>
                           })}
                         </div>
                       </div>

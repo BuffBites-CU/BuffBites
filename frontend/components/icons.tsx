@@ -19,88 +19,6 @@ function Icon({ children, ...props }: IconProps & { children: React.ReactNode })
   )
 }
 
-/* ── Custom Brand Icons ───────────────────────────────────────── */
-
-/** Bison head silhouette — the BuffBites mascot mark */
-export function BisonIcon({
-  size = 32,
-  ...props
-}: IconProps & { size?: number }) {
-  return (
-    <svg
-      viewBox="0 0 40 44"
-      width={size}
-      height={size}
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      {/* Left horn */}
-      <path d="M12 20 C10 12 7 4 8 3 C9 2 10 2 11 3 C13 6 15 14 16 20Z" />
-      {/* Right horn */}
-      <path d="M28 20 C30 12 33 4 32 3 C31 2 30 2 29 3 C27 6 25 14 24 20Z" />
-      {/* Head — wide oval with slight forehead indent between horns */}
-      <path d="M4 30 C4 23 8 18 14 17 C16 22 24 22 26 17 C32 18 36 23 36 30 C36 37 30 43 20 43 C10 43 4 37 4 30Z" />
-    </svg>
-  )
-}
-
-/** Full BuffBites logo: bison mark in a dark badge + wordmark */
-export function BuffBitesLogo({
-  badgeSize = 64,
-  showWordmark = true,
-  className = '',
-}: {
-  badgeSize?: number
-  showWordmark?: boolean
-  className?: string
-}) {
-  return (
-    <div className={`flex flex-col items-center gap-3 ${className}`}>
-      {/* Badge */}
-      <div
-        className="rounded-[22%] bg-brand-black flex items-center justify-center shadow-glow flex-shrink-0"
-        style={{ width: badgeSize, height: badgeSize }}
-      >
-        <BisonIcon
-          size={Math.round(badgeSize * 0.60)}
-          className="text-brand"
-        />
-      </div>
-
-      {showWordmark && (
-        <span
-          className="font-display font-bold text-brand-black tracking-tight select-none"
-          style={{ fontSize: Math.round(badgeSize * 0.56), lineHeight: 1 }}
-        >
-          BuffBites
-        </span>
-      )}
-    </div>
-  )
-}
-
-/** Inline wordmark only (no badge) — used in page headers */
-export function BuffBitesWordmark({
-  className = '',
-  size = 'md',
-}: {
-  className?: string
-  size?: 'sm' | 'md' | 'lg'
-}) {
-  const sizeClass = {
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-3xl',
-  }[size]
-
-  return (
-    <span className={`font-display font-bold text-brand-black tracking-tight ${sizeClass} ${className}`}>
-      BuffBites
-    </span>
-  )
-}
-
 /* ── Navigation Icons ────────────────────────────────────────── */
 
 export function SparklesIcon(props: IconProps) {
@@ -190,14 +108,6 @@ export function CheckIcon(props: IconProps) {
   return (
     <Icon {...props}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-    </Icon>
-  )
-}
-
-export function PhotoIcon(props: IconProps) {
-  return (
-    <Icon {...props}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
     </Icon>
   )
 }

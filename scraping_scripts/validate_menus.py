@@ -14,18 +14,13 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from halls import HALLS as REGISTRY
+
 DATA_DIR = Path(__file__).parent / "data"
-HALLS = {
-    "alley":          "alley_dining_menus.json",
-    "c4c":            "c4c_dining_menus.json",
-    "libby":          "libby_dining_menus.json",
-    "seec":           "seec_dining_menus.json",
-    "sewall":         "sewall_dining_menus.json",
-    "village_center": "village_center_dining_menus.json",
-}
-# Halls that are closed for a long stretch (The Alley: remodel until Aug 2028).
-# Reported, never failed.
-CLOSED = {"alley"}
+HALLS = {key: hall.file for key, hall in REGISTRY.items()}
+# Halls that are closed for a long stretch (`closed` in halls.py). Reported,
+# never failed.
+CLOSED = {key for key, hall in REGISTRY.items() if hall.closed}
 
 # A hall that is merely closed today (Libby and Sewall on weekends, SEEC on
 # weekends) is normal. A broken scrape looks different: nothing at all in the

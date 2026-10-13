@@ -52,6 +52,14 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="BuffBites API", lifespan=lifespan)
 
 
+_WEBHOOK_PREFIX = "/api/strava/webhook/"
+
+
+def _loggable_path(path: str) -> str:
+    """The Strava webhook's callback URL ends in its secret; keep it out of logs."""
+    return _WEBHOOK_PREFIX + "<redacted>" if path.startswith(_WEBHOOK_PREFIX) else path
+
+
 @app.middleware("http")
 async def log_request(request: Request, call_next):
     start = time.perf_counter()
@@ -60,7 +68,7 @@ async def log_request(request: Request, call_next):
     logger.info(
         "request",
         method=request.method,
-        path=request.url.path,
+        path=_loggable_path(request.url.path),
         status=response.status_code,
         duration_ms=duration_ms,
     )

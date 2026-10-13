@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useAuth } from '@/context/AuthContext'
 import { getTrends, getWeeklyTrends } from '@/services/communityService'
 import { useCommunity } from '@/hooks/useCommunity'
@@ -9,8 +9,8 @@ import { useScrollRestoration } from '@/hooks/useScrollRestoration'
 import FilterBar from '@/components/FilterBar'
 import TrendingPost, { StudentAvatar } from '@/components/TrendingPost'
 import ComboDetail from '@/components/ComboDetail'
+import Spinner from '@/components/Spinner'
 import { ChevronUpIcon } from '@/components/icons'
-import { DINING_HALL_LABELS } from '@/types'
 import { parseApiDate } from '@/lib/date'
 import type { CommunityCombo, DiningHall, VoteType } from '@/types'
 
@@ -22,14 +22,14 @@ function isRising(combo: CommunityCombo): boolean {
   return ageMs < 6 * 3_600_000 && combo.upvotes >= 3
 }
 
-function timeUntilMidnightUTC(): { text: string; urgent: boolean } {
-  const now = Date.now()
-  const midnight = new Date()
-  midnight.setUTCHours(24, 0, 0, 0)
-  const ms = midnight.getTime() - now
-  const h = Math.floor(ms / 3_600_000)
-  const m = Math.floor((ms % 3_600_000) / 60_000)
-  return { text: `${h}h ${m}m`, urgent: h < 2 }
+/** One board from per-hall lists: each combo once, most upvoted first, top 20. */
+function mergeTrends(lists: CommunityCombo[][]): CommunityCombo[] {
+  const seen = new Set<string>()
+  return lists
+    .flat()
+    .filter((c) => { if (seen.has(c.id)) return false; seen.add(c.id); return true })
+    .sort((a, b) => b.upvotes - a.upvotes)
+    .slice(0, 20)
 }
 
 interface PodiumCardProps {
@@ -39,7 +39,6 @@ interface PodiumCardProps {
 }
 
 function PodiumCard({ rank, combo, onClick }: PodiumCardProps) {
-  const medal = MEDALS[rank]
   const minH = rank === 1 ? 'min-h-[176px]' : rank === 2 ? 'min-h-[152px]' : 'min-h-[140px]'
 
   return (
@@ -73,51 +72,54 @@ export default function TrendsPage() {
   const [activeTab, setActiveTab] = useState<TrendsTab>('today')
   const [weeklyTrends, setWeeklyTrends] = useState<CommunityCombo[]>([])
   const [weeklyLoading, setWeeklyLoading] = useState(false)
+  const [weeklyError, setWeeklyError] = useState('')
+  const [weeklyTick, setWeeklyTick] = useState(0)
 
   const singleHall = selectedHalls.length <= 1 ? selectedHalls[0] : undefined
   const useHook = selectedHalls.length <= 1
-  const { combos: hookCombos, loading: hookLoading, error: hookError, vote, votedIds } = useCommunity(
-    'trends',
-    singleHall,
-  )
+  const {
+    combos: hookCombos, loading: hookLoading, error: hookError, refetch: hookRefetch, vote, votedIds,
+  } = useCommunity('trends', singleHall)
 
+  // Several halls: fetch each hall's board and merge them. The uid is a dependency
+  // so has_voted is refetched for whoever is signed in.
   useEffect(() => {
     if (selectedHalls.length <= 1) return
     let cancelled = false
     setMultiLoading(true)
     setMultiError('')
     Promise.all(selectedHalls.map((h) => getTrends(h)))
-      .then((results) => {
-        if (cancelled) return
-        const seen = new Set<string>()
-        const merged = results
-          .flat()
-          .filter((c) => { if (seen.has(c.id)) return false; seen.add(c.id); return true })
-          .sort((a, b) => b.upvotes - a.upvotes)
-          .slice(0, 20)
-        setMultiTrends(merged)
-      })
+      .then((results) => { if (!cancelled) setMultiTrends(mergeTrends(results)) })
       .catch((e: unknown) => { if (!cancelled) setMultiError(e instanceof Error ? e.message : 'Error') })
       .finally(() => { if (!cancelled) setMultiLoading(false) })
     return () => { cancelled = true }
-  }, [selectedHalls])
+  }, [selectedHalls, firebaseUser?.uid])
 
   const trends = useHook ? hookCombos : multiTrends
   const loading = useHook ? hookLoading : multiLoading
   const error = useHook ? hookError : multiError
 
-  // Fetch weekly trends when tab switches
+  // This week's board, for the selected halls, fetched whenever the tab is shown.
   useEffect(() => {
-    if (activeTab !== 'weekly' || weeklyTrends.length > 0) return
+    if (activeTab !== 'weekly') return
+    let cancelled = false
     setWeeklyLoading(true)
-    getWeeklyTrends().then(setWeeklyTrends).catch(() => {}).finally(() => setWeeklyLoading(false))
-  }, [activeTab, weeklyTrends.length])
+    setWeeklyError('')
+    const request = selectedHalls.length <= 1
+      ? getWeeklyTrends(selectedHalls[0])
+      : Promise.all(selectedHalls.map((h) => getWeeklyTrends(h))).then(mergeTrends)
+    request
+      .then((list) => { if (!cancelled) setWeeklyTrends(list) })
+      .catch((e: unknown) => { if (!cancelled) setWeeklyError(e instanceof Error ? e.message : 'Error') })
+      .finally(() => { if (!cancelled) setWeeklyLoading(false) })
+    return () => { cancelled = true }
+  }, [activeTab, selectedHalls, weeklyTick, firebaseUser?.uid])
 
-  const resetInfo = useMemo(timeUntilMidnightUTC, [])
-
-  const refetch = useHook
-    ? () => { /* hook refetches via useCommunity */ }
-    : () => setSelectedHalls([...selectedHalls])
+  const refetch = activeTab === 'weekly'
+    ? () => setWeeklyTick((n) => n + 1)
+    : useHook
+      ? hookRefetch
+      : () => setSelectedHalls([...selectedHalls])
 
   useScrollRestoration('trends')
   usePullToRefresh(refetch)
@@ -127,11 +129,28 @@ export default function TrendsPage() {
       signIn().catch(() => {})
       return
     }
-    if (activeCombo) await vote(activeCombo.id, type)
+    if (!activeCombo || votedIds.has(activeCombo.id)) return
+    const id = activeCombo.id
+    // useCommunity counts the vote in its own list. The multi-hall and weekly boards
+    // are fetched here, so count it in them too, and take it back if the vote fails.
+    const bump = (by: number) => (list: CommunityCombo[]) => list.map((c) => (
+      c.id === id
+        ? { ...c, upvotes: c.upvotes + (type === 'upvote' ? by : 0), downvotes: c.downvotes + (type === 'downvote' ? by : 0) }
+        : c
+    ))
+    setMultiTrends(bump(1))
+    setWeeklyTrends(bump(1))
+    await vote(id, type)
+    if (!votedIds.has(id)) {
+      setMultiTrends(bump(-1))
+      setWeeklyTrends(bump(-1))
+    }
   }
 
   const displayTrends = activeTab === 'weekly' ? weeklyTrends : trends
   const displayLoading = activeTab === 'weekly' ? weeklyLoading : loading
+  const displayError = activeTab === 'weekly' ? weeklyError : error
+  const liveCombo = activeCombo ? displayTrends.find((c) => c.id === activeCombo.id) : undefined
   const podiumTrends = displayTrends.slice(0, 3)
   const listTrends = displayTrends.slice(3, 20)
   const hasPodium = podiumTrends.length === 3
@@ -143,10 +162,8 @@ export default function TrendsPage() {
         <div className="max-w-md mx-auto px-4 pt-4 pb-3 flex items-center justify-between">
           <div><span className="plan-label">Sheet B-01</span><h1 className="text-[32px] text-brand-black leading-none">Trending</h1></div>
           {activeTab === 'today' && (
-            <span className={`flex items-center gap-1 text-xs font-display font-medium px-2.5 py-1 rounded-full ${
-              resetInfo.urgent ? 'bg-surface-overlay text-brand-black' : 'bg-surface-overlay text-muted'
-            }`}>
-              Resets in {resetInfo.text}
+            <span className="flex items-center gap-1 text-xs font-display font-medium px-2.5 py-1 rounded-full bg-surface-overlay text-muted">
+              Posts stay up 24h
             </span>
           )}
         </div>
@@ -178,10 +195,7 @@ export default function TrendsPage() {
         {multiLoading && selectedHalls.length > 1 && (
           <div className="max-w-md mx-auto px-4 pb-2">
             <span className="inline-flex items-center gap-1.5 text-xs text-muted bg-surface-overlay rounded-full px-3 py-1">
-              <svg className="animate-spin h-3 w-3 flex-shrink-0" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-              </svg>
+              <Spinner size={12} className="flex-shrink-0" />
               Fetching from {selectedHalls.length} halls…
             </span>
           </div>
@@ -191,13 +205,13 @@ export default function TrendsPage() {
       <div className="max-w-md mx-auto px-4 pt-4 animate-page-in">
         {displayLoading && <TrendSkeletons />}
 
-        {!displayLoading && error && activeTab === 'today' && (
+        {!displayLoading && displayError && (
           <div className="flex flex-col items-center gap-4 py-16 text-center">
-            <p className="text-sm text-muted">{error}</p>
+            <p className="text-sm text-muted">{displayError}</p>
           </div>
         )}
 
-        {!displayLoading && displayTrends.length === 0 && (
+        {!displayLoading && !displayError && displayTrends.length === 0 && (
           <div className="flex flex-col items-center gap-3 py-16 text-center">
             <span className="text-5xl">🔥</span>
             <p className="font-semibold text-brand-black">Nothing trending yet</p>
@@ -248,6 +262,7 @@ export default function TrendsPage() {
           combo={activeCombo}
           type="community"
           hasVoted={votedIds.has(activeCombo.id)}
+          liveCounts={liveCombo}
           onVote={handleVote}
           onClose={() => setActiveCombo(null)}
         />

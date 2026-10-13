@@ -17,6 +17,9 @@ on:
       - '.github/workflows/deploy-backend.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 concurrency:
   group: deploy-backend
   cancel-in-progress: false
@@ -24,8 +27,6 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -35,30 +36,37 @@ jobs:
           cache: pip
           cache-dependency-path: backend/requirements.txt
 
+      # No deploy token in this step's environment: it installs packages and
+      # runs code from the repo.
       - name: Run backend tests
         working-directory: backend
         env:
           MONGO_URL: mongodb://localhost:27017
           ANTHROPIC_API_KEY: test
         run: |
-          pip install -r requirements.txt pytest
+          pip install -r requirements.txt pytest==9.1.1
           PYTHONPATH=. pytest tests -q
 
       - name: Check deploy token
         id: token
+        env:
+          HAS_TOKEN: ${{ secrets.FLY_API_TOKEN != '' }}
         run: |
-          if [ -z "$FLY_API_TOKEN" ]; then
+          if [ "$HAS_TOKEN" != "true" ]; then
             echo "::warning::FLY_API_TOKEN secret is not set, skipping deploy. See the setup note at the top of this workflow."
             echo "present=false" >> "$GITHUB_OUTPUT"
           else
             echo "present=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-        if: steps.token.outputs.present == 'true'
+      # A manual run from another branch only runs the tests.
+      - uses: superfly/flyctl-actions/setup-flyctl@ed8efb33836e8b2096c7fd3ba1c8afe303ebbff1 # 1.6
+        if: steps.token.outputs.present == 'true' && github.ref == 'refs/heads/main'
 
       # Build context must be the repo root: the Dockerfile copies backend/ and
-      # scraping_scripts/data/.
+      # scraping_scripts/data/live/.
       - name: Deploy to Fly.io
-        if: steps.token.outputs.present == 'true'
+        if: steps.token.outputs.present == 'true' && github.ref == 'refs/heads/main'
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
         run: flyctl deploy --remote-only --config backend/fly.toml --dockerfile backend/Dockerfile .

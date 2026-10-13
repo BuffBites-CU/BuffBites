@@ -2,16 +2,19 @@
 """Write small "live" copies of the scraped menus for the API to load.
 
 The full files (data/*.json) keep 6 weeks of history with ingredient text;
-C4C alone is ~18 MB, and parsing it needs ~80 MB of RAM, which crashes the
+C4C alone is ~18 MB, and parsing it needs ~80 MB of RAM, which OOM-killed the
 256 MB Fly machines. The API only ever asks for dates near today and never
 reads ingredients, so data/live/*.json keeps just that: minified, no
 ingredients, dates from LIVE_PAST_DAYS ago to LIVE_FUTURE_DAYS ahead (MT).
 """
 
 import json
+import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+from halls import HALLS
 
 DATA_DIR = Path(__file__).parent / "data"
 LIVE_DIR = DATA_DIR / "live"
@@ -35,9 +38,13 @@ def slim(data: dict, today) -> dict:
 def main() -> None:
     today = datetime.now(ZoneInfo("America/Denver")).date()
     LIVE_DIR.mkdir(exist_ok=True)
-    for src in sorted(DATA_DIR.glob("*_dining_menus.json")):
+    for hall in HALLS.values():
+        src = DATA_DIR / hall.file
+        if not src.exists():
+            print(f"{src.relative_to(DATA_DIR.parent)}: missing, skipped", file=sys.stderr)
+            continue
         live = slim(json.loads(src.read_text(encoding="utf-8")), today)
-        out = LIVE_DIR / src.name
+        out = LIVE_DIR / hall.file
         out.write_text(json.dumps(live, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         print(f"{out.relative_to(DATA_DIR.parent)}: {len(live['menus'])} days, {out.stat().st_size / 1e6:.1f} MB")
 

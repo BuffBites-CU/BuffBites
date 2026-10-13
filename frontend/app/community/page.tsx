@@ -1,53 +1,41 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { useAuth } from '@/context/AuthContext'
+import { useMemo, useState } from 'react'
 import { useToast } from '@/context/ToastContext'
 import { useCommunity } from '@/hooks/useCommunity'
 import { usePullToRefresh } from '@/hooks/usePullToRefresh'
+import { useRequireAuth } from '@/hooks/useRequireAuth'
 import { useScrollRestoration } from '@/hooks/useScrollRestoration'
 import ComboCard from '@/components/ComboCard'
 import ComboDetail from '@/components/ComboDetail'
 import FilterBar from '@/components/FilterBar'
 import PublishComboModal from '@/components/PublishComboModal'
-import type { CommunityCombo, DiningHall, FavoriteCombo, VoteType } from '@/types'
-
-type FeedTab = 'all' | 'saved'
+import Spinner from '@/components/Spinner'
+import { parseApiDate } from '@/lib/date'
+import type { CommunityCombo, DiningHall, VoteType } from '@/types'
 
 function isRising(combo: CommunityCombo): boolean {
-  const ageMs = Date.now() - new Date(combo.created_at).getTime()
+  const ageMs = Date.now() - parseApiDate(combo.created_at).getTime()
   return ageMs < 6 * 3_600_000 && combo.upvotes >= 3
 }
 
 export default function CommunityPage() {
-  const router = useRouter()
-  const { firebaseUser, loading: authLoading } = useAuth()
+  const signedIn = useRequireAuth()
   const { showToast } = useToast()
 
   const [selectedDining, setSelectedDining] = useState<DiningHall | undefined>()
   const [publishOpen, setPublishOpen] = useState(false)
   const [activeCombo, setActiveCombo] = useState<CommunityCombo | null>(null)
-  const [feedTab, setFeedTab] = useState<FeedTab>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [searchFocused, setSearchFocused] = useState(false)
 
   const { combos, loading, error, refetch, vote, votedIds } = useCommunity('feed', selectedDining)
 
-  // Load favorites from localStorage for the Saved tab (also works from profile)
-  const [favorites] = useState<FavoriteCombo[]>(() => {
-    if (typeof window === 'undefined') return []
-    try { return JSON.parse(localStorage.getItem('bb_favorites') ?? '[]') } catch { return [] }
-  })
-  const favTitles = useMemo(() => new Set(favorites.map((f) => f.title)), [favorites])
+  // The open combo's entry in the feed, whose vote counts update when the user votes.
+  const liveCombo = activeCombo ? combos.find((c) => c.id === activeCombo.id) : undefined
 
   useScrollRestoration('community')
   usePullToRefresh(refetch)
-
-  useEffect(() => {
-    if (authLoading) return
-    if (!firebaseUser) router.replace('/')
-  }, [firebaseUser, authLoading, router])
 
   function guardedVote(combo_id: string, type: VoteType) {
     void vote(combo_id, type)
@@ -63,7 +51,6 @@ export default function CommunityPage() {
 
   const filtered = useMemo(() => {
     let list = combos
-    if (feedTab === 'saved') list = list.filter((c) => favTitles.has(c.title))
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase()
       list = list.filter((c) =>
@@ -74,18 +61,9 @@ export default function CommunityPage() {
       )
     }
     return list
-  }, [combos, feedTab, searchQuery, favTitles])
+  }, [combos, searchQuery])
 
-  if (authLoading || !firebaseUser) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <svg className="animate-spin h-8 w-8 text-brand-deep" fill="none" viewBox="0 0 24 24">
-          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-        </svg>
-      </div>
-    )
-  }
+  if (!signedIn) return <Spinner page />
 
   return (
     <div className="min-h-screen pb-28">
@@ -110,26 +88,9 @@ export default function CommunityPage() {
               className="flex-1 bg-transparent text-sm text-brand-black placeholder:text-muted focus:outline-none"
             />
             {searchQuery && (
-              <button onClick={() => setSearchQuery('')} className="text-muted hover:text-brand-black text-xs">✕</button>
+              <button onClick={() => setSearchQuery('')} aria-label="Clear search" className="text-muted hover:text-brand-black text-xs">✕</button>
             )}
           </div>
-        </div>
-
-        {/* Tabs: All / Saved */}
-        <div className="max-w-md mx-auto px-4 pb-2 flex gap-2">
-          {(['all', 'saved'] as FeedTab[]).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setFeedTab(tab)}
-              className={`px-4 py-1.5 rounded-full text-xs font-display font-semibold tracking-wide transition-all capitalize ${
-                feedTab === tab
-                  ? 'bg-brand text-white'
-                  : 'bg-surface-overlay text-muted hover:bg-surface-warm'
-              }`}
-            >
-              {tab === 'saved' ? '♥ Saved' : 'All'}
-            </button>
-          ))}
         </div>
 
         <div className="max-w-md mx-auto">
@@ -150,13 +111,7 @@ export default function CommunityPage() {
 
         {!loading && !error && filtered.length === 0 && (
           <div className="flex flex-col items-center gap-3 py-16 text-center">
-            {feedTab === 'saved' ? (
-              <>
-                <span className="text-4xl">♥</span>
-                <p className="font-display font-semibold text-brand-black">No saved combos</p>
-                <p className="text-sm text-muted">Heart an AI combo on the Discover tab to save it here.</p>
-              </>
-            ) : searchQuery ? (
+            {searchQuery ? (
               <>
                 <span className="text-4xl">🔍</span>
                 <p className="font-display font-semibold text-brand-black">No results</p>
@@ -164,10 +119,10 @@ export default function CommunityPage() {
               </>
             ) : (
               <>
-                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" className="opacity-60">
-                  <circle cx="36" cy="36" r="30" stroke="#EE8D00" strokeWidth="2" strokeDasharray="4 3" />
-                  <path d="M24 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#EE8D00" strokeWidth="2" strokeLinecap="round" />
-                  <circle cx="36" cy="42" r="5" fill="#EE8D00" fillOpacity="0.3" stroke="#EE8D00" strokeWidth="1.5" />
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" className="opacity-60 text-brand-black" aria-hidden>
+                  <circle cx="36" cy="36" r="30" stroke="currentColor" strokeWidth="2" strokeDasharray="4 3" />
+                  <path d="M24 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  <circle cx="36" cy="42" r="5" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.5" />
                 </svg>
                 <p className="font-display font-semibold text-brand-black">No combos yet today</p>
                 <p className="text-sm text-muted">Be the first to share what you made!</p>
@@ -224,6 +179,7 @@ export default function CommunityPage() {
           combo={activeCombo}
           type="community"
           hasVoted={votedIds.has(activeCombo.id)}
+          liveCounts={liveCombo}
           onVote={handleVote}
           onClose={() => setActiveCombo(null)}
         />

@@ -6,26 +6,8 @@ import { fuelScore, macroSplit } from '@/lib/nutrition'
 import { parseApiDate } from '@/lib/date'
 import Doodle, { doodleFor } from './Doodle'
 
-const TAG_STYLES: Record<string, string> = {
-  vegan: 'bg-surface-overlay text-brand-black',
-  vegetarian: 'bg-surface-overlay text-brand-black',
-  'gluten-free': 'bg-surface-overlay text-brand-black',
-  halal: 'bg-surface-overlay text-brand-black',
-  'high-protein': 'bg-surface-overlay text-brand-black',
-  light: 'bg-surface-overlay text-brand-black',
-  hearty: 'bg-surface-overlay text-brand-black',
-  balanced: 'bg-surface-overlay text-brand-black',
-  'low-carb': 'bg-surface-overlay text-brand-black',
-  'high-fiber': 'bg-surface-overlay text-brand-black',
-  'low-calorie': 'bg-surface-overlay text-brand-black',
-  'comfort-food': 'bg-surface-overlay text-brand-black',
-  'omega-3': 'bg-surface-overlay text-brand-black',
-  'high-carb': 'bg-surface-overlay text-brand-black',
-}
-
-function tagStyle(tag: string) {
-  return TAG_STYLES[tag] ?? 'bg-surface-overlay text-brand-black'
-}
+/** Every tag chip shares one style in the black-and-white theme. */
+export const TAG_CLASS = 'bg-surface-overlay text-brand-black'
 
 function formatExpiry(iso: string): { text: string; level: 'normal' | 'amber' | 'red' } {
   const ms = parseApiDate(iso).getTime() - Date.now()
@@ -54,17 +36,15 @@ interface Props {
   hasVoted?: boolean
   onUpvote?: () => void
   expires_at?: string
-  rank?: number
   author?: string
   onClick: () => void
   ateState?: 'ate' | 'skipped' | null
-  onAte?: (calories: number) => void
+  onAte?: () => void
   onSkip?: () => void
   shareState?: 'shared' | 'sharing' | null
   onShare?: () => void
   isFavorited?: boolean
   onFavorite?: () => void
-  allergyWarning?: string   // e.g. "Contains: gluten, dairy"
   ateBeforeHint?: boolean   // show "you had this before" hint
   protein_g?: number
   carbs_g?: number
@@ -82,7 +62,6 @@ export default function ComboCard({
   hasVoted,
   onUpvote,
   expires_at,
-  rank,
   author,
   onClick,
   ateState,
@@ -92,7 +71,6 @@ export default function ComboCard({
   onShare,
   isFavorited,
   onFavorite,
-  allergyWarning,
   ateBeforeHint,
   protein_g,
   carbs_g,
@@ -109,6 +87,8 @@ export default function ComboCard({
       tabIndex={0}
       onClick={onClick}
       onKeyDown={(e) => {
+        // Keys pressed on the buttons inside the card belong to those buttons.
+        if (e.target !== e.currentTarget) return
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault()
           onClick()
@@ -120,11 +100,6 @@ export default function ComboCard({
         <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-surface-overlay/70 flex items-center justify-center text-brand-black">
           <Doodle name={doodleFor(title, ...(dishes ?? []).map((d) => d.name), ...tags)} size={38} />
         </div>
-        {rank !== undefined && (
-          <span className="flex-shrink-0 font-display text-lg font-bold text-brand-black w-7 text-center">
-            {rank}
-          </span>
-        )}
         <h3 className="font-display text-brand-black text-[20px] leading-tight line-clamp-2 flex-1">
           {title}
         </h3>
@@ -142,14 +117,6 @@ export default function ComboCard({
           </button>
         )}
       </div>
-
-      {/* Allergy warning */}
-      {allergyWarning && (
-        <div className="flex items-center gap-1.5 bg-surface-overlay border border-brand-black/25 rounded-lg px-2.5 py-1.5 mb-2">
-          <span className="text-brand-black text-xs">⚠</span>
-          <span className="text-[11px] text-brand-black font-medium">{allergyWarning}</span>
-        </div>
-      )}
 
       {/* Ate before hint */}
       {ateBeforeHint && (
@@ -204,13 +171,13 @@ export default function ComboCard({
           {visibleTags.map((tag) => (
             <span
               key={tag}
-              className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${tagStyle(tag)}`}
+              className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${TAG_CLASS}`}
             >
               {tag}
             </span>
           ))}
           {overflowCount > 0 && (
-            <span className="rounded-full px-2 py-0.5 text-[10px] font-medium bg-surface-overlay text-brand-black">
+            <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${TAG_CLASS}`}>
               +{overflowCount}
             </span>
           )}
@@ -258,7 +225,7 @@ export default function ComboCard({
           <button
             onClick={(e) => {
               e.stopPropagation()
-              if (!ateState) onAte(approximate_calories ?? 0)
+              if (!ateState) onAte()
             }}
             disabled={!!ateState}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
@@ -351,5 +318,3 @@ function MacroStrip({
     </div>
   )
 }
-
-export { tagStyle }
