@@ -25,6 +25,12 @@ def test_menu_for_closed_hall_explains_why():
     assert r.json()["detail"] == CLOSED_HALLS["alley"]
 
 
+def test_nutrition_for_closed_hall_explains_why():
+    r = _client().get("/api/menu/nutrition", params={"dining": "alley", "dish": "Burger"})
+    assert r.status_code == 404
+    assert r.json()["detail"] == CLOSED_HALLS["alley"]
+
+
 def test_plate_scan_for_closed_hall_explains_why_before_calling_model(monkeypatch):
     async def boom(*_a, **_k):
         raise AssertionError("model must not be called for a closed hall")
@@ -51,13 +57,17 @@ def test_combo_provider_errors_are_not_shown_to_students(monkeypatch):
             "invalid x-api-key", response=httpx.Response(401, request=req), body=None)
     monkeypatch.setattr(combos_mod, "_generate_period_with_claude", auth_fail)
     combos_mod._combo_limiter._hits.clear()
+    combos_mod._combo_quota.day = ""
 
     import menu_store
     from datetime import datetime
     from zoneinfo import ZoneInfo
     today = datetime.now(ZoneInfo("America/Denver")).date().isoformat()
-    menu_store._cache["c4c"] = {"dining_location": "C4C", "menus": [{"date": today, "day_of_week": "Friday",
-        "categories": {"Smoke n' Grill - Grill Menu": [{"name": "Burger", "calories": 500, "nutrition": {}}]}}]}
+    monkeypatch.setitem(menu_store._cache, "c4c", {"dining_location": "C4C", "menus": [{"date": today, "day_of_week": "Friday",
+        "categories": {"Smoke n' Grill - Grill Menu": [
+            {"name": "Burger", "calories": 500, "nutrition": {}},
+            {"name": "Fries", "calories": 300, "nutrition": {}},
+        ]}}]})
 
     r = _client().get("/api/combos/generate", params={"dining": "c4c", "date": today})
     assert r.status_code == 503

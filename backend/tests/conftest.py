@@ -13,5 +13,9 @@ if "auth" not in sys.modules:
     def get_current_user() -> dict:  # replaced via app.dependency_overrides in tests
         raise RuntimeError("auth not configured in tests")
 
+    def get_optional_user() -> dict | None:  # a guest unless a test overrides it
+        return None
+
     stub.get_current_user = get_current_user
+    stub.get_optional_user = get_optional_user
     sys.modules["auth"] = stub

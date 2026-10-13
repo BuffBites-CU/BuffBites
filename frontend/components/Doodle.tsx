@@ -11,7 +11,7 @@ import type { SVGProps } from 'react'
 
 export type DoodleName =
   | 'burger' | 'pizza' | 'bowl' | 'salad' | 'taco' | 'icecream' | 'egg'
-  | 'coffee' | 'sandwich' | 'skewer' | 'soup' | 'cake' | 'plate' | 'scan'
+  | 'coffee' | 'sandwich' | 'skewer' | 'soup' | 'cake' | 'plate' | 'scan' | 'shoe'
 
 const S = { pathLength: 1 } as const
 
@@ -136,6 +136,14 @@ const DOODLES: Record<DoodleName, JSX.Element> = {
       <path {...S} d="M17 34h30c0 8-6.7 14-15 14s-15-6-15-14z" />
       <path {...S} d="M22 34c1-4 4-5 6-2 2-4 6-4 8-1 3-3 7-1 6 3" />
       <path {...S} d="M47 14l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2zM14 40l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" />
+    </>
+  ),
+  shoe: (
+    <>
+      <path {...S} d="M8 44c0-6 1-14 3-20 4 1 8 1 11-1 2 5 7 9 14 11 8 2 18 3 19 9v3c0 1.5-1 2.5-2.5 2.5H10.5C9 48.5 8 47 8 45.5z" />
+      <path {...S} d="M8 41.5h47.5" />
+      <path {...S} d="M24 28l4-2M27.5 32l4-2.5M31.5 35.5l4-2.5" />
+      <path {...S} d="M2 26h5M1 32h5M3 38h3" />
     </>
   ),
 }

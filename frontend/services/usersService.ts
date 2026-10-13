@@ -1,10 +1,14 @@
 import { apiFetch } from './api'
 import type { UserCreate, UserResponse, MealLogEntry, FavoriteCombo } from '@/types'
 
+// Every /api/users route except check-username acts on the signed-in user's
+// own profile and sends their Firebase ID token (`auth: true`).
+
 export function createUser(user: UserCreate): Promise<UserResponse> {
   return apiFetch<UserResponse>('/api/users/', {
     method: 'POST',
     body: JSON.stringify(user),
+    auth: true,
   })
 }
 
@@ -13,7 +17,7 @@ export function checkUsernameAvailable(username: string): Promise<{ available: b
 }
 
 export function getUser(firebase_uid: string): Promise<UserResponse> {
-  return apiFetch<UserResponse>(`/api/users/${firebase_uid}`)
+  return apiFetch<UserResponse>(`/api/users/${firebase_uid}`, { auth: true })
 }
 
 export function updateUser(
@@ -23,6 +27,7 @@ export function updateUser(
   return apiFetch<{ message: string }>(`/api/users/${firebase_uid}`, {
     method: 'PUT',
     body: JSON.stringify(updates),
+    auth: true,
   })
 }
 
@@ -33,6 +38,7 @@ export function deleteMeal(
   const params = new URLSearchParams({ logged_at })
   return apiFetch<{ message: string }>(`/api/users/${firebase_uid}/meal-log?${params}`, {
     method: 'DELETE',
+    auth: true,
   })
 }
 
@@ -43,6 +49,7 @@ export function addFavorite(
   return apiFetch<{ message: string }>(`/api/users/${firebase_uid}/favorites`, {
     method: 'POST',
     body: JSON.stringify(combo),
+    auth: true,
   })
 }
 
@@ -55,6 +62,7 @@ export function removeFavorite(
   const params = new URLSearchParams({ title, dining_hall, date })
   return apiFetch<{ message: string }>(`/api/users/${firebase_uid}/favorites?${params}`, {
     method: 'DELETE',
+    auth: true,
   })
 }
 
@@ -65,5 +73,6 @@ export function logMeal(
   return apiFetch<{ message: string }>(`/api/users/${firebase_uid}/meal-log`, {
     method: 'POST',
     body: JSON.stringify(entry),
+    auth: true,
   })
 }

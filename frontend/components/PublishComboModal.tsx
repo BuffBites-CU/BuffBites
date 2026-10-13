@@ -154,7 +154,6 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
           notes: form.notes.trim() || undefined,
         },
         token,
-        username,
       )
       onSuccess()
       onClose()

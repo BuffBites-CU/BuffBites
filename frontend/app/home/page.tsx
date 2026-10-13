@@ -14,6 +14,7 @@ import TrendingRail from '@/components/TrendingRail'
 import Doodle from '@/components/Doodle'
 import Link from 'next/link'
 import SnapPlate from '@/components/SnapPlate'
+import FuelPlanCard from '@/components/FuelPlanCard'
 import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
@@ -211,7 +212,6 @@ export default function HomePage() {
           images: [],
         },
         token,
-        username,
       )
       setShareStates((prev) => ({ ...prev, [key]: 'shared' }))
       showToast('Posted to community!', 'success')
@@ -334,6 +334,8 @@ export default function HomePage() {
           firebaseUid={firebaseUid}
           calorieTarget={calorieTarget}
         />
+
+        <FuelPlanCard dining={selectedDining} />
 
         {/* Two big tiles, like Gallery / Camera in the reference */}
         <div className="grid grid-cols-2 gap-3 mb-6" role="tablist" aria-label="View">

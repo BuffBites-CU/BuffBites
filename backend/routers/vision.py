@@ -7,8 +7,8 @@ grounded matching problem:
 
     1. Claude (vision) looks at the photo and picks items from today's scraped
        menu at that hall, plus a portion estimate per item.
-    2. The server verifies every pick against the menu (same idea as
-       `verify_combos` for AI combos) and drops anything not on it.
+    2. The server verifies every pick against the menu (as combos and the
+       fuel coach do) and drops anything not on it.
     3. Nutrition comes from the scraped Nutrislice data × portion — never from
        the model — so the numbers are only as wrong as the portion estimate.
 
@@ -18,22 +18,22 @@ Images are processed in memory and never stored.
 import asyncio
 import base64
 import binascii
+import functools
 import os
-import sys
-from datetime import date as date_cls
-from threading import Lock
 from typing import Literal
 
 import anthropic
+import structlog
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field, ValidationError
 
 from auth import get_current_user
+from menu_rules import check_date, ensure_open, name_key, to_float, today_mt
 from menu_store import DINING_FILES, load_menu
-from rate_limit import SlidingWindowLimiter, client_ip
-from routers.combos import _today_mt, ensure_open
+from rate_limit import DailyQuota, SlidingWindowLimiter, client_ip
 
 router = APIRouter()
+logger = structlog.get_logger()
 
 # Opus-class vision is what makes small-item recognition (a scoop of rice vs.
 # quinoa, which dressing) reliable. Override with VISION_MODEL to trade
@@ -53,34 +53,13 @@ _MAX_PORTION = 4.0
 _limiter = SlidingWindowLimiter(
     limit=6, window_seconds=60, detail="Slow down a little. Try again in a minute."
 )
-VISION_DAILY_PER_USER = int(os.getenv("VISION_DAILY_PER_USER", "20"))
-VISION_DAILY_TOTAL = int(os.getenv("VISION_DAILY_TOTAL", "300"))
-
-
-class _DailyQuota:
-    """Per-user and app-wide scan counters that reset at midnight Mountain Time."""
-
-    def __init__(self) -> None:
-        self.day = ""
-        self.total = 0
-        self.per_user: dict[str, int] = {}
-        self._lock = Lock()
-
-    def take(self, uid: str) -> None:
-        today = _today_mt()
-        with self._lock:
-            if today != self.day:
-                self.day, self.total, self.per_user = today, 0, {}
-            if self.per_user.get(uid, 0) >= VISION_DAILY_PER_USER:
-                raise HTTPException(status_code=429, detail="You've hit today's plate-scan limit. It resets at midnight.")
-            if self.total >= VISION_DAILY_TOTAL:
-                raise HTTPException(status_code=503, detail="Plate scanning is paused for today. Try again tomorrow.")
-            self.per_user[uid] = self.per_user.get(uid, 0) + 1
-            self.total += 1
-
-
-_quota = _DailyQuota()
-
+_quota = DailyQuota(
+    per_key=int(os.getenv("VISION_DAILY_PER_USER", "20")),
+    total=int(os.getenv("VISION_DAILY_TOTAL", "300")),
+    today=today_mt,
+    key_detail="You've hit today's plate-scan limit. It resets at midnight.",
+    total_detail="Plate scanning is paused for today. Try again tomorrow.",
+)
 
 
 # ── Request / response models ──────────────────────────────────────────────
@@ -154,12 +133,6 @@ If the photo is not a meal, set is_food to false and return no items.
 Never invent nutrition numbers; the server computes them from the menu."""
 
 
-def _key(name: str) -> str:
-    """Match key: case- and whitespace-insensitive. Some scraped names contain
-    double spaces ("Tomato Cheddar  Bagel") that a model will collapse."""
-    return " ".join(name.split()).casefold()
-
-
 def _menu_lines(day_menu: dict) -> tuple[str, dict[str, dict]]:
     """Render the day's menu for the prompt and build a name → item lookup."""
     lookup: dict[str, dict] = {}
@@ -167,7 +140,7 @@ def _menu_lines(day_menu: dict) -> tuple[str, dict[str, dict]]:
     for station, items in (day_menu.get("categories") or {}).items():
         for raw in items:
             name = (raw.get("name") or "").strip()
-            key = _key(name)
+            key = name_key(name)
             if not name or key in lookup:
                 continue
             lookup[key] = {**raw, "station": station}
@@ -180,22 +153,15 @@ def _menu_lines(day_menu: dict) -> tuple[str, dict[str, dict]]:
     return "\n".join(lines), lookup
 
 
-def _num(v) -> float:
-    try:
-        return float(v)
-    except (TypeError, ValueError):
-        return 0.0
-
-
 def ground_items(parsed: _VPlate, lookup: dict[str, dict]) -> tuple[list[PlateItemOut], list[UnmatchedItem]]:
     """Keep only picks that exist on today's menu; compute nutrition from scraped data."""
     items: list[PlateItemOut] = []
     unmatched: list[UnmatchedItem] = []
     for pick in parsed.items:
-        raw = lookup.get(_key(pick.menu_item or ""))
+        raw = lookup.get(name_key(pick.menu_item or ""))
         if raw is None:
             if pick.menu_item:
-                print(f"[VISION] dropped off-menu pick: {pick.menu_item!r}", file=sys.stderr)
+                logger.info("vision_dropped_off_menu_pick", menu_item=pick.menu_item)
             unmatched.append(UnmatchedItem(description=pick.seen_as or (pick.menu_item or "unknown item")))
             continue
         portion = min(max(pick.portion, 0.25), _MAX_PORTION)
@@ -205,13 +171,13 @@ def ground_items(parsed: _VPlate, lookup: dict[str, dict]) -> tuple[list[PlateIt
             station=raw["station"],
             portion=round(portion, 2),
             confidence=pick.confidence,
-            calories=round(_num(raw.get("calories") or n.get("calories")) * portion),
-            protein_g=round(_num(n.get("protein_g")) * portion, 1),
-            carbs_g=round(_num(n.get("carbohydrates_g")) * portion, 1),
-            fat_g=round(_num(n.get("fat_g")) * portion, 1),
-            fiber_g=round(_num(n.get("fiber_g")) * portion, 1),
-            sodium_mg=round(_num(n.get("sodium_mg")) * portion),
-            added_sugar_g=round(_num(n.get("added_sugar_g")) * portion, 1),
+            calories=round(to_float(raw.get("calories") or n.get("calories")) * portion),
+            protein_g=round(to_float(n.get("protein_g")) * portion, 1),
+            carbs_g=round(to_float(n.get("carbohydrates_g")) * portion, 1),
+            fat_g=round(to_float(n.get("fat_g")) * portion, 1),
+            fiber_g=round(to_float(n.get("fiber_g")) * portion, 1),
+            sodium_mg=round(to_float(n.get("sodium_mg")) * portion),
+            added_sugar_g=round(to_float(n.get("added_sugar_g")) * portion, 1),
         ))
     return items, unmatched
 
@@ -236,7 +202,9 @@ def _decode_image(req: PlateRequest) -> str:
     return base64.standard_b64encode(raw).decode("ascii")
 
 
+@functools.cache
 def _make_client() -> anthropic.AsyncAnthropic:
+    """One client per process, so its connection pool is reused across requests."""
     return anthropic.AsyncAnthropic()
 
 
@@ -275,15 +243,15 @@ async def _call_model(image_b64: str, media_type: str, menu_text: str, hall: str
     except ValidationError as e:
         # parse() validates inside the call, so a response cut off at max_tokens
         # or a refusal that returned prose surfaces here, not via stop_reason.
-        print(f"[VISION] unparseable model output: {e.error_count()} errors", file=sys.stderr)
+        logger.warning("vision_unparseable_output", errors=e.error_count())
         raise HTTPException(status_code=422, detail="Couldn't read that photo. Try a clearer shot of your plate.")
     except anthropic.RateLimitError:
         raise HTTPException(status_code=503, detail="Plate scanner is busy. Try again in a minute.")
     except anthropic.BadRequestError as e:
-        print(f"[VISION] bad request: {e.message}", file=sys.stderr)
+        logger.warning("vision_bad_request", error=e.message)
         raise HTTPException(status_code=400, detail="Couldn't read that photo. Try another one.")
     except anthropic.APIStatusError as e:
-        print(f"[VISION] API error {e.status_code}: {e.message}", file=sys.stderr)
+        logger.error("vision_api_error", status=e.status_code, error=e.message)
         raise HTTPException(status_code=502, detail="Plate scanner is unavailable right now.")
     except anthropic.APIConnectionError:
         raise HTTPException(status_code=503, detail="Plate scanner is unavailable right now.")
@@ -291,25 +259,9 @@ async def _call_model(image_b64: str, media_type: str, menu_text: str, hall: str
     if response.stop_reason == "refusal":
         raise HTTPException(status_code=422, detail="Couldn't analyze this photo. Try a clearer shot of your plate.")
     if response.parsed_output is None:
-        print(f"[VISION] no parsed output, stop_reason={response.stop_reason}", file=sys.stderr)
+        logger.error("vision_no_parsed_output", stop_reason=response.stop_reason)
         raise HTTPException(status_code=502, detail="Couldn't read that photo. Try another one.")
     return response.parsed_output
-
-
-def _check_date(value: str | None) -> str:
-    """A plate photo is about a meal you're eating now: allow yesterday through
-    tomorrow (MT). This also stops callers from forcing a menu cache miss on
-    every request by cycling through dates."""
-    today = date_cls.fromisoformat(_today_mt())
-    if value is None:
-        return today.isoformat()
-    try:
-        d = date_cls.fromisoformat(value)
-    except ValueError:
-        raise HTTPException(status_code=400, detail="date must be YYYY-MM-DD")
-    if abs((d - today).days) > 1:
-        raise HTTPException(status_code=400, detail="Plate scans are for today's menu only.")
-    return d.isoformat()
 
 
 @router.post("/api/vision/plate", response_model=PlateResponse)
@@ -323,7 +275,10 @@ async def analyze_plate(
     ensure_open(req.dining)
     image_b64 = _decode_image(req)
 
-    target_date = _check_date(req.date)
+    # A plate photo is about a meal you're eating now: allow yesterday through
+    # tomorrow (MT). This also stops callers from forcing a menu cache miss on
+    # every request by cycling through dates.
+    target_date = check_date(req.date, earliest=-1, latest=1, detail="Plate scans are for today's menu only.")
     try:
         menu_data = await asyncio.to_thread(load_menu, req.dining)
     except Exception:

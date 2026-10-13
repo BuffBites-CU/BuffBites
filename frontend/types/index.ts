@@ -209,3 +209,101 @@ export interface PlateAnalysis {
   totals: Record<'calories' | 'protein_g' | 'carbs_g' | 'fat_g' | 'fiber_g' | 'sodium_mg' | 'added_sugar_g', number>
   notes: string
 }
+
+// ── Strava link + fuel coach ────────────────────────────────────────────────
+
+export interface StravaStatus {
+  available: boolean
+  connected: boolean
+  athlete_name: string | null
+  connected_at: string | null
+  scopes: string[]
+}
+
+export type BodySex = 'male' | 'female' | 'unspecified'
+
+export interface BodyStats {
+  weight_kg: number | null
+  height_cm: number | null
+  age: number | null
+  sex: BodySex | null
+}
+
+export interface Macros {
+  calories: number
+  protein_g: number
+  carbs_g: number
+  fat_g: number
+}
+
+export interface Workout {
+  name: string
+  sport: string
+  date: string
+  start_time: string
+  minutes: number
+  distance_km: number
+  elevation_m: number
+  kcal: number
+  method: 'power' | 'pace' | 'met'
+}
+
+export interface FuelBudget {
+  date: string
+  bmr: number
+  baseline_kcal: number
+  exercise_kcal: number
+  goal_adjust_kcal: number
+  target_kcal: number
+  protein_g: number
+  carbs_g: number
+  fat_g: number
+  fiber_g: number
+  training_load: 'rest' | 'light' | 'moderate' | 'high' | 'very high'
+  focus: string | null
+  eaten: Macros
+  remaining_kcal: number
+  body: { weight_kg: number; height_cm: number; age: number; sex: string; estimated: string[] }
+  training: {
+    connected: boolean
+    today: Workout[]
+    week_sessions: number
+    week_minutes: number
+    week_kcal: number
+    error: string | null
+  }
+  notes: string[]
+}
+
+export interface FuelPlanItem {
+  name: string
+  station: string
+  servings: number
+  calories: number
+  protein_g: number
+  carbs_g: number
+  fat_g: number
+}
+
+export interface FuelPlanMeal {
+  period: MealPeriod | 'Snack'
+  title: string
+  why: string
+  items: FuelPlanItem[]
+  totals: Macros
+  target_kcal: number | null
+  target_protein_g: number | null
+}
+
+export interface FuelPlan {
+  date: string
+  dining_location: string
+  budget: FuelBudget
+  meals: FuelPlanMeal[]
+  totals: Macros
+  planned_kcal: number
+  planned_protein_g: number
+  headline: string
+  tips: string[]
+  assumptions: string[]
+}

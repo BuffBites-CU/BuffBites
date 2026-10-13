@@ -16,8 +16,8 @@ export function useCommunity(mode: 'feed' | 'trends', dining_hall?: DiningHall) 
     setLoading(true)
     setError(null)
 
-    const uid = firebaseUser?.uid
-    const fetcher = mode === 'feed' ? getCombos(dining_hall, uid) : getTrends(dining_hall, uid)
+    // Refetches on sign-in/out so has_voted reflects the current user.
+    const fetcher = mode === 'feed' ? getCombos(dining_hall) : getTrends(dining_hall)
 
     fetcher
       .then((result) => {
