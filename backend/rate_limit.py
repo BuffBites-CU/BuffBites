@@ -34,13 +34,16 @@ class SlidingWindowLimiter:
 
     def check(self, key: str) -> None:
         now = time.monotonic()
+        cutoff = now - self.window
         with self._lock:
-            hits = self._hits[key]
-            while hits and hits[0] <= now - self.window:
-                hits.popleft()
+            # Evict keys whose newest hit is outside the window before looking
+            # up this key, so the deque we append to is the one in the dict.
             if len(self._hits) > 10_000:
-                for k in [k for k, v in self._hits.items() if not v]:
+                for k in [k for k, v in self._hits.items() if not v or v[-1] <= cutoff]:
                     del self._hits[k]
+            hits = self._hits[key]
+            while hits and hits[0] <= cutoff:
+                hits.popleft()
             if len(hits) >= self.limit:
                 raise HTTPException(status_code=429, detail=self.detail)
             hits.append(now)

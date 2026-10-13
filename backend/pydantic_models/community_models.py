@@ -1,49 +1,57 @@
 """
 Pydantic models for community combo creation and retrieval.
 
-ComboCreate   — validates data sent when a user publishes or saves a combo.
+ComboCreate   — validates data sent when a user publishes a combo.
                 Includes dishes with serving sizes, tags, optional images,
-                and notes. Images are stored as URLs (from camera roll or
-                camera, max limit enforced on frontend).
+                and notes. Images are https URLs. Sizes are capped so one
+                post can't bloat every feed response.
+
+ComboUpdate   — the fields an author may edit, with the same limits.
 
 ComboResponse — full combo data returned from the API including vote counts,
                 author info, creation time, and expiry time.
-                All published combos expire after 24 hours and are then
-                archived under the author's profile (cannot be republished).
+                Published combos leave the feed after 24 hours (expires_at)
+                and are deleted 7 days after publishing, which is how long
+                they count toward weekly trends.
 
 DishItem note:
     servings field accepts natural numbers only (1, 2, 3...)
-    enforced on the frontend during combo creation.
+    The frontend caps it at 5; the server allows up to 20.
 
 Usage:
     from pydantic_models.community_models import ComboCreate, ComboResponse
 """
 
-from pydantic import BaseModel
-from typing import Optional
+from pydantic import BaseModel, Field
+from typing import Annotated, Optional
 from datetime import datetime
 
+Title = Annotated[str, Field(min_length=1, max_length=120)]
+LongText = Annotated[str, Field(max_length=1000)]
+Tag = Annotated[str, Field(max_length=30)]
+ImageUrl = Annotated[str, Field(max_length=500, pattern=r"^https://\S+$")]
+
 class DishItem(BaseModel):
-    name: str
-    station: str
-    servings: int = 1
+    name: str = Field(min_length=1, max_length=120)
+    station: str = Field(max_length=120)
+    servings: int = Field(1, ge=1, le=20)
 
 class ComboCreate(BaseModel):
-    title: str
-    dining_hall: str
-    date: str
-    dishes: list[DishItem]
-    tags: list[str] = []
-    description: Optional[str] = None
-    images: list[str] = []
-    notes: Optional[str] = None
+    title: Title
+    dining_hall: str = Field(max_length=40)
+    date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+    dishes: list[DishItem] = Field(min_length=1, max_length=8)
+    tags: list[Tag] = Field(default_factory=list, max_length=10)
+    description: Optional[LongText] = None
+    images: list[ImageUrl] = Field(default_factory=list, max_length=4)
+    notes: Optional[LongText] = None
 
 class ComboUpdate(BaseModel):
-    title: Optional[str] = None
-    description: Optional[str] = None
-    tags: Optional[list[str]] = None
-    dishes: Optional[list[DishItem]] = None
-    notes: Optional[str] = None
+    title: Optional[Title] = None
+    description: Optional[LongText] = None
+    tags: Optional[list[Tag]] = Field(None, max_length=10)
+    dishes: Optional[list[DishItem]] = Field(None, min_length=1, max_length=8)
+    notes: Optional[LongText] = None
 
 class ComboResponse(BaseModel):
     id: str

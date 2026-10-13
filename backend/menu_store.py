@@ -18,13 +18,16 @@ import asyncio
 import gc
 import json
 import os
-import sys
 import urllib.error
 import urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 from threading import Lock
 from zoneinfo import ZoneInfo
+
+import structlog
+
+logger = structlog.get_logger()
 
 DINING_FILES: dict[str, str] = {
     "alley":          "alley_dining_menus.json",
@@ -66,8 +69,11 @@ DATA_DIR = next(
     _BACKEND_DIR / "scraping_scripts" / "data",
 )
 
-# Fly machines have 256 MB. Keep only the dates the app can ask for and drop
-# fields the API never reads (ingredients is most of the file size).
+# The live files are already trimmed to a few days around today
+# (scraping_scripts/build_live_menus.py), so this window changes nothing for
+# them. It bounds memory when a full 6-week file is loaded instead (no live/
+# copy on disk, or MENU_DATA_URL pointed at the full files): full C4C needs
+# ~80 MB to parse. Ingredients are dropped because the API never reads them.
 _KEEP_PAST_DAYS = 7
 _KEEP_FUTURE_DAYS = 28
 _DROP_FIELDS = ("ingredients",)
@@ -170,6 +176,10 @@ async def refresh_loop() -> None:
     """Background task: refresh menus shortly after boot, then every MENU_REFRESH_SECONDS."""
     await asyncio.sleep(MENU_REFRESH_INITIAL_DELAY)
     while True:
-        status = await asyncio.to_thread(refresh_all)
-        print(f"[MENU REFRESH] {status}", file=sys.stderr)
+        # One bad iteration must not end refreshes until the next restart.
+        try:
+            status = await asyncio.to_thread(refresh_all)
+            logger.info("menu_refresh", status=status)
+        except Exception as e:
+            logger.error("menu_refresh_failed", error=repr(e))
         await asyncio.sleep(MENU_REFRESH_SECONDS)

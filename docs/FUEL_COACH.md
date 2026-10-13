@@ -63,29 +63,90 @@ Disconnecting revokes access at Strava (`/oauth/deauthorize`) and deletes the
 link and cached plans. If a student revokes access on Strava's side, the next
 request sees a 401 and deletes the link.
 
-## Setup
+## Strava data pipeline
 
-1. Create an API application at <https://www.strava.com/settings/api>. Set
-   **Authorization Callback Domain** to the frontend's domain (`localhost`
-   always works for local development).
-2. Generate a token key:
-   ```bash
-   python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
-   ```
-3. Set the backend secrets:
-   ```bash
-   flyctl secrets set -a buffbites-backend \
-     STRAVA_CLIENT_ID=... STRAVA_CLIENT_SECRET=... \
-     STRAVA_REDIRECT_URI=https://<frontend-domain>/strava/callback \
-     STRAVA_TOKEN_KEY=<key from step 2>
-   ```
-   If these are unset, the Profile card says Strava isn't set up, and the fuel
-   target still works from body stats alone.
-4. Keep `STRAVA_TOKEN_KEY` stable. Changing it makes stored tokens unreadable,
-   and everyone has to reconnect.
+```
+Student taps Connect ──► consent sheet ──► Strava approve ──► /strava/callback
+                                                                   │
+                     POST /api/strava/complete (student's token) ◄─┘
+                     → tokens encrypted into strava_links
 
-New Strava API apps can link only a small number of athletes until Strava
-reviews the app.
+PULL  fuel card / plan ──► strava_client.recent_activities(uid)
+                           refresh token if expired → GET /athlete/activities (last 7 days)
+                           → trimmed fields, 5-minute memory cache → energy.py
+
+PUSH  Strava ──► POST /api/strava/webhook (answered at once, handled in the background)
+        activity create/update/delete → drop that student's cached workouts + plans
+        athlete authorized=false      → confirm with Strava, then delete the link
+```
+
+- **Pull**: `backend/strava_client.py`. Workouts are never written to the
+  database.
+- **Push**: `backend/routers/strava_webhook.py`. Strava's webhooks aren't
+  signed, so a "revoked" event deletes data only after a token refresh at
+  Strava fails. A spoofed event can't disconnect anyone. Other events only
+  clear caches.
+- **Subscription management**: `backend/scripts/strava_webhook.py`
+  (`create`, `view`, `delete`). Strava allows one subscription per app.
+
+## Manual setup checklist
+
+Do these once the code is merged to `main` and deployed. Values in `<...>` are yours.
+
+**1. Strava API app** (needs a Strava subscription since June 2026)
+1. Go to <https://www.strava.com/settings/api> and create the app:
+   - Name: BuffBites
+   - Website: your frontend URL
+   - **Authorization Callback Domain:** the bare domain (for example
+     `buffbites.vercel.app`), with no `https://` and no path
+2. Copy the **Client ID** and **Client Secret**.
+3. To let other students connect, raise the athlete limit to 10 in the same
+   settings page. New apps only allow your own account.
+
+**2. Generate two secrets locally**
+```bash
+python3 -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"   # STRAVA_TOKEN_KEY
+python3 -c "import secrets; print(secrets.token_urlsafe(24))"                                  # STRAVA_WEBHOOK_VERIFY_TOKEN
+```
+If the first command fails with "No module named cryptography", run
+`pip3 install cryptography` first. Keep `STRAVA_TOKEN_KEY` safe and never change
+it; changing it disconnects everyone.
+
+**3. Set the backend secrets on Fly** (this restarts the app)
+```bash
+flyctl secrets set -a buffbites-backend \
+  STRAVA_CLIENT_ID=<client id> \
+  STRAVA_CLIENT_SECRET=<client secret> \
+  STRAVA_REDIRECT_URI=https://<frontend-domain>/strava/callback \
+  STRAVA_TOKEN_KEY=<key from step 2> \
+  STRAVA_WEBHOOK_VERIFY_TOKEN=<token from step 2>
+```
+
+**4. Register the webhook** (once, after step 3 has deployed)
+```bash
+flyctl ssh console -a buffbites-backend -C "python scripts/strava_webhook.py create"
+flyctl ssh console -a buffbites-backend -C "python scripts/strava_webhook.py view"
+```
+`create` should print a success status and the subscription `id`. Optionally pin events to that id:
+```bash
+flyctl secrets set -a buffbites-backend STRAVA_WEBHOOK_SUBSCRIPTION_ID=<id>
+```
+
+**5. Check it end to end**
+1. Open BuffBites, go to Profile → Training & fuel → Connect, then agree and
+   approve on Strava. You should land back on Profile with "Connected as …".
+2. The Discover fuel card shows today's workouts.
+3. Record or edit an activity on Strava. Within a few seconds the card shows
+   the new number after a refresh.
+4. Disconnect in Profile, or revoke BuffBites in Strava's settings. The link
+   is deleted.
+
+If any step-3 secret is missing, the Profile card says Strava isn't set up, and
+the calorie target still works from body stats alone.
+
+**Coming Strava API changes:** a new API host from January 4, 2027, and
+`/oauth/deauthorize` replaced by `/oauth/revoke` by June 1, 2027. Both are
+constants in `backend/strava_client.py` and `backend/scripts/strava_webhook.py`.
 
 ## Cost controls
 

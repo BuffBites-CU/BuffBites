@@ -15,6 +15,11 @@ get_current_user(token)
     FastAPI dependency — use this in any route that requires authentication.
     Returns the decoded Firebase token.
 
+get_optional_user(token)
+    FastAPI dependency for public routes that personalise their response for a
+    signed-in caller. Returns None when no token is sent; an invalid token is
+    still a 401.
+
 Usage:
     from auth import get_current_user
 
@@ -49,6 +54,7 @@ else:
 firebase_admin.initialize_app(cred)
 
 security = HTTPBearer()
+optional_security = HTTPBearer(auto_error=False)
 
 def verify_token(token: str) -> dict:
     try:
@@ -60,4 +66,11 @@ def verify_token(token: str) -> dict:
 def get_current_user(
     credentials: HTTPAuthorizationCredentials = Security(security)
 ) -> dict:
+    return verify_token(credentials.credentials)
+
+def get_optional_user(
+    credentials: HTTPAuthorizationCredentials | None = Security(optional_security)
+) -> dict | None:
+    if credentials is None:
+        return None
     return verify_token(credentials.credentials)

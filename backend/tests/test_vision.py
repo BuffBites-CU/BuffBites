@@ -8,6 +8,7 @@ import pytest
 from fastapi import FastAPI, HTTPException
 from fastapi.testclient import TestClient
 
+import menu_rules
 import menu_store
 from routers import vision
 from routers.vision import PlateRequest, _VPlate, _VPlateItem, ground_items
@@ -40,8 +41,8 @@ PNG_1PX = base64.b64encode(bytes.fromhex(
 
 @pytest.fixture(autouse=True)
 def _menu(monkeypatch):
-    menu_store._cache["c4c"] = {"dining_location": "C4C", "menus": [DAY]}
-    monkeypatch.setattr(vision, "_today_mt", lambda: TODAY)
+    monkeypatch.setitem(menu_store._cache, "c4c", {"dining_location": "C4C", "menus": [DAY]})
+    monkeypatch.setattr(menu_rules, "today_mt", lambda: TODAY)
     vision._limiter._hits.clear()
     vision._quota.day = ""
 
@@ -118,7 +119,7 @@ def test_endpoint_returns_grounded_totals(monkeypatch):
 
 
 def test_endpoint_404_when_no_menu(monkeypatch):
-    monkeypatch.setattr(vision, "_today_mt", lambda: "2030-01-01")
+    monkeypatch.setattr(menu_rules, "today_mt", lambda: "2030-01-01")
     r = _app().post("/api/vision/plate", json={"image_base64": PNG_1PX, "media_type": "image/png", "dining": "c4c"})
     assert r.status_code == 404
 
@@ -238,8 +239,8 @@ def test_invalid_requests_do_not_use_up_limits(monkeypatch):
 
 def test_daily_caps(monkeypatch):
     _ok_model(monkeypatch)
-    monkeypatch.setattr(vision, "VISION_DAILY_PER_USER", 2)
-    monkeypatch.setattr(vision, "VISION_DAILY_TOTAL", 3)
+    monkeypatch.setattr(vision._quota, "per_key", 2)
+    monkeypatch.setattr(vision._quota, "total", 3)
     monkeypatch.setattr(vision._limiter, "limit", 100)
     a, b = _app("a"), _app("b")
     assert [a.post("/api/vision/plate", json=BODY).status_code for _ in range(3)] == [200, 200, 429]

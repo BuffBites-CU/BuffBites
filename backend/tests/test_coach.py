@@ -8,8 +8,10 @@ import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
+import menu_rules
 import menu_store
-from routers import coach, strava
+import strava_client
+from routers import coach
 from routers.coach import DietRules, PlanChecker, Targets, _CoachMeal, _DraftItem, _DraftMeal, build_menu, plan_targets
 from tests.fakes import FakeCollection
 
@@ -50,12 +52,12 @@ USER = {
 
 @pytest.fixture(autouse=True)
 def _env(monkeypatch):
-    menu_store._cache["c4c"] = {"dining_location": "C4C", "menus": [DAY]}
-    monkeypatch.setattr(coach, "_today_mt", lambda: TODAY)
+    monkeypatch.setitem(menu_store._cache, "c4c", {"dining_location": "C4C", "menus": [DAY]})
+    monkeypatch.setattr(menu_rules, "today_mt", lambda: TODAY)
     monkeypatch.setattr(coach, "_now_mt", lambda: datetime.fromisoformat(f"{TODAY}T08:00:00-06:00"))
     monkeypatch.setattr(coach, "users_collection", FakeCollection([USER]))
     monkeypatch.setattr(coach, "coach_plans_collection", FakeCollection())
-    monkeypatch.setattr(strava, "strava_links_collection", FakeCollection())
+    monkeypatch.setattr(strava_client, "strava_links_collection", FakeCollection())
     coach._limiter._hits.clear()
     coach._quota.day = ""
 
@@ -130,6 +132,16 @@ def test_ground_drops_unverifiable_items_and_unneeded_meals():
     assert meals[1].totals.calories == 220
 
 
+def test_item_limit_is_six_in_check_and_ground():
+    c = _checker()
+    seven = [_DraftItem(name="Brown Rice", servings=0.5)] * 7
+    r = c.check([_DraftMeal(period="Lunch", items=seven),
+                 _DraftMeal(period="Dinner", items=[_DraftItem(name="Grilled Chicken Breast", servings=1)])])
+    assert r["ok"] is False and any("keep it to 6 or fewer" in i for i in r["issues"])
+    meals = c.ground([_CoachMeal(period="Lunch", title="x", why="", items=seven)])
+    assert len(meals[0].items) == 6
+
+
 # ── Splitting the day ──────────────────────────────────────────────────────
 
 def _budget(target=2400, protein=100, eaten_kcal=0, eaten_protein=0):
@@ -184,15 +196,15 @@ def test_budget_without_strava_is_a_rest_day_with_a_nudge():
 
 
 def test_budget_counts_todays_strava_workouts(monkeypatch):
-    monkeypatch.setattr(strava, "strava_links_collection", FakeCollection([{"firebase_uid": "u1", "weight_kg": 80}]))
-    monkeypatch.setattr(strava, "configured", lambda: True)
+    monkeypatch.setattr(strava_client, "strava_links_collection", FakeCollection([{"firebase_uid": "u1", "weight_kg": 80}]))
+    monkeypatch.setattr(strava_client, "configured", lambda: True)
 
     async def acts(uid):
         return [
             {"sport_type": "Run", "start_date_local": f"{TODAY}T07:00:00Z", "moving_time": 3600, "distance": 10000},
             {"sport_type": "Ride", "start_date_local": "2026-10-10T07:00:00Z", "moving_time": 3600, "kilojoules": 700},
         ]
-    monkeypatch.setattr(strava, "recent_activities", acts)
+    monkeypatch.setattr(strava_client, "recent_activities", acts)
     b = _app().get("/api/coach/budget").json()
     assert b["training"]["connected"] is True
     assert len(b["training"]["today"]) == 1 and b["exercise_kcal"] == b["training"]["today"][0]["kcal"] > 0
@@ -201,12 +213,12 @@ def test_budget_counts_todays_strava_workouts(monkeypatch):
 
 
 def test_budget_survives_a_strava_outage(monkeypatch):
-    monkeypatch.setattr(strava, "strava_links_collection", FakeCollection([{"firebase_uid": "u1"}]))
-    monkeypatch.setattr(strava, "configured", lambda: True)
+    monkeypatch.setattr(strava_client, "strava_links_collection", FakeCollection([{"firebase_uid": "u1"}]))
+    monkeypatch.setattr(strava_client, "configured", lambda: True)
 
     async def down(uid):
-        raise strava.StravaUnavailable("503")
-    monkeypatch.setattr(strava, "recent_activities", down)
+        raise strava_client.StravaUnavailable("503")
+    monkeypatch.setattr(strava_client, "recent_activities", down)
     b = _app().get("/api/coach/budget").json()
     assert b["training"]["connected"] is True and b["training"]["error"]
 

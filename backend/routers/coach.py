@@ -12,7 +12,7 @@ Two steps, kept apart on purpose:
    drops anything that doesn't hold up, so every number shown comes from the
    menu, never from the model.
 
-Strava data is used only for students who connected it (see routers/strava.py).
+Strava data is used only for students who connected it (see strava_client.py).
 Without it the budget is a rest-day estimate.
 """
 
@@ -20,36 +20,50 @@ from __future__ import annotations
 
 import asyncio
 import difflib
+import functools
 import hashlib
 import json
 import os
-import sys
 from dataclasses import dataclass, field
 from datetime import date as date_cls, datetime, timedelta, timezone
 from typing import Literal
 
 import anthropic
+import structlog
 from anthropic import beta_async_tool
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field, ValidationError
 
 import energy
+import strava_client
 from auth import get_current_user
 from database import coach_plans_collection, users_collection
+from menu_rules import (
+    GLUTEN_ALLERGENS,
+    MT,
+    check_date,
+    classify_station,
+    ensure_open,
+    is_component_item,
+    name_key,
+    passes_dietary,
+    to_float,
+    today_mt,
+)
 from menu_store import DINING_FILES, load_menu
 from pydantic_models.user_models import BodyStats
 from rate_limit import DailyQuota, SlidingWindowLimiter
-from routers import strava
-from routers.combos import MT, _classify_station, _is_component_item, _passes_dietary, _today_mt, ensure_open
 
 router = APIRouter(prefix="/api/coach", tags=["coach"])
+logger = structlog.get_logger()
 
 COACH_MODEL = os.getenv("COACH_MODEL", "claude-opus-5-5")
 # Bump when the prompt or tool changes, so cached plans from the old one expire.
-PROMPT_VERSION = "1"
+PROMPT_VERSION = "2"
 _PLAN_TTL = timedelta(hours=6)
 _MAX_TURNS = 6
 _MAX_MENU_ITEMS = 400
+_MAX_MEAL_ITEMS = 6  # the prompt asks for 2-6 items per meal
 
 PERIODS = ("Breakfast", "Lunch", "Dinner")
 # Share of the day's calories, and the hour (MT) after which a meal is past.
@@ -61,7 +75,7 @@ _limiter = SlidingWindowLimiter(limit=4, window_seconds=60, detail="Slow down a 
 _quota = DailyQuota(
     per_key=int(os.getenv("COACH_DAILY_PER_USER", "8")),
     total=int(os.getenv("COACH_DAILY_TOTAL", "150")),
-    today=_today_mt,
+    today=today_mt,
     key_detail="You've built today's limit of fuel plans. It resets at midnight.",
     total_detail="Fuel plans are paused for today. Try again tomorrow.",
 )
@@ -217,18 +231,6 @@ Rules:
 
 
 _TAG = {"breakfast": "breakfast", "lunch": "lunch", "dinner": "dinner", "dessert": "dessert", "lunch_dinner": "lunch+dinner"}
-_GLUTEN = {"wheat", "gluten", "barley", "rye"}
-
-
-def _key(name: str) -> str:
-    return " ".join(name.split()).casefold()
-
-
-def _num(v) -> float:
-    try:
-        return float(v)
-    except (TypeError, ValueError):
-        return 0.0
 
 
 def build_menu(day_menu: dict) -> tuple[str, dict[str, dict]]:
@@ -237,24 +239,24 @@ def build_menu(day_menu: dict) -> tuple[str, dict[str, dict]]:
     lookup: dict[str, dict] = {}
     blocks: list[str] = []
     for station, raw_items in (day_menu.get("categories") or {}).items():
-        kind = _classify_station(station)
+        kind = classify_station(station)
         if kind == "excluded":
             continue
         lines: list[str] = []
         for raw in raw_items:
             name = (raw.get("name") or "").strip()
-            k = _key(name)
-            if not name or k in lookup or _is_component_item(name):
+            k = name_key(name)
+            if not name or k in lookup or is_component_item(name):
                 continue
             n = raw.get("nutrition") or {}
             item = {
                 "name": name,
                 "station": station,
                 "serving": raw.get("serving_size") or "1 serving",
-                "kcal": _num(raw.get("calories") or n.get("calories")),
-                "protein": _num(n.get("protein_g")),
-                "carbs": _num(n.get("carbohydrates_g")),
-                "fat": _num(n.get("fat_g")),
+                "kcal": to_float(raw.get("calories") or n.get("calories")),
+                "protein": to_float(n.get("protein_g")),
+                "carbs": to_float(n.get("carbohydrates_g")),
+                "fat": to_float(n.get("fat_g")),
                 "allergens": [str(a) for a in (raw.get("allergens") or [])],
                 "is_vegan": bool(raw.get("is_vegan")),
                 "is_vegetarian": bool(raw.get("is_vegetarian")),
@@ -265,7 +267,7 @@ def build_menu(day_menu: dict) -> tuple[str, dict[str, dict]]:
                 flags.append("vegan")
             elif item["is_vegetarian"]:
                 flags.append("vegetarian")
-            if {a.lower() for a in item["allergens"]} & _GLUTEN:
+            if {a.lower() for a in item["allergens"]} & GLUTEN_ALLERGENS:
                 flags.append("gluten")
             lines.append(
                 f"{name} | {item['serving']} | {round(item['kcal'])} kcal | "
@@ -288,7 +290,7 @@ class DietRules:
     avoid: list[str] = field(default_factory=list)
 
     def violation(self, item: dict) -> str | None:
-        if not _passes_dietary(item, self.prefs):
+        if not passes_dietary(item, self.prefs):
             return ", ".join(sorted(self.prefs))
         text = " ".join([item["name"], *item.get("allergens", [])]).lower()
         for term in self.avoid:
@@ -320,7 +322,7 @@ class PlanChecker:
         self._names = [i["name"] for i in lookup.values()]
 
     def resolve(self, name: str) -> tuple[dict | None, str | None]:
-        item = self.lookup.get(_key(name))
+        item = self.lookup.get(name_key(name))
         if item is None:
             close = difflib.get_close_matches(name, self._names, n=3, cutoff=0.6)
             hint = f" Did you mean: {'; '.join(close)}?" if close else ""
@@ -347,8 +349,11 @@ class PlanChecker:
                 issues.append(f"{meal.period} isn't needed today; drop it.")
                 blocking = True
                 continue
-            if len(meal.items) > 7:
-                issues.append(f"{meal.period} has {len(meal.items)} items; keep it to 6 or fewer.")
+            if len(meal.items) > _MAX_MEAL_ITEMS:
+                # Blocking: ground() keeps only the first 6, so the totals
+                # checked here wouldn't match the plan the student sees.
+                issues.append(f"{meal.period} has {len(meal.items)} items; keep it to {_MAX_MEAL_ITEMS} or fewer.")
+                blocking = True
             m = {"kcal": 0.0, "protein_g": 0.0, "carbs_g": 0.0, "fat_g": 0.0}
             rows = []
             for pick in meal.items:
@@ -411,10 +416,10 @@ class PlanChecker:
             if meal.period in seen or (meal.period != "Snack" and meal.period not in self.targets.by_period):
                 continue
             items: list[PlanItemOut] = []
-            for pick in meal.items[:7]:
+            for pick in meal.items[:_MAX_MEAL_ITEMS]:
                 item, problem = self.resolve(pick.name)
                 if problem:
-                    print(f"[COACH] dropped: {problem}", file=sys.stderr)
+                    logger.info("coach_dropped_item", problem=problem)
                     continue
                 s = _servings(pick.servings)
                 items.append(PlanItemOut(
@@ -458,17 +463,7 @@ class Context:
     strava_ok: bool
 
 
-def _check_date(value: str | None, *, earliest: int, latest: int) -> str:
-    today = date_cls.fromisoformat(_today_mt())
-    if value is None:
-        return today.isoformat()
-    try:
-        d = date_cls.fromisoformat(value)
-    except ValueError:
-        raise HTTPException(status_code=400, detail="date must be YYYY-MM-DD")
-    if not earliest <= (d - today).days <= latest:
-        raise HTTPException(status_code=400, detail="Fuel plans cover today and tomorrow only.")
-    return d.isoformat()
+_DATE_DETAIL = "Fuel plans cover today and tomorrow only."
 
 
 async def build_context(uid: str, day: str) -> Context:
@@ -479,16 +474,16 @@ async def build_context(uid: str, day: str) -> Context:
     if not user:
         raise HTTPException(status_code=404, detail="Finish setting up your profile first.")
 
-    link = await strava.get_link(uid)
+    link = await strava_client.get_link(uid)
     body = energy.resolve_body(user.get("body"), (link or {}).get("weight_kg"), (link or {}).get("sex"))
 
     activities: list[dict] | None = None
     error: str | None = None
-    if link and strava.configured():
+    if link and strava_client.configured():
         try:
-            activities = await strava.recent_activities(uid)
-        except strava.StravaUnavailable as e:
-            print(f"[COACH] strava unavailable: {e}", file=sys.stderr)
+            activities = await strava_client.recent_activities(uid)
+        except strava_client.StravaUnavailable as e:
+            logger.warning("coach_strava_unavailable", error=str(e))
             error = "Couldn't reach Strava just now, so today's workouts aren't counted."
     connected = activities is not None or error is not None
 
@@ -506,10 +501,10 @@ async def build_context(uid: str, day: str) -> Context:
     for e in user.get("meal_log") or []:
         if e.get("date") != day:
             continue
-        eaten.calories += round(_num(e.get("calories")))
-        eaten.protein_g += round(_num(e.get("protein_g")))
-        eaten.carbs_g += round(_num(e.get("carbs_g")))
-        eaten.fat_g += round(_num(e.get("fat_g")))
+        eaten.calories += round(to_float(e.get("calories")))
+        eaten.protein_g += round(to_float(e.get("protein_g")))
+        eaten.carbs_g += round(to_float(e.get("carbs_g")))
+        eaten.fat_g += round(to_float(e.get("fat_g")))
         if e.get("meal_period") in PERIODS:
             eaten_periods.add(e["meal_period"])
 
@@ -601,7 +596,9 @@ def render_brief(day: str, hall: str, ctx: Context, targets: Targets) -> str:
 
 # ── Agent ─────────────────────────────────────────────────────────────────
 
+@functools.cache
 def _make_client() -> anthropic.AsyncAnthropic:
+    """One client per process, so its connection pool is reused across requests."""
     return anthropic.AsyncAnthropic()
 
 
@@ -638,12 +635,12 @@ async def _run_agent(brief: str, menu_text: str, hall: str, checker: PlanChecker
     try:
         final = await runner.until_done()
     except ValidationError as e:
-        print(f"[COACH] unparseable model output: {e.error_count()} errors", file=sys.stderr)
+        logger.warning("coach_unparseable_output", errors=e.error_count())
         return None
     except anthropic.RateLimitError:
         raise HTTPException(status_code=503, detail="The fuel coach is busy. Try again in a minute.")
     except anthropic.APIStatusError as e:
-        print(f"[COACH] API error {e.status_code}: {e.message}", file=sys.stderr)
+        logger.error("coach_api_error", status=e.status_code, error=e.message)
         raise HTTPException(status_code=502, detail="The fuel coach is unavailable right now.")
     except anthropic.APIConnectionError:
         raise HTTPException(status_code=503, detail="The fuel coach is unavailable right now.")
@@ -693,7 +690,7 @@ async def put_body(body: BodyStats, current_user: dict = Depends(get_current_use
 
 @router.get("/budget", response_model=BudgetOut)
 async def get_budget(date: str | None = None, current_user: dict = Depends(get_current_user)) -> BudgetOut:
-    day = _check_date(date, earliest=-1, latest=1)
+    day = check_date(date, earliest=-1, latest=1, detail=_DATE_DETAIL)
     return (await build_context(current_user["uid"], day)).budget
 
 
@@ -703,7 +700,7 @@ async def make_plan(req: PlanRequest, current_user: dict = Depends(get_current_u
     if req.dining not in DINING_FILES:
         raise HTTPException(status_code=400, detail=f"Invalid dining location. Must be one of: {', '.join(DINING_FILES)}")
     ensure_open(req.dining)
-    day = _check_date(req.date, earliest=0, latest=1)
+    day = check_date(req.date, earliest=0, latest=1, detail=_DATE_DETAIL)
 
     ctx = await build_context(uid, day)
     targets, assumptions = plan_targets(ctx.budget, ctx.eaten_periods, day, _now_mt())
