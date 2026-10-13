@@ -93072,40 +93072,7 @@
             }
           }
         ],
-        "Composed Salads": [
-          {
-            "name": "Asian Tri-Cabbage Coleslaw with Sesame",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 106.0,
-            "ingredients": "Cabbage Nappa, Red Cabbage, Rice Bran Oil, Red Bermuda Onions, Carrots, Lemon Grass (Lemon grass.), Green Bell Peppers, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Cilantro 30 CT, Sesame Oil (Soybean Oil, Sesame Oil.), Red Bell Peppers, Yellow Bell Pepper, Sugar Granulated (Sugar), Ginger, Black pepper (Black Pepper), Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 106.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 157.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 1.0,
-              "potassium_mg": 246.0,
-              "calcium_mg": 71.0,
-              "iron_mg": 1.0
-            }
-          }
-        ],
+        "Composed Salads": [],
         "Curry Bowls": [
           {
             "name": "Red Lentil Curry",
