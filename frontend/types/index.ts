@@ -31,6 +31,9 @@ export interface FavoriteCombo {
 
 /** POST /api/users/ body. The server takes the uid and email from the ID token. */
 export interface UserCreate {
+  /** Ignored by the current server (it uses the sign-in token); an older one requires them. */
+  firebase_uid?: string
+  email?: string
   username: string
   dietary_preferences: DietaryPreference[]
   restrictions?: string[]
