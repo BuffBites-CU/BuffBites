@@ -11,7 +11,7 @@ const METHODS: Array<{ no: string; what: string; how: string; source: string }> 
   {
     no: '03',
     what: 'Workouts',
-    how: 'Power-meter work (kJ ≈ kcal) when your ride has it; otherwise running and walking equations from pace and climb; otherwise a typical value for the sport. Counted net of resting burn so training time isn’t counted twice.',
+    how: 'From Strava or the workouts you log yourself. Power-meter work (kJ ≈ kcal) when your ride has it; otherwise running and walking equations from pace and climb; otherwise a typical value for the sport, adjusted for how hard it felt (easy \u00d70.8, hard \u00d71.25). Counted net of resting burn so training time isn’t counted twice.',
     source: 'ACSM Guidelines; 2024 Compendium of Physical Activities',
   },
   { no: '04', what: 'Carbs', how: 'From 3 g per kg on a rest day up to 10 g per kg after more than 3 hours of training.', source: 'ACSM/AND/DC position stand, 2016' },
@@ -22,7 +22,8 @@ const METHODS: Array<{ no: string; what: string; how: string; source: string }> 
 
 const KEPT: Array<[string, string]> = [
   ['Strava sign-in (encrypted), first name, consent time', 'Until you disconnect'],
-  ['Your workouts', 'In memory for 5 minutes, never saved'],
+  ['Workouts from Strava', 'In memory for 5 minutes, never saved'],
+  ['Workouts you log yourself', '90 days, or until you delete them'],
   ['Built meal plans', '6 hours'],
   ['Body stats', 'Until you change them; never on your public profile'],
 ]
@@ -99,7 +100,7 @@ export default function FuelInfoPage() {
             ))}
           </ul>
           <p className="mt-3 text-[12px] text-muted">
-            Strava is only contacted after you agree and approve it there. Disconnect in <Link href="/profile" className="underline underline-offset-2">Profile</Link> any time: we revoke access at Strava and delete the rest.
+            Strava is optional and only contacted after you agree and approve it there. Manage workouts and Strava in <Link href="/profile" className="underline underline-offset-2">Profile</Link> any time. Disconnecting revokes access at Strava and deletes its data.
           </p>
         </section>
       </main>

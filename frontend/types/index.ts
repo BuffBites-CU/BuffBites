@@ -263,6 +263,8 @@ export interface Workout {
   elevation_m: number
   kcal: number
   method: 'power' | 'pace' | 'met'
+  id: string | null
+  source: 'strava' | 'manual'
 }
 
 export interface FuelBudget {
@@ -283,6 +285,7 @@ export interface FuelBudget {
   body: { weight_kg: number; height_cm: number; age: number; sex: string; estimated: string[] }
   training: {
     connected: boolean
+    manual_logged: number
     today: Workout[]
     week_sessions: number
     week_minutes: number
@@ -323,4 +326,26 @@ export interface FuelPlan {
   headline: string
   tips: string[]
   assumptions: string[]
+}
+
+export type WorkoutEffort = 'light' | 'moderate' | 'hard'
+
+export interface WorkoutInput {
+  sport: string
+  date: string
+  start_time?: string
+  minutes: number
+  distance_km?: number
+  effort: WorkoutEffort
+}
+
+export interface WorkoutRecord {
+  id: string
+  sport: string
+  label: string
+  date: string
+  start_time: string | null
+  minutes: number
+  distance_km: number
+  effort: WorkoutEffort
 }

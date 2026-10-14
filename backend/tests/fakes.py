@@ -1,5 +1,8 @@
 """A tiny in-memory stand-in for the Motor collections the routers use."""
 import copy
+import types
+
+from bson import ObjectId
 
 
 class _Result:
@@ -8,8 +11,28 @@ class _Result:
         self.deleted_count = deleted
 
 
+def _match_value(have, want) -> bool:
+    if isinstance(want, dict) and any(k.startswith("$") for k in want):
+        ops = {"$gte": lambda a, b: a >= b, "$lte": lambda a, b: a <= b, "$gt": lambda a, b: a > b, "$lt": lambda a, b: a < b}
+        return have is not None and all(ops[op](have, v) for op, v in want.items())
+    return have == want
+
+
 def _matches(doc: dict, flt: dict) -> bool:
-    return all(doc.get(k) == v for k, v in flt.items())
+    return all(_match_value(doc.get(k), v) for k, v in flt.items())
+
+
+class _Cursor:
+    def __init__(self, docs: list[dict]):
+        self.docs = docs
+
+    def sort(self, spec):
+        for key, direction in reversed(spec):
+            self.docs.sort(key=lambda d: (d.get(key) is None, d.get(key) or ""), reverse=direction < 0)
+        return self
+
+    async def to_list(self, n=None):
+        return self.docs[:n]
 
 
 def _project(doc: dict, projection: dict | None) -> dict:
@@ -24,6 +47,18 @@ def _project(doc: dict, projection: dict | None) -> dict:
 class FakeCollection:
     def __init__(self, docs: list[dict] | None = None):
         self.docs: list[dict] = [copy.deepcopy(d) for d in docs or []]
+
+    def find(self, flt: dict | None = None, projection: dict | None = None):
+        return _Cursor([_project(d, projection) for d in self.docs if _matches(d, flt or {})])
+
+    async def count_documents(self, flt: dict) -> int:
+        return sum(1 for d in self.docs if _matches(d, flt))
+
+    async def insert_one(self, doc: dict):
+        doc = copy.deepcopy(doc)
+        doc.setdefault("_id", ObjectId())
+        self.docs.append(doc)
+        return types.SimpleNamespace(inserted_id=doc["_id"])
 
     async def find_one(self, flt: dict, projection: dict | None = None):
         for d in self.docs:

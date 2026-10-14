@@ -5,8 +5,9 @@ today. The fuel coach then builds the rest of the day from their dining hall's m
 
 ## What the student sees
 
-- **Profile → Training & fuel**: Connect or disconnect Strava, plus optional
-  body stats (weight, height, age, sex) in lb/ft or kg/cm.
+- **Profile → Training & fuel**: log workouts by hand (no Strava needed),
+  connect or disconnect Strava (shown only once the server has Strava keys),
+  and enter optional body stats (weight, height, age, sex) in lb/ft or kg/cm.
 - **Discover → Fig. 2 · Fuel plan**: today's calorie target, how it's made up
   (daily burn + training ± goal), and protein, carbs and fat. **Build my plan**
   returns meals from the selected hall that add up to the target.
@@ -55,13 +56,27 @@ It never sees activity names, maps or GPS data.
 | What | Where | How long |
 | --- | --- | --- |
 | Strava tokens (Fernet-encrypted), first name, Strava weight/sex, consent time | `strava_links` | Until disconnect |
-| Workouts | Server memory | 5 minutes |
+| Workouts from Strava | Server memory | 5 minutes |
+| Workouts logged by hand | `manual_workouts` | 90 days (TTL index), or until deleted |
 | Built plans | `coach_plans` | 6 hours (TTL index) |
 | Body stats | `users.body` (never returned by the public profile endpoint) | Until changed |
 
 Disconnecting revokes access at Strava (`/oauth/deauthorize`) and deletes the
 link and cached plans. If a student revokes access on Strava's side, the next
 request sees a 401 and deletes the link.
+
+## Logging workouts by hand
+
+`backend/routers/workouts.py`, shown in Profile → Training & fuel. A student
+picks an activity, a day in the last 7, minutes, optional distance and start
+time, and how hard it felt. `energy.manual_workout` turns that into calories
+with the same rules as Strava workouts: pace equations for runs, walks and
+hikes with a distance, speed-based METs for rides with a distance, otherwise a
+sport MET scaled by effort (easy x0.8, steady x1, hard x1.25). Entries are
+private to the student, capped at 10 per day and 200 in total.
+
+If someone both logs a workout and has Strava connected, the coach adds both,
+so log only what Strava doesn't already have.
 
 ## Strava data pipeline
 
