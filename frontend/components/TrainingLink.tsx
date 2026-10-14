@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
 import { disconnectStrava, getBodyStats, getStravaStatus, saveBodyStats } from '@/services/coachService'
@@ -141,6 +142,7 @@ export default function TrainingLink() {
       <span className="plan-label">Sec. T · Private</span>
       <h2 id="training-title" className="text-[24px] text-brand-black leading-tight">Training &amp; fuel</h2>
       <div className="dim-line mt-1.5 mb-3" aria-hidden />
+      <Link href="/fuel-info" className="mb-3 inline-block text-[12px] text-brand-black underline underline-offset-2">How fuel plans work</Link>
 
       {/* Strava link */}
       <div className="card p-3.5 flex items-center gap-3">

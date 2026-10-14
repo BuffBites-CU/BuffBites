@@ -129,7 +129,10 @@ export default function FuelPlanCard({ dining }: { dining: DiningHall }) {
       {error && <p className="mt-2 text-[13px] font-semibold text-brand-black" role="alert">{error}</p>}
 
       {plan && <PlanView plan={plan} onTomorrow={() => build(isoOffsetMST(1))} planning={planning} />}
-      {t.connected && <p className="mt-3 text-right font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Powered by Strava</p>}
+      <div className="mt-3 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.16em] text-muted">
+        <Link href="/fuel-info" className="underline underline-offset-2 text-brand-black">How this works</Link>
+        {t.connected && <span>Powered by Strava</span>}
+      </div>
     </section>
   )
 }
