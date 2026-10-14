@@ -1,16 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { XMarkIcon, PlusIcon } from './icons'
-import { tagStyle } from './ComboCard'
+import { useEffect, useRef, useState } from 'react'
+import { XMarkIcon } from './icons'
+import { DishListEditor, TagPicker, EMPTY_DISH, cleanDishes } from './ComboFormFields'
 import { publishCombo } from '@/services/communityService'
 import { getMenu } from '@/services/combosService'
 import { useAuth } from '@/context/AuthContext'
 import { DINING_HALLS, DINING_HALL_LABELS, type ComboTag, type DiningHall, type DishItem } from '@/types'
 import { todayMST } from '@/lib/date'
-
-const AVAILABLE_TAGS: ComboTag[] = ['vegan', 'vegetarian', 'high-protein', 'light', 'hearty', 'balanced']
-const TODAY = todayMST()
 
 interface Props {
   onClose: () => void
@@ -29,18 +26,18 @@ interface FormState {
 
 type FieldErrors = Partial<Record<'dining_hall' | 'date' | 'title' | 'dishes', string>>
 
-const EMPTY_DISH: DishItem = { name: '', station: '', servings: 1 }
-
 function haptic() {
   if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(10)
 }
 
 export default function PublishComboModal({ onClose, onSuccess }: Props) {
-  const { firebaseUser, username } = useAuth()
+  const { firebaseUser } = useAuth()
+  // Taken when the modal opens, so a tab left open past midnight still offers today.
+  const [today] = useState(todayMST)
   const [step, setStep] = useState<1 | 2>(1)
   const [form, setForm] = useState<FormState>({
     dining_hall: '',
-    date: TODAY,
+    date: today,
     title: '',
     description: '',
     tags: [],
@@ -52,11 +49,21 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
   const [submitError, setSubmitError] = useState('')
   const [menuByStation, setMenuByStation] = useState<Record<string, string[]>>({})
   const [menuLoading, setMenuLoading] = useState(false)
+  const dialogRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     document.body.style.overflow = 'hidden'
+    dialogRef.current?.focus({ preventScroll: true })
     return () => { document.body.style.overflow = '' }
   }, [])
+
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [onClose])
 
   useEffect(() => {
     if (!form.dining_hall || !form.date) {
@@ -76,21 +83,6 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
       .finally(() => setMenuLoading(false))
   }, [form.dining_hall, form.date])
 
-  function updateDish(index: number, field: keyof DishItem, value: string | number) {
-    setForm((f) => ({
-      ...f,
-      dishes: f.dishes.map((d, i) => i === index ? { ...d, [field]: value } : d),
-    }))
-  }
-
-  function updateDishFromSelect(index: number, name: string) {
-    const station = Object.entries(menuByStation).find(([, names]) => names.includes(name))?.[0] ?? ''
-    setForm((f) => ({
-      ...f,
-      dishes: f.dishes.map((d, i) => i === index ? { ...d, name, station } : d),
-    }))
-  }
-
   function changeDiningHall(hall: DiningHall | '') {
     setForm((f) => ({
       ...f,
@@ -98,23 +90,6 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
       dishes: [{ ...EMPTY_DISH }, { ...EMPTY_DISH }],
     }))
     if (hall) setFieldErrors((e) => ({ ...e, dining_hall: undefined }))
-  }
-
-  function addDish() {
-    if (form.dishes.length >= 8) return
-    setForm((f) => ({ ...f, dishes: [...f.dishes, { ...EMPTY_DISH }] }))
-  }
-
-  function removeDish(index: number) {
-    if (form.dishes.length <= 1) return
-    setForm((f) => ({ ...f, dishes: f.dishes.filter((_, i) => i !== index) }))
-  }
-
-  function toggleTag(tag: ComboTag) {
-    setForm((f) => ({
-      ...f,
-      tags: f.tags.includes(tag) ? f.tags.filter((t) => t !== tag) : [...f.tags, tag],
-    }))
   }
 
   function validateStep1(): boolean {
@@ -128,14 +103,13 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
   function validateStep2(): boolean {
     const errors: FieldErrors = {}
     if (!form.title.trim()) errors.title = 'Give your combo a title.'
-    const validDishes = form.dishes.filter((d) => d.name.trim())
-    if (validDishes.length < 1) errors.dishes = 'Add at least one dish.'
+    if (cleanDishes(form.dishes).length < 1) errors.dishes = 'Add at least one dish.'
     setFieldErrors(errors)
     return Object.keys(errors).length === 0
   }
 
   async function handlePublish() {
-    if (!firebaseUser || !username || !form.dining_hall) return
+    if (!firebaseUser || !form.dining_hall) return
     if (!validateStep2()) return
     haptic()
     setSubmitting(true)
@@ -147,7 +121,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
           title: form.title.trim(),
           dining_hall: form.dining_hall,
           date: form.date,
-          dishes: form.dishes.filter((d) => d.name.trim()),
+          dishes: cleanDishes(form.dishes),
           tags: form.tags,
           description: form.description.trim() || undefined,
           images: [],
@@ -164,13 +138,11 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
     }
   }
 
-  const hasMenu = Object.keys(menuByStation).length > 0
-
   return (
     <div className="fixed inset-0 z-50 flex flex-col justify-end">
       <div className="absolute inset-0 bg-black/50" onMouseDown={onClose} />
 
-      <div className="relative bg-white rounded-t-3xl max-h-[92vh] flex flex-col">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="Share a combo" tabIndex={-1} className="relative outline-none bg-white rounded-t-3xl max-h-[92vh] flex flex-col">
         <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
           <div className="w-10 h-1 rounded-full bg-surface-warm" />
         </div>
@@ -207,9 +179,8 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 <select
                   value={form.dining_hall}
                   onChange={(e) => changeDiningHall(e.target.value as DiningHall | '')}
-                  className={`w-full rounded-xl border px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand ${
-                    fieldErrors.dining_hall ? 'border-brand-black/25' : 'border-brand-black/25'
-                  }`}
+                  aria-invalid={!!fieldErrors.dining_hall}
+                  className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm bg-white text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
                 >
                   <option value="">Select a dining hall…</option>
                   {DINING_HALLS.map((h) => (
@@ -225,15 +196,14 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                 <label className="text-sm font-medium text-brand-black block mb-1.5">Date</label>
                 <input
                   type="date"
-                  max={TODAY}
+                  max={today}
                   value={form.date}
                   onChange={(e) => {
                     setForm((f) => ({ ...f, date: e.target.value }))
                     setFieldErrors((err) => ({ ...err, date: undefined }))
                   }}
-                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand ${
-                    fieldErrors.date ? 'border-brand-black/25' : 'border-brand-black/25'
-                  }`}
+                  aria-invalid={!!fieldErrors.date}
+                  className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
                 />
                 {fieldErrors.date && (
                   <p className="text-xs text-brand-black mt-1">{fieldErrors.date}</p>
@@ -275,9 +245,8 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                     setFieldErrors((err) => ({ ...err, title: undefined }))
                   }}
                   placeholder="e.g. The Midnight Special"
-                  className={`w-full rounded-xl border px-3 py-2.5 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand ${
-                    fieldErrors.title ? 'border-brand-black/25' : 'border-brand-black/25'
-                  }`}
+                  aria-invalid={!!fieldErrors.title}
+                  className="w-full rounded-xl border border-brand-black/25 px-3 py-2.5 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand"
                 />
                 {fieldErrors.title && (
                   <p className="text-xs text-brand-black mt-1">{fieldErrors.title}</p>
@@ -301,20 +270,7 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
 
               <div>
                 <label className="text-sm font-medium text-brand-black block mb-2">Tags</label>
-                <div className="flex flex-wrap gap-1.5">
-                  {AVAILABLE_TAGS.map((tag) => (
-                    <button
-                      key={tag}
-                      type="button"
-                      onClick={() => toggleTag(tag)}
-                      className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${
-                        form.tags.includes(tag) ? tagStyle(tag) : 'bg-surface-overlay text-muted'
-                      }`}
-                    >
-                      {tag}
-                    </button>
-                  ))}
-                </div>
+                <TagPicker tags={form.tags} onChange={(tags) => setForm((f) => ({ ...f, tags }))} />
               </div>
 
               <div>
@@ -322,64 +278,13 @@ export default function PublishComboModal({ onClose, onSuccess }: Props) {
                   <label className="text-sm font-medium text-brand-black">Dishes</label>
                   {menuLoading && <span className="text-xs text-muted">Loading menu…</span>}
                 </div>
-                <div className="space-y-2">
-                  {form.dishes.map((dish, i) => (
-                    <div key={i} className="flex gap-2 items-center">
-                      {hasMenu ? (
-                        <select
-                          value={dish.name}
-                          onChange={(e) => updateDishFromSelect(i, e.target.value)}
-                          className="flex-1 rounded-xl border border-brand-black/25 px-3 py-2 text-sm text-brand-black bg-white focus:outline-none focus:ring-2 focus:ring-brand"
-                        >
-                          <option value="">Select a dish…</option>
-                          {Object.entries(menuByStation).map(([station, names]) => (
-                            <optgroup key={station} label={station}>
-                              {names.map((name) => (
-                                <option key={name} value={name}>{name}</option>
-                              ))}
-                            </optgroup>
-                          ))}
-                        </select>
-                      ) : (
-                        <input
-                          value={dish.name}
-                          onChange={(e) => updateDish(i, 'name', e.target.value)}
-                          placeholder={menuLoading ? 'Loading…' : 'Dish name'}
-                          disabled={menuLoading}
-                          className="flex-1 rounded-xl border border-brand-black/25 px-3 py-2 text-sm text-brand-black placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-brand disabled:opacity-50"
-                        />
-                      )}
-                      <input
-                        type="number"
-                        min={1}
-                        max={5}
-                        value={dish.servings}
-                        onChange={(e) => updateDish(i, 'servings', Number(e.target.value))}
-                        className="w-12 rounded-xl border border-brand-black/25 px-2 py-2 text-sm text-center text-brand-black focus:outline-none focus:ring-2 focus:ring-brand"
-                      />
-                      <button
-                        onClick={() => removeDish(i)}
-                        disabled={form.dishes.length <= 1}
-                        className="flex-shrink-0 p-1.5 rounded-full hover:bg-surface-overlay disabled:opacity-30 transition-colors"
-                        aria-label="Remove dish"
-                      >
-                        <XMarkIcon width={16} height={16} className="text-muted" />
-                      </button>
-                    </div>
-                  ))}
-                </div>
-                {fieldErrors.dishes && (
-                  <p className="text-xs text-brand-black mt-1">{fieldErrors.dishes}</p>
-                )}
-                {form.dishes.length < 8 && (
-                  <button
-                    onClick={addDish}
-                    className="flex items-center gap-1.5 mt-2 text-sm text-brand-deep font-medium"
-                  >
-                    <PlusIcon width={16} height={16} />
-                    Add dish
-                  </button>
-                )}
+                <DishListEditor
+                  dishes={form.dishes}
+                  onChange={(dishes) => setForm((f) => ({ ...f, dishes }))}
+                  menuByStation={menuByStation}
+                  menuLoading={menuLoading}
+                  error={fieldErrors.dishes}
+                />
               </div>
 
               <div>

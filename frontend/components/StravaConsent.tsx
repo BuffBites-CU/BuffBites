@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import Link from 'next/link'
 import { useAuth } from '@/context/AuthContext'
 import { startStravaConnect } from '@/services/coachService'
 import Doodle from './Doodle'
@@ -150,7 +151,8 @@ export default function StravaConsent({ open, onClose }: Props) {
           </button>
         </div>
         <p className="mt-3 text-[11px] text-muted text-center">
-          Estimates for everyday eating, not medical advice.
+          Estimates for everyday eating, not medical advice.{' '}
+          <Link href="/fuel-info" className="underline underline-offset-2">How it works</Link>
         </p>
       </div>
     </div>,

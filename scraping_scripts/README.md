@@ -14,6 +14,8 @@ pip install -r requirements.txt
 
 ## Scripts
 
+All the scraping logic lives in `nutrislice.py`, and every hall's school, menu slugs, output file and closed flag live in `halls.py`. Each `<hall>_dining.py` is a thin entry point (one workflow step per hall). `validate_menus.py` and `build_live_menus.py` read the hall list from `halls.py`, so adding a hall takes an entry there, a `<hall>_dining.py`, a workflow step and an entry in `backend/menu_store.py` (`DINING_FILES`, plus `CLOSED_HALLS` if it is closed).
+
 | Script | Dining Hall | Window | Output |
 |--------|------------|--------|--------|
 | `c4c_dining.py` | Center for Community (C4C) | 6 weeks | `data/c4c_dining_menus.json` |
@@ -34,16 +36,19 @@ python3 sewall_dining.py
 python3 village_center_dining.py
 python3 alley_dining.py
 python3 seec_dining.py
+python3 -m pytest .     # guard, merger, validator and live-copy tests (CI runs these before scraping)
 ```
 
 ---
 
 ## Behavior
 
-- `START_DATE` is computed dynamically as **the Monday two weeks before today**, so the scraped window always includes the current week and a few weeks ahead.
-- All scripts (except `alley_dining.py`) scan 6 weeks and detect menu repeat cycles, recording the result in `repeat_info`. Repeat detection no longer stops scraping early — the full window is always fetched so today's date is always present in the JSON.
-- `alley_dining.py` fetches a fixed 4-week rolling window.
-- Empty weeks (holidays, breaks) are skipped in repeat detection.
+- The window starts on **the Monday two weeks before today** (Mountain time, `nutrislice.start_date`), so the scraped window always includes the current week and a few weeks ahead.
+- Every hall scans 6 weeks. Halls with several menu types (C4C stations, Village Center stations) are merged by date; a station header that two menus share (e.g. "Featured Entree") keeps both menus' dishes, and a dish name appears once per station.
+- Days with no menu (weekends at Libby and Sewall, breaks) are left out of the JSON.
+- All halls except The Alley detect menu repeat cycles and record the result in `repeat_info`. The full window is always fetched. Empty weeks (holidays, breaks) are skipped in repeat detection. `alley_dining.py` also discovers the hall's menu types from the Nutrislice schools index, since it is expected to reopen under a new slug.
+- Requests retry connection errors, 429 and 5xx with backoff. If a week still fails, the previous file's days for that week are kept instead of dropped, the file is saved, and the script exits 1 so the workflow run turns red.
+- `menu_guard.py` keeps the previous file (and exits 1) when a scrape has no items, has nothing from today on while the old file did, or had failed requests and covers fewer upcoming days than the old file.
 
 ---
 

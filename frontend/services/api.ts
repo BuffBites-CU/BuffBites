@@ -39,8 +39,14 @@ export async function apiFetch<T>(path: string, options?: ApiFetchOptions): Prom
   if (!res.ok) {
     let message = `HTTP ${res.status}`
     try {
-      const body = await res.json()
-      if (typeof body.detail === 'string') message = body.detail
+      const { detail } = await res.json()
+      if (typeof detail === 'string') message = detail
+      // A request-validation 422 lists its errors: [{ loc: [..., field], msg }].
+      else if (Array.isArray(detail) && typeof detail[0]?.msg === 'string') {
+        const { loc, msg } = detail[0]
+        const field = Array.isArray(loc) && loc.length > 1 ? loc[loc.length - 1] : null
+        message = typeof field === 'string' ? `${field.replace(/_/g, ' ')}: ${msg}` : msg
+      }
     } catch {
       // ignore parse errors — use the default message
     }
@@ -51,6 +57,6 @@ export async function apiFetch<T>(path: string, options?: ApiFetchOptions): Prom
 }
 
 /** True when `err` is an API error with the given status. */
-export function isApiStatus(err: unknown, status: number): boolean {
+export function isApiStatus(err: unknown, status: number): err is ApiError {
   return err instanceof ApiError && err.status === status
 }

@@ -253,7 +253,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
                           aria-pressed={selected}
                           onClick={() => setRows((prev) => prev.map((r) => (r.id === row.id ? { ...r, portion: p } : r)))}
                           className={`min-w-[44px] h-8 px-2 rounded-full text-[12px] font-semibold ${
-                            selected ? 'bg-brand text-white' : 'bg-surface-overlay text-white'
+                            selected ? 'bg-brand text-white' : 'bg-surface-overlay text-brand-black'
                           }`}
                         >
                           {p}×
@@ -267,7 +267,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
                         aria-label={`${row.item.portion}× (estimate)`}
                         onClick={() => setRows((prev) => prev.map((r) => (r.id === row.id ? { ...r, portion: r.item.portion } : r)))}
                         className={`min-w-[44px] h-8 px-2 rounded-full text-[12px] font-semibold ${
-                          Math.abs(row.portion - row.item.portion) < 0.01 ? 'bg-brand text-white' : 'bg-surface-overlay text-white'
+                          Math.abs(row.portion - row.item.portion) < 0.01 ? 'bg-brand text-white' : 'bg-surface-overlay text-brand-black'
                         }`}
                       >
                         {row.item.portion}×

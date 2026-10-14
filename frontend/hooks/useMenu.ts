@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getMenu } from '@/services/combosService'
+import { isApiStatus } from '@/services/api'
 import { todayMST } from '@/lib/date'
 import type { DiningHall, MenuResponse } from '@/types'
 
@@ -36,9 +37,9 @@ export function useMenu(dining: DiningHall, date?: string, enabled = true) {
       })
       .catch((e: unknown) => {
         if (cancelled) return
-        const msg = e instanceof Error ? e.message : 'Something went wrong'
         // A missing day reads as "no menu" rather than an error state.
-        setError(msg.includes('404') ? null : msg)
+        if (isApiStatus(e, 404)) setError(null)
+        else setError(e instanceof Error ? e.message : 'Something went wrong')
       })
       .finally(() => { if (!cancelled) setLoading(false) })
 

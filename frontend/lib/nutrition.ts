@@ -25,7 +25,6 @@ export interface MacroSplit {
 export interface FuelScore {
   score: number // 0–100
   label: string
-  emoji: string
   reasons: string[]
 }
 
@@ -73,10 +72,10 @@ export function fuelScore(m: Macros, perMealCalorieTarget = 700): FuelScore | nu
   }
 
   const score = Math.round(proteinPts + caloriePts + balancePts)
-  const [label, emoji] =
-    score >= 80 ? ['Elite fuel', '⚡'] :
-    score >= 60 ? ['Solid fuel', '💪'] :
-    score >= 40 ? ['Decent', '👍'] :
-                  ['Treat meal', '🍩']
-  return { score, label, emoji, reasons: reasons.slice(0, 2) }
+  const label =
+    score >= 80 ? 'Elite fuel' :
+    score >= 60 ? 'Solid fuel' :
+    score >= 40 ? 'Decent' :
+                  'Treat meal'
+  return { score, label, reasons: reasons.slice(0, 2) }
 }

@@ -3,24 +3,21 @@
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/context/AuthContext'
+import { useRequireAuth } from '@/hooks/useRequireAuth'
 import { createUser, checkUsernameAvailable } from '@/services/usersService'
+import { isApiStatus } from '@/services/api'
+import { DIETARY_OPTIONS, USERNAME_REGEX, USERNAME_RULE } from '@/lib/profile'
+import Spinner from '@/components/Spinner'
 import type { DietaryPreference } from '@/types'
 
-const USERNAME_REGEX = /^[a-zA-Z0-9_]{3,20}$/
 const DEBOUNCE_MS = 500
-
-const DIETARY_OPTIONS: { key: DietaryPreference; label: string; icon: string; style: string }[] = [
-  { key: 'vegan', label: 'Vegan', icon: '🌱', style: 'bg-surface-overlay text-brand-black border-brand-black/25' },
-  { key: 'vegetarian', label: 'Vegetarian', icon: '🥗', style: 'bg-surface-overlay text-brand-black border-brand-black/25' },
-  { key: 'gluten-free', label: 'Gluten-Free', icon: '🌾', style: 'bg-surface-overlay text-brand-black border-brand-black/25' },
-  { key: 'halal', label: 'Halal', icon: '☪️', style: 'bg-surface-overlay text-brand-black border-brand-black/25' },
-]
 
 type UsernameStatus = 'idle' | 'checking' | 'available' | 'taken'
 
 export default function OnboardingPage() {
   const router = useRouter()
-  const { firebaseUser, setUsername } = useAuth()
+  const ready = useRequireAuth()
+  const { firebaseUser, setUsername, refreshProfile } = useAuth()
 
   const [step, setStep] = useState<1 | 2>(1)
   const [username, setUsernameInput] = useState('')
@@ -28,11 +25,8 @@ export default function OnboardingPage() {
   const [usernameStatus, setUsernameStatus] = useState<UsernameStatus>('idle')
   const [prefs, setPrefs] = useState<DietaryPreference[]>([])
   const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  useEffect(() => {
-    if (!firebaseUser) router.replace('/')
-  }, [firebaseUser, router])
 
   useEffect(() => {
     if (debounceTimer.current) clearTimeout(debounceTimer.current)
@@ -61,7 +55,7 @@ export default function OnboardingPage() {
 
   function validateUsername(val: string): string {
     if (!val) return 'Username is required.'
-    if (!USERNAME_REGEX.test(val)) return '3–20 characters: letters, numbers, underscores only.'
+    if (!USERNAME_REGEX.test(val)) return USERNAME_RULE
     return ''
   }
 
@@ -78,26 +72,33 @@ export default function OnboardingPage() {
 
   async function handleSubmit() {
     if (!firebaseUser) return
+    const name = username.trim()
     setSubmitting(true)
+    setSubmitError('')
     try {
-      await createUser({
-        firebase_uid: firebaseUser.uid,
-        email: firebaseUser.email ?? '',
-        username: username.trim(),
-        dietary_preferences: prefs,
-      })
-      setUsername(username.trim())
+      // The server takes the uid and email from the sign-in token.
+      await createUser({ username: name, dietary_preferences: prefs })
+      setUsername(name)
+      await refreshProfile().catch(() => {})
       router.replace('/home')
     } catch (e) {
-      const msg = e instanceof Error ? e.message : ''
-      if (msg.toLowerCase().includes('username')) {
+      // POST /api/users/ answers 400 for a taken username and for a profile
+      // that already exists (e.g. finished in another tab).
+      if (isApiStatus(e, 400) && e.message.toLowerCase().includes('username')) {
         setUsernameError('That username is already taken.')
         setStep(1)
+      } else if (isApiStatus(e, 400)) {
+        await refreshProfile().catch(() => {})
+        router.replace('/home')
+      } else {
+        setSubmitError(isApiStatus(e, 422) ? e.message : 'Could not create your profile. Please try again.')
       }
     } finally {
       setSubmitting(false)
     }
   }
+
+  if (!ready) return <Spinner page />
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
@@ -139,12 +140,7 @@ export default function OnboardingPage() {
                     }`}
                   />
                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm">
-                    {usernameStatus === 'checking' && (
-                      <svg className="animate-spin h-4 w-4 text-muted" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>
-                    )}
+                    {usernameStatus === 'checking' && <Spinner size={16} className="text-muted" />}
                     {usernameStatus === 'available' && <span className="text-brand-black">✓</span>}
                     {usernameStatus === 'taken' && <span className="text-muted">✗</span>}
                   </span>
@@ -176,12 +172,12 @@ export default function OnboardingPage() {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {DIETARY_OPTIONS.map(({ key, label, icon, style }) => (
+                {DIETARY_OPTIONS.map(({ key, label, icon }) => (
                   <button
                     key={key}
                     onClick={() => togglePref(key)}
                     className={`rounded-full px-4 py-2 text-sm font-medium border transition-all flex items-center gap-1.5 ${
-                      prefs.includes(key) ? style : 'bg-surface-overlay text-muted border-transparent'
+                      prefs.includes(key) ? 'bg-surface-overlay text-brand-black border-brand-black/25' : 'bg-surface-overlay text-muted border-transparent'
                     }`}
                   >
                     <span>{icon}</span>
@@ -204,15 +200,13 @@ export default function OnboardingPage() {
                 >
                   {submitting ? (
                     <span className="flex items-center justify-center gap-2">
-                      <svg className="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>
+                      <Spinner size={16} className="text-white" />
                       Setting up…
                     </span>
                   ) : "Let's eat →"}
                 </button>
               </div>
+              {submitError && <p role="alert" className="text-xs text-brand-black text-center">{submitError}</p>}
             </>
           )}
         </div>

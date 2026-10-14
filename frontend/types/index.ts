@@ -1,17 +1,17 @@
 export type DietaryPreference = 'vegan' | 'vegetarian' | 'gluten-free' | 'halal'
 
 export interface NutritionGoals {
-  protein_g_per_meal?: number
-  dietary_focus?: 'balanced' | 'high-protein' | 'low-carb' | 'weight-loss' | 'muscle-gain' | 'endurance'
+  protein_g_per_meal?: number | null
+  dietary_focus?: 'balanced' | 'high-protein' | 'low-carb' | 'weight-loss' | 'muscle-gain' | 'endurance' | null
   priority_nutrients?: string[]   // 'iron'|'calcium'|'vitamin-d'|'fiber'|'omega-3'|'b12'|'zinc'
 }
 
 export interface MealLogEntry {
   title: string
   calories: number
-  protein_g?: number
-  fat_g?: number
-  carbs_g?: number
+  protein_g?: number | null
+  fat_g?: number | null
+  carbs_g?: number | null
   date: string       // YYYY-MM-DD
   dining_hall: string
   meal_period: string
@@ -22,33 +22,50 @@ export interface FavoriteCombo {
   title: string
   dining_hall: string
   date: string
-  description?: string
-  approximate_calories?: number
+  description?: string | null
+  approximate_calories?: number | null
   tags: ComboTag[]
   dishes: Array<{ name: string; station: string }>
   saved_at: string
 }
 
+/** POST /api/users/ body. The server takes the uid and email from the ID token. */
 export interface UserCreate {
-  firebase_uid: string
-  email: string
   username: string
   dietary_preferences: DietaryPreference[]
   restrictions?: string[]
   avatar?: string
   preferred_calories_per_meal?: number
   default_dining_hall?: string
+  nutrition_goals?: NutritionGoals
 }
 
-export interface UserResponse extends UserCreate {
-  id: string
+/** PUT /api/users/{uid} body: only the fields to change. `null` clears an optional field. */
+export interface UserUpdate {
+  username?: string
+  dietary_preferences?: DietaryPreference[]
+  restrictions?: string[]
+  avatar?: string | null
+  preferred_calories_per_meal?: number | null
+  default_dining_hall?: string | null
+  nutrition_goals?: NutritionGoals | null
+}
+
+/** GET /api/users/{uid}: the signed-in user's own profile. Unset fields are null. */
+export interface UserResponse {
+  firebase_uid: string
+  email: string
+  username: string
+  dietary_preferences: DietaryPreference[]
+  restrictions: string[]
+  avatar: string | null
   karma: number
   created_at: string
-  preferred_calories_per_meal?: number
-  default_dining_hall?: string
-  nutrition_goals?: NutritionGoals
-  meal_log?: MealLogEntry[]
-  favorites?: FavoriteCombo[]
+  preferred_calories_per_meal: number | null
+  default_dining_hall: string | null
+  nutrition_goals: NutritionGoals | null
+  meal_log: MealLogEntry[]
+  favorites: FavoriteCombo[]
 }
 
 export type DiningHall = 'alley' | 'c4c' | 'libby' | 'seec' | 'sewall' | 'village_center'
@@ -246,6 +263,8 @@ export interface Workout {
   elevation_m: number
   kcal: number
   method: 'power' | 'pace' | 'met'
+  id: string | null
+  source: 'strava' | 'manual'
 }
 
 export interface FuelBudget {
@@ -266,6 +285,7 @@ export interface FuelBudget {
   body: { weight_kg: number; height_cm: number; age: number; sex: string; estimated: string[] }
   training: {
     connected: boolean
+    manual_logged: number
     today: Workout[]
     week_sessions: number
     week_minutes: number
@@ -306,4 +326,26 @@ export interface FuelPlan {
   headline: string
   tips: string[]
   assumptions: string[]
+}
+
+export type WorkoutEffort = 'light' | 'moderate' | 'hard'
+
+export interface WorkoutInput {
+  sport: string
+  date: string
+  start_time?: string
+  minutes: number
+  distance_km?: number
+  effort: WorkoutEffort
+}
+
+export interface WorkoutRecord {
+  id: string
+  sport: string
+  label: string
+  date: string
+  start_time: string | null
+  minutes: number
+  distance_km: number
+  effort: WorkoutEffort
 }

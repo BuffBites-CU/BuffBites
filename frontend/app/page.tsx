@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Doodle from '@/components/Doodle'
+import Spinner from '@/components/Spinner'
 
 const FEATURES = [
   { icon: 'A', label: 'AI combos' },
@@ -22,7 +23,7 @@ export default function LandingPage() {
   if (loading || firebaseUser) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-surface">
-        <LoadingSpinner />
+        <Spinner size={20} />
       </div>
     )
   }
@@ -100,7 +101,7 @@ export default function LandingPage() {
           disabled={signingIn}
           className="w-full flex items-center justify-center gap-3 bg-brand-black text-white rounded-2xl py-4 font-display text-[20px] shadow-soft-lg card-press disabled:opacity-60"
         >
-          {signingIn ? <LoadingSpinner white /> : <GoogleIcon />}
+          {signingIn ? <Spinner size={20} className="text-white" /> : <GoogleIcon />}
           {signingIn ? 'Signing in…' : 'Continue with Google'}
         </button>
 
@@ -113,19 +114,6 @@ export default function LandingPage() {
         </p>
       </div>
     </div>
-  )
-}
-
-function LoadingSpinner({ white }: { white?: boolean }) {
-  return (
-    <svg
-      className={`animate-spin h-5 w-5 ${white ? 'text-white' : 'text-brand-deep'}`}
-      fill="none"
-      viewBox="0 0 24 24"
-    >
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-    </svg>
   )
 }
 

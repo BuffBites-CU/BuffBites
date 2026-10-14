@@ -1,5 +1,5 @@
 import { apiFetch } from './api'
-import type { BodyStats, DiningHall, FuelBudget, FuelPlan, StravaStatus } from '@/types'
+import type { BodyStats, DiningHall, FuelBudget, FuelPlan, StravaStatus, WorkoutInput, WorkoutRecord } from '@/types'
 
 // ── Strava link (opt-in) ────────────────────────────────────────────────────
 
@@ -49,4 +49,18 @@ export function buildFuelPlan(token: string, dining: DiningHall, date: string): 
     body: JSON.stringify({ dining, date }),
     token,
   })
+}
+
+// ── Workouts logged by hand ─────────────────────────────────────────────────
+
+export function listWorkouts(token: string): Promise<WorkoutRecord[]> {
+  return apiFetch<WorkoutRecord[]>('/api/workouts', { token })
+}
+
+export function addWorkout(token: string, w: WorkoutInput): Promise<WorkoutRecord> {
+  return apiFetch<WorkoutRecord>('/api/workouts', { method: 'POST', body: JSON.stringify(w), token })
+}
+
+export function deleteWorkout(token: string, id: string): Promise<{ message: string }> {
+  return apiFetch<{ message: string }>(`/api/workouts/${encodeURIComponent(id)}`, { method: 'DELETE', token })
 }

@@ -36,6 +36,7 @@ from pydantic import BaseModel, Field, ValidationError
 
 import energy
 import strava_client
+from routers import workouts as workouts_router
 from auth import get_current_user
 from database import coach_plans_collection, users_collection
 from menu_rules import (
@@ -104,10 +105,13 @@ class WorkoutOut(BaseModel):
     elevation_m: float
     kcal: int
     method: str
+    id: str | None = None
+    source: str = "strava"
 
 
 class TrainingOut(BaseModel):
     connected: bool
+    manual_logged: int = 0   # hand-logged workouts in the past 7 days
     today: list[WorkoutOut] = []
     week_sessions: int = 0
     week_minutes: int = 0
@@ -487,9 +491,10 @@ async def build_context(uid: str, day: str) -> Context:
             error = "Couldn't reach Strava just now, so today's workouts aren't counted."
     connected = activities is not None or error is not None
 
-    workouts = [energy.workout_from_strava(a, body.weight_kg) for a in activities or []]
     d = date_cls.fromisoformat(day)
     week_start = (d - timedelta(days=6)).isoformat()
+    manual = [energy.manual_workout(m, body.weight_kg) for m in await workouts_router.fetch_range(uid, week_start, day)]
+    workouts = [energy.workout_from_strava(a, body.weight_kg) for a in activities or []] + manual
     today = [w for w in workouts if w.date == day]
     week = [w for w in workouts if week_start <= w.date <= day]
 
@@ -511,8 +516,8 @@ async def build_context(uid: str, day: str) -> Context:
     notes = list(b.notes)
     if body.estimated:
         notes.append("Rough estimate: add your height, weight and age in Profile for a real number.")
-    if not connected:
-        notes.append("No workouts counted. Connect Strava in Profile to add them.")
+    if not connected and not manual:
+        notes.append("No workouts counted. Log one in Profile to add it.")
 
     budget = BudgetOut(
         date=day, bmr=b.bmr, baseline_kcal=b.baseline_kcal, exercise_kcal=b.exercise_kcal,
@@ -523,6 +528,7 @@ async def build_context(uid: str, day: str) -> Context:
         body=BodyOut(weight_kg=body.weight_kg, height_cm=body.height_cm, age=body.age, sex=body.sex, estimated=list(body.estimated)),
         training=TrainingOut(
             connected=connected,
+            manual_logged=len(manual),
             today=[WorkoutOut(**w.__dict__) for w in today],
             week_sessions=len(week),
             week_minutes=round(sum(w.minutes for w in week)),

@@ -164,3 +164,9 @@ def test_still_authorized_asks_strava(stored, monkeypatch, status, expected):
     assert asyncio.run(strava_client.still_authorized("u1")) is expected
     if status == 200:  # the refreshed tokens are kept
         assert strava_client._open(stored[0].docs[0]["refresh_token"]) == "r2"
+
+
+def test_request_logs_never_contain_the_webhook_secret():
+    import main
+    assert main._loggable_path("/api/strava/webhook/s3cret") == "/api/strava/webhook/<redacted>"
+    assert main._loggable_path("/api/users/u1") == "/api/users/u1"

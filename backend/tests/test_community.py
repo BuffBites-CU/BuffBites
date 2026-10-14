@@ -387,7 +387,7 @@ LEGACY_COMBO_TTL = {"expires_at_1": {"key": [("expires_at", 1)], "expireAfterSec
 
 @pytest.fixture
 def collections(monkeypatch):
-    names = ["users", "combos", "comments", "combo_cache", "strava_links", "coach_plans"]
+    names = ["users", "combos", "comments", "combo_cache", "strava_links", "coach_plans", "manual_workouts"]
     fakes = {n: MongoFake(name=n) for n in names}
     for n, fake in fakes.items():
         monkeypatch.setattr(database, f"{n}_collection", fake)

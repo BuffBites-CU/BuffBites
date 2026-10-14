@@ -8,15 +8,34 @@
 
 ## Overview
 
-BuffBites has five groups of endpoints:
+BuffBites has these groups of endpoints:
 
 1. **Combos / Menu** (`/api/combos/`, `/api/menu`) — AI-generated meal combos and raw menu data. Loads pre-scraped menu JSON, classifies stations, hard-filters by dietary preference, calls `claude-haiku-4-5` with structured output, validates with Pydantic v2, cross-checks dishes against the scraped menu, and returns 9 combos (3 per meal period). Combos are personalizable (protein goal, dietary focus, priority nutrients, dietary restrictions).
-2. **Users** (`/api/users/`) — User profiles stored in MongoDB. Includes dietary preferences, calorie goal per meal, a running meal log, and saved favorites.
+2. **Users** (`/api/users/`) — User profiles stored in MongoDB. Includes dietary preferences, calorie goal per meal, a running meal log, and saved favorites. Only the profile's owner can read or change it.
 3. **Community** (`/api/community/`) — User-submitted combos with 24-hour expiry, upvote/downvote voting, and daily + weekly trends leaderboards. Firebase auth required to publish, edit, delete, or vote.
 4. **Comments** (`/api/community/combos/{id}/comments`) — Threaded comments on community combos. Auth required to post/delete.
-5. **Drafts** (`/api/drafts/`) — Private drafts that live permanently under a user's profile until deleted or published to the community feed.
+5. **Snap your plate** (`POST /api/vision/plate`) — a plate photo matched against today's menu at a hall. Signed in only.
+6. **Fuel coach & Strava** (`/api/coach/`, `/api/strava/`) — opt-in Strava link, a daily calorie target, and a menu-built meal plan. See [`docs/FUEL_COACH.md`](./docs/FUEL_COACH.md). The Strava webhook is documented [below](#strava-webhook).
 
-**"Today" is resolved in Mountain Time** (the dining halls are in Boulder, CO). Combo generation is **rate-limited per IP** (20 requests / 60s → `429`) and **cached** in MongoDB for 24h, keyed by `(dining, date, goals, dietary prefs)` — a cache hit skips the Claude call entirely.
+**Timestamps** are UTC ISO 8601 strings with an offset (`Z` or `+00:00`).
+
+**"Today" is resolved in Mountain Time** (the dining halls are in Boulder, CO). Combo generation is **rate-limited per caller** (the account when a token is sent, otherwise the IP; 20 requests / 60s → `429`) and **cached** in MongoDB for 24h, keyed by `(dining, date, goals, dietary prefs)` — a cache hit skips the Claude call entirely. Cache misses count against daily caps: `COMBOS_DAILY_PER_IP` per caller (default 40 → `429`) and `COMBOS_DAILY_TOTAL` for the whole app (default 400 → `503`).
+
+### Authentication
+
+Protected routes need a Firebase ID token from the signed-in user:
+
+```
+Authorization: Bearer <Firebase ID token>
+```
+
+| Auth column | Meaning |
+|---|---|
+| **Yes** | Token required. Missing → `401 Not authenticated`; invalid or expired → `401 Invalid or expired token`. |
+| **Yes (self)** | Token required, and the `{firebase_uid}` in the path must be the token's uid, otherwise `403 Not authorized`. |
+| **Yes (owner / author)** | Token required, and only the combo's or comment's author may change it (`403` otherwise). |
+| **Optional** | Works for guests. A valid token personalizes the response (for example `has_voted`); an invalid one is treated as a guest. |
+| **No** | Public. |
 
 ---
 
@@ -29,7 +48,7 @@ cd backend
 PYTHONPATH=. venv/bin/pytest tests/ -v
 ```
 
-Covers combo model validation, dish verification, station classification, and item filtering. No API keys or running server required.
+Covers combo model validation, dish verification, station classification, item filtering, and the users, community, comments, vision, coach and Strava routes against in-memory fakes. No API keys or running server required, but `database.py` needs `MONGO_URL` set: without a `backend/.env`, prefix the command with `MONGO_URL=mongodb://localhost:27017 ANTHROPIC_API_KEY=test`, as CI does.
 
 ### 2. Start the server
 
@@ -45,8 +64,8 @@ Open `http://localhost:8000/docs` — fill in `dining` and `date` and click **Ex
 ### 4. curl examples
 
 ```bash
-# Health check
-curl http://localhost:8000/
+# Liveness check
+curl http://localhost:8000/healthz
 
 # Raw menu (no Claude call — fast)
 curl "http://localhost:8000/api/menu?dining=c4c&date=2026-04-28"
@@ -89,9 +108,22 @@ GET http://localhost:8000/
 
 ---
 
+### `GET /healthz`
+
+Liveness check. Never touches MongoDB, so it answers as long as the process is up. Fly's health check (`backend/fly.toml`) uses this route: a database blip must not take the only machine out of routing, because the menu routes keep working from memory.
+
+**Response `200`**
+```json
+{
+  "status": "ok"
+}
+```
+
+---
+
 ### `GET /health`
 
-Deep health check. Pings MongoDB and returns database connectivity status.
+Deep health check. Pings MongoDB and returns database connectivity status. Use it for external monitoring.
 
 **Request**
 ```
@@ -166,7 +198,14 @@ Returns per-dish nutrition for a specific list of dish names — used to enrich 
 |-----------|----------|------|-------------|
 | `dining` | Yes | string | Dining hall key |
 | `date` | No | string | `YYYY-MM-DD`, defaults to today (Mountain Time) |
-| `dishes` | Yes | string | Comma-separated dish names to look up |
+| `dish` | No | string, repeatable | One dish name per parameter: `?dish=Scrambled%20Eggs&dish=Ham,%20Cheese%20%26%20Sausage%20Scramble`. Dish names can contain commas, so this is the form to use. |
+| `dishes` | No | string | Legacy: comma-separated dish names. Still accepted, but a name that contains a comma is split in two. |
+
+Names from both parameters are looked up together. With neither, the response is `{}`.
+
+```bash
+curl "http://localhost:8000/api/menu/nutrition?dining=c4c&date=2026-04-28&dish=Grilled%20Chicken%20Breast&dish=Made-Up%20Dish"
+```
 
 #### Response `200`
 
@@ -191,6 +230,8 @@ A map of requested dish name → nutrition (missing dishes map to `{}`):
 
 Generates 9 AI-powered meal combos for a given CU Boulder dining hall and date.
 Returns exactly **3 combos per meal period**: Breakfast, Lunch, and Dinner.
+
+**Auth:** Optional. Guests are rate-limited per IP; with a token, limits apply per account.
 
 Each combo contains 2–6 dishes drawn from the day's scraped menu, with cross-station mixing encouraged. Every dish includes the station it comes from. The 3rd Dinner combo is always a dessert specialty.
 
@@ -223,7 +264,7 @@ curl "http://localhost:8000/api/combos/generate?dining=c4c&date=2026-03-17&dieta
 # Village Center — defaults to today
 curl "http://localhost:8000/api/combos/generate?dining=village_center&date=2026-03-08"
 
-# The Alley
+# The Alley (closed for remodel: returns 404 with the reason)
 curl "http://localhost:8000/api/combos/generate?dining=alley&date=2026-03-17"
 
 # Sewall
@@ -388,20 +429,20 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| POST | `/api/users/` | No | Create a new user profile after Firebase sign-in |
+| POST | `/api/users/` | Yes | Create the caller's profile after Firebase sign-in |
 | GET | `/api/users/check-username/{username}` | No | Check if a username is available |
-| GET | `/api/users/{firebase_uid}` | No | Get a user's full profile including meal log + favorites |
-| PUT | `/api/users/{firebase_uid}` | No | Update any profile fields (partial update via `$set`) |
-| POST | `/api/users/{firebase_uid}/meal-log` | No | Append an eaten meal entry to the user's log |
-| DELETE | `/api/users/{firebase_uid}/meal-log` | No | Remove a logged meal by its `logged_at` timestamp (query param) |
-| POST | `/api/users/{firebase_uid}/favorites` | No | Save a combo to the user's favorites |
-| DELETE | `/api/users/{firebase_uid}/favorites` | No | Remove a favorite by `title`, `dining_hall`, `date` (query params) |
+| GET | `/api/users/{firebase_uid}` | Yes (self) | Get your full profile including meal log + favorites |
+| PUT | `/api/users/{firebase_uid}` | Yes (self) | Update whitelisted profile fields (partial update via `$set`) |
+| POST | `/api/users/{firebase_uid}/meal-log` | Yes (self) | Append an eaten meal entry to your log |
+| DELETE | `/api/users/{firebase_uid}/meal-log` | Yes (self) | Remove a logged meal by its `logged_at` timestamp (query param) |
+| POST | `/api/users/{firebase_uid}/favorites` | Yes (self) | Save a combo to your favorites |
+| DELETE | `/api/users/{firebase_uid}/favorites` | Yes (self) | Remove a favorite by `title`, `dining_hall`, `date` (query params) |
+
+A profile holds the student's email and meal history, so every route except `check-username` needs the owner's token, and a `{firebase_uid}` that isn't the token's uid gets `403 Not authorized`.
 
 **`POST /api/users/` request body:**
 ```json
 {
-  "firebase_uid": "abc123",
-  "email": "raj@colorado.edu",
   "username": "buffraj",
   "dietary_preferences": ["vegan", "halal"],
   "restrictions": ["gluten-free"],
@@ -415,7 +456,9 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
   }
 }
 ```
-All fields except `firebase_uid`, `email`, and `username` are optional and default to empty/`null`.
+`firebase_uid` and `email` come from the ID token; if the body sends them, they're ignored. Only `username` is required; the other fields are optional and default to empty/`null`. Returns `400 User already exists` if the caller already has a profile, or `400 Username already taken`.
+
+**`PUT /api/users/{firebase_uid}` request body:** any subset of `username`, `dietary_preferences`, `restrictions`, `avatar`, `preferred_calories_per_meal`, `default_dining_hall` and `nutrition_goals`, with the same limits as on create. Any other field (`karma`, `email`, `firebase_uid`, `meal_log`, ...) is a `422`. Sending `null` clears `avatar`, `preferred_calories_per_meal`, `default_dining_hall` or `nutrition_goals`; `username`, `dietary_preferences` and `restrictions` can be changed but not set to `null`. A username someone else has returns `400 Username already taken`.
 
 **`GET /api/users/check-username/{username}` response:**
 ```json
@@ -479,8 +522,8 @@ All fields except `firebase_uid`, `email`, and `username` are optional and defau
 
 **Notes:**
 - `preferred_calories_per_meal` is optional; used on the profile page to track daily calorie intake against a per-meal goal
-- `meal_log` grows unbounded — entries are appended via MongoDB `$push`
-- Username must be 3–20 characters; checked for uniqueness on create and update
+- `meal_log` keeps the newest 1,000 entries and `favorites` the newest 200 (`$push` with `$slice`). Entries are validated: text fields have length limits, numbers have ranges, `date` is `YYYY-MM-DD`, and a favorite has at most 8 dishes and 20 tags
+- Username must be 3–20 letters, digits or underscores (`^[A-Za-z0-9_]{3,20}$`, the same rule as onboarding); checked for uniqueness on create and update
 
 ---
 
@@ -489,23 +532,23 @@ All fields except `firebase_uid`, `email`, and `username` are optional and defau
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
 | POST | `/api/community/combos` | Yes | Publish a combo to the community feed |
-| GET | `/api/community/combos` | No | Get all active combos sorted by upvotes |
+| GET | `/api/community/combos` | Optional | Get all active combos sorted by upvotes |
 | GET | `/api/community/combos/user/{firebase_uid}` | No | Get a specific user's active combos |
-| GET | `/api/community/combos/{combo_id}` | No | Get a single combo by ID |
+| GET | `/api/community/combos/{combo_id}` | Optional | Get a single combo by ID |
 | PUT | `/api/community/combos/{combo_id}` | Yes (owner) | Edit title, description, tags, dishes, or notes |
 | DELETE | `/api/community/combos/{combo_id}` | Yes (owner) | Delete a combo |
 | POST | `/api/community/combos/{combo_id}/vote` | Yes | Upvote or downvote — one vote per user, no undo |
-| GET | `/api/community/trends` | No | Top 20 combos by upvotes for the current day |
-| GET | `/api/community/trends/weekly` | No | Top combos by upvotes for the current week |
+| GET | `/api/community/trends` | Optional | Top 20 combos by upvotes for the current day |
+| GET | `/api/community/trends/weekly` | Optional | Top 20 combos by upvotes published in the last 7 days |
 | POST | `/api/community/combos/{combo_id}/comments` | Yes | Add a comment (`{ "text": "..." }`) to a combo |
 | GET | `/api/community/combos/{combo_id}/comments` | No | List comments on a combo |
 | DELETE | `/api/community/comments/{comment_id}` | Yes (author) | Delete a comment |
 
-**`POST /api/community/combos` request body** (query param: `?username=buffraj`):
+**`POST /api/community/combos` request body** (no query params):
 ```json
 {
   "title": "The Midnight Special",
-  "dining_hall": "alley",
+  "dining_hall": "c4c",
   "date": "2026-03-25",
   "dishes": [
     { "name": "Mac & Cheese", "station": "Hot Bar", "servings": 1 },
@@ -518,12 +561,15 @@ All fields except `firebase_uid`, `email`, and `username` are optional and defau
 }
 ```
 
-**`GET /api/community/combos` query params:**
+The author's username comes from the poster's profile in the `users` collection. A signed-in user with no profile yet gets `400 Finish setting up your profile before posting`. `dining_hall` must be a known hall key (`400` otherwise).
+
+**`GET /api/community/combos`, `/trends` and `/trends/weekly` query params:**
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
 | `dining_hall` | No | Filter by dining hall key |
-| `firebase_uid` | No | If provided, each combo includes `has_voted: bool` for that user |
+
+These reads, and `GET /api/community/combos/{combo_id}`, take an optional `Authorization: Bearer` token. With a valid token, each combo includes `has_voted: bool` for that user; without one, `has_voted` is left out. The old `firebase_uid` query param is ignored.
 
 **`PUT /api/community/combos/{combo_id}` request body** (all fields optional):
 ```json
@@ -539,31 +585,66 @@ All fields except `firebase_uid`, `email`, and `username` are optional and defau
 **`POST /api/community/combos/{combo_id}/vote` query param:** `?vote_type=upvote` or `?vote_type=downvote`
 
 **Notes:**
-- Published combos expire after 24 hours — they appear in community and trends until then
-- One vote per user per combo; re-voting returns `409 Already voted`
+- Published combos expire after 24 hours — they appear in community and daily trends until then. They count toward weekly trends for 7 days, then they're deleted
+- One vote per user per combo; re-voting returns `409 Already voted`. A vote moves the author's karma by one (self-votes don't count)
 - Only the author can edit or delete their combo (`403` otherwise)
-- `username` query param on publish falls back to the Firebase display name if omitted
+- Timestamps (`created_at`, `expires_at`) are UTC with an offset, e.g. `2026-03-25T18:04:05.123000+00:00`
 
 ---
 
+### Workouts (logged by hand)
+
+All routes need `Authorization: Bearer <Firebase ID token>` and act on the caller's own entries. They feed the fuel coach's daily calorie target; see `docs/FUEL_COACH.md`.
+
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/api/workouts` | Entries from the last 7 days, newest first |
+| `POST` | `/api/workouts` | Add one. Returns `201` with the entry |
+| `DELETE` | `/api/workouts/{id}` | Delete one (`404` if it isn't yours) |
+
+**`POST` body:** `sport` (one of `Run, Walk, Hike, Ride, Swim, WeightTraining, HighIntensityIntervalTraining, Workout, Yoga, Elliptical, Rowing, RockClimbing, Soccer, Basketball, Tennis, Pickleball, Dance`), `date` (`YYYY-MM-DD`, today or up to 6 days back; defaults to today), `start_time` (optional `HH:MM`), `minutes` (5-720), `distance_km` (optional, 0-300), `effort` (`light`, `moderate` or `hard`).
+
+Limits: 10 entries per day and 200 in total (`429` beyond that). Entries are deleted after 90 days.
+
 ---
 
-### Drafts
+### Strava webhook
+
+Strava's push subscription for linked students. One subscription exists per Strava app; create, view or delete it with `backend/scripts/strava_webhook.py`, run on the Fly machine:
+
+```bash
+flyctl ssh console -a buffbites-backend -C "python scripts/strava_webhook.py create"
+```
+
+Strava's events aren't signed, so the callback URL carries the secret `STRAVA_WEBHOOK_VERIFY_TOKEN` as its last segment. Any other `{token}`, or an unset secret, returns `404`.
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| POST | `/api/drafts/` | Yes | Save a new draft |
-| GET | `/api/drafts/{firebase_uid}` | Yes (owner) | Get all drafts for a user |
-| PUT | `/api/drafts/{draft_id}` | Yes (owner) | Update an existing draft |
-| DELETE | `/api/drafts/{draft_id}` | Yes (owner) | Delete a draft |
-| POST | `/api/drafts/{draft_id}/publish` | Yes (owner) | Publish draft → creates community combo, deletes draft |
+| GET | `/api/strava/webhook/{token}` | Secret path | Subscription check. Strava calls it once when the subscription is created. |
+| POST | `/api/strava/webhook/{token}` | Secret path | Activity and deauthorization events. Rate-limited to 300/min per IP. |
 
-**Notes:**
-- Drafts never expire — they live under the user's profile permanently until deleted or published
-- Publishing a draft creates a community combo and deletes the draft
-- Published combos expire after 24 hours and cannot be republished
-- Only the draft owner can view, edit, delete or publish their drafts
-- All draft endpoints require Firebase auth
+**`GET` query params:** `hub.mode=subscribe`, `hub.challenge`, `hub.verify_token`. When `hub.verify_token` matches the secret, the response echoes the challenge; otherwise `403 Verification failed`.
+
+```json
+{ "hub.challenge": "15f7d1a91c1f40f8a748fd134752feb3" }
+```
+
+**`POST` request body** (sent by Strava):
+```json
+{
+  "object_type": "activity",
+  "object_id": 1360128428,
+  "aspect_type": "create",
+  "owner_id": 134815,
+  "subscription_id": 120475,
+  "event_time": 1516126040,
+  "updates": {}
+}
+```
+
+The response is always `{ "ok": true }` right away (Strava wants a 200 within two seconds); the event is handled in the background:
+- `object_type: "activity"` (create, update or delete): drops that student's cached workouts, so the fuel card picks up the change.
+- `object_type: "athlete"` with `updates.authorized: "false"`: BuffBites confirms with Strava that the student's token really stopped working (at most once per student every 10 minutes), then deletes the link and its stored data.
 
 ---
 
@@ -572,11 +653,16 @@ All fields except `firebase_uid`, `email`, and `username` are optional and defau
 | Status | When | Response body |
 |--------|------|---------------|
 | `400` | `dining` param is missing or not a valid key | `{ "detail": "Invalid dining location. Must be one of: ..." }` |
-| `404` | No menu data exists for that dining hall on that date (data refreshes daily — try again after the 8 AM UTC cron) | `{ "detail": "No menu found for ... on ..." }` |
+| `401` | A protected route was called without a token, or with an invalid or expired one | `{ "detail": "Not authenticated" }` or `{ "detail": "Invalid or expired token" }` |
+| `403` | The token's user may not touch this resource (someone else's profile, combo or comment) | `{ "detail": "Not authorized" }` |
+| `404` | The hall is closed (e.g. The Alley) | `{ "detail": "The Alley is closed for remodel ..." }` |
+| `404` | No menu data exists for that dining hall on that date (data refreshes at 08:00 and 15:00 UTC) | `{ "detail": "No menu found for ... on ..." }` |
 | `404` | Not enough menu items to build combos after filtering | `{ "detail": "Not enough menu items to build combos" }` |
-| `429` | More than 20 combo requests from one IP in 60s | `{ "detail": "Too many combo requests. Please wait a moment and try again." }` |
+| `422` | The body or query failed validation (wrong type, over a length or count limit, unknown field on `PUT /api/users/{firebase_uid}`) | FastAPI's validation error list |
+| `429` | More than 20 combo requests from one caller in 60s, or the caller's daily cap on new combos (`COMBOS_DAILY_PER_IP`) is used up | `{ "detail": "Too many combo requests. ..." }` or `{ "detail": "You've hit today's limit for new combo suggestions. ..." }` |
+| `503` | The app-wide daily cap on new combos (`COMBOS_DAILY_TOTAL`) is used up | `{ "detail": "Combo suggestions are paused for today. ..." }` |
 | `500` | Scraped JSON file could not be read | `{ "detail": "Failed to load menu data" }` |
-| `500` | Claude call / parsing / validation failed | `{ "detail": "Combo generation failed: ..." }` |
+| `500` / `502` / `503` | The Claude call failed (provider error, rate limit, bad key) or its output didn't validate. Provider error text is logged, never returned. | `{ "detail": "Combo suggestions aren't available right now. The full menu is still in the Menu tab." }` |
 
 > **Note on dish verification:** Hallucinated dishes (not found in today's menu) are dropped from combos before the response is built; a combo left with fewer than 2 real dishes is skipped entirely. These drops are logged to the server console (`stderr`) but never cause a `500`. Check server logs if a combo looks shorter than expected.
 
@@ -586,7 +672,7 @@ All fields except `firebase_uid`, `email`, and `username` are optional and defau
 
 | Key | Full Name | Multi-Station |
 |-----|-----------|---------------|
-| `alley` | The Alley at Farrand | No |
+| `alley` | The Alley at Farrand (closed for remodel until Aug 2028; requests return `404` with the reason) | No |
 | `c4c` | Center for Community (C4C) | Yes |
 | `libby` | Libby Dining | No |
 | `seec` | SEEC Cafe | No |
@@ -615,7 +701,7 @@ All validation runs through these models before any response leaves the server.
 
 ## Menu Data Format
 
-Scraped JSON files live in `scraping_scripts/data/` and are refreshed daily by GitHub Actions. Each file covers a **6-week rolling window** starting from Monday two weeks before the scrape date, so today's menu is always present. Each file has this top-level shape:
+Scraped JSON files live in `scraping_scripts/data/` and are refreshed by GitHub Actions at 08:00 and 15:00 UTC. Each file covers a **6-week rolling window** starting from Monday two weeks before the scrape date, so today's menu is always present. The API loads the small copies in `scraping_scripts/data/live/` (yesterday through 10 days ahead, no ingredient text), with the same shape. Each file has this top-level shape:
 
 ```json
 {

@@ -52,6 +52,14 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="BuffBites API", lifespan=lifespan)
 
 
+_WEBHOOK_PREFIX = "/api/strava/webhook/"
+
+
+def _loggable_path(path: str) -> str:
+    """The Strava webhook's callback URL ends in its secret; keep it out of logs."""
+    return _WEBHOOK_PREFIX + "<redacted>" if path.startswith(_WEBHOOK_PREFIX) else path
+
+
 @app.middleware("http")
 async def log_request(request: Request, call_next):
     start = time.perf_counter()
@@ -60,7 +68,7 @@ async def log_request(request: Request, call_next):
     logger.info(
         "request",
         method=request.method,
-        path=request.url.path,
+        path=_loggable_path(request.url.path),
         status=response.status_code,
         duration_ms=duration_ms,
     )
@@ -75,6 +83,7 @@ from routers.vision import router as vision_router
 from routers.strava import router as strava_router
 from routers.strava_webhook import router as strava_webhook_router
 from routers.coach import router as coach_router
+from routers.workouts import router as workouts_router
 
 
 app.include_router(users_router)
@@ -85,6 +94,7 @@ app.include_router(vision_router)
 app.include_router(strava_router)
 app.include_router(strava_webhook_router)
 app.include_router(coach_router)
+app.include_router(workouts_router)
 
 # CORS — lock to known origins in production via ALLOWED_ORIGINS (comma-separated).
 # Falls back to "*" with a loud warning so existing deploys keep working, but you

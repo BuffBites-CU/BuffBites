@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 import { ChevronUpIcon, ChevronDownIcon } from './icons'
+import Spinner from './Spinner'
 import { useAuth } from '@/context/AuthContext'
 import type { VoteType } from '@/types'
 
 interface Props {
-  comboId: string
   upvotes: number
   downvotes: number
   hasVoted: boolean
@@ -51,7 +51,7 @@ export default function VoteButtons({ upvotes, downvotes, hasVoted, onVote }: Pr
         }`}
       >
         {pending === 'upvote' ? (
-          <Spinner />
+          <Spinner size={16} className="text-current" />
         ) : (
           <ChevronUpIcon width={18} height={18} />
         )}
@@ -69,26 +69,12 @@ export default function VoteButtons({ upvotes, downvotes, hasVoted, onVote }: Pr
         }`}
       >
         {pending === 'downvote' ? (
-          <Spinner />
+          <Spinner size={16} className="text-current" />
         ) : (
           <ChevronDownIcon width={18} height={18} />
         )}
         <span>{downvotes}</span>
       </button>
     </div>
-  )
-}
-
-function Spinner() {
-  return (
-    <svg
-      className="animate-spin h-4 w-4"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-    >
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-    </svg>
   )
 }

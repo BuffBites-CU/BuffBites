@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { getCombos, getTrends, vote as apiVote } from '@/services/communityService'
+import { isApiStatus } from '@/services/api'
 import type { CommunityCombo, DiningHall, VoteType } from '@/types'
 import { useAuth } from '@/context/AuthContext'
 
@@ -59,14 +60,13 @@ export function useCommunity(mode: 'feed' | 'trends', dining_hall?: DiningHall) 
         const token = await firebaseUser.getIdToken()
         await apiVote(combo_id, type, token)
       } catch (e: unknown) {
-        const msg = e instanceof Error ? e.message : ''
-        if (msg.includes('409') || msg.toLowerCase().includes('already voted')) {
+        if (isApiStatus(e, 409)) {
           // Backend confirms already voted — keep optimistic state
           return
         }
         setCombos(snapshot)
         votedIds.current.delete(combo_id)
-        setError(msg || 'Vote failed')
+        setError(e instanceof Error && e.message ? e.message : 'Vote failed')
       }
     },
     [combos, firebaseUser],

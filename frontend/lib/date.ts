@@ -12,9 +12,10 @@
 const TZ = 'America/Denver'
 
 /**
- * Parse a timestamp from the API. The backend stores UTC but serializes it
- * without an offset ("2026-10-09T15:00:00"), and `new Date()` reads that as
- * *local* time, which in Boulder makes every post 6-7 hours too young.
+ * Parse a timestamp from the API. Timestamps are UTC and now carry "+00:00",
+ * but older backends sent them without an offset ("2026-10-09T15:00:00"), and
+ * `new Date()` reads that as *local* time, which in Boulder makes every post
+ * 6-7 hours too young. Both forms parse correctly here.
  */
 export function parseApiDate(iso: string): Date {
   return new Date(/[zZ]|[+-]\d\d:?\d\d$/.test(iso) ? iso : `${iso}Z`)

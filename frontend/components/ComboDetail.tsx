@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { XMarkIcon } from './icons'
-import { tagStyle } from './ComboCard'
+import { TAG_CLASS } from './ComboCard'
 import VoteButtons from './VoteButtons'
 import { getCombo } from '@/services/communityService'
 import { getNutrition, type NutritionInfo } from '@/services/combosService'
@@ -53,17 +53,32 @@ function isCommunityCombo(c: Combo | CommunityCombo): c is CommunityCombo {
   return 'id' in c
 }
 
+// Same hosts as images.remotePatterns in next.config.ts; next/image can't load others.
+const IMAGE_HOSTS = new Set(['lh3.googleusercontent.com'])
+
+/** Combo images come from users, so only https URLs on an allowed host are shown or linked. */
+function isAllowedImage(src: string): boolean {
+  try {
+    const url = new URL(src)
+    return url.protocol === 'https:' && IMAGE_HOSTS.has(url.hostname)
+  } catch {
+    return false
+  }
+}
+
 interface Props {
   combo: Combo | CommunityCombo | null
   type: 'ai' | 'community'
   diningHall?: string
   date?: string
   hasVoted?: boolean
+  /** Current vote counts from the page's list. They override the counts loaded when the sheet opened. */
+  liveCounts?: { upvotes: number; downvotes: number }
   onVote?: (type: VoteType) => Promise<void>
   onClose: () => void
 }
 
-export default function ComboDetail({ combo, type, diningHall, date, hasVoted = false, onVote, onClose }: Props) {
+export default function ComboDetail({ combo, type, diningHall, date, hasVoted = false, liveCounts, onVote, onClose }: Props) {
   const { firebaseUser, username } = useAuth()
   const [visible, setVisible] = useState(false)
   const [detail, setDetail] = useState<CommunityCombo | null>(null)
@@ -133,14 +148,20 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
   useEffect(() => {
     if (!combo) return
     window.history.pushState(null, '', '#detail')
+    sheetRef.current?.focus({ preventScroll: true })
 
     function onPopState() {
       setVisible(false)
       setTimeout(() => onCloseRef.current(), 280)
     }
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') handleClose()
+    }
     window.addEventListener('popstate', onPopState)
+    window.addEventListener('keydown', onKeyDown)
     return () => {
       window.removeEventListener('popstate', onPopState)
+      window.removeEventListener('keydown', onKeyDown)
       if (window.location.hash === '#detail') {
         window.history.replaceState(null, '', window.location.pathname + window.location.search)
       }
@@ -152,7 +173,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
       window.history.back()
     } else {
       setVisible(false)
-      setTimeout(onClose, 280)
+      setTimeout(() => onCloseRef.current(), 280)
     }
   }
 
@@ -161,6 +182,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
   const community = type === 'community' ? (detail ?? (isCommunityCombo(combo) ? combo : null)) : null
   const displayDishes = community ? community.dishes : (combo as Combo).dishes
   const displayTags = community ? community.tags : combo.tags
+  const images = (community?.images ?? []).filter(isAllowedImage)
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col justify-end">
@@ -171,14 +193,18 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
 
       <div
         ref={sheetRef}
-        className={`relative bg-white rounded-t-3xl max-h-[88vh] flex flex-col transition-transform duration-300 ease-out ${visible ? 'translate-y-0' : 'translate-y-full'}`}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="combo-detail-title"
+        tabIndex={-1}
+        className={`relative bg-white rounded-t-3xl max-h-[88vh] flex flex-col outline-none transition-transform duration-300 ease-out ${visible ? 'translate-y-0' : 'translate-y-full'}`}
       >
         <div className="flex-shrink-0 flex justify-center pt-3 pb-1">
           <div className="w-10 h-1 rounded-full bg-surface-warm" />
         </div>
 
         <div className="flex-shrink-0 flex items-start justify-between px-5 py-3 border-b border-brand-black/25">
-          <h2 className="text-lg font-bold text-brand-black pr-2 leading-tight flex-1">{combo.title}</h2>
+          <h2 id="combo-detail-title" className="text-lg font-bold text-brand-black pr-2 leading-tight flex-1">{combo.title}</h2>
           <div className="flex items-center gap-0.5 flex-shrink-0">
             <ShareButton
               title={combo.title}
@@ -213,7 +239,7 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
             {displayTags.map((tag) => (
               <span
                 key={tag}
-                className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${tagStyle(tag)}`}
+                className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${TAG_CLASS}`}
               >
                 {tag}
               </span>
@@ -281,9 +307,9 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
             </blockquote>
           )}
 
-          {community?.images && community.images.length > 0 && (
+          {images.length > 0 && (
             <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
-              {community.images.map((src, i) => (
+              {images.map((src, i) => (
                 <a key={i} href={src} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
                   <div className="relative w-24 h-24 rounded-xl overflow-hidden bg-surface-overlay">
                     <Image src={src} alt={`Photo ${i + 1}`} fill className="object-cover" />
@@ -374,10 +400,9 @@ export default function ComboDetail({ combo, type, diningHall, date, hasVoted = 
         {type === 'community' && community && onVote && (
           <div className="flex-shrink-0 sticky bottom-0 bg-white border-t border-brand-black/25 px-5 py-3">
             <VoteButtons
-              comboId={community.id}
-              upvotes={community.upvotes}
-              downvotes={community.downvotes}
-              hasVoted={hasVoted}
+              upvotes={liveCounts?.upvotes ?? community.upvotes}
+              downvotes={liveCounts?.downvotes ?? community.downvotes}
+              hasVoted={hasVoted || !!community.has_voted}
               onVote={onVote}
             />
           </div>

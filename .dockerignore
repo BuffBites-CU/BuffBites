@@ -1,7 +1,7 @@
 # The backend image is built with the repo root as context
-# (flyctl deploy ... --dockerfile backend/Dockerfile .), so Docker reads THIS
-# file, not backend/.dockerignore. Without it, local secrets and virtualenvs
-# under backend/ were copied into the image by `COPY backend/ .`.
+# (flyctl deploy ... --dockerfile backend/Dockerfile .), so this is the only
+# .dockerignore Docker reads. Without it, local secrets and virtualenvs under
+# backend/ were copied into the image by `COPY backend/ .`.
 
 # Secrets: production values come from `flyctl secrets`
 **/.env
@@ -23,3 +23,6 @@
 frontend
 docs
 backend/tests
+# The image only needs the live menu copies.
+scraping_scripts
+!scraping_scripts/data/live

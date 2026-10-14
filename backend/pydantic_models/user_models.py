@@ -24,7 +24,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 from typing import Annotated, Literal, Optional
 from datetime import datetime, timezone
 
-# Same rule as USERNAME_REGEX in frontend/app/onboarding/page.tsx.
+# Same rule as USERNAME_REGEX in frontend/lib/profile.ts.
 USERNAME_PATTERN = r"^[A-Za-z0-9_]{3,20}$"
 DATE_PATTERN = r"^\d{4}-\d{2}-\d{2}$"
 

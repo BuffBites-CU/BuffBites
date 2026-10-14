@@ -34,35 +34,52 @@ jobs:
           cache-dependency-path: scraping_scripts/requirements.txt
 
       - name: Install dependencies
-        run: pip install -r scraping_scripts/requirements.txt
+        run: pip install -r scraping_scripts/requirements.txt pytest
+
+      # Gate: never scrape with a broken guard, merger or validator.
+      - name: Test scraper helpers
+        run: python -m pytest scraping_scripts -q
 
       # continue-on-error: one hall's outage must not stop the others from
-      # refreshing. menu_guard keeps the previous JSON if a scrape comes back empty.
+      # refreshing. menu_guard keeps the previous JSON if a scrape comes back
+      # empty, and the last step turns the run red if any scrape failed.
       - name: Scrape C4C
+        id: c4c
         continue-on-error: true
+        timeout-minutes: 10
         run: python scraping_scripts/c4c_dining.py
 
       - name: Scrape Libby
+        id: libby
         continue-on-error: true
+        timeout-minutes: 10
         run: python scraping_scripts/libby_dining.py
 
       - name: Scrape Sewall
+        id: sewall
         continue-on-error: true
+        timeout-minutes: 10
         run: python scraping_scripts/sewall_dining.py
 
       - name: Scrape Village Center
+        id: village_center
         continue-on-error: true
+        timeout-minutes: 10
         run: python scraping_scripts/village_center_dining.py
 
       - name: Scrape The Alley
+        id: alley
         continue-on-error: true
+        timeout-minutes: 10
         run: python scraping_scripts/alley_dining.py
 
       - name: Scrape SEEC
+        id: seec
         continue-on-error: true
+        timeout-minutes: 10
         run: python scraping_scripts/seec_dining.py
 
-      # Small copies the API loads (full C4C is too big for the 256 MB VMs).
+      # Small copies the API loads (parsing full C4C needs ~80 MB of RAM).
       - name: Build live menus
         run: python scraping_scripts/build_live_menus.py
 
@@ -85,6 +102,8 @@ jobs:
             git push
           fi
 
-      - name: Fail if validation failed
-        if: steps.validate.outcome == 'failure'
+      # After the commit, so the halls that did scrape still go live. A step
+      # with continue-on-error never fails the job by itself.
+      - name: Fail if a scrape or validation failed
+        if: contains(steps.*.outcome, 'failure')
         run: exit 1

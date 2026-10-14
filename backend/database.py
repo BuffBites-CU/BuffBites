@@ -12,6 +12,7 @@ Collections:
     combo_cache_collection — AI-generated combos cached by (dining, date, prefs)
     strava_links_collection — opt-in Strava links (tokens encrypted), one per user
     coach_plans_collection — fuel-coach day plans cached per user for a few hours
+    manual_workouts_collection — workouts students log by hand (expire after 90 days)
 
 Usage:
     from database import users_collection, combos_collection, comments_collection
@@ -51,6 +52,7 @@ comments_collection = db["comments"]
 combo_cache_collection = db["combo_cache"]
 strava_links_collection = db["strava_links"]
 coach_plans_collection = db["coach_plans"]
+manual_workouts_collection = db["manual_workouts"]
 
 # How long a community combo (and its comments) is kept after it's published.
 # The feed only shows combos for 24h (expires_at); weekly trends need the rest.
@@ -135,6 +137,10 @@ async def ensure_indexes() -> None:
     await _create_index(strava_links_collection, "firebase_uid", unique=True)
     # Strava webhook events name the athlete, not the BuffBites user.
     await _create_index(strava_links_collection, "athlete_id")
+
+    # manual_workouts — read per user for the last week; expire on their own.
+    await _create_index(manual_workouts_collection, [("firebase_uid", 1), ("date", -1)])
+    await _create_index(manual_workouts_collection, "expires_at", expireAfterSeconds=0)
 
     # coach_plans — keyed lookup, short TTL, and removable per user on disconnect.
     await _create_index(coach_plans_collection, "key", unique=True)

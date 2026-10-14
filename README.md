@@ -8,9 +8,9 @@ You can browse the entire app — combos, the full menu, the community feed, and
 
 ## How It Works
 
-1. **Scraping** — Python scripts pull menus from Nutrislice for each CU Boulder dining hall and store them as JSON in `scraping_scripts/data/`. A GitHub Actions workflow (`.github/workflows/scrape-menus.yml`) runs all five scripts daily at 8 AM UTC, committing fresh JSON back to the repo so combos always reflect the real menu. Each file covers a 6-week rolling window.
+1. **Scraping** — Python scripts pull menus from Nutrislice for each CU Boulder dining hall and store them as JSON in `scraping_scripts/data/`. A GitHub Actions workflow (`.github/workflows/scrape-menus.yml`) runs all six scripts twice a day, at 08:00 and 15:00 UTC, committing fresh JSON back to the repo so combos always reflect the real menu. Each file covers a 6-week rolling window.
 2. **API Request** — The client calls `GET /api/combos/generate?dining=c4c&date=2026-03-17`, optionally with `protein_goal`, `dietary_focus`, `priority_nutrients`, and `dietary_preferences`. "Today" is resolved in **Mountain Time** (the dining halls are in Boulder).
-3. **Rate limit + cache check** — The endpoint is rate-limited per IP (in-memory sliding window, 20 requests / 60s → `429`). It then checks `combo_cache` in MongoDB (24h TTL index) keyed by a hash of `(dining, date, goals, dietary prefs)`. A cache hit returns immediately without calling Claude.
+3. **Rate limit + cache check** — The endpoint is rate-limited per caller (the account when a sign-in token is sent, otherwise the IP; in-memory sliding window, 20 requests / 60s → `429`). It then checks `combo_cache` in MongoDB (24h TTL index) keyed by a hash of `(dining, date, goals, dietary prefs)`. A cache hit returns immediately without calling Claude. A cache miss counts against two daily caps: `COMBOS_DAILY_PER_IP` per caller (default 40, then `429`) and `COMBOS_DAILY_TOTAL` for the whole app (default 400, then `503`).
 4. **Menu Lookup** — FastAPI loads the scraped JSON for that dining hall and finds the day's menu.
 5. **Station Classification** — Every station is classified by keyword into `breakfast`, `lunch`, `dinner`, `dessert`, or `excluded`. Utility stations (Condiments, Salad Dressings, Beverage, Sides, Bread, etc.) are excluded entirely; individual condiment/sauce/topping items are filtered out at the item level as a second pass. Items that violate the user's `dietary_preferences` are hard-filtered out of the pool here so they never reach Claude.
 6. **AI Generation** — Classified items are sent to `claude-haiku-4-5` (Anthropic SDK, `client.messages.parse()` structured output) in separate pools per meal period, run in a threadpool since the route is async. Any user goals are injected into the prompt.
@@ -30,8 +30,8 @@ You can browse the entire app — combos, the full menu, the community feed, and
 | Server | Uvicorn |
 | Database | MongoDB Atlas (Motor / `AsyncIOMotorClient`) |
 | Request/response validation | Pydantic v2 |
-| AI model | Anthropic `claude-haiku-4-5` |
-| Menu data | Daily-scraped JSON (Nutrislice via GitHub Actions) |
+| AI model | Anthropic `claude-haiku-4-5` (combos), `claude-opus-5-5` (Snap your plate, fuel coach; configurable) |
+| Menu data | Scraped JSON (Nutrislice via GitHub Actions, twice a day) |
 | Logging | `structlog` — structured JSON per request |
 | Deployment | Backend: Docker → Fly.io · Frontend: Vercel |
 | Testing | `pytest` |
@@ -43,7 +43,7 @@ You can browse the entire app — combos, the full menu, the community feed, and
 Before you start, make sure you have:
 
 - **Python 3.12+** — `python3 --version`
-- **Node.js 18+** and npm — `node --version`
+- **Node.js 20.9+** (required by Next.js 16) and npm — `node --version`
 - **A MongoDB database** — a free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster works (or a local `mongod`). You need its connection string.
 - **An Anthropic API key** — create one at [console.anthropic.com](https://console.anthropic.com). Required for combo generation.
 - **A Firebase project** — create one at [console.firebase.google.com](https://console.firebase.google.com), enable **Google** as a sign-in provider under Authentication. You'll need the web app config (frontend) and a service account key (backend).
@@ -84,13 +84,17 @@ Edit `backend/.env`:
 |----------|----------|-------------|
 | `ANTHROPIC_API_KEY` | Yes | Anthropic API key — [console.anthropic.com](https://console.anthropic.com) |
 | `MONGO_URL` | Yes | MongoDB connection string (Atlas: `mongodb+srv://<user>:<password>@<cluster>.mongodb.net/?appName=<app>`) |
-| `APP_NAME` | No | MongoDB database name (default: `combos`) |
+| `APP_NAME` | No | MongoDB database name (default: `buffbites`) |
 | `PORT` | No | Uvicorn port — used in Docker/production (default: `8000`) |
 | `ALLOWED_ORIGINS` | No | Comma-separated allowed CORS origins (e.g. `https://buffbites.app,http://localhost:3000`). Leave unset locally to allow all origins (logs a warning). `*.vercel.app` is always allowed. |
 | `FIREBASE_SERVICE_ACCOUNT_JSON` | Production only | Full Firebase service account JSON as a single-line string |
 | `MENU_DATA_URL` | No | Where the API re-pulls scraped menus from every hour (default: this repo's `main` on raw.githubusercontent.com). Set to empty to use only the bundled JSON. |
 | `MENU_REFRESH_SECONDS` | No | Menu refresh interval (default `3600`) |
 | `VISION_MODEL` | No | Model for Snap-your-plate (default `claude-opus-5-5`; e.g. `claude-haiku-5-5` to cut cost) |
+| `VISION_DAILY_PER_USER` / `VISION_DAILY_TOTAL` | No | Daily plate-scan caps per student and for the whole app (defaults `20` / `300`) |
+| `COMBOS_DAILY_PER_IP` | No | Daily cap on new (uncached) combo generations per caller: the account when signed in, otherwise the IP (default `40`) |
+| `COMBOS_DAILY_TOTAL` | No | Daily cap on new combo generations for the whole app (default `400`) |
+| `STRAVA_*`, `COACH_*` | No | Strava link, Strava webhook and fuel coach. See [Fuel coach & Strava](#fuel-coach--strava) and `.env.example`. |
 
 #### 4. Set up Firebase Admin credentials (for protected routes)
 
@@ -99,7 +103,7 @@ Two paths — pick one:
 - **Local dev (recommended):** In the Firebase Console → **Project Settings → Service Accounts → Generate new private key**, download the JSON, and save it as `backend/serviceAccountKey.json`. This file is gitignored — **never commit it**.
 - **Production/Docker:** Set `FIREBASE_SERVICE_ACCOUNT_JSON` in the environment to the full contents of that JSON as a single-line string.
 
-> Auth-protected routes (publishing, voting, commenting, drafts) need this. Combo generation and menu browsing work without it.
+> Auth-protected routes (profiles, publishing, voting, commenting, Snap your plate, the fuel coach) need this. Combo generation, menu browsing and the community feed work without it.
 
 #### 5. Start the backend
 
@@ -110,7 +114,8 @@ uvicorn main:app --reload
 
 - API base: `http://localhost:8000`
 - Interactive Swagger UI: `http://localhost:8000/docs`
-- Health check (pings MongoDB): `http://localhost:8000/health`
+- Liveness check (no database call; Fly's health check uses it): `http://localhost:8000/healthz`
+- Deep health check (pings MongoDB): `http://localhost:8000/health`
 
 ### Part B — Frontend
 
@@ -149,9 +154,9 @@ App available at `http://localhost:3000`. With the backend running on `:8000`, s
 ### Frontend scripts
 
 ```bash
-npm run dev      # dev server on :3000
-npm run build    # production build
-npm run lint     # ESLint
+npm run dev        # dev server on :3000
+npm run build      # production build
+npm run typecheck  # tsc --noEmit
 ```
 
 ---
@@ -165,7 +170,9 @@ cd backend
 PYTHONPATH=. venv/bin/pytest tests/ -v
 ```
 
-Covers the `Combo` dish-count validator, `verify_combos` dish-presence checks, `_classify_station` keyword/component logic, and `_is_component_item` suffix/raw-prep filtering.
+MongoDB, Firebase and the Anthropic API are faked, but `database.py` still needs `MONGO_URL` set. Without a `backend/.env`, prefix the command with `MONGO_URL=mongodb://localhost:27017 ANTHROPIC_API_KEY=test`, as CI does.
+
+Covers combo validation and dish verification, the station classifier, menu loading, rate limits and daily caps, the profile, community and comment routes, Snap your plate, the fuel coach, and the Strava link and webhook.
 
 ```bash
 # A single test file
@@ -175,6 +182,10 @@ PYTHONPATH=. venv/bin/pytest tests/test_combo_models.py -v
 PYTHONPATH=. venv/bin/pytest tests/ -v -k "test_verify_combos_hallucinated_dish"
 ```
 
+Scraper helper tests (from the repo root): `python -m pytest scraping_scripts -q`.
+
+`.github/workflows/ci.yml` runs the backend tests, the scraper tests, and the frontend type-check and production build on every pull request and every push to a branch other than `main`.
+
 ### Hit the API manually
 
 ```bash
@@ -183,6 +194,9 @@ curl http://localhost:8000/
 
 # Raw classified menu for a dining hall and date (no Claude call — fast)
 curl "http://localhost:8000/api/menu?dining=c4c&date=2026-04-28"
+
+# Nutrition for specific dishes: one `dish` param per name (names can contain commas)
+curl "http://localhost:8000/api/menu/nutrition?dining=c4c&date=2026-04-28&dish=Scrambled%20Eggs&dish=Ham,%20Cheese%20%26%20Sausage%20Scramble"
 
 # Generate combos (calls Claude — requires ANTHROPIC_API_KEY)
 curl "http://localhost:8000/api/combos/generate?dining=c4c&date=2026-04-28"
@@ -209,39 +223,45 @@ Dish-verification and cross-station warnings are written to **stderr** and do no
 
 ## API Quick Reference
 
+"Yes" means the request needs `Authorization: Bearer <Firebase ID token>`; "self" means the `{firebase_uid}` in the path must be the token's own uid (`403` otherwise). "Optional" means guests can call it too, and a token personalizes it: `has_voted` on community reads, per-account limits on combo generation.
+
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
 | `GET` | `/` | No | Root ping |
+| `GET` | `/healthz` | No | Liveness check, no database call (Fly's health check) |
 | `GET` | `/health` | No | Deep health check — pings MongoDB |
-| `GET` | `/api/combos/generate` | No | Generate 9 AI meal combos (optional personalization params) |
+| `GET` | `/api/combos/generate` | Optional | Generate 9 AI meal combos (optional personalization params). A token makes the rate limits per account instead of per IP. |
 | `GET` | `/api/menu` | No | Raw classified menu (no Claude call) |
-| `GET` | `/api/menu/nutrition` | No | Per-dish nutrition for a list of dish names |
-| `POST` | `/api/vision/plate` | No (rate-limited 6/min/IP) | Snap your plate: photo → items matched to today's menu → macros |
-| `POST` | `/api/users/` | No | Create user profile |
+| `GET` | `/api/menu/nutrition` | No | Per-dish nutrition; repeat `dish` for each name (legacy comma-separated `dishes` still works) |
+| `POST` | `/api/vision/plate` | Yes (6/min, daily caps) | Snap your plate: photo → items matched to today's menu → macros |
 | `GET` | `/api/users/check-username/{username}` | No | Check username availability |
-| `GET` | `/api/users/{firebase_uid}` | No | Get user profile (includes meal log + favorites) |
-| `PUT` | `/api/users/{firebase_uid}` | No | Update user profile fields |
-| `POST` | `/api/users/{firebase_uid}/meal-log` | No | Append an eaten meal to the user's log |
-| `DELETE` | `/api/users/{firebase_uid}/meal-log` | No | Remove a logged meal by `logged_at` timestamp |
-| `POST` | `/api/users/{firebase_uid}/favorites` | No | Save a combo to favorites |
-| `DELETE` | `/api/users/{firebase_uid}/favorites` | No | Remove a favorited combo |
-| `GET` | `/api/community/combos` | No | Browse active community combos |
+| `POST` | `/api/users/` | Yes | Create your profile (uid and email come from the token) |
+| `GET` | `/api/users/{firebase_uid}` | Yes (self) | Get your profile (includes meal log + favorites) |
+| `PUT` | `/api/users/{firebase_uid}` | Yes (self) | Update your profile (whitelisted fields only) |
+| `POST` | `/api/users/{firebase_uid}/meal-log` | Yes (self) | Append an eaten meal to your log |
+| `DELETE` | `/api/users/{firebase_uid}/meal-log` | Yes (self) | Remove a logged meal by `logged_at` timestamp |
+| `POST` | `/api/users/{firebase_uid}/favorites` | Yes (self) | Save a combo to favorites |
+| `DELETE` | `/api/users/{firebase_uid}/favorites` | Yes (self) | Remove a favorited combo |
+| `GET` | `/api/community/combos` | Optional | Browse active community combos |
 | `GET` | `/api/community/combos/user/{firebase_uid}` | No | Get a user's published combos |
-| `GET` | `/api/community/combos/{id}` | No | Get a single community combo |
-| `POST` | `/api/community/combos` | Yes | Publish a combo to the community feed |
+| `GET` | `/api/community/combos/{id}` | Optional | Get a single community combo |
+| `POST` | `/api/community/combos` | Yes | Publish a combo (author name comes from your profile) |
 | `PUT` | `/api/community/combos/{id}` | Yes (owner) | Edit an existing combo |
 | `DELETE` | `/api/community/combos/{id}` | Yes (owner) | Delete a combo |
 | `POST` | `/api/community/combos/{id}/vote` | Yes | Upvote or downvote a combo |
-| `GET` | `/api/community/trends` | No | Top 20 combos by upvotes today |
-| `GET` | `/api/community/trends/weekly` | No | Top combos by upvotes this week |
+| `GET` | `/api/community/trends` | Optional | Top 20 combos by upvotes today |
+| `GET` | `/api/community/trends/weekly` | Optional | Top 20 combos by upvotes this week |
 | `POST` | `/api/community/combos/{id}/comments` | Yes | Add a comment to a combo |
 | `GET` | `/api/community/combos/{id}/comments` | No | List comments on a combo |
 | `DELETE` | `/api/community/comments/{id}` | Yes (author) | Delete a comment |
-| `POST` | `/api/drafts/` | Yes | Save a new draft |
-| `GET` | `/api/drafts/{firebase_uid}` | Yes (owner) | Get all drafts for a user |
-| `PUT` | `/api/drafts/{draft_id}` | Yes (owner) | Update a draft |
-| `DELETE` | `/api/drafts/{draft_id}` | Yes (owner) | Delete a draft |
-| `POST` | `/api/drafts/{draft_id}/publish` | Yes (owner) | Publish a draft to the community feed |
+| `GET`/`PUT` | `/api/coach/body` | Yes | Your optional body stats for the calorie estimate |
+| `GET` | `/api/coach/budget` | Yes | Today's calorie and macro target |
+| `POST` | `/api/coach/plan` | Yes | Build a day of meals that hits the target (paid model call, capped) |
+| `GET` | `/api/strava/status` | Yes | Whether your Strava account is linked |
+| `POST` | `/api/strava/connect` | Yes | Start the Strava link (needs consent) |
+| `POST` | `/api/strava/complete` | Yes | Finish the link with Strava's code |
+| `DELETE` | `/api/strava` | Yes | Unlink Strava and delete its data |
+| `GET`/`POST` | `/api/strava/webhook/{token}` | Secret path | Strava's subscription check and push events. Any other token returns `404`. |
 
 See [`API_DOCS.md`](./API_DOCS.md) for full request/response schemas.
 
@@ -264,33 +284,43 @@ See [`API_DOCS.md`](./API_DOCS.md) for full request/response schemas.
 
 ```
 Buff_Bites/
-├── .github/workflows/scrape-menus.yml   # Daily cron — re-scrapes all 5 dining halls at 8 AM UTC
+├── .github/workflows/
+│   ├── scrape-menus.yml                 # Cron at 08:00 + 15:00 UTC — re-scrapes all 6 dining halls
+│   ├── deploy-backend.yml               # Push to main → backend tests → Fly deploy
+│   ├── ci.yml                           # PRs + work branches — backend/scraper tests, frontend type-check + build
+│   └── notify-push.yml                  # Email on push to main (recipients: NOTIFY_EMAILS variable)
 ├── backend/
-│   ├── main.py                          # FastAPI app — structlog middleware, CORS, router registration, /health
+│   ├── main.py                          # FastAPI app — structlog middleware, CORS, router registration, /healthz + /health
 │   ├── auth.py                          # Firebase Admin SDK middleware — Depends(get_current_user)
 │   ├── database.py                      # AsyncIOMotorClient — import collections directly
 │   ├── requirements.txt
 │   ├── .env.example                     # Template for backend/.env
 │   ├── Dockerfile                       # Production image (python:3.12-slim)
 │   ├── fly.toml                         # Fly.io deploy config
-│   ├── prompts/combos.txt               # Claude prompt template for combo generation
+│   ├── prompts/combo_period.txt         # Claude prompt template for one meal period's combos
+│   ├── menu_store.py                    # In-memory menus, re-pulled from GitHub hourly
 │   ├── routers/
 │   │   ├── combos.py                    # Combo generation — classifier, dietary filter, cache, rate limit, Claude call; /api/menu + /api/menu/nutrition
-│   │   ├── users.py                     # Profiles, meal log, favorites
+│   │   ├── users.py                     # Profiles, meal log, favorites (owner's token only)
 │   │   ├── community.py                 # Community feed, voting, trends (daily + weekly)
 │   │   ├── comments.py                  # Comments on community combos
-│   │   └── drafts.py                    # Draft save / edit / publish flow
+│   │   ├── vision.py                    # Snap your plate
+│   │   ├── coach.py                     # Fuel coach — calorie budget + menu-built plan
+│   │   ├── strava.py                    # Strava link (OAuth, consent)
+│   │   └── strava_webhook.py            # Strava push events
+│   ├── scripts/strava_webhook.py        # Create / view / delete the Strava webhook subscription
 │   ├── pydantic_models/
 │   │   ├── combo_models.py              # Combo models + verify_combos dish checking
 │   │   ├── community_models.py          # ComboCreate, ComboResponse, ComboUpdate
 │   │   ├── comment_models.py            # CommentCreate, CommentResponse
 │   │   └── user_models.py               # UserCreate, UserResponse, MealLogEntry, FavoriteCombo
-│   └── tests/
-│       ├── test_combo_models.py
-│       └── test_station_classifier.py
+│   └── tests/                           # pytest, with in-memory fakes for Mongo, Firebase and Anthropic
 ├── scraping_scripts/
-│   ├── {alley,c4c,libby,seec,sewall,village_center}_dining.py
-│   └── data/*_dining_menus.json         # Pre-scraped menus, refreshed daily
+│   ├── {alley,c4c,libby,seec,sewall,village_center}_dining.py  # One entry point per hall
+│   ├── nutrislice.py, halls.py          # Shared scraper + hall list
+│   ├── data/*_dining_menus.json         # Full 6-week menus, refreshed twice a day
+│   └── data/live/*_dining_menus.json    # Small copies the API loads
+├── docs/                                # Fuel coach + Strava, nutrition research
 ├── frontend/                            # Next.js App Router (TypeScript + Tailwind)
 │   ├── app/
 │   │   ├── layout.tsx                   # Root layout — AuthProvider, ToastProvider, NavBar
@@ -299,13 +329,14 @@ Buff_Bites/
 │   │   ├── home/page.tsx                # "/home" — AI combo discovery + full menu view (guest-friendly)
 │   │   ├── community/page.tsx           # "/community" — user-submitted combo feed
 │   │   ├── trends/page.tsx              # "/trends" — leaderboard
-│   │   └── profile/page.tsx             # "/profile" — account, meal log, favorites
+│   │   ├── profile/page.tsx             # "/profile" — account, meal log, favorites, Strava link
+│   │   └── strava/callback/             # "/strava/callback" — finishes the Strava link
 │   ├── components/                      # ComboCard, ComboDetail, MealPeriodTabs, MenuView, DiningSelector, FilterBar, NavBar, …
 │   ├── context/                         # AuthContext, ToastContext
-│   ├── hooks/                           # useCombos, useMenu, useCommunity, usePullToRefresh, useScrollRestoration
-│   ├── services/                        # api.ts + combosService, communityService, usersService, commentsService
+│   ├── hooks/                           # useCombos, useMenu, useCommunity, useRequireAuth, usePullToRefresh, useScrollRestoration
+│   ├── services/                        # api.ts (apiFetch, ApiError, token handling) + combos, community, users, comments, vision, coach services
 │   ├── types/index.ts                   # All TypeScript types — single source of truth
-│   └── lib/firebase.ts                  # Firebase app init
+│   └── lib/                             # firebase.ts (Firebase app init), date.ts, nutrition.ts, profile.ts
 ├── vercel.json                          # Frontend deploy config (Vercel)
 ├── README.md
 └── API_DOCS.md
@@ -317,7 +348,7 @@ Buff_Bites/
 
 ### Backend → Fly.io
 
-The image runs on **Fly.io** (app `buffbites-backend`, config `backend/fly.toml`, internal port `8000`). The build context **must be the repo root**, because the Dockerfile copies both `backend/` and `scraping_scripts/data/` (the menu JSON lives outside `backend/`).
+The image runs on **Fly.io** (app `buffbites-backend`, config `backend/fly.toml`, internal port `8000`). The build context **must be the repo root**, because the Dockerfile copies both `backend/` and `scraping_scripts/data/live/` (the menu JSON lives outside `backend/`). The root `.dockerignore` keeps secrets, virtualenvs, tests and the full menu files out of the build.
 
 ```bash
 # One-time: install flyctl and log in
@@ -328,7 +359,9 @@ flyctl auth login
 flyctl deploy --remote-only --config backend/fly.toml --dockerfile backend/Dockerfile .
 ```
 
-`--remote-only` builds on Fly's builders (no local Docker needed). The deploy ships your current working tree, so it bundles the latest backend code **and** the committed menu JSON together.
+`--remote-only` builds on Fly's builders (no local Docker needed). The deploy ships your current working tree, so it bundles the latest backend code **and** the committed live menu JSON together.
+
+Fly's health check calls `/healthz`, which never touches MongoDB, so a database blip doesn't pull the only machine out of routing (the menu routes keep working from memory). Point external uptime monitoring at `/health` to also watch the database.
 
 Set production secrets once (they persist across deploys):
 
@@ -338,7 +371,9 @@ flyctl secrets set -a buffbites-backend \
   FIREBASE_SERVICE_ACCOUNT_JSON='{"type":"service_account",...}'
 ```
 
-**Automatic deploys:** `.github/workflows/deploy-backend.yml` runs the backend tests and deploys to Fly on every push to `main` that touches `backend/`. One-time setup: `flyctl tokens create deploy -a buffbites-backend`, then add the token as the repo secret `FLY_API_TOKEN`. Without the secret, the workflow runs the tests and skips the deploy with a warning.
+**Automatic deploys:** `.github/workflows/deploy-backend.yml` runs the backend tests and deploys to Fly on every push to `main` that touches `backend/`. One-time setup: `flyctl tokens create deploy -a buffbites-backend`, then add the token as the repo secret `FLY_API_TOKEN`. Without the secret, the workflow runs the tests and skips the deploy with a warning. Only the deploy step sees the token, and only `main` deploys (a manual run on another branch just runs the tests). Backend dependencies are pinned to exact versions in `backend/requirements.txt`, so CI and the image install the same code.
+
+**Push emails:** `.github/workflows/notify-push.yml` emails a comma-separated list of addresses on every push to `main`. Set it as the repository variable `NOTIFY_EMAILS` (**Settings → Secrets and variables → Actions → Variables**), along with the `MAIL_USERNAME` / `MAIL_PASSWORD` secrets for the Gmail sender. Without the variable, the job is skipped.
 
 ### Frontend → Vercel
 
@@ -353,7 +388,22 @@ In the Vercel project settings, set the `NEXT_PUBLIC_*` env vars (Firebase keys 
 
 ### Menu data
 
-Kept fresh by the daily GitHub Actions scrape workflow committing JSON back to the repo. The backend (`backend/menu_store.py`) keeps menus in memory and re-downloads them from `MENU_DATA_URL` every hour, so new scrapes go live without a redeploy. The JSON baked into the Docker image is the fallback. The API loads the small copies in `scraping_scripts/data/live/` (built by `build_live_menus.py`: yesterday through 10 days ahead, no ingredient text, minified). The full 6-week C4C file needs ~80 MB to parse and OOM-killed the 256 MB Fly machines. If a hall's scrape comes back empty, `scraping_scripts/menu_guard.py` keeps the previous file, and `validate_menus.py` posts a per-hall report to the Actions run summary.
+Kept fresh by the GitHub Actions scrape workflow (08:00 and 15:00 UTC) committing JSON back to the repo. The backend (`backend/menu_store.py`) keeps menus in memory and re-downloads them from `MENU_DATA_URL` every hour, so new scrapes go live without a redeploy. The live JSON baked into the Docker image is the fallback. The API loads the small copies in `scraping_scripts/data/live/` (built by `build_live_menus.py`: yesterday through 10 days ahead, no ingredient text, minified). The full 6-week C4C file needs ~80 MB to parse and OOM-killed the old 256 MB Fly machines, so the image ships only the live copies. If a hall's scrape comes back empty, `scraping_scripts/menu_guard.py` keeps the previous file, and `validate_menus.py` posts a per-hall report to the Actions run summary.
+
+---
+
+## Fuel coach & Strava
+
+Students can opt in to linking Strava so their workouts set the day's calorie target, and the fuel coach builds meals from the hall's menu to hit it. How the numbers are made, what data is kept, and the full setup checklist are in [`docs/FUEL_COACH.md`](./docs/FUEL_COACH.md). In short:
+
+1. Create a Strava API app, then set `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REDIRECT_URI`, `STRAVA_TOKEN_KEY` and `STRAVA_WEBHOOK_VERIFY_TOKEN` with `flyctl secrets set`.
+2. Register the webhook once from the Fly machine, which starts in the image's `/app` directory, where `scripts/` lives:
+
+   ```bash
+   flyctl ssh console -a buffbites-backend -C "python scripts/strava_webhook.py create"
+   ```
+
+Without the Strava secrets the feature hides itself, and the calorie target still works from body stats alone.
 
 ---
 
