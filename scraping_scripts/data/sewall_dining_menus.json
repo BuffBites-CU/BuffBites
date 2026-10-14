@@ -11,11 +11,6 @@
   },
   "menus": [
     {
-      "date": "2026-09-27",
-      "day_of_week": "Sunday",
-      "categories": {}
-    },
-    {
       "date": "2026-09-28",
       "day_of_week": "Monday",
       "categories": {
@@ -10399,16 +10394,6 @@
           }
         ]
       }
-    },
-    {
-      "date": "2026-10-03",
-      "day_of_week": "Saturday",
-      "categories": {}
-    },
-    {
-      "date": "2026-10-04",
-      "day_of_week": "Sunday",
-      "categories": {}
     },
     {
       "date": "2026-10-05",
@@ -20951,16 +20936,6 @@
       }
     },
     {
-      "date": "2026-10-10",
-      "day_of_week": "Saturday",
-      "categories": {}
-    },
-    {
-      "date": "2026-10-11",
-      "day_of_week": "Sunday",
-      "categories": {}
-    },
-    {
       "date": "2026-10-12",
       "day_of_week": "Monday",
       "categories": {
@@ -31439,16 +31414,6 @@
       }
     },
     {
-      "date": "2026-10-17",
-      "day_of_week": "Saturday",
-      "categories": {}
-    },
-    {
-      "date": "2026-10-18",
-      "day_of_week": "Sunday",
-      "categories": {}
-    },
-    {
       "date": "2026-10-19",
       "day_of_week": "Monday",
       "categories": {
@@ -41832,16 +41797,6 @@
           }
         ]
       }
-    },
-    {
-      "date": "2026-10-24",
-      "day_of_week": "Saturday",
-      "categories": {}
-    },
-    {
-      "date": "2026-10-25",
-      "day_of_week": "Sunday",
-      "categories": {}
     },
     {
       "date": "2026-10-26",
@@ -52384,16 +52339,6 @@
       }
     },
     {
-      "date": "2026-10-31",
-      "day_of_week": "Saturday",
-      "categories": {}
-    },
-    {
-      "date": "2026-11-01",
-      "day_of_week": "Sunday",
-      "categories": {}
-    },
-    {
       "date": "2026-11-02",
       "day_of_week": "Monday",
       "categories": {
@@ -62870,11 +62815,6 @@
           }
         ]
       }
-    },
-    {
-      "date": "2026-11-07",
-      "day_of_week": "Saturday",
-      "categories": {}
     }
   ]
 }
