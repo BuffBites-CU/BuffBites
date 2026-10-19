@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useToast } from '@/context/ToastContext'
+import { useBodyScrollLock } from '@/hooks/useBodyScrollLock'
 import { useRequireAuth } from '@/hooks/useRequireAuth'
 import Spinner from '@/components/Spinner'
 import Doodle from '@/components/Doodle'
@@ -9,7 +10,7 @@ import ChatSheet from '@/components/social/ChatSheet'
 import InterestChips from '@/components/social/InterestChips'
 import OpenSeatSheet from '@/components/social/OpenSeatSheet'
 import TableCard from '@/components/social/TableCard'
-import { ChatIcon, XMarkIcon } from '@/components/icons'
+import { AdjustmentsIcon, ChatIcon, PlusIcon, XMarkIcon } from '@/components/icons'
 import { isoOffsetMST, parseApiDate } from '@/lib/date'
 import {
   getCatalog, getMyInterests, joinTable, leaveTable, listBlocks, listRooms, listTables, saveMyInterests, unblock,
@@ -133,46 +134,75 @@ export default function SocialPage() {
   const myTables = (tables ?? []).filter((t) => t.hosting || t.joined)
   const openTables = (tables ?? []).filter((t) => !t.hosting && !t.joined)
 
+  const chip = (on: boolean) =>
+    `flex-shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-[13px] font-semibold ring-[1.5px] ring-brand-black transition-colors ${
+      on ? 'bg-brand-black text-white' : 'bg-surface text-brand-black'
+    }`
+
   return (
-    <div className="min-h-screen pb-28">
-      <header className="sticky top-0 z-30 bg-surface/90 backdrop-blur-md">
-        <div className="max-w-md mx-auto px-4 pt-4">
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <span className="plan-label">Sheet S-01 · Dine together</span>
-              <h1 className="font-display text-[30px] leading-none text-brand-black mt-1">Find your table</h1>
+    <div className="min-h-screen pb-28 overflow-x-clip">
+      <header className="app-header">
+        <div className="max-w-md mx-auto px-4 pt-3 pb-2.5">
+          <div className="flex items-center justify-between gap-3">
+            <h1 className="min-w-0 truncate font-display text-[26px] leading-none text-brand-black">Dine together</h1>
+            <div className="flex flex-shrink-0 items-center gap-2">
+              <button
+                onClick={() => setSettingsOpen(true)}
+                aria-label={`Your interests and blocked people (${mine.length} interests)`}
+                className="relative flex h-10 w-10 items-center justify-center rounded-full text-brand-black ring-[1.5px] ring-brand-black card-press"
+              >
+                <AdjustmentsIcon width={20} height={20} />
+                {mine.length > 0 && (
+                  <span className="absolute -right-1 -top-1 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-brand-black px-1 font-mono text-[10px] text-white">{mine.length}</span>
+                )}
+              </button>
+              <button
+                onClick={() => setSeatOpen(true)}
+                className="flex h-10 items-center gap-1.5 rounded-full bg-brand-black pl-3 pr-4 text-[14px] font-semibold text-white card-press"
+              >
+                <PlusIcon width={18} height={18} /> Open a seat
+              </button>
             </div>
-            <button
-              onClick={() => setSettingsOpen(true)}
-              className="mt-1 rounded-lg px-3 py-1.5 text-[12px] font-semibold text-brand-black ring-[1.5px] ring-brand-black card-press"
-            >
-              Interests
-            </button>
           </div>
-          <div className="mt-3 mb-2 flex overflow-hidden rounded-lg ring-[1.5px] ring-brand-black" role="tablist">
+          <div className="mt-2.5 flex overflow-hidden rounded-lg ring-[1.5px] ring-brand-black" role="tablist">
             {(['tables', 'rooms'] as const).map((t) => (
-              <button key={t} role="tab" aria-selected={tab === t} onClick={() => setTab(t)} className={segBtn(tab === t)}>
+              <button key={t} role="tab" aria-selected={tab === t} onClick={() => { setTab(t); window.scrollTo({ top: 0 }) }} className={segBtn(tab === t)}>
                 {t === 'tables' ? 'Tables' : 'Chat rooms'}
               </button>
             ))}
           </div>
+          {tab === 'tables' && (
+            <div className="mt-2.5 flex items-center gap-1.5 overflow-x-auto scrollbar-hide" aria-label="Filter tables">
+              {([0, 1] as const).map((d) => (
+                <button key={d} onClick={() => setDay(d)} aria-pressed={day === d} className={chip(day === d)}>
+                  {d === 0 ? 'Today' : 'Tomorrow'}
+                </button>
+              ))}
+              <span className="mx-1 h-5 w-px flex-shrink-0 bg-brand-black/25" aria-hidden />
+              {[{ key: undefined, label: 'All halls' }, ...catalog.halls].map((h) => (
+                <button key={h.key ?? 'all'} onClick={() => setHall(h.key)} aria-pressed={hall === h.key} className={chip(hall === h.key)}>
+                  {h.label}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 
-      <main className="max-w-md mx-auto px-4 pt-2 space-y-4">
+      <main className="max-w-md mx-auto px-4 pt-4 space-y-5">
         {!safetyOk && (
-          <div className="card hatch p-3 flex gap-3 items-start" role="note">
+          <div className="flex items-center gap-3 rounded-lg bg-surface-card px-3 py-2.5 ring-1 ring-brand-black/20" role="note">
             <p className="flex-1 text-[12px] leading-snug text-brand-black">
-              Meet only in the dining hall. Keep numbers and handles out of chat. Report or block anyone, anytime: three reports hide a message.
+              Meet in the dining hall. Keep numbers and handles out of chat. Tap any message to report or block.
             </p>
-            <button onClick={dismissSafety} aria-label="Dismiss" className="text-brand-black"><XMarkIcon className="w-4 h-4" /></button>
+            <button onClick={dismissSafety} className="flex-shrink-0 text-[12px] font-semibold text-brand-black underline underline-offset-2">Got it</button>
           </div>
         )}
 
         {mine.length === 0 && (
           <section className="card p-3.5">
-            <span className="plan-label !text-brand-black">Step 1 · Your interests</span>
-            <p className="mt-1 text-[13px] text-brand-black">Pick up to {MAX_INTERESTS}. We put tables with people like you first.</p>
+            <p className="font-display text-[19px] leading-tight text-brand-black">What are you into?</p>
+            <p className="mt-0.5 text-[12px] text-muted">Pick up to {MAX_INTERESTS}. Tables with people like you show first.</p>
             <div className="mt-2.5">
               <InterestChips options={catalog.interests} selected={mine} onChange={saveInterests} max={MAX_INTERESTS} size="sm" />
             </div>
@@ -181,44 +211,6 @@ export default function SocialPage() {
 
         {tab === 'tables' ? (
           <>
-            <section className="card p-4 flex items-center gap-3">
-              <Doodle name="plate" size={56} className="text-brand-black flex-shrink-0" />
-              <div className="min-w-0 flex-1">
-                <p className="font-display text-[21px] leading-tight text-brand-black">Eating alone?</p>
-                <p className="text-[12px] leading-snug text-muted">Open a seat and others who share your interests can join.</p>
-              </div>
-              <button
-                onClick={() => setSeatOpen(true)}
-                className="flex-shrink-0 rounded-lg bg-brand-black px-3.5 py-2.5 text-[13px] font-semibold text-white card-press"
-              >
-                Open a seat
-              </button>
-            </section>
-
-            <div className="space-y-2">
-              <div className="flex w-48 overflow-hidden rounded-lg ring-[1.5px] ring-brand-black">
-                {([0, 1] as const).map((d) => (
-                  <button key={d} onClick={() => setDay(d)} aria-pressed={day === d} className={segBtn(day === d)}>
-                    {d === 0 ? 'Today' : 'Tomorrow'}
-                  </button>
-                ))}
-              </div>
-              <div className="-mx-4 flex gap-1.5 overflow-x-auto scrollbar-hide px-4 py-0.5">
-                {[{ key: undefined, label: 'All' }, ...catalog.halls].map((h) => (
-                  <button
-                    key={h.key ?? 'all'}
-                    onClick={() => setHall(h.key)}
-                    aria-pressed={hall === h.key}
-                    className={`flex-shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 text-[12px] font-semibold ring-[1.5px] ring-brand-black ${
-                      hall === h.key ? 'bg-brand-black text-white' : 'text-brand-black'
-                    }`}
-                  >
-                    {h.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
             {tables == null ? (
               <Spinner />
             ) : (
@@ -244,6 +236,9 @@ export default function SocialPage() {
                       <Doodle name="coffee" size={52} draw={false} className="mx-auto text-brand-black" />
                       <p className="mt-2 font-display text-[19px] text-brand-black">No open tables yet</p>
                       <p className="mt-1 text-[12px] text-muted">Be the first. Most people join within the hour before a meal.</p>
+                      <button onClick={() => setSeatOpen(true)} className="mt-3 rounded-lg bg-brand-black px-4 py-2.5 text-[14px] font-semibold text-white card-press">
+                        Open a seat
+                      </button>
                     </div>
                   ) : (
                     openTables.map((t) => (
@@ -341,6 +336,7 @@ function SettingsSheet({ catalog, mine, onSave, onClose }: {
 }) {
   const { showToast } = useToast()
   const [blocks, setBlocks] = useState<Array<{ id: string; name: string }> | null>(null)
+  useBodyScrollLock(true)
 
   useEffect(() => {
     listBlocks().then(setBlocks).catch(() => setBlocks([]))
@@ -363,7 +359,8 @@ function SettingsSheet({ catalog, mine, onSave, onClose }: {
       <div
         role="dialog"
         aria-label="Interests and blocked people"
-        className="w-full max-w-md max-h-[85vh] overflow-y-auto rounded-t-2xl bg-surface p-4 pb-8 animate-pop-in"
+        className="w-full max-w-md max-h-[85dvh] overflow-y-auto overscroll-contain rounded-t-2xl bg-surface p-4 animate-pop-in"
+        style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between">

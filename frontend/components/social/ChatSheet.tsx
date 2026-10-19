@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { blockAuthor, listMessages, reportMessage, sendMessage } from '@/services/socialService'
 import { useToast } from '@/context/ToastContext'
+import { useBodyScrollLock } from '@/hooks/useBodyScrollLock'
 import { parseApiDate } from '@/lib/date'
 import type { ChatMessage } from '@/types'
 import Avatar from '../Avatar'
@@ -40,7 +41,22 @@ export default function ChatSheet({ room, title, subtitle, onClose }: Props) {
   const listRef = useRef<HTMLDivElement>(null)
   const nearBottom = useRef(true)
 
+  const [box, setBox] = useState<{ top: number; height: number } | null>(null)
+
   useEffect(() => setMounted(true), [])
+  useBodyScrollLock(true)
+
+  // Fit the sheet to the visible area, so the on-screen keyboard pushes up the
+  // composer instead of scrolling the header out of view (iOS).
+  useEffect(() => {
+    const vv = window.visualViewport
+    if (!vv) return
+    const fit = () => setBox({ top: vv.offsetTop, height: vv.height })
+    fit()
+    vv.addEventListener('resize', fit)
+    vv.addEventListener('scroll', fit)
+    return () => { vv.removeEventListener('resize', fit); vv.removeEventListener('scroll', fit) }
+  }, [])
 
   const merge = useCallback((incoming: ChatMessage[]) => {
     if (!incoming.length) return
@@ -116,7 +132,8 @@ export default function ChatSheet({ room, title, subtitle, onClose }: Props) {
   if (!mounted) return null
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex flex-col bg-surface" role="dialog" aria-modal="true" aria-label={title} style={{ height: '100dvh' }}>
+    <div className="fixed inset-x-0 top-0 z-50 flex flex-col bg-surface" role="dialog" aria-modal="true" aria-label={title}
+      style={box ? { top: box.top, height: box.height } : { height: '100dvh' }}>
       <header className="flex items-center gap-2 border-b-[1.5px] border-brand-black px-2 pt-[max(10px,env(safe-area-inset-top))] pb-2">
         <button onClick={onClose} aria-label="Back" className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-overlay">
           <ChevronLeftIcon width={22} height={22} />
@@ -168,8 +185,8 @@ export default function ChatSheet({ room, title, subtitle, onClose }: Props) {
                     </button>
                     {menuFor === m.id && (
                       <div className="mt-1 flex gap-1.5 animate-pop-in">
-                        <button onClick={() => report(m)} className="rounded-md px-2.5 py-1 text-[12px] font-semibold ring-[1.5px] ring-brand-black">Report</button>
-                        <button onClick={() => block(m)} className="rounded-md bg-brand-black px-2.5 py-1 text-[12px] font-semibold text-white">Block @{m.author}</button>
+                        <button onClick={() => report(m)} className="rounded-md px-3 py-1.5 text-[13px] font-semibold ring-[1.5px] ring-brand-black">Report</button>
+                        <button onClick={() => block(m)} className="rounded-md bg-brand-black px-3 py-1.5 text-[13px] font-semibold text-white">Block @{m.author}</button>
                       </div>
                     )}
                   </div>
@@ -192,7 +209,7 @@ export default function ChatSheet({ room, title, subtitle, onClose }: Props) {
             onChange={(e) => { setText(e.target.value); if (error) setError('') }}
             onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); void send() } }}
             placeholder="Message"
-            className="max-h-28 min-h-[44px] flex-1 resize-none rounded-lg border-[1.5px] border-brand-black bg-surface px-3 py-2.5 text-[15px] text-brand-black placeholder:text-muted/70 focus:outline-none focus:ring-2 focus:ring-brand-black/30"
+            className="max-h-28 min-h-[44px] flex-1 resize-none rounded-lg border-[1.5px] border-brand-black bg-surface px-3 py-2.5 text-[16px] text-brand-black placeholder:text-muted/70 focus:outline-none focus:ring-2 focus:ring-brand-black/30"
           />
           <button
             onClick={send}

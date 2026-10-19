@@ -68,7 +68,7 @@ export default function CommunityPage() {
   return (
     <div className="min-h-screen pb-28">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
+      <header className="app-header">
         <div className="max-w-md mx-auto flex items-center justify-between px-4 h-14">
           <h1 className="font-display text-xl font-bold text-brand-black">Community</h1>
         </div>

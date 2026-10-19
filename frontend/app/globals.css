@@ -32,11 +32,31 @@
       linear-gradient(90deg, rgb(var(--ink) / 0.035) 1px, transparent 1px);
     background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
     background-attachment: fixed;
+    padding-top: env(safe-area-inset-top);
   }
 }
 
 /* Drawing primitives used across the app. */
 @layer components {
+  /* Sticky page header: solid, so nothing shows through it, and stuck just
+     below the status bar when the app runs full screen from the home screen. */
+  .app-header {
+    position: sticky;
+    top: env(safe-area-inset-top);
+    z-index: 30;
+    background-color: rgb(var(--surface));
+    border-bottom: 1px solid rgb(var(--ink) / 0.12);
+  }
+
+  /* A solid strip behind the status bar, so scrolled content never shows under the clock. */
+  .status-shield {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: env(safe-area-inset-top);
+    z-index: 45;
+    background-color: rgb(var(--surface));
+  }
+
   /* A room on the plan: white, hairline outline, square corners. */
   .card {
     @apply bg-surface-card rounded-2xl shadow-soft;
@@ -186,4 +206,9 @@
   .doodle-draw path, .doodle-draw circle, .doodle-draw ellipse, .doodle-draw line, .doodle-draw polyline, .doodle-draw rect {
     stroke-dashoffset: 0;
   }
+}
+
+/* iOS zooms the page into any field under 16px and leaves it zoomed. */
+@media (pointer: coarse) {
+  input, textarea, select { font-size: 16px !important; }
 }

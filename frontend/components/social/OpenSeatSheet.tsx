@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { openTable } from '@/services/socialService'
+import { useBodyScrollLock } from '@/hooks/useBodyScrollLock'
 import { currentMealPeriodMST, isoOffsetMST } from '@/lib/date'
 import { MEAL_PERIODS, type DiningHall, type DiningTable, type MealPeriod } from '@/types'
 import InterestChips from './InterestChips'
@@ -37,6 +38,7 @@ export default function OpenSeatSheet({ open, halls, interests, myInterests, def
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
+  useBodyScrollLock(open)
   useEffect(() => {
     if (!open) return
     setHall(defaultHall); setError(''); setTags(myInterests.slice(0, 3))
@@ -68,7 +70,7 @@ export default function OpenSeatSheet({ open, halls, interests, myInterests, def
   return createPortal(
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-brand-black/50" role="dialog" aria-modal="true" aria-labelledby="open-seat-title"
       onClick={(e) => { if (e.target === e.currentTarget) onClose() }}>
-      <div className="w-full max-w-md max-h-[92vh] overflow-y-auto overscroll-contain bg-surface rounded-t-[28px] shadow-soft-lg p-4 animate-page-in"
+      <div className="w-full max-w-md max-h-[92dvh] overflow-y-auto overscroll-contain bg-surface rounded-t-[28px] shadow-soft-lg p-4 animate-page-in"
         style={{ paddingBottom: 'calc(1.25rem + env(safe-area-inset-bottom))' }}>
         <div className="flex items-start justify-between">
           <div>
@@ -85,7 +87,7 @@ export default function OpenSeatSheet({ open, halls, interests, myInterests, def
           <label className="block">
             <span className="plan-label">Where</span>
             <select value={hall} onChange={(e) => setHall(e.target.value as DiningHall)}
-              className="mt-1 w-full rounded-lg border-[1.5px] border-brand-black bg-surface px-2.5 py-2 text-[15px] text-brand-black">
+              className="mt-1 w-full rounded-lg border-[1.5px] border-brand-black bg-surface px-2.5 py-2 text-[16px] text-brand-black">
               {halls.map((h) => <option key={h.key} value={h.key}>{h.label}</option>)}
             </select>
           </label>
@@ -104,7 +106,7 @@ export default function OpenSeatSheet({ open, halls, interests, myInterests, def
             <label className="mt-2 flex items-center justify-between gap-3">
               <span className="text-[13px] text-brand-black">Time (optional)</span>
               <input type="time" value={time} onChange={(e) => setTime(e.target.value)}
-                className="w-36 rounded-lg border-[1.5px] border-brand-black bg-surface px-2.5 py-1.5 text-[15px] text-brand-black" />
+                className="w-36 rounded-lg border-[1.5px] border-brand-black bg-surface px-2.5 py-1.5 text-[16px] text-brand-black" />
             </label>
           </div>
 
@@ -125,7 +127,7 @@ export default function OpenSeatSheet({ open, halls, interests, myInterests, def
           <label className="block">
             <span className="plan-label">Note (optional)</span>
             <input value={note} maxLength={120} onChange={(e) => setNote(e.target.value)} placeholder="Window tables, grey hoodie"
-              className="mt-1 w-full rounded-lg border-[1.5px] border-brand-black bg-surface px-2.5 py-2 text-[15px] text-brand-black placeholder:text-muted/70" />
+              className="mt-1 w-full rounded-lg border-[1.5px] border-brand-black bg-surface px-2.5 py-2 text-[16px] text-brand-black placeholder:text-muted/70" />
           </label>
 
           {error && <p className="text-[13px] font-semibold text-brand-black" role="alert">{error}</p>}

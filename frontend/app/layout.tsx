@@ -57,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${hand.variable} ${plexSans.variable} ${plexMono.variable} font-sans bg-surface text-brand-black antialiased`}>
+        <div aria-hidden className="status-shield" />
         <AuthProvider>
           <ToastProvider>
             <main className="min-h-screen">{children}</main>
