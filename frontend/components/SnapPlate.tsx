@@ -167,7 +167,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
   }
 
   const sheet = (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-brand-black/50" role="dialog" aria-modal="true" aria-label="Plate scan">
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50" role="dialog" aria-modal="true" aria-label="Plate scan">
       <div
         className="w-full max-w-md max-h-[90vh] overflow-y-auto overscroll-contain bg-surface rounded-t-[28px] shadow-soft-lg p-4 animate-page-in"
         style={{ paddingBottom: 'calc(2rem + env(safe-area-inset-bottom))' }}
@@ -305,8 +305,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
     <>
       {/* Hero panel: an ink "detail" sheet with white linework */}
       <div className="relative mb-4 overflow-hidden rounded-3xl bg-brand-black px-4 pt-7 pb-5 shadow-soft-lg">
-        <span className="absolute left-4 top-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-white/60">Fig. 1 · Plate scan</span>
-        <span className="absolute right-4 top-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-white/60">1:1</span>
+        <span className="absolute left-4 top-2.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/75">Plate scan</span>
         <div className="flex items-center gap-3">
           <div className="relative flex-shrink-0 w-[104px] h-[104px] border border-dashed border-white/40 flex items-center justify-center">
             <Doodle name="scan" size={84} className="text-white animate-float" />

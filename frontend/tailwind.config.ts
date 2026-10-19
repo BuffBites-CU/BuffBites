@@ -30,12 +30,24 @@ const config: Config = {
         },
         muted: 'rgb(var(--muted) / <alpha-value>)',
       },
+      // `brand-black` is ink for text, but the accent for fills (buttons, selected
+      // states, own chat bubbles) and a soft hairline for outlines. Any alpha on an
+      // outline lands between 11% and 16% ink, so every border reads the same.
+      backgroundColor: {
+        'brand-black': 'rgb(var(--fill) / <alpha-value>)',
+        ink: 'rgb(var(--ink) / <alpha-value>)',               // selected chips and tabs
+      },
+      ringColor: {
+        'brand-black': 'rgb(var(--ink) / calc(0.1 + <alpha-value> * 0.06))',
+      },
+      borderColor: {
+        'brand-black': 'rgb(var(--ink) / calc(0.1 + <alpha-value> * 0.06))',
+      },
       fontFamily: {
         sans:    ['var(--font-body)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        // Architect's lettering. `display` and `brush` both map to it so every
-        // heading, label and button shares one hand.
-        display: ['var(--font-hand)', 'ui-rounded', 'system-ui', 'sans-serif'],
-        brush:   ['var(--font-hand)', 'ui-rounded', 'system-ui', 'sans-serif'],
+        // `display` and `brush` share one grotesque for headings and big numbers.
+        display: ['var(--font-display)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        brush:   ['var(--font-display)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono:    ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
@@ -45,15 +57,14 @@ const config: Config = {
         caption: ['0.75rem',   { lineHeight: '1.4' }],
         label:   ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.07em' }],
       },
-      // Drawings use near-square corners; only `full` (avatars, dots) stays round.
       borderRadius: {
-        sm:    '1px',
-        DEFAULT: '2px',
-        md:    '2px',
-        lg:    '3px',
-        xl:    '3px',
-        '2xl': '4px',
-        '3xl': '4px',
+        sm:    '6px',
+        DEFAULT: '8px',
+        md:    '10px',
+        lg:    '12px',
+        xl:    '16px',
+        '2xl': '20px',
+        '3xl': '28px',
       },
       boxShadow: {
         'card-sm':  '0 1px 3px rgba(26,20,16,0.06), 0 1px 2px rgba(26,20,16,0.04)',
@@ -63,12 +74,10 @@ const config: Config = {
         // Tailwind generates for colors.brand and render a solid orange halo.
         'glow':     '0 6px 20px rgb(var(--brand) / 0.35)',
         'glow-sm':  '0 2px 8px rgb(var(--brand) / 0.25)',
-        // Architectural plan: elements are drawn with a hairline, not lifted
-        // with shadows. `soft` is a 1.5px outline; `soft-lg` adds a faint
-        // offset like a drop line on a drawing.
-        'soft':     '0 0 0 1.5px rgb(var(--ink))',
-        'soft-lg':  '0 0 0 1.5px rgb(var(--ink)), 5px 5px 0 0 rgb(var(--ink) / 0.10)',
-        'sticker':  '0 0 0 1.5px rgb(var(--ink))',
+        // Cards: a hairline plus a soft lift. `soft-lg` floats (nav, sheets).
+        'soft':     '0 0 0 1px rgb(var(--ink) / 0.07), 0 1px 2px rgb(var(--ink) / 0.04), 0 4px 14px rgb(var(--ink) / 0.04)',
+        'soft-lg':  '0 0 0 1px rgb(var(--ink) / 0.06), 0 12px 32px rgb(var(--ink) / 0.12)',
+        'sticker':  '0 0 0 1px rgb(var(--ink) / 0.08)',
       },
     },
   },

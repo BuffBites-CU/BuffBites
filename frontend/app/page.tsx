@@ -54,8 +54,8 @@ export default function LandingPage() {
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 pt-20 pb-6 relative z-10">
         {/* Logo */}
-        <div className="w-24 h-24 overflow-hidden shadow-soft-lg animate-pop-in">
-          <Image src="/logoi.jpeg" alt="BuffBites logo" width={96} height={96} className="object-cover w-full h-full grayscale contrast-125" priority />
+        <div className="w-24 h-24 overflow-hidden rounded-3xl shadow-soft-lg animate-pop-in">
+          <Image src="/logoi.jpeg" alt="BuffBites logo" width={96} height={96} className="object-cover w-full h-full" priority />
         </div>
 
         <span className="plan-label mt-6">Campus mess · Ground floor plan</span>
@@ -75,7 +75,7 @@ export default function LandingPage() {
               className="card relative aspect-square flex items-center justify-center text-brand-black animate-pop-in"
               style={{ animationDelay: `${120 + i * 70}ms` }}
             >
-              <span className="absolute left-1.5 top-1 font-mono text-[9px] uppercase tracking-[0.12em] text-muted">{String(i + 1).padStart(2, '0')} {room}</span>
+              <span className="absolute left-1.5 top-1 text-[10px] font-semibold text-muted">{room}</span>
               <div className="animate-float mt-2" style={{ animationDelay: `${i * 0.35}s` }}>
                 <Doodle name={d} size={48} />
               </div>

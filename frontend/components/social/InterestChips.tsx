@@ -26,7 +26,7 @@ export default function InterestChips({ options, selected, onChange, max, size =
             onClick={() => onChange(on ? selected.filter((k) => k !== key) : [...selected, key])}
             className={`rounded-md ring-[1.5px] ring-brand-black transition-colors disabled:opacity-35 ${
               size === 'sm' ? 'px-2 py-1 text-[12px]' : 'px-2.5 py-1.5 text-[13px]'
-            } ${on ? 'bg-brand-black text-white' : 'bg-surface text-brand-black'}`}
+            } ${on ? 'bg-ink text-white' : 'bg-surface-card text-brand-black'}`}
           >
             {label}
           </button>

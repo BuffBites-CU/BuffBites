@@ -22,7 +22,7 @@ interface Props {
 const SEATS = [2, 3, 4, 5, 6]
 
 const segBtn = (on: boolean) =>
-  `flex-1 py-2 text-[13px] font-semibold ${on ? 'bg-brand-black text-white' : 'text-brand-black'}`
+  `flex-1 py-2 text-[13px] font-semibold ${on ? 'bg-ink text-white' : 'text-brand-black'}`
 
 /** "Open a seat": host a table at a hall for a meal. */
 export default function OpenSeatSheet({ open, halls, interests, myInterests, defaultHall, onClose, onOpened }: Props) {
@@ -68,7 +68,7 @@ export default function OpenSeatSheet({ open, halls, interests, myInterests, def
   const ordered = [...interests].sort((a, b) => Number(myInterests.includes(b.key)) - Number(myInterests.includes(a.key)))
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-brand-black/50" role="dialog" aria-modal="true" aria-labelledby="open-seat-title"
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50" role="dialog" aria-modal="true" aria-labelledby="open-seat-title"
       onClick={(e) => { if (e.target === e.currentTarget) onClose() }}>
       <div className="w-full max-w-md max-h-[92dvh] overflow-y-auto overscroll-contain bg-surface rounded-t-[28px] shadow-soft-lg p-4 animate-page-in"
         style={{ paddingBottom: 'calc(1.25rem + env(safe-area-inset-bottom))' }}>

@@ -3,40 +3,33 @@
 @tailwind utilities;
 
 /* ── Palette ──────────────────────────────────────────────────
-   Black and white, like an architectural plan of a campus mess hall.
+   Warm paper, ink text and one ember accent for actions and selected states.
    Every color in the app comes from these variables. */
 :root {
-  --brand:           17 17 17;     /* fills are ink: primary buttons, active states */
-  --brand-deep:      17 17 17;     /* emphasized text */
-  --brand-pale:      236 236 236;
-  --ink:             17 17 17;     /* #111111 */
-  --stone:           190 190 190;
-  --cu-gold:         255 255 255;  /* "pill" badges are white with an ink outline */
-  --hot:             17 17 17;
-  --surface:         255 255 255;  /* drawing paper */
+  --fill:            207 63 18;    /* #CF3F12 ember: buttons, selected chips (4.8:1 with white) */
+  --brand:           207 63 18;
+  --brand-deep:      168 47 10;    /* accent text on light backgrounds */
+  --brand-pale:      253 236 228;  /* #FDECE4 tint for highlighted cards */
+  --ink:             26 26 35;     /* #1A1A23 */
+  --stone:           190 188 182;
+  --cu-gold:         247 239 216;  /* #F7EFD8 CU gold tint for badges */
+  --hot:             207 63 18;
+  --surface:         247 246 243;  /* #F7F6F3 warm paper */
   --surface-card:    255 255 255;
-  --surface-overlay: 243 243 243;  /* #F3F3F3 light poché */
-  --surface-warm:    226 226 226;
-  --muted:           82 82 82;     /* #525252: 7.8:1 on white */
-  --shadow:          17 17 17;
+  --surface-overlay: 239 237 232;
+  --surface-warm:    232 229 222;
+  --muted:           91 91 102;    /* #5B5B66: 6.1:1 on the page */
+  --shadow:          26 26 35;
 }
 
 @layer base {
-  /* Graph paper: a fine 16px grid with a heavier line every 5 squares. */
   body {
     background-color: rgb(var(--surface));
-    background-image:
-      linear-gradient(rgb(var(--ink) / 0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(var(--ink) / 0.07) 1px, transparent 1px),
-      linear-gradient(rgb(var(--ink) / 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(var(--ink) / 0.035) 1px, transparent 1px);
-    background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
-    background-attachment: fixed;
     padding-top: env(safe-area-inset-top);
   }
 }
 
-/* Drawing primitives used across the app. */
+/* Building blocks used across the app. */
 @layer components {
   /* Sticky page header: solid, so nothing shows through it, and stuck just
      below the status bar when the app runs full screen from the home screen. */
@@ -45,7 +38,7 @@
     top: env(safe-area-inset-top);
     z-index: 30;
     background-color: rgb(var(--surface));
-    border-bottom: 1px solid rgb(var(--ink) / 0.12);
+    border-bottom: 1px solid rgb(var(--ink) / 0.08);
   }
 
   /* A solid strip behind the status bar, so scrolled content never shows under the clock. */
@@ -57,37 +50,29 @@
     background-color: rgb(var(--surface));
   }
 
-  /* A room on the plan: white, hairline outline, square corners. */
+  /* White card with a hairline and a soft lift. */
   .card {
     @apply bg-surface-card rounded-2xl shadow-soft;
   }
   .card-press {
-    @apply transition-transform duration-150 active:translate-x-px active:translate-y-px;
+    @apply transition-transform duration-150 active:scale-[0.98];
   }
-  /* Outlined tag, like a label on a drawing. */
+  /* Small badge on a CU gold tint. */
   .pill-gold {
-    @apply inline-flex items-center gap-1.5 rounded-full bg-surface-card px-3 py-1 font-mono text-[12px] uppercase tracking-wider text-brand-black shadow-soft;
+    @apply inline-flex items-center gap-1.5 rounded-full bg-brand-gold px-3 py-1 text-[12px] font-semibold text-brand-black;
   }
-  /* Technical annotation: SHEET A-01, ROOM: C4C, FIG. 1 */
+  /* Small section label above a heading or card. */
   .plan-label {
-    @apply font-mono text-[11px] uppercase tracking-[0.14em] text-muted;
+    @apply font-sans text-[11px] font-semibold uppercase tracking-[0.08em] text-muted;
   }
-  /* Diagonal hatching, the plan's way of shading a highlighted area. */
+  /* Highlight for "yours" (a table you're in, an alert): a warm accent tint. */
   .hatch {
-    background-image: repeating-linear-gradient(45deg, rgb(var(--ink) / 0.16) 0 1px, transparent 1px 7px);
+    background-color: rgb(var(--brand-pale));
   }
-  /* Dimension line with end ticks: |———————| */
+  /* Thin divider under a section heading. */
   .dim-line {
-    position: relative;
-    height: 9px;
-    border-left: 1.5px solid rgb(var(--ink));
-    border-right: 1.5px solid rgb(var(--ink));
-  }
-  .dim-line::before {
-    content: '';
-    position: absolute;
-    left: 0; right: 0; top: 4px;
-    border-top: 1px solid rgb(var(--ink));
+    height: 1px;
+    background-color: rgb(var(--ink) / 0.08);
   }
 }
 
@@ -129,9 +114,9 @@
 .shimmer {
   background: linear-gradient(
     90deg,
-    #ececec 25%,
-    #f7f7f7 50%,
-    #ececec 75%
+    #ecebe7 25%,
+    #f7f6f3 50%,
+    #ecebe7 75%
   );
   background-size: 200% 100%;
   animation: shimmer 1.6s ease-in-out infinite;
@@ -154,9 +139,10 @@
 
 /* ── Typography defaults ─────────────────────────────────────── */
 @layer base {
-  h1, h2, h3 {
-    font-family: var(--font-hand), ui-rounded, sans-serif;
-    letter-spacing: 0;
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display), ui-sans-serif, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
   /* Smooth font rendering */

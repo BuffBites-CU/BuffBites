@@ -152,7 +152,7 @@ export default function ChatSheet({ room, title, subtitle, onClose }: Props) {
         }}
         className="flex-1 overflow-y-auto overscroll-contain px-3 py-3"
       >
-        <p className="mx-auto mb-4 max-w-xs text-center font-mono text-[10px] uppercase tracking-[0.12em] text-muted">
+        <p className="mx-auto mb-4 max-w-xs text-center text-[11px] text-muted">
           Messages disappear after 24 hours · Meet in the dining hall · Report or block anytime
         </p>
         {messages == null ? (

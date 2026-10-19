@@ -1,28 +1,28 @@
 import type { Metadata, Viewport } from 'next'
-import { Architects_Daughter, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google'
+import { Bricolage_Grotesque, Plus_Jakarta_Sans, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { AuthProvider } from '@/context/AuthContext'
 import { ToastProvider } from '@/context/ToastContext'
 import NavBar from '@/components/NavBar'
 import InstallPrompt from '@/components/InstallPrompt'
 
-// Architect's hand lettering for headings, labels and buttons…
-const hand = Architects_Daughter({
+// A friendly grotesque for headings and big numbers…
+const display = Bricolage_Grotesque({
   subsets: ['latin'],
-  variable: '--font-hand',
-  weight: '400',
+  variable: '--font-display',
+  weight: ['600', '700', '800'],
   display: 'swap',
 })
 
-// …a technical sans for body text…
-const plexSans = IBM_Plex_Sans({
+// …a clean sans for body text…
+const bodySans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-body',
   weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
-// …and a mono for drawing annotations (SHEET A-01, ROOM: C4C).
+// …and a mono for numbers and times.
 const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
@@ -31,7 +31,7 @@ const plexMono = IBM_Plex_Mono({
 })
 
 export const viewport: Viewport = {
-  themeColor: '#FFFFFF',
+  themeColor: '#F7F6F3',
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${hand.variable} ${plexSans.variable} ${plexMono.variable} font-sans bg-surface text-brand-black antialiased`}>
+      <body className={`${display.variable} ${bodySans.variable} ${plexMono.variable} font-sans bg-surface text-brand-black antialiased`}>
         <div aria-hidden className="status-shield" />
         <AuthProvider>
           <ToastProvider>

@@ -37,7 +37,7 @@ export default function TrendingRail({ onOpen }: Props) {
       <div className="mb-3">
         <div className="flex items-end justify-between gap-2">
           <div>
-            <span className="plan-label">Sec. 01</span>
+            <span className="plan-label">Right now</span>
             <h2 id="trending-rail-heading" className="text-[24px] text-brand-black leading-tight">
               Trending {weekly ? 'this week' : 'on campus'}
             </h2>

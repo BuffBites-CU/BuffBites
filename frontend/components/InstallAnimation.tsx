@@ -176,7 +176,7 @@ export default function InstallAnimation({ platform }: { platform: InstallPlatfo
             </div>
           )}
 
-          <div className="ia-loop ia-dim absolute inset-0 bg-brand-black/35" />
+          <div className="ia-loop ia-dim absolute inset-0 bg-black/35" />
 
           {/* Confirm dialog */}
           <div className={`ia-loop ia-dialog absolute inset-x-2 rounded-2xl bg-white shadow-soft-lg p-2.5 ${ios ? 'top-[22%]' : 'top-[34%]'}`}>
@@ -186,7 +186,7 @@ export default function InstallAnimation({ platform }: { platform: InstallPlatfo
               <span className={`ia-loop ia-addbtn rounded-md px-1 font-semibold text-brand-deep ${ios ? '' : 'invisible'}`}>Add</span>
             </div>
             <div className="mt-2 flex items-center gap-2">
-              <Image src="/logoi.jpeg" alt="" width={28} height={28} className="grayscale contrast-125 rounded-lg" />
+              <Image src="/logoi.jpeg" alt="" width={28} height={28} className="rounded-lg" />
               <span className="text-[10px] text-brand-black">BuffBites</span>
             </div>
             {!ios && (
@@ -207,7 +207,7 @@ export default function InstallAnimation({ platform }: { platform: InstallPlatfo
               ))}
               <div className="relative flex flex-col items-center gap-0.5">
                 <div className="ia-loop ia-newicon h-7 w-7 overflow-hidden rounded-lg shadow-soft">
-                  <Image src="/logoi.jpeg" alt="" width={28} height={28} className="grayscale contrast-125" />
+                  <Image src="/logoi.jpeg" alt="" width={28} height={28} className="rounded-md" />
                 </div>
                 <span className="text-[6px] leading-none text-brand-black">BuffBites</span>
                 <span className="ia-loop ia-spark absolute -right-1.5 -top-1.5 text-[10px] text-brand-black">✳</span>

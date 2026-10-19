@@ -73,7 +73,7 @@ export default function FuelPlanCard({ dining }: { dining: DiningHall }) {
   return (
     <section className="card mb-6 p-4" aria-labelledby="fuel-title">
       <div className="flex items-center justify-between">
-        <span className="plan-label !text-brand-black">Fig. 2 · Fuel plan</span>
+        <span className="plan-label !text-brand-black">Fuel plan</span>
         <span className="plan-label">Load: {budget.training_load}</span>
       </div>
 
@@ -129,7 +129,7 @@ export default function FuelPlanCard({ dining }: { dining: DiningHall }) {
       {error && <p className="mt-2 text-[13px] font-semibold text-brand-black" role="alert">{error}</p>}
 
       {plan && <PlanView plan={plan} onTomorrow={() => build(isoOffsetMST(1))} planning={planning} />}
-      <div className="mt-3 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.16em] text-muted">
+      <div className="mt-3 flex items-center justify-between text-[11px] font-semibold text-muted">
         <Link href="/fuel-info" className="underline underline-offset-2 text-brand-black">How this works</Link>
         {t.connected && <span>Powered by Strava</span>}
       </div>

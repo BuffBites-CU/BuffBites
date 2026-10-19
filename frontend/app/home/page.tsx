@@ -211,41 +211,30 @@ function Home() {
   return (
     <div className="min-h-screen pb-28">
       <header className="app-header">
-        {/* Title block, like the corner of an architectural drawing */}
-        <div className="max-w-md mx-auto px-4 pt-3">
-          <div className="grid grid-cols-[1fr_auto] border-[1.5px] border-brand-black bg-surface-card">
-            <div className="flex items-center gap-2.5 px-3 py-2 border-r-[1.5px] border-brand-black min-w-0">
-              <div className="w-9 h-9 overflow-hidden flex-shrink-0 border-[1.5px] border-brand-black">
-                <Image src="/logoi.jpeg" alt="" width={36} height={36} className="object-cover w-full h-full grayscale contrast-125" />
-              </div>
-              <div className="min-w-0">
-                <span className="block font-display text-[22px] text-brand-black leading-none">Buff Bites</span>
-                <span className="plan-label block mt-1 truncate">Campus mess plan</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-1 px-2">
-              <button
-                onClick={openInstallGuide}
-                aria-label="How to add BuffBites to your home screen"
-                className="pill-gold card-press !px-2.5"
-              >
-                <DevicePhoneMobileIcon width={14} height={14} />
-                App
-              </button>
-              <button
-                onClick={refetch}
-                disabled={loading}
-                aria-label="Refresh combos"
-                className="w-9 h-9 flex items-center justify-center text-brand-black hover:bg-surface-overlay transition-colors disabled:opacity-40"
-              >
-                <ArrowPathIcon width={18} height={18} className={loading ? 'animate-spin' : ''} />
-              </button>
-            </div>
-            <div className="col-span-2 flex items-center justify-between gap-2 border-t-[1.5px] border-brand-black px-3 py-1">
-              <span className="plan-label !text-brand-black">Sheet A-01 · Discover</span>
-              <span className="plan-label">{selectedDate.replaceAll('-', '.')}</span>
-            </div>
+        <div className="max-w-md mx-auto px-4 pt-3 flex items-center gap-3">
+          <Image src="/logoi.jpeg" alt="" width={40} height={40} className="h-10 w-10 flex-shrink-0 rounded-xl object-cover shadow-sticker" />
+          <div className="min-w-0 flex-1">
+            <span className="block font-display text-[22px] text-brand-black leading-none">Buff Bites</span>
+            <span className="mt-1 block truncate text-[12px] text-muted">
+              {isoToLocalNoon(selectedDate).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+            </span>
           </div>
+          <button
+            onClick={openInstallGuide}
+            aria-label="How to add BuffBites to your home screen"
+            className="pill-gold card-press !px-2.5"
+          >
+            <DevicePhoneMobileIcon width={14} height={14} />
+            App
+          </button>
+          <button
+            onClick={refetch}
+            disabled={loading}
+            aria-label="Refresh combos"
+            className="w-9 h-9 flex items-center justify-center rounded-full text-brand-black hover:bg-surface-overlay transition-colors disabled:opacity-40"
+          >
+            <ArrowPathIcon width={18} height={18} className={loading ? 'animate-spin' : ''} />
+          </button>
         </div>
 
         {/* Hall + day */}
@@ -256,7 +245,7 @@ function Home() {
           <button
             onClick={() => setShowDatePicker((v) => !v)}
             aria-expanded={showDatePicker}
-            className="flex-shrink-0 flex items-center gap-1 font-display text-[16px] text-brand-black bg-surface-card shadow-soft px-3.5 py-2 card-press"
+            className="flex-shrink-0 flex items-center gap-1 rounded-xl font-display text-[16px] text-brand-black bg-surface-card shadow-soft px-3.5 py-2 card-press"
           >
             {selectedDateObj.label === 'Today' ? 'Today' : `${selectedDateObj.label} ${selectedDateObj.day}`}
             <svg className={`w-3 h-3 transition-transform ${showDatePicker ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -325,8 +314,8 @@ function Home() {
         {/* Two big tiles, like Gallery / Camera in the reference */}
         <div className="grid grid-cols-2 gap-3 mb-6" role="tablist" aria-label="View">
           {([
-            { v: 'combos', label: 'AI combos', doodle: 'bowl', room: 'Room 01' },
-            { v: 'menu', label: 'Full menu', doodle: 'plate', room: 'Room 02' },
+            { v: 'combos', label: 'AI combos', doodle: 'bowl', room: 'Picked for you' },
+            { v: 'menu', label: 'Full menu', doodle: 'plate', room: 'Every station' },
           ] as const).map(({ v, label, doodle, room }) => (
             <button
               key={v}
@@ -334,7 +323,7 @@ function Home() {
               aria-selected={view === v}
               onClick={() => setView(v)}
               className={`card card-press flex items-center gap-2.5 px-3.5 py-3 text-left ring-2 transition-colors ${
-                view === v ? 'ring-brand-black hatch' : 'ring-transparent'
+                view === v ? 'ring-brand hatch' : 'ring-transparent'
               }`}
             >
               <Doodle name={doodle} size={32} draw={false} className="text-brand-black flex-shrink-0" />
@@ -352,7 +341,7 @@ function Home() {
 
         {view === 'combos' && <>
         <TrendingRail onOpen={setActiveTrend} />
-        <SectionHeader sec="02" title={`Your ${selectedPeriod.toLowerCase()} picks`} />
+        <SectionHeader title={`Your ${selectedPeriod.toLowerCase()} picks`} />
         {loading && <ComboSkeletons />}
 
         {!loading && error && (
@@ -464,12 +453,11 @@ const PERIOD_LINES: Record<MealPeriod, string> = {
   Dinner: 'Dinner plans, sorted.',
 }
 
-function SectionHeader({ sec, title }: { sec: string; title: string }) {
+function SectionHeader({ title }: { title: string }) {
   return (
     <div className="mb-3">
       <div className="flex items-end justify-between gap-2">
         <div>
-          <span className="plan-label">Sec. {sec}</span>
           <h2 className="text-[24px] text-brand-black leading-tight">{title}</h2>
         </div>
       </div>

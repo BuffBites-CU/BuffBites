@@ -38,11 +38,11 @@ export default function NavBar() {
                 aria-label={label}
                 aria-current={active ? 'page' : undefined}
               >
-                <span className={`flex w-full flex-col items-center gap-1 py-1.5 transition-colors duration-200 ${
+                <span className={`flex w-full flex-col items-center gap-1 rounded-xl py-1.5 transition-colors duration-200 ${
                   active ? 'bg-brand-black text-white' : 'text-brand-black'
                 }`}>
                   <Icon width={21} height={21} />
-                  <span className="font-mono text-[9.5px] uppercase tracking-[0.1em] leading-none">{label}</span>
+                  <span className="text-[10.5px] font-semibold leading-none">{label}</span>
                 </span>
               </Link>
             )
