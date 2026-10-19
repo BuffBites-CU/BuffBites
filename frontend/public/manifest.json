@@ -4,8 +4,8 @@
   "description": "AI-crafted meal combos for CU Boulder dining halls",
   "start_url": "/home",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF",
+  "background_color": "#F7F6F3",
+  "theme_color": "#F7F6F3",
   "icons": [
     {
       "src": "/logoi.jpeg",

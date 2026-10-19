@@ -139,7 +139,7 @@ export default function TrainingLink() {
 
   return (
     <section aria-labelledby="training-title">
-      <span className="plan-label">Sec. T · Private</span>
+      <span className="plan-label">Private to you</span>
       <h2 id="training-title" className="text-[24px] text-brand-black leading-tight">Training &amp; fuel</h2>
       <div className="dim-line mt-1.5 mb-3" aria-hidden />
       <Link href="/fuel-info" className="mb-3 inline-block text-[12px] text-brand-black underline underline-offset-2">How fuel plans work</Link>
@@ -204,7 +204,7 @@ export default function TrainingLink() {
                 key={u}
                 onClick={() => switchUnits(u)}
                 aria-pressed={units === u}
-                className={`px-2 py-1 ${units === u ? 'bg-brand-black text-white' : 'text-brand-black'}`}
+                className={`px-2 py-1 ${units === u ? 'bg-ink text-white' : 'text-brand-black'}`}
               >
                 {u === 'us' ? 'lb · ft' : 'kg · cm'}
               </button>

@@ -34,7 +34,7 @@ export default function FuelInfoPage() {
       <header className="app-header">
         <div className="max-w-md mx-auto px-4 pt-10 pb-3 flex items-end justify-between gap-3">
           <div>
-            <span className="plan-label">Sheet F-01 · Method</span>
+            <span className="plan-label">How it works</span>
             <h1 className="text-[32px] text-brand-black leading-none">How fuel plans work</h1>
           </div>
           <button onClick={() => router.back()} className="card card-press px-3 py-1.5 font-display text-[16px] text-brand-black">Back</button>
@@ -51,7 +51,6 @@ export default function FuelInfoPage() {
         </section>
 
         <section>
-          <span className="plan-label">Sec. 01</span>
           <h2 className="text-[24px] text-brand-black leading-tight">How the numbers are made</h2>
           <div className="dim-line mt-1.5 mb-3" aria-hidden />
           <ol className="space-y-2.5">
@@ -69,7 +68,6 @@ export default function FuelInfoPage() {
         </section>
 
         <section>
-          <span className="plan-label">Sec. 02</span>
           <h2 className="text-[24px] text-brand-black leading-tight">What the AI does</h2>
           <div className="dim-line mt-1.5 mb-3" aria-hidden />
           <ol className="space-y-2 text-[13px] text-brand-black">
@@ -88,7 +86,6 @@ export default function FuelInfoPage() {
         </section>
 
         <section>
-          <span className="plan-label">Sec. 03</span>
           <h2 className="text-[24px] text-brand-black leading-tight">What we keep</h2>
           <div className="dim-line mt-1.5 mb-3" aria-hidden />
           <ul className="card divide-y divide-brand-black/15">

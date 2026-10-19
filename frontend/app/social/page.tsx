@@ -42,7 +42,7 @@ function useVisiblePoll(fn: () => void, ms: number) {
 }
 
 const segBtn = (on: boolean) =>
-  `flex-1 py-2 text-[13px] font-semibold transition-colors ${on ? 'bg-brand-black text-white' : 'text-brand-black'}`
+  `flex-1 py-2 text-[13px] font-semibold transition-colors ${on ? 'bg-ink text-white' : 'text-brand-black'}`
 
 export default function SocialPage() {
   const signedIn = useRequireAuth()
@@ -136,7 +136,7 @@ export default function SocialPage() {
 
   const chip = (on: boolean) =>
     `flex-shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-[13px] font-semibold ring-[1.5px] ring-brand-black transition-colors ${
-      on ? 'bg-brand-black text-white' : 'bg-surface text-brand-black'
+      on ? 'bg-ink text-white' : 'bg-surface-card text-brand-black'
     }`
 
   return (
@@ -144,7 +144,7 @@ export default function SocialPage() {
       <header className="app-header">
         <div className="max-w-md mx-auto px-4 pt-3 pb-2.5">
           <div className="flex items-center justify-between gap-3">
-            <h1 className="min-w-0 truncate font-display text-[26px] leading-none text-brand-black">Dine together</h1>
+            <h1 className="min-w-0 truncate font-display text-[24px] leading-none text-brand-black">Dine together</h1>
             <div className="flex flex-shrink-0 items-center gap-2">
               <button
                 onClick={() => setSettingsOpen(true)}
@@ -158,9 +158,9 @@ export default function SocialPage() {
               </button>
               <button
                 onClick={() => setSeatOpen(true)}
-                className="flex h-10 items-center gap-1.5 rounded-full bg-brand-black pl-3 pr-4 text-[14px] font-semibold text-white card-press"
+                className="flex h-10 items-center gap-1 rounded-full bg-brand-black pl-2.5 pr-3.5 text-[13px] font-semibold text-white shadow-glow-sm card-press"
               >
-                <PlusIcon width={18} height={18} /> Open a seat
+                <PlusIcon width={16} height={16} strokeWidth={2.4} /> Open a seat
               </button>
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function SocialPage() {
                   {d === 0 ? 'Today' : 'Tomorrow'}
                 </button>
               ))}
-              <span className="mx-1 h-5 w-px flex-shrink-0 bg-brand-black/25" aria-hidden />
+              <span className="mx-1 h-5 w-px flex-shrink-0 bg-black/15" aria-hidden />
               {[{ key: undefined, label: 'All halls' }, ...catalog.halls].map((h) => (
                 <button key={h.key ?? 'all'} onClick={() => setHall(h.key)} aria-pressed={hall === h.key} className={chip(hall === h.key)}>
                   {h.label}
@@ -305,7 +305,7 @@ function RoomGroup({ title, rooms, onOpen }: { title: string; rooms: ChatRoomSum
               onClick={() => onOpen({ room: r.id, title: r.label, subtitle: r.kind === 'hall' ? 'Dining hall room' : 'Interest room' })}
               className="flex w-full items-center gap-3 px-3.5 py-3 text-left card-press"
             >
-              <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg ring-[1.5px] ring-brand-black text-brand-black">
+              <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-brand-pale text-brand-deep">
                 <ChatIcon className="w-[18px] h-[18px]" />
               </span>
               <span className="min-w-0 flex-1">
@@ -355,7 +355,7 @@ function SettingsSheet({ catalog, mine, onSave, onClose }: {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-brand-black/40" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/40" onClick={onClose}>
       <div
         role="dialog"
         aria-label="Interests and blocked people"

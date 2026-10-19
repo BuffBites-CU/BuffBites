@@ -49,7 +49,7 @@ export default function TableCard({ table: t, labels, busy, onJoin, onLeave, onC
           {t.interests.map((k) => {
             const shared = t.shared.includes(k)
             return (
-              <span key={k} className={`rounded-md px-2 py-0.5 text-[12px] ring-[1.5px] ring-brand-black ${shared ? 'bg-brand-black text-white' : 'text-brand-black'}`}>
+              <span key={k} className={`rounded-md px-2 py-0.5 text-[12px] ring-[1.5px] ring-brand-black ${shared ? 'bg-brand-pale text-brand-deep font-semibold' : 'text-brand-black'}`}>
                 {labels[k] ?? k}
               </span>
             )

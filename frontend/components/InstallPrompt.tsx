@@ -127,7 +127,7 @@ export default function InstallPrompt() {
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center bg-brand-black/40 backdrop-blur-[2px]"
+      className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center bg-black/40 backdrop-blur-[2px]"
       role="dialog"
       aria-modal="true"
       aria-labelledby="install-title"

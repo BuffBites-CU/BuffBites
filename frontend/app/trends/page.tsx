@@ -160,7 +160,7 @@ export default function TrendsPage() {
       {/* Header */}
       <header className="app-header">
         <div className="max-w-md mx-auto px-4 pt-4 pb-3 flex items-center justify-between">
-          <div><span className="plan-label">Sheet B-01</span><h1 className="text-[32px] text-brand-black leading-none">Trending</h1></div>
+          <div><span className="plan-label">On campus</span><h1 className="text-[32px] text-brand-black leading-none">Trending</h1></div>
           {activeTab === 'today' && (
             <span className="flex items-center gap-1 text-xs font-display font-medium px-2.5 py-1 rounded-full bg-surface-overlay text-muted">
               Posts stay up 24h

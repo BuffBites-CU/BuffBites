@@ -87,7 +87,7 @@ export default function StravaConsent({ open, onClose }: Props) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-brand-black/50"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black/50"
       role="dialog"
       aria-modal="true"
       aria-labelledby="strava-consent-title"
