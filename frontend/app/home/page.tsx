@@ -18,6 +18,7 @@ import FuelPlanCard from '@/components/FuelPlanCard'
 import { ArrowPathIcon, DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Image from 'next/image'
+import Link from 'next/link'
 import { logMeal, addFavorite, removeFavorite } from '@/services/usersService'
 import { publishCombo, getUserCombos } from '@/services/communityService'
 import { isoOffsetMST, isoToLocalNoon, currentMealPeriodMST } from '@/lib/date'
@@ -311,6 +312,15 @@ function Home() {
         />
 
         <FuelPlanCard dining={selectedDining} />
+
+        <Link href="/social" className="card card-press mb-6 flex items-center gap-3 p-3.5">
+          <Doodle name="plate" size={40} draw={false} className="text-brand-black flex-shrink-0" />
+          <span className="min-w-0 flex-1">
+            <span className="block font-display text-[18px] leading-tight text-brand-black">Eating alone?</span>
+            <span className="block text-[12px] text-muted">Join a table or open one at your hall.</span>
+          </span>
+          <span className="plan-label !text-brand-black flex-shrink-0">Find a table →</span>
+        </Link>
 
         {/* Two big tiles, like Gallery / Camera in the reference */}
         <div className="grid grid-cols-2 gap-3 mb-6" role="tablist" aria-label="View">

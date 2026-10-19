@@ -632,6 +632,33 @@ The response is always `{ "ok": true }` right away (Strava wants a 200 within tw
 
 ---
 
+### Dine together (`/api/social`)
+
+Chat rooms per dining hall and interest, plus "tables": a student eating alone opens a seat at a hall for a meal and others join. Responses never include user ids, only usernames.
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| GET | `/api/social/catalog` | No | Interests, rooms and open halls |
+| GET / PUT | `/api/social/me` | Yes | The student's interests (`{ "interests": [...] }`, at most 5) |
+| GET | `/api/social/rooms` | Yes | Rooms with the latest message and how many people posted in the last hour |
+| GET | `/api/social/rooms/{room}/messages?after=<id>` | Yes | The last 60 messages, or only those newer than `after` |
+| POST | `/api/social/rooms/{room}/messages` | Yes | Send `{ "text": "..." }` (at most 280 characters) |
+| POST | `/api/social/messages/{id}/report` | Yes | Report a message; 3 reports hide it |
+| POST | `/api/social/messages/{id}/block` | Yes | Block the message's author |
+| GET | `/api/social/blocks` | Yes | People you blocked |
+| DELETE | `/api/social/blocks/{id}` | Yes | Unblock |
+| GET | `/api/social/tables?date=&dining=` | Yes | Tables for a day, yours first, then by open seats and shared interests |
+| POST | `/api/social/tables` | Yes | Open a table: `dining`, `date`, `period`, optional `time` (`HH:MM`), up to 3 `interests`, `note` (120), `seats` 2–6 |
+| POST | `/api/social/tables/{id}/join` | Yes | Join (`409` when full) |
+| POST | `/api/social/tables/{id}/leave` | Yes | Leave; when the host leaves, the table and its chat close |
+
+- Room ids: `hall:<key>`, `interest:<key>`, `table:<id>` (table rooms are members only, `403` otherwise)
+- Messages and tables with links, emails, phone numbers or social handles are rejected (`422`)
+- Messages expire after 24 hours; a table closes 90 minutes after its set time, or when its meal ends if no time was set (TTL indexes)
+- Limits: 20 messages a minute and 400 a day per student, 6 tables opened an hour, 2 hosted tables at once (`429`)
+
+---
+
 ## Error Responses
 
 | Status | When | Response body |

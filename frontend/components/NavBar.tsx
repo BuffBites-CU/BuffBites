@@ -2,11 +2,12 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { SparklesIcon, UsersIcon, FireIcon, UserCircleIcon } from './icons'
+import { SparklesIcon, UsersIcon, FireIcon, UserCircleIcon, ChatIcon } from './icons'
 
 const TABS = [
   { href: '/home',      label: 'Discover',  Icon: SparklesIcon },
-  { href: '/community', label: 'Community', Icon: UsersIcon },
+  { href: '/social',    label: 'Tables',    Icon: ChatIcon },
+  { href: '/community', label: 'Feed',      Icon: UsersIcon },
   { href: '/trends',    label: 'Trends',    Icon: FireIcon },
   { href: '/profile',   label: 'Profile',   Icon: UserCircleIcon },
 ] as const
@@ -41,7 +42,7 @@ export default function NavBar() {
                   active ? 'bg-brand-black text-white' : 'text-brand-black'
                 }`}>
                   <Icon width={21} height={21} />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.12em] leading-none">{label}</span>
+                  <span className="font-mono text-[9.5px] uppercase tracking-[0.1em] leading-none">{label}</span>
                 </span>
               </Link>
             )
