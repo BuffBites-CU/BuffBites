@@ -537,8 +537,8 @@ export default function ProfilePage() {
       </div>
 
       {/* ── Tab bar ────────────────────────────────────────────── */}
-      <div className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md px-4 py-2.5">
-        <div className="max-w-md mx-auto flex gap-2">
+      <div className="app-header px-4">
+        <div className="max-w-md mx-auto flex gap-2 py-2.5">
           {TABS.map(({ key, label }) => (
             <button
               key={key}

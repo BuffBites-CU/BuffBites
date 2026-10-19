@@ -210,7 +210,7 @@ function Home() {
 
   return (
     <div className="min-h-screen pb-28">
-      <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
+      <header className="app-header">
         {/* Title block, like the corner of an architectural drawing */}
         <div className="max-w-md mx-auto px-4 pt-3">
           <div className="grid grid-cols-[1fr_auto] border-[1.5px] border-brand-black bg-surface-card">

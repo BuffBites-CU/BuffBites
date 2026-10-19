@@ -158,7 +158,7 @@ export default function TrendsPage() {
   return (
     <div className="min-h-screen pb-28">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-surface/85 backdrop-blur-md">
+      <header className="app-header">
         <div className="max-w-md mx-auto px-4 pt-4 pb-3 flex items-center justify-between">
           <div><span className="plan-label">Sheet B-01</span><h1 className="text-[32px] text-brand-black leading-none">Trending</h1></div>
           {activeTab === 'today' && (
