@@ -592,22 +592,6 @@ These reads, and `GET /api/community/combos/{combo_id}`, take an optional `Autho
 
 ---
 
-### Workouts (logged by hand)
-
-All routes need `Authorization: Bearer <Firebase ID token>` and act on the caller's own entries. They feed the fuel coach's daily calorie target; see `docs/FUEL_COACH.md`.
-
-| Method | Path | Description |
-|---|---|---|
-| `GET` | `/api/workouts` | Entries from the last 7 days, newest first |
-| `POST` | `/api/workouts` | Add one. Returns `201` with the entry |
-| `DELETE` | `/api/workouts/{id}` | Delete one (`404` if it isn't yours) |
-
-**`POST` body:** `sport` (one of `Run, Walk, Hike, Ride, Swim, WeightTraining, HighIntensityIntervalTraining, Workout, Yoga, Elliptical, Rowing, RockClimbing, Soccer, Basketball, Tennis, Pickleball, Dance`), `date` (`YYYY-MM-DD`, today or up to 6 days back; defaults to today), `start_time` (optional `HH:MM`), `minutes` (5-720), `distance_km` (optional, 0-300), `effort` (`light`, `moderate` or `hard`).
-
-Limits: 10 entries per day and 200 in total (`429` beyond that). Entries are deleted after 90 days.
-
----
-
 ### Strava webhook
 
 Strava's push subscription for linked students. One subscription exists per Strava app; create, view or delete it with `backend/scripts/strava_webhook.py`, run on the Fly machine:

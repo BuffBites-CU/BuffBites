@@ -9,7 +9,6 @@ import { parseApiDate } from '@/lib/date'
 import type { BodySex, BodyStats, StravaStatus } from '@/types'
 import Doodle from './Doodle'
 import StravaConsent from './StravaConsent'
-import WorkoutLog from './WorkoutLog'
 
 const LB_PER_KG = 2.20462
 const CM_PER_IN = 2.54
@@ -145,11 +144,9 @@ export default function TrainingLink() {
       <div className="dim-line mt-1.5 mb-3" aria-hidden />
       <Link href="/fuel-info" className="mb-3 inline-block text-[12px] text-brand-black underline underline-offset-2">How fuel plans work</Link>
 
-      <WorkoutLog />
-
       {/* Strava link: shown once the server has Strava keys, or while checking */}
       {(status == null || status.available || status.connected) && (
-      <div className="card mt-3 p-3.5 flex items-center gap-3">
+      <div className="card p-3.5 flex items-center gap-3">
         <Doodle name="shoe" size={44} draw={false} className="text-brand-black flex-shrink-0" />
         <div className="min-w-0 flex-1">
           <p className="font-display text-[19px] leading-tight text-brand-black">Strava</p>

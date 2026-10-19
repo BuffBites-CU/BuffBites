@@ -105,8 +105,8 @@ export default function FuelPlanCard({ dining }: { dining: DiningHall }) {
       <p className="mt-3 text-[12px] text-brand-black">
         {t.error ? t.error
           : workout ? `${workout.name || workout.sport} ${Math.round(workout.minutes)} min${workout.distance_km ? ` · ${workout.distance_km} km` : ''} · ${fmt(workout.kcal)} kcal${t.today.length > 1 ? ` (+${t.today.length - 1} more)` : ''}`
-          : t.connected || t.manual_logged > 0 ? `No workout yet today · ${t.week_sessions} this week`
-          : <>No workouts counted. <Link href="/profile" className="underline underline-offset-2">Log one</Link></>}
+          : t.connected ? `No workout yet today · ${t.week_sessions} this week`
+          : 'Rest-day estimate: no workouts counted.'}
       </p>
       {budget.notes.filter((n) => !n.startsWith('No workouts counted')).slice(0, 1).map((n) => (
         <p key={n} className="mt-1 text-[11px] text-muted">

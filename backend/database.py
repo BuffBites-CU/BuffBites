@@ -12,7 +12,9 @@ Collections:
     combo_cache_collection — AI-generated combos cached by (dining, date, prefs)
     strava_links_collection — opt-in Strava links (tokens encrypted), one per user
     coach_plans_collection — fuel-coach day plans cached per user for a few hours
-    manual_workouts_collection — workouts students log by hand (expire after 90 days)
+    chat_messages_collection — hall, interest and table chat (expire after 24h)
+    tables_collection      — open seats at a dining hall (expire after the meal)
+    chat_blocks_collection — who each student has blocked in chat
 
 Usage:
     from database import users_collection, combos_collection, comments_collection
@@ -52,7 +54,9 @@ comments_collection = db["comments"]
 combo_cache_collection = db["combo_cache"]
 strava_links_collection = db["strava_links"]
 coach_plans_collection = db["coach_plans"]
-manual_workouts_collection = db["manual_workouts"]
+chat_messages_collection = db["chat_messages"]
+tables_collection = db["tables"]
+chat_blocks_collection = db["chat_blocks"]
 
 # How long a community combo (and its comments) is kept after it's published.
 # The feed only shows combos for 24h (expires_at); weekly trends need the rest.
@@ -138,9 +142,13 @@ async def ensure_indexes() -> None:
     # Strava webhook events name the athlete, not the BuffBites user.
     await _create_index(strava_links_collection, "athlete_id")
 
-    # manual_workouts — read per user for the last week; expire on their own.
-    await _create_index(manual_workouts_collection, [("firebase_uid", 1), ("date", -1)])
-    await _create_index(manual_workouts_collection, "expires_at", expireAfterSeconds=0)
+
+    # chat — a room's newest messages, and both kinds of entries expire on their own.
+    await _create_index(chat_messages_collection, [("room", 1), ("_id", -1)])
+    await _create_index(chat_messages_collection, "expires_at", expireAfterSeconds=0)
+    await _create_index(tables_collection, [("dining", 1), ("date", 1)])
+    await _create_index(tables_collection, "expires_at", expireAfterSeconds=0)
+    await _create_index(chat_blocks_collection, [("uid", 1), ("blocked_uid", 1)], unique=True)
 
     # coach_plans — keyed lookup, short TTL, and removable per user on disconnect.
     await _create_index(coach_plans_collection, "key", unique=True)

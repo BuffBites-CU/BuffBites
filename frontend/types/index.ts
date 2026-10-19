@@ -266,8 +266,6 @@ export interface Workout {
   elevation_m: number
   kcal: number
   method: 'power' | 'pace' | 'met'
-  id: string | null
-  source: 'strava' | 'manual'
 }
 
 export interface FuelBudget {
@@ -288,7 +286,6 @@ export interface FuelBudget {
   body: { weight_kg: number; height_cm: number; age: number; sex: string; estimated: string[] }
   training: {
     connected: boolean
-    manual_logged: number
     today: Workout[]
     week_sessions: number
     week_minutes: number
@@ -331,24 +328,58 @@ export interface FuelPlan {
   assumptions: string[]
 }
 
-export type WorkoutEffort = 'light' | 'moderate' | 'hard'
+// ── Dine together (tables and chat rooms) ───────────────────────────────────
 
-export interface WorkoutInput {
-  sport: string
-  date: string
-  start_time?: string
-  minutes: number
-  distance_km?: number
-  effort: WorkoutEffort
+export interface SocialCatalog {
+  interests: Array<{ key: string; label: string }>
+  rooms: Array<{ id: string; kind: 'hall' | 'interest'; label: string }>
+  halls: Array<{ key: DiningHall; label: string }>
 }
 
-export interface WorkoutRecord {
+export interface ChatRoomSummary {
   id: string
-  sport: string
+  kind: 'hall' | 'interest'
   label: string
+  active: number
+  last_text: string | null
+  last_author: string | null
+  last_at: string | null
+}
+
+export interface ChatMessage {
+  id: string
+  room: string
+  author: string
+  mine: boolean
+  text: string
+  created_at: string
+}
+
+export interface DiningTable {
+  id: string
+  dining: DiningHall
+  hall: string
   date: string
-  start_time: string | null
-  minutes: number
-  distance_km: number
-  effort: WorkoutEffort
+  period: MealPeriod
+  time: string | null
+  note: string
+  interests: string[]
+  shared: string[]
+  seats: number
+  open_seats: number
+  host: string
+  members: string[]
+  hosting: boolean
+  joined: boolean
+  expires_at: string
+}
+
+export interface TableInput {
+  dining: DiningHall
+  date: string
+  period: MealPeriod
+  time?: string
+  interests: string[]
+  note: string
+  seats: number
 }

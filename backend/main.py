@@ -83,7 +83,7 @@ from routers.vision import router as vision_router
 from routers.strava import router as strava_router
 from routers.strava_webhook import router as strava_webhook_router
 from routers.coach import router as coach_router
-from routers.workouts import router as workouts_router
+from routers.social import router as social_router
 
 
 app.include_router(users_router)
@@ -94,7 +94,7 @@ app.include_router(vision_router)
 app.include_router(strava_router)
 app.include_router(strava_webhook_router)
 app.include_router(coach_router)
-app.include_router(workouts_router)
+app.include_router(social_router)
 
 # CORS — lock to known origins in production via ALLOWED_ORIGINS (comma-separated).
 # Falls back to "*" with a loud warning so existing deploys keep working, but you
