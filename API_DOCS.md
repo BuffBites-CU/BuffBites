@@ -592,22 +592,6 @@ These reads, and `GET /api/community/combos/{combo_id}`, take an optional `Autho
 
 ---
 
-### Workouts (logged by hand)
-
-All routes need `Authorization: Bearer <Firebase ID token>` and act on the caller's own entries. They feed the fuel coach's daily calorie target; see `docs/FUEL_COACH.md`.
-
-| Method | Path | Description |
-|---|---|---|
-| `GET` | `/api/workouts` | Entries from the last 7 days, newest first |
-| `POST` | `/api/workouts` | Add one. Returns `201` with the entry |
-| `DELETE` | `/api/workouts/{id}` | Delete one (`404` if it isn't yours) |
-
-**`POST` body:** `sport` (one of `Run, Walk, Hike, Ride, Swim, WeightTraining, HighIntensityIntervalTraining, Workout, Yoga, Elliptical, Rowing, RockClimbing, Soccer, Basketball, Tennis, Pickleball, Dance`), `date` (`YYYY-MM-DD`, today or up to 6 days back; defaults to today), `start_time` (optional `HH:MM`), `minutes` (5-720), `distance_km` (optional, 0-300), `effort` (`light`, `moderate` or `hard`).
-
-Limits: 10 entries per day and 200 in total (`429` beyond that). Entries are deleted after 90 days.
-
----
-
 ### Strava webhook
 
 Strava's push subscription for linked students. One subscription exists per Strava app; create, view or delete it with `backend/scripts/strava_webhook.py`, run on the Fly machine:
@@ -645,6 +629,33 @@ Strava's events aren't signed, so the callback URL carries the secret `STRAVA_WE
 The response is always `{ "ok": true }` right away (Strava wants a 200 within two seconds); the event is handled in the background:
 - `object_type: "activity"` (create, update or delete): drops that student's cached workouts, so the fuel card picks up the change.
 - `object_type: "athlete"` with `updates.authorized: "false"`: BuffBites confirms with Strava that the student's token really stopped working (at most once per student every 10 minutes), then deletes the link and its stored data.
+
+---
+
+### Dine together (`/api/social`)
+
+Chat rooms per dining hall and interest, plus "tables": a student eating alone opens a seat at a hall for a meal and others join. Responses never include user ids, only usernames.
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| GET | `/api/social/catalog` | No | Interests, rooms and open halls |
+| GET / PUT | `/api/social/me` | Yes | The student's interests (`{ "interests": [...] }`, at most 5) |
+| GET | `/api/social/rooms` | Yes | Rooms with the latest message and how many people posted in the last hour |
+| GET | `/api/social/rooms/{room}/messages?after=<id>` | Yes | The last 60 messages, or only those newer than `after` |
+| POST | `/api/social/rooms/{room}/messages` | Yes | Send `{ "text": "..." }` (at most 280 characters) |
+| POST | `/api/social/messages/{id}/report` | Yes | Report a message; 3 reports hide it |
+| POST | `/api/social/messages/{id}/block` | Yes | Block the message's author |
+| GET | `/api/social/blocks` | Yes | People you blocked |
+| DELETE | `/api/social/blocks/{id}` | Yes | Unblock |
+| GET | `/api/social/tables?date=&dining=` | Yes | Tables for a day, yours first, then by open seats and shared interests |
+| POST | `/api/social/tables` | Yes | Open a table: `dining`, `date`, `period`, optional `time` (`HH:MM`), up to 3 `interests`, `note` (120), `seats` 2–6 |
+| POST | `/api/social/tables/{id}/join` | Yes | Join (`409` when full) |
+| POST | `/api/social/tables/{id}/leave` | Yes | Leave; when the host leaves, the table and its chat close |
+
+- Room ids: `hall:<key>`, `interest:<key>`, `table:<id>` (table rooms are members only, `403` otherwise)
+- Messages and tables with links, emails, phone numbers or social handles are rejected (`422`)
+- Messages expire after 24 hours; a table closes 90 minutes after its set time, or when its meal ends if no time was set (TTL indexes)
+- Limits: 20 messages a minute and 400 a day per student, 6 tables opened an hour, 2 hosted tables at once (`429`)
 
 ---
 

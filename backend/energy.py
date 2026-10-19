@@ -106,8 +106,6 @@ class Workout:
     elevation_m: float
     kcal: int
     method: str        # "power" | "pace" | "met"
-    id: str | None = None       # set for workouts a student logged by hand
-    source: str = "strava"      # "strava" | "manual"
 
 
 def _ride_met(kmh: float) -> float:
@@ -279,41 +277,3 @@ def daily_budget(body: Body, today: list[Workout], focus: str | None = None) -> 
         notes=notes,
     )
 
-
-# ── Workouts logged by hand ────────────────────────────────────────────────
-
-# What a student can pick when logging without Strava: Strava sport names the
-# calorie code already knows.
-MANUAL_SPORTS = {
-    "Run": "Run", "Walk": "Walk", "Hike": "Hike", "Ride": "Bike ride", "Swim": "Swim",
-    "WeightTraining": "Weights", "HighIntensityIntervalTraining": "HIIT", "Workout": "Other workout",
-    "Yoga": "Yoga", "Elliptical": "Elliptical", "Rowing": "Rowing", "RockClimbing": "Climbing",
-    "Soccer": "Soccer", "Basketball": "Basketball", "Tennis": "Tennis", "Pickleball": "Pickleball",
-    "Dance": "Dance",
-}
-# How hard it felt scales sport METs; pace-based runs, walks and rides already
-# reflect effort through speed.
-EFFORT = {"light": 0.8, "moderate": 1.0, "hard": 1.25}
-
-
-def manual_workout(doc: dict, weight_kg: float) -> Workout:
-    """A Workout from a student's own entry (see routers/workouts.py)."""
-    sport = doc["sport"]
-    minutes = min(float(doc["minutes"]), 12 * 60)
-    km = float(doc.get("distance_km") or 0)
-    kcal, method = workout_kcal(sport, minutes * 60, km * 1000, 0, None, weight_kg)
-    if method == "met" and not (sport in _RIDE and km > 0):
-        kcal = round(kcal * EFFORT.get(doc.get("effort", "moderate"), 1.0))
-    return Workout(
-        name=MANUAL_SPORTS.get(sport, sport),
-        sport=sport,
-        date=doc["date"],
-        start_time=doc.get("start_time") or "",
-        minutes=round(minutes, 1),
-        distance_km=round(km, 2),
-        elevation_m=0,
-        kcal=min(kcal, 6000),
-        method=method,
-        id=str(doc["_id"]),
-        source="manual",
-    )

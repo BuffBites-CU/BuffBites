@@ -76,8 +76,14 @@ export default function OnboardingPage() {
     setSubmitting(true)
     setSubmitError('')
     try {
-      // The server takes the uid and email from the sign-in token.
-      await createUser({ username: name, dietary_preferences: prefs })
+      // The current server takes the uid and email from the sign-in token and
+      // ignores these two fields; an older server still requires them.
+      await createUser({
+        firebase_uid: firebaseUser.uid,
+        email: firebaseUser.email ?? '',
+        username: name,
+        dietary_preferences: prefs,
+      })
       setUsername(name)
       await refreshProfile().catch(() => {})
       router.replace('/home')

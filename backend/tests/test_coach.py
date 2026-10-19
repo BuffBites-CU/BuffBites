@@ -11,7 +11,7 @@ from fastapi.testclient import TestClient
 import menu_rules
 import menu_store
 import strava_client
-from routers import coach, workouts
+from routers import coach
 from routers.coach import DietRules, PlanChecker, Targets, _CoachMeal, _DraftItem, _DraftMeal, build_menu, plan_targets
 from tests.fakes import FakeCollection
 
@@ -56,7 +56,6 @@ def _env(monkeypatch):
     monkeypatch.setattr(menu_rules, "today_mt", lambda: TODAY)
     monkeypatch.setattr(coach, "_now_mt", lambda: datetime.fromisoformat(f"{TODAY}T08:00:00-06:00"))
     monkeypatch.setattr(coach, "users_collection", FakeCollection([USER]))
-    monkeypatch.setattr(workouts, "manual_workouts_collection", FakeCollection())
     monkeypatch.setattr(coach, "coach_plans_collection", FakeCollection())
     monkeypatch.setattr(strava_client, "strava_links_collection", FakeCollection())
     coach._limiter._hits.clear()
@@ -193,7 +192,7 @@ def test_budget_without_strava_is_a_rest_day_with_a_nudge():
     assert r.status_code == 200, r.text
     b = r.json()
     assert b["training"]["connected"] is False and b["exercise_kcal"] == 0
-    assert any("Log one in Profile" in n for n in b["notes"])
+    assert any("rest-day estimate" in n for n in b["notes"])
 
 
 def test_budget_counts_todays_strava_workouts(monkeypatch):

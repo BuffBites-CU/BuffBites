@@ -13,9 +13,23 @@ class _Result:
 
 def _match_value(have, want) -> bool:
     if isinstance(want, dict) and any(k.startswith("$") for k in want):
-        ops = {"$gte": lambda a, b: a >= b, "$lte": lambda a, b: a <= b, "$gt": lambda a, b: a > b, "$lt": lambda a, b: a < b}
-        return have is not None and all(ops[op](have, v) for op, v in want.items())
+        ops = {
+            "$gte": lambda a, b: a is not None and a >= b, "$lte": lambda a, b: a is not None and a <= b,
+            "$gt": lambda a, b: a is not None and a > b, "$lt": lambda a, b: a is not None and a < b,
+            "$ne": lambda a, b: a != b, "$in": lambda a, b: a in b,
+            "$size": lambda a, b: isinstance(a, list) and len(a) == b,
+        }
+        return all(ops[op](have, v) for op, v in want.items())
     return have == want
+
+
+def _apply(doc: dict, update: dict) -> None:
+    doc.update(copy.deepcopy(update.get("$set", {})))
+    for field, value in update.get("$push", {}).items():
+        doc.setdefault(field, []).append(copy.deepcopy(value))
+    for field, value in update.get("$addToSet", {}).items():
+        if value not in doc.setdefault(field, []):
+            doc[field].append(copy.deepcopy(value))
 
 
 def _matches(doc: dict, flt: dict) -> bool:
@@ -78,10 +92,12 @@ class FakeCollection:
     async def update_one(self, flt: dict, update: dict, upsert: bool = False):
         for d in self.docs:
             if _matches(d, flt):
-                d.update(copy.deepcopy(update.get("$set", {})))
+                _apply(d, update)
                 return _Result(matched=1)
         if upsert:
-            self.docs.append({**flt, **copy.deepcopy(update.get("$set", {}))})
+            doc = {"_id": ObjectId(), **{k: v for k, v in flt.items() if not isinstance(v, dict)}}
+            _apply(doc, update)
+            self.docs.append(doc)
         return _Result()
 
     async def delete_one(self, flt: dict):
