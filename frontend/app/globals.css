@@ -13,7 +13,6 @@
   --ink:             26 26 35;     /* #1A1A23 */
   --stone:           190 188 182;
   --cu-gold:         247 239 216;  /* #F7EFD8 CU gold tint for badges */
-  --hot:             207 63 18;
   --surface:         247 246 243;  /* #F7F6F3 warm paper */
   --surface-card:    255 255 255;
   --surface-overlay: 239 237 232;
@@ -122,21 +121,6 @@
   animation: shimmer 1.6s ease-in-out infinite;
 }
 
-/* ── Gold shimmer (for special elements) ────────────────────── */
-@keyframes gold-pulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.65; }
-}
-.animate-gold-pulse { animation: gold-pulse 2s ease-in-out infinite; }
-
-/* ── Subtle dot indicator bounce ────────────────────────────── */
-@keyframes dot-pop {
-  0%   { transform: scale(0); opacity: 0; }
-  60%  { transform: scale(1.4); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
-}
-.animate-dot-pop { animation: dot-pop 0.3s cubic-bezier(0.34,1.56,0.64,1) forwards; }
-
 /* ── Typography defaults ─────────────────────────────────────── */
 @layer base {
   h1, h2, h3, .font-display {
@@ -177,12 +161,6 @@
 }
 .animate-pop-in { animation: pop-in 0.35s cubic-bezier(0.34, 1.4, 0.64, 1) both; }
 
-@keyframes wiggle {
-  0%, 100% { transform: rotate(-3deg); }
-  50%      { transform: rotate(3deg); }
-}
-.animate-wiggle { animation: wiggle 1.8s ease-in-out infinite; }
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
@@ -198,3 +176,10 @@
 @media (pointer: coarse) {
   input, textarea, select { font-size: 16px !important; }
 }
+
+/* Long-form legal pages: bulleted lists and simple tables. */
+.legal ul { list-style: disc; padding-left: 1.25rem; }
+.legal ul > li + li { margin-top: 0.375rem; }
+.legal table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.legal th, .legal td { text-align: left; vertical-align: top; padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid rgb(var(--ink) / 0.08); }
+.legal th { font-weight: 600; }

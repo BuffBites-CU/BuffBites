@@ -40,7 +40,10 @@ logger = structlog.get_logger()
 # accuracy for cost, e.g. claude-haiku-5-5.
 VISION_MODEL = os.getenv("VISION_MODEL", "claude-opus-5-5")
 
-_ALLOWED_MEDIA = {"image/jpeg", "image/png", "image/webp"}
+# Only JPEG and PNG, checked against the file's own signature, not just the
+# media type the client claims.
+_SIGNATURES = {"image/jpeg": b"\xff\xd8\xff", "image/png": b"\x89PNG\r\n\x1a\n"}
+_WRONG_TYPE = "Use a JPEG or PNG photo."
 _MAX_IMAGE_BYTES = 5 * 1024 * 1024
 # Base64 is 4/3 the size of the bytes; leave room for a data: URL prefix.
 _MAX_B64_CHARS = _MAX_IMAGE_BYTES * 4 // 3 + 128
@@ -188,8 +191,9 @@ def _totals(items: list[PlateItemOut]) -> dict[str, float]:
 
 
 def _decode_image(req: PlateRequest) -> str:
-    if req.media_type not in _ALLOWED_MEDIA:
-        raise HTTPException(status_code=415, detail="Use a JPEG, PNG or WebP photo.")
+    signature = _SIGNATURES.get(req.media_type)
+    if signature is None:
+        raise HTTPException(status_code=415, detail=_WRONG_TYPE)
     data = req.image_base64.split(",", 1)[-1] if req.image_base64.startswith("data:") else req.image_base64
     if len(data) * 3 // 4 > _MAX_IMAGE_BYTES:
         raise HTTPException(status_code=413, detail="Photo is too large (max 5 MB).")
@@ -199,6 +203,8 @@ def _decode_image(req: PlateRequest) -> str:
         raise HTTPException(status_code=400, detail="Image is not valid base64.")
     if len(raw) > _MAX_IMAGE_BYTES:
         raise HTTPException(status_code=413, detail="Photo is too large (max 5 MB).")
+    if not raw.startswith(signature):
+        raise HTTPException(status_code=415, detail=_WRONG_TYPE)
     return base64.standard_b64encode(raw).decode("ascii")
 
 

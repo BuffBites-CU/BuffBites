@@ -74,6 +74,20 @@ async def log_request(request: Request, call_next):
     )
     return response
 
+# HTTPS only: Fly redirects plain HTTP (force_https in fly.toml), and HSTS tells
+# browsers to never try HTTP again for two years.
+_SECURITY_HEADERS = {
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+    "X-Content-Type-Options": "nosniff",
+}
+
+
+@app.middleware("http")
+async def security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers.update(_SECURITY_HEADERS)
+    return response
+
 # Routers
 from routers.users import router as users_router
 from routers.community import router as community_router

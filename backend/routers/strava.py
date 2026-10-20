@@ -143,13 +143,5 @@ async def complete(req: CompleteRequest, current_user: dict = Depends(get_curren
 
 @router.delete("", response_model=StravaStatus)
 async def disconnect(current_user: dict = Depends(get_current_user)) -> StravaStatus:
-    uid = current_user["uid"]
-    if strava_client.configured():
-        try:
-            token = await strava_client.get_access_token(uid)
-        except strava_client.StravaUnavailable:
-            token = None
-        if token:
-            await strava_client.deauthorize(token)
-    await strava_client.forget(uid)
+    await strava_client.disconnect(current_user["uid"])
     return StravaStatus(available=strava_client.configured(), connected=False)

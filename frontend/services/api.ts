@@ -1,6 +1,8 @@
 import { getFirebaseAuth } from '@/lib/firebase'
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000'
+// Plain HTTP is allowed only for a local backend; anything else is forced to HTTPS.
+const BASE_URL = (process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000')
+  .replace(/^http:\/\/(?!localhost[:/]|localhost$|127\.0\.0\.1[:/]|127\.0\.0\.1$)/, 'https://')
 
 /** An HTTP error from the API. `message` is the server's `detail` when it sent one. */
 export class ApiError extends Error {

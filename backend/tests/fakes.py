@@ -20,6 +20,8 @@ def _match_value(have, want) -> bool:
             "$size": lambda a, b: isinstance(a, list) and len(a) == b,
         }
         return all(ops[op](have, v) for op, v in want.items())
+    if isinstance(have, list) and not isinstance(want, list):
+        return want in have  # Mongo: a scalar matches an array that contains it
     return have == want
 
 
@@ -30,10 +32,15 @@ def _apply(doc: dict, update: dict) -> None:
     for field, value in update.get("$addToSet", {}).items():
         if value not in doc.setdefault(field, []):
             doc[field].append(copy.deepcopy(value))
+    for field, value in update.get("$pull", {}).items():
+        doc[field] = [v for v in doc.get(field, []) if v != value]
 
 
 def _matches(doc: dict, flt: dict) -> bool:
-    return all(_match_value(doc.get(k), v) for k, v in flt.items())
+    return all(
+        any(_matches(doc, alt) for alt in v) if k == "$or" else _match_value(doc.get(k), v)
+        for k, v in flt.items()
+    )
 
 
 class _Cursor:
@@ -99,6 +106,12 @@ class FakeCollection:
             _apply(doc, update)
             self.docs.append(doc)
         return _Result()
+
+    async def update_many(self, flt: dict, update: dict):
+        hits = [d for d in self.docs if _matches(d, flt)]
+        for d in hits:
+            _apply(d, update)
+        return _Result(matched=len(hits))
 
     async def delete_one(self, flt: dict):
         for i, d in enumerate(self.docs):

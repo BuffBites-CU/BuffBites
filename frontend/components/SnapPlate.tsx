@@ -22,6 +22,9 @@ interface Props {
 
 type Phase = 'idle' | 'reading' | 'result' | 'error'
 
+// iOS converts HEIC photos to JPEG for this picker.
+const ACCEPTED_TYPES = ['image/jpeg', 'image/png']
+
 const PORTIONS = [0.5, 1, 1.5, 2, 3]
 const NUTRIENTS = ['calories', 'protein_g', 'carbs_g', 'fat_g', 'fiber_g', 'sodium_mg', 'added_sugar_g'] as const
 type Nutrient = (typeof NUTRIENTS)[number]
@@ -106,6 +109,11 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
 
   async function onFile(file: File | undefined) {
     if (!file) return
+    if (!ACCEPTED_TYPES.includes(file.type)) {
+      setError('Use a JPEG or PNG photo.')
+      setPhase('error')
+      return
+    }
     const id = ++requestId.current
     setPhase('reading')
     setError('')
@@ -325,7 +333,7 @@ export default function SnapPlate({ dining, date, period, firebaseUid, calorieTa
       <input
         ref={inputRef}
         type="file"
-        accept="image/*"
+        accept="image/jpeg,image/png"
         className="hidden"
         onChange={(e) => onFile(e.target.files?.[0])}
       />

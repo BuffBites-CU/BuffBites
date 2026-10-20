@@ -21,10 +21,10 @@ const METHODS: Array<{ no: string; what: string; how: string; source: string }> 
 ]
 
 const KEPT: Array<[string, string]> = [
-  ['Strava sign-in (encrypted), first name, consent time', 'Until you disconnect'],
-  ['Workouts from Strava', 'In memory for 5 minutes, never saved'],
-  ['Built meal plans', '6 hours'],
-  ['Body stats', 'Until you change them; never on your public profile'],
+  ['Strava sign-in (encrypted), athlete ID, first name, Strava weight and sex, consent time', 'Until you disconnect'],
+  ['Workouts from Strava', 'In memory for 5 minutes; not stored on their own'],
+  ["Built meal plans (include that day's workouts and your targets)", '6 hours'],
+  ['Body stats', 'Until you change them; never shown to other students'],
 ]
 
 export default function FuelInfoPage() {

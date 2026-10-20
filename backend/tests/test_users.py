@@ -305,3 +305,54 @@ def test_usernames_are_unique_regardless_of_case(col):
     assert r.status_code == 400 and r.json()["detail"] == "Username already taken"
     # Changing the case of your own name is fine.
     assert _client("u1").put("/api/users/u1", json={"username": "Ralphie"}).status_code == 200
+
+
+def test_delete_account_removes_everything_tied_to_the_user(col, monkeypatch):
+    from bson import ObjectId
+    mine, theirs, hosted, joined = ObjectId(), ObjectId(), ObjectId(), ObjectId()
+    cols = {
+        "combos_collection": FakeCollection([
+            {"_id": mine, "author_firebase_uid": "u1", "voters": []},
+            {"_id": theirs, "author_firebase_uid": "u2", "voters": ["u1", "u3"]},
+        ]),
+        "comments_collection": FakeCollection([
+            {"combo_id": str(mine), "author_firebase_uid": "u2"},   # on u1's combo: goes with it
+            {"combo_id": str(theirs), "author_firebase_uid": "u1"},  # u1's comment elsewhere
+            {"combo_id": str(theirs), "author_firebase_uid": "u2"},  # stays
+        ]),
+        "tables_collection": FakeCollection([
+            {"_id": hosted, "host_uid": "u1", "uids": ["u1", "u2"], "names": ["ralphie", "chip"]},
+            {"_id": joined, "host_uid": "u2", "uids": ["u2", "u1"], "names": ["chip", "ralphie"]},
+        ]),
+        "chat_messages_collection": FakeCollection([
+            {"room": f"table:{hosted}", "author_uid": "u2"},
+            {"room": "hall:c4c", "author_uid": "u1"},
+            {"room": "hall:c4c", "author_uid": "u2", "reports": ["u1"]},
+        ]),
+        "chat_blocks_collection": FakeCollection([
+            {"uid": "u1", "blocked_uid": "u3"}, {"uid": "u3", "blocked_uid": "u1"}, {"uid": "u2", "blocked_uid": "u3"},
+        ]),
+    }
+    for name, c in cols.items():
+        monkeypatch.setattr(users, name, c)
+    disconnected, firebase_deleted = [], []
+
+    async def fake_disconnect(uid):
+        disconnected.append(uid)
+    monkeypatch.setattr(users.strava_client, "disconnect", fake_disconnect)
+    monkeypatch.setattr(users, "delete_firebase_user", firebase_deleted.append)
+
+    assert _client("u2").delete("/api/users/u1").status_code == 403
+    r = _client().delete("/api/users/u1")
+    assert r.status_code == 200 and r.json() == {"deleted": True}
+
+    assert [d["firebase_uid"] for d in col.docs] == ["u2"]
+    assert disconnected == ["u1"] and firebase_deleted == ["u1"]
+    assert [d["_id"] for d in cols["combos_collection"].docs] == [theirs]
+    assert cols["combos_collection"].docs[0]["voters"] == ["u3"]
+    assert cols["comments_collection"].docs == [{"combo_id": str(theirs), "author_firebase_uid": "u2", **{
+        k: v for k, v in cols["comments_collection"].docs[0].items() if k == "_id"}}]
+    tables = cols["tables_collection"].docs
+    assert [t["_id"] for t in tables] == [joined] and tables[0]["uids"] == ["u2"] and tables[0]["names"] == ["chip"]
+    assert [(m["room"], m.get("reports")) for m in cols["chat_messages_collection"].docs] == [("hall:c4c", [])]
+    assert [b["uid"] for b in cols["chat_blocks_collection"].docs] == ["u2"]

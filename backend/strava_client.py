@@ -153,6 +153,18 @@ async def save_link(uid: str, doc: dict) -> None:
     await coach_plans_collection.delete_many({"firebase_uid": uid})
 
 
+async def disconnect(uid: str) -> None:
+    """Revoke our access at Strava (best effort), then delete everything we hold."""
+    if configured():
+        try:
+            token = await get_access_token(uid)
+        except StravaUnavailable:
+            token = None
+        if token:
+            await deauthorize(token)
+    await forget(uid)
+
+
 async def forget(uid: str) -> None:
     _activity_cache.pop(uid, None)
     await strava_links_collection.delete_one({"firebase_uid": uid})

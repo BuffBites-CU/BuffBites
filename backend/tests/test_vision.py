@@ -83,11 +83,21 @@ def test_menu_lines_dedupes_and_includes_dressings():
 @pytest.mark.parametrize("req,status", [
     (PlateRequest(image_base64=PNG_1PX, media_type="image/gif", dining="c4c"), 415),
     (PlateRequest(image_base64="not base64!!", media_type="image/png", dining="c4c"), 400),
+    (PlateRequest(image_base64=PNG_1PX, media_type="image/webp", dining="c4c"), 415),
+    # A PNG labelled as JPEG, and a GIF labelled as PNG: the bytes decide.
+    (PlateRequest(image_base64=PNG_1PX, media_type="image/jpeg", dining="c4c"), 415),
+    (PlateRequest(image_base64=base64.b64encode(b"GIF89a" + bytes(16)).decode(), media_type="image/png", dining="c4c"), 415),
 ])
 def test_decode_image_rejects_bad_input(req, status):
     with pytest.raises(HTTPException) as exc:
         vision._decode_image(req)
     assert exc.value.status_code == status
+
+
+def test_decode_image_accepts_png_and_jpeg():
+    assert vision._decode_image(PlateRequest(image_base64=PNG_1PX, media_type="image/png", dining="c4c")) == PNG_1PX
+    jpeg = base64.b64encode(b"\xff\xd8\xff\xe0" + bytes(16)).decode()
+    assert vision._decode_image(PlateRequest(image_base64=jpeg, media_type="image/jpeg", dining="c4c")) == jpeg
 
 
 def test_decode_image_strips_data_url():

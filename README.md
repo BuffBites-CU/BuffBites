@@ -132,6 +132,8 @@ Create `frontend/.env.local`:
 
 ```bash
 NEXT_PUBLIC_API_URL=http://localhost:8000
+# Shown on the Privacy Policy and Terms pages; without it they link to GitHub issues.
+NEXT_PUBLIC_CONTACT_EMAIL=
 
 NEXT_PUBLIC_FIREBASE_API_KEY=...
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
@@ -238,6 +240,7 @@ Dish-verification and cross-station warnings are written to **stderr** and do no
 | `POST` | `/api/users/` | Yes | Create your profile (uid and email come from the token) |
 | `GET` | `/api/users/{firebase_uid}` | Yes (self) | Get your profile (includes meal log + favorites) |
 | `PUT` | `/api/users/{firebase_uid}` | Yes (self) | Update your profile (whitelisted fields only) |
+| `DELETE` | `/api/users/{firebase_uid}` | Yes (self) | Delete your account and all its data |
 | `POST` | `/api/users/{firebase_uid}/meal-log` | Yes (self) | Append an eaten meal to your log |
 | `DELETE` | `/api/users/{firebase_uid}/meal-log` | Yes (self) | Remove a logged meal by `logged_at` timestamp |
 | `POST` | `/api/users/{firebase_uid}/favorites` | Yes (self) | Save a combo to favorites |
@@ -384,7 +387,7 @@ cd frontend
 npx vercel --prod
 ```
 
-In the Vercel project settings, set the `NEXT_PUBLIC_*` env vars (Firebase keys + `NEXT_PUBLIC_API_URL` pointing at the deployed Fly backend, e.g. `https://buffbites-backend.fly.dev`).
+In the Vercel project settings, set the `NEXT_PUBLIC_*` env vars (Firebase keys, `NEXT_PUBLIC_API_URL` pointing at the deployed Fly backend, e.g. `https://buffbites-backend.fly.dev`, and `NEXT_PUBLIC_CONTACT_EMAIL` for the legal pages). The API URL must be `https://`; the app upgrades any other `http://` address.
 
 ### Menu data
 

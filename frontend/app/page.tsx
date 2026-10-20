@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useAuth } from '@/context/AuthContext'
 import Image from 'next/image'
+import Link from 'next/link'
 import { DevicePhoneMobileIcon } from '@/components/icons'
 import { openInstallGuide } from '@/components/InstallPrompt'
 import Doodle from '@/components/Doodle'
@@ -111,6 +112,11 @@ export default function LandingPage() {
 
         <p className="text-[12px] text-center text-muted pt-1">
           Sign in to save combos & track meals
+        </p>
+        <p className="text-[11px] text-center text-muted">
+          By continuing you agree to our{' '}
+          <Link href="/terms" className="underline underline-offset-2">Terms</Link> and{' '}
+          <Link href="/privacy" className="underline underline-offset-2">Privacy Policy</Link>.
         </p>
       </div>
     </div>

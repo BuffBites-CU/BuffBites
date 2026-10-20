@@ -14,7 +14,7 @@ BuffBites has these groups of endpoints:
 2. **Users** (`/api/users/`) — User profiles stored in MongoDB. Includes dietary preferences, calorie goal per meal, a running meal log, and saved favorites. Only the profile's owner can read or change it.
 3. **Community** (`/api/community/`) — User-submitted combos with 24-hour expiry, upvote/downvote voting, and daily + weekly trends leaderboards. Firebase auth required to publish, edit, delete, or vote.
 4. **Comments** (`/api/community/combos/{id}/comments`) — Threaded comments on community combos. Auth required to post/delete.
-5. **Snap your plate** (`POST /api/vision/plate`) — a plate photo matched against today's menu at a hall. Signed in only.
+5. **Snap your plate** (`POST /api/vision/plate`) — a plate photo (JPEG or PNG only, checked against the file's bytes; max 5 MB) matched against today's menu at a hall. Signed in only.
 6. **Fuel coach & Strava** (`/api/coach/`, `/api/strava/`) — opt-in Strava link, a daily calorie target, and a menu-built meal plan. See [`docs/FUEL_COACH.md`](./docs/FUEL_COACH.md). The Strava webhook is documented [below](#strava-webhook).
 
 **Timestamps** are UTC ISO 8601 strings with an offset (`Z` or `+00:00`).
@@ -433,6 +433,7 @@ curl "http://localhost:8000/api/combos/generate?dining=libby&date=2026-03-17"
 | GET | `/api/users/check-username/{username}` | No | Check if a username is available |
 | GET | `/api/users/{firebase_uid}` | Yes (self) | Get your full profile including meal log + favorites |
 | PUT | `/api/users/{firebase_uid}` | Yes (self) | Update whitelisted profile fields (partial update via `$set`) |
+| DELETE | `/api/users/{firebase_uid}` | Yes (self) | Delete the account and everything tied to it: profile, posts and their comments, comments, chat messages, tables, blocks, Strava link (revoked at Strava), cached plans and the Firebase sign-in record |
 | POST | `/api/users/{firebase_uid}/meal-log` | Yes (self) | Append an eaten meal entry to your log |
 | DELETE | `/api/users/{firebase_uid}/meal-log` | Yes (self) | Remove a logged meal by its `logged_at` timestamp (query param) |
 | POST | `/api/users/{firebase_uid}/favorites` | Yes (self) | Save a combo to your favorites |

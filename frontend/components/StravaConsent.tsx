@@ -27,8 +27,9 @@ const TERMS: Array<{ no: string; title: string; body: string }> = [
     no: '03',
     title: 'What we keep',
     body:
-      'Your Strava sign-in, encrypted, and your first name. Workouts are read when needed and never saved. ' +
-      'Plans are kept for 6 hours so reopening the app is free.',
+      'Your Strava sign-in (encrypted), athlete ID, first name, and your Strava weight and sex if set. ' +
+      "Workouts are read when needed and not stored on their own; a meal plan you build includes that day's " +
+      'workouts and is kept for 6 hours so reopening the app is free.',
   },
   {
     no: '04',

@@ -12,7 +12,7 @@ const TABS = [
   { href: '/profile',   label: 'Profile',   Icon: UserCircleIcon },
 ] as const
 
-const HIDDEN_ROUTES = ['/', '/onboarding']
+const HIDDEN_ROUTES = ['/', '/onboarding', '/privacy', '/terms']
 
 export default function NavBar() {
   const pathname = usePathname()

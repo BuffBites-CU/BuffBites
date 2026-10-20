@@ -63,6 +63,13 @@ def verify_token(token: str) -> dict:
     except Exception:
         raise HTTPException(status_code=401, detail="Invalid or expired token")
 
+def delete_firebase_user(uid: str) -> None:
+    """Remove the Firebase sign-in record. Already gone counts as done."""
+    try:
+        auth.delete_user(uid)
+    except auth.UserNotFoundError:
+        pass
+
 def get_current_user(
     credentials: HTTPAuthorizationCredentials = Security(security)
 ) -> dict:

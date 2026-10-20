@@ -31,6 +31,11 @@ export function updateUser(
   })
 }
 
+/** Permanently deletes the account and everything tied to it. */
+export function deleteAccount(firebase_uid: string): Promise<{ deleted: boolean }> {
+  return apiFetch<{ deleted: boolean }>(`/api/users/${firebase_uid}`, { method: 'DELETE', auth: true })
+}
+
 export function deleteMeal(
   firebase_uid: string,
   logged_at: string,

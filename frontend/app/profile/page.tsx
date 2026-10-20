@@ -2,6 +2,7 @@
 
 import Avatar from '@/components/Avatar'
 import TrainingLink from '@/components/TrainingLink'
+import DeleteAccount from '@/components/DeleteAccount'
 import Spinner from '@/components/Spinner'
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
@@ -1018,6 +1019,7 @@ export default function ProfilePage() {
                       Sign Out
                     </button>
                   </div>
+                  <DeleteAccount />
                 </div>
               )}
             </>

@@ -16,6 +16,10 @@ if "auth" not in sys.modules:
     def get_optional_user() -> dict | None:  # a guest unless a test overrides it
         return None
 
+    def delete_firebase_user(uid: str) -> None:  # tests patch this where it's used
+        raise RuntimeError("auth not configured in tests")
+
     stub.get_current_user = get_current_user
     stub.get_optional_user = get_optional_user
+    stub.delete_firebase_user = delete_firebase_user
     sys.modules["auth"] = stub

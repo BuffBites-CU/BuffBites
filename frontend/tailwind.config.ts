@@ -14,13 +14,12 @@ const config: Config = {
       // retuned in one place. Values are space-separated RGB for alpha support.
       colors: {
         brand: {
-          DEFAULT: 'rgb(var(--brand) / <alpha-value>)',       // logo orange — fills, buttons
+          DEFAULT: 'rgb(var(--brand) / <alpha-value>)',       // ember accent
           deep:    'rgb(var(--brand-deep) / <alpha-value>)',  // text/icons on light bg (AA)
           pale:    'rgb(var(--brand-pale) / <alpha-value>)',
           black:   'rgb(var(--ink) / <alpha-value>)',
           stone:   'rgb(var(--stone) / <alpha-value>)',
           gold:    'rgb(var(--cu-gold) / <alpha-value>)',     // CU Buffs gold accent
-          hot:     'rgb(var(--hot) / <alpha-value>)',         // trending / fire accents
         },
         surface: {
           DEFAULT: 'rgb(var(--surface) / <alpha-value>)',
@@ -45,17 +44,9 @@ const config: Config = {
       },
       fontFamily: {
         sans:    ['var(--font-body)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        // `display` and `brush` share one grotesque for headings and big numbers.
+        // A grotesque for headings and big numbers.
         display: ['var(--font-display)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        brush:   ['var(--font-display)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono:    ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-      },
-      fontSize: {
-        title:   ['1.375rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
-        heading: ['1.0625rem', { lineHeight: '1.3' }],
-        body:    ['0.9375rem', { lineHeight: '1.5' }],
-        caption: ['0.75rem',   { lineHeight: '1.4' }],
-        label:   ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.07em' }],
       },
       borderRadius: {
         sm:    '6px',
