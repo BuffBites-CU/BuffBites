@@ -103988,13 +103988,12 @@
             }
           },
           {
-            "name": "Taco Seitan",
+            "name": "Ranchero Tofu",
             "description": "",
-            "serving_size": "3 oz serving",
-            "calories": 60.0,
-            "ingredients": "Sietan (Filtered Water, Vital Wheat Gluten, Soy Sauce (Water, Soybeans, Wheat, Salt), Defatted Soy, Flour, Garbanzo Bean Flour, Garlic.), Green Bell Peppers, Yellow Onion, Green Chilies (Green chilies.), Water, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Pepper Jalapeno 10 LB, Ground Cumin Seed, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Oregano Leaf, Kosher Salt, Rice Bran Oil, Black pepper (Black Pepper).",
+            "serving_size": "0.5 cups",
+            "calories": 176.0,
+            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Pepper Jalapeno Case, Kosher Salt, Ground Cumin Seed, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Black pepper (Black Pepper).",
             "allergens": [
-              "Wheat",
               "Soy"
             ],
             "dietary_labels": [
@@ -104003,48 +104002,33 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 60.0,
-              "fat_g": 0.3,
-              "saturated_fat_g": 0.1,
+              "calories": 176.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.9,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 382.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 720.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 5.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 10.0,
-              "potassium_mg": 107.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 1.1
+              "total_sugar_g": 2.0,
+              "protein_g": 11.0,
+              "potassium_mg": 407.0,
+              "calcium_mg": 90.0,
+              "iron_mg": 4.1
             }
           },
           {
-            "name": "Chicken Fajita Strips",
+            "name": "Pork Carnitas",
             "description": "",
-            "serving_size": "6 oz serving",
-            "calories": 133.0,
-            "ingredients": "Chicken Fajita Strips (Ingredients: Boneless Skinless Chicken Breast With Rib Meat, Water, Seasoning (salt, Dextrose, Dehydrated Garlic, Spices, Sodium Phosphates, Flavor [maltodextrin, Grill Flavor (from Sunflower Oil), Modified Corn Starch, Corn Syrup Solids], Dehydrated Onion, Natural Flavor, Modified Food Starch, Carrageenan.), Yellow Onions, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Kosher Salt, Black pepper (Black Pepper).",
+            "serving_size": "3 oz serving",
+            "calories": null,
+            "ingredients": "Pork Shoulder Butt Boneless, Franks Red Hot Sauce (Aged Cayenne Red Peppers, Distilled Vinegar, Water, Salt and Garlic Powder.), Water, Brown Sugar, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Garlic Granules, Kosher Salt, Ground Cumin Seed, Oregano Leaf, Chili Powder (Ingredients:  Jalapeno Chili Powder), Onion Granules, Coriander - Ground, White Pepper, Black pepper (Black Pepper), Cayenne Pepper (Black Pepper), Black Pepper (Black Pepper), Chili Pepper Red Flakes Organic (Red pepper.).",
             "allergens": [],
             "dietary_labels": [],
             "is_vegan": false,
             "is_vegetarian": false,
-            "nutrition": {
-              "calories": 133.0,
-              "fat_g": 3.4,
-              "saturated_fat_g": 0.2,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 52.0,
-              "sodium_mg": 429.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 17.0,
-              "potassium_mg": 367.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.5
-            }
+            "nutrition": {}
           }
         ],
         "Cheeses": [
@@ -107087,11 +107071,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Spanish Rice",
+            "name": "Roasted Cut Corn",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 150.0,
-            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Kosher Salt, Black pepper (Black Pepper), Rice Bran Oil.",
+            "calories": 67.0,
+            "ingredients": "Corn cooked from frozen NS as to color fat not added in cooking made with cooking spray.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -107099,20 +107083,49 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 150.0,
+              "calories": 67.0,
+              "fat_g": 0.6,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 195.0,
+              "carbohydrates_g": 16.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 2.0,
+              "potassium_mg": 191.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Cilantro Lime Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 219.0,
+            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Juice Lime Concentrate (100% Pure lime juice concentrate.), Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 219.0,
               "fat_g": 0.1,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 177.0,
-              "carbohydrates_g": 32.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 48.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 4.0,
-              "potassium_mg": 15.0,
-              "calcium_mg": 13.0,
-              "iron_mg": 1.3
+              "total_sugar_g": 0.0,
+              "protein_g": 5.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 5.0,
+              "iron_mg": 1.9
             }
           },
           {
@@ -107141,35 +107154,6 @@
               "protein_g": 2.0,
               "potassium_mg": 3.0,
               "calcium_mg": 16.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Roasted Corn and Peppers",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 58.0,
-            "ingredients": "Roasted Cut Corn, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Red Bermuda Onions, Extra Virgin Olive Oil, Fresh Limes, Cilantro 30 CT, Ground Cumin Seed, Garlic Whole Peeled Case, Kosher Salt, Black pepper (Black Pepper), Rice Bran Oil.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 58.0,
-              "fat_g": 1.6,
-              "saturated_fat_g": 0.2,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 143.0,
-              "carbohydrates_g": 11.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 2.0,
-              "potassium_mg": 168.0,
-              "calcium_mg": 8.0,
               "iron_mg": 0.6
             }
           }
@@ -107236,6 +107220,35 @@
             }
           },
           {
+            "name": "Pico de Gallo",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 3.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
             "name": "Jalapeno Slices",
             "description": "",
             "serving_size": "1 oz serving",
@@ -107294,95 +107307,6 @@
             }
           },
           {
-            "name": "Lime Wedge",
-            "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Sour Cream",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 28.0,
-            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 28.0,
-              "fat_g": 2.8,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 24.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Pico de Gallo",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 3.0,
-            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 3.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 6.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 33.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
             "name": "Tomatillo Salsa Verde",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -107438,6 +107362,66 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
+            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 28.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 1.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 24.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 19.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -110851,11 +110835,11 @@
             }
           },
           {
-            "name": "Plant Based Chorizo",
+            "name": "Green Lentils w/Roasted Vegetables",
             "description": "",
-            "serving_size": "4 oz",
-            "calories": 251.0,
-            "ingredients": "Plant Based Sausage Chorizo (List of Ingredients:, Ingredients: Water, Textured Pea Protein, Rice, Bran Oil, Poblano Peppers, Pea Protein Isolate,, Paprika, Spices, Mushrooms, Contains 2% or, less of Methylcellulose, Salt, Sugar, Dried, Vinegar, Citric Acid, Dehydrated Garlic, Garlic,, Natural Flavorings, Yeast Extract., Contains Allergens:, No Allergens present), Roma Tomatoes, Red Bermuda Onions, Green Bell Peppers, Pepper Jalapeno Case, Rice Bran Oil, Garlic Powder, Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Whole Cumin Seed.",
+            "serving_size": "6 oz",
+            "calories": 168.0,
+            "ingredients": "Mixed Vegetables (Corn, peas, diced carrots, cut green beans, lima beans, salt.), Green Lentils, Extra Virgin Olive Oil, Garlic Granules, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Kosher Salt, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -110863,20 +110847,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 251.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 3.3,
+              "calories": 168.0,
+              "fat_g": 4.1,
+              "saturated_fat_g": 0.6,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 846.0,
-              "carbohydrates_g": 12.0,
-              "fiber_g": 5.0,
+              "sodium_mg": 269.0,
+              "carbohydrates_g": 26.0,
+              "fiber_g": 8.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 11.0,
-              "potassium_mg": 203.0,
-              "calcium_mg": 45.0,
-              "iron_mg": 3.6
+              "total_sugar_g": 7.0,
+              "protein_g": 8.0,
+              "potassium_mg": 156.0,
+              "calcium_mg": 40.0,
+              "iron_mg": 2.4
             }
           },
           {
@@ -113611,6 +113595,40 @@
               "calcium_mg": 24.0,
               "iron_mg": 0.7
             }
+          },
+          {
+            "name": "Miso Chocolate Chip Blondie",
+            "description": "",
+            "serving_size": "1 bar",
+            "calories": 206.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "allergens": [
+              "Milk",
+              "Egg",
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 206.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 6.0,
+              "trans_fat_g": 0.4,
+              "cholesterol_mg": 43.0,
+              "sodium_mg": 194.0,
+              "carbohydrates_g": 26.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 17.0,
+              "protein_g": 3.0,
+              "potassium_mg": 57.0,
+              "calcium_mg": 23.0,
+              "iron_mg": 0.9
+            }
           }
         ],
         "Ice Cream Bar": [
@@ -113853,11 +113871,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Black Beans",
+            "name": "Pinto Beans",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 84.0,
-            "ingredients": "Black Beans (Prepared black beans, water, salt, and calcium chloride (firming agent).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "calories": 102.0,
+            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -113865,49 +113883,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 84.0,
-              "fat_g": 0.4,
+              "calories": 102.0,
+              "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 197.0,
-              "carbohydrates_g": 16.0,
+              "sodium_mg": 456.0,
+              "carbohydrates_g": 19.0,
               "fiber_g": 4.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 5.0,
-              "potassium_mg": 314.0,
-              "calcium_mg": 43.0,
-              "iron_mg": 1.3
-            }
-          },
-          {
-            "name": "Cilantro Lime Rice",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 219.0,
-            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Juice Lime Concentrate (100% Pure lime juice concentrate.), Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 219.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 46.0,
-              "carbohydrates_g": 48.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 5.0,
-              "potassium_mg": 3.0,
-              "calcium_mg": 5.0,
-              "iron_mg": 1.9
+              "potassium_mg": 2.0,
+              "calcium_mg": 21.0,
+              "iron_mg": 1.2
             }
           },
           {
@@ -113936,6 +113925,35 @@
               "protein_g": 2.0,
               "potassium_mg": 191.0,
               "calcium_mg": 2.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Green Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 147.0,
+            "ingredients": "Water, Rice Royal Basmati (White basmati rice.), Yellow Onions, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Cilantro 30 CT, Celery, Rice Bran Oil, Baby Spinach, Pepper Jalapeno Case, Garlic.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 147.0,
+              "fat_g": 2.0,
+              "saturated_fat_g": 0.4,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1092.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 3.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.4
             }
           }
@@ -114002,124 +114020,6 @@
             }
           },
           {
-            "name": "Cilantro",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Cilantro.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 1.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 27.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Jalapeno Slices",
-            "description": "",
-            "serving_size": "1 oz serving",
-            "calories": 4.0,
-            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 4.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 459.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 0.0,
-              "potassium_mg": 35.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Lime Wedge",
-            "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Sour Cream",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 28.0,
-            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 28.0,
-              "fat_g": 2.8,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 24.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
             "name": "Pico de Gallo",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -114178,6 +114078,64 @@
             }
           },
           {
+            "name": "Cilantro",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 1.0,
+            "ingredients": "Cilantro.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 1.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 2.0,
+              "carbohydrates_g": 0.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 27.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Jalapeno Slices",
+            "description": "",
+            "serving_size": "1 oz serving",
+            "calories": 4.0,
+            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 4.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 459.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 35.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
             "name": "Salsa Roja",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -114204,6 +114162,66 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
+            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 28.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 1.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 24.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 19.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -117208,12 +117226,40 @@
             }
           },
           {
-            "name": "Ranchero Tofu",
+            "name": "Chicken Pastor Taco Filling",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 176.0,
-            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Pepper Jalapeno Case, Kosher Salt, Ground Cumin Seed, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Black pepper (Black Pepper).",
+            "serving_size": "1 oz",
+            "calories": 52.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Chipotle Peppers in Adobo Sauce (Chipotle peppers, adobo sauce.), Pepper Guajillo Dried, Rice Bran Oil, Garlic, Kosher Salt, Annato Seed.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 52.0,
+              "fat_g": 3.2,
+              "saturated_fat_g": 0.6,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 21.0,
+              "sodium_mg": 101.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 5.0,
+              "potassium_mg": 35.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.5
+            }
+          },
+          {
+            "name": "Taco Seitan",
+            "description": "",
+            "serving_size": "3 oz serving",
+            "calories": 60.0,
+            "ingredients": "Sietan (Filtered Water, Vital Wheat Gluten, Soy Sauce (Water, Soybeans, Wheat, Salt), Defatted Soy, Flour, Garbanzo Bean Flour, Garlic.), Green Bell Peppers, Yellow Onion, Green Chilies (Green chilies.), Water, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Pepper Jalapeno 10 LB, Ground Cumin Seed, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Oregano Leaf, Kosher Salt, Rice Bran Oil, Black pepper (Black Pepper).",
             "allergens": [
+              "Wheat",
               "Soy"
             ],
             "dietary_labels": [
@@ -117222,47 +117268,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 176.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 0.9,
+              "calories": 60.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 720.0,
-              "carbohydrates_g": 19.0,
-              "fiber_g": 5.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 11.0,
-              "potassium_mg": 407.0,
-              "calcium_mg": 90.0,
-              "iron_mg": 4.1
-            }
-          },
-          {
-            "name": "Chicken Pastor",
-            "description": "",
-            "serving_size": "2 oz",
-            "calories": 76.0,
-            "ingredients": "Chicken Thigh Bnls/Skls ABF, Paste Chili Guajillo 40 LB (Water, Dried chiles, Salt, Contains 2% or less of Citric acid, Potassium sorbate and Sodium benzoate as preservatives.), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Chipotle Peppers in Adobo Sauce, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Garlic Whole Peeled Case, Achiote Paste 15 OZ (Ingredients: Water, Annatto Seed, Corn Flour, Salt, Garlic, Spices, Acetic Acid And Sodium Benzoate As A Preservative.), Kosher Salt, Garlic Granules.",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 76.0,
-              "fat_g": 3.4,
-              "saturated_fat_g": 0.6,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 45.0,
-              "sodium_mg": 154.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 0.0,
+              "sodium_mg": 382.0,
+              "carbohydrates_g": 6.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
-              "protein_g": 9.0,
-              "potassium_mg": 13.0,
-              "calcium_mg": 1.0,
-              "iron_mg": 0.5
+              "protein_g": 10.0,
+              "potassium_mg": 107.0,
+              "calcium_mg": 24.0,
+              "iron_mg": 1.1
             }
           }
         ],
@@ -120360,11 +120379,11 @@
             }
           },
           {
-            "name": "Pinto Beans",
+            "name": "Spicy Red Beans",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 102.0,
-            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "serving_size": "0.25 cups",
+            "calories": 48.0,
+            "ingredients": "Dark Red Kidney Beans (Prepared Kidney Beans, Water, Sugar, Dextrose, Salt, Calcium Chloride (Firming Agent), and Disodium EDTA (Promotes Color Retention).), Tomato, Yellow Onions, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Green Bell Peppers, Celery, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Water, Garlic, Shallots - Peeled, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Tabasco Sauce (Distilled vinegar, red pepper, salt), Extra Virgin Olive Oil, Fresh Basil, Crushed Red Pepper (Cayenne Pepper), Oregano Leaf, Garlic Granules, Onion Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -120372,49 +120391,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 102.0,
-              "fat_g": 0.5,
-              "saturated_fat_g": 0.0,
+              "calories": 48.0,
+              "fat_g": 0.9,
+              "saturated_fat_g": 0.2,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 456.0,
-              "carbohydrates_g": 19.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
+              "sodium_mg": 68.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 1.0,
               "total_sugar_g": 1.0,
-              "protein_g": 5.0,
-              "potassium_mg": 2.0,
-              "calcium_mg": 21.0,
-              "iron_mg": 1.2
-            }
-          },
-          {
-            "name": "Sautéed Lemon Zucchini",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 21.0,
-            "ingredients": "Fresh Zucchini, Squash Yellow Medium, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Balsamic Vinegar (Organic Balsamic Vinegar.), Kosher Salt, Garlic Whole Peeled Case, Rice Bran Oil, Black pepper (Black Pepper), Herb Mint Fresh 1 LB, Sugar Granulated.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 21.0,
-              "fat_g": 0.5,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 318.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 1.0,
-              "potassium_mg": 285.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.4
+              "protein_g": 2.0,
+              "potassium_mg": 195.0,
+              "calcium_mg": 25.0,
+              "iron_mg": 0.8
             }
           }
         ],
@@ -120449,11 +120439,11 @@
             }
           },
           {
-            "name": "Cilantro",
+            "name": "Pico de Gallo",
             "description": "",
             "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Cilantro.",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -120461,20 +120451,78 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1.0,
+              "calories": 3.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Tomatillo Salsa Verde",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 2.0,
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 2.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 20.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 27.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.1
+              "potassium_mg": 19.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -120507,11 +120555,11 @@
             }
           },
           {
-            "name": "Lime Wedge",
+            "name": "Cilantro",
             "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
+            "serving_size": "1 Tbsp",
+            "calories": 1.0,
+            "ingredients": "Cilantro.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -120519,20 +120567,49 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
+              "calories": 1.0,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 2.0,
+              "carbohydrates_g": 0.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 27.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Salsa Roja",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 14.0,
+            "ingredients": "Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, Fresh Parsley, Pepper Jalapeno Case, Oregano Leaf, Kosher Salt, Serrano Peppers, Black pepper (Black Pepper), Crushed Red Pepper (Cayenne Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 14.0,
+              "fat_g": 1.2,
+              "saturated_fat_g": 0.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 47.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
               "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
+              "calcium_mg": 2.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -120595,93 +120672,6 @@
               "potassium_mg": 0.0,
               "calcium_mg": 19.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Pico de Gallo",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 3.0,
-            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 3.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 6.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 33.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Tomatillo Salsa Verde",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 2.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 20.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 19.0,
-              "calcium_mg": 1.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Salsa Roja",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 14.0,
-            "ingredients": "Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, Fresh Parsley, Pepper Jalapeno Case, Oregano Leaf, Kosher Salt, Serrano Peppers, Black pepper (Black Pepper), Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 14.0,
-              "fat_g": 1.2,
-              "saturated_fat_g": 0.2,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 47.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.1
             }
           },
           {
@@ -123884,62 +123874,59 @@
             }
           },
           {
-            "name": "Pork Carnitas",
+            "name": "Plant Based Chorizo",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 176.0,
-            "ingredients": "Pork Shoulder Butt Boneless, Franks Red Hot Sauce (Aged Cayenne Red Peppers, Distilled Vinegar, Water, Salt and Garlic Powder.), Water, Brown Sugar, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Garlic Granules, Kosher Salt, Ground Cumin Seed, Oregano Leaf, Chili Powder (Ingredients:  Jalapeno Chili Powder), Onion Granules, Coriander - Ground, White Pepper, Black pepper (Black Pepper), Cayenne Pepper (Black Pepper), Black Pepper (Black Pepper), Chili Pepper Red Flakes Organic (Red pepper.).",
+            "serving_size": "4 oz",
+            "calories": 251.0,
+            "ingredients": "Plant Based Sausage Chorizo (List of Ingredients:, Ingredients: Water, Textured Pea Protein, Rice, Bran Oil, Poblano Peppers, Pea Protein Isolate,, Paprika, Spices, Mushrooms, Contains 2% or, less of Methylcellulose, Salt, Sugar, Dried, Vinegar, Citric Acid, Dehydrated Garlic, Garlic,, Natural Flavorings, Yeast Extract., Contains Allergens:, No Allergens present), Roma Tomatoes, Red Bermuda Onions, Green Bell Peppers, Pepper Jalapeno Case, Rice Bran Oil, Garlic Powder, Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Whole Cumin Seed.",
             "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 176.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 3.5,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 68.0,
-              "sodium_mg": 389.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 18.0,
-              "potassium_mg": 255.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 1.7
-            }
-          },
-          {
-            "name": "Taco Seitan",
-            "description": "",
-            "serving_size": "3 oz serving",
-            "calories": 60.0,
-            "ingredients": "Sietan (Filtered Water, Vital Wheat Gluten, Soy Sauce (Water, Soybeans, Wheat, Salt), Defatted Soy, Flour, Garbanzo Bean Flour, Garlic.), Green Bell Peppers, Yellow Onion, Green Chilies (Green chilies.), Water, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Pepper Jalapeno 10 LB, Ground Cumin Seed, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Oregano Leaf, Kosher Salt, Rice Bran Oil, Black pepper (Black Pepper).",
-            "allergens": [
-              "Wheat",
-              "Soy"
-            ],
             "dietary_labels": [
               "Vegan"
             ],
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 60.0,
-              "fat_g": 0.3,
-              "saturated_fat_g": 0.1,
+              "calories": 251.0,
+              "fat_g": 18.0,
+              "saturated_fat_g": 3.3,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 382.0,
-              "carbohydrates_g": 6.0,
+              "sodium_mg": 846.0,
+              "carbohydrates_g": 12.0,
+              "fiber_g": 5.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 4.0,
+              "protein_g": 11.0,
+              "potassium_mg": 203.0,
+              "calcium_mg": 45.0,
+              "iron_mg": 3.6
+            }
+          },
+          {
+            "name": "Pork Chile Colorado",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 196.0,
+            "ingredients": "Pork, Water, Pepper Guajillo Dried, Yellow Onion, Kosher Salt, Garlic Whole Peeled Case, Garlic Granules, Rice Bran Oil, Ground Cumin Seed, Bay Leaves.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 196.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 4.0,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 59.0,
+              "sodium_mg": 249.0,
+              "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 10.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 19.0,
               "potassium_mg": 107.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 1.1
+              "calcium_mg": 38.0,
+              "iron_mg": 1.2
             }
           }
         ],
@@ -127010,11 +126997,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Green Rice",
+            "name": "Black Beans",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 147.0,
-            "ingredients": "Water, Rice Royal Basmati (White basmati rice.), Yellow Onions, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Cilantro 30 CT, Celery, Rice Bran Oil, Baby Spinach, Pepper Jalapeno Case, Garlic.",
+            "calories": 84.0,
+            "ingredients": "Black Beans (Prepared black beans, water, salt, and calcium chloride (firming agent).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -127022,78 +127009,49 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 147.0,
-              "fat_g": 2.0,
-              "saturated_fat_g": 0.4,
+              "calories": 84.0,
+              "fat_g": 0.4,
+              "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1092.0,
-              "carbohydrates_g": 29.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 197.0,
+              "carbohydrates_g": 16.0,
+              "fiber_g": 4.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 5.0,
+              "potassium_mg": 314.0,
+              "calcium_mg": 43.0,
+              "iron_mg": 1.3
+            }
+          },
+          {
+            "name": "Cilantro Lime Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 219.0,
+            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Juice Lime Concentrate (100% Pure lime juice concentrate.), Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 219.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 48.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 33.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
-            }
-          },
-          {
-            "name": "Refried Beans",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 43.0,
-            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 43.0,
-              "fat_g": 0.4,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 247.0,
-              "carbohydrates_g": 7.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
+              "protein_g": 5.0,
               "potassium_mg": 3.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Latin Roasted Vegetables",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 32.0,
-            "ingredients": "Fresh Zucchini, Squash Yellow Medium, Red Bermuda Onions, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Extra Virgin Olive Oil, Ground Cumin Seed, Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 32.0,
-              "fat_g": 2.2,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 76.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 113.0,
-              "calcium_mg": 12.0,
-              "iron_mg": 0.4
+              "calcium_mg": 5.0,
+              "iron_mg": 1.9
             }
           }
         ],
@@ -127128,93 +127086,6 @@
             }
           },
           {
-            "name": "Cilantro",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Cilantro.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 1.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 27.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Jalapeno Slices",
-            "description": "",
-            "serving_size": "1 oz serving",
-            "calories": 4.0,
-            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 4.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 459.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 0.0,
-              "potassium_mg": 35.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Lime Wedge",
-            "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
             "name": "Shredded Cheddar Cheese",
             "description": "",
             "serving_size": "1 oz",
@@ -127246,34 +127117,32 @@
             }
           },
           {
-            "name": "Sour Cream",
+            "name": "Cilantro",
             "description": "",
             "serving_size": "1 Tbsp",
-            "calories": 28.0,
-            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
-            "allergens": [
-              "Milk"
-            ],
+            "calories": 1.0,
+            "ingredients": "Cilantro.",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 28.0,
-              "fat_g": 2.8,
-              "saturated_fat_g": 1.7,
+              "calories": 1.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 24.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 2.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.0
+              "potassium_mg": 27.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -127302,6 +127171,35 @@
               "protein_g": 0.0,
               "potassium_mg": 33.0,
               "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Jalapeno Slices",
+            "description": "",
+            "serving_size": "1 oz serving",
+            "calories": 4.0,
+            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 4.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 459.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 35.0,
+              "calcium_mg": 0.0,
               "iron_mg": 0.0
             }
           },
@@ -127361,6 +127259,66 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
+            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 28.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 1.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 24.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 19.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -130189,37 +130147,6 @@
             }
           },
           {
-            "name": "Tofu & Vegetable Fajita",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 191.0,
-            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Yellow Onions, Green Bell Peppers, Rice Bran Oil, Red Bell Peppers, Yellow Bell Pepper, Chili Powder (Ingredients:  Jalapeno Chili Powder), Ground Cumin Seed, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 191.0,
-              "fat_g": 11.0,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 129.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 15.0,
-              "potassium_mg": 701.0,
-              "calcium_mg": 136.0,
-              "iron_mg": 5.8
-            }
-          },
-          {
             "name": "Fish Taco",
             "description": "",
             "serving_size": "3 oz",
@@ -130247,6 +130174,35 @@
               "potassium_mg": 190.0,
               "calcium_mg": 11.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Jackfruit Carnitas",
+            "description": "",
+            "serving_size": "2 oz",
+            "calories": 39.0,
+            "ingredients": "Shredded Jackfruit (Young Jackfruit, Water, Lactic Acid, Salt), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Water, Yellow Onion, Green Bell Peppers, Rice Bran Oil, Red Bell Peppers, Yellow Bell Pepper, Kosher Salt, Cilantro 30 CT, Ground Cumin Seed, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Brown Sugar, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Rosemary, Black pepper (Black Pepper), Chili Powder (Ingredients:  Jalapeno Chili Powder), Garlic Powder.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 39.0,
+              "fat_g": 1.6,
+              "saturated_fat_g": 0.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 220.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 1.0,
+              "potassium_mg": 94.0,
+              "calcium_mg": 21.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -133440,11 +133396,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Spanish Rice",
+            "name": "Pinto Beans",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 150.0,
-            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Kosher Salt, Black pepper (Black Pepper), Rice Bran Oil.",
+            "calories": 102.0,
+            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -133452,57 +133408,28 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 150.0,
-              "fat_g": 0.1,
+              "calories": 102.0,
+              "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 177.0,
-              "carbohydrates_g": 32.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 4.0,
-              "potassium_mg": 15.0,
-              "calcium_mg": 13.0,
-              "iron_mg": 1.3
-            }
-          },
-          {
-            "name": "Black Beans",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 84.0,
-            "ingredients": "Black Beans (Prepared black beans, water, salt, and calcium chloride (firming agent).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 84.0,
-              "fat_g": 0.4,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 197.0,
-              "carbohydrates_g": 16.0,
+              "sodium_mg": 456.0,
+              "carbohydrates_g": 19.0,
               "fiber_g": 4.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 5.0,
-              "potassium_mg": 314.0,
-              "calcium_mg": 43.0,
-              "iron_mg": 1.3
+              "potassium_mg": 2.0,
+              "calcium_mg": 21.0,
+              "iron_mg": 1.2
             }
           },
           {
-            "name": "Roasted Cut Corn",
+            "name": "Green Rice",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 67.0,
-            "ingredients": "Corn cooked from frozen NS as to color fat not added in cooking made with cooking spray.",
+            "calories": 147.0,
+            "ingredients": "Water, Rice Royal Basmati (White basmati rice.), Yellow Onions, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Cilantro 30 CT, Celery, Rice Bran Oil, Baby Spinach, Pepper Jalapeno Case, Garlic.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -133510,82 +133437,24 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 67.0,
-              "fat_g": 0.6,
-              "saturated_fat_g": 0.1,
+              "calories": 147.0,
+              "fat_g": 2.0,
+              "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 195.0,
-              "carbohydrates_g": 16.0,
-              "fiber_g": 2.0,
+              "sodium_mg": 1092.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 2.0,
-              "potassium_mg": 191.0,
-              "calcium_mg": 2.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 3.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.4
             }
           }
         ],
         "Toppings & Condiments": [
-          {
-            "name": "Jalapeno Slices",
-            "description": "",
-            "serving_size": "1 oz serving",
-            "calories": 4.0,
-            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 4.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 459.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 0.0,
-              "potassium_mg": 35.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Lime Wedge",
-            "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
-            }
-          },
           {
             "name": "Tartar Sauce",
             "description": "",
@@ -133645,6 +133514,35 @@
             }
           },
           {
+            "name": "Jalapeno Slices",
+            "description": "",
+            "serving_size": "1 oz serving",
+            "calories": 4.0,
+            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 4.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 459.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 35.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
             "name": "Tomatillo Salsa Verde",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -133700,6 +133598,35 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -245312,13 +245239,12 @@
             }
           },
           {
-            "name": "Taco Seitan",
+            "name": "Ranchero Tofu",
             "description": "",
-            "serving_size": "3 oz serving",
-            "calories": 60.0,
-            "ingredients": "Sietan (Filtered Water, Vital Wheat Gluten, Soy Sauce (Water, Soybeans, Wheat, Salt), Defatted Soy, Flour, Garbanzo Bean Flour, Garlic.), Green Bell Peppers, Yellow Onion, Green Chilies (Green chilies.), Water, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Pepper Jalapeno 10 LB, Ground Cumin Seed, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Oregano Leaf, Kosher Salt, Rice Bran Oil, Black pepper (Black Pepper).",
+            "serving_size": "0.5 cups",
+            "calories": 176.0,
+            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Pepper Jalapeno Case, Kosher Salt, Ground Cumin Seed, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Black pepper (Black Pepper).",
             "allergens": [
-              "Wheat",
               "Soy"
             ],
             "dietary_labels": [
@@ -245327,48 +245253,33 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 60.0,
-              "fat_g": 0.3,
-              "saturated_fat_g": 0.1,
+              "calories": 176.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.9,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 382.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 720.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 5.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 10.0,
-              "potassium_mg": 107.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 1.1
+              "total_sugar_g": 2.0,
+              "protein_g": 11.0,
+              "potassium_mg": 407.0,
+              "calcium_mg": 90.0,
+              "iron_mg": 4.1
             }
           },
           {
-            "name": "Chicken Fajita Strips",
+            "name": "Pork Carnitas",
             "description": "",
-            "serving_size": "6 oz serving",
-            "calories": 133.0,
-            "ingredients": "Chicken Fajita Strips (Ingredients: Boneless Skinless Chicken Breast With Rib Meat, Water, Seasoning (salt, Dextrose, Dehydrated Garlic, Spices, Sodium Phosphates, Flavor [maltodextrin, Grill Flavor (from Sunflower Oil), Modified Corn Starch, Corn Syrup Solids], Dehydrated Onion, Natural Flavor, Modified Food Starch, Carrageenan.), Yellow Onions, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Kosher Salt, Black pepper (Black Pepper).",
+            "serving_size": "3 oz serving",
+            "calories": null,
+            "ingredients": "Pork Shoulder Butt Boneless, Franks Red Hot Sauce (Aged Cayenne Red Peppers, Distilled Vinegar, Water, Salt and Garlic Powder.), Water, Brown Sugar, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Garlic Granules, Kosher Salt, Ground Cumin Seed, Oregano Leaf, Chili Powder (Ingredients:  Jalapeno Chili Powder), Onion Granules, Coriander - Ground, White Pepper, Black pepper (Black Pepper), Cayenne Pepper (Black Pepper), Black Pepper (Black Pepper), Chili Pepper Red Flakes Organic (Red pepper.).",
             "allergens": [],
             "dietary_labels": [],
             "is_vegan": false,
             "is_vegetarian": false,
-            "nutrition": {
-              "calories": 133.0,
-              "fat_g": 3.4,
-              "saturated_fat_g": 0.2,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 52.0,
-              "sodium_mg": 429.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 17.0,
-              "potassium_mg": 367.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.5
-            }
+            "nutrition": {}
           }
         ],
         "Cheeses": [
@@ -248411,11 +248322,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Spanish Rice",
+            "name": "Roasted Cut Corn",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 150.0,
-            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Kosher Salt, Black pepper (Black Pepper), Rice Bran Oil.",
+            "calories": 67.0,
+            "ingredients": "Corn cooked from frozen NS as to color fat not added in cooking made with cooking spray.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -248423,20 +248334,49 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 150.0,
+              "calories": 67.0,
+              "fat_g": 0.6,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 195.0,
+              "carbohydrates_g": 16.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 2.0,
+              "potassium_mg": 191.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Cilantro Lime Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 219.0,
+            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Juice Lime Concentrate (100% Pure lime juice concentrate.), Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 219.0,
               "fat_g": 0.1,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 177.0,
-              "carbohydrates_g": 32.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 48.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 4.0,
-              "potassium_mg": 15.0,
-              "calcium_mg": 13.0,
-              "iron_mg": 1.3
+              "total_sugar_g": 0.0,
+              "protein_g": 5.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 5.0,
+              "iron_mg": 1.9
             }
           },
           {
@@ -248465,35 +248405,6 @@
               "protein_g": 2.0,
               "potassium_mg": 3.0,
               "calcium_mg": 16.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Roasted Corn and Peppers",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 58.0,
-            "ingredients": "Roasted Cut Corn, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Red Bermuda Onions, Extra Virgin Olive Oil, Fresh Limes, Cilantro 30 CT, Ground Cumin Seed, Garlic Whole Peeled Case, Kosher Salt, Black pepper (Black Pepper), Rice Bran Oil.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 58.0,
-              "fat_g": 1.6,
-              "saturated_fat_g": 0.2,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 143.0,
-              "carbohydrates_g": 11.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 2.0,
-              "potassium_mg": 168.0,
-              "calcium_mg": 8.0,
               "iron_mg": 0.6
             }
           }
@@ -248560,6 +248471,35 @@
             }
           },
           {
+            "name": "Pico de Gallo",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 3.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
             "name": "Jalapeno Slices",
             "description": "",
             "serving_size": "1 oz serving",
@@ -248618,95 +248558,6 @@
             }
           },
           {
-            "name": "Lime Wedge",
-            "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Sour Cream",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 28.0,
-            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 28.0,
-              "fat_g": 2.8,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 24.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Pico de Gallo",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 3.0,
-            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 3.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 6.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 33.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
             "name": "Tomatillo Salsa Verde",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -248762,6 +248613,66 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
+            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 28.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 1.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 24.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 19.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -252175,11 +252086,11 @@
             }
           },
           {
-            "name": "Plant Based Chorizo",
+            "name": "Green Lentils w/Roasted Vegetables",
             "description": "",
-            "serving_size": "4 oz",
-            "calories": 251.0,
-            "ingredients": "Plant Based Sausage Chorizo (List of Ingredients:, Ingredients: Water, Textured Pea Protein, Rice, Bran Oil, Poblano Peppers, Pea Protein Isolate,, Paprika, Spices, Mushrooms, Contains 2% or, less of Methylcellulose, Salt, Sugar, Dried, Vinegar, Citric Acid, Dehydrated Garlic, Garlic,, Natural Flavorings, Yeast Extract., Contains Allergens:, No Allergens present), Roma Tomatoes, Red Bermuda Onions, Green Bell Peppers, Pepper Jalapeno Case, Rice Bran Oil, Garlic Powder, Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Whole Cumin Seed.",
+            "serving_size": "6 oz",
+            "calories": 168.0,
+            "ingredients": "Mixed Vegetables (Corn, peas, diced carrots, cut green beans, lima beans, salt.), Green Lentils, Extra Virgin Olive Oil, Garlic Granules, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Kosher Salt, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -252187,20 +252098,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 251.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 3.3,
+              "calories": 168.0,
+              "fat_g": 4.1,
+              "saturated_fat_g": 0.6,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 846.0,
-              "carbohydrates_g": 12.0,
-              "fiber_g": 5.0,
+              "sodium_mg": 269.0,
+              "carbohydrates_g": 26.0,
+              "fiber_g": 8.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 11.0,
-              "potassium_mg": 203.0,
-              "calcium_mg": 45.0,
-              "iron_mg": 3.6
+              "total_sugar_g": 7.0,
+              "protein_g": 8.0,
+              "potassium_mg": 156.0,
+              "calcium_mg": 40.0,
+              "iron_mg": 2.4
             }
           },
           {
@@ -254935,6 +254846,40 @@
               "calcium_mg": 24.0,
               "iron_mg": 0.7
             }
+          },
+          {
+            "name": "Miso Chocolate Chip Blondie",
+            "description": "",
+            "serving_size": "1 bar",
+            "calories": 206.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "allergens": [
+              "Milk",
+              "Egg",
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 206.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 6.0,
+              "trans_fat_g": 0.4,
+              "cholesterol_mg": 43.0,
+              "sodium_mg": 194.0,
+              "carbohydrates_g": 26.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 17.0,
+              "protein_g": 3.0,
+              "potassium_mg": 57.0,
+              "calcium_mg": 23.0,
+              "iron_mg": 0.9
+            }
           }
         ],
         "Ice Cream Bar": [
@@ -255177,11 +255122,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Black Beans",
+            "name": "Pinto Beans",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 84.0,
-            "ingredients": "Black Beans (Prepared black beans, water, salt, and calcium chloride (firming agent).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "calories": 102.0,
+            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -255189,49 +255134,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 84.0,
-              "fat_g": 0.4,
+              "calories": 102.0,
+              "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 197.0,
-              "carbohydrates_g": 16.0,
+              "sodium_mg": 456.0,
+              "carbohydrates_g": 19.0,
               "fiber_g": 4.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 5.0,
-              "potassium_mg": 314.0,
-              "calcium_mg": 43.0,
-              "iron_mg": 1.3
-            }
-          },
-          {
-            "name": "Cilantro Lime Rice",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 219.0,
-            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Juice Lime Concentrate (100% Pure lime juice concentrate.), Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 219.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 46.0,
-              "carbohydrates_g": 48.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 5.0,
-              "potassium_mg": 3.0,
-              "calcium_mg": 5.0,
-              "iron_mg": 1.9
+              "potassium_mg": 2.0,
+              "calcium_mg": 21.0,
+              "iron_mg": 1.2
             }
           },
           {
@@ -255260,6 +255176,35 @@
               "protein_g": 2.0,
               "potassium_mg": 191.0,
               "calcium_mg": 2.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Green Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 147.0,
+            "ingredients": "Water, Rice Royal Basmati (White basmati rice.), Yellow Onions, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Cilantro 30 CT, Celery, Rice Bran Oil, Baby Spinach, Pepper Jalapeno Case, Garlic.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 147.0,
+              "fat_g": 2.0,
+              "saturated_fat_g": 0.4,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1092.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 3.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.4
             }
           }
@@ -255326,124 +255271,6 @@
             }
           },
           {
-            "name": "Cilantro",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Cilantro.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 1.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 27.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Jalapeno Slices",
-            "description": "",
-            "serving_size": "1 oz serving",
-            "calories": 4.0,
-            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 4.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 459.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 0.0,
-              "potassium_mg": 35.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Lime Wedge",
-            "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Sour Cream",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 28.0,
-            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 28.0,
-              "fat_g": 2.8,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 24.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
             "name": "Pico de Gallo",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -255502,6 +255329,64 @@
             }
           },
           {
+            "name": "Cilantro",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 1.0,
+            "ingredients": "Cilantro.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 1.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 2.0,
+              "carbohydrates_g": 0.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 27.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Jalapeno Slices",
+            "description": "",
+            "serving_size": "1 oz serving",
+            "calories": 4.0,
+            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 4.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 459.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 35.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
             "name": "Salsa Roja",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -255528,6 +255413,66 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
+            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 28.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 1.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 24.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 19.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -258939,12 +258884,40 @@
             }
           },
           {
-            "name": "Ranchero Tofu",
+            "name": "Chicken Pastor Taco Filling",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 176.0,
-            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Pepper Jalapeno Case, Kosher Salt, Ground Cumin Seed, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Black pepper (Black Pepper).",
+            "serving_size": "1 oz",
+            "calories": 52.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Chipotle Peppers in Adobo Sauce (Chipotle peppers, adobo sauce.), Pepper Guajillo Dried, Rice Bran Oil, Garlic, Kosher Salt, Annato Seed.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 52.0,
+              "fat_g": 3.2,
+              "saturated_fat_g": 0.6,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 21.0,
+              "sodium_mg": 101.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 5.0,
+              "potassium_mg": 35.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.5
+            }
+          },
+          {
+            "name": "Taco Seitan",
+            "description": "",
+            "serving_size": "3 oz serving",
+            "calories": 60.0,
+            "ingredients": "Sietan (Filtered Water, Vital Wheat Gluten, Soy Sauce (Water, Soybeans, Wheat, Salt), Defatted Soy, Flour, Garbanzo Bean Flour, Garlic.), Green Bell Peppers, Yellow Onion, Green Chilies (Green chilies.), Water, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Pepper Jalapeno 10 LB, Ground Cumin Seed, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Oregano Leaf, Kosher Salt, Rice Bran Oil, Black pepper (Black Pepper).",
             "allergens": [
+              "Wheat",
               "Soy"
             ],
             "dietary_labels": [
@@ -258953,47 +258926,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 176.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 0.9,
+              "calories": 60.0,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 720.0,
-              "carbohydrates_g": 19.0,
-              "fiber_g": 5.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 11.0,
-              "potassium_mg": 407.0,
-              "calcium_mg": 90.0,
-              "iron_mg": 4.1
-            }
-          },
-          {
-            "name": "Chicken Pastor",
-            "description": "",
-            "serving_size": "2 oz",
-            "calories": 76.0,
-            "ingredients": "Chicken Thigh Bnls/Skls ABF, Paste Chili Guajillo 40 LB (Water, Dried chiles, Salt, Contains 2% or less of Citric acid, Potassium sorbate and Sodium benzoate as preservatives.), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Chipotle Peppers in Adobo Sauce, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Garlic Whole Peeled Case, Achiote Paste 15 OZ (Ingredients: Water, Annatto Seed, Corn Flour, Salt, Garlic, Spices, Acetic Acid And Sodium Benzoate As A Preservative.), Kosher Salt, Garlic Granules.",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 76.0,
-              "fat_g": 3.4,
-              "saturated_fat_g": 0.6,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 45.0,
-              "sodium_mg": 154.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 0.0,
+              "sodium_mg": 382.0,
+              "carbohydrates_g": 6.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
-              "protein_g": 9.0,
-              "potassium_mg": 13.0,
-              "calcium_mg": 1.0,
-              "iron_mg": 0.5
+              "protein_g": 10.0,
+              "potassium_mg": 107.0,
+              "calcium_mg": 24.0,
+              "iron_mg": 1.1
             }
           }
         ],
@@ -262091,11 +262037,11 @@
             }
           },
           {
-            "name": "Pinto Beans",
+            "name": "Spicy Red Beans",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 102.0,
-            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "serving_size": "0.25 cups",
+            "calories": 48.0,
+            "ingredients": "Dark Red Kidney Beans (Prepared Kidney Beans, Water, Sugar, Dextrose, Salt, Calcium Chloride (Firming Agent), and Disodium EDTA (Promotes Color Retention).), Tomato, Yellow Onions, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Green Bell Peppers, Celery, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Water, Garlic, Shallots - Peeled, Sugar Granulated (Sugar), Garlic Whole Peeled Case, Tabasco Sauce (Distilled vinegar, red pepper, salt), Extra Virgin Olive Oil, Fresh Basil, Crushed Red Pepper (Cayenne Pepper), Oregano Leaf, Garlic Granules, Onion Granules, Basil, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -262103,49 +262049,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 102.0,
-              "fat_g": 0.5,
-              "saturated_fat_g": 0.0,
+              "calories": 48.0,
+              "fat_g": 0.9,
+              "saturated_fat_g": 0.2,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 456.0,
-              "carbohydrates_g": 19.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
+              "sodium_mg": 68.0,
+              "carbohydrates_g": 8.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 1.0,
               "total_sugar_g": 1.0,
-              "protein_g": 5.0,
-              "potassium_mg": 2.0,
-              "calcium_mg": 21.0,
-              "iron_mg": 1.2
-            }
-          },
-          {
-            "name": "Sautéed Lemon Zucchini",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 21.0,
-            "ingredients": "Fresh Zucchini, Squash Yellow Medium, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Balsamic Vinegar (Organic Balsamic Vinegar.), Kosher Salt, Garlic Whole Peeled Case, Rice Bran Oil, Black pepper (Black Pepper), Herb Mint Fresh 1 LB, Sugar Granulated.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 21.0,
-              "fat_g": 0.5,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 318.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 1.0,
-              "potassium_mg": 285.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.4
+              "protein_g": 2.0,
+              "potassium_mg": 195.0,
+              "calcium_mg": 25.0,
+              "iron_mg": 0.8
             }
           }
         ],
@@ -262180,11 +262097,11 @@
             }
           },
           {
-            "name": "Cilantro",
+            "name": "Pico de Gallo",
             "description": "",
             "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Cilantro.",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -262192,20 +262109,78 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 1.0,
+              "calories": 3.0,
               "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Tomatillo Salsa Verde",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 2.0,
+            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 2.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 20.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 27.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.1
+              "potassium_mg": 19.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -262238,11 +262213,11 @@
             }
           },
           {
-            "name": "Lime Wedge",
+            "name": "Cilantro",
             "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
+            "serving_size": "1 Tbsp",
+            "calories": 1.0,
+            "ingredients": "Cilantro.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -262250,20 +262225,49 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
+              "calories": 1.0,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 2.0,
+              "carbohydrates_g": 0.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 27.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Salsa Roja",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 14.0,
+            "ingredients": "Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, Fresh Parsley, Pepper Jalapeno Case, Oregano Leaf, Kosher Salt, Serrano Peppers, Black pepper (Black Pepper), Crushed Red Pepper (Cayenne Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 14.0,
+              "fat_g": 1.2,
+              "saturated_fat_g": 0.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 47.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
               "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
+              "calcium_mg": 2.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -262326,93 +262330,6 @@
               "potassium_mg": 0.0,
               "calcium_mg": 19.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Pico de Gallo",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 3.0,
-            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 3.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 6.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 33.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Tomatillo Salsa Verde",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 2.0,
-            "ingredients": "Fresh Tomatillos (Tomatillos, Citric Acid.), Pepper Jalapeno 5 LB, Yellow Onion, Cilantro 30 CT, Kosher Salt, Sugar Granulated (Sugar).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 2.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 20.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 19.0,
-              "calcium_mg": 1.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Salsa Roja",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 14.0,
-            "ingredients": "Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, Fresh Parsley, Pepper Jalapeno Case, Oregano Leaf, Kosher Salt, Serrano Peppers, Black pepper (Black Pepper), Crushed Red Pepper (Cayenne Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 14.0,
-              "fat_g": 1.2,
-              "saturated_fat_g": 0.2,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 47.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.1
             }
           },
           {
@@ -266054,62 +265971,59 @@
             }
           },
           {
-            "name": "Pork Carnitas",
+            "name": "Plant Based Chorizo",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 176.0,
-            "ingredients": "Pork Shoulder Butt Boneless, Franks Red Hot Sauce (Aged Cayenne Red Peppers, Distilled Vinegar, Water, Salt and Garlic Powder.), Water, Brown Sugar, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Garlic Granules, Kosher Salt, Ground Cumin Seed, Oregano Leaf, Chili Powder (Ingredients:  Jalapeno Chili Powder), Onion Granules, Coriander - Ground, White Pepper, Black pepper (Black Pepper), Cayenne Pepper (Black Pepper), Black Pepper (Black Pepper), Chili Pepper Red Flakes Organic (Red pepper.).",
+            "serving_size": "4 oz",
+            "calories": 251.0,
+            "ingredients": "Plant Based Sausage Chorizo (List of Ingredients:, Ingredients: Water, Textured Pea Protein, Rice, Bran Oil, Poblano Peppers, Pea Protein Isolate,, Paprika, Spices, Mushrooms, Contains 2% or, less of Methylcellulose, Salt, Sugar, Dried, Vinegar, Citric Acid, Dehydrated Garlic, Garlic,, Natural Flavorings, Yeast Extract., Contains Allergens:, No Allergens present), Roma Tomatoes, Red Bermuda Onions, Green Bell Peppers, Pepper Jalapeno Case, Rice Bran Oil, Garlic Powder, Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Whole Cumin Seed.",
             "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 176.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 3.5,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 68.0,
-              "sodium_mg": 389.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 18.0,
-              "potassium_mg": 255.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 1.7
-            }
-          },
-          {
-            "name": "Taco Seitan",
-            "description": "",
-            "serving_size": "3 oz serving",
-            "calories": 60.0,
-            "ingredients": "Sietan (Filtered Water, Vital Wheat Gluten, Soy Sauce (Water, Soybeans, Wheat, Salt), Defatted Soy, Flour, Garbanzo Bean Flour, Garlic.), Green Bell Peppers, Yellow Onion, Green Chilies (Green chilies.), Water, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Pepper Jalapeno 10 LB, Ground Cumin Seed, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Oregano Leaf, Kosher Salt, Rice Bran Oil, Black pepper (Black Pepper).",
-            "allergens": [
-              "Wheat",
-              "Soy"
-            ],
             "dietary_labels": [
               "Vegan"
             ],
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 60.0,
-              "fat_g": 0.3,
-              "saturated_fat_g": 0.1,
+              "calories": 251.0,
+              "fat_g": 18.0,
+              "saturated_fat_g": 3.3,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 382.0,
-              "carbohydrates_g": 6.0,
+              "sodium_mg": 846.0,
+              "carbohydrates_g": 12.0,
+              "fiber_g": 5.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 4.0,
+              "protein_g": 11.0,
+              "potassium_mg": 203.0,
+              "calcium_mg": 45.0,
+              "iron_mg": 3.6
+            }
+          },
+          {
+            "name": "Pork Chile Colorado",
+            "description": "",
+            "serving_size": "4 oz",
+            "calories": 196.0,
+            "ingredients": "Pork, Water, Pepper Guajillo Dried, Yellow Onion, Kosher Salt, Garlic Whole Peeled Case, Garlic Granules, Rice Bran Oil, Ground Cumin Seed, Bay Leaves.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 196.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 4.0,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 59.0,
+              "sodium_mg": 249.0,
+              "carbohydrates_g": 3.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 10.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 19.0,
               "potassium_mg": 107.0,
-              "calcium_mg": 24.0,
-              "iron_mg": 1.1
+              "calcium_mg": 38.0,
+              "iron_mg": 1.2
             }
           }
         ],
@@ -269180,11 +269094,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Green Rice",
+            "name": "Black Beans",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 147.0,
-            "ingredients": "Water, Rice Royal Basmati (White basmati rice.), Yellow Onions, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Cilantro 30 CT, Celery, Rice Bran Oil, Baby Spinach, Pepper Jalapeno Case, Garlic.",
+            "calories": 84.0,
+            "ingredients": "Black Beans (Prepared black beans, water, salt, and calcium chloride (firming agent).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -269192,78 +269106,49 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 147.0,
-              "fat_g": 2.0,
-              "saturated_fat_g": 0.4,
+              "calories": 84.0,
+              "fat_g": 0.4,
+              "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 1092.0,
-              "carbohydrates_g": 29.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 197.0,
+              "carbohydrates_g": 16.0,
+              "fiber_g": 4.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 5.0,
+              "potassium_mg": 314.0,
+              "calcium_mg": 43.0,
+              "iron_mg": 1.3
+            }
+          },
+          {
+            "name": "Cilantro Lime Rice",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 219.0,
+            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Juice Lime Concentrate (100% Pure lime juice concentrate.), Cilantro 30 CT, Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 219.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 46.0,
+              "carbohydrates_g": 48.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
-              "protein_g": 3.0,
-              "potassium_mg": 33.0,
-              "calcium_mg": 7.0,
-              "iron_mg": 0.4
-            }
-          },
-          {
-            "name": "Refried Beans",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 43.0,
-            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 43.0,
-              "fat_g": 0.4,
-              "saturated_fat_g": 0.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 247.0,
-              "carbohydrates_g": 7.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 2.0,
+              "protein_g": 5.0,
               "potassium_mg": 3.0,
-              "calcium_mg": 16.0,
-              "iron_mg": 0.6
-            }
-          },
-          {
-            "name": "Latin Roasted Vegetables",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 32.0,
-            "ingredients": "Fresh Zucchini, Squash Yellow Medium, Red Bermuda Onions, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Extra Virgin Olive Oil, Ground Cumin Seed, Kosher Salt, Oregano Leaf, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 32.0,
-              "fat_g": 2.2,
-              "saturated_fat_g": 0.3,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 76.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 113.0,
-              "calcium_mg": 12.0,
-              "iron_mg": 0.4
+              "calcium_mg": 5.0,
+              "iron_mg": 1.9
             }
           }
         ],
@@ -269298,93 +269183,6 @@
             }
           },
           {
-            "name": "Cilantro",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Cilantro.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 1.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 27.0,
-              "calcium_mg": 3.0,
-              "iron_mg": 0.1
-            }
-          },
-          {
-            "name": "Jalapeno Slices",
-            "description": "",
-            "serving_size": "1 oz serving",
-            "calories": 4.0,
-            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 4.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 459.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 0.0,
-              "potassium_mg": 35.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Lime Wedge",
-            "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
             "name": "Shredded Cheddar Cheese",
             "description": "",
             "serving_size": "1 oz",
@@ -269416,34 +269214,32 @@
             }
           },
           {
-            "name": "Sour Cream",
+            "name": "Cilantro",
             "description": "",
             "serving_size": "1 Tbsp",
-            "calories": 28.0,
-            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
-            "allergens": [
-              "Milk"
-            ],
+            "calories": 1.0,
+            "ingredients": "Cilantro.",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 28.0,
-              "fat_g": 2.8,
-              "saturated_fat_g": 1.7,
+              "calories": 1.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 24.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 2.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 19.0,
-              "iron_mg": 0.0
+              "potassium_mg": 27.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.1
             }
           },
           {
@@ -269472,6 +269268,35 @@
               "protein_g": 0.0,
               "potassium_mg": 33.0,
               "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Jalapeno Slices",
+            "description": "",
+            "serving_size": "1 oz serving",
+            "calories": 4.0,
+            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 4.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 459.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 35.0,
+              "calcium_mg": 0.0,
               "iron_mg": 0.0
             }
           },
@@ -269531,6 +269356,66 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 28.0,
+            "ingredients": "CULTURED CREAM, ENZYMES., CONTAINS: MILK..",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 28.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 1.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 24.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 19.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -272359,37 +272244,6 @@
             }
           },
           {
-            "name": "Tofu & Vegetable Fajita",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 191.0,
-            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Yellow Onions, Green Bell Peppers, Rice Bran Oil, Red Bell Peppers, Yellow Bell Pepper, Chili Powder (Ingredients:  Jalapeno Chili Powder), Ground Cumin Seed, Kosher Salt, Black pepper (Black Pepper).",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 191.0,
-              "fat_g": 11.0,
-              "saturated_fat_g": 1.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 129.0,
-              "carbohydrates_g": 8.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 15.0,
-              "potassium_mg": 701.0,
-              "calcium_mg": 136.0,
-              "iron_mg": 5.8
-            }
-          },
-          {
             "name": "Fish Taco",
             "description": "",
             "serving_size": "3 oz",
@@ -272417,6 +272271,35 @@
               "potassium_mg": 190.0,
               "calcium_mg": 11.0,
               "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Jackfruit Carnitas",
+            "description": "",
+            "serving_size": "2 oz",
+            "calories": 39.0,
+            "ingredients": "Shredded Jackfruit (Young Jackfruit, Water, Lactic Acid, Salt), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Water, Yellow Onion, Green Bell Peppers, Rice Bran Oil, Red Bell Peppers, Yellow Bell Pepper, Kosher Salt, Cilantro 30 CT, Ground Cumin Seed, Paprika (Paprika, Silicon Dioxide (added to make free flowing).), Brown Sugar, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Rosemary, Black pepper (Black Pepper), Chili Powder (Ingredients:  Jalapeno Chili Powder), Garlic Powder.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 39.0,
+              "fat_g": 1.6,
+              "saturated_fat_g": 0.3,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 220.0,
+              "carbohydrates_g": 5.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 1.0,
+              "potassium_mg": 94.0,
+              "calcium_mg": 21.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -275610,11 +275493,11 @@
         "Build Your Own Burrito/Taco Menu": [],
         "Rice, Beans & Vegetables": [
           {
-            "name": "Spanish Rice",
+            "name": "Pinto Beans",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 150.0,
-            "ingredients": "White Rice (Long grain parboiled rice enriched with iron (ferric phosphate), niacin, thiamine mononitrate, and folic acid.), Water, Tomatoes In Juice (Vine-ripened fresh tomatoes, tomato juice, salt, calcium chloride and naturally derived citric acid.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Yellow Onion, Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper, Garlic Whole Peeled Case, Kosher Salt, Black pepper (Black Pepper), Rice Bran Oil.",
+            "calories": 102.0,
+            "ingredients": "Pinto Beans (Prepared Pinto Beans, Water, Salt, Calcium Chloride (firming agent), Calcium Disodium EDTA (added for color retention).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -275622,57 +275505,28 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 150.0,
-              "fat_g": 0.1,
+              "calories": 102.0,
+              "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 177.0,
-              "carbohydrates_g": 32.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 4.0,
-              "potassium_mg": 15.0,
-              "calcium_mg": 13.0,
-              "iron_mg": 1.3
-            }
-          },
-          {
-            "name": "Black Beans",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 84.0,
-            "ingredients": "Black Beans (Prepared black beans, water, salt, and calcium chloride (firming agent).), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 84.0,
-              "fat_g": 0.4,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 197.0,
-              "carbohydrates_g": 16.0,
+              "sodium_mg": 456.0,
+              "carbohydrates_g": 19.0,
               "fiber_g": 4.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 5.0,
-              "potassium_mg": 314.0,
-              "calcium_mg": 43.0,
-              "iron_mg": 1.3
+              "potassium_mg": 2.0,
+              "calcium_mg": 21.0,
+              "iron_mg": 1.2
             }
           },
           {
-            "name": "Roasted Cut Corn",
+            "name": "Green Rice",
             "description": "",
             "serving_size": "0.5 cups",
-            "calories": 67.0,
-            "ingredients": "Corn cooked from frozen NS as to color fat not added in cooking made with cooking spray.",
+            "calories": 147.0,
+            "ingredients": "Water, Rice Royal Basmati (White basmati rice.), Yellow Onions, Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Cilantro 30 CT, Celery, Rice Bran Oil, Baby Spinach, Pepper Jalapeno Case, Garlic.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -275680,82 +275534,24 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 67.0,
-              "fat_g": 0.6,
-              "saturated_fat_g": 0.1,
+              "calories": 147.0,
+              "fat_g": 2.0,
+              "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 195.0,
-              "carbohydrates_g": 16.0,
-              "fiber_g": 2.0,
+              "sodium_mg": 1092.0,
+              "carbohydrates_g": 29.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 2.0,
-              "potassium_mg": 191.0,
-              "calcium_mg": 2.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 3.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 7.0,
               "iron_mg": 0.4
             }
           }
         ],
         "Toppings & Condiments": [
-          {
-            "name": "Jalapeno Slices",
-            "description": "",
-            "serving_size": "1 oz serving",
-            "calories": 4.0,
-            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 4.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 459.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 0.0,
-              "potassium_mg": 35.0,
-              "calcium_mg": 0.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Lime Wedge",
-            "description": "",
-            "serving_size": "1 lime wedge",
-            "calories": 9.0,
-            "ingredients": "Fresh Limes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 9.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 1.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.2
-            }
-          },
           {
             "name": "Tartar Sauce",
             "description": "",
@@ -275815,6 +275611,35 @@
             }
           },
           {
+            "name": "Jalapeno Slices",
+            "description": "",
+            "serving_size": "1 oz serving",
+            "calories": 4.0,
+            "ingredients": "Jalapeno Peppers (Ingredients, Ingredients: Jalapeno Peppers, Water, Distilled Vinegar,, Iodized Salt (Contains Potassium Iodate), Contains 2% Or, Less Of: Corn Oil, Calcium Chloride (Firming), Spices, Garlic, Powder.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 4.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 459.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 35.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
             "name": "Tomatillo Salsa Verde",
             "description": "",
             "serving_size": "1 Tbsp",
@@ -275870,6 +275695,35 @@
               "potassium_mg": 29.0,
               "calcium_mg": 2.0,
               "iron_mg": 0.1
+            }
+          },
+          {
+            "name": "Lime Wedge",
+            "description": "",
+            "serving_size": "1 lime wedge",
+            "calories": 9.0,
+            "ingredients": "Fresh Limes.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 9.0,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 1.0,
+              "carbohydrates_g": 3.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 29.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.2
             }
           },
           {
