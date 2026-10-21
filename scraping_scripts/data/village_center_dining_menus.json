@@ -2366,7 +2366,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -2377,7 +2377,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -2387,8 +2387,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -4505,14 +4505,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -9378,7 +9378,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -9389,7 +9389,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -9399,8 +9399,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -11473,14 +11473,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -16370,7 +16370,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -16381,7 +16381,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -16391,8 +16391,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -18449,14 +18449,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -19400,8 +19400,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -19414,20 +19414,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           }
         ],
@@ -23138,7 +23138,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -23149,7 +23149,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -23159,8 +23159,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -25189,14 +25189,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -30187,7 +30187,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -30198,7 +30198,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -30208,8 +30208,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -32266,14 +32266,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -36707,7 +36707,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -36718,7 +36718,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -36728,8 +36728,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -38789,14 +38789,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -43119,7 +43119,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -43130,7 +43130,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -43140,8 +43140,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -45200,14 +45200,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -49821,7 +49821,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -49832,7 +49832,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -49842,8 +49842,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -51777,14 +51777,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -56722,7 +56722,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -56733,7 +56733,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -56743,8 +56743,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -58759,14 +58759,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -63592,7 +63592,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -63603,7 +63603,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -63613,8 +63613,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -65705,14 +65705,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -66651,8 +66651,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -66665,20 +66665,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           }
         ],
@@ -70375,7 +70375,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -70386,7 +70386,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -70396,8 +70396,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -72457,14 +72457,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -77422,7 +77422,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -77433,7 +77433,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -77443,8 +77443,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -79563,14 +79563,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -83812,7 +83812,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -83823,7 +83823,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -83833,8 +83833,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -85924,14 +85924,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -90452,7 +90452,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -90463,7 +90463,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -90473,8 +90473,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -92532,14 +92532,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -97009,7 +97009,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -97020,7 +97020,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -97030,8 +97030,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -98994,14 +98994,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -103723,7 +103723,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -103734,7 +103734,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -103744,8 +103744,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -105726,14 +105726,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -110539,7 +110539,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -110550,7 +110550,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -110560,8 +110560,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -112587,14 +112587,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -113600,8 +113600,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -113614,20 +113614,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           }
         ],
@@ -116930,7 +116930,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -116941,7 +116941,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -116951,8 +116951,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -119012,14 +119012,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -123578,7 +123578,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -123589,7 +123589,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -123599,8 +123599,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -125657,14 +125657,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -129851,7 +129851,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -129862,7 +129862,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -129872,8 +129872,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -131933,14 +131933,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -136284,7 +136284,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -136295,7 +136295,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -136305,8 +136305,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -138365,14 +138365,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -143121,7 +143121,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -143132,7 +143132,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -143142,8 +143142,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -145322,14 +145322,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -150391,7 +150391,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -150402,7 +150402,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -150412,8 +150412,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -152563,14 +152563,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -157261,7 +157261,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -157272,7 +157272,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -157282,8 +157282,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -159340,14 +159340,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -160291,8 +160291,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -160305,20 +160305,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           }
         ],
@@ -164242,7 +164242,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -164253,7 +164253,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -164263,8 +164263,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -166296,14 +166296,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -170933,7 +170933,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -170944,7 +170944,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -170954,8 +170954,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -173077,14 +173077,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -177366,7 +177366,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -177377,7 +177377,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -177387,8 +177387,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -179541,14 +179541,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -183839,7 +183839,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -183850,7 +183850,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -183860,8 +183860,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -185982,14 +185982,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -190602,7 +190602,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -190613,7 +190613,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -190623,8 +190623,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -192558,14 +192558,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -197626,7 +197626,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -197637,7 +197637,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -197647,8 +197647,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -199678,14 +199678,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -204481,7 +204481,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -204492,7 +204492,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -204502,8 +204502,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -206596,14 +206596,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -207542,8 +207542,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -207556,20 +207556,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           }
         ],
@@ -211295,7 +211295,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -211306,7 +211306,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -211316,8 +211316,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -213377,14 +213377,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -218313,7 +218313,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -218324,7 +218324,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -218334,8 +218334,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -220454,14 +220454,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -224703,7 +224703,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -224714,7 +224714,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -224724,8 +224724,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -226815,14 +226815,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -231343,7 +231343,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -231354,7 +231354,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -231364,8 +231364,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -233423,14 +233423,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -238110,7 +238110,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -238121,7 +238121,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -238131,8 +238131,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -240157,14 +240157,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -244974,7 +244974,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -244985,7 +244985,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -244995,8 +244995,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -246977,14 +246977,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -251790,7 +251790,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -251801,7 +251801,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -251811,8 +251811,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -253838,14 +253838,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -254851,8 +254851,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -254865,20 +254865,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           }
         ],
@@ -258588,7 +258588,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -258599,7 +258599,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -258609,8 +258609,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -260670,14 +260670,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -265675,7 +265675,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -265686,7 +265686,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -265696,8 +265696,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -267754,14 +267754,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -271948,7 +271948,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -271959,7 +271959,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -271969,8 +271969,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -274030,14 +274030,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }
@@ -278391,7 +278391,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -278402,7 +278402,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -278412,8 +278412,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -280472,14 +280472,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           }

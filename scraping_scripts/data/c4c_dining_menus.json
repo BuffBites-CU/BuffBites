@@ -87,7 +87,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -98,7 +98,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -108,8 +108,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -4764,7 +4764,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -4795,14 +4795,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -8875,17 +8875,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -10536,7 +10536,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -10547,7 +10547,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -10557,8 +10557,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -15926,17 +15926,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -20011,17 +20011,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -21840,7 +21840,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -21851,7 +21851,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -21861,8 +21861,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -25112,8 +25112,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -25126,20 +25126,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           },
           {
@@ -27300,7 +27300,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -27312,15 +27312,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -27492,17 +27492,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -31580,17 +31580,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -33361,7 +33361,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -33372,7 +33372,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -33382,8 +33382,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -39278,17 +39278,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -43276,17 +43276,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -43929,7 +43929,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -43941,15 +43941,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -45082,7 +45082,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -45093,7 +45093,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -45103,8 +45103,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -50384,7 +50384,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -50396,15 +50396,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -50720,17 +50720,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -54695,17 +54695,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -56472,7 +56472,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -56483,7 +56483,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -56493,8 +56493,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -62063,17 +62063,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -65974,17 +65974,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -67782,7 +67782,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -67793,7 +67793,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -67803,8 +67803,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -72053,7 +72053,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -72065,15 +72065,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -72357,17 +72357,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -76275,17 +76275,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -77815,7 +77815,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -77826,7 +77826,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -77836,8 +77836,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -82842,17 +82842,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -86757,17 +86757,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -88358,7 +88358,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -88369,7 +88369,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -88379,8 +88379,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -93837,17 +93837,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -97752,17 +97752,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -99582,7 +99582,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -99593,7 +99593,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -99603,8 +99603,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -102819,8 +102819,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -102833,20 +102833,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           },
           {
@@ -104975,7 +104975,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -104987,15 +104987,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -105308,17 +105308,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -109253,17 +109253,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -111030,7 +111030,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -111041,7 +111041,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -111051,8 +111051,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -116989,17 +116989,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -120931,17 +120931,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -122737,7 +122737,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -122748,7 +122748,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -122758,8 +122758,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -128037,7 +128037,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -128049,15 +128049,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -128428,17 +128428,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -132345,17 +132345,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -134122,7 +134122,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -134133,7 +134133,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -134143,8 +134143,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -139570,17 +139570,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -143510,17 +143510,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -145318,7 +145318,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -145329,7 +145329,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -145339,8 +145339,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -149512,7 +149512,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -149524,15 +149524,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -149816,17 +149816,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -153734,17 +153734,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -155275,7 +155275,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -155286,7 +155286,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -155296,8 +155296,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -160271,17 +160271,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -164217,17 +164217,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -165819,7 +165819,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -165830,7 +165830,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -165840,8 +165840,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -171149,17 +171149,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -175263,17 +175263,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -180637,17 +180637,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -185988,17 +185988,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -186581,7 +186581,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -186593,15 +186593,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -191365,17 +191365,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -193172,7 +193172,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -193183,7 +193183,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -193193,8 +193193,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -198617,14 +198617,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -198648,7 +198648,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -202614,17 +202614,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -204455,7 +204455,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -204466,7 +204466,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -204476,8 +204476,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -208503,7 +208503,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 83.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -208516,14 +208516,14 @@
               "saturated_fat_g": 1.3,
               "trans_fat_g": 0.2,
               "cholesterol_mg": 14.0,
-              "sodium_mg": 182.0,
+              "sodium_mg": 187.0,
               "carbohydrates_g": 9.0,
               "fiber_g": 4.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 7.0,
-              "potassium_mg": 118064.0,
-              "calcium_mg": 11.7,
+              "potassium_mg": 118070.0,
+              "calcium_mg": 12.0,
               "iron_mg": 1.3
             }
           },
@@ -208784,14 +208784,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -208815,7 +208815,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -212902,17 +212902,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -214474,7 +214474,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -214485,7 +214485,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -214495,8 +214495,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -219091,7 +219091,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -219122,14 +219122,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -223202,17 +223202,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -224894,7 +224894,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -224905,7 +224905,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -224915,8 +224915,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -230224,17 +230224,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -234336,17 +234336,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -236175,7 +236175,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -236186,7 +236186,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -236196,8 +236196,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -239387,8 +239387,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -239401,20 +239401,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           },
           {
@@ -241575,7 +241575,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -241587,15 +241587,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -241767,17 +241767,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -245855,17 +245855,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -247661,7 +247661,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -247672,7 +247672,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -247682,8 +247682,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -253518,17 +253518,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -257516,17 +257516,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -258140,7 +258140,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -258152,15 +258152,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -259353,7 +259353,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -259364,7 +259364,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -259374,8 +259374,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -264595,7 +264595,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -264607,15 +264607,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -264931,17 +264931,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -268906,17 +268906,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -270714,7 +270714,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -270725,7 +270725,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -270735,8 +270735,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -276245,17 +276245,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -280156,17 +280156,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -281995,7 +281995,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -282006,7 +282006,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -282016,8 +282016,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -286206,7 +286206,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -286218,15 +286218,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -286510,17 +286510,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -290428,17 +290428,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -291998,7 +291998,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -292009,7 +292009,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -292019,8 +292019,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -296965,17 +296965,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -300880,17 +300880,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -302513,7 +302513,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -302524,7 +302524,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -302534,8 +302534,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -307932,17 +307932,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -311847,17 +311847,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -313708,7 +313708,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -313719,7 +313719,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -313729,8 +313729,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -316915,8 +316915,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -316929,20 +316929,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           },
           {
@@ -319071,7 +319071,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -319083,15 +319083,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -319404,17 +319404,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -323349,17 +323349,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -325157,7 +325157,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -325168,7 +325168,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -325178,8 +325178,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -331056,17 +331056,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -334998,17 +334998,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -336835,7 +336835,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -336846,7 +336846,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -336856,8 +336856,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -342075,7 +342075,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -342087,15 +342087,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -342466,17 +342466,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -346383,17 +346383,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -348191,7 +348191,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -348202,7 +348202,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -348212,8 +348212,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -353579,17 +353579,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -357519,17 +357519,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -359358,7 +359358,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -359369,7 +359369,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -359379,8 +359379,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -363492,7 +363492,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -363504,15 +363504,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           }
@@ -363796,17 +363796,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -367714,17 +367714,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -369286,7 +369286,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -369297,7 +369297,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -369307,8 +369307,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -374222,17 +374222,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -378168,17 +378168,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -379770,7 +379770,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -379781,7 +379781,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -379791,8 +379791,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -385098,17 +385098,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -389212,17 +389212,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -391045,7 +391045,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -391056,7 +391056,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -391066,8 +391066,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -394260,8 +394260,8 @@
             "name": "Miso Chocolate Chip Blondie",
             "description": "",
             "serving_size": "1 bar",
-            "calories": 206.0,
-            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
+            "calories": 248.0,
+            "ingredients": "Brown Sugar, Kngfl Flour Sir Galahad 50 # (Wheat Flour Enriched (Wheat Flour, Niacin, Reduced Iron, Thiamine, Mononitrate, Riboflavin, Folic Acid), Malted Barley Flour.), Unsalted Butter (Cream, (milk), natural flavor.), Chocolate Chips Semi Sweet 1000ct (Ingredients: Sugar, unsweetened chocolate, cocoa butter, soy lecithin (an emulsifier), natural vanilla extract., , Dietary Notes: Contains soy. May contain milk.), Whole Eggs (Cage Free), Miso Paste White Soybean (Ingredients: Organic Rice, Organic Whole Hulled Soybeans, Water, Sea Salt, Koji (Aspergillus oryzae)), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
@@ -394274,20 +394274,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 206.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 6.0,
+              "calories": 248.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 7.0,
               "trans_fat_g": 0.4,
               "cholesterol_mg": 43.0,
               "sodium_mg": 194.0,
-              "carbohydrates_g": 26.0,
+              "carbohydrates_g": 32.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
+              "total_sugar_g": 21.0,
               "protein_g": 3.0,
               "potassium_mg": 57.0,
               "calcium_mg": 23.0,
-              "iron_mg": 0.9
+              "iron_mg": 1.1
             }
           },
           {
@@ -396407,7 +396407,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -396419,15 +396419,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -396799,7 +396799,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -396830,14 +396830,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -400716,17 +400716,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -402529,7 +402529,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -402540,7 +402540,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -402550,8 +402550,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -408504,14 +408504,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -408535,7 +408535,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -412503,17 +412503,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -413096,7 +413096,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -413108,15 +413108,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -414338,7 +414338,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -414349,7 +414349,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -414359,8 +414359,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -419553,7 +419553,7 @@
             "description": "",
             "serving_size": "6 fl oz",
             "calories": 249.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -419565,15 +419565,15 @@
               "fat_g": 10.0,
               "saturated_fat_g": 3.9,
               "trans_fat_g": 0.5,
-              "cholesterol_mg": 41.0,
-              "sodium_mg": 547.0,
+              "cholesterol_mg": 42.0,
+              "sodium_mg": 561.0,
               "carbohydrates_g": 27.0,
               "fiber_g": 12.0,
               "added_sugar_g": 1.0,
-              "total_sugar_g": 3.0,
+              "total_sugar_g": 2.0,
               "protein_g": 22.0,
-              "potassium_mg": 354193.0,
-              "calcium_mg": 35.0,
+              "potassium_mg": 354210.0,
+              "calcium_mg": 36.0,
               "iron_mg": 3.8
             }
           },
@@ -420035,7 +420035,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -420066,14 +420066,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -424009,17 +424009,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -425816,7 +425816,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -425827,7 +425827,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -425837,8 +425837,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -431261,14 +431261,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -431292,7 +431292,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -435258,17 +435258,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
@@ -437099,7 +437099,7 @@
             "description": "",
             "serving_size": "0.5 cups",
             "calories": 67.0,
-            "ingredients": "Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone)..",
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).).",
             "allergens": [
               "Soy"
             ],
@@ -437110,7 +437110,7 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 67.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 0.4,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
@@ -437120,8 +437120,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 7.0,
-              "potassium_mg": 292.0,
-              "calcium_mg": 58.0,
+              "potassium_mg": 293.0,
+              "calcium_mg": 58.6,
               "iron_mg": 2.5
             }
           },
@@ -441147,7 +441147,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 83.0,
-            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce, Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
+            "ingredients": "Grama Ground Beef (Prairie grazed and grass-finished beef), Red Kidney Beans (Ingredients:, Small Red Beans.), Water, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Yellow Onion, Pinto Beans, Red Bell Peppers, Green Bell Peppers, Fire Roasted Tomatoes (Vine-ripened Unpeeled Diced Tomatoes, Tomato Juice, Less Than 2% Of: Salt, Calcium Chloride, Citric Acid*. *naturally Derived.), Beef Base (Beef Stock, Salt, Natural Flavor, Sugar, Beef Fat, Maltodextrin, Yeast Extract, and Stabilizer (Xanthan Gum, Propylene Glycol Alginate).), Chipotle Peppers in Adobo Sauce (Chipotle Peppers, Water, Tomato Paste, Salt, Sugar, Onion, Acetic Acid.), Apple Cider Vinegar (Apple Cider Vinegar Diluted with Water to 5% Acidity.), Lea & Perrins Worcestershire Sauce (Ingredients, DISTILLED WHITE VINEGAR, MOLASSES, SUGAR,, WATER, SALT, ONIONS, ANCHOVIES, GARLIC, CLOVES,, TAMARIND EXTRACT, NATURAL FLAVORINGS, CHILI, PEPPER EXTRACT., Allergens & Attributes, Fish), Garlic Whole Peeled Case, Pepper Jalapeno Case, Chili Powder (Ingredients:  Jalapeno Chili Powder), Coriander - Whole, Whole Cumin Seed, Rice Bran Oil, Kosher Salt, Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Cayenne Pepper (Black Pepper).",
             "allergens": [
               "Fish"
             ],
@@ -441160,14 +441160,14 @@
               "saturated_fat_g": 1.3,
               "trans_fat_g": 0.2,
               "cholesterol_mg": 14.0,
-              "sodium_mg": 182.0,
+              "sodium_mg": 187.0,
               "carbohydrates_g": 9.0,
               "fiber_g": 4.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 1.0,
               "protein_g": 7.0,
-              "potassium_mg": 118064.0,
-              "calcium_mg": 11.7,
+              "potassium_mg": 118070.0,
+              "calcium_mg": 12.0,
               "iron_mg": 1.3
             }
           },
@@ -441428,14 +441428,14 @@
               "saturated_fat_g": 5.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 25.0,
-              "sodium_mg": 60.0,
+              "sodium_mg": 61.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 8.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 252.0,
+              "calcium_mg": 253.0,
               "iron_mg": 0.0
             }
           },
@@ -441459,7 +441459,7 @@
               "saturated_fat_g": 12.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 61.0,
-              "sodium_mg": 365.0,
+              "sodium_mg": 364.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
@@ -445546,17 +445546,17 @@
             "nutrition": {
               "calories": 61.0,
               "fat_g": 4.9,
-              "saturated_fat_g": 3.0,
+              "saturated_fat_g": 3.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 15.0,
-              "sodium_mg": 36.0,
+              "sodium_mg": 37.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 5.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 152.0,
+              "calcium_mg": 153.0,
               "iron_mg": 0.0
             }
           },
