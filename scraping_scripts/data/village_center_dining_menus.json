@@ -138956,6 +138956,40 @@
         ],
         "Breakfast  Pastries": [
           {
+            "name": "Chai Spice Cake",
+            "description": "",
+            "serving_size": "1 serving",
+            "calories": 283.0,
+            "ingredients": "Powdered Sugar (Cane Sugar, Corn Starch), Unsalted Butter (Cream, (milk), natural flavor.), Crispearls-Dark (Chocolate 84,0% (cocoa mass; sugar; cocoa butter; milkfat;emulsifier: lecithins (soya); natural vanilla flavouring); crisped cereals (wheat flour, sugar, wheat malt flour, starch (wheat), raising agent: E500ii, saltl cocoa butter, natural vanilla flavouring); glucose syrup; sugar; glazing agent: E414; May Contain: Mustard, Rye, Barley, Oats.), Crispearls-White (white chocolate 84.0% (sugar, cocoa butter, whole milk powder, whey powder (milk), emulsifier: soya lecithin, natural vanilla flavouring), crisped cereals (wheat flour, sugar, wheat malt flour, starch (wheat), raising agent: E500ii, salt, cocoa butter, natural vanilla flavouring), glucose syrup, sugar, glazing agent: E414.), Heavy Whipping Cream (Heavy cream, carrageenan.), Pure Vanilla Extract (vanilla bean extractives in water and alcohol (41%)), Compound Chai 1 Kg (Sugar, water, sweetened condensed milk, natural flavors, corn syrup solids, ginger, cinnamon, cardamom, fruit and vegetable juice, caramel color, black pepper, nutmeg, cloves, potassium sorbate, sodium benzoate.), Kosher Salt, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sour Cream (CULTURED CREAM, ENZYMES., CONTAINS: MILK.), Brown Sugar, Whole Eggs (Cage Free), Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Paste Vanilla Bean Madagascar 100% (Sugar, water, vanilla bean extractives, exhausted vanilla bean seeds, xanthum gum.).",
+            "allergens": [
+              "Milk",
+              "Egg",
+              "Wheat",
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 283.0,
+              "fat_g": 18.0,
+              "saturated_fat_g": 11.0,
+              "trans_fat_g": 0.7,
+              "cholesterol_mg": 45.0,
+              "sodium_mg": 36.0,
+              "carbohydrates_g": 30.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 28.0,
+              "total_sugar_g": 28.0,
+              "protein_g": 0.0,
+              "potassium_mg": 13.0,
+              "calcium_mg": 9.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
             "name": "Assorted Mini Danish",
             "description": "",
             "serving_size": "1 mini danish",
@@ -139119,39 +139153,6 @@
               "potassium_mg": 0.0,
               "calcium_mg": 0.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Pumpkin Bread",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 489.0,
-            "ingredients": "Sugar Granulated (Sugar), Pumpkin (Prepared pumpkin.), Grapeseed Oil (100% Cold Pressed Grapeseed Oil.), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Pepitas Raw 27.5#, Cake Pan Grease Starch Free 35# (Canola Oil an/or soybean oil, lecithin (soy), hydrogenated canola oil and/or hydrogenated cottonseed oil, TBHQ and citric acid in propylene glycol added as antioxidants.), Kosher Salt, Baking Soda (Ingredients:, Sodium Bicarbonate), Ground Cinnamon, Ground Nutmeg, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Ground Clove.",
-            "allergens": [
-              "Egg",
-              "Wheat",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 489.0,
-              "fat_g": 30.0,
-              "saturated_fat_g": 3.7,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 62.0,
-              "sodium_mg": 174.0,
-              "carbohydrates_g": 51.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 31.0,
-              "protein_g": 5.0,
-              "potassium_mg": 27.0,
-              "calcium_mg": 22.0,
-              "iron_mg": 1.6
             }
           }
         ],
