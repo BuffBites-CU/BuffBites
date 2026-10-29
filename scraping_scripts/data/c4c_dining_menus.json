@@ -184506,40 +184506,6 @@
         ],
         "Dessert Station - Breakfast  Pastries": [
           {
-            "name": "Cranberry Orange Bread",
-            "description": "",
-            "serving_size": "1 slice",
-            "calories": 6356.0,
-            "ingredients": "Fresh Orange, Flour (Unbleached hard wheat flour, malted barley flour, niacin, reduced iron, thiamine mono-nitrate, riboflavin, folic acid.), Whole Eggs (Cage Free), Unsalted Butter (Cream, (milk), natural flavor.), Whole Milk, Water, Orange Zest, Cranberries, Cake Pan Grease Starch Free 35# (Canola Oil an/or soybean oil, lecithin (soy), hydrogenated canola oil and/or hydrogenated cottonseed oil, TBHQ and citric acid in propylene glycol added as antioxidants.), Orange Juice (Ingredients, Concentrated Orange Juice), Orange Extract Simply Organic 2 OZ (Organic Sunflower Oil, Organic Orange Oil.), Sugar Pearl 22# (Sugar), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Wheat",
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 6356.0,
-              "fat_g": 319.0,
-              "saturated_fat_g": 172.0,
-              "trans_fat_g": 9.0,
-              "cholesterol_mg": 1889.0,
-              "sodium_mg": 2750.0,
-              "carbohydrates_g": 731.0,
-              "fiber_g": 69.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 223.0,
-              "protein_g": 142.0,
-              "potassium_mg": 5398.0,
-              "calcium_mg": 1493.0,
-              "iron_mg": 40.5
-            }
-          },
-          {
             "name": "Lemon Poppyseed Muffins",
             "description": "",
             "serving_size": "1 muffin",

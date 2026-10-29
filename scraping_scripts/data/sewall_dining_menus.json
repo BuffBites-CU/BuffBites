@@ -28933,16 +28933,15 @@
             }
           },
           {
-            "name": "Cranberry Orange Bread",
+            "name": "Lemon Poppy Seed Muffin",
             "description": "",
-            "serving_size": "1 slice",
-            "calories": 6356.0,
-            "ingredients": "Fresh Orange, Flour (Unbleached hard wheat flour, malted barley flour, niacin, reduced iron, thiamine mono-nitrate, riboflavin, folic acid.), Whole Eggs (Cage Free), Unsalted Butter (Cream, (milk), natural flavor.), Whole Milk, Water, Orange Zest, Cranberries, Cake Pan Grease Starch Free 35# (Canola Oil an/or soybean oil, lecithin (soy), hydrogenated canola oil and/or hydrogenated cottonseed oil, TBHQ and citric acid in propylene glycol added as antioxidants.), Orange Juice (Ingredients, Concentrated Orange Juice), Orange Extract Simply Organic 2 OZ (Organic Sunflower Oil, Organic Orange Oil.), Sugar Pearl 22# (Sugar), Kosher Salt, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.).",
+            "serving_size": "1 muffin",
+            "calories": 332.0,
+            "ingredients": "Flour, Sour Cream (Cultured grade A milk, cream, nonfat dry milk, whey, modified food starch, sodium phosphate, guar gum, carrageenan, calcium sulfate, and locust bean gum.), Cane Sugar, Buttermilk (Cultured lowfat milk, nonfat dry milk, modified food starch, salt, mono and diglycerides (emulsifiers), carrageenan, locust bean gum, sodium citrate, vitamin A palmitate, vitamin D3.), Unsalted Butter (Cream, (milk), natural flavor.), Cage Free Eggs (Ingredients: Cage Free Whole Eggs, Citric Acid (Citric Acid added to Preserve Color)), Lemon Zest (Chopped lemon peels, cane sugar, natural lemon flavor.), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Poppy Seeds, Baking Powder (Ingredients, Sodium Bicarbonate, Cornstarch, Sodium Aluminum Sulfate, Monocalcium Phosphate, Silicon Dioxide.), Baking Soda (Ingredients:, Sodium Bicarbonate), Kosher Salt.",
             "allergens": [
               "Milk",
               "Egg",
-              "Wheat",
-              "Soy"
+              "Wheat"
             ],
             "dietary_labels": [
               "Vegetarian"
@@ -28950,20 +28949,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 6356.0,
-              "fat_g": 319.0,
-              "saturated_fat_g": 172.0,
-              "trans_fat_g": 9.0,
-              "cholesterol_mg": 1889.0,
-              "sodium_mg": 2750.0,
-              "carbohydrates_g": 731.0,
-              "fiber_g": 69.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 223.0,
-              "protein_g": 142.0,
-              "potassium_mg": 5398.0,
-              "calcium_mg": 1493.0,
-              "iron_mg": 40.5
+              "calories": 332.0,
+              "fat_g": 15.0,
+              "saturated_fat_g": 9.0,
+              "trans_fat_g": 0.3,
+              "cholesterol_mg": 52.0,
+              "sodium_mg": 314.0,
+              "carbohydrates_g": 45.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 2.0,
+              "total_sugar_g": 20.0,
+              "protein_g": 6.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 191.0,
+              "iron_mg": 1.8
             }
           },
           {

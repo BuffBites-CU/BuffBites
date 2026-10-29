@@ -121565,37 +121565,6 @@
             }
           },
           {
-            "name": "Roasted Tomato Basil Tofu",
-            "description": "",
-            "serving_size": "1 tofu slice",
-            "calories": 324.0,
-            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Golden Italian Dressing (Soybean Oil, Vinegar, Water, Sugar, Salt, Contains less than 2% of Garlic*, Xanthan Gum, Onion*, Red Bell Pepper*, Spice, Garlic Powder, Lemon Juice Concentrate, Natural Flavor, Beta Carotene and Oleoresin Paprika (Color). *Dried), Sundried Tomatoes, Rice Bran Oil.",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 324.0,
-              "fat_g": 19.0,
-              "saturated_fat_g": 2.9,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 258.0,
-              "carbohydrates_g": 20.0,
-              "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 10.0,
-              "protein_g": 19.0,
-              "potassium_mg": 1473.0,
-              "calcium_mg": 165.0,
-              "iron_mg": 8.1
-            }
-          },
-          {
             "name": "Chicken Drummies Kabob",
             "description": "",
             "serving_size": "1 drummie",
@@ -263886,37 +263855,6 @@
               "potassium_mg": 304.0,
               "calcium_mg": 17.0,
               "iron_mg": 1.1
-            }
-          },
-          {
-            "name": "Roasted Tomato Basil Tofu",
-            "description": "",
-            "serving_size": "1 tofu slice",
-            "calories": 324.0,
-            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Golden Italian Dressing (Soybean Oil, Vinegar, Water, Sugar, Salt, Contains less than 2% of Garlic*, Xanthan Gum, Onion*, Red Bell Pepper*, Spice, Garlic Powder, Lemon Juice Concentrate, Natural Flavor, Beta Carotene and Oleoresin Paprika (Color). *Dried), Sundried Tomatoes, Rice Bran Oil.",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 324.0,
-              "fat_g": 19.0,
-              "saturated_fat_g": 2.9,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 258.0,
-              "carbohydrates_g": 20.0,
-              "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 10.0,
-              "protein_g": 19.0,
-              "potassium_mg": 1473.0,
-              "calcium_mg": 165.0,
-              "iron_mg": 8.1
             }
           },
           {
