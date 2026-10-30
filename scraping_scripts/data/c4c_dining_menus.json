@@ -193265,37 +193265,6 @@
         ],
         "Italian - Featured Entree": [
           {
-            "name": "Salmon Picatta",
-            "description": "",
-            "serving_size": "3 oz",
-            "calories": 122.0,
-            "ingredients": "Wild Sockeye Salmon Fillet, Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Capers (Capers, Water, Vinegar, Salt.), Yellow Onion, Wine Box Franzia Chardonnay, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Unsalted Butter (Cream, (milk), natural flavor.), Extra Virgin Olive Oil, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Garlic Whole Peeled Case, Kosher Salt, Black pepper (Black Pepper), Fennel Seed - Ground, Thyme Leaf.",
-            "allergens": [
-              "Milk",
-              "Wheat",
-              "Fish"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 122.0,
-              "fat_g": 5.0,
-              "saturated_fat_g": 1.4,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 35.0,
-              "sodium_mg": 416.0,
-              "carbohydrates_g": 5.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 15.0,
-              "potassium_mg": 236.0,
-              "calcium_mg": 9.0,
-              "iron_mg": 0.4
-            }
-          },
-          {
             "name": "Herb Roasted Veggies w/Crispy Chickpeas",
             "description": "",
             "serving_size": "6 oz",
@@ -193711,11 +193680,11 @@
             }
           },
           {
-            "name": "Sun-Dried Tomato and Arugula Pizza",
+            "name": "Artichoke, Arugula, Basil, & Feta Pizza",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 332.0,
-            "ingredients": "Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Organic Flour, Water, Sundried Tomatoes, Oil Blend (80% soybean oil, 20% olive pomace oil.), Heavy Whipping Cream (Heavy cream, carrageenan.), Extra Virgin Olive Oil, Baby Arugula, Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Balsamic Vinegar (Organic Balsamic Vinegar.), Garlic Whole Peeled Case, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Parmesan Cheese (Pasteurized cow's milk, cheese culture, salt, enzymes.), Kosher Salt, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated (Sugar), Rice Bran Oil, Garlic Granules, Oregano Leaf, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Rosemary, Basil, Thyme, Black pepper (Black Pepper).",
+            "calories": 262.0,
+            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Basil Pesto (Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows’ Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt.), Artichoke Hearts (Artichoke Hearts, Water, Sunflower Oil, Cane Vinegar, Salt, Spices, Citric Acid.), Water, Oil Blend (80% soybean oil, 20% olive pomace oil.), Baby Arugula, Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Kosher Salt, Sugar Granulated (Sugar), Garlic Granules, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -193726,20 +193695,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 332.0,
-              "fat_g": 19.0,
-              "saturated_fat_g": 7.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 19.0,
-              "sodium_mg": 386.0,
-              "carbohydrates_g": 28.0,
+              "calories": 262.0,
+              "fat_g": 15.0,
+              "saturated_fat_g": 3.4,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 11.0,
+              "sodium_mg": 285.0,
+              "carbohydrates_g": 23.0,
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 5.0,
-              "protein_g": 13.0,
-              "potassium_mg": 401.0,
-              "calcium_mg": 245.0,
-              "iron_mg": 1.4
+              "total_sugar_g": 1.0,
+              "protein_g": 9.0,
+              "potassium_mg": 94.0,
+              "calcium_mg": 144.0,
+              "iron_mg": 0.7
             }
           }
         ],
