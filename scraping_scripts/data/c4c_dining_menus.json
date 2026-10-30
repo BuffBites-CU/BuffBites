@@ -193711,11 +193711,11 @@
             }
           },
           {
-            "name": "Artichoke, Arugula, Basil, & Feta Pizza",
+            "name": "Sun-Dried Tomato and Arugula Pizza",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 262.0,
-            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Basil Pesto (Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows’ Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt.), Artichoke Hearts (Artichoke Hearts, Water, Sunflower Oil, Cane Vinegar, Salt, Spices, Citric Acid.), Water, Oil Blend (80% soybean oil, 20% olive pomace oil.), Baby Arugula, Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Kosher Salt, Sugar Granulated (Sugar), Garlic Granules, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "calories": 332.0,
+            "ingredients": "Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Organic Flour, Water, Sundried Tomatoes, Oil Blend (80% soybean oil, 20% olive pomace oil.), Heavy Whipping Cream (Heavy cream, carrageenan.), Extra Virgin Olive Oil, Baby Arugula, Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Balsamic Vinegar (Organic Balsamic Vinegar.), Garlic Whole Peeled Case, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Parmesan Cheese (Pasteurized cow's milk, cheese culture, salt, enzymes.), Kosher Salt, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated (Sugar), Rice Bran Oil, Garlic Granules, Oregano Leaf, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Rosemary, Basil, Thyme, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -193726,20 +193726,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 262.0,
-              "fat_g": 15.0,
-              "saturated_fat_g": 3.4,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 11.0,
-              "sodium_mg": 285.0,
-              "carbohydrates_g": 23.0,
+              "calories": 332.0,
+              "fat_g": 19.0,
+              "saturated_fat_g": 7.0,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 19.0,
+              "sodium_mg": 386.0,
+              "carbohydrates_g": 28.0,
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 9.0,
-              "potassium_mg": 94.0,
-              "calcium_mg": 144.0,
-              "iron_mg": 0.7
+              "total_sugar_g": 5.0,
+              "protein_g": 13.0,
+              "potassium_mg": 401.0,
+              "calcium_mg": 245.0,
+              "iron_mg": 1.4
             }
           }
         ],
@@ -193777,11 +193777,11 @@
             }
           },
           {
-            "name": "Italian Roasted Vegetables",
+            "name": "Italian Green Beans",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 28.0,
-            "ingredients": "Red Bermuda Onions, Fresh Zucchini, Squash Yellow Medium, Broccoli Florets, Cauliflower Florets, Green Bell Peppers, Baby Carrots, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Garlic Whole Peeled Case, Garlic Granules, Oregano Leaf, Onion Granules, Black pepper (Black Pepper), Basil, Kosher Salt, Crushed Red Pepper (Cayenne Pepper).",
+            "serving_size": "5 oz",
+            "calories": 87.0,
+            "ingredients": "Green Beans (Ingredients, Green Beans), Rice Bran Oil, Kosher Salt, Black Pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -193789,20 +193789,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 28.0,
-              "fat_g": 1.1,
-              "saturated_fat_g": 0.2,
+              "calories": 87.0,
+              "fat_g": 4.4,
+              "saturated_fat_g": 0.9,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 19.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 1068.0,
+              "carbohydrates_g": 11.0,
+              "fiber_g": 4.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 1.0,
-              "potassium_mg": 179.0,
-              "calcium_mg": 18.0,
-              "iron_mg": 0.4
+              "total_sugar_g": 3.0,
+              "protein_g": 3.0,
+              "potassium_mg": 278.0,
+              "calcium_mg": 65.0,
+              "iron_mg": 1.3
             }
           }
         ],
