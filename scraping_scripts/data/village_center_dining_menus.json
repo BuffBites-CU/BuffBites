@@ -1267,19 +1267,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -1643,7 +1643,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -2113,19 +2113,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -7868,15 +7868,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -8429,7 +8429,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -8948,19 +8948,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -14487,11 +14487,11 @@
             }
           },
           {
-            "name": "Red Letil Tomato Soup",
+            "name": "Red Lentil Tomato Soup",
             "description": "",
             "serving_size": "6 fl oz",
-            "calories": 435.0,
-            "ingredients": "Water, Brown Sugar, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
+            "calories": 135.0,
+            "ingredients": "Water, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Brown Sugar, Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -14499,20 +14499,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 435.0,
+              "calories": 135.0,
               "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 446.0,
-              "carbohydrates_g": 103.0,
+              "sodium_mg": 423.0,
+              "carbohydrates_g": 25.0,
               "fiber_g": 5.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 79.0,
+              "total_sugar_g": 2.0,
               "protein_g": 9.0,
-              "potassium_mg": 235.0,
-              "calcium_mg": 77.0,
-              "iron_mg": 3.2
+              "potassium_mg": 130.0,
+              "calcium_mg": 11.0,
+              "iron_mg": 2.6
             }
           },
           {
@@ -14951,15 +14951,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -15762,19 +15762,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -22186,19 +22186,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -28127,7 +28127,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -28865,19 +28865,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -34664,7 +34664,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -35171,19 +35171,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -41637,19 +41637,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -47560,15 +47560,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -47932,7 +47932,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -48406,19 +48406,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -54338,15 +54338,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -54710,7 +54710,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -55360,19 +55360,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           },
           {
@@ -60754,14 +60754,14 @@
               "saturated_fat_g": 1.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 373.0,
+              "sodium_mg": 375.0,
               "carbohydrates_g": 17.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
               "potassium_mg": 249.0,
-              "calcium_mg": 10.0,
+              "calcium_mg": 11.0,
               "iron_mg": 0.2
             }
           }
@@ -61262,15 +61262,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -62383,19 +62383,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -67886,15 +67886,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -69180,19 +69180,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -75148,15 +75148,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -75620,7 +75620,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -76198,19 +76198,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -82370,7 +82370,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -82717,19 +82717,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -89129,19 +89129,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -94953,19 +94953,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -95457,7 +95457,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -95802,19 +95802,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -101714,15 +101714,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -101997,7 +101997,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -102736,19 +102736,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -108600,11 +108600,11 @@
             }
           },
           {
-            "name": "Red Letil Tomato Soup",
+            "name": "Red Lentil Tomato Soup",
             "description": "",
             "serving_size": "6 fl oz",
-            "calories": 435.0,
-            "ingredients": "Water, Brown Sugar, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
+            "calories": 135.0,
+            "ingredients": "Water, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Brown Sugar, Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -108612,20 +108612,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 435.0,
+              "calories": 135.0,
               "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 446.0,
-              "carbohydrates_g": 103.0,
+              "sodium_mg": 423.0,
+              "carbohydrates_g": 25.0,
               "fiber_g": 5.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 79.0,
+              "total_sugar_g": 2.0,
               "protein_g": 9.0,
-              "potassium_mg": 235.0,
-              "calcium_mg": 77.0,
-              "iron_mg": 3.2
+              "potassium_mg": 130.0,
+              "calcium_mg": 11.0,
+              "iron_mg": 2.6
             }
           },
           {
@@ -109058,15 +109058,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -109635,19 +109635,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -115514,15 +115514,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -116418,19 +116418,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -122558,15 +122558,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -122727,7 +122727,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -123465,19 +123465,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -129288,7 +129288,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -129766,19 +129766,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           },
           {
@@ -136464,19 +136464,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -142416,19 +142416,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -142792,7 +142792,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -143262,19 +143262,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -149047,15 +149047,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -149608,7 +149608,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -150127,19 +150127,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -155666,11 +155666,11 @@
             }
           },
           {
-            "name": "Red Letil Tomato Soup",
+            "name": "Red Lentil Tomato Soup",
             "description": "",
             "serving_size": "6 fl oz",
-            "calories": 435.0,
-            "ingredients": "Water, Brown Sugar, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
+            "calories": 135.0,
+            "ingredients": "Water, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Brown Sugar, Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -155678,20 +155678,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 435.0,
+              "calories": 135.0,
               "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 446.0,
-              "carbohydrates_g": 103.0,
+              "sodium_mg": 423.0,
+              "carbohydrates_g": 25.0,
               "fiber_g": 5.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 79.0,
+              "total_sugar_g": 2.0,
               "protein_g": 9.0,
-              "potassium_mg": 235.0,
-              "calcium_mg": 77.0,
-              "iron_mg": 3.2
+              "potassium_mg": 130.0,
+              "calcium_mg": 11.0,
+              "iron_mg": 2.6
             }
           },
           {
@@ -156130,15 +156130,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -156941,19 +156941,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -162779,15 +162779,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -163772,19 +163772,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -169840,15 +169840,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -170152,7 +170152,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -170890,19 +170890,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -176689,7 +176689,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -177196,19 +177196,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -183662,19 +183662,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -189584,15 +189584,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -189956,7 +189956,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -190430,19 +190430,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -196362,15 +196362,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -196734,7 +196734,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -197384,19 +197384,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           },
           {
@@ -203372,11 +203372,11 @@
             }
           },
           {
-            "name": "Red Letil Tomato Soup",
+            "name": "Red Lentil Tomato Soup",
             "description": "",
             "serving_size": "6 fl oz",
-            "calories": 435.0,
-            "ingredients": "Water, Brown Sugar, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
+            "calories": 135.0,
+            "ingredients": "Water, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Brown Sugar, Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -203384,20 +203384,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 435.0,
+              "calories": 135.0,
               "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 446.0,
-              "carbohydrates_g": 103.0,
+              "sodium_mg": 423.0,
+              "carbohydrates_g": 25.0,
               "fiber_g": 5.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 79.0,
+              "total_sugar_g": 2.0,
               "protein_g": 9.0,
-              "potassium_mg": 235.0,
-              "calcium_mg": 77.0,
-              "iron_mg": 3.2
+              "potassium_mg": 130.0,
+              "calcium_mg": 11.0,
+              "iron_mg": 2.6
             }
           },
           {
@@ -203623,15 +203623,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -204434,19 +204434,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -209937,15 +209937,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -211231,19 +211231,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -217199,15 +217199,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           }
         ],
@@ -217671,7 +217671,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -218249,19 +218249,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -224422,7 +224422,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -224769,19 +224769,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -231181,19 +231181,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -237127,19 +237127,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -237631,7 +237631,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -237976,19 +237976,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -244008,15 +244008,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -244291,7 +244291,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -245030,19 +245030,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -250894,11 +250894,11 @@
             }
           },
           {
-            "name": "Red Letil Tomato Soup",
+            "name": "Red Lentil Tomato Soup",
             "description": "",
             "serving_size": "6 fl oz",
-            "calories": 435.0,
-            "ingredients": "Water, Brown Sugar, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
+            "calories": 135.0,
+            "ingredients": "Water, Red Lentils, Tomato Puree (Vine-ripened Fresh Tomatoes, Salt, And Naturally Derived Citric Acid.), Vegetable Base (Vegetable Juices (Tomato, Mushroom, Onion, Carrot And Celery), Sugar, Maltodextrin, Salt And Yeast Extract, Natural Flavor.), Brown Sugar, Garlic Granules, Kosher Salt, Onion Granules, White Pepper.",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -250906,20 +250906,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 435.0,
+              "calories": 135.0,
               "fat_g": 0.5,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 446.0,
-              "carbohydrates_g": 103.0,
+              "sodium_mg": 423.0,
+              "carbohydrates_g": 25.0,
               "fiber_g": 5.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 79.0,
+              "total_sugar_g": 2.0,
               "protein_g": 9.0,
-              "potassium_mg": 235.0,
-              "calcium_mg": 77.0,
-              "iron_mg": 3.2
+              "potassium_mg": 130.0,
+              "calcium_mg": 11.0,
+              "iron_mg": 2.6
             }
           },
           {
@@ -251352,15 +251352,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -251929,19 +251929,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -257808,15 +257808,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -258712,19 +258712,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -264852,15 +264852,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 7.0,
+              "sodium_mg": 6.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 53.0,
-              "calcium_mg": 9.3,
-              "iron_mg": 0.3
+              "potassium_mg": 40.0,
+              "calcium_mg": 7.0,
+              "iron_mg": 0.2
             }
           },
           {
@@ -265021,7 +265021,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -265759,19 +265759,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
@@ -271582,7 +271582,7 @@
             "description": "",
             "serving_size": "2 fl oz",
             "calories": 143.0,
-            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Water, Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Onion Granules, Crushed Red Pepper (Cayenne Pepper), Pan Coating All Purpose (Canola Oil, Phosphated Mono & Diglycerides, Propellant.).",
+            "ingredients": "Whole Milk (Milk, vitamin d3.), Heavy Whipping Cream (Heavy cream, carrageenan.), Whipping Cream (Heavy cream, carrageenan., Contains: Milk.), Water, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Base Roux Dry GF (Chickpea Flour, Rice Flour, Quinoa Flour, Food Starch --Modified, Rice Starch.), Unsalted Butter (Cream, (milk), natural flavor.), Garlic Whole Peeled Case, Garlic Granules, White Pepper, Ground Nutmeg, Fennel Seed - Ground, Cayenne Pepper (Black Pepper), Kosher Salt, Crushed Red Pepper (Cayenne Pepper), Onion Granules.",
             "allergens": [
               "Milk"
             ],
@@ -272060,19 +272060,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           },
           {
@@ -278758,19 +278758,19 @@
             "is_vegetarian": true,
             "nutrition": {
               "calories": 3.0,
-              "fat_g": 0.1,
+              "fat_g": 0.0,
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 11.0,
-              "carbohydrates_g": 1.0,
+              "sodium_mg": 9.0,
+              "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 79.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.4
+              "potassium_mg": 60.0,
+              "calcium_mg": 10.5,
+              "iron_mg": 0.3
             }
           }
         ],
