@@ -175463,37 +175463,6 @@
         ],
         "Smoke n' Grill - Lunch and Dinner Specials": [
           {
-            "name": "Island Style Tempeh",
-            "description": "",
-            "serving_size": "6 oz",
-            "calories": 327.0,
-            "ingredients": "Tempeh (Cultured organic soybean, water.), Pineapple (Pineapple, pineapple juice.), Water, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Orange Juice (Ingredients, Concentrated Orange Juice), Tabasco Sauce (Distilled vinegar, red pepper, salt), Parsley Curly 60 CT, Organic Agave Nectar (100% pure organic agave nectar.), Garlic Whole Peeled Case, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Extra Virgin Olive Oil, Ground Cinnamon, Black pepper (Black Pepper), Ground Nutmeg.",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 327.0,
-              "fat_g": 13.0,
-              "saturated_fat_g": 1.9,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 25.0,
-              "carbohydrates_g": 22.0,
-              "fiber_g": 8.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 7.0,
-              "protein_g": 31.0,
-              "potassium_mg": 648.0,
-              "calcium_mg": 133.0,
-              "iron_mg": 2.5
-            }
-          },
-          {
             "name": "Jamaican Jerk Chicken Thighs",
             "description": "",
             "serving_size": "4 oz",
