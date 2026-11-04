@@ -13,13 +13,7 @@
     "smokin-grill",
     "c4c_wholesome-field"
   ],
-  "repeat_info": {
-    "first_seen_week": 3,
-    "first_seen_start": "2026-11-02",
-    "repeat_week": 6,
-    "repeat_start": "2026-11-23",
-    "gap_weeks": 3
-  },
+  "repeat_info": null,
   "menus": [
     {
       "date": "2026-10-18",
@@ -5249,7 +5243,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -16241,7 +16235,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -43536,7 +43530,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -53817,7 +53811,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -64180,7 +64174,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -75399,7 +75393,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -86884,7 +86878,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -98521,7 +98515,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -109873,7 +109867,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -121072,7 +121066,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -131366,7 +131360,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -141821,7 +141815,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -152875,7 +152869,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -160435,6 +160429,241 @@
             }
           }
         ],
+        "Latin - Latin Dinner Special": [],
+        "Latin - Build Your Own Nacho Bar": [
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Gluten Friendly Queso",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 205.0,
+            "ingredients": "Shredded Pepper Jack Cheese (Pasteurized milk, green and red jalapeno peppers, cheese culture, salt, enzymes. Potato starch and powdered cellulose added to prevent caking.), Evaporated Milk (Milk, dipotassium phosphate, carrageenan and Vitamin D3.), Shredded White American Cheese (Cultured Pasteurized Milk and Skim Milk, Cream, Salt, Contains Less Than 2% of Sodium Phosphate, Enzymes, Powdered Cellulose (anticaking).), Water.",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 205.0,
+              "fat_g": 15.0,
+              "saturated_fat_g": 10.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 55.0,
+              "sodium_mg": 452.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 13.0,
+              "potassium_mg": 14.0,
+              "calcium_mg": 378.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Guacamole",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 33.0,
+            "ingredients": "Guacamole (Ingredients: Hass Avocados, Tomatillos, Water, Onions, Salt, Jalapeño Peppers, Dehydrated Red Bell Peppers, Vinegar, Granulated Garlic, Cilantro, Dehydrated Onion, Garlic, Citric Acid, Spice, Sugar.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 33.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 57.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 109.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Pico de Gallo",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 3.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 30.0,
+            "ingredients": "Sour Cream (CULTURED CREAM, ENZYMES., CONTAINS: MILK.).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 30.0,
+              "fat_g": 3.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 25.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 20.2,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Chicken Pastor",
+            "description": "",
+            "serving_size": "1 2 oz serving",
+            "calories": 61.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Paste Chili Guajillo 40 LB (Water, Dried chiles, Salt, Contains 2% or less of Citric acid, Potassium sorbate and Sodium benzoate as preservatives.), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Chipotle Peppers in Adobo Sauce, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Garlic Whole Peeled Case, Achiote Paste 15 OZ (Ingredients: Water, Annatto Seed, Corn Flour, Salt, Garlic, Spices, Acetic Acid And Sodium Benzoate As A Preservative.), Kosher Salt, Garlic Granules.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 61.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 36.0,
+              "sodium_mg": 124.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 8.0,
+              "potassium_mg": 10.0,
+              "calcium_mg": 0.8,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Refried Beans",
+            "description": "",
+            "serving_size": "1 1/4 cup serving",
+            "calories": 21.0,
+            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 21.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 121.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 1.0,
+              "potassium_mg": 1.0,
+              "calcium_mg": 7.8,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Persia - Grilled Kabobs & Stews": [
           {
             "name": "Chicken Drummies Kabob",
@@ -164202,7 +164431,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -171860,6 +172089,241 @@
             }
           }
         ],
+        "Latin - Latin Dinner Special": [],
+        "Latin - Build Your Own Nacho Bar": [
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Gluten Friendly Queso",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 205.0,
+            "ingredients": "Shredded Pepper Jack Cheese (Pasteurized milk, green and red jalapeno peppers, cheese culture, salt, enzymes. Potato starch and powdered cellulose added to prevent caking.), Evaporated Milk (Milk, dipotassium phosphate, carrageenan and Vitamin D3.), Shredded White American Cheese (Cultured Pasteurized Milk and Skim Milk, Cream, Salt, Contains Less Than 2% of Sodium Phosphate, Enzymes, Powdered Cellulose (anticaking).), Water.",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 205.0,
+              "fat_g": 15.0,
+              "saturated_fat_g": 10.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 55.0,
+              "sodium_mg": 452.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 13.0,
+              "potassium_mg": 14.0,
+              "calcium_mg": 378.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Guacamole",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 33.0,
+            "ingredients": "Guacamole (Ingredients: Hass Avocados, Tomatillos, Water, Onions, Salt, Jalapeño Peppers, Dehydrated Red Bell Peppers, Vinegar, Granulated Garlic, Cilantro, Dehydrated Onion, Garlic, Citric Acid, Spice, Sugar.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 33.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 57.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 109.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Pico de Gallo",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 3.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 30.0,
+            "ingredients": "Sour Cream (CULTURED CREAM, ENZYMES., CONTAINS: MILK.).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 30.0,
+              "fat_g": 3.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 25.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 20.2,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Chicken Pastor",
+            "description": "",
+            "serving_size": "1 2 oz serving",
+            "calories": 61.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Paste Chili Guajillo 40 LB (Water, Dried chiles, Salt, Contains 2% or less of Citric acid, Potassium sorbate and Sodium benzoate as preservatives.), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Chipotle Peppers in Adobo Sauce, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Garlic Whole Peeled Case, Achiote Paste 15 OZ (Ingredients: Water, Annatto Seed, Corn Flour, Salt, Garlic, Spices, Acetic Acid And Sodium Benzoate As A Preservative.), Kosher Salt, Garlic Granules.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 61.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 36.0,
+              "sodium_mg": 124.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 8.0,
+              "potassium_mg": 10.0,
+              "calcium_mg": 0.8,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Refried Beans",
+            "description": "",
+            "serving_size": "1 1/4 cup serving",
+            "calories": 21.0,
+            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 21.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 121.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 1.0,
+              "potassium_mg": 1.0,
+              "calcium_mg": 7.8,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Persia - Featured Entree": [
           {
             "name": "Chicken Tikka Masala",
@@ -175881,7 +176345,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -183513,6 +183977,241 @@
             }
           }
         ],
+        "Latin - Latin Dinner Special": [],
+        "Latin - Build Your Own Nacho Bar": [
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Gluten Friendly Queso",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 205.0,
+            "ingredients": "Shredded Pepper Jack Cheese (Pasteurized milk, green and red jalapeno peppers, cheese culture, salt, enzymes. Potato starch and powdered cellulose added to prevent caking.), Evaporated Milk (Milk, dipotassium phosphate, carrageenan and Vitamin D3.), Shredded White American Cheese (Cultured Pasteurized Milk and Skim Milk, Cream, Salt, Contains Less Than 2% of Sodium Phosphate, Enzymes, Powdered Cellulose (anticaking).), Water.",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 205.0,
+              "fat_g": 15.0,
+              "saturated_fat_g": 10.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 55.0,
+              "sodium_mg": 452.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 13.0,
+              "potassium_mg": 14.0,
+              "calcium_mg": 378.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Guacamole",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 33.0,
+            "ingredients": "Guacamole (Ingredients: Hass Avocados, Tomatillos, Water, Onions, Salt, Jalapeño Peppers, Dehydrated Red Bell Peppers, Vinegar, Granulated Garlic, Cilantro, Dehydrated Onion, Garlic, Citric Acid, Spice, Sugar.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 33.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 57.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 109.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Pico de Gallo",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 3.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 30.0,
+            "ingredients": "Sour Cream (CULTURED CREAM, ENZYMES., CONTAINS: MILK.).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 30.0,
+              "fat_g": 3.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 25.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 20.2,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Chicken Pastor",
+            "description": "",
+            "serving_size": "1 2 oz serving",
+            "calories": 61.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Paste Chili Guajillo 40 LB (Water, Dried chiles, Salt, Contains 2% or less of Citric acid, Potassium sorbate and Sodium benzoate as preservatives.), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Chipotle Peppers in Adobo Sauce, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Garlic Whole Peeled Case, Achiote Paste 15 OZ (Ingredients: Water, Annatto Seed, Corn Flour, Salt, Garlic, Spices, Acetic Acid And Sodium Benzoate As A Preservative.), Kosher Salt, Garlic Granules.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 61.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 36.0,
+              "sodium_mg": 124.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 8.0,
+              "potassium_mg": 10.0,
+              "calcium_mg": 0.8,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Refried Beans",
+            "description": "",
+            "serving_size": "1 1/4 cup serving",
+            "calories": 21.0,
+            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 21.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 121.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 1.0,
+              "potassium_mg": 1.0,
+              "calcium_mg": 7.8,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Persia - Grilled Kabobs & Stews": [
           {
             "name": "Lamb Kubideh",
@@ -187349,7 +188048,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -194866,6 +195565,241 @@
             }
           }
         ],
+        "Latin - Latin Dinner Special": [],
+        "Latin - Build Your Own Nacho Bar": [
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Gluten Friendly Queso",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 205.0,
+            "ingredients": "Shredded Pepper Jack Cheese (Pasteurized milk, green and red jalapeno peppers, cheese culture, salt, enzymes. Potato starch and powdered cellulose added to prevent caking.), Evaporated Milk (Milk, dipotassium phosphate, carrageenan and Vitamin D3.), Shredded White American Cheese (Cultured Pasteurized Milk and Skim Milk, Cream, Salt, Contains Less Than 2% of Sodium Phosphate, Enzymes, Powdered Cellulose (anticaking).), Water.",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 205.0,
+              "fat_g": 15.0,
+              "saturated_fat_g": 10.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 55.0,
+              "sodium_mg": 452.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 13.0,
+              "potassium_mg": 14.0,
+              "calcium_mg": 378.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Guacamole",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 33.0,
+            "ingredients": "Guacamole (Ingredients: Hass Avocados, Tomatillos, Water, Onions, Salt, Jalapeño Peppers, Dehydrated Red Bell Peppers, Vinegar, Granulated Garlic, Cilantro, Dehydrated Onion, Garlic, Citric Acid, Spice, Sugar.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 33.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 57.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 109.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Pico de Gallo",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 3.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 30.0,
+            "ingredients": "Sour Cream (CULTURED CREAM, ENZYMES., CONTAINS: MILK.).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 30.0,
+              "fat_g": 3.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 25.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 20.2,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Chicken Pastor",
+            "description": "",
+            "serving_size": "1 2 oz serving",
+            "calories": 61.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Paste Chili Guajillo 40 LB (Water, Dried chiles, Salt, Contains 2% or less of Citric acid, Potassium sorbate and Sodium benzoate as preservatives.), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Chipotle Peppers in Adobo Sauce, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Garlic Whole Peeled Case, Achiote Paste 15 OZ (Ingredients: Water, Annatto Seed, Corn Flour, Salt, Garlic, Spices, Acetic Acid And Sodium Benzoate As A Preservative.), Kosher Salt, Garlic Granules.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 61.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 36.0,
+              "sodium_mg": 124.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 8.0,
+              "potassium_mg": 10.0,
+              "calcium_mg": 0.8,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Refried Beans",
+            "description": "",
+            "serving_size": "1 1/4 cup serving",
+            "calories": 21.0,
+            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 21.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 121.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 1.0,
+              "potassium_mg": 1.0,
+              "calcium_mg": 7.8,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Persia - Featured Entree": [
           {
             "name": "Chicken Shawarma",
@@ -198552,7 +199486,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -205948,6 +206882,241 @@
             }
           }
         ],
+        "Latin - Latin Dinner Special": [],
+        "Latin - Build Your Own Nacho Bar": [
+          {
+            "name": "White Corn Tortilla Chips",
+            "description": "",
+            "serving_size": "1 1oz serving",
+            "calories": 134.0,
+            "ingredients": "Triangle Tortilla Chips (Ground Corn Treated with Lime, Water, Vegetable Oil (Contains One or More of the Following: Cottonseed Oil, Corn Oil, Palm Oil), Salt.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 134.0,
+              "fat_g": 6.0,
+              "saturated_fat_g": 0.8,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 93.0,
+              "carbohydrates_g": 19.0,
+              "fiber_g": 2.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 2.0,
+              "potassium_mg": 52.0,
+              "calcium_mg": 30.0,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Gluten Friendly Queso",
+            "description": "",
+            "serving_size": "2 fl oz",
+            "calories": 205.0,
+            "ingredients": "Shredded Pepper Jack Cheese (Pasteurized milk, green and red jalapeno peppers, cheese culture, salt, enzymes. Potato starch and powdered cellulose added to prevent caking.), Evaporated Milk (Milk, dipotassium phosphate, carrageenan and Vitamin D3.), Shredded White American Cheese (Cultured Pasteurized Milk and Skim Milk, Cream, Salt, Contains Less Than 2% of Sodium Phosphate, Enzymes, Powdered Cellulose (anticaking).), Water.",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 205.0,
+              "fat_g": 15.0,
+              "saturated_fat_g": 10.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 55.0,
+              "sodium_mg": 452.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 13.0,
+              "potassium_mg": 14.0,
+              "calcium_mg": 378.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Mild Picante Salsa",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 5.0,
+            "ingredients": "Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR..",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 5.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 80.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 0.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Guacamole",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 33.0,
+            "ingredients": "Guacamole (Ingredients: Hass Avocados, Tomatillos, Water, Onions, Salt, Jalapeño Peppers, Dehydrated Red Bell Peppers, Vinegar, Granulated Garlic, Cilantro, Dehydrated Onion, Garlic, Citric Acid, Spice, Sugar.).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 33.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 57.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 109.0,
+              "calcium_mg": 0.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Pico de Gallo",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 3.0,
+            "ingredients": "Roma Tomatoes, Pepper Jalapeno Case, Red Bermuda Onions, Cilantro, Lime Juice (Lime Juice From Concentrate (water, Concentrated Lime Juice), And Less Than 2% Of Lime Oil, Sodium Benzoate (preservative), Sodium Metabisulfite (preservative).), Kosher Salt.",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 3.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 6.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 33.0,
+              "calcium_mg": 2.0,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Sour Cream",
+            "description": "",
+            "serving_size": "1 Tbsp",
+            "calories": 30.0,
+            "ingredients": "Sour Cream (CULTURED CREAM, ENZYMES., CONTAINS: MILK.).",
+            "allergens": [
+              "Milk"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 30.0,
+              "fat_g": 3.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 25.0,
+              "carbohydrates_g": 1.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 1.0,
+              "potassium_mg": 0.0,
+              "calcium_mg": 20.2,
+              "iron_mg": 0.0
+            }
+          },
+          {
+            "name": "Chicken Pastor",
+            "description": "",
+            "serving_size": "1 2 oz serving",
+            "calories": 61.0,
+            "ingredients": "Chicken Thigh Bnls/Skls ABF, Paste Chili Guajillo 40 LB (Water, Dried chiles, Salt, Contains 2% or less of Citric acid, Potassium sorbate and Sodium benzoate as preservatives.), Puree Pineapple Carmelized (Pineapple juice concentrate, filtered water, natural flavor, ascorbic acid.), Chipotle Peppers in Adobo Sauce, Pineapple Juice (Water, concentrated pineapple juice and ascorbic acid (vitamin C).), Garlic Whole Peeled Case, Achiote Paste 15 OZ (Ingredients: Water, Annatto Seed, Corn Flour, Salt, Garlic, Spices, Acetic Acid And Sodium Benzoate As A Preservative.), Kosher Salt, Garlic Granules.",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 61.0,
+              "fat_g": 2.8,
+              "saturated_fat_g": 0.5,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 36.0,
+              "sodium_mg": 124.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 8.0,
+              "potassium_mg": 10.0,
+              "calcium_mg": 0.8,
+              "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Refried Beans",
+            "description": "",
+            "serving_size": "1 1/4 cup serving",
+            "calories": 21.0,
+            "ingredients": "Water, Vegetarian Refried Beans (Pinto beans (dry), salt, contains one or more of the following (canola, corn, palm oil [preserved with citric acid and TBHQ]), caramel color.), Mild Picante Salsa (Ingredients, TOMATO PUREE (WATER, TOMATO PASTE), TOMATOES, (TOMATOES, TOMATO JUICE), JALAPENO PEPPERS,, ONION, DEHYDRATED ONION, CONTAINS LESS THAN 2%, OF DISTILLED VINEGAR, SALT, DEHYDRATED GARLIC,, NATURAL FLAVOR.), Iodized Salt (Salt, calcium silicate (an anticaking agent), dextrose, potassium iodide.), Ground Cumin Seed, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 21.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.1,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 121.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 1.0,
+              "potassium_mg": 1.0,
+              "calcium_mg": 7.8,
+              "iron_mg": 0.3
+            }
+          }
+        ],
         "Black Coats - Greek Yogurt & Fruit Parfait": [
           {
             "name": "Plain Nonfat Greek Yogurt",
@@ -208742,7 +209911,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -219197,7 +220366,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -230184,7 +231353,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -241563,7 +242732,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -253359,7 +254528,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -264890,7 +266059,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -276174,7 +277343,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -286455,7 +287624,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -296849,7 +298018,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -308068,7 +309237,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -319553,7 +320722,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -331190,7 +332359,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -342576,7 +343745,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -353806,7 +354975,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -364100,7 +365269,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -374555,7 +375724,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -385609,7 +386778,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -396936,7 +398105,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -408615,7 +409784,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -420083,7 +421252,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -431286,7 +432455,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
@@ -441476,7 +442645,7 @@
             }
           },
           {
-            "name": "Sauce - GF Queso",
+            "name": "Gluten Friendly Queso",
             "description": "",
             "serving_size": "0.25 cups",
             "calories": 205.0,
