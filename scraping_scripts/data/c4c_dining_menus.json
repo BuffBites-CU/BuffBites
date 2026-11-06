@@ -174914,34 +174914,32 @@
             }
           },
           {
-            "name": "Dahl",
+            "name": "Mansuba's Red Lentil Dahl",
             "description": "",
-            "serving_size": "4 oz",
-            "calories": 212.0,
-            "ingredients": "Water, Lentil Moong Dahl Split (Dahl (Split Chickpeas)), Heavy Whip Cream (Heavy cream, carrageenan.), Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, Mustard Seed - Yellow, Kosher Salt, Coriander - Ground, Black pepper (Black Pepper), Ground Cumin Seed, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Whole Cumin Seed.",
-            "allergens": [
-              "Milk"
-            ],
+            "serving_size": "1 1/2 cup serving",
+            "calories": 149.0,
+            "ingredients": "Water, Red Lentils, Roma Tomatoes, Rice Bran Oil, Yellow Onion, Garlic, Cilantro 30 CT, Kosher Salt, Thai Chili Peppers, Black pepper (Black Pepper), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Whole Cumin Seed.",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 212.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 3.7,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 13.0,
-              "sodium_mg": 132.0,
-              "carbohydrates_g": 25.0,
-              "fiber_g": 3.0,
+              "calories": 149.0,
+              "fat_g": 4.2,
+              "saturated_fat_g": 0.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 202.0,
+              "carbohydrates_g": 21.0,
+              "fiber_g": 4.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 10.0,
-              "potassium_mg": 272.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 2.6
+              "total_sugar_g": 0.0,
+              "protein_g": 9.0,
+              "potassium_mg": 27.0,
+              "calcium_mg": 7.1,
+              "iron_mg": 2.7
             }
           },
           {
@@ -194346,11 +194344,11 @@
             }
           },
           {
-            "name": "Pepperoni & Sausage Pizza",
+            "name": "Pepperoni Jalapeno Pizza",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 277.0,
-            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Sliced Cooked Italian Sausage (Pork, water, salt, spices, paprika and natural flavoring (gluten-free and no MSG).), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
+            "calories": 230.0,
+            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Pepperoni (Ingredients, Bha, Bht With Citric Acid Added To Help Protect Flavor Ingredients: Pork, Beef, Salt, Contains 2% Or Less Of Water, Dextrose, Spices, Lactic Acid Starter Culture, Sodium Ascorbate, Oleoresin Of Paprika, Garlic Powder, Sodium Nitrite, Bha, Bht, Citric Acid. In Collagen Casing.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Pepper Jalapeno Case, Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Extra Virgin Olive Oil, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -194359,20 +194357,20 @@
             "is_vegan": false,
             "is_vegetarian": false,
             "nutrition": {
-              "calories": 277.0,
-              "fat_g": 16.0,
-              "saturated_fat_g": 5.0,
-              "trans_fat_g": 0.2,
-              "cholesterol_mg": 27.0,
-              "sodium_mg": 454.0,
-              "carbohydrates_g": 22.0,
-              "fiber_g": 2.0,
+              "calories": 230.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 4.1,
+              "trans_fat_g": 0.1,
+              "cholesterol_mg": 18.0,
+              "sodium_mg": 360.0,
+              "carbohydrates_g": 20.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 12.0,
-              "potassium_mg": 189.0,
-              "calcium_mg": 178.0,
-              "iron_mg": 1.4
+              "protein_g": 10.0,
+              "potassium_mg": 96.0,
+              "calcium_mg": 142.0,
+              "iron_mg": 0.6
             }
           }
         ],
@@ -194410,11 +194408,11 @@
             }
           },
           {
-            "name": "Italian Roasted Vegetables",
+            "name": "Italian Green Beans",
             "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 28.0,
-            "ingredients": "Red Bermuda Onions, Fresh Zucchini, Squash Yellow Medium, Broccoli Florets, Cauliflower Florets, Green Bell Peppers, Baby Carrots, Red Bell Peppers, Yellow Bell Pepper, Rice Bran Oil, Garlic Whole Peeled Case, Garlic Granules, Oregano Leaf, Onion Granules, Black pepper (Black Pepper), Basil, Kosher Salt, Crushed Red Pepper (Cayenne Pepper).",
+            "serving_size": "5 oz",
+            "calories": 87.0,
+            "ingredients": "Green Beans (Ingredients, Green Beans), Rice Bran Oil, Kosher Salt, Black Pepper (Black Pepper).",
             "allergens": [],
             "dietary_labels": [
               "Vegan"
@@ -194422,20 +194420,20 @@
             "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 28.0,
-              "fat_g": 1.1,
-              "saturated_fat_g": 0.2,
+              "calories": 87.0,
+              "fat_g": 4.4,
+              "saturated_fat_g": 0.9,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 19.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 1068.0,
+              "carbohydrates_g": 11.0,
+              "fiber_g": 4.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 2.0,
-              "protein_g": 1.0,
-              "potassium_mg": 179.0,
-              "calcium_mg": 18.0,
-              "iron_mg": 0.4
+              "total_sugar_g": 3.0,
+              "protein_g": 3.0,
+              "potassium_mg": 278.0,
+              "calcium_mg": 65.0,
+              "iron_mg": 1.3
             }
           }
         ],
@@ -408322,34 +408320,32 @@
             }
           },
           {
-            "name": "Dahl",
+            "name": "Mansuba's Red Lentil Dahl",
             "description": "",
-            "serving_size": "4 oz",
-            "calories": 212.0,
-            "ingredients": "Water, Lentil Moong Dahl Split (Dahl (Split Chickpeas)), Heavy Whip Cream (Heavy cream, carrageenan.), Rice Bran Oil, Yellow Onion, Garlic Whole Peeled Case, Mustard Seed - Yellow, Kosher Salt, Coriander - Ground, Black pepper (Black Pepper), Ground Cumin Seed, Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Whole Cumin Seed.",
-            "allergens": [
-              "Milk"
-            ],
+            "serving_size": "1 1/2 cup serving",
+            "calories": 149.0,
+            "ingredients": "Water, Red Lentils, Roma Tomatoes, Rice Bran Oil, Yellow Onion, Garlic, Cilantro 30 CT, Kosher Salt, Thai Chili Peppers, Black pepper (Black Pepper), Turmeric (Organic Turmeric, organic onion, organic garlic, organic paprika, sea salt, organic black pepper, organic lemon peel, organic chipotle, organic rice concentrate, organic parsley.), Whole Cumin Seed.",
+            "allergens": [],
             "dietary_labels": [
-              "Vegetarian"
+              "Vegan"
             ],
-            "is_vegan": false,
+            "is_vegan": true,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 212.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 3.7,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 13.0,
-              "sodium_mg": 132.0,
-              "carbohydrates_g": 25.0,
-              "fiber_g": 3.0,
+              "calories": 149.0,
+              "fat_g": 4.2,
+              "saturated_fat_g": 0.7,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 202.0,
+              "carbohydrates_g": 21.0,
+              "fiber_g": 4.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 10.0,
-              "potassium_mg": 272.0,
-              "calcium_mg": 28.0,
-              "iron_mg": 2.6
+              "total_sugar_g": 0.0,
+              "protein_g": 9.0,
+              "potassium_mg": 27.0,
+              "calcium_mg": 7.1,
+              "iron_mg": 2.7
             }
           },
           {
