@@ -135567,6 +135567,37 @@
             }
           },
           {
+            "name": "Red Bliss Potato Salad",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 260.0,
+            "ingredients": "Ingredients, Red Potatoes, Mayonnaise (soybean oil, water, egg yolks,, vinegar, salt), Onion, Water, Vinegar, Salt, Modified Corn, Starch, Sugar, Black Pepper, Dehydrated Parsley, Potassium, Sorbate (preservative), Sodium Benzoate (preservative),, Xanthan Gum..",
+            "allergens": [
+              "Egg"
+            ],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
+            "is_vegan": false,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 260.0,
+              "fat_g": 18.0,
+              "saturated_fat_g": 3.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 15.0,
+              "sodium_mg": 430.0,
+              "carbohydrates_g": 22.0,
+              "fiber_g": 0.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 1.0,
+              "protein_g": 3.0,
+              "potassium_mg": 510.0,
+              "calcium_mg": 5.0,
+              "iron_mg": 1.0
+            }
+          },
+          {
             "name": "Baked Yams",
             "description": "",
             "serving_size": "1 baked yam",
@@ -135622,37 +135653,6 @@
               "potassium_mg": 1153.0,
               "calcium_mg": 32.0,
               "iron_mg": 2.3
-            }
-          },
-          {
-            "name": "Red Bliss Potato Salad",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 260.0,
-            "ingredients": "Ingredients, Red Potatoes, Mayonnaise (soybean oil, water, egg yolks,, vinegar, salt), Onion, Water, Vinegar, Salt, Modified Corn, Starch, Sugar, Black Pepper, Dehydrated Parsley, Potassium, Sorbate (preservative), Sodium Benzoate (preservative),, Xanthan Gum..",
-            "allergens": [
-              "Egg"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 260.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 15.0,
-              "sodium_mg": 430.0,
-              "carbohydrates_g": 22.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 3.0,
-              "potassium_mg": 510.0,
-              "calcium_mg": 5.0,
-              "iron_mg": 1.0
             }
           },
           {
@@ -139298,41 +139298,7 @@
             }
           }
         ],
-        "Composed Salads": [
-          {
-            "name": "Caesar Salad",
-            "description": "",
-            "serving_size": "1 cups",
-            "calories": 66.0,
-            "ingredients": "Romaine Lettuce, Hard Boiled Cage Free Eggs (Ingredients:, Cage Free Whole Eggs), Cheese & Garlic Multigrain Croutons (Enriched flour (wheat flour, malted barley flour, niacin, reduced iron, thiamin mononitrate, riboflavin, folic acid), canola and/or sunflower oil, whole wheat flour, whey, salt, yeast, 2% or less of high fructose corn syrup, rye meal, wheat gluten, caramel color, dehydrated parsley, garlic powder, calcium propionate (preservative), honey, natural and artificial flavor, parmesan cheese and enzyme modified cheese (pasteurized milk, cheese cultures, salt, enzymes), cultured nonfat milk, annatto (color), extractives of turmeric and paprika (color), enzymes, ascorbic acid, TBHQ (to preserve freshness).), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).).",
-            "allergens": [
-              "Milk",
-              "Egg",
-              "Wheat"
-            ],
-            "dietary_labels": [
-              "Vegetarian"
-            ],
-            "is_vegan": false,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 66.0,
-              "fat_g": 2.9,
-              "saturated_fat_g": 0.9,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 116.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 4.0,
-              "potassium_mg": 222.0,
-              "calcium_mg": 58.0,
-              "iron_mg": 1.0
-            }
-          }
-        ],
+        "Composed Salads": [],
         "Breakfast  Pastries": [
           {
             "name": "Cappuccino Chocolate Chunk Muffins",
