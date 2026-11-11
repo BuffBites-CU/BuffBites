@@ -115871,14 +115871,17 @@
             }
           },
           {
-            "name": "Naan Bread",
+            "name": "Mini Naan Dippers",
             "description": "",
-            "serving_size": "1 piece",
-            "calories": 175.0,
-            "ingredients": "Naan (Enriched Wheat Flour (wheat flour, malted barley flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), water, soybean oil and/or canola oil, yeast, contains 2% or less of: salt, sugar, butter flavor (soybean oil, butter oil, natural & artificial flavors), dough conditioner (calcium sulfate, acacia gum, mono- and di-glycerides, enzymes), buttermilk powder, baking powder (sodium acid pyrophosphate, sodium bicarbonate, monocalcium phosphate), yeast nutrients (ammonium sulfate, ascorbic acid), calcium propionate and potassium sorbate (preservatives).).",
+            "serving_size": "1 naan dipper",
+            "calories": 10.0,
+            "ingredients": "Enriched Wheat Flour (wheat Flour, Niacin, Reduced Iron, Ascorbic Acid Added As Dough Conditioner, Thiamine Mononitrate, Riboflavin, Enzyme, Folic Acid), Water, Buttermilk (skim Milk, Dry Buttermilk, Bacterial Culture), Soybean And/or Canola Oil, Modified Wheat Starch, Cultured Wheat Flour, Sugar, Salt, Acacia, Dextrose, Leavening (sodium Acid Pyrophosphate, Sodium Bicarbonate), Ghee (clarified Butter), Inactive Yeast, Yeast, Vegetable Mono- And Diglycerides, Amylase, Xylanase. Contains Wheat And Milk. May Contain: Eggs, Soy And Sesame..",
             "allergens": [
               "Milk",
-              "Wheat"
+              "Egg",
+              "Wheat",
+              "Soy",
+              "Sesame"
             ],
             "dietary_labels": [
               "Vegetarian"
@@ -115886,20 +115889,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 175.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 0.8,
+              "calories": 10.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 250.0,
-              "carbohydrates_g": 26.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 26.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 5.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 33.0,
-              "iron_mg": 1.5
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.1
             }
           }
         ],
@@ -349277,14 +349280,17 @@
             }
           },
           {
-            "name": "Naan Bread",
+            "name": "Mini Naan Dippers",
             "description": "",
-            "serving_size": "1 piece",
-            "calories": 175.0,
-            "ingredients": "Naan (Enriched Wheat Flour (wheat flour, malted barley flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), water, soybean oil and/or canola oil, yeast, contains 2% or less of: salt, sugar, butter flavor (soybean oil, butter oil, natural & artificial flavors), dough conditioner (calcium sulfate, acacia gum, mono- and di-glycerides, enzymes), buttermilk powder, baking powder (sodium acid pyrophosphate, sodium bicarbonate, monocalcium phosphate), yeast nutrients (ammonium sulfate, ascorbic acid), calcium propionate and potassium sorbate (preservatives).).",
+            "serving_size": "1 naan dipper",
+            "calories": 10.0,
+            "ingredients": "Enriched Wheat Flour (wheat Flour, Niacin, Reduced Iron, Ascorbic Acid Added As Dough Conditioner, Thiamine Mononitrate, Riboflavin, Enzyme, Folic Acid), Water, Buttermilk (skim Milk, Dry Buttermilk, Bacterial Culture), Soybean And/or Canola Oil, Modified Wheat Starch, Cultured Wheat Flour, Sugar, Salt, Acacia, Dextrose, Leavening (sodium Acid Pyrophosphate, Sodium Bicarbonate), Ghee (clarified Butter), Inactive Yeast, Yeast, Vegetable Mono- And Diglycerides, Amylase, Xylanase. Contains Wheat And Milk. May Contain: Eggs, Soy And Sesame..",
             "allergens": [
               "Milk",
-              "Wheat"
+              "Egg",
+              "Wheat",
+              "Soy",
+              "Sesame"
             ],
             "dietary_labels": [
               "Vegetarian"
@@ -349292,20 +349298,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 175.0,
-              "fat_g": 6.0,
-              "saturated_fat_g": 0.8,
+              "calories": 10.0,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 250.0,
-              "carbohydrates_g": 26.0,
-              "fiber_g": 1.0,
+              "sodium_mg": 26.0,
+              "carbohydrates_g": 2.0,
+              "fiber_g": 0.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 5.0,
-              "potassium_mg": 0.0,
-              "calcium_mg": 33.0,
-              "iron_mg": 1.5
+              "total_sugar_g": 0.0,
+              "protein_g": 0.0,
+              "potassium_mg": 3.0,
+              "calcium_mg": 1.0,
+              "iron_mg": 0.1
             }
           }
         ],
