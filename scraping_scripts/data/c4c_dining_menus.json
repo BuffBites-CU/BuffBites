@@ -13,13 +13,7 @@
     "smokin-grill",
     "c4c_wholesome-field"
   ],
-  "repeat_info": {
-    "first_seen_week": 3,
-    "first_seen_start": "2026-11-09",
-    "repeat_week": 6,
-    "repeat_start": "2026-11-30",
-    "gap_weeks": 3
-  },
+  "repeat_info": null,
   "menus": [
     {
       "date": "2026-10-25",
@@ -219671,11 +219665,11 @@
         ],
         "Italian - Stone-Fired Pizza": [
           {
-            "name": "Margherita Pizza",
+            "name": "Cheese Pizza",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 220.0,
-            "ingredients": "Organic Flour, Belgio Cheese Mozz Frsh Log Thn Slice (PASTEURIZED MILK, VINEGAR, ENZYMES, SALT.), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Fresh Basil, Sugar Granulated (Sugar), Kosher Salt, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
+            "calories": 240.0,
+            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Sugar Granulated (Sugar), Kosher Salt, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Garlic Granules, Extra Virgin Olive Oil, Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -219686,83 +219680,56 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 220.0,
-              "fat_g": 10.0,
-              "saturated_fat_g": 3.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 9.0,
-              "sodium_mg": 204.0,
-              "carbohydrates_g": 23.0,
+              "calories": 240.0,
+              "fat_g": 12.0,
+              "saturated_fat_g": 3.6,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 14.0,
+              "sodium_mg": 303.0,
+              "carbohydrates_g": 24.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 2.0,
-              "protein_g": 8.0,
-              "potassium_mg": 52.0,
-              "calcium_mg": 74.0,
+              "protein_g": 10.0,
+              "potassium_mg": 78.0,
+              "calcium_mg": 167.0,
               "iron_mg": 0.6
             }
           },
           {
-            "name": "Chicken Sausage, Ricotta, & Basil Pizza",
+            "name": "Sun-Dried Tomato and Arugula Pizza",
             "description": "",
             "serving_size": "1 slice",
-            "calories": 301.0,
-            "ingredients": "Organic Flour, Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Spicy Chicken Sausage Pizza Topping (Ingredients:Ingredients: Chicken Thigh, Chicken Breast Meat with Rib Meat, Roasted Red Bell Pepper, Sharp Provolone Cheese (Cultured Milk, Salt, Enzymes), Spices, Sea Salt, Roasted Garlic, Sugar, Dehydrated Red Bell Peppers, Flavor. Contains: Milk., Allergens:Milk), Ricotta Cheese (Pasterurized milk, pasteurized whey, pasteurized cream, vinegar, salt, stabilizers (xanthan gum, locust bean gum, guar gum).), Water, Pizza Sauce (Vine-ripened fresh tomatoes, salt, dehydrated basil and naturally derived citric acid.), Oil Blend (80% soybean oil, 20% olive pomace oil.), Fresh Basil, Four Pepper Blend (Ingredients: Chili Peppers (Arbol Pepper, Habanero Pepper, Jalapeno Pepper, Ghost Pepper)), Sugar Granulated (Sugar), Kosher Salt, Garlic Granules, Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Extra Virgin Olive Oil, All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Garlic Whole Peeled Case, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Basil, Black pepper (Black Pepper).",
+            "calories": 332.0,
+            "ingredients": "Cheese Mozzarella Shredded (INGREDIENTS: Low moisture part skim mozzarella cheese (pasteurized part skim milk, cheese cultures, salt, enzymes)), Organic Flour, Water, Sundried Tomatoes, Oil Blend (80% soybean oil, 20% olive pomace oil.), Heavy Whipping Cream (Heavy cream, carrageenan.), Extra Virgin Olive Oil, Baby Arugula, Corn Meal (Enriched yellow corn meal (niacin, thiamin mononitrate, riboflavin, reduced iron, folic acid).), Balsamic Vinegar (Organic Balsamic Vinegar.), Garlic Whole Peeled Case, Parmesan Cheese ((pasteurized milk, salt, cheese cultures, enzymes), powdered cellulose (to prevent caking).), Parmesan Cheese (Pasteurized cow's milk, cheese culture, salt, enzymes.), Kosher Salt, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), All Purpose Flour (Bleached Wheat Flour, Malted Barley Flour, Niacin, Iron, Thiamin Mononitrate, Riboflavin, Folic Acid), Sugar Granulated (Sugar), Rice Bran Oil, Garlic Granules, Oregano Leaf, Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.), Rosemary, Basil, Thyme, Black pepper (Black Pepper).",
             "allergens": [
               "Milk",
               "Wheat"
             ],
-            "dietary_labels": [],
+            "dietary_labels": [
+              "Vegetarian"
+            ],
             "is_vegan": false,
-            "is_vegetarian": false,
+            "is_vegetarian": true,
             "nutrition": {
-              "calories": 301.0,
-              "fat_g": 18.0,
-              "saturated_fat_g": 6.0,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 36.0,
-              "sodium_mg": 418.0,
-              "carbohydrates_g": 22.0,
+              "calories": 332.0,
+              "fat_g": 19.0,
+              "saturated_fat_g": 7.0,
+              "trans_fat_g": 0.2,
+              "cholesterol_mg": 19.0,
+              "sodium_mg": 386.0,
+              "carbohydrates_g": 28.0,
               "fiber_g": 2.0,
               "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 12.0,
-              "potassium_mg": 180.0,
-              "calcium_mg": 179.0,
-              "iron_mg": 0.8
+              "total_sugar_g": 5.0,
+              "protein_g": 13.0,
+              "potassium_mg": 401.0,
+              "calcium_mg": 245.0,
+              "iron_mg": 1.4
             }
           }
         ],
         "Italian - Vegetables & Sides": [
-          {
-            "name": "Roasted Broccoli",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 47.0,
-            "ingredients": "Broccoli Florets, Extra Virgin Olive Oil, Garlic Granules, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 47.0,
-              "fat_g": 3.8,
-              "saturated_fat_g": 0.6,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 188.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 20.0,
-              "iron_mg": 0.4
-            }
-          },
           {
             "name": "Garlic Bread",
             "description": "",
@@ -219793,6 +219760,35 @@
               "potassium_mg": 13.0,
               "calcium_mg": 86.0,
               "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Roasted Lemon and Balsamic Zucchini",
+            "description": "",
+            "serving_size": "5 oz serving",
+            "calories": 38.0,
+            "ingredients": "Fresh Zucchini, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Balsamic Vinegar (Organic Balsamic Vinegar.), Extra Virgin Olive Oil, Kosher Salt, Black pepper (Black Pepper), Herb Mint Fresh 1 LB, Sugar Granulated (Sugar).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 38.0,
+              "fat_g": 2.2,
+              "saturated_fat_g": 0.4,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 252.0,
+              "carbohydrates_g": 4.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 2.0,
+              "potassium_mg": 358.0,
+              "calcium_mg": 25.0,
+              "iron_mg": 0.6
             }
           }
         ],
