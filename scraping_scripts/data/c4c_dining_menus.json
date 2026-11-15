@@ -232633,6 +232633,36 @@
         ],
         "Smoke n' Grill - Grill Menu": [
           {
+            "name": "All Beef Hot Dog",
+            "description": "",
+            "serving_size": "1 hot dog w/bun",
+            "calories": 370.0,
+            "ingredients": "All Beef Hot Dog (Beef, Water, Seasoning Blend (sorbitol, Flavours, Paprika), Salt, Sodium Lactate, Hydrolyzed Corn Protein, Sodium Phosphates, Sodium Diacetate, Sodium Erythorbate, Sodium Nitrite, Smoke.), Hot Dog Bun (Unbleached Enriched Flour (wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, Fully Refined Soybean Oil, Yeast, Granulated Sugar, Wheat Gluten, Salt, Dough Improver (malted Wheat Flour, Enzymes And 2% Or Less Of Ascorbic Acid), Calcium Propionate (to Retain Freshness), Enriched Wheat Flour (wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin , Folic Acid), Contains Less Than 2% Of Enzymes, Contains: Wheat, May contain: Sesame seeds).",
+            "allergens": [
+              "Wheat",
+              "Sesame"
+            ],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 370.0,
+              "fat_g": 25.0,
+              "saturated_fat_g": 9.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 40.0,
+              "sodium_mg": 1060.0,
+              "carbohydrates_g": 23.0,
+              "fiber_g": 1.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 0.0,
+              "protein_g": 14.0,
+              "potassium_mg": 568.0,
+              "calcium_mg": 79.0,
+              "iron_mg": 2.6
+            }
+          },
+          {
             "name": "Chicken Breast",
             "description": "",
             "serving_size": "4 oz breast",
@@ -232720,35 +232750,6 @@
             }
           },
           {
-            "name": "Hatch Chili Cheese Links",
-            "description": "",
-            "serving_size": "4 oz link",
-            "calories": 310.0,
-            "ingredients": "Pork, Green Chili Peppers, Reduced Fat Mozzarella Cheese (Pasteurized Part Skim Milk, Nonfat Milk, Modified Food Starch, Cultures, Salt, Vitamin A Palmitate, Enzymes), Salt, Seasoning..",
-            "allergens": [
-              "Milk"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 310.0,
-              "fat_g": 26.0,
-              "saturated_fat_g": 9.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 75.0,
-              "sodium_mg": 800.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 16.0,
-              "potassium_mg": 10.0,
-              "calcium_mg": 48.0,
-              "iron_mg": 1.0
-            }
-          },
-          {
             "name": "Mushroom & Beef Burger",
             "description": "",
             "serving_size": "1 patty",
@@ -232777,6 +232778,35 @@
           }
         ],
         "Smoke n' Grill - Vegetables & Sides": [
+          {
+            "name": "Red Hot Cauliflower",
+            "description": "",
+            "serving_size": "4 oz serving",
+            "calories": 34.0,
+            "ingredients": "Cauliflower Florets, Seasoning Hot Red Pepper Simply Organic (Cayenne Pepper), Kosher Salt, Black pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 34.0,
+              "fat_g": 0.6,
+              "saturated_fat_g": 0.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 211.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 2.0,
+              "potassium_mg": 369.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.6
+            }
+          },
           {
             "name": "Steak Fries",
             "description": "",
