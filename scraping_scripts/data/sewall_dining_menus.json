@@ -190,8 +190,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 40.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 45.0,
+              "calcium_mg": 8.0,
               "iron_mg": 0.2
             }
           },
@@ -2230,15 +2230,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -3830,12 +3830,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -4331,15 +4331,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -6400,15 +6400,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -6693,15 +6693,15 @@
               "fat_g": 21.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 82.0,
-              "sodium_mg": 561.0,
+              "cholesterol_mg": 81.0,
+              "sodium_mg": 564.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 20.3,
               "iron_mg": 1.2
             }
           },
@@ -8645,17 +8645,17 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 108.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 1.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 16.0,
-              "sodium_mg": 814.0,
+              "sodium_mg": 821.0,
               "carbohydrates_g": 14.0,
               "fiber_g": 3.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 6.0,
               "protein_g": 7.0,
-              "potassium_mg": 136.0,
+              "potassium_mg": 137.0,
               "calcium_mg": 36.0,
               "iron_mg": 2.2
             }
@@ -10668,8 +10668,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 40.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 45.0,
+              "calcium_mg": 8.0,
               "iron_mg": 0.2
             }
           },
@@ -12673,15 +12673,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -13031,18 +13031,18 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 50.0,
-              "fat_g": 4.1,
+              "fat_g": 4.2,
               "saturated_fat_g": 1.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 16.0,
-              "sodium_mg": 110.0,
+              "sodium_mg": 111.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 4.3,
+              "calcium_mg": 4.0,
               "iron_mg": 0.2
             }
           },
@@ -14302,12 +14302,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -14774,15 +14774,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -16872,15 +16872,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -19094,7 +19094,7 @@
               "saturated_fat_g": 0.3,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 5.0,
-              "sodium_mg": 249.0,
+              "sodium_mg": 251.0,
               "carbohydrates_g": 4.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
@@ -21140,8 +21140,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 40.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 45.0,
+              "calcium_mg": 8.0,
               "iron_mg": 0.2
             }
           },
@@ -23091,15 +23091,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -23381,18 +23381,18 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 50.0,
-              "fat_g": 4.1,
+              "fat_g": 4.2,
               "saturated_fat_g": 1.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 16.0,
-              "sodium_mg": 110.0,
+              "sodium_mg": 111.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 4.3,
+              "calcium_mg": 4.0,
               "iron_mg": 0.2
             }
           },
@@ -24754,12 +24754,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -25192,15 +25192,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -27321,15 +27321,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -29539,7 +29539,7 @@
               "saturated_fat_g": 0.3,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 5.0,
-              "sodium_mg": 249.0,
+              "sodium_mg": 251.0,
               "carbohydrates_g": 4.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
@@ -31593,8 +31593,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 40.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 45.0,
+              "calcium_mg": 8.0,
               "iron_mg": 0.2
             }
           },
@@ -33633,15 +33633,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -35233,12 +35233,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -35734,15 +35734,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -37803,15 +37803,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -38096,15 +38096,15 @@
               "fat_g": 21.0,
               "saturated_fat_g": 6.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 82.0,
-              "sodium_mg": 561.0,
+              "cholesterol_mg": 81.0,
+              "sodium_mg": 564.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 17.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 22.0,
+              "calcium_mg": 20.3,
               "iron_mg": 1.2
             }
           },
@@ -40048,17 +40048,17 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 108.0,
-              "fat_g": 3.3,
+              "fat_g": 3.4,
               "saturated_fat_g": 1.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 16.0,
-              "sodium_mg": 814.0,
+              "sodium_mg": 821.0,
               "carbohydrates_g": 14.0,
               "fiber_g": 3.0,
               "added_sugar_g": 1.0,
               "total_sugar_g": 6.0,
               "protein_g": 7.0,
-              "potassium_mg": 136.0,
+              "potassium_mg": 137.0,
               "calcium_mg": 36.0,
               "iron_mg": 2.2
             }
@@ -42071,8 +42071,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 40.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 45.0,
+              "calcium_mg": 8.0,
               "iron_mg": 0.2
             }
           },
@@ -44103,15 +44103,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -44706,12 +44706,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -46205,15 +46205,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -48344,15 +48344,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -50566,7 +50566,7 @@
               "saturated_fat_g": 0.3,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 5.0,
-              "sodium_mg": 249.0,
+              "sodium_mg": 251.0,
               "carbohydrates_g": 4.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
@@ -52612,8 +52612,8 @@
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 0.0,
-              "potassium_mg": 40.0,
-              "calcium_mg": 7.0,
+              "potassium_mg": 45.0,
+              "calcium_mg": 8.0,
               "iron_mg": 0.2
             }
           },
@@ -54563,15 +54563,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -54853,18 +54853,18 @@
             "is_vegetarian": false,
             "nutrition": {
               "calories": 50.0,
-              "fat_g": 4.1,
+              "fat_g": 4.2,
               "saturated_fat_g": 1.1,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 16.0,
-              "sodium_mg": 110.0,
+              "sodium_mg": 111.0,
               "carbohydrates_g": 0.0,
               "fiber_g": 0.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 3.0,
               "potassium_mg": 0.0,
-              "calcium_mg": 4.3,
+              "calcium_mg": 4.0,
               "iron_mg": 0.2
             }
           },
@@ -56226,12 +56226,12 @@
               "cholesterol_mg": 0.0,
               "sodium_mg": 307.0,
               "carbohydrates_g": 31.0,
-              "fiber_g": 0.0,
+              "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 10.0,
               "protein_g": 3.0,
-              "potassium_mg": 29.0,
-              "calcium_mg": 67.2,
+              "potassium_mg": 28.0,
+              "calcium_mg": 67.0,
               "iron_mg": 1.2
             }
           },
@@ -56664,15 +56664,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -58793,15 +58793,15 @@
               "saturated_fat_g": 0.0,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 21.0,
+              "sodium_mg": 22.0,
               "carbohydrates_g": 1.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,
               "total_sugar_g": 0.0,
               "protein_g": 1.0,
-              "potassium_mg": 140.0,
-              "calcium_mg": 24.5,
-              "iron_mg": 0.7
+              "potassium_mg": 158.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.8
             }
           },
           {
@@ -61011,7 +61011,7 @@
               "saturated_fat_g": 0.3,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 5.0,
-              "sodium_mg": 249.0,
+              "sodium_mg": 251.0,
               "carbohydrates_g": 4.0,
               "fiber_g": 1.0,
               "added_sugar_g": 0.0,

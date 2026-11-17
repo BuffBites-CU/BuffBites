@@ -384,7 +384,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -397,16 +397,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -941,7 +941,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -954,16 +954,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -1498,7 +1498,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -1511,16 +1511,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -2055,7 +2055,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -2068,16 +2068,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -2773,7 +2773,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -2786,16 +2786,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -3345,7 +3345,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -3358,16 +3358,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -3917,7 +3917,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -3930,16 +3930,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -4489,7 +4489,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -4502,16 +4502,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -5061,7 +5061,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -5074,16 +5074,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -5724,7 +5724,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -5737,16 +5737,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -6281,7 +6281,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -6294,16 +6294,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -6838,7 +6838,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -6851,16 +6851,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -7395,7 +7395,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -7408,16 +7408,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -7952,7 +7952,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -7965,16 +7965,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -8670,7 +8670,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -8683,16 +8683,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -9242,7 +9242,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -9255,16 +9255,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -9814,7 +9814,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -9827,16 +9827,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -10386,7 +10386,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -10399,16 +10399,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -10958,7 +10958,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -10971,16 +10971,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -11621,7 +11621,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -11634,16 +11634,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -12178,7 +12178,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -12191,16 +12191,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -12735,7 +12735,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -12748,16 +12748,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -13292,7 +13292,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -13305,16 +13305,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -13849,7 +13849,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -13862,16 +13862,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -14567,7 +14567,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -14580,16 +14580,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -15139,7 +15139,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -15152,16 +15152,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -15711,7 +15711,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -15724,16 +15724,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -16283,7 +16283,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -16296,16 +16296,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -16855,7 +16855,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -16868,16 +16868,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
@@ -17518,7 +17518,7 @@
             "description": "",
             "serving_size": "1 sandwich",
             "calories": 449.0,
-            "ingredients": "Applegate Black Forest Ham (PORK, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING: SEA SALT, SALT, SUGAR, CULTURED CELERY POWDER, VINEGAR.  COASTED WITH COCOA POWDER.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
+            "ingredients": "Natural Smoked Ham (Pork, Water, Vinegar, Sea Salt, Natural Flavorings, Turbinado Sugar, And Celery Powder.), Whole Wheat Flour, Tomatoes, Water, Swiss Cheese (Pasteurized part-skim cheese, cheese culture, salt, enzymes.), Red Bermuda Onions, French BXK20 Bread Base (Natural wheat sour, salt, rye, wheat gluten, malted barley flour, sunflower lecithin, ascorbic acid, enzymes.), Yeast Instant Gold (Yeast (Saccharomyces cerevisiae), sorbitan monostearate, ascorbic acid.).",
             "allergens": [
               "Milk",
               "Wheat"
@@ -17531,16 +17531,16 @@
               "fat_g": 17.0,
               "saturated_fat_g": 8.0,
               "trans_fat_g": 0.0,
-              "cholesterol_mg": 61.0,
-              "sodium_mg": 816.0,
+              "cholesterol_mg": 65.0,
+              "sodium_mg": 917.0,
               "carbohydrates_g": 51.0,
               "fiber_g": 7.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 8.0,
-              "protein_g": 28.0,
-              "potassium_mg": 190.0,
-              "calcium_mg": 359.0,
-              "iron_mg": 2.7
+              "added_sugar_g": 1.0,
+              "total_sugar_g": 9.0,
+              "protein_g": 29.0,
+              "potassium_mg": 443.0,
+              "calcium_mg": 357.0,
+              "iron_mg": 3.3
             }
           },
           {
