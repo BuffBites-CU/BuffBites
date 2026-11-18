@@ -178346,37 +178346,6 @@
             }
           },
           {
-            "name": "Spicy Edamame",
-            "description": "",
-            "serving_size": "4 oz",
-            "calories": 170.0,
-            "ingredients": "Whole Soybean Edamame In Pod, Rice Bran Oil, Crushed Red Pepper (Cayenne Pepper), Kosher Salt.",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 170.0,
-              "fat_g": 8.0,
-              "saturated_fat_g": 1.1,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 260.0,
-              "carbohydrates_g": 11.0,
-              "fiber_g": 6.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 3.0,
-              "protein_g": 14.0,
-              "potassium_mg": 18.0,
-              "calcium_mg": 82.0,
-              "iron_mg": 2.5
-            }
-          },
-          {
             "name": "Hard Boiled Eggs",
             "description": "",
             "serving_size": "1 egg",
@@ -178625,8 +178594,8 @@
           {
             "name": "Bibimbap Sauce",
             "description": "",
-            "serving_size": "2 fl oz",
-            "calories": 156.0,
+            "serving_size": "1 fl oz",
+            "calories": 78.0,
             "ingredients": "Korean Chili Paste Gochujang (RED PEPPER SEASONING (RED PEPPER POWDER, WATER, SALT, GARLIC, WHEAT RICE, SALT RICE POWDER, SOYBEAN POWDER, MONOSODIUM L-GLUTAMATE, POTASSIUM SORBATE, SEED MALT), Honey (Ingredients:, Honey), Cane Sugar (Sugar), Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Sesame Oil (Soybean Oil, Sesame Oil.), Water, Garlic Whole Peeled Case.",
             "allergens": [
               "Wheat",
@@ -178639,20 +178608,20 @@
             "is_vegan": false,
             "is_vegetarian": true,
             "nutrition": {
-              "calories": 156.0,
-              "fat_g": 3.2,
-              "saturated_fat_g": 0.5,
+              "calories": 78.0,
+              "fat_g": 1.6,
+              "saturated_fat_g": 0.2,
               "trans_fat_g": 0.0,
               "cholesterol_mg": 0.0,
-              "sodium_mg": 690.0,
-              "carbohydrates_g": 31.0,
+              "sodium_mg": 345.0,
+              "carbohydrates_g": 15.0,
               "fiber_g": 0.0,
-              "added_sugar_g": 8.0,
-              "total_sugar_g": 24.0,
-              "protein_g": 2.0,
-              "potassium_mg": 109.0,
-              "calcium_mg": 6.0,
-              "iron_mg": 0.1
+              "added_sugar_g": 4.0,
+              "total_sugar_g": 12.0,
+              "protein_g": 1.0,
+              "potassium_mg": 55.0,
+              "calcium_mg": 3.0,
+              "iron_mg": 0.0
             }
           },
           {
@@ -190471,70 +190440,7 @@
             }
           }
         ],
-        "Smoke n' Grill - Lunch and Dinner Specials": [
-          {
-            "name": "Korean BBQ Tofu",
-            "description": "",
-            "serving_size": "6 oz",
-            "calories": 262.0,
-            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Brown Sugar, Water, Garlic Granules, Honey (Ingredients:, Honey), Garlic, Black Vinegar (Water, Vinegar, Sugar, Salt, Onion, Orange Juice (0.6%), Carrot juice (0.6%), Tomato paste, Caramel, Spices.), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum), Rice Bran Oil (100% Rice Bran Oil), Spice Ginger Ground (Ginger, sulfur dioxide (added to retain color).), Sesame Oil (Soybean Oil, Sesame Oil.), Ginger, Black pepper (Black Pepper).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 262.0,
-              "fat_g": 8.0,
-              "saturated_fat_g": 1.2,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 2512.0,
-              "carbohydrates_g": 33.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 22.0,
-              "protein_g": 17.0,
-              "potassium_mg": 566.0,
-              "calcium_mg": 121.0,
-              "iron_mg": 5.5
-            }
-          },
-          {
-            "name": "Korean BBQ Chicken Thighs",
-            "description": "",
-            "serving_size": "6 oz",
-            "calories": 340.0,
-            "ingredients": "Chicken Thigh Boneless Skin On, Tamari Soy Sauce (Water, soybeans, salt, alcohol (to preserve freshness).), Brown Sugar, Water, Garlic Granules, Honey (Ingredients:, Honey), Garlic, Black Vinegar (Water, Vinegar, Sugar, Salt, Onion, Orange Juice (0.6%), Carrot juice (0.6%), Tomato paste, Caramel, Spices.), Sriracha Chili Sauce (Ingredients, Chili, Sugar, Salt, Garlic, Distilled Vinegar, Potassium Sorbate, Sodium Bisulfite as preservatives and Xanthan Gum), Rice Bran Oil (100% Rice Bran Oil), Spice Ginger Ground (Ginger, sulfur dioxide (added to retain color).), Sesame Oil (Soybean Oil, Sesame Oil.), Ginger, Black pepper (Black Pepper).",
-            "allergens": [
-              "Soy",
-              "Sesame"
-            ],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 340.0,
-              "fat_g": 23.0,
-              "saturated_fat_g": 7.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 119.0,
-              "sodium_mg": 622.0,
-              "carbohydrates_g": 6.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 26.0,
-              "potassium_mg": 20.0,
-              "calcium_mg": 6.0,
-              "iron_mg": 2.1
-            }
-          }
-        ],
+        "Smoke n' Grill - Lunch and Dinner Specials": [],
         "Smoke n' Grill - Grill Menu": [
           {
             "name": "Mushroom & Beef Burger",
