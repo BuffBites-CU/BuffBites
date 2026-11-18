@@ -185811,238 +185811,6 @@
               "calcium_mg": 35.0,
               "iron_mg": 6.8
             }
-          },
-          {
-            "name": "Sliced Cooked Italian Sausage",
-            "description": "",
-            "serving_size": "1 x 1 oz",
-            "calories": 91.0,
-            "ingredients": "Pork, water, salt, spices, paprika and natural flavoring (gluten-free and no MSG)..",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 91.0,
-              "fat_g": 7.0,
-              "saturated_fat_g": 2.3,
-              "trans_fat_g": 0.1,
-              "cholesterol_mg": 15.0,
-              "sodium_mg": 171.0,
-              "carbohydrates_g": 4.0,
-              "fiber_g": 3.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 4.0,
-              "potassium_mg": 221.0,
-              "calcium_mg": 26.0,
-              "iron_mg": 1.7
-            }
-          },
-          {
-            "name": "Organic Tofu",
-            "description": "",
-            "serving_size": "3 oz",
-            "calories": 80.0,
-            "ingredients": "Ingredients: Water, Organic Soybeans, Coagulants ­(Calcium Sulfate, and/or Nigari [Magnesium Chloride], and/or Glucono Delta Lactone). Contains: Soy.",
-            "allergens": [
-              "Soy"
-            ],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 80.0,
-              "fat_g": 4.0,
-              "saturated_fat_g": 0.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 2.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 7.0,
-              "potassium_mg": 350.0,
-              "calcium_mg": 70.0,
-              "iron_mg": 3.0
-            }
-          },
-          {
-            "name": "Diced Mixed Squash",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Fresh Zucchini, Squash Yellow Medium.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 1.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 23.0,
-              "calcium_mg": 1.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Medium Diced Yellow Onion",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 4.0,
-            "ingredients": "Yellow Onion.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 4.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 13.0,
-              "calcium_mg": 2.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Diced Tomato",
-            "description": "",
-            "serving_size": "2 oz serving",
-            "calories": 10.0,
-            "ingredients": "Roma Tomatoes.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 10.0,
-              "fat_g": 0.1,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 3.0,
-              "carbohydrates_g": 2.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 134.0,
-              "calcium_mg": 6.0,
-              "iron_mg": 0.2
-            }
-          },
-          {
-            "name": "Medium Diced Mixed Peppers",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 2.0,
-            "ingredients": "Green Bell Peppers, Red Bell Peppers, Yellow Bell Pepper.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 2.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 1.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 17.0,
-              "calcium_mg": 1.0,
-              "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Organic Baby Spinach",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 3.0,
-            "ingredients": "Spinach raw.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 3.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 9.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 68.0,
-              "calcium_mg": 12.0,
-              "iron_mg": 0.3
-            }
-          },
-          {
-            "name": "Sliced Crimini Mushroom",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 1.0,
-            "ingredients": "Crimini Mushrooms.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 1.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 0.0,
-              "carbohydrates_g": 0.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 0.0,
-              "protein_g": 0.0,
-              "potassium_mg": 18.0,
-              "calcium_mg": 1.0,
-              "iron_mg": 0.0
-            }
           }
         ],
         "Italian - Stone-Fired Pizza": [
@@ -186113,35 +185881,6 @@
         ],
         "Italian - Vegetables & Sides": [
           {
-            "name": "Roasted Broccoli  and Cauliflower",
-            "description": "",
-            "serving_size": "0.5 cups",
-            "calories": 40.0,
-            "ingredients": "Cauliflower Florets, Broccoli Florets, Extra Virgin Olive Oil, Garlic Granules, Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 40.0,
-              "fat_g": 3.1,
-              "saturated_fat_g": 0.5,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 157.0,
-              "carbohydrates_g": 3.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 1.0,
-              "protein_g": 1.0,
-              "potassium_mg": 130.0,
-              "calcium_mg": 13.0,
-              "iron_mg": 0.3
-            }
-          },
-          {
             "name": "Garlic Bread",
             "description": "",
             "serving_size": "1 slice",
@@ -186171,6 +185910,35 @@
               "potassium_mg": 13.0,
               "calcium_mg": 86.0,
               "iron_mg": 0.4
+            }
+          },
+          {
+            "name": "Roasted Cauliflower",
+            "description": "",
+            "serving_size": "0.5 cups",
+            "calories": 96.0,
+            "ingredients": "Cauliflower Florets, Extra Virgin Olive Oil, Garlic Granules, Kosher Salt, Parsley Curly 60 CT, Crushed Red Pepper (Cayenne Pepper).",
+            "allergens": [],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 96.0,
+              "fat_g": 7.0,
+              "saturated_fat_g": 1.2,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 288.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 2.0,
+              "protein_g": 3.0,
+              "potassium_mg": 375.0,
+              "calcium_mg": 28.0,
+              "iron_mg": 0.6
             }
           }
         ],
@@ -190440,7 +190208,66 @@
             }
           }
         ],
-        "Smoke n' Grill - Lunch and Dinner Specials": [],
+        "Smoke n' Grill - Lunch and Dinner Specials": [
+          {
+            "name": "Harissa Tofu",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 274.0,
+            "ingredients": "Tofu (Water, Organic Soybeans, Coagulants (calcium Sulfate, And/or Nigari [magnesium Chloride], and/or Glucono Delta-lactone).), Pepper Chili Guajillo D'Allas 1 LB, Fire Roasted Red Peppers (Ingredients, Red sweet peppers, water, sea salt and citric acid), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Tomato Paste (Tomato paste, salt, spices, natural flavors, citric acid.), Extra Virgin Olive Oil, Garlic Whole Peeled Case, Rice Bran Oil (100% Rice Bran Oil), Kosher Salt, Ground Cumin Seed, Coriander - Ground, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Caraway Seed, Cayenne Pepper (Black Pepper).",
+            "allergens": [
+              "Soy"
+            ],
+            "dietary_labels": [
+              "Vegan"
+            ],
+            "is_vegan": true,
+            "is_vegetarian": true,
+            "nutrition": {
+              "calories": 274.0,
+              "fat_g": 13.0,
+              "saturated_fat_g": 1.8,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 0.0,
+              "sodium_mg": 347.0,
+              "carbohydrates_g": 30.0,
+              "fiber_g": 13.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 12.0,
+              "protein_g": 14.0,
+              "potassium_mg": 456.0,
+              "calcium_mg": 122.0,
+              "iron_mg": 8.7
+            }
+          },
+          {
+            "name": "Harissa Chicken Thighs",
+            "description": "",
+            "serving_size": "6 oz",
+            "calories": 334.0,
+            "ingredients": "Chicken Thigh Boneless Skin On, Pepper Chili Guajillo D'Allas 1 LB, Fire Roasted Red Peppers (Ingredients, Red sweet peppers, water, sea salt and citric acid), Lemon Juice (Lemon juice from concentrate (water, concentrated lemon juice), sodium benzoate, sodium metabisulfite and sodium sulfite (preservatives), lemon oil.), Tomato Paste (Tomato paste, salt, spices, natural flavors, citric acid.), Extra Virgin Olive Oil, Garlic Whole Peeled Case, Rice Bran Oil (100% Rice Bran Oil), Kosher Salt, Ground Cumin Seed, Coriander - Ground, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Caraway Seed, Cayenne Pepper (Black Pepper).",
+            "allergens": [],
+            "dietary_labels": [],
+            "is_vegan": false,
+            "is_vegetarian": false,
+            "nutrition": {
+              "calories": 334.0,
+              "fat_g": 23.0,
+              "saturated_fat_g": 7.0,
+              "trans_fat_g": 0.0,
+              "cholesterol_mg": 110.0,
+              "sodium_mg": 202.0,
+              "carbohydrates_g": 7.0,
+              "fiber_g": 3.0,
+              "added_sugar_g": 0.0,
+              "total_sugar_g": 3.0,
+              "protein_g": 25.0,
+              "potassium_mg": 22.0,
+              "calcium_mg": 12.0,
+              "iron_mg": 3.1
+            }
+          }
+        ],
         "Smoke n' Grill - Grill Menu": [
           {
             "name": "Mushroom & Beef Burger",
