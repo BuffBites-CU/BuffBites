@@ -211749,33 +211749,6 @@
               "calcium_mg": 8.0,
               "iron_mg": 0.3
             }
-          },
-          {
-            "name": "Sambal",
-            "description": "",
-            "serving_size": "2 fl oz",
-            "calories": 38.0,
-            "ingredients": "Fresno Red Peppers, Rice Wine Vinegar (Rice vinegar, water, high fructose corn syrup, salt, brown sugar.), Water, Roma Tomatoes, Ginger, Garlic, Green Onion, Kosher Salt.",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 38.0,
-              "fat_g": 0.2,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 0.0,
-              "sodium_mg": 446.0,
-              "carbohydrates_g": 9.0,
-              "fiber_g": 1.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 6.0,
-              "protein_g": 1.0,
-              "potassium_mg": 130.0,
-              "calcium_mg": 14.0,
-              "iron_mg": 0.3
-            }
           }
         ],
         "Smoke n' Grill - Lunch and Dinner Specials": [
@@ -212194,33 +212167,6 @@
             }
           },
           {
-            "name": "BBQ Baked Bean",
-            "description": "",
-            "serving_size": "4 oz",
-            "calories": 231.0,
-            "ingredients": "Baked Bean Vegetarian (Prepared White Beans, Water, Brown Sugar, Sugar, Salt, Mustard (Water, Vinegar, Mustard Seed, Salt, Turmeric, Paprika), Modified Corn Starch, Onion Powder, Caramel Color, Spices, Garlic Powder, and Natural Flavor.), Bacon (Cured With: Water, Contains 2% Or Less Of: Salt, Sugar, Sodium Erythorbate, Sodium Nitrite. May Contain Natural Smoke Flavoring, Sodium Phosphates.), Molasses (Ingredients:, Molasses), Brown Sugar.",
-            "allergens": [],
-            "dietary_labels": [],
-            "is_vegan": false,
-            "is_vegetarian": false,
-            "nutrition": {
-              "calories": 231.0,
-              "fat_g": 9.0,
-              "saturated_fat_g": 2.9,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 29.0,
-              "sodium_mg": 772.0,
-              "carbohydrates_g": 30.0,
-              "fiber_g": 4.0,
-              "added_sugar_g": 0.0,
-              "total_sugar_g": 17.0,
-              "protein_g": 10.0,
-              "potassium_mg": 204.0,
-              "calcium_mg": 45.0,
-              "iron_mg": 2.0
-            }
-          },
-          {
             "name": "Mushroom, Quinoa, and Lentil Chili",
             "description": "",
             "serving_size": "2 oz",
@@ -212626,35 +212572,6 @@
               "potassium_mg": 6.0,
               "calcium_mg": 1.0,
               "iron_mg": 0.0
-            }
-          },
-          {
-            "name": "Kansas City BBQ Sauce",
-            "description": "",
-            "serving_size": "1 Tbsp",
-            "calories": 19.0,
-            "ingredients": "Ketchup (Tomato Concentrate, Sugar, Distilled Vinegar, Salt, Onion Powder, Natural Flavors), Tomato Sauce (Tomato concentrate (tomato paste, water), salt, spice, dextrose, garlic powder, onion powder and natural flavors.), Molasses (Ingredients:, Molasses), Brown Sugar, Red Wine Vinegar (Red wine vinegar (diluted with water to 5% acidity), potassium metabisulfite (a preservative).), Liquid Smoke (Water, Natural Hickory Smoke Concentrate.), Black Pepper (Black Pepper), Kosher Salt, Spice Paprika Smoked (Paprika, Silicon Dioxide (added to make free flowing).), Garlic Granules, Onion Granules, Chili Powder (Ingredients:  Jalapeno Chili Powder), Celery Seed, Cinnamon Sticks, Cayenne Pepper (Black Pepper).",
-            "allergens": [],
-            "dietary_labels": [
-              "Vegan"
-            ],
-            "is_vegan": true,
-            "is_vegetarian": true,
-            "nutrition": {
-              "calories": 19.0,
-              "fat_g": 0.0,
-              "saturated_fat_g": 0.0,
-              "trans_fat_g": 0.0,
-              "cholesterol_mg": 77.0,
-              "sodium_mg": 108.0,
-              "carbohydrates_g": 5.0,
-              "fiber_g": 0.0,
-              "added_sugar_g": 1.0,
-              "total_sugar_g": 4.0,
-              "protein_g": 0.0,
-              "potassium_mg": 32.0,
-              "calcium_mg": 6.0,
-              "iron_mg": 0.2
             }
           },
           {
